@@ -1,0 +1,186 @@
+{
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?year=2025&month=08&pare=TRYJPY",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "dmm",
+      "name": "DMM FX",
+      "url": "https://fx.dmm.com/fx/service/swapcalendar/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://fx.dmm.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "gmo",
+      "name": "GMO外貨",
+      "url": "https://www.gaikaex.com/gaikaex/mark/swap/calendar.php?pair=23",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.gaikaex.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "jfx",
+      "name": "JFX",
+      "url": "https://www.jfx.co.jp/category/swap/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.jfx.co.jp/category/campaign/index.html",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "swap_point_adjustment": "【重要：単位変換】JFXのスワップポイントは「1,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、抽出する際は表に記載されているスワップポイント（買・売ともに）を必ず『10倍した数値』として抽出・報告してください。例：表に「25」とあれば「250」として抽出してください。"
+      }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/market/swap-calendar/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "product_selection": "【重要：商品選択】このページには「TRYJPY」と「TRYJPY LIGHT」の2つの商品があります。必ず通常の『TRYJPY』の行からデータを抽出してください。『TRYJPY LIGHT』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "product_selection": "【重要：商品選択】このページには「TRYJPY」と「TRYJPY LIGHT」の2つの商品があります。必ず通常の『TRYJPY』の行からデータを抽出してください。『TRYJPY LIGHT』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "トルコリラ/円LIGHT（TRY/JPY LIGHT）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "product_selection": "【重要：商品選択】このページには「TRYJPY」と「TRYJPY LIGHT」の2つの商品があります。必ず『TRYJPY LIGHT』の行からデータを抽出してください。通常の『TRYJPY』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "traders_light_light",
+      "name": "LIGHT FX（LIGHT）",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "トルコリラ/円LIGHT（TRY/JPY LIGHT）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "product_selection": "【重要：商品選択】このページには「TRYJPY」と「TRYJPY LIGHT」の2つの商品があります。必ず『TRYJPY LIGHT』の行からデータを抽出してください。通常の『TRYJPY』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "matsui",
+      "name": "MATSUI FX",
+      "url": "https://www.matsui.co.jp/fx/market/past-swap/",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.matsui.co.jp/campaign/?mnu=hd",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "click365_okasan",
+      "name": "クリック365",
+      "url": "https://www.okasan-online.co.jp/fx/swap_calender/?adprm1=yahoo&adprm2=cpc&adprm3=bfx",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.okasan-online.co.jp/campaign/?adprm1=yahoo&adprm2=cpc&adprm3=bfx#program",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    },
+    {
+      "id": "line_fx",
+      "name": "LINE FX",
+      "url": "https://www.line-fx.com/market/swap-calendar?to=%2Fregister&service=FX&utm_source=fx_exads&utm_medium=Yahoo_brand&utm_campaign=lp5000&utm_content=brand&utm_term=lp5000_YSS0006_0260_240813&yclid=YSS.EAIaIQobChMIj5fjpLO0jwMVE4CmAx1MBRUwEAAYASAAEgKw__D_BwE&sa_p=YSA&sa_cc&sa_t=1756621034624&sa_ra=68&_gl=1%2Anzov13%2A_gcl_au%2ANzMwOTAxNTMyLjE3NTYyMjUxMjU.%2A_ga%2AMTYwMDY4MDIzOS4xNzU2MjI1MTI1%2A_ga_H9CHQ9FYBD%2AczE3NTY2MjA5ODEkbzIkZzEkdDE3NTY2MjEwMzckajQkbDAkaDA.",
+      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
+      "campaign_url": "https://www.line-fx.com/cp",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      }
+    }
+  ],
+  "common_instructions": {
+    "popup_handling": "もしCookie同意ボタン、ポップアップ、モーダルウィンドウ、通知バナーが表示された場合は、それらを閉じるか、同意ボタンをクリックしてから操作を続けてください。ページの読み込みが完了するまで十分に待機してください（5〜10秒）。",
+    "table_extraction": "表のヘッダー（項目名）と、データ行をすべてテキスト形式（Markdownの表形式が望ましい）で出力してください。",
+    "data_accuracy": "【最重要】データ抽出の正確性を最優先してください。特に日付（月/日）は、ページ上の表記を1文字も変えずに正確に抽出してください。日付の転記ミス（例：1/9を9/1と誤記）は絶対に避けてください。",
+    "column_mapping": "表の列を識別する際は、列番号（第1列、第2列など）で判断せず、必ずヘッダーのテキスト（例：「付与日数」「買スワップ」「売スワップ」「受渡日」など）を確認して、どの列がどの項目に対応するかを正確に照合してください。サイトの表示形式が変わっても、ヘッダー名に基づいて正しくデータを紐付けてください。",
+    "human_behavior": "ボットだと疑われないよう、各操作（クリックや入力）の前後には、内容を確認しているかのように 2〜5秒のランダムな待機時間を挟んでください。また、マウスを動かす際は、迷っているかのように少し余計な動きを加えても構いません。"
+  },
+  "agent_settings": {
+    "max_steps": 10,
+    "timeout_seconds": 150,
+    "retry_on_failure": false
+  }
+}

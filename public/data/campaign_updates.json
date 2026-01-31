@@ -1,0 +1,69 @@
+{
+  "updated_at": "2026-01-31T04:00:09.401204",
+  "providers": {
+    "gmo_click": {
+      "has_new": false,
+      "updated_at": "2026-01-21T04:00:03.732403"
+    },
+    "gmo": {
+      "has_new": true,
+      "updated_at": "2026-01-30T18:04:44.772074"
+    },
+    "central_tanshi": {
+      "has_new": true,
+      "updated_at": "2026-01-30T18:04:45.171255"
+    },
+    "jfx": {
+      "has_new": false,
+      "updated_at": "2026-01-17T12:52:28.643559"
+    },
+    "invast": {
+      "has_new": false,
+      "updated_at": "2026-01-22T04:00:05.143625"
+    },
+    "traders_min": {
+      "has_new": true,
+      "updated_at": "2026-01-27T04:00:04.777877"
+    },
+    "traders_light": {
+      "has_new": true,
+      "updated_at": "2026-01-30T18:04:47.060348"
+    },
+    "sbi": {
+      "has_new": true,
+      "updated_at": "2026-01-30T18:04:48.376989"
+    },
+    "matsui": {
+      "has_new": true,
+      "updated_at": "2026-01-30T18:04:48.772094"
+    },
+    "gaitame": {
+      "has_new": true,
+      "updated_at": "2026-01-30T19:29:26.309167"
+    },
+    "click365_okasan": {
+      "has_new": false,
+      "updated_at": "2026-01-25T04:00:10.066958"
+    },
+    "moneysquare": {
+      "has_new": true,
+      "updated_at": "2026-01-25T04:00:10.820724"
+    },
+    "line_fx": {
+      "has_new": false,
+      "updated_at": "2026-01-20T04:00:09.759091"
+    },
+    "dmm": {
+      "has_new": false,
+      "updated_at": "2026-01-26T04:00:02.904188"
+    },
+    "traders_min_light": {
+      "has_new": false,
+      "updated_at": "2026-01-30T18:04:47.515362"
+    },
+    "traders_light_light": {
+      "has_new": false,
+      "updated_at": "2026-01-30T18:04:47.891729"
+    }
+  }
+}
