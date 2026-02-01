@@ -106,6 +106,7 @@ git commit -m "変更内容"
 git push origin main
 ```
 
+- **GitHubリポジトリ**: pcjidouka-spec/lira-watch-public-jp
 - **Vercelプロジェクト**: lira-watch-public-jp
 - **本番URL**: https://www.lira-watch.sbs
 - **Vercel URL**: https://lira-watch-public-jp.vercel.app
