@@ -523,3 +523,18 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status
 2026-01-29,traders_light_light,LIGHT FX（LIGHT）,1.0,23.1,-23.1,01/29,success
 2026-01-29,traders_min,みんなのFX,1.0,23.1,-23.1,01/29,success
 2026-01-29,traders_min_light,みんなのFX（LIGHT）,1.0,26.1,-26.1,01/29,success
+2026-01-30,central_tanshi,セントラル短資FX,1.0,28.1,-28.1,2/2,success
+2026-01-30,click365_okasan,クリック365,1.0,25.0,-25.0,None,success
+2026-01-30,dmm,DMM FX,1.0,25.0,-28.0,01/30,success
+2026-01-30,gaitame,外為どっとコム,1.0,25.0,-40.0,2026-02-03,success
+2026-01-30,gmo,GMO外貨,1.0,24.0,-24.0,02/03,success
+2026-01-30,gmo_click,GMOクリック証券,1.0,27.0,-27.0,02/02,success
+2026-01-30,invast,トライオートFX,1.0,26.5,-37.5,2026-02-03,success
+2026-01-30,jfx,JFX,None,None,None,None,error
+2026-01-30,linefx,linefx,1.0,22.0,-32.0,01/30(金),success
+2026-01-30,matsui,MATSUI FX,1.0,None,None,None,success
+2026-01-30,sbi,SBI FXトレード,1.0,23.0,-23.0,02月03日,success
+2026-01-30,traders_light,LIGHT FX,None,None,None,None,error
+2026-01-30,traders_light_light,LIGHT FX（LIGHT）,1.0,23.2,-23.2,01/30,success
+2026-01-30,traders_min,みんなのFX,1.0,26.1,-26.1,01/30,success
+2026-01-30,traders_min_light,みんなのFX（LIGHT）,1.0,26.1,-26.1,01/30,success

@@ -4,6 +4,10 @@ export default function Document() {
     return (
         <Html lang="ja">
             <Head>
+                {/* Default Title for SEO */}
+                <title>トルコリラ・ウォッチ | lira-watch.sbs - TRY/JPYスワップポイント比較ブログ</title>
+                <meta name="description" content="トルコリラ円（TRY/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨トルコリラの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
+
                 {/* Google Tag Manager */}
                 <script
                     dangerouslySetInnerHTML={{
