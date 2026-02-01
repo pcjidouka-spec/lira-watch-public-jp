@@ -229,8 +229,8 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         .sub-header th.border-left { border-left: 2px solid #d1d5db; }
         
         /* Outer padding adjustments (Left of Buy Rank / Right of Sell Value) */
-        .sub-header th:first-child { padding-left: 40px; } /* Increased from 32px */
-        .sub-header th:last-child { padding-right: 40px; } /* Increased from 32px */
+        .sub-header th:first-child { padding-left: 8px; }
+        .sub-header th:last-child { padding-right: 40px; }
 
         /* Rows & Cells */
         .ranking-row td {
@@ -244,8 +244,8 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         .ranking-row td.border-left { border-left: 2px solid #d1d5db; }
         
         /* Outer padding adjustments for rows */
-        .ranking-row td:first-child { padding-left: 40px; } /* Increased from 32px */
-        .ranking-row td:last-child { padding-right: 40px; } /* Increased from 32px */
+        .ranking-row td:first-child { padding-left: 8px; }
+        .ranking-row td:last-child { padding-right: 40px; }
 
         /* Column Widths */
         .th-rank, .td-rank { 
