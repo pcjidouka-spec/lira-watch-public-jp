@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import { BlogmuraButtons } from './BlogmuraButtons';
 import { HeaderAds } from './HeaderAds';
+import { MobileBottomAds } from './MobileBottomAds';
+import { MobileArticleDrawer } from './MobileArticleDrawer';
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -55,6 +57,13 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           </div>
         </div>
       </footer>
+
+      {/* モバイル用ボトム広告 */}
+      <MobileBottomAds />
+
+      {/* モバイル用記事一覧ドロワー */}
+      <MobileArticleDrawer />
+
 
       <style jsx>{`
         .blog-container {

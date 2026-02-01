@@ -64,6 +64,10 @@
     "traders_light_light": {
       "has_new": false,
       "updated_at": "2026-01-30T18:04:47.891729"
+    },
+    "hirose": {
+      "has_new": false,
+      "updated_at": null
     }
   }
 }
