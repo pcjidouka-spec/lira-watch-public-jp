@@ -105,6 +105,14 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                           <img width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AV5OF+584ZXU+4SM6+609HT" alt="" style={{ border: 0 }} />
                         </>
                       )}
+                      {getProviderId(row.buy) === 'saxo' && (
+                        <>
+                          <a href="https://px.a8.net/svt/ejp?a8mat=4AX0WP+123RHU+5PC8+BXIYP" rel="nofollow" target="_blank" className="saxo-banner">
+                            <img width="100" height="60" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
+                          </a>
+                          <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4AX0WP+123RHU+5PC8+BXIYP" alt="" style={{ border: 0 }} />
+                        </>
+                      )}
                     </div>
                   )}
                 </td>
@@ -151,6 +159,14 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                             <img width="60" height="36" alt="MATSUI FX" src="https://www21.a8.net/svt/bgt?aid=260114559316&wid=001&eno=01&mid=s00000022371001009000&mc=1" />
                           </a>
                           <img width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AV5OF+584ZXU+4SM6+609HT" alt="" style={{ border: 0 }} />
+                        </>
+                      )}
+                      {getProviderId(row.sell) === 'saxo' && (
+                        <>
+                          <a href="https://px.a8.net/svt/ejp?a8mat=4AX0WP+123RHU+5PC8+BXIYP" rel="nofollow" target="_blank" className="saxo-banner">
+                            <img width="100" height="60" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
+                          </a>
+                          <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4AX0WP+123RHU+5PC8+BXIYP" alt="" style={{ border: 0 }} />
                         </>
                       )}
                     </div>
@@ -402,6 +418,23 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           transition: all 0.2s;
         }
         .matsui-banner:hover img {
+          transform: scale(1.05);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Saxo Banner */
+        .saxo-banner {
+          display: inline-block;
+          margin-left: 4px;
+          line-height: 0;
+        }
+        .saxo-banner img {
+          border: 1px solid #e5e7eb;
+          border-radius: 4px;
+          vertical-align: middle;
+          transition: all 0.2s;
+        }
+        .saxo-banner:hover img {
           transform: scale(1.05);
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
