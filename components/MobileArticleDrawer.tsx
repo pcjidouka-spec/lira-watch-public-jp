@@ -87,7 +87,7 @@ export const MobileArticleDrawer: React.FC = () => {
                     display: none;
                     position: fixed;
                     right: 0;
-                    top: 50%;
+                    top: 20%;
                     transform: translateY(-50%);
                     z-index: 9998;
                     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

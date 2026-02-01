@@ -60,6 +60,8 @@ export const MobileBottomAds: React.FC = () => {
                     box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
                     z-index: 9999;
                     border-top: 2px solid #667eea;
+                    max-height: 140px;
+                    overflow-y: auto;
                 }
 
                 .close-button {
@@ -86,11 +88,10 @@ export const MobileBottomAds: React.FC = () => {
 
                 .ads-scroll-container {
                     display: flex;
-                    gap: 10px;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
-                    scrollbar-width: none;
-                    padding-bottom: 5px;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    justify-content: flex-start;
+                    align-content: flex-start;
                 }
 
                 .ads-scroll-container::-webkit-scrollbar {
@@ -99,8 +100,8 @@ export const MobileBottomAds: React.FC = () => {
 
                 .ad-item {
                     flex-shrink: 0;
-                    width: 60px;
-                    height: 50px;
+                    width: 50px;
+                    height: 45px;
                     background: white;
                     border-radius: 6px;
                     display: flex;
@@ -118,7 +119,7 @@ export const MobileBottomAds: React.FC = () => {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
-                    padding: 6px;
+                    padding: 5px;
                 }
 
                 /* モバイルのみ表示 - 1200px以下 */
