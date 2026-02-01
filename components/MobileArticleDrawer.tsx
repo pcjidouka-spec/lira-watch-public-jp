@@ -158,6 +158,7 @@ export const MobileArticleDrawer: React.FC = () => {
                     margin: 0;
                     font-size: 18px;
                     font-weight: bold;
+                    padding-left: 1em;
                 }
 
                 .close-button {
