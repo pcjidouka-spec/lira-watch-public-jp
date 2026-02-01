@@ -419,6 +419,17 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
            .merged-table {
              min-width: 600px; /* Force scroll */
            }
+           
+           /* モバイル用フォントサイズ調整 */
+           .main-header {
+             font-size: 20px;
+             padding: 8px;
+           }
+           
+           .th-side-header {
+             font-size: 14px;
+             padding: 10px;
+           }
         }
       `}</style>
     </div>
