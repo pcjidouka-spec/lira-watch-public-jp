@@ -96,12 +96,26 @@ cp ../tryuniondata/master_history.csv public/data/master_history.csv
 
 ## デプロイ
 
-### コアサーバーへのデプロイ
+### 本番環境: Vercel（自動デプロイ）
 
-1. `npm run build` でビルド
-2. `out` ディレクトリの内容をサーバーにアップロード
-3. ドメイン: lira-watch.sbs
-4. サーバー: deicsoqn@v2012.coreserver.jp
+**重要**: このプロジェクトはVercelでホストされています。`main`ブランチにpushすると自動的にデプロイされます。
+
+```bash
+git add -A
+git commit -m "変更内容"
+git push origin main
+```
+
+- **Vercelプロジェクト**: lira-watch-public-jp
+- **本番URL**: https://www.lira-watch.sbs
+- **Vercel URL**: https://lira-watch-public-jp.vercel.app
+
+詳細は `../lira-watch-secrets/DEPLOYMENT.md` を参照してください。
+
+### 非推奨（使用しない）
+
+- `npm run deploy` - GitHub Pages用（使用停止）
+- FTPアップロード - バックアップとして残存
 
 ## 運用指標
 

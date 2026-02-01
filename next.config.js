@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Note: Vercel deployment - no need for 'output: export'
   images: {
     remotePatterns: [
       {
