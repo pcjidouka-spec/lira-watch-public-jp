@@ -8,6 +8,15 @@ export default function Document() {
                 <title>トルコリラ・ウォッチ | lira-watch.sbs - TRY/JPYスワップポイント比較ブログ</title>
                 <meta name="description" content="トルコリラ円（TRY/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨トルコリラの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
 
+                {/* AI Learning Opt-Out (Allow crawling but prevent training) */}
+                <meta name="robots" content="index, follow, max-image-preview:large" />
+                <meta name="googlebot" content="index, follow" />
+                <meta name="google" content="notranslate" />
+                <meta name="google-extended" content="noindex" />
+                <meta name="CCBot" content="noindex" />
+                <meta name="GPTBot" content="noindex" />
+                <meta name="anthropic-ai" content="noindex" />
+
                 {/* Google Tag Manager */}
                 <script
                     dangerouslySetInnerHTML={{
