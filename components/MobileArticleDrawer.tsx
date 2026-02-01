@@ -34,8 +34,7 @@ export const MobileArticleDrawer: React.FC = () => {
                 onClick={() => setIsOpen(true)}
                 aria-label="記事一覧を開く"
             >
-                <span className="trigger-icon">📰</span>
-                <span className="trigger-text">記事</span>
+                <span className="trigger-text">新着記事</span>
             </button>
 
             {/* オーバーレイ */}
@@ -90,8 +89,8 @@ export const MobileArticleDrawer: React.FC = () => {
                     top: 20%;
                     transform: translateY(-50%);
                     z-index: 9998;
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    color: white;
+                    background: #0047AB;
+                    color: #FFD700;
                     border: none;
                     border-radius: 8px 0 0 8px;
                     padding: 12px 8px;
@@ -107,14 +106,11 @@ export const MobileArticleDrawer: React.FC = () => {
                     transform: translateY(-50%) scale(0.95);
                 }
 
-                .trigger-icon {
-                    font-size: 20px;
-                }
-
                 .trigger-text {
-                    font-size: 10px;
+                    font-size: 11px;
                     font-weight: bold;
                     writing-mode: vertical-rl;
+                    letter-spacing: 2px;
                 }
 
                 /* オーバーレイ */
