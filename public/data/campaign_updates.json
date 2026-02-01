@@ -68,6 +68,10 @@
     "hirose": {
       "has_new": false,
       "updated_at": null
+    },
+    "saxo": {
+      "has_new": false,
+      "updated_at": null
     }
   }
 }
