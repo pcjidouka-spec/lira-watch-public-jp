@@ -18,9 +18,19 @@ export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', pro
     // 値がない場合はスキップ（0は有効な値として扱う）
     if (value === null) continue;
 
-    // 日付文字列 (YYYY-MM-DD)
-    // record.target_date は型定義上 string なので、文字列として処理
-    const dateStr = String(record.target_date);
+    // 日付文字列 (YYYY-MM-DD or YYYY/MM/DD)
+    // actual_dateがある場合はそちらを優先（データの実際の日付を使用）
+    let dateStr = String(record.target_date);
+
+    if (record.actual_date) {
+      // YYYY/MM/DD 形式などを YYYY-MM-DD に正規化
+      const normalizedActual = record.actual_date.replace(/\//g, '-');
+      // 日付として有効か簡易チェック (YYYY-MM-DD)
+      if (/^\d{4}-\d{2}-\d{2}/.test(normalizedActual)) {
+        dateStr = normalizedActual;
+      }
+    }
+
     const dateKey = dateStr.includes('T') ? dateStr.split('T')[0] : dateStr;
 
     if (!tempMap.has(record.provider_id)) {
