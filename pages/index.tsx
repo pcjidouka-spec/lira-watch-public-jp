@@ -128,6 +128,11 @@ export default function Home() {
               );
             })}
           </ul>
+          <div style={{ textAlign: 'right', marginTop: '12px', borderTop: '1px dashed #f3f4f6', paddingTop: '8px' }}>
+            <Link href="#new-articles" className="sidebar-article-link" style={{ fontSize: '12px' }}>
+              » 過去記事一覧
+            </Link>
+          </div>
         </div>
       </div>
 
