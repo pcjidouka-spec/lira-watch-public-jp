@@ -87,8 +87,8 @@ export default function Home() {
             いつもありがとうございます。<br />
             これからも有用な情報をお届け出来るよう、応援して下さい♪
           </p>
-          <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer">
-            <img src="https://b.blogmura.com/fx/turkey-lira/88_31.gif" width="88" height="31" alt="にほんブログ村 為替ブログ トルコリラへ" style={{ border: 0, display: 'inline-block', marginBottom: '8px' }} />
+          <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <span className="iine-banner" style={{ marginBottom: '8px' }}>いいね♪</span>
           </a>
           <br />
           <a href="https://blogmura.com/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" className="blogmura-text-link">
@@ -230,10 +230,10 @@ export default function Home() {
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
             スワップポイントランキング
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
-              <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <img src="https://b.blogmura.com/fx/turkey-lira/88_31.gif" width="88" height="31" alt="にほんブログ村 為替ブログ トルコリラへ" style={{ border: 0 }} />
+              <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+                <span className="iine-banner">いいね♪</span>
               </a>
-              <span style={{ fontSize: '14px', fontWeight: 'normal', color: '#6b7280' }}>←応援お願いします。</span>
+              <span style={{ fontSize: '14px', fontWeight: 'normal', color: '#6b7280', marginLeft: '8px' }}>←応援お願いします。</span>
             </span>
           </h2>
 
@@ -579,6 +579,28 @@ export default function Home() {
         @media (max-width: 600px) {
            .blog-post { padding: 20px; }
            .post-title { font-size: 20px; }
+        }
+
+        .iine-banner {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 88px;
+          height: 31px;
+          background: linear-gradient(to bottom, #ff9a9e 0%, #ff6a88 100%);
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          border-radius: 4px;
+          text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+          box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+          border: 1px solid #ff4757;
+          text-decoration: none;
+          line-height: 1;
+        }
+        .iine-banner:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
       `}</style>
     </BlogLayout>
