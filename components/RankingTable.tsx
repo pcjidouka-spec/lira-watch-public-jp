@@ -47,8 +47,8 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         <table className="merged-table">
           <thead>
             <tr className="header-row">
-              <th className="th-side-header buy" colSpan={3}>買いランキング（月次平均）</th>
-              <th className="th-side-header sell" colSpan={3}>売りランキング（月次平均）</th>
+              <th className="th-side-header buy" colSpan={3}>買いランキング</th>
+              <th className="th-side-header sell" colSpan={3}>売りランキング</th>
             </tr>
             <tr className="sub-header">
               {/* Buy Columns */}
