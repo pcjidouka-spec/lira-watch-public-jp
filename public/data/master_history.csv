@@ -538,20 +538,20 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-01-30,traders_light_light,LIGHT FX（LIGHT）,1.0,23.2,-23.2,01/30,success,
 2026-01-30,traders_min,みんなのFX,1.0,26.1,-26.1,01/30,success,
 2026-01-30,traders_min_light,みんなのFX（LIGHT）,1.0,26.1,-26.1,01/30,success,
-2026-01-31,central_tanshi,セントラル短資FX,None,None,None,None,error,2026/01/31
+2026-01-31,central_tanshi,セントラル短資FX,None,None,None,None,error,None
 2026-01-31,click365_okasan,クリック365,None,None,None,None,error,2026/01/31
-2026-01-31,dmm,DMM FX,None,None,None,01/31,error,2026/01/31
-2026-01-31,gaitame,外為どっとコム,1.0,25.0,-40.0,1/30（金）,success,2026/01/31
+2026-01-31,dmm,DMM FX,None,None,None,None,error,2026/01/31
+2026-01-31,gaitame,外為どっとコム,None,None,None,None,error,None
 2026-01-31,gmo,GMO外貨,0.0,0.0,0.0,None,success,2026/01/31
 2026-01-31,gmo_click,GMOクリック証券,0.0,None,None,None,success,2026/01/31
-2026-01-31,hirose,ヒロセ通商,1.0,24.0,-29.0,None,success,2026-01-30
-2026-01-31,invast,トライオートFX,None,None,None,None,error,None
+2026-01-31,hirose,ヒロセ通商,1.0,24.0,-29.0,None,success,2026/01/30
+2026-01-31,invast,トライオートFX,None,None,None,None,error,2026/01/31
 2026-01-31,jfx,JFX,None,None,None,None,error,None
-2026-01-31,linefx,linefx,0.0,0.0,0.0,2/02(月),success,2026/01/31
+2026-01-31,linefx,linefx,0.0,0.0,0.0,None,success,2026/01/31
 2026-01-31,matsui,MATSUI FX,None,None,None,None,error,2026/01/31
-2026-01-31,saxo,サクソバンク証券,None,None,None,None,error,None
+2026-01-31,saxo,サクソバンク証券,1.0,29.0,-36.0,None,success,2026/01/23
 2026-01-31,sbi,SBI FXトレード,1.0,24.0,-24.0,-,success,2026/01/31
 2026-01-31,traders_light,LIGHT FX,None,None,None,None,error,2026/01/31
 2026-01-31,traders_light_light,LIGHT FX（LIGHT）,None,None,None,None,error,2026/01/31
-2026-01-31,traders_min,みんなのFX,None,None,None,01/31 (土),error,2026/01/31
-2026-01-31,traders_min_light,みんなのFX（LIGHT）,None,None,None,01/31,error,2026/01/31
+2026-01-31,traders_min,みんなのFX,None,None,None,None,error,2026/01/31
+2026-01-31,traders_min_light,みんなのFX（LIGHT）,None,None,None,None,error,2026/01/31
