@@ -84,6 +84,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                           {hasNewCampaign(row.buy.provider_id || '') && <span className="new-badge">New</span>}
                         </a>
                       )}
+                      {row.buy.actual_date && (
+                        <span className="delay-warning" title={`データ取得日: ${row.buy.actual_date} ※他の事業者よりデータ更新が遅れています`}>
+                          ⚠️
+                        </span>
+                      )}
                       {getProviderId(row.buy) === 'dmm' && (
                         <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+1UOKJ6+1WP2+6DZBL" rel="nofollow" target="_blank" className="dmm-banner">
                           <img src="https://www26.a8.net/svt/bgt?aid=260114559112&wid=001&eno=01&mid=s00000008903001073000&mc=1" alt="DMM FX" width="32" height="24" />
@@ -139,6 +144,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                           ｷｬﾝﾍﾟｰﾝ
                           {hasNewCampaign(row.sell.provider_id || '') && <span className="new-badge">New</span>}
                         </a>
+                      )}
+                      {row.sell.actual_date && (
+                        <span className="delay-warning" title={`データ取得日: ${row.sell.actual_date} ※他の事業者よりデータ更新が遅れています`}>
+                          ⚠️
+                        </span>
                       )}
                       {getProviderId(row.sell) === 'dmm' && (
                         <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+1UOKJ6+1WP2+6DZBL" rel="nofollow" target="_blank" className="dmm-banner">
@@ -437,6 +447,13 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         .saxo-banner:hover img {
           transform: scale(1.05);
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .delay-warning {
+          cursor: help;
+          font-size: 12px;
+          margin-left: 4px;
+          vertical-align: middle;
         }
 
         /* Values */

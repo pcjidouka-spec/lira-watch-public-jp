@@ -7,6 +7,7 @@ export interface SwapData {
   swap_sell: number | null;
   settlement_date: string | null;
   status: 'success' | 'error';
+  actual_date?: string; // Optional: for delayed data (e.g. Saxo)
 }
 
 export interface ProviderRanking {
@@ -17,6 +18,7 @@ export interface ProviderRanking {
   latest_date: string;
   url?: string;
   campaign_url?: string;
+  actual_date?: string; // Optional
 }
 
 export interface ProviderConfig {
