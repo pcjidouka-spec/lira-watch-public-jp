@@ -94,6 +94,10 @@ export default function Home() {
           <a href="https://blogmura.com/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" className="blogmura-text-link">
             にほんブログ村
           </a>
+          <div style={{ marginTop: '12px', borderTop: '1px dashed #e5e7eb', paddingTop: '12px' }}>
+            <div className="blogmura-blogparts" data-chid="11211368" data-category="6750" data-type="pv"></div>
+            <script src="https://blogparts.blogmura.com/js/parts_view.js" async></script>
+          </div>
         </div>
       </div>
 
