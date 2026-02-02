@@ -7,6 +7,37 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 'triauto-campaign-20260202',
+    title: 'トライオートFX：トルコリラ/円 キャンペーン概要',
+    date: '2026/02/02',
+    content: `
+      <p class="intro">
+        トライオートFXにて、トルコリラ/円を対象とした非常に魅力的なキャンペーンが開催されています。
+      </p>
+
+      <h3><a href="https://www.invast.jp/triauto/campaign/fx/tryswap/202602/" target="_blank" rel="noopener noreferrer">トライオートFX：トルコリラ/円 キャンペーン</a></h3>
+      <p class="campaign-title" style="color: #ef4444; font-weight: bold; font-size: 1.1em;">かなりおススメのキャンペーンです。</p>
+
+      <div class="campaign-details">
+        <p><strong>開催期間：</strong> 2026年2月2日（月）～ 2026年2月27日（金）</p>
+        <p><strong>対象者：</strong> キャンペーンに申し込みをしたすべてのお客様</p>
+        <p><strong>特典内容：</strong> 
+          <ul>
+            <li><strong>特典1：取引キャッシュバック</strong> 期間中の新規約定1万通貨ごとに60円をキャッシュバック（数量上限は100万通貨）。</li>
+            <li><strong>特典2：スワップポイント増額</strong> 期間中に新規で建てた買い建玉の増加分を対象に、スワップポイントを60%上乗せしてキャッシュバック（対象建玉の上限は100万通貨）。</li>
+          </ul>
+        </p>
+        <p><strong>特典の付与時期：</strong> 2026年3月末までにトライオートFX口座へ入金。</p>
+        <p><strong>注意事項：</strong> 
+          <ul>
+            <li>キャンペーンへの申し込みが必要です。</li>
+            <li>新規口座開設キャンペーンとの併用は不可となっており、両方に申し込んだ場合は本キャンペーンが優先されます。</li>
+          </ul>
+        </p>
+      </div>
+    `,
+  },
+  {
     id: 'feb-swap-campaigns-20260130',
     title: '2月開始スワップポイント増額キャンペーンまとめ（外為、SBI、セントラル短資FX）',
     date: '2026/01/30',
