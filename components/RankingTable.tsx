@@ -109,7 +109,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {getProviderId(row.buy) === 'saxo' && (
                         <>
                           <a href="https://px.a8.net/svt/ejp?a8mat=4AX0WP+123RHU+5PC8+BXIYP" rel="nofollow" target="_blank" className="saxo-banner">
-                            <img width="100" height="60" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
+                            <img width="50" height="30" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
                           </a>
                           <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4AX0WP+123RHU+5PC8+BXIYP" alt="" style={{ border: 0 }} />
                         </>
@@ -166,7 +166,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {getProviderId(row.sell) === 'saxo' && (
                         <>
                           <a href="https://px.a8.net/svt/ejp?a8mat=4AX0WP+123RHU+5PC8+BXIYP" rel="nofollow" target="_blank" className="saxo-banner">
-                            <img width="100" height="60" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
+                            <img width="50" height="30" alt="サクソバンク証券" src="https://www20.a8.net/svt/bgt?aid=260201689064&wid=001&eno=01&mid=s00000026612002004000&mc=1" />
                           </a>
                           <img width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4AX0WP+123RHU+5PC8+BXIYP" alt="" style={{ border: 0 }} />
                         </>
