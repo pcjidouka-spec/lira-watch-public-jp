@@ -32,7 +32,7 @@ export const MobileArticleDrawer: React.FC = () => {
             <button
                 className="drawer-trigger"
                 onClick={() => setIsOpen(true)}
-                aria-label="記事一覧を開く"
+                aria-label="新着記事を開く"
             >
                 <span className="trigger-text">新着記事</span>
             </button>
@@ -48,7 +48,7 @@ export const MobileArticleDrawer: React.FC = () => {
             {/* ドロワー本体 */}
             <div className={`article-drawer ${isOpen ? 'open' : ''}`}>
                 <div className="drawer-header">
-                    <h3>📚 記事一覧</h3>
+                    <h3>📚 新着記事</h3>
                     <button
                         className="close-button"
                         onClick={() => setIsOpen(false)}

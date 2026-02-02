@@ -103,7 +103,7 @@ export default function Home() {
 
       <div className="sidebar-widget">
         <div className="widget-header">
-          <h3>記事一覧</h3>
+          <h3>新着記事</h3>
         </div>
         <div className="widget-content">
           <ul className="sidebar-article-list">
