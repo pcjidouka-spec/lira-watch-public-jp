@@ -7,6 +7,35 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 'min-fx-swap-campaign-20260203',
+    title: 'みんなのFX：スワップNo.1チャレンジキャンペーンの凄さを徹底解説',
+    date: '2026/02/03',
+    content: `
+      <p class="intro">
+        トルコリラ/円のスワップポイントランキングでも常に上位を占めている「みんなのFX」。実は、キャンペーンを含めると実質的にはランキング1位の状態が続いています。
+      </p>
+
+      <h3><a href="https://min-fx.jp/campaign/swapno1_202601/?utm_source=hp&utm_medium=bnr&utm_campaign=cp" target="_blank" rel="noopener noreferrer">みんなのFX：スワップNo.1チャレンジキャンペーン</a></h3>
+      
+      <div class="campaign-details">
+        <h4>● 他社との差額を全額キャッシュバック</h4>
+        <p>対象通貨ペアのスワップポイントが他社より1円でも低い場合、その差額を後日まとめてプレゼントされます。</p>
+        
+        <h4>● 実質No.1の状態が維持</h4>
+        <p>このキャンペーンはほぼ継続的に実施されており、長期的に「実質No.1」の状態が維持されています。高いスワップを求めて頻繁に口座を乗り換える手間がかかりません。</p>
+
+        <p style="font-weight: bold; margin-top: 20px; color: #ef4444;">【留意点】</p>
+        <ul>
+          <li><strong>要申込：</strong>専用フォームからの申し込みが必須です。</li>
+          <li><strong>対象取引：</strong>新規買ポジションが対象で、各通貨200Lotの上限があります。</li>
+        </ul>
+        <p>
+          これらの点に留意すれば、スワップ投資において他に選択肢はないと言っても過言ではないほど強力なキャンペーンです。
+        </p>
+      </div>
+    `,
+  },
+  {
     id: 'triauto-campaign-20260202',
     title: 'トライオートFX：トルコリラ/円 キャンペーン概要',
     date: '2026/02/02',
