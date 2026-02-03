@@ -1,149 +1,87 @@
-# トルコリラ・ウォッチ (lira-watch.sbs) [Automated Deployment]
+# トルコリラ・ウォッチ (Lira-Watch) 🇹🇷💹
 
-トルコリラ円（TRY/JPY）の各FX会社の公式データを毎日収集し、スワップポイントを比較・アーカイブするウェブサイトです。
+[![Next.js](https://img.shields.io/badge/Framework-Next.js%2014-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Data-Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Selenium](https://img.shields.io/badge/Scraping-Selenium-43B02A?logo=selenium&logoColor=white)](https://www.selenium.dev/)
+[![GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-222222?logo=github&logoColor=white)](https://pages.github.com/)
 
-## 機能
+トルコリラ円（TRY/JPY）の各FX会社の公式データを毎日自動収集し、スワップポイントを視覚化・比較する投資支援ツールです。  
+「情報の透明化」と「データ駆動型の意思決定」をテーマに構築しました。
 
-- **スワップポイント比較**: 各FX会社の買い・売りスワップポイントをリアルタイムで比較
-- **ランキング表示**: 買いスワップは降順、売りスワップは昇順（マイナスが小さい順）でランキング表示
-- **月間・年間統計**: 過去データの月間・年間集計（平均値・最高値・最低値）
-- **ダッシュボード**: 本日の最高スワップ値と目標20円に対する到達度をゲージで表示
-- **リスク管理情報**: 為替急落リスク、証拠金維持率、スプレッド拡大への注意喚起
+[サイトURL: https://www.lira-watch.sbs](https://www.lira-watch.sbs)
 
-## 技術スタック
+---
 
-- **フレームワーク**: Next.js 14 (Static Export)
-- **言語**: TypeScript
-- **スタイリング**: CSS-in-JS (styled-jsx)
-- **グラフ**: Recharts
-- **データ形式**: CSV
+## 📋 プロジェクト概要
 
-## セットアップ
+このプロジェクトは、投資家が最も有利なFX会社を即座に判断できるよう、複雑に分散している各社のスワップ情報を一箇所に集約・分析することを目的としています。
+単なる静的なサイトではなく、**「データ収集の自動化（Python/Scraping）」**と**「モダンなフロントエンド（Next.js/TypeScript）」**を組み合わせたフルスタックなシステムとして設計・運用しています。
 
-### 必要な環境
+### 解決したい課題
+- **情報収集コストの削減**: 各FX会社のサイトを個別に確認する手間の解消。
+- **機会損失の防止**: キャンペーン情報のリアルタイム検知により、有利な取引チャンスを逃さない。
+- **データに基づいた長期分析**: 過去データの蓄積による、スワップポイントの安定性と収益性の可視化。
 
-- Node.js 18以上
-- npm または yarn
+---
 
-### インストール
+## 🏗 システム構成（アーキテクチャ）
+
+本システムは、プライベートなデータ収集層と、パブリックな表示層の2層構造で構成されています。
+
+1. **Extraction (Private)**: 
+   - Python + Seleniumによる自動スクレイピング。
+   - キャンペーンページのHTMLハッシュ値を監視し、更新を自動検知。
+2. **Transform & Sync**:
+   - 取得データの正規化、CSV/JSONへの変換。
+   - PowerShellによる自動コミット・プッシュをタスクスケジューラで実行。
+3. **Presentation (Public)**: 
+   - Next.js (SSG) による高速なページ表示。
+   - Rechartsを用いたインタラクティブな推移グラフ。
+
+---
+
+## 🛠 技術スタック
+
+| 分野 | 技術 |
+|:---|:---|
+| **Frontend** | Next.js 14, React, TypeScript, styled-jsx |
+| **Data Viz** | Recharts (グラフ描画), PapaParse (CSV解析) |
+| **Automation** | Python (Selenium), PowerShell, Task Scheduler |
+| **Infrastructure** | GitHub Pages, Custom Domain (lira-watch.sbs) |
+
+---
+
+## ✨ 主な機能
+
+- 🥇 **動的ランキング**: 買い/売りスワップのリアルタイムランキング表示。
+- 🔔 **キャンペーン検知**: サイト更新を自動検知し、表に「New」バッジを付与。
+- 📈 **インタラクティブ・チャート**: 期間指定可能なスワップ推移グラフ。
+- ⚡ **超高速表示**: 静的サイト生成(SSG)により、モバイル環境でもストレスのない閲覧。
+
+---
+
+## 💡 プロジェクトを通じた学び（IT初学者としての挑戦）
+
+- **エンジニアリングによる解決**: 自身の個人的な悩みを、技術（スクレイピングと自動化）によって解決するプロセスを経験。
+- **保守性の高いコード**: 型安全性（TypeScript）や共通ユーティリティ化により、機能追加が容易な設計を意識。
+- **継続的な運用**: 安定して毎日データを取得し続けるための、エラーハンドリングとログ管理の実装。
+
+---
+
+## 🚀 セットアップ（開発者向け）
 
 ```bash
+git clone https://github.com/pcjidouka-spec/lira-watch-public-jp.git
+cd lira-watch-public-jp
 npm install
-```
-
-### 開発サーバーの起動
-
-```bash
 npm run dev
 ```
 
-ブラウザで [http://localhost:3000](http://localhost:3000) を開きます。
+---
 
-### ビルド
+## 📑 免責事項
+本プロジェクトは学習および個人利用を目的としたポートフォリオです。
+情報の正確性には細心の注意を払っておりますが、最終的な投資判断は自己責任で行ってください。
 
-```bash
-npm run build
-```
-
-ビルドされたファイルは `out` ディレクトリに出力されます。
-
-## プロジェクト構造
-
-```
-lira-watch/
-├── components/          # Reactコンポーネント
-│   ├── SwapGauge.tsx    # スワップポイントゲージ
-│   ├── RankingTable.tsx # ランキングテーブル
-│   ├── HistoricalChart.tsx # 履歴チャート
-│   └── RiskIndicator.tsx   # リスクインジケーター
-├── hooks/               # カスタムフック
-│   └── useSwapData.ts  # スワップデータ取得フック
-├── lib/                 # ユーティリティ関数
-│   └── dataProcessor.ts # データ処理ロジック
-├── pages/               # Next.jsページ
-│   ├── _app.tsx        # アプリケーションエントリーポイント
-│   └── index.tsx       # メインページ
-├── public/              # 静的ファイル
-│   ├── data/           # CSVデータファイル
-│   └── images/         # 画像アセット
-├── styles/              # グローバルスタイル
-└── types/               # TypeScript型定義
-```
-
-## データソース
-
-- **データファイル**: `public/data/master_history.csv`
-- **データスキーマ**:
-  - `target_date`: 日付 (YYYY-MM-DD)
-  - `provider_id`: プロバイダーID
-  - `name`: 会社名
-  - `days`: 日数
-  - `swap_buy`: 買いスワップポイント
-  - `swap_sell`: 売りスワップポイント
-  - `settlement_date`: 決済日
-  - `status`: ステータス (success/error)
-
-## データ更新方法
-
-1. `tryuniondata/master_history.csv` を更新
-2. 以下のコマンドで `public/data/master_history.csv` にコピー:
-
-```bash
-cp ../tryuniondata/master_history.csv public/data/master_history.csv
-```
-
-3. ビルドしてデプロイ
-
-## デプロイ
-
-### 本番環境: Vercel（自動デプロイ）
-
-**重要**: このプロジェクトはVercelでホストされています。`main`ブランチにpushすると自動的にデプロイされます。
-
-```bash
-git add -A
-git commit -m "変更内容"
-git push origin main
-```
-
-- **GitHubリポジトリ**: pcjidouka-spec/lira-watch-public-jp
-- **Vercelプロジェクト**: lira-watch-public-jp
-- **本番URL**: https://www.lira-watch.sbs
-- **Vercel URL**: https://lira-watch-public-jp.vercel.app
-
-詳細は `../lira-watch-secrets/DEPLOYMENT.md` を参照してください。
-
-### 非推奨（使用しない）
-
-- `npm run deploy` - GitHub Pages用（使用停止）
-- FTPアップロード - バックアップとして残存
-
-## 運用指標
-
-- **ベストな基準**: 1日あたりのスワップポイント 20円以上
-- **データ更新頻度**: 毎日
-- **通貨ペア**: TRY/JPY（トルコリラ円）
-
-## リスク管理
-
-このサイトで提供する情報は投資判断の参考情報であり、投資の最終的な意思決定はユーザー自身の責任で行ってください。
-
-- **為替の急落リスク**: トルコリラは高金利通貨ですが、為替変動リスクも高い通貨です
-- **証拠金維持率の管理**: 市場急変時には証拠金の追加が必要になる可能性があります
-- **スプレッド拡大**: 市場急変時や流動性が低下する時間帯にはスプレッドが拡大する可能性があります
-
-## 運用ルール
-
-### 記事更新時
-
-記事を作成・更新した際は、必ず以下のコマンドを実行してBlogmuraに更新通知（Ping）を送信してください。
-
-```bash
-npm run ping:blogmura
-```
-
-## ライセンス
-
-このプロジェクトは個人利用を目的としています。
-
-
+© 2026 [Your Name / pcjidouka-spec]
