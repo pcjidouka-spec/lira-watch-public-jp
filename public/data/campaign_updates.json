@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-02-04T04:00:10.783838",
+  "updated_at": "2026-02-05T04:00:12.206430",
   "providers": {
     "gmo_click": {
       "has_new": true,
       "updated_at": "2026-02-02T20:14:55.190295"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-01-30T18:04:44.772074"
     },
     "central_tanshi": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-01-30T18:04:45.171255"
     },
     "jfx": {
@@ -27,7 +27,7 @@
     },
     "traders_light": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:14:58.275251"
+      "updated_at": "2026-02-05T04:00:07.051684"
     },
     "sbi": {
       "has_new": true,
@@ -51,7 +51,7 @@
     },
     "line_fx": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:15:01.543927"
+      "updated_at": "2026-02-05T04:00:10.940597"
     },
     "dmm": {
       "has_new": false,
@@ -63,7 +63,7 @@
     },
     "traders_light_light": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:14:59.082604"
+      "updated_at": "2026-02-05T04:00:07.896958"
     },
     "hirose": {
       "has_new": true,
@@ -71,7 +71,7 @@
     },
     "saxo": {
       "has_new": true,
-      "updated_at": "2026-02-04T04:00:10.783009"
+      "updated_at": "2026-02-05T04:00:12.205890"
     }
   }
 }
