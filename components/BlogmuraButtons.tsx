@@ -47,6 +47,12 @@ export const BlogmuraButtons: React.FC<BlogmuraButtonsProps> = ({
             imgSrc: "https://b.blogmura.com/88_31.gif",
             alt: "ブログランキング・にほんブログ村へ",
             text: "にほんブログ村"
+        },
+        {
+            href: "https://blogmura.com/profiles/11211368?p_cid=11211368",
+            imgSrc: "https://blogparts.blogmura.com/parts_image/user/pv11211368.gif",
+            alt: "PVアクセスランキング にほんブログ村",
+            text: "PVアクセスランキング"
         }
     ];
 

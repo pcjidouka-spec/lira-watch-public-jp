@@ -205,3 +205,39 @@ export const AmazonCard: React.FC<AmazonCardProps> = ({ asin, title, description
         </div>
     );
 };
+
+// ... existing components ...
+
+interface AmazonIframeProps {
+    asin: string;
+    width?: number;
+    height?: number;
+}
+
+/**
+ * Amazonアフィリエイト iFrameリンクコンポーネント
+ * Next.jsでscriptタグがブロックされる場合や、画像が表示されない場合の代替手段として使用します。
+ * 
+ * 使用例:
+ * <AmazonIframe asin="B0XXXXXX" />
+ */
+export const AmazonIframe: React.FC<AmazonIframeProps> = ({
+    asin,
+    width = 120,
+    height = 240
+}) => {
+    // Amazon iFrame URL (Product Link)
+    const src = `https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=8&l=as4&f=ifr&ref=ss_til&asins=${asin}&t=${AMAZON_ASSOCIATE_ID}&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&lt1=_blank&m=amazon`;
+
+    return (
+        <iframe
+            src={src}
+            style={{ width: `${width}px`, height: `${height}px`, border: 'none', overflow: 'hidden' }}
+            scrolling="no"
+            marginWidth={0}
+            marginHeight={0}
+            frameBorder={0}
+            title={`Amazon Product ${asin}`}
+        />
+    );
+};
