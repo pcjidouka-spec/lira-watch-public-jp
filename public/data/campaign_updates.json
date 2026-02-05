@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-02-05T04:00:12.206430",
+  "updated_at": "2026-02-06T04:00:10.750334",
   "providers": {
     "gmo_click": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:14:55.190295"
+      "updated_at": "2026-02-06T04:00:02.526197"
     },
     "gmo": {
       "has_new": false,
@@ -23,11 +23,11 @@
     },
     "traders_min": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:14:57.653847"
+      "updated_at": "2026-02-06T04:00:05.739613"
     },
     "traders_light": {
       "has_new": true,
-      "updated_at": "2026-02-05T04:00:07.051684"
+      "updated_at": "2026-02-06T04:00:06.379091"
     },
     "sbi": {
       "has_new": true,
@@ -59,11 +59,11 @@
     },
     "traders_min_light": {
       "has_new": true,
-      "updated_at": "2026-02-02T20:14:58.656534"
+      "updated_at": "2026-02-06T04:00:06.829776"
     },
     "traders_light_light": {
       "has_new": true,
-      "updated_at": "2026-02-05T04:00:07.896958"
+      "updated_at": "2026-02-06T04:00:07.232675"
     },
     "hirose": {
       "has_new": true,
@@ -71,7 +71,7 @@
     },
     "saxo": {
       "has_new": true,
-      "updated_at": "2026-02-05T04:00:12.205890"
+      "updated_at": "2026-02-06T04:00:10.749934"
     }
   }
 }
