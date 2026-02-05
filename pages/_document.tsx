@@ -11,6 +11,9 @@ export default function Document() {
                 {/* Allow all crawlers including AI */}
                 <meta name="robots" content="index, follow, max-image-preview:large" />
 
+                {/* Google AdSense */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6343144082717938" crossOrigin="anonymous"></script>
+
                 {/* Google Tag Manager */}
                 <script
                     dangerouslySetInnerHTML={{
