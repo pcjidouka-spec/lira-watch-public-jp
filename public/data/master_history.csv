@@ -606,16 +606,16 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-03,traders_light_light,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/02/03
 2026-02-03,traders_min,みんなのFX,1.0,24.1,-24.1,None,success,2026/02/03
 2026-02-03,traders_min_light,みんなのFX（LIGHT）,1.0,27.1,-27.1,None,success,2026/02/03
-2026-02-04,central_tanshi,セントラル短資FX,1.0,84.3,-84.3,None,success,2026/02/04
+2026-02-04,central_tanshi,セントラル短資FX,3.0,28.099999999999998,-28.099999999999998,None,success,2026/02/04
 2026-02-04,click365_okasan,クリック365,3.0,28.333333333333332,-28.333333333333332,None,success,2026/02/04
-2026-02-04,dmm,DMM FX,1.0,25.0,-28.0,02/04,success,2026/02/04
+2026-02-04,dmm,DMM FX,1.0,25.0,-28.0,02/06,success,2026/02/04
 2026-02-04,gaitame,外為どっとコム,3.0,24.0,-39.0,None,success,2026-02-04
 2026-02-04,gmo,GMO外貨,3.0,25.099999999999998,-25.099999999999998,None,success,2026/02/04
 2026-02-04,gmo_click,GMOクリック証券,3.0,28.0,-28.0,None,success,2026/02/04
 2026-02-04,hirose,ヒロセ通商,3.0,24.0,-29.0,None,success,2026/02/04
 2026-02-04,invast,トライオートFX,3.0,26.5,-37.5,None,success,2026/02/04
 2026-02-04,jfx,JFX,3.0,24.0,-31.0,None,success,2026/02/04
-2026-02-04,linefx,linefx,3.0,22.0,-32.0,None,success,2026-02-04
+2026-02-04,linefx,linefx,3.0,22.0,-32.0,None,success,2026/02/04
 2026-02-04,matsui,MATSUI FX,3.0,25.0,-25.0,None,success,2026/02/04
 2026-02-04,saxo,サクソバンク証券,1.0,26.0,-35.0,None,success,2026/01/30
 2026-02-04,sbi,SBI FXトレード,1.0,24.0,-24.0,02月06日,success,2026/02/04
