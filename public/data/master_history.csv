@@ -623,3 +623,20 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-04,traders_light_light,LIGHT FX（LIGHT）,3.0,24.2,-24.2,02/04,success,2026/02/04
 2026-02-04,traders_min,みんなのFX,3.0,24.099999999999998,-24.099999999999998,None,success,2026/02/04
 2026-02-04,traders_min_light,みんなのFX（LIGHT）,3.0,25.099999999999998,-25.099999999999998,None,success,2026/02/04
+2026-02-05,central_tanshi,セントラル短資FX,1.0,28.1,-28.1,2/6,success,2026/02/05
+2026-02-05,click365_okasan,クリック365,1.0,26.0,-26.0,None,success,2026/02/05
+2026-02-05,dmm,DMM FX,3.0,25.0,-28.0,None,success,2026/02/05
+2026-02-05,gaitame,外為どっとコム,1.0,25.0,-40.0,None,success,2026/02/05
+2026-02-05,gmo,GMO外貨,1.0,25.1,-25.1,None,success,2026/02/05
+2026-02-05,gmo_click,GMOクリック証券,1.0,27.0,-27.0,None,success,2026/02/05
+2026-02-05,hirose,ヒロセ通商,1.0,25.0,-30.0,None,success,2026/02/05
+2026-02-05,invast,トライオートFX,1.0,26.5,-37.5,None,success,2026/02/05
+2026-02-05,jfx,JFX,1.0,24.0,-31.0,None,success,2026/02/05
+2026-02-05,linefx,linefx,None,None,None,None,error,None
+2026-02-05,matsui,MATSUI FX,1.0,25.0,-25.0,None,success,2026/02/05
+2026-02-05,saxo,サクソバンク証券,1.0,26.0,-35.0,None,success,2026/01/30
+2026-02-05,sbi,SBI FXトレード,None,None,None,None,error,2026/02/05
+2026-02-05,traders_light,LIGHT FX,1.0,25.2,-25.2,None,success,2026/02/05
+2026-02-05,traders_light_light,LIGHT FX（LIGHT）,1.0,25.2,-25.2,02/05,success,2026/02/05
+2026-02-05,traders_min,みんなのFX,1.0,14.1,-14.1,None,success,2026/02/05
+2026-02-05,traders_min_light,みんなのFX（LIGHT）,None,None,None,None,error,None
