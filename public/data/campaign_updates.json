@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-09T04:00:12.420731",
+  "updated_at": "2026-02-10T04:00:12.100693",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -27,7 +27,7 @@
     },
     "traders_light": {
       "has_new": true,
-      "updated_at": "2026-02-07T04:00:06.213224"
+      "updated_at": "2026-02-10T04:00:07.373459"
     },
     "sbi": {
       "has_new": false,
@@ -50,7 +50,7 @@
       "updated_at": "2026-01-25T04:00:10.820724"
     },
     "line_fx": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-02-05T04:00:10.940597"
     },
     "dmm": {
@@ -63,7 +63,7 @@
     },
     "traders_light_light": {
       "has_new": true,
-      "updated_at": "2026-02-07T04:00:06.978232"
+      "updated_at": "2026-02-10T04:00:08.162679"
     },
     "hirose": {
       "has_new": false,
@@ -71,7 +71,7 @@
     },
     "saxo": {
       "has_new": true,
-      "updated_at": "2026-02-09T04:00:12.419982"
+      "updated_at": "2026-02-10T04:00:12.100280"
     }
   }
 }
