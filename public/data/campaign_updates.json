@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-10T04:00:12.100693",
+  "updated_at": "2026-02-11T04:00:09.986825",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -27,7 +27,7 @@
     },
     "traders_light": {
       "has_new": true,
-      "updated_at": "2026-02-10T04:00:07.373459"
+      "updated_at": "2026-02-11T04:00:05.495666"
     },
     "sbi": {
       "has_new": false,
@@ -63,7 +63,7 @@
     },
     "traders_light_light": {
       "has_new": true,
-      "updated_at": "2026-02-10T04:00:08.162679"
+      "updated_at": "2026-02-11T04:00:06.229279"
     },
     "hirose": {
       "has_new": false,
@@ -71,7 +71,7 @@
     },
     "saxo": {
       "has_new": true,
-      "updated_at": "2026-02-10T04:00:12.100280"
+      "updated_at": "2026-02-11T04:00:09.986315"
     }
   }
 }
