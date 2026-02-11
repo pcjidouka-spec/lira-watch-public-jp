@@ -208,7 +208,7 @@ export default function Home() {
         <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content="https://lira-watch.sbs/" />
-        <meta property="og:image" content="https://lira-watch.sbs/favicon.png" />
+        <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
         <meta property="og:site_name" content="トルコリラ・ウォッチ" />
         <meta property="og:locale" content="ja_JP" />
 
