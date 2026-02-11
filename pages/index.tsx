@@ -13,6 +13,7 @@ import { IdeasWidget } from '@/components/TradingView/IdeasWidget';
 import { BlogLayout } from '@/components/BlogLayout';
 import { BlogmuraButtons } from '@/components/BlogmuraButtons';
 import { RakutenAds } from '@/components/RakutenAds';
+import { RakutenSimAd } from '@/components/RakutenSimAd';
 
 export default function Home() {
   const {
@@ -145,6 +146,7 @@ export default function Home() {
         </div>
       </div>
 
+      <RakutenSimAd />
       <RakutenAds />
 
       <div className="sidebar-widget">
