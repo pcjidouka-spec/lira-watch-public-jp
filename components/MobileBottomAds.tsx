@@ -39,6 +39,12 @@ const AD_ITEMS = [
         title: "大戸屋 2,000円ギフト",
         image: "https://hbb.afl.rakuten.co.jp/hgb/50cd90e5.ba52a2fd.50cd90e6.09db1cba/?me_id=1405809&item_id=10000115&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakkenshop%2Fcabinet%2F10345128%2F10345136%2F2000yen_127188.jpg%3F_ex%3D128x128&s=128x128&t=picttext",
         pixel: ""
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmayumi-store%2Fnt-st2-p%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
+        title: "日本通信 SIM スターターパック",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext",
+        pixel: ""
     }
 ];
 
