@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-02-11T04:00:09.986825",
+  "updated_at": "2026-02-13T04:00:10.987248",
   "providers": {
     "gmo_click": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-02-06T04:00:02.526197"
     },
     "gmo": {
@@ -22,12 +22,12 @@
       "updated_at": "2026-02-02T20:10:00.000000"
     },
     "traders_min": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-02-06T04:00:05.739613"
     },
     "traders_light": {
       "has_new": true,
-      "updated_at": "2026-02-11T04:00:05.495666"
+      "updated_at": "2026-02-12T20:55:23.133889"
     },
     "sbi": {
       "has_new": false,
@@ -58,12 +58,12 @@
       "updated_at": "2026-01-26T04:00:02.904188"
     },
     "traders_min_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-02-06T04:00:06.829776"
     },
     "traders_light_light": {
       "has_new": true,
-      "updated_at": "2026-02-11T04:00:06.229279"
+      "updated_at": "2026-02-12T20:55:24.124928"
     },
     "hirose": {
       "has_new": false,
@@ -71,7 +71,7 @@
     },
     "saxo": {
       "has_new": true,
-      "updated_at": "2026-02-11T04:00:09.986315"
+      "updated_at": "2026-02-13T04:00:10.985794"
     }
   }
 }
