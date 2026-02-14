@@ -8,6 +8,56 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
   {
+    id: 'dandanbank-campaign-20260215',
+    title: '【最大24,000円】DanDanBANKのキャンペーンが超おトク！',
+    date: '2026/02/15',
+    content: `
+      <p class="intro">
+        今、ポイ活ユーザーの間で話題なのが「DanDanBANK」の新規口座開設キャンペーンです。
+      </p>
+
+      <h3>1. もらえる特典（合計24,000円相当）</h3>
+      <ul>
+        <li><strong>口座開設＋10万円預け入れ：</strong> 2,000円</li>
+        <li><strong>給与受取（月3万円〜）：</strong> 1,000円</li>
+        <li><strong>カード新規入会＆利用：</strong> 最大21,000円相当
+          <ul>
+            <li>クレジットカード利用で最大11,000円相当</li>
+            <li>JCBデビットカード利用で10,000円相当</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>2. 銀行としての魅力</h3>
+      <ul>
+        <li><strong>普通預金が超高金利：</strong> 年0.40%〜最大0.90%（2026年1月時点）と業界最高水準です。</li>
+        <li><strong>手数料が無料：</strong> 銀行同士の振込は何度でも無料。ATMや他行宛振込も条件次第で無料回数がつきます。</li>
+      </ul>
+
+      <h3>3. 参加のステップ</h3>
+      <ol>
+        <li>アプリをダウンロードして口座開設。</li>
+        <li>アプリ内のバナーからキャンペーンに必ずエントリーする。</li>
+        <li>5月29日（金）までに条件をクリアする。</li>
+      </ol>
+
+      <div class="campaign-link" style="margin-top: 30px;">
+        <p style="font-weight: bold;">▼学生も！新社会人も！家族みんなで！ごうぎん　まるごとイイじゃん！キャンペーン</p>
+        <a href="https://www.gogin.co.jp/campaign/" target="_blank" rel="noopener noreferrer">https://www.gogin.co.jp/campaign/</a>
+      </div>
+
+      <h4 style="margin-top: 20px;">＜併用可能なキャンペーン＞</h4>
+      <div class="campaign-link">
+        <p>▼VISAブランドのクレジットカード 新規入会＆ご利用で最大1万円キャッシュバック＋Vポイントギフトプレゼントキャンペーン</p>
+        <a href="https://www3.vpass.ne.jp/mem/cardinfo/" target="_blank" rel="noopener noreferrer">https://www3.vpass.ne.jp/mem/cardinfo/</a>
+      </div>
+      <div class="campaign-link">
+        <p>▼1万円相当のポイントがあたる！キャンペーン</p>
+        <a href="https://www.gogin.co.jp/campaign/" target="_blank" rel="noopener noreferrer">https://www.gogin.co.jp/campaign/</a>
+      </div>
+    `,
+  },
+  {
     id: 'takaichi-yen-weakness-prediction-20260211',
     title: '【予測】高市政権の大勝で「円安」が再加速する理由と時期',
     date: '2026/02/11',
