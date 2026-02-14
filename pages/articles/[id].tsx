@@ -182,7 +182,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-body :global(tr:nth-child(even)) {
           background-color: #f9fafb;
         }
-        .article-body :global(ul) {
+        /* List Styles including OL */
+        .article-body :global(ul),
+        .article-body :global(ol) {
           padding-left: 24px;
           margin-bottom: 24px;
         }
@@ -247,6 +249,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           }
           .article-title {
             font-size: 22px;
+          }
+          /* Mobile Text Indentation */
+          .article-body :global(p) {
+             text-indent: 1em;
           }
         }
       `}</style>
