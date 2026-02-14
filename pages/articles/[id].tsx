@@ -250,9 +250,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           .article-title {
             font-size: 22px;
           }
-          /* Mobile Text Indentation */
-          .article-body :global(p) {
-             text-indent: 1em;
+          /* Mobile Text Indentation - High Specificity Fix */
+          .article .article-body :global(p),
+          .article .article-body :global(p:first-child) {
+             text-indent: 1em !important;
           }
         }
       `}</style>
