@@ -66,6 +66,39 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
     };
   }, [data, type, ranking, providerConfigs]);
 
+  // 表示するプロバイダーを管理するState
+  const [visibleProviders, setVisibleProviders] = useState<string[]>([]);
+
+  // 初回ロード時やプロバイダーリスト変更時に表示リストを初期化
+  useEffect(() => {
+    if (providers.length > 0) {
+      setVisibleProviders(prev => {
+        // 初回は全て表示
+        if (prev.length === 0) return providers;
+        // プロバイダーリストが変わった場合（例: buy/sell切り替え）、
+        // 基本的にはリセットせず、新しいリストに存在するものだけ残す＋新規は追加する方針も考えられるが、
+        // シンプルに「現在表示中のものは維持、無くなったものは消える」形にする
+        // ただしtypeが変わった場合は全く別のグラフになるため、リセットしたい意図もあるかもしれないが、
+        // ここでは「既存の選択状態を可能な限り維持」する
+        const currentSet = new Set(providers);
+        const validPrev = prev.filter(p => currentSet.has(p));
+
+        // もし有効なものが一つもなくなってしまったら（例：データが全然違う場合）、全選択に戻す
+        if (validPrev.length === 0) return providers;
+
+        // 新しく追加されたプロバイダーがあれば、それはデフォルトで表示するか？
+        // ここでは「以前選択されていたものだけ」を表示し、新規は非表示にするか、
+        // あるいは「全選択」状態なら新規も追加するか...
+        // ユーザー体験としては「一度チェック外したものは外れたまま」が良い。
+
+        // 新規プロバイダーをデフォルトONにする場合:
+        const prevSet = new Set(prev);
+        const newProviders = providers.filter(p => !prevSet.has(p));
+        return [...validPrev, ...newProviders];
+      });
+    }
+  }, [providers]);
+
   // プロバイダーIDと名前のマッピングを作成
   const providerIdMap = useMemo(() => {
     const map = new Map<string, string>();
@@ -85,6 +118,56 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
     });
     return map;
   }, [providerIdMap]);
+
+  const toggleProvider = (providerName: string) => {
+    setVisibleProviders(prev => {
+      if (prev.includes(providerName)) {
+        return prev.filter(p => p !== providerName);
+      } else {
+        return [...prev, providerName];
+      }
+    });
+  };
+
+  const renderLegend = (props: any) => {
+    const { payload } = props;
+    return (
+      <ul className="custom-legend-list">
+        {payload.map((entry: any, index: number) => {
+          const { value, color } = entry;
+          const isVisible = visibleProviders.includes(value);
+          const providerId = getNameToIdMap.get(value);
+          const config = providerId ? providerConfigs.get(providerId) : null;
+
+          return (
+            <li key={`item-${index}`} className="custom-legend-item">
+              <div className="legend-checkbox-container" onClick={() => toggleProvider(value)}>
+                <input
+                  type="checkbox"
+                  checked={isVisible}
+                  onChange={() => { }} // onClickで処理するのでダミー
+                  className="legend-checkbox"
+                />
+                <span className="legend-color-box" style={{ backgroundColor: color }} />
+              </div>
+              <span
+                className="legend-text"
+                onClick={(e) => {
+                  e.stopPropagation(); // チェックボックス切り替えを防止
+                  if (config?.url) {
+                    window.open(config.url, '_blank', 'noopener,noreferrer');
+                  }
+                }}
+                title={config?.url ? "公式サイトへ移動" : ""}
+              >
+                {value}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
 
   return (
     <div className="chart-container">
@@ -111,19 +194,7 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
               formatter={(value: number) => value !== null ? `${value.toFixed(1)}円` : 'データなし'}
               labelStyle={{ color: '#374151' }}
             />
-            <Legend
-              wrapperStyle={{ paddingTop: '0px', textAlign: 'left' }}
-              iconType="line"
-              align="left"
-              onClick={(e: any) => {
-                const providerName = e.value;
-                const providerId = getNameToIdMap.get(providerName);
-                const config = providerId ? providerConfigs.get(providerId) : null;
-                if (config?.url) {
-                  window.open(config.url, '_blank', 'noopener,noreferrer');
-                }
-              }}
-            />
+            <Legend content={renderLegend} verticalAlign="bottom" align="left" wrapperStyle={{ paddingTop: '20px' }} />
             {providers.map((provider, index) => {
               const providerId = getNameToIdMap.get(provider);
               const config = providerId ? providerConfigs.get(providerId) : null;
@@ -137,6 +208,7 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
                   name={provider}
                   dot={{ r: 3 }}
                   connectNulls={false}
+                  hide={!visibleProviders.includes(provider)}
                 />
               );
             })}
@@ -144,54 +216,55 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
         </ResponsiveContainer>
       </div>
       <style jsx global>{`
-        .recharts-legend-wrapper {
-          text-align: left !important;
-          width: calc(100% - 0px) !important;
-          padding-left: 40px !important;
-          padding-right: 0 !important;
-          box-sizing: border-box;
-        }
-        .recharts-legend-wrapper ul {
-          text-align: left !important;
-          padding-left: 0 !important;
-          margin-left: 0 !important;
+        .custom-legend-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
           display: flex;
           flex-wrap: wrap;
+          gap: 15px;
           justify-content: flex-start;
           width: 100%;
-          gap: 0px;
         }
-        .recharts-legend-wrapper .recharts-legend-item {
-          display: inline-block;
-          margin-right: 0;
-          margin-bottom: 0px;
-          margin-left: 0 !important;
-          text-align: left;
-          float: none !important;
-          flex: 0 0 auto;
+        .custom-legend-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
         }
-        .recharts-legend-wrapper .recharts-legend-item-text {
-          display: inline-block;
-          width: 200px;
-          text-align: left !important;
-          vertical-align: middle;
+        .legend-checkbox-container {
+          display: flex;
+          align-items: center;
           cursor: pointer;
-          transition: opacity 0.2s ease;
+          margin-right: 5px;
         }
-        .recharts-legend-wrapper .recharts-legend-item-text:hover {
-          opacity: 0.7;
+        .legend-checkbox {
+          cursor: pointer;
+          margin-right: 5px;
+        }
+        .legend-color-box {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin-right: 5px;
+          border-radius: 2px;
+        }
+        .legend-text {
+          cursor: pointer;
+          font-size: 12px;
+          color: #374151;
+          transition: color 0.2s;
+        }
+        .legend-text:hover {
+          color: #111827;
           text-decoration: underline;
         }
+
         @media (max-width: 768px) {
-          .recharts-legend-wrapper {
-            padding-left: 20px !important;
+          .custom-legend-list {
+            gap: 10px;
           }
-          .recharts-legend-wrapper .recharts-legend-item-text {
-            width: 120px;
+          .legend-text {
             font-size: 11px;
-          }
-          .recharts-legend-wrapper ul {
-            gap: 12px;
           }
           .recharts-xAxis {
             font-size: 9px !important;
@@ -204,24 +277,23 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
           }
         }
         @media (max-width: 480px) {
-          .recharts-legend-wrapper {
-            padding-left: 10px !important;
-          }
-          .recharts-legend-wrapper .recharts-legend-item-text {
-            width: 100px;
-            font-size: 10px;
-          }
-          .recharts-legend-wrapper ul {
+          .custom-legend-list {
             gap: 8px;
           }
-          .recharts-xAxis {
+          .legend-text {
+            font-size: 10px;
+          }
+          .recharts-legend-wrapper {
+             padding-left: 0 !important;
+          }
+           .recharts-xAxis {
             font-size: 8px !important;
           }
           .recharts-yAxis {
-            font-size: 9px !important;
+             font-size: 9px !important;
           }
           .recharts-cartesian-axis-tick {
-            font-size: 8px !important;
+             font-size: 8px !important;
           }
         }
       `}</style>
