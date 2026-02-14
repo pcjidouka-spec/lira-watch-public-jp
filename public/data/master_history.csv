@@ -605,7 +605,7 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-06,click365_okasan,クリック365,None,None,None,None,error,None
 2026-02-06,dmm,DMM FX,1.0,25.0,-28.0,None,success,2026/02/06
 2026-02-06,gaitame,外為どっとコム,2.0,25.0,-40.0,None,success,2026/02/06
-2026-02-06,gmo,GMO外貨,3.0,16.733333333333334,-16.733333333333334,None,success,2026/02/06
+2026-02-06,gmo,GMO外貨,2.0,25.1,-25.1,None,success,2026/02/06
 2026-02-06,gmo_click,GMOクリック証券,2.0,27.0,-27.0,None,success,2026/02/06
 2026-02-06,hirose,ヒロセ通商,None,None,None,None,error,None
 2026-02-06,invast,トライオートFX,2.0,26.5,-37.5,None,success,2026/02/06
@@ -655,7 +655,7 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-09,gaitame,外為どっとコム,1.0,25.0,-40.0,None,success,2026/02/09
 2026-02-09,gmo,GMO外貨,1.0,25.1,-25.1,None,success,2026/02/09
 2026-02-09,gmo_click,GMOクリック証券,1.0,27.0,-27.0,None,success,2026/02/09
-2026-02-09,hirose,ヒロセ通商,1.0,2.5,-3.0,None,success,2026/02/09
+2026-02-09,hirose,ヒロセ通商,1.0,25.0,-30.0,None,success,2026/02/09
 2026-02-09,invast,トライオートFX,1.0,26.5,-37.5,None,success,2026/02/09
 2026-02-09,linefx,linefx,1.0,22.0,-32.0,None,success,2026/02/09
 2026-02-09,matsui,MATSUI FX,1.0,25.0,-25.0,None,success,2026/02/09
