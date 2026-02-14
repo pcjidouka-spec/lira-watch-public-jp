@@ -244,26 +244,48 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         }
 
         @media (max-width: 600px) {
+          .main-content {
+            padding: 16px 0;
+          }
           .content-wrapper {
-            padding: 24px;
+            padding: 20px 16px;
+            border-radius: 0;
           }
           .article-title {
             font-size: 22px;
           }
-          /* Mobile Text Indentation - High Specificity Fix */
-          .article .article-body :global(p),
-          .article .article-body :global(p:first-child) {
-             text-indent: 1em !important;
+          .article-body :global(p) {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            text-indent: 1em;
+          }
+          .article-body :global(h3) {
+            font-size: 18px;
+            margin-left: 0;
+          }
+          .article-body :global(ul),
+          .article-body :global(ol) {
+            padding-left: 2em;
+            padding-right: 0.5em;
+          }
+          .article-body :global(table) {
+            font-size: 12px;
+          }
+          .article-body :global(th),
+          .article-body :global(td) {
+            padding: 8px 6px;
+          }
+          .article-body :global(.campaign-details) {
+            padding: 16px;
           }
         }
       `}</style>
       <style jsx global>{`
         @media (max-width: 600px) {
-          /* Mobile Text Indentation - Global Force Fix */
           .article-body p {
-             text-indent: 1em !important;
-             margin-left: 0 !important;
-             padding-left: 0 !important;
+             padding-left: 0.5em;
+             padding-right: 0.5em;
+             text-indent: 1em;
           }
         }
       `}</style>
