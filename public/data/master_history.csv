@@ -693,7 +693,7 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-12,invast,トライオートFX,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,linefx,linefx,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,matsui,MATSUI FX,0.0,0.0,0.0,None,success,2026/02/12
-2026-02-12,saxo,サクソバンク証券,1.0,-30.0,22.0,None,success,2026/02/06
+2026-02-12,saxo,サクソバンク証券,1.0,22.0,-30.0,None,success,2026/02/06
 2026-02-12,sbi,SBI FXトレード,4.0,24.0,-24.0,02月17日,success,2026/02/12
 2026-02-12,traders_light,LIGHT FX,0.0,None,None,None,success,2026/02/12
 2026-02-12,traders_light_light,LIGHT FX（LIGHT）,0.0,None,None,None,success,2026/02/12
