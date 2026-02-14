@@ -1,0 +1,13 @@
+--- DMM ---
+{'target_date': '2026-02-07', 'provider_id': 'dmm', 'name': 'DMM FX', 'days': 'None', 'swap_buy': 'None', 'swap_sell': 'None', 'settlement_date': '02/07', 'status': 'error', 'actual_date': '2026/02/07'}
+{'target_date': '2026-02-08', 'provider_id': 'dmm', 'name': 'DMM FX', 'days': 'None', 'swap_buy': 'None', 'swap_sell': 'None', 'settlement_date': '02/08', 'status': 'error', 'actual_date': '2026/02/08'}
+{'target_date': '2026-02-09', 'provider_id': 'dmm', 'name': 'DMM FX', 'days': '2.0', 'swap_buy': '25.0', 'swap_sell': '-28.0', 'settlement_date': '02/09', 'status': 'success', 'actual_date': '2026/02/09'}
+{'target_date': '2026-02-11', 'provider_id': 'dmm', 'name': 'DMM FX', 'days': 'None', 'swap_buy': 'None', 'swap_sell': 'None', 'settlement_date': 'None', 'status': 'error', 'actual_date': 'None'}
+{'target_date': '2026-02-12', 'provider_id': 'dmm', 'name': 'DMM FX', 'days': '4.0', 'swap_buy': '25.0', 'swap_sell': '-28.0', 'settlement_date': '02/12', 'status': 'success', 'actual_date': '2026/02/12'}
+
+--- JFX ---
+{'target_date': '2026-02-07', 'provider_id': 'jfx', 'name': 'JFX', 'days': 'None', 'swap_buy': 'None', 'swap_sell': 'None', 'settlement_date': 'None', 'status': 'error', 'actual_date': 'None'}
+{'target_date': '2026-02-08', 'provider_id': 'jfx', 'name': 'JFX', 'days': 'None', 'swap_buy': 'None', 'swap_sell': 'None', 'settlement_date': 'None', 'status': 'error', 'actual_date': 'None'}
+{'target_date': '2026-02-09', 'provider_id': 'jfx', 'name': 'JFX', 'days': '1.0', 'swap_buy': '24.0', 'swap_sell': '-31.0', 'settlement_date': 'None', 'status': 'success', 'actual_date': '2026/02/09'}
+{'target_date': '2026-02-11', 'provider_id': 'jfx', 'name': 'JFX', 'days': '4.0', 'swap_buy': '24.0', 'swap_sell': '-31.0', 'settlement_date': 'None', 'status': 'success', 'actual_date': '2026/02/11'}
+{'target_date': '2026-02-12', 'provider_id': 'jfx', 'name': 'JFX', 'days': '0.0', 'swap_buy': '140.0', 'swap_sell': '-190.0', 'settlement_date': 'None', 'status': 'success', 'actual_date': '2026/02/12'}

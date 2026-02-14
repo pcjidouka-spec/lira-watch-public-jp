@@ -733,7 +733,7 @@ target_date,provider_id,name,days,swap_buy,swap_sell,settlement_date,status,actu
 2026-02-12,gmo_click,GMOクリック証券,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,hirose,ヒロセ通商,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,invast,トライオートFX,0.0,0.0,0.0,None,success,2026/02/12
-2026-02-12,jfx,JFX,0.0,140.0,-190.0,None,success,2026/02/12
+2026-02-12,jfx,JFX,4.0,35.0,-47.5,None,success,2026/02/12
 2026-02-12,linefx,linefx,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,matsui,MATSUI FX,0.0,0.0,0.0,None,success,2026/02/12
 2026-02-12,saxo,サクソバンク証券,1.0,-30.0,22.0,None,success,2026/02/06
