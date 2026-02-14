@@ -257,6 +257,16 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           }
         }
       `}</style>
+      <style jsx global>{`
+        @media (max-width: 600px) {
+          /* Mobile Text Indentation - Global Force Fix */
+          .article-body p {
+             text-indent: 1em !important;
+             margin-left: 0 !important;
+             padding-left: 0 !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
