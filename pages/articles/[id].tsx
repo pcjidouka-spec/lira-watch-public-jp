@@ -245,47 +245,59 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
         @media (max-width: 600px) {
           .main-content {
-            padding: 16px 0;
+            padding: 16px 12px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
           }
           .content-wrapper {
-            padding: 20px 16px;
-            border-radius: 0;
+            padding: 24px 16px !important;
+            border-radius: 8px !important;
+            margin: 0 !important;
           }
           .article-title {
-            font-size: 22px;
+            font-size: 20px !important;
+            line-height: 1.4 !important;
           }
           .article-body :global(p) {
-            padding-left: 0.5em;
-            padding-right: 0.5em;
-            text-indent: 1em;
+            text-indent: 1em !important;
+            padding: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            text-align: justify;
           }
           .article-body :global(h3) {
-            font-size: 18px;
-            margin-left: 0;
+            font-size: 18px !important;
+            margin-left: 0 !important;
+            margin-top: 32px !important;
           }
           .article-body :global(ul),
           .article-body :global(ol) {
-            padding-left: 2em;
-            padding-right: 0.5em;
+            padding-left: 1.5em !important;
+            padding-right: 0 !important;
           }
           .article-body :global(table) {
-            font-size: 12px;
+            font-size: 11px !important;
+            display: block !important;
+            overflow-x: auto !important;
+            white-space: nowrap !important;
           }
           .article-body :global(th),
           .article-body :global(td) {
-            padding: 8px 6px;
+            padding: 8px 4px !important;
           }
           .article-body :global(.campaign-details) {
-            padding: 16px;
+            padding: 16px !important;
+            margin: 16px -8px !important;
+            border-radius: 4px !important;
           }
         }
       `}</style>
       <style jsx global>{`
         @media (max-width: 600px) {
           .article-body p {
-             padding-left: 0.5em;
-             padding-right: 0.5em;
-             text-indent: 1em;
+             text-indent: 1em !important;
+             padding: 0 !important;
+             margin: 0 0 16px 0 !important;
           }
         }
       `}</style>
