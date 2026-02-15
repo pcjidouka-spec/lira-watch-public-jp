@@ -226,6 +226,7 @@ export const MobileArticleDrawer: React.FC = () => {
                     color: #1f2937;
                     line-height: 1.4;
                     font-weight: 500;
+                    margin-left: 1em !important;
                 }
 
                 .article-link.new .article-title {
