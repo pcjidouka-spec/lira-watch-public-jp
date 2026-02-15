@@ -67,7 +67,10 @@ export const MobileArticleDrawer: React.FC = () => {
                                     <Link
                                         href={`/articles/${article.id}`}
                                         className={`article-link ${isNew ? 'new' : ''}`}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={() => {
+                                            document.body.style.overflow = ''; // 強制的に即時解除
+                                            setIsOpen(false);
+                                        }}
                                     >
                                         <span className="article-date">{article.date}</span>
                                         <span className="article-title">{article.title}</span>
@@ -199,9 +202,11 @@ export const MobileArticleDrawer: React.FC = () => {
                 .article-link {
                     display: flex;
                     flex-direction: column;
-                    padding: 14px 16px;
+                    padding: 14px 20px !important;
                     text-decoration: none;
                     transition: background 0.2s;
+                    box-sizing: border-box !important;
+                    width: 100%;
                 }
 
                 .article-link:active {

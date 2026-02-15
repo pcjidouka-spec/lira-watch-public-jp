@@ -245,8 +245,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
         @media (max-width: 600px) {
           .main-content {
-            padding: 16px 12px !important;
-            width: 100% !important;
+            padding: 16px 0 !important; /* 上下のみ */
+            width: auto !important;
+            margin-left: 12px !important;
+            margin-right: 12px !important;
             box-sizing: border-box !important;
           }
           .content-wrapper {
