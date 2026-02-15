@@ -200,8 +200,8 @@ export const MobileArticleDrawer: React.FC = () => {
                 }
 
                 .article-link {
-                    display: flex;
-                    flex-direction: column;
+                    display: flex !important;
+                    flex-direction: column !important;
                     padding: 14px 20px !important;
                     text-decoration: none;
                     transition: background 0.2s;
@@ -214,12 +214,14 @@ export const MobileArticleDrawer: React.FC = () => {
                 }
 
                 .article-date {
+                    display: block !important;
                     font-size: 11px;
                     color: #6b7280;
                     margin-bottom: 4px;
                 }
 
                 .article-title {
+                    display: block !important;
                     font-size: 14px;
                     color: #1f2937;
                     line-height: 1.4;
