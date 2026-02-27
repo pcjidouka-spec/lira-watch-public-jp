@@ -8,6 +8,79 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
   {
+    id: 'gaitame-swap-campaign-20260228',
+    title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」がおすすめです！',
+    date: '2026/02/28',
+    content: `
+      <p class="intro">
+        外為どっとコムにて、非常にお得な「スワップポイント最大60％増額キャンペーン」が実施されます！<br>
+        一番の重要なポイントは、最大の60％増額を狙うには100万円の入金が必要ですが、10万円の入金でもしっかり30％増額の恩恵を受けられるという点です。少額からでも参加しやすい内容になっています。
+      </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/gaitame_campaign_60.png" alt="外為どっとコム スワップポイント最大60％増額キャンペーン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
+
+      <h3>【上乗せで大体いくら増える？（目安の計算）】</h3>
+      <p>複数の対象通貨ペアを1〜2週間程度運用した場合の公式シミュレーションによると、以下のようなまとまったポイントが還元されます。</p>
+      <ul>
+        <li><strong>入金10万円以上（30％増額）の場合：</strong> 合計で<span style="color: #ef4444; font-weight: bold;">約35,345円相当</span>のポイント上乗せ！</li>
+        <li><strong>入金100万円以上（60％増額）の場合：</strong> 合計で<span style="color: #ef4444; font-weight: bold;">約70,625円相当</span>のポイント上乗せ！</li>
+      </ul>
+
+      <p>また、1日・一定数量あたりの上乗せ目安（60％増額時）は以下の通りです。</p>
+      <table class="article-table">
+        <thead>
+          <tr>
+            <th>対象通貨ペア・ポジション</th>
+            <th>数量</th>
+            <th>1日あたりの上乗せ目安</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>トルコリラ/円（買）</td>
+            <td>10万通貨</td>
+            <td>約145円相当上乗せ</td>
+          </tr>
+          <tr>
+            <td>米ドル/トルコリラ（売）</td>
+            <td>1万通貨</td>
+            <td>約448円相当上乗せ</td>
+          </tr>
+          <tr>
+            <td>ユーロ/トルコリラ（売）</td>
+            <td>1万通貨</td>
+            <td>約624円相当上乗せ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>【キャンペーンの概要】</h3>
+      <div class="campaign-details">
+        <p><strong>条件：</strong> 期間中の入金額（出金を引いた純増額）が10万円以上で30%増額、100万円以上で60%増額</p>
+        <p><strong>対象：</strong> トルコリラ/円（買）、米ドル/トルコリラ（売）、ユーロ/トルコリラ（売）の新規ポジション</p>
+        <p><strong>期間：</strong> 2026年3月2日～3月28日</p>
+        <p><strong>特典：</strong> 上限なしでFXポイント還元（「らくらくFX積立」での買付に利用可能）</p>
+      </div>
+
+      <h3>【参加するための必須条件・注意点】</h3>
+      <ul>
+        <li>専用フォームからの「エントリー」が必須です。</li>
+        <li>ポイントを受け取るには、キャンペーン終了までに『らくらくFX積立』の口座開設を完了させておく必要があります。</li>
+      </ul>
+
+      <p style="font-weight: bold; margin-top: 20px;">
+        100万円の資金がすぐに用意できなくても、10万円から手軽に30%の上乗せが狙える大チャンスです。ぜひこの機会にチェックして、エントリーしてみてください！
+      </p>
+
+      <div class="campaign-link" style="margin-top: 30px;">
+        <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+        <a href="https://www.gaitame.com/campaign/increase-swap-2603/" target="_blank" rel="noopener noreferrer">https://www.gaitame.com/campaign/increase-swap-2603/</a>
+      </div>
+    `,
+  },
+  {
     id: 'dandanbank-campaign-20260215',
     title: '【最大24,000円】DanDanBANKのキャンペーンが超おトク！',
     date: '2026/02/15',
