@@ -3,6 +3,7 @@ export interface Article {
   title: string;
   date: string;
   content: string; // HTML content
+  thumbnail?: string;
 }
 
 // 楽天記事削除
@@ -11,6 +12,7 @@ export const articles: Article[] = [
     id: 'gaitame-swap-campaign-20260228',
     title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」がおすすめです！',
     date: '2026/02/28',
+    thumbnail: '/images/gaitame_campaign_60.png',
     content: `
       <p class="intro">
         外為どっとコムにて、非常にお得な「スワップポイント最大60％増額キャンペーン」が実施されます！<br>
