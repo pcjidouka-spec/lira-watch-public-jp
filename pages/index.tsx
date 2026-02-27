@@ -280,31 +280,32 @@ export default function Home() {
           return (
             <article key={article.id} className="blog-post">
               <header className="post-header">
-                <div className="post-meta">
+                <div className="post-meta" style={{ marginBottom: article.thumbnail ? '16px' : '0' }}>
                   <span className="post-date">{article.date}</span>
                   <span className="post-category">コラム</span>
+                  {isNew && <span className="new-badge-article" style={{ marginLeft: '12px', verticalAlign: 'middle' }}>New</span>}
                 </div>
-                <h2 className="post-title">
-                  <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
-                    {article.title}
-                  </Link>
-                  {isNew && <span className="new-badge-article">New</span>}
-                </h2>
-              </header>
-              <div className="post-excerpt-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
-                <div className="post-excerpt" style={{ flex: 1, margin: 0 }}>
-                  <p>記事の続きはこちら...</p>
-                  <div className="read-more-wrapper">
-                    <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
-                  </div>
-                </div>
-                {article.thumbnail && (
-                  <div className="post-thumbnail" style={{ flexShrink: 0, width: '120px', marginTop: '4px' }}>
+
+                {article.thumbnail ? (
+                  <div className="post-thumbnail-main" style={{ marginBottom: '16px' }}>
                     <Link href={`/articles/${article.id}`}>
-                      <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '4px', border: '1px solid #e5e7eb', display: 'block' }} />
+                      <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'block' }} />
                     </Link>
                   </div>
+                ) : (
+                  <h2 className="post-title">
+                    <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
+                      {article.title}
+                    </Link>
+                  </h2>
                 )}
+              </header>
+
+              <div className="post-excerpt">
+                <p>記事の続きはこちら...</p>
+                <div className="read-more-wrapper">
+                  <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
+                </div>
               </div>
             </article>
           );
