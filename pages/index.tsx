@@ -287,13 +287,13 @@ export default function Home() {
                 </div>
 
                 {article.thumbnail ? (
-                  <div className="post-thumbnail-main" style={{ marginBottom: '16px' }}>
+                  <div className="post-thumbnail-main" style={{ marginBottom: '8px' }}>
                     <Link href={`/articles/${article.id}`}>
                       <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'block' }} />
                     </Link>
                   </div>
                 ) : (
-                  <h2 className="post-title">
+                  <h2 className="post-title" style={{ marginBottom: '16px' }}>
                     <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
                       {article.title}
                     </Link>
@@ -301,9 +301,8 @@ export default function Home() {
                 )}
               </header>
 
-              <div className="post-excerpt" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <p style={{ margin: 0, padding: 0 }}>記事の続きはこちら...</p>
-                <div className="read-more-wrapper">
+              <div className="post-excerpt" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div className="read-more-wrapper" style={{ marginTop: 0 }}>
                   <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
                 </div>
               </div>
