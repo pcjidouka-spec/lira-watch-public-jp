@@ -291,11 +291,20 @@ export default function Home() {
                   {isNew && <span className="new-badge-article">New</span>}
                 </h2>
               </header>
-              <div className="post-excerpt">
-                <p>記事の続きはこちら...</p>
-                <div className="read-more-wrapper">
-                  <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
+              <div className="post-excerpt-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
+                <div className="post-excerpt" style={{ flex: 1, margin: 0 }}>
+                  <p>記事の続きはこちら...</p>
+                  <div className="read-more-wrapper">
+                    <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
+                  </div>
                 </div>
+                {article.thumbnail && (
+                  <div className="post-thumbnail" style={{ flexShrink: 0, width: '120px', marginTop: '4px' }}>
+                    <Link href={`/articles/${article.id}`}>
+                      <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '4px', border: '1px solid #e5e7eb', display: 'block' }} />
+                    </Link>
+                  </div>
+                )}
               </div>
             </article>
           );
