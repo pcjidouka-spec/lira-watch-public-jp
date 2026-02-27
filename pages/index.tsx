@@ -301,8 +301,8 @@ export default function Home() {
                 )}
               </header>
 
-              <div className="post-excerpt">
-                <p>記事の続きはこちら...</p>
+              <div className="post-excerpt" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <p style={{ margin: 0, padding: 0 }}>記事の続きはこちら...</p>
                 <div className="read-more-wrapper">
                   <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
                 </div>
