@@ -86,10 +86,15 @@ export const articles: Article[] = [
     id: 'dandanbank-campaign-20260215',
     title: '【最大24,000円】DanDanBANKのキャンペーンが超おトク！',
     date: '2026/02/15',
+    thumbnail: '/images/dandan_campaign_60.png',
     content: `
       <p class="intro">
         今、ポイ活ユーザーの間で話題なのが「DanDanBANK」の新規口座開設キャンペーンです。
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/dandan_campaign_60.png" alt="DanDanBANKのキャンペーンが超おトク！" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
       <h3>1. もらえる特典（合計24,000円相当）</h3>
       <ul>
@@ -136,10 +141,15 @@ export const articles: Article[] = [
     id: 'takaichi-yen-weakness-prediction-20260211',
     title: '【予測】高市政権の大勝で「円安」が再加速する理由と時期',
     date: '2026/02/11',
+    thumbnail: '/images/takaichi_yen_60.png',
     content: `
       <p class="intro">
         選挙後の「円高」は一時的な調整に過ぎず、中長期では「積極財政×利上げ抑制」のポリシーミックスが強烈な円安圧力を生むことが懸念されます。
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/takaichi_yen_60.png" alt="高市政権の大勝で「円安」が再加速する理由" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
       <h3>なぜ今、円安トレンドへの回帰が予測されるのか？</h3>
       <p>
@@ -184,10 +194,15 @@ export const articles: Article[] = [
     id: 'min-fx-swap-campaign-20260203',
     title: 'みんなのFX：スワップNo.1チャレンジキャンペーンの凄さを徹底解説',
     date: '2026/02/03',
+    thumbnail: '/images/minfx_campaign_60.png',
     content: `
       <p class="intro">
         トルコリラ/円のスワップポイントランキングでも常に上位を占めている「みんなのFX」。実は、キャンペーンを含めると実質的にはランキング1位の状態が続いています。
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/minfx_campaign_60.png" alt="みんなのFX：スワップNo.1チャレンジキャンペーン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
       <h3><a href="https://min-fx.jp/campaign/swapno1_202601/?utm_source=hp&utm_medium=bnr&utm_campaign=cp" target="_blank" rel="noopener noreferrer">みんなのFX：スワップNo.1チャレンジキャンペーン</a></h3>
       
@@ -213,10 +228,15 @@ export const articles: Article[] = [
     id: 'triauto-campaign-20260202',
     title: 'トライオートFX：トルコリラ/円 キャンペーン概要',
     date: '2026/02/02',
+    thumbnail: '/images/triauto_campaign_60.png',
     content: `
       <p class="intro">
         トライオートFXにて、トルコリラ/円を対象とした非常に魅力的なキャンペーンが開催されています。
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/triauto_campaign_60.png" alt="トライオートFX：トルコリラ/円 キャンペーン概要" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
       <h3><a href="https://www.invast.jp/triauto/campaign/fx/tryswap/202602/" target="_blank" rel="noopener noreferrer">トライオートFX：トルコリラ/円 キャンペーン</a></h3>
       <p class="campaign-title" style="color: #ef4444; font-weight: bold; font-size: 1.1em;">かなりおススメのキャンペーンです。</p>
@@ -244,10 +264,15 @@ export const articles: Article[] = [
     id: 'feb-swap-campaigns-20260130',
     title: '2月開始スワップポイント増額キャンペーンまとめ（外為、SBI、セントラル短資FX）',
     date: '2026/01/30',
+    thumbnail: '/images/feb_campaigns_60.png',
     content: `
       <p class="intro">
         2月からスタートする注目のスワップポイント増額キャンペーンをまとめました。各社とも非常に魅力的な内容となっています。
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/feb_campaigns_60.png" alt="2月開始スワップポイント増額キャンペーンまとめ" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
       <h3>1. <a href="https://www.gaitame.com/campaign/" target="_blank" rel="noopener noreferrer">外為どっとコム：最大40％増額キャンペーン</a></h3>
       <p class="campaign-title" style="color: #ef4444; font-weight: bold; font-size: 1.1em;">最高におススメのキャンペーンです。</p>
