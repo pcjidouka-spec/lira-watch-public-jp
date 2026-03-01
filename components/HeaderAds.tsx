@@ -5,6 +5,11 @@ const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 // 商品情報（楽天おすすめ情報）
 const AD_ITEMS = [
     {
+        url: "https://amzn.to/46zu7GH",
+        title: "ライオン Systema SP-T メディカルガーグル 100ml (3本)",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00YTZ12HM&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
+    },
+    {
         url: "https://amzn.to/4aZuvzy",
         title: "タオル研究所 [ボリュームリッチ] #003 バスタオル",
         image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B086WB3NVX&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"

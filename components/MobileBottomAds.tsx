@@ -5,6 +5,12 @@ const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 // 商品情報（楽天おすすめ情報）
 const AD_ITEMS = [
     {
+        url: "https://amzn.to/46zu7GH",
+        title: "ライオン Systema SP-T メディカルガーグル 100ml (3本)",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00YTZ12HM&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22",
+        pixel: ""
+    },
+    {
         url: "https://rpx.a8.net/svt/ejp?a8mat=4AV5OF+1VA04Y+2HOM+6I9N5&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eb4779e.5d30c5ba.0eb4779f.b871e4e3%2Fa26011467448_4AV5OF_1VA04Y_2HOM_6I9N5%3Fpc%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F",
         title: "楽天トラベル",
         image: "https://hbb.afl.rakuten.co.jp/hsb/0ea7f9a4.79280dcb.0ea7f99d.1ac92fca/153145/",
