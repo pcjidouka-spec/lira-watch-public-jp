@@ -1,7 +1,7 @@
 import os
 import sys
 import re
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARTICLES_PATH = os.path.join(BASE_DIR, "data", "articles.ts")
@@ -39,11 +39,65 @@ def crop_and_resize(input_path, output_path, title="", subtitle=""):
         bottom = top + TARGET_HEIGHT
         
     img = img.crop((left, top, right, bottom))
+
+    # --- Draw Text Overlay ---
+    overlay = Image.new('RGBA', (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
+    overlay_draw = ImageDraw.Draw(overlay)
+    # Gradient overlay from left
+    for x in range(TARGET_WIDTH):
+        alpha = int(200 * (1 - x / (TARGET_WIDTH * 0.8)))
+        if alpha < 0: alpha = 0
+        overlay_draw.line([(x, 0), (x, TARGET_HEIGHT)], fill=(0, 0, 0, alpha))
+    
+    img = Image.alpha_composite(img, overlay)
+    draw = ImageDraw.Draw(img)
+
+    try:
+        title_font = ImageFont.truetype(FONT_PATH, 28)
+        subtitle_font = ImageFont.truetype(FONT_PATH, 16)
+    except:
+        title_font = ImageFont.load_default()
+        subtitle_font = ImageFont.load_default()
+
+    # --- Helper for text wrapping ---
+    def wrap_text(text, font, max_width):
+        lines = []
+        words = list(text) # Since it's Japanese, chars are better than words for wrapping
+        current_line = ""
+        for char in words:
+            test_line = current_line + char
+            w = draw.textlength(test_line, font=font)
+            if w <= max_width:
+                current_line = test_line
+            else:
+                lines.append(current_line)
+                current_line = char
+        lines.append(current_line)
+        return lines
+
+    # Wrap and Draw Title
+    title_max_width = TARGET_WIDTH * 0.8
+    title_lines = wrap_text(title, title_font, title_max_width)
+    
+    # Only allow 2 lines for title, truncate if more
+    if len(title_lines) > 2:
+        title_lines = title_lines[:2]
+        title_lines[1] = title_lines[1][:len(title_lines[1])-1] + "..."
+
+    y_offset = 30
+    for line in title_lines:
+        draw.text((20, y_offset), line, font=title_font, fill=(255, 255, 255, 255))
+        y_offset += 35
+    
+    # Draw Subtitle (adjust based on title height)
+    if len(subtitle) > 40:
+        subtitle = subtitle[:37] + "..."
+    draw.text((20, y_offset + 5), subtitle, font=subtitle_font, fill=(200, 200, 200, 255))
     
     # Save image (converting to RGB to drop alpha for JPEG/PNG uniformity if needed)
     img = img.convert("RGB")
     img.save(output_path, quality=90)
-    print(f"Successfully cropped and saved to {output_path}")
+    print(f"Successfully cropped, labeled, and saved to {output_path}")
 
 def get_article_details(article_id):
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
@@ -53,8 +107,7 @@ def get_article_details(article_id):
         r"\{\s*"
         r"id:\s*'([^']+)',\s*"
         r"title:\s*'([^']+)',\s*"
-        r"date:\s*'([^']+)',\s*"
-        r"(?:thumbnail:\s*'[^']+',\s*)?"
+        r"date:\s*'([^']+)',.*?"
         r"content:\s*`(.*?)`,\s*"
         r"\}", 
         re.DOTALL
@@ -83,8 +136,8 @@ def inject_to_articles(article_id, img_rel_path):
         r"\{\s*"
         r"id:\s*'([^']+)',\s*"
         r"title:\s*'([^']+)',\s*"
-        r"date:\s*'([^']+)',\s*"
-        r"(?:thumbnail:\s*'[^']+',\s*)?"
+        r"date:\s*'([^']+)',"
+        r"(.*?)"
         r"content:\s*`(.*?)`,\s*"
         r"\}", 
         re.DOTALL
@@ -95,43 +148,33 @@ def inject_to_articles(article_id, img_rel_path):
         if current_id != article_id:
             return match.group(0)
             
-        article_full = match.group(0)
         article_title = match.group(2)
+        article_date = match.group(3)
+        article_props = match.group(4)
+        article_content = match.group(5)
         
-        # Check if thumbnail already exists in the block
-        has_thumbnail_prop = "thumbnail:" in article_full
+        # Check if thumbnail already exists in the props
+        if "thumbnail:" not in article_props:
+            article_props = f"\n    thumbnail: '{img_rel_path}'," + article_props
         
-        # if missing property, inject it
-        if not has_thumbnail_prop:
-            article_full = re.sub(
-                r"(date:\s*'[^']+',)",
-                rf"\1\n    thumbnail: '{img_rel_path}',",
-                article_full,
-                count=1
-            )
-            
-        # Optional: update content string to prepend <img> tag if it's not already there
-        # but since we are replacing old thumbnails or injecting anew:
         img_html = f'<div style="text-align: center; margin: 24px 0;">\n        <img src="{img_rel_path}" alt="{article_title}" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />\n      </div>'
         
-        # We want to replace the old generated img if it exists
-        replaced_full, count = re.subn(
-            r'<div style="text-align: center; margin: 24px 0;">\s*<img src="/images/[A-Za-z0-9_-]+\.png" alt="[^"]+" style="[^"]+" />\s*</div>',
-            img_html,
-            article_full,
-            count=1
-        )
-        article_full = replaced_full
-        
-        # If sub failed (no previous image), inject after <p class="intro">
-        if count == 0 and img_html not in article_full:
-            if '</p>' in article_full:
-                parts = article_full.split('</p>', 1)
-                article_full = parts[0] + '</p>\n\n      ' + img_html + parts[1]
+        # Replace or inject img in content
+        if '<div style="text-align: center; margin: 24px 0;">' in article_content and 'img src="/images/' in article_content:
+             article_content = re.sub(
+                r'<div style="text-align: center; margin: 24px 0;">\s*<img src="/images/[A-Za-z0-9_-]+\.png" alt="[^"]+" style="[^"]+" />\s*</div>',
+                img_html,
+                article_content,
+                count=1
+            )
+        elif img_html not in article_content:
+            if '</p>' in article_content:
+                parts = article_content.split('</p>', 1)
+                article_content = parts[0] + '</p>\n\n      ' + img_html + parts[1]
             else:
-                article_full = article_full.replace("content: `", f"content: `\n      {img_html}\n", 1)
+                article_content = "\n      " + img_html + article_content
                     
-        return article_full
+        return f"{{\n    id: '{current_id}',\n    title: '{article_title}',\n    date: '{article_date}',{article_props}content: `{article_content}`,\n  }}"
 
     new_content = pattern.sub(replacer, content)
 
