@@ -13,12 +13,11 @@ import { IdeasWidget } from '@/components/TradingView/IdeasWidget';
 import { BlogLayout } from '@/components/BlogLayout';
 import { BlogmuraButtons } from '@/components/BlogmuraButtons';
 import { RakutenAds } from '@/components/RakutenAds';
-import { ArchiveList } from '@/components/ArchiveList';
+import { ArticleTree } from '@/components/ArticleTree';
 import { useRouter } from 'next/router';
 
 export default function Home() {
   const router = useRouter();
-  const { archive } = router.query;
   const {
     buyRanking,
     sellRanking,
@@ -29,17 +28,10 @@ export default function Home() {
     error,
   } = useSwapData();
   const [showCharts, setShowCharts] = useState(false);
+  const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
 
-  // Article filtering logic
+  // Article filtering logic - simplified to always show recent
   const getFilteredArticles = () => {
-    if (archive && typeof archive === 'string') {
-      const [year, month] = archive.split('-');
-      return articles.filter(a => {
-        const d = new Date(a.date.replace(/\//g, '-'));
-        return d.getFullYear().toString() === year && (d.getMonth() + 1).toString().padStart(2, '0') === month;
-      });
-    }
-
     // Default: Current + Previous Month, min 5
     const now = new Date();
     const currentMonthStr = `${now.getFullYear()}/${(now.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -57,7 +49,6 @@ export default function Home() {
   };
 
   const displayArticles = getFilteredArticles();
-  const isArchiveView = !!archive;
 
   if (loading) {
     return (
@@ -136,37 +127,47 @@ export default function Home() {
       </div>
 
       <div className="sidebar-widget">
-        <div className="widget-header">
-          <h3>新着記事</h3>
+        <div className="widget-tabs">
+          <button
+            className={`tab-btn ${sidebarTab === 'recent' ? 'active' : ''}`}
+            onClick={() => setSidebarTab('recent')}
+          >
+            新着記事
+          </button>
+          <button
+            className={`tab-btn ${sidebarTab === 'tree' ? 'active' : ''}`}
+            onClick={() => setSidebarTab('tree')}
+          >
+            記事一覧
+          </button>
         </div>
         <div className="widget-content">
-          <ul className="sidebar-article-list">
-            {articles.slice(0, 5).map((article) => {
-              // Check if article is within 5 days
-              const articleDate = new Date(article.date.replace(/\//g, '-'));
-              const today = new Date();
-              const diffTime = today.getTime() - articleDate.getTime();
-              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-              const isNew = diffDays <= 5;
+          {sidebarTab === 'recent' ? (
+            <ul className="sidebar-article-list">
+              {articles.slice(0, 5).map((article) => {
+                const articleDate = new Date(article.date.replace(/\//g, '-'));
+                const today = new Date();
+                const diffTime = today.getTime() - articleDate.getTime();
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                const isNew = diffDays <= 5;
 
-              return (
-                <li key={article.id} className="sidebar-article-item">
-                  <span className="sidebar-bullet">・</span>
-                  <span className="sidebar-article-date">{article.date}</span>
-                  <span className="sidebar-spacer"> </span>
-                  <Link href={`/articles/${article.id}`} className={`sidebar-article-link ${isNew ? 'sidebar-new-article' : ''}`}>
-                    {article.title}
-                  </Link>
-                  {isNew && <span className="sidebar-new-badge">New</span>}
-                </li>
-              );
-            })}
-          </ul>
+                return (
+                  <li key={article.id} className="sidebar-article-item">
+                    <span className="sidebar-bullet">・</span>
+                    <span className="sidebar-article-date">{article.date}</span>
+                    <span className="sidebar-spacer"> </span>
+                    <Link href={`/articles/${article.id}`} className={`sidebar-article-link ${isNew ? 'sidebar-new-article' : ''}`}>
+                      {article.title}
+                    </Link>
+                    {isNew && <span className="sidebar-new-badge">New</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <ArticleTree />
+          )}
         </div>
-      </div>
-
-      <div className="sidebar-widget">
-        <ArchiveList />
       </div>
 
       <div className="sidebar-widget">
@@ -314,14 +315,7 @@ export default function Home() {
 
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
-        <h2 className="feed-title">
-          {isArchiveView ? `📁 アーカイブ: ${archive.toString().replace('-', '年')}月` : '📚 新着記事'}
-          {isArchiveView && (
-            <Link href="/" className="back-link">
-              トップに戻る
-            </Link>
-          )}
-        </h2>
+        <h2 className="feed-title">📚 新着記事</h2>
         {displayArticles.map((article) => {
           // Check if article is within 5 days
           const articleDate = new Date(article.date.replace(/\//g, '-'));
@@ -526,6 +520,32 @@ export default function Home() {
           background: #f9fafb;
           padding: 12px 15px;
           border-bottom: 1px solid #e5e7eb;
+        }
+        .widget-tabs {
+          display: flex;
+          background: #f9fafb;
+          border-bottom: 1px solid #e5e7eb;
+        }
+        .tab-btn {
+          flex: 1;
+          padding: 10px 15px;
+          border: none;
+          background: transparent;
+          font-size: 14px;
+          font-weight: 700;
+          color: #6b7280;
+          cursor: pointer;
+          transition: all 0.2s;
+          border-bottom: 2px solid transparent;
+        }
+        .tab-btn.active {
+          color: #2563eb;
+          background: white;
+          border-bottom-color: #2563eb;
+        }
+        .tab-btn:hover:not(.active) {
+          background: #f3f4f6;
+          color: #374151;
         }
         .widget-header h3 {
           margin: 0;
