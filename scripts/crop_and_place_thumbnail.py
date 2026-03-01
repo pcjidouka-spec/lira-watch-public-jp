@@ -179,24 +179,10 @@ def inject_to_articles(article_id, img_rel_path):
         # Check if thumbnail already exists in the props
         if "thumbnail:" not in article_props:
             article_props = f"\n    thumbnail: '{img_rel_path}'," + article_props
+        else:
+            # Update existing thumbnail path if needed
+            article_props = re.sub(r"thumbnail:\s*'[^']+'", f"thumbnail: '{img_rel_path}'", article_props)
         
-        img_html = f'<div style="text-align: center; margin: 24px 0;">\n        <img src="{img_rel_path}" alt="{article_title}" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />\n      </div>'
-        
-        # Replace or inject img in content
-        if '<div style="text-align: center; margin: 24px 0;">' in article_content and 'img src="/images/' in article_content:
-             article_content = re.sub(
-                r'<div style="text-align: center; margin: 24px 0;">\s*<img src="/images/[A-Za-z0-9_-]+\.png" alt="[^"]+" style="[^"]+" />\s*</div>',
-                img_html,
-                article_content,
-                count=1
-            )
-        elif img_html not in article_content:
-            if '</p>' in article_content:
-                parts = article_content.split('</p>', 1)
-                article_content = parts[0] + '</p>\n\n      ' + img_html + parts[1]
-            else:
-                article_content = "\n      " + img_html + article_content
-                    
         return f"{{\n    id: '{current_id}',\n    title: '{article_title}',\n    date: '{article_date}',{article_props}content: `{article_content}`,\n  }}"
 
     new_content = pattern.sub(replacer, content)
