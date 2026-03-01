@@ -268,6 +268,7 @@ export default function Home() {
                 </>
               )}
             </button>
+            <p className="disclaimer-text">※ データは各社公式サイトより毎日自動取得しています。</p>
           </div>
 
           {data.length > 0 && showCharts && (
