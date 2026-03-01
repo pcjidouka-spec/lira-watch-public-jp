@@ -53,18 +53,19 @@ def crop_and_resize(input_path, output_path, title="", subtitle=""):
     draw = ImageDraw.Draw(img)
 
     try:
-        title_font = ImageFont.truetype(FONT_PATH, 28)
-        subtitle_font = ImageFont.truetype(FONT_PATH, 16)
+        title_font = ImageFont.truetype(FONT_PATH, 26) # Slightly smaller for better fit
+        subtitle_font = ImageFont.truetype(FONT_PATH, 14)
     except:
         title_font = ImageFont.load_default()
         subtitle_font = ImageFont.load_default()
 
-    # --- Helper for text wrapping ---
+    # --- Helper for text wrapping (Japanese character optimized) ---
     def wrap_text(text, font, max_width):
         lines = []
-        words = list(text) # Since it's Japanese, chars are better than words for wrapping
         current_line = ""
-        for char in words:
+        # Simple heuristic: split by character, but try to avoid breaking before punctuation
+        chars = list(text)
+        for i, char in enumerate(chars):
             test_line = current_line + char
             w = draw.textlength(test_line, font=font)
             if w <= max_width:
@@ -72,32 +73,49 @@ def crop_and_resize(input_path, output_path, title="", subtitle=""):
             else:
                 lines.append(current_line)
                 current_line = char
-        lines.append(current_line)
+        if current_line:
+            lines.append(current_line)
         return lines
 
-    # Wrap and Draw Title
-    title_max_width = TARGET_WIDTH * 0.8
+    # Wrap Title
+    title_max_width = TARGET_WIDTH * 0.9
     title_lines = wrap_text(title, title_font, title_max_width)
-    
-    # Only allow 2 lines for title, truncate if more
     if len(title_lines) > 2:
         title_lines = title_lines[:2]
         title_lines[1] = title_lines[1][:len(title_lines[1])-1] + "..."
 
-    y_offset = 30
+    # Wrap Subtitle
+    subtitle_max_width = TARGET_WIDTH * 0.8
+    subtitle_lines = wrap_text(subtitle, subtitle_font, subtitle_max_width)
+    if len(subtitle_lines) > 2:
+        subtitle_lines = subtitle_lines[:2]
+        subtitle_lines[1] = subtitle_lines[1][:len(subtitle_lines[1])-1] + "..."
+
+    # Calculate Total Height for Vertical Centering
+    line_spacing_title = 32
+    line_spacing_sub = 18
+    total_text_height = (len(title_lines) * line_spacing_title) + (len(subtitle_lines) * line_spacing_sub)
+    y_cursor = (TARGET_HEIGHT - total_text_height) // 2
+
+    # Draw Title (Centered X)
     for line in title_lines:
-        draw.text((20, y_offset), line, font=title_font, fill=(255, 255, 255, 255))
-        y_offset += 35
+        w = draw.textlength(line, font=title_font)
+        x = (TARGET_WIDTH - w) // 2
+        draw.text((x, y_cursor), line, font=title_font, fill=(255, 255, 255, 255))
+        y_cursor += line_spacing_title
+
+    # Draw Subtitle (Centered X)
+    y_cursor += 5 # Extra gap
+    for line in subtitle_lines:
+        w = draw.textlength(line, font=subtitle_font)
+        x = (TARGET_WIDTH - w) // 2
+        draw.text((x, y_cursor), line, font=subtitle_font, fill=(220, 220, 220, 255))
+        y_cursor += line_spacing_sub
     
-    # Draw Subtitle (adjust based on title height)
-    if len(subtitle) > 40:
-        subtitle = subtitle[:37] + "..."
-    draw.text((20, y_offset + 5), subtitle, font=subtitle_font, fill=(200, 200, 200, 255))
-    
-    # Save image (converting to RGB to drop alpha for JPEG/PNG uniformity if needed)
+    # Save image (converting to RGB to drop alpha)
     img = img.convert("RGB")
     img.save(output_path, quality=90)
-    print(f"Successfully cropped, labeled, and saved to {output_path}")
+    print(f"Successfully cropped, labeled (centered), and saved to {output_path}")
 
 def get_article_details(article_id):
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
@@ -122,7 +140,7 @@ def get_article_details(article_id):
             intro_match = re.search(r'<p class="intro">(.*?)</p>', article_content, re.DOTALL)
             if intro_match:
                 raw_text = re.sub(r'<[^>]+>', '', intro_match.group(1)).strip()
-                subtitle = raw_text.replace('\n', '')[:40]
+                subtitle = raw_text.replace('\n', '')
                 
             return title, subtitle
             
