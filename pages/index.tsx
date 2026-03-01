@@ -13,9 +13,12 @@ import { IdeasWidget } from '@/components/TradingView/IdeasWidget';
 import { BlogLayout } from '@/components/BlogLayout';
 import { BlogmuraButtons } from '@/components/BlogmuraButtons';
 import { RakutenAds } from '@/components/RakutenAds';
-
+import { ArchiveList } from '@/components/ArchiveList';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
+  const { archive } = router.query;
   const {
     buyRanking,
     sellRanking,
@@ -26,6 +29,35 @@ export default function Home() {
     error,
   } = useSwapData();
   const [showCharts, setShowCharts] = useState(false);
+
+  // Article filtering logic
+  const getFilteredArticles = () => {
+    if (archive && typeof archive === 'string') {
+      const [year, month] = archive.split('-');
+      return articles.filter(a => {
+        const d = new Date(a.date.replace(/\//g, '-'));
+        return d.getFullYear().toString() === year && (d.getMonth() + 1).toString().padStart(2, '0') === month;
+      });
+    }
+
+    // Default: Current + Previous Month, min 5
+    const now = new Date();
+    const currentMonthStr = `${now.getFullYear()}/${(now.getMonth() + 1).toString().padStart(2, '0')}`;
+    const prevMonthDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const prevMonthStr = `${prevMonthDate.getFullYear()}/${(prevMonthDate.getMonth() + 1).toString().padStart(2, '0')}`;
+
+    const recentArticles = articles.filter(a => a.date.startsWith(currentMonthStr) || a.date.startsWith(prevMonthStr));
+
+    if (recentArticles.length >= 5) {
+      return recentArticles;
+    }
+
+    // Fallback to top 5 if less than 5 in current/prev month
+    return articles.slice(0, Math.max(5, recentArticles.length));
+  };
+
+  const displayArticles = getFilteredArticles();
+  const isArchiveView = !!archive;
 
   if (loading) {
     return (
@@ -104,38 +136,7 @@ export default function Home() {
       </div>
 
       <div className="sidebar-widget">
-        <div className="widget-header">
-          <h3>新着記事</h3>
-        </div>
-        <div className="widget-content">
-          <ul className="sidebar-article-list">
-            {articles.slice(0, 5).map((article) => {
-              // Check if article is within 5 days
-              const articleDate = new Date(article.date.replace(/\//g, '-'));
-              const today = new Date();
-              const diffTime = today.getTime() - articleDate.getTime();
-              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-              const isNew = diffDays <= 5;
-
-              return (
-                <li key={article.id} className="sidebar-article-item">
-                  <span className="sidebar-bullet">・</span>
-                  <span className="sidebar-article-date">{article.date}</span>
-                  <span className="sidebar-spacer"> </span>
-                  <Link href={`/articles/${article.id}`} className={`sidebar-article-link ${isNew ? 'sidebar-new-article' : ''}`}>
-                    {article.title}
-                  </Link>
-                  {isNew && <span className="sidebar-new-badge">New</span>}
-                </li>
-              );
-            })}
-          </ul>
-          <div style={{ textAlign: 'right', marginTop: '12px', borderTop: '1px dashed #f3f4f6', paddingTop: '8px' }}>
-            <Link href="#new-articles" className="sidebar-article-link" style={{ fontSize: '12px' }}>
-              » 過去記事一覧
-            </Link>
-          </div>
-        </div>
+        <ArchiveList />
       </div>
 
       <div className="sidebar-widget">
@@ -283,8 +284,15 @@ export default function Home() {
 
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
-        <h2 className="feed-title">新着記事</h2>
-        {articles.map((article) => {
+        <h2 className="feed-title">
+          {isArchiveView ? `📁 アーカイブ: ${archive.toString().replace('-', '年')}月` : '📚 新着記事'}
+          {isArchiveView && (
+            <Link href="/" className="back-link">
+              トップに戻る
+            </Link>
+          )}
+        </h2>
+        {displayArticles.map((article) => {
           // Check if article is within 5 days
           const articleDate = new Date(article.date.replace(/\//g, '-'));
           const today = new Date();
@@ -672,6 +680,13 @@ export default function Home() {
         }
         .chart-toggle-button .icon {
           font-size: 14px;
+        }
+        .back-link {
+          font-size: 14px;
+          color: #2563eb;
+          text-decoration: underline;
+          margin-left: 15px;
+          font-weight: normal;
         }
       `}</style>
     </BlogLayout>
