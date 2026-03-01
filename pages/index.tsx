@@ -29,6 +29,7 @@ export default function Home() {
   } = useSwapData();
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
+  const [mainFeedTab, setMainFeedTab] = useState<'recent' | 'tree'>('recent');
 
   // Article filtering logic - simplified to always show recent
   const getFilteredArticles = () => {
@@ -315,47 +316,78 @@ export default function Home() {
 
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
-        <h2 className="feed-title">📚 新着記事</h2>
-        {displayArticles.map((article) => {
-          // Check if article is within 5 days
-          const articleDate = new Date(article.date.replace(/\//g, '-'));
-          const today = new Date();
-          const diffTime = today.getTime() - articleDate.getTime();
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-          const isNew = diffDays <= 5;
+        <div className="feed-header-tabs">
+          <button
+            className={`feed-tab-btn ${mainFeedTab === 'recent' ? 'active' : ''}`}
+            onClick={() => setMainFeedTab('recent')}
+          >
+            📚 新着記事
+          </button>
+          <button
+            className={`feed-tab-btn ${mainFeedTab === 'tree' ? 'active' : ''}`}
+            onClick={() => setMainFeedTab('tree')}
+          >
+            📂 記事一覧
+          </button>
+        </div>
 
-          return (
-            <article key={article.id} className="blog-post">
-              <header className="post-header" style={article.thumbnail ? { marginBottom: '8px', paddingBottom: 0, borderBottom: 'none' } : {}}>
-                <div className="post-meta" style={{ marginBottom: article.thumbnail ? '16px' : '0' }}>
-                  <span className="post-date">{article.date}</span>
-                  <span className="post-category">コラム</span>
-                  {isNew && <span className="new-badge-article" style={{ marginLeft: '12px', verticalAlign: 'middle' }}>New</span>}
-                </div>
+        {mainFeedTab === 'recent' ? (
+          displayArticles.map((article) => {
+            const articleDate = new Date(article.date.replace(/\//g, '-'));
+            const today = new Date();
+            const diffTime = today.getTime() - articleDate.getTime();
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            const isNew = diffDays <= 5;
 
-                {article.thumbnail ? (
-                  <div className="post-thumbnail-main" style={{ marginBottom: 0 }}>
-                    <Link href={`/articles/${article.id}`}>
-                      <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'block' }} />
+            return (
+              <article key={article.id} className="blog-post">
+                <header className="post-header" style={article.thumbnail ? { marginBottom: '8px', paddingBottom: 0, borderBottom: 'none' } : {}}>
+                  <div className="post-meta" style={{ marginBottom: article.thumbnail ? '16px' : '0' }}>
+                    <span className="post-date">{article.date}</span>
+                    <span className="post-category">コラム</span>
+                    {isNew && <span className="new-badge-article" style={{ marginLeft: '12px', verticalAlign: 'middle' }}>New</span>}
+                  </div>
+
+                  {article.thumbnail ? (
+                    <div className="post-thumbnail-main" style={{ marginBottom: 0 }}>
+                      <Link href={`/articles/${article.id}`}>
+                        <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'block' }} />
+                      </Link>
+                    </div>
+                  ) : (
+                    <h2 className="post-title" style={{ marginBottom: '16px' }}>
+                      <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
+                        {article.title}
+                      </Link>
+                    </h2>
+                  )}
+                </header>
+
+                <div className="post-content">
+                  {article.thumbnail && (
+                    <h2 className="post-title" style={{ fontSize: '1.2rem', margin: '12px 0' }}>
+                      <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
+                        {article.title}
+                      </Link>
+                    </h2>
+                  )}
+                  <p className="post-excerpt" style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', marginBottom: '15px' }}>
+                    {article.content.replace(/<[^>]*>/g, '').slice(0, 100)}...
+                  </p>
+                  <div className="post-footer-actions" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Link href={`/articles/${article.id}`} className="read-more-btn">
+                      続きを読む &raquo;
                     </Link>
                   </div>
-                ) : (
-                  <h2 className="post-title" style={{ marginBottom: '16px' }}>
-                    <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
-                      {article.title}
-                    </Link>
-                  </h2>
-                )}
-              </header>
-
-              <div className="post-excerpt" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 0 }}>
-                <div className="read-more-wrapper" style={{ marginTop: 0 }}>
-                  <Link href={`/articles/${article.id}`} className="read-more-btn">続きを読む &raquo;</Link>
                 </div>
-              </div>
-            </article>
-          );
-        })}
+              </article>
+            );
+          })
+        ) : (
+          <div className="main-tree-container">
+            <ArticleTree isMain={true} />
+          </div>
+        )}
       </div>
 
       <style jsx global>{`
@@ -496,6 +528,38 @@ export default function Home() {
           background: #2563eb;
         }
 
+        .feed-header-tabs {
+          display: flex;
+          gap: 15px;
+          margin-bottom: 25px;
+          border-bottom: 2px solid #e5e7eb;
+        }
+        .feed-tab-btn {
+          padding: 12px 25px;
+          border: none;
+          background: transparent;
+          font-size: 18px;
+          font-weight: 700;
+          color: #6b7280;
+          cursor: pointer;
+          transition: all 0.2s;
+          border-bottom: 3px solid transparent;
+          margin-bottom: -2px;
+        }
+        .feed-tab-btn.active {
+          color: #2563eb;
+          border-bottom-color: #2563eb;
+        }
+        .feed-tab-btn:hover:not(.active) {
+          color: #3b82f6;
+        }
+        .main-tree-container {
+          background: white;
+          border-radius: 12px;
+          padding: 30px;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          border: 1px solid #e5e7eb;
+        }
         .feed-title {
           font-size: 18px;
           color: #6b7280;

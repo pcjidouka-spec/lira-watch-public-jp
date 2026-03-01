@@ -10,7 +10,11 @@ interface TreeData {
     };
 }
 
-export const ArticleTree: React.FC = () => {
+interface ArticleTreeProps {
+    isMain?: boolean;
+}
+
+export const ArticleTree: React.FC<ArticleTreeProps> = ({ isMain = false }) => {
     const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set());
 
     // Group articles by Year, Month, Day
@@ -90,18 +94,18 @@ export const ArticleTree: React.FC = () => {
 
             <style jsx>{`
                 .article-tree {
-                    font-size: 13px;
+                    font-size: ${isMain ? '15px' : '13px'};
                     color: #4b5563;
                     user-select: none;
                 }
                 .tree-node {
-                    margin-bottom: 2px;
+                    margin-bottom: ${isMain ? '4px' : '2px'};
                 }
                 .node-label {
                     display: flex;
                     align-items: center;
-                    gap: 6px;
-                    padding: 4px 8px;
+                    gap: 8px;
+                    padding: ${isMain ? '6px 12px' : '4px 8px'};
                     cursor: pointer;
                     border-radius: 4px;
                     transition: background 0.2s;
@@ -111,7 +115,7 @@ export const ArticleTree: React.FC = () => {
                     background: #f3f4f6;
                 }
                 .icon {
-                    font-size: 8px;
+                    font-size: ${isMain ? '10px' : '8px'};
                     transition: transform 0.2s;
                     color: #9ca3af;
                 }
@@ -119,32 +123,32 @@ export const ArticleTree: React.FC = () => {
                     transform: rotate(90deg);
                 }
                 .folder-icon {
-                    font-size: 14px;
+                    font-size: ${isMain ? '16px' : '14px'};
                 }
                 .node-children {
-                    padding-left: 16px;
+                    padding-left: ${isMain ? '24px' : '16px'};
                     border-left: 1px dashed #e5e7eb;
-                    margin-left: 14px;
+                    margin-left: ${isMain ? '21px' : '14px'};
                 }
                 .day-group {
-                    margin-bottom: 2px;
+                    margin-bottom: ${isMain ? '4px' : '2px'};
                 }
                 .tree-leaf {
                     display: flex;
                     align-items: flex-start;
-                    gap: 8px;
-                    padding: 3px 8px;
+                    gap: 12px;
+                    padding: ${isMain ? '5px 12px' : '3px 8px'};
                 }
                 .day-text {
                     color: #9ca3af;
-                    font-size: 11px;
-                    min-width: 25px;
+                    font-size: ${isMain ? '12px' : '11px'};
+                    min-width: ${isMain ? '35px' : '25px'};
                     margin-top: 2px;
                 }
                 .article-link {
                     color: #2563eb;
                     text-decoration: none;
-                    line-height: 1.4;
+                    line-height: 1.5;
                 }
                 .article-link:hover {
                     text-decoration: underline;
@@ -152,9 +156,11 @@ export const ArticleTree: React.FC = () => {
                 .year-node > .node-label {
                     color: #111827;
                     font-weight: 700;
+                    font-size: ${isMain ? '18px' : '14px'};
                 }
                 .month-node > .node-label {
                     color: #374151;
+                    font-size: ${isMain ? '16px' : '13px'};
                 }
             `}</style>
         </div>
