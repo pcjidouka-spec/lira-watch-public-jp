@@ -42,6 +42,17 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <main className="main-content">
           <div className="content-wrapper">
             <article className="article">
+              {article.thumbnail && (
+                <div className="article-thumbnail-top" style={{ textAlign: 'center', marginBottom: '24px' }}>
+                  <img
+                    src={`https://lira-watch.sbs${article.thumbnail}`}
+                    alt={article.title}
+                    style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+                    loading="eager"
+                  />
+                </div>
+              )}
+
               <div className="article-header">
                 <span className="article-date">{article.date}</span>
                 <h1 className="article-title">{article.title}</h1>
@@ -53,17 +64,6 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                   </div>
                 )}
               </div>
-
-              {article.thumbnail && (
-                <div className="article-thumbnail-top" style={{ textAlign: 'center', marginBottom: '24px' }}>
-                  <img
-                    src={`https://lira-watch.sbs${article.thumbnail}`}
-                    alt={article.title}
-                    style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
-                    loading="eager"
-                  />
-                </div>
-              )}
 
               <div
                 className="article-body"
