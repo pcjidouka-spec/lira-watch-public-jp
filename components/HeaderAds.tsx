@@ -5,6 +5,21 @@ const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 // 商品情報（楽天おすすめ情報）
 const AD_ITEMS = [
     {
+        url: "https://amzn.to/4aZuvzy",
+        title: "タオル研究所 [ボリュームリッチ] #003 バスタオル",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B086WB3NVX&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
+    },
+    {
+        url: "https://amzn.to/403b6c4",
+        title: "丸島醤油 つゆの素 ＜210g＞×6袋セット",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0763LX8ZJ&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
+    },
+    {
+        url: "https://amzn.to/403b6c4",
+        title: "丸島醤油 つゆの素",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0763LX8ZJ&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
+    },
+    {
         url: "https://rpx.a8.net/svt/ejp?a8mat=4AV5OF+1VA04Y+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26011467448_4AV5OF_1VA04Y_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F",
         title: "楽天市場",
         image: "https://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/"
