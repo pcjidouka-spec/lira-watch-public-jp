@@ -332,57 +332,49 @@ export default function Home() {
         </div>
 
         {mainFeedTab === 'recent' ? (
-          displayArticles.map((article) => {
-            const articleDate = new Date(article.date.replace(/\//g, '-'));
-            const today = new Date();
-            const diffTime = today.getTime() - articleDate.getTime();
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            const isNew = diffDays <= 5;
+          <div className="article-grid">
+            {displayArticles.map((article) => {
+              const articleDate = new Date(article.date.replace(/\//g, '-'));
+              const today = new Date();
+              const diffTime = today.getTime() - articleDate.getTime();
+              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+              const isNew = diffDays <= 5;
 
-            return (
-              <article key={article.id} className="blog-post">
-                <header className="post-header" style={article.thumbnail ? { marginBottom: '8px', paddingBottom: 0, borderBottom: 'none' } : {}}>
-                  <div className="post-meta" style={{ marginBottom: article.thumbnail ? '16px' : '0' }}>
-                    <span className="post-date">{article.date}</span>
-                    <span className="post-category">コラム</span>
-                    {isNew && <span className="new-badge-article" style={{ marginLeft: '12px', verticalAlign: 'middle' }}>New</span>}
-                  </div>
+              return (
+                <article key={article.id} className="blog-post-card">
+                  <header className="post-header-card">
+                    {article.thumbnail && (
+                      <div className="post-thumbnail-card">
+                        <Link href={`/articles/${article.id}`}>
+                          <img src={article.thumbnail} alt={article.title} />
+                        </Link>
+                      </div>
+                    )}
+                    <div className="post-meta-card">
+                      <span className="post-date">{article.date}</span>
+                      {isNew && <span className="new-badge-article">New</span>}
+                    </div>
+                    <h2 className="post-title-card">
+                      <Link href={`/articles/${article.id}`} className="title-link">
+                        {article.title}
+                      </Link>
+                    </h2>
+                  </header>
 
-                  {article.thumbnail ? (
-                    <div className="post-thumbnail-main" style={{ marginBottom: 0 }}>
-                      <Link href={`/articles/${article.id}`}>
-                        <img src={article.thumbnail} alt={article.title} style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #e5e7eb', display: 'block' }} />
+                  <div className="post-content-card">
+                    <p className="post-excerpt">
+                      {article.content.replace(/<[^>]*>/g, '').slice(0, 80)}...
+                    </p>
+                    <div className="post-footer-card">
+                      <Link href={`/articles/${article.id}`} className="read-more-link-small">
+                        続きを読む &raquo;
                       </Link>
                     </div>
-                  ) : (
-                    <h2 className="post-title" style={{ marginBottom: '16px' }}>
-                      <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
-                        {article.title}
-                      </Link>
-                    </h2>
-                  )}
-                </header>
-
-                <div className="post-content">
-                  {article.thumbnail && (
-                    <h2 className="post-title" style={{ fontSize: '1.2rem', margin: '12px 0' }}>
-                      <Link href={`/articles/${article.id}`} className={`title-link ${isNew ? 'new-article' : ''}`}>
-                        {article.title}
-                      </Link>
-                    </h2>
-                  )}
-                  <p className="post-excerpt" style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.6', marginBottom: '15px' }}>
-                    {article.content.replace(/<[^>]*>/g, '').slice(0, 100)}...
-                  </p>
-                  <div className="post-footer-actions" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Link href={`/articles/${article.id}`} className="read-more-btn">
-                      続きを読む &raquo;
-                    </Link>
                   </div>
-                </div>
-              </article>
-            );
-          })
+                </article>
+              );
+            })}
+          </div>
         ) : (
           <div className="main-tree-container">
             <ArticleTree isMain={true} />
@@ -391,12 +383,99 @@ export default function Home() {
       </div>
 
       <style jsx global>{`
-        /* Blog Post Styles */
+        /* Article Grid Styles */
+        .article-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+          .article-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .blog-post-card {
+          background: white;
+          border-radius: 8px;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+          border: 1px solid #f3f4f6;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .blog-post-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .post-thumbnail-card {
+          margin: -16px -16px 12px -16px;
+          overflow: hidden;
+          border-radius: 8px 8px 0 0;
+          aspect-ratio: 16 / 9;
+        }
+
+        .post-thumbnail-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .post-meta-card {
+          font-size: 12px;
+          color: #6b7280;
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .post-title-card {
+          font-size: 16px;
+          line-height: 1.4;
+          font-weight: 700;
+          margin-bottom: 10px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .post-excerpt {
+          font-size: 14px;
+          color: #4b5563;
+          line-height: 1.5;
+          margin-bottom: 12px;
+        }
+
+        .post-footer-card {
+          margin-top: auto;
+          text-align: right;
+        }
+
+        .read-more-link-small {
+          font-size: 13px;
+          color: #3b82f6;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .read-more-link-small:hover {
+          text-decoration: underline;
+        }
+
+        /* Legacy Blog Post Styles (keeping for ranking post) */
         .blog-post {
           background: white;
           border-radius: 8px;
-          padding: 20px; /* Reduced from 30px */
-          margin-bottom: 20px; /* Reduced from 30px */
+          padding: 20px;
+          margin-bottom: 20px;
           box-shadow: 0 1px 3px rgba(0,0,0,0.05);
           border: 1px solid #e5e7eb;
         }
