@@ -138,7 +138,7 @@ def get_article_details(article_id):
     
     for match in pattern.finditer(content):
         if match.group(1) == article_id:
-            title = match.group(2)
+            title = match.group(2).replace('\\n', '\n')
             article_content = match.group(4)
             
             subtitle = ""
