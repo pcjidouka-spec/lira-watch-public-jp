@@ -21,9 +21,6 @@ export const articles: Article[] = [
         一番の重要なポイントは、最大の60％増額を狙うには100万円の入金が必要ですが、10万円の入金でもしっかり30％増額の恩恵を受けられるという点です。少額からでも参加しやすい内容になっています。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/gaitame_campaign_60.png" alt="外為どっとコム スワップポイント最大60％増額キャンペーン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>【上乗せで大体いくら増える？（目安の計算）】</h3>
       <p>複数の対象通貨ペアを1〜2週間程度運用した場合の公式シミュレーションによると、以下のようなまとまったポイントが還元されます。</p>
@@ -95,9 +92,6 @@ export const articles: Article[] = [
         今、ポイ活ユーザーの間で話題なのが「DanDanBANK」の新規口座開設キャンペーンです。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/dandan_campaign_60.png" alt="DanDanBANKのキャンペーンが超おトク！" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. もらえる特典（合計24,000円相当）</h3>
       <ul>
@@ -151,9 +145,6 @@ export const articles: Article[] = [
         選挙後の「円高」は一時的な調整に過ぎず、中長期では「積極財政×利上げ抑制」のポリシーミックスが強烈な円安圧力を生むことが懸念されます。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/takaichi_yen_60.png" alt="高市政権の大勝で「円安」が再加速する理由" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>なぜ今、円安トレンドへの回帰が予測されるのか？</h3>
       <p>
@@ -205,9 +196,6 @@ export const articles: Article[] = [
         トルコリラ/円のスワップポイントランキングでも常に上位を占めている「みんなのFX」。実は、キャンペーンを含めると実質的にはランキング1位の状態が続いています。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/minfx_campaign_60.png" alt="みんなのFX：スワップNo.1チャレンジキャンペーン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3><a href="https://min-fx.jp/campaign/swapno1_202601/?utm_source=hp&utm_medium=bnr&utm_campaign=cp" target="_blank" rel="noopener noreferrer">みんなのFX：スワップNo.1チャレンジキャンペーン</a></h3>
       
@@ -240,9 +228,6 @@ export const articles: Article[] = [
         トライオートFXにて、トルコリラ/円を対象とした非常に魅力的なキャンペーンが開催されています。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/triauto_campaign_60.png" alt="トライオートFX：トルコリラ/円 キャンペーン概要" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3><a href="https://www.invast.jp/triauto/campaign/fx/tryswap/202602/" target="_blank" rel="noopener noreferrer">トライオートFX：トルコリラ/円 キャンペーン</a></h3>
       <p class="campaign-title" style="color: #ef4444; font-weight: bold; font-size: 1.1em;">かなりおススメのキャンペーンです。</p>
@@ -277,9 +262,6 @@ export const articles: Article[] = [
         2月からスタートする注目のスワップポイント増額キャンペーンをまとめました。各社とも非常に魅力的な内容となっています。
       </p>
 
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/feb_campaigns_60.png" alt="2月開始スワップポイント増額キャンペーンまとめ" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. <a href="https://www.gaitame.com/campaign/" target="_blank" rel="noopener noreferrer">外為どっとコム：最大40％増額キャンペーン</a></h3>
       <p class="campaign-title" style="color: #ef4444; font-weight: bold; font-size: 1.1em;">最高におススメのキャンペーンです。</p>
@@ -343,9 +325,6 @@ export const articles: Article[] = [
       <p class="intro">
         昨今の為替市場では円高の動きが注目されていますが、その背景には、単なる日本円の独歩高ではなく、トランプ大統領やベッセント次期財務長官の発言を巡る「ドルの不信感」と、それに伴う「資産インフレ」の予兆が隠されています。
       </p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/dollar-depreciation-20260129_60.png" alt="米国の為替政策と円高の陰で進むドル安" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. ベッセント発言と「強いドル政策」の真意</h3>
       <p>
@@ -421,9 +400,6 @@ export const articles: Article[] = [
 
       <h3>1. 円高の進捗状況</h3>
       <p class="intro">2026年1月下旬、為替相場は政府・日銀による介入警戒感から急落し、一時153円台と約2ヶ月半ぶりの円高水準を記録しました。これは投資家にとって、ポジション管理の見直しが必要なタイミングとなっています。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/yen-appreciation-factors-20260128_60.png" alt="【速報】円高153円台突入！日米協調介入の予兆と構造的円高要因を徹底解説" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>2. 介入の予兆と円高の根拠</h3>
       <p>今回の円高のトリガーは、<span style="color: #ef4444; font-weight: bold;">財務大臣による強い口先介入</span>に加え、日銀とニューヨーク連銀が同時に実施したとされる「レートチェック」です。これは<strong>28年ぶりの日米協調介入のサイン</strong>と目されています。</p>
@@ -518,9 +494,6 @@ export const articles: Article[] = [
 
       <h3>1. 何が起きたのか？</h3>
       <p class="intro">ニューヨーク連銀と日銀による「レートチェック」が行われたとの報道を受け、ドル円は一時157円台から155円台まで急落しました。今回の動きは実弾介入（実際の円買い）ではないと見られますが、日米当局が協調してチェックを行った事実は、米国も現在の円安・ドル高を懸念しているという強いシグナルになります。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/usdjpy-rate-check-20260124_60.png" alt="ドル円（トルコリラ円）急落！為替介入か？今後の可能性は？" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>2. レートチェックとは？</h3>
       <p>レートチェックとは、中央銀行が為替市場の実勢レートを金融機関に問い合わせる行為です。これ自体は直接的な介入ではありませんが、市場に対して「当局が相場を注視している」という強烈なメッセージとなります。</p>
@@ -574,9 +547,6 @@ export const articles: Article[] = [
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'セントラル短資FX'],
     content: `
       <p class="intro">本日スタート！セントラル短資FXにて、トルコリラ/円の取引で最大3万円＋αのキャッシュバックが受け取れる激熱キャンペーン「トルコリラ祭り」が開催されています。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/central-tanshi-campaign-20260116_60.png" alt="【1/16〜1/30限定】セントラル短資FX「トルコリラ祭り」開催中！" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. キャンペーン概要</h3>
       <p><strong>期間：</strong> 2026年1月16日(金) 〜 1月30日(金)</p>
@@ -616,9 +586,6 @@ export const articles: Article[] = [
     tags: ['FX', 'ポイントサイト', '口座開設', '裏ワザ'],
     content: `
       <p class="intro">FXを始める際、公式サイトから直接申し込むのは非常にもったいないことをご存知でしょうか？ポイントサイトを経由するだけで、数万円相当のポイントが還元されます。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/fx-account-points-20260111_60.png" alt="【2026年最新】ポイントサイト経由でFX口座を開設して賢く稼ぐ裏ワザ" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. FX口座開設におすすめのポイントサイト3選</h3>
       <p>2026年1月現在、FX案件の還元率が高く、信頼性の高い3サイトを厳選しました。還元率だけでなく、私の経験上、案件の承認がスムーズで、否認された場合でもきちんと対応してくれたサイトです。</p>
@@ -676,9 +643,6 @@ export const articles: Article[] = [
       <div class="campaign-section">
         <h3>インヴァスト証券（トライオートFX）</h3>
         <p class="campaign-title">「高金利3通貨ペアスワップポイント最大60％増額キャンペーン」</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/campaign-20260110_60.png" alt="トルコリラを対象としたおすすめ3社のスワップ増額キャンペーン" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
         <div class="campaign-details">
           <p><strong>特典内容：</strong> キャンペーン期間中のトルコリラ/円の新規買建玉（増加分）に対し、スワップポイントを60％上乗せ。</p>
           <p><strong>期間：</strong> 2026年1月5日 ～ 2026年1月30日（※要エントリー）</p>
@@ -712,9 +676,6 @@ export const articles: Article[] = [
     tags: ['FX', 'トルコリラ', 'リスク管理', '長期投資'],
     content: `
       <p class="intro">高スワップポイントが魅力のトルコリラ/円（TRY/JPY）。しかし、その裏側にある「価格変動リスク」を正しく把握しなければ、一瞬でロスカットの憂き目に遭う可能性もあります。本記事では、過去のデータから導き出す「最大変動率」と、FX会社の「ロスカットルール」をもとに、破綻しないために最低限必要な証拠金（レバレッジ）の計算方法を解説します。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/risk-management-20260109_60.png" alt="トルコリラ投資の安全圏はどこ？最大変動率から逆算する「最低必要証拠金」の考え方" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. 過去5年のデータに見る「トルコリラの下落幅」</h3>
       <p>リスク管理の第一歩は、過去の暴落を知ることです。トルコリラは過去5年で、数多くの「歴史的急落」を経験しています。</p>
@@ -803,9 +764,6 @@ export const articles: Article[] = [
     tags: ['FX', 'トルコリラ', '投資実績', 'スワップ投資'],
     content: `
       <p class="intro">高金利通貨として注目を集め続けるトルコリラ/円（TRY/JPY）。「為替で負けてもスワップで勝てる」と言われるこの通貨ペアで、2025年の1年間運用した場合の驚きの収益結果を検証します。</p>
-      <div style="text-align: center; margin: 24px 0;">
-        <img src="/images/performance-review-20260108_60.png" alt="【2025年トルコリラ投資の実績】トルコリラ投資、スワップ込みで結局いくら儲かった？" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-      </div>
 
       <h3>1. 2025年の運用パフォーマンス結果</h3>
       <p>2025年の1年間、1万通貨を買い持ち（ロング）し続けた場合のトータル収益は以下の通りとなりました。</p>
