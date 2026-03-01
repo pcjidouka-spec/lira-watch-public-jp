@@ -10,6 +10,39 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
   {
+    id: 'youtube-market-outlook-20260301',
+    title: '週明け相場の対策に！おすすめYouTube動画2選',
+    date: '2026/03/01',
+    thumbnail: '/images/youtube-market-outlook-20260301_60.png',
+    tags: ['FX', '相場展望', 'YouTube', '地政学的リスク'],
+    content: `
+      <p class="intro">
+        週明けの市場動向を左右する重要な情報を網羅した、おすすめの最新YouTube動画を2つご紹介します。中東情勢の緊迫化や米国の経済指標発表を受け、今何に注目すべきかをプロの視点で把握しましょう。
+      </p>
+
+
+      <h3>1. 【PIVOT 公式チャンネル】</h3>
+      <p>
+        <a href="https://www.youtube.com/watch?v=nahALdDJTTY&t=11s" target="_blank" rel="noopener noreferrer">
+          【イラン最高指導者死亡】ホルムズ海峡事実上閉鎖でオイルショック？／イスラエルと米の攻撃はいつまで続くのか／イラン側の報復はドバイなど中東各地に／イラン体制転換はどう起こるのか／田中浩一郎氏が解説
+        </a>
+      </p>
+      <p>
+        <strong>見どころ：</strong> イラン最高指導者の死亡やホルムズ海峡の事実上封鎖という緊迫した中東情勢が、エネルギー供給（特にLNG）や今後の国際社会にどのような影響を及ぼすのかを専門家が詳しく解説しています。マクロな視点で地政学的リスクを把握したい方におすすめです。
+      </p>
+
+      <h3>2. 【yenzo market】</h3>
+      <p>
+        <a href="https://www.youtube.com/watch?v=2jnuOYTDfWc&t=4s" target="_blank" rel="noopener noreferrer">
+          【地政学的リスクと米PPI上昇】リスクオフで米長期金利低下、株安、ドルはやや下落だがほぼ動かず
+        </a>
+      </p>
+      <p>
+        <strong>見どころ：</strong> 中東の地政学的リスクと米国のPPI（生産者物価指数）上昇を受けて、実際の金融市場がどう動いているかを解説しています。米10年債利回りの4%割れ、テック株の下落、有事の金（ゴールド）や原油の上昇など、各アセットの最新の資金の流れをサクッと確認できます。
+      </p>
+    `,
+  },
+  {
     id: 'gaitame-swap-campaign-20260228',
     title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」がおすすめです！',
     date: '2026/02/28',
