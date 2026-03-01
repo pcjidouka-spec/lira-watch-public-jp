@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useSwapData } from '@/hooks/useSwapData';
@@ -25,6 +25,7 @@ export default function Home() {
     loading,
     error,
   } = useSwapData();
+  const [showCharts, setShowCharts] = useState(false);
 
   if (loading) {
     return (
@@ -252,9 +253,26 @@ export default function Home() {
           </div>
 
 
-          {data.length > 0 && (
+          <div className="chart-toggle-container">
+            <button
+              className="chart-toggle-button"
+              onClick={() => setShowCharts(!showCharts)}
+            >
+              {showCharts ? (
+                <>
+                  <span className="icon">▲</span> チャートを閉じる
+                </>
+              ) : (
+                <>
+                  <span className="icon">▼</span> スワップポイント推移チャート（各事業者別・日次）を表示
+                </>
+              )}
+            </button>
+          </div>
+
+          {data.length > 0 && showCharts && (
             <div className="charts-wrapper top-margin-reduced">
-              <h2 className="section-title chart-title">スワップポイント推移チャート</h2>
+              <h2 className="section-title chart-title">スワップポイント推移チャート（各事業者別・日次）</h2>
               <HistoricalChart data={data} type="buy" ranking={buyRanking} />
               <HistoricalChart data={data} type="sell" ranking={sellRanking} />
             </div>
@@ -617,6 +635,37 @@ export default function Home() {
         .iine-banner:hover {
             opacity: 0.9;
             transform: translateY(-1px);
+        }
+
+        /* Chart Toggle Styles */
+        .chart-toggle-container {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+        }
+        .chart-toggle-button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #fdf2f2; /* Very light red */
+          border: 1px solid #fca5a5;
+          color: #dc2626;
+          padding: 12px 30px;
+          border-radius: 30px;
+          font-size: 16px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.2s;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .chart-toggle-button:hover {
+          background-color: #fee2e2;
+          border-color: #f87171;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .chart-toggle-button .icon {
+          font-size: 14px;
         }
       `}</style>
     </BlogLayout>
