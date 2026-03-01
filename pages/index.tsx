@@ -30,6 +30,7 @@ export default function Home() {
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
   const [mainFeedTab, setMainFeedTab] = useState<'recent' | 'tree'>('recent');
+  const [showAllArticles, setShowAllArticles] = useState(false);
 
   // Article filtering logic - simplified to always show recent
   const getFilteredArticles = () => {
@@ -40,6 +41,10 @@ export default function Home() {
     const prevMonthStr = `${prevMonthDate.getFullYear()}/${(prevMonthDate.getMonth() + 1).toString().padStart(2, '0')}`;
 
     const recentArticles = articles.filter(a => a.date.startsWith(currentMonthStr) || a.date.startsWith(prevMonthStr));
+
+    if (showAllArticles) {
+      return articles;
+    }
 
     if (recentArticles.length >= 5) {
       return recentArticles;
@@ -332,49 +337,61 @@ export default function Home() {
         </div>
 
         {mainFeedTab === 'recent' ? (
-          <div className="article-grid">
-            {displayArticles.map((article) => {
-              const articleDate = new Date(article.date.replace(/\//g, '-'));
-              const today = new Date();
-              const diffTime = today.getTime() - articleDate.getTime();
-              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-              const isNew = diffDays <= 5;
+          <>
+            <div className="article-grid">
+              {displayArticles.map((article) => {
+                const articleDate = new Date(article.date.replace(/\//g, '-'));
+                const today = new Date();
+                const diffTime = today.getTime() - articleDate.getTime();
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                const isNew = diffDays <= 5;
 
-              return (
-                <article key={article.id} className="blog-post-card">
-                  <header className="post-header-card">
-                    {article.thumbnail && (
-                      <div className="post-thumbnail-card">
-                        <Link href={`/articles/${article.id}`}>
-                          <img src={article.thumbnail} alt={article.title} />
+                return (
+                  <article key={article.id} className="blog-post-card">
+                    <header className="post-header-card">
+                      {article.thumbnail && (
+                        <div className="post-thumbnail-card">
+                          <Link href={`/articles/${article.id}`}>
+                            <img src={article.thumbnail} alt={article.title} />
+                          </Link>
+                        </div>
+                      )}
+                      <div className="post-meta-card">
+                        <span className="post-date">{article.date}</span>
+                        {isNew && <span className="new-badge-article">New</span>}
+                      </div>
+                      <h2 className="post-title-card">
+                        <Link href={`/articles/${article.id}`} className="title-link">
+                          {article.title}
+                        </Link>
+                      </h2>
+                    </header>
+
+                    <div className="post-content-card">
+                      <p className="post-excerpt">
+                        {article.content.replace(/<[^>]*>/g, '').slice(0, 80)}...
+                      </p>
+                      <div className="post-footer-card">
+                        <Link href={`/articles/${article.id}`} className="read-more-link-small">
+                          続きを読む &raquo;
                         </Link>
                       </div>
-                    )}
-                    <div className="post-meta-card">
-                      <span className="post-date">{article.date}</span>
-                      {isNew && <span className="new-badge-article">New</span>}
                     </div>
-                    <h2 className="post-title-card">
-                      <Link href={`/articles/${article.id}`} className="title-link">
-                        {article.title}
-                      </Link>
-                    </h2>
-                  </header>
-
-                  <div className="post-content-card">
-                    <p className="post-excerpt">
-                      {article.content.replace(/<[^>]*>/g, '').slice(0, 80)}...
-                    </p>
-                    <div className="post-footer-card">
-                      <Link href={`/articles/${article.id}`} className="read-more-link-small">
-                        続きを読む &raquo;
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+                  </article>
+                );
+              })}
+            </div>
+            {!showAllArticles && articles.length > displayArticles.length && (
+              <div className="show-more-container">
+                <button
+                  className="show-more-grid-btn"
+                  onClick={() => setShowAllArticles(true)}
+                >
+                  過去の記事をもっと見る &raquo;
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="main-tree-container">
             <ArticleTree isMain={true} />
@@ -472,6 +489,32 @@ export default function Home() {
 
         .read-more-link-small:hover {
           text-decoration: underline;
+        }
+
+        .show-more-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+
+        .show-more-grid-btn {
+          background: #f3f4f6;
+          color: #4b5563;
+          border: 1px solid #e5e7eb;
+          padding: 12px 40px;
+          border-radius: 30px;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .show-more-grid-btn:hover {
+          background: #e5e7eb;
+          color: #1f2937;
+          transform: translateY(-1px);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         /* Legacy Blog Post Styles (keeping for ranking post) */
@@ -886,6 +929,6 @@ export default function Home() {
           font-weight: normal;
         }
       `}</style>
-    </BlogLayout>
+    </BlogLayout >
   );
 }
