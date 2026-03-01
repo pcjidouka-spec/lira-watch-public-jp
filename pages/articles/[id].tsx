@@ -24,7 +24,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:description" content={article.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://lira-watch.sbs/articles/${article.id}`} />
-        <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
+        <meta
+          property="og:image"
+          content={article.thumbnail ? `https://lira-watch.sbs${article.thumbnail}` : "https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
+        />
       </Head>
 
       <div className="container">
@@ -43,6 +46,17 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                 <span className="article-date">{article.date}</span>
                 <h1 className="article-title">{article.title}</h1>
               </div>
+
+              {article.thumbnail && (
+                <div className="article-thumbnail-top" style={{ textAlign: 'center', marginBottom: '24px' }}>
+                  <img
+                    src={`https://lira-watch.sbs${article.thumbnail}`}
+                    alt={article.title}
+                    style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+                    loading="eager"
+                  />
+                </div>
+              )}
 
               <div
                 className="article-body"
