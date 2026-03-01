@@ -41,12 +41,6 @@ const AD_ITEMS = [
         pixel: ""
     },
     {
-        url: "https://hb.afl.rakuten.co.jp/ichiba/50cd90e5.ba52a2fd.50cd90e6.09db1cba/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakkenshop%2Frakken_120-186%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
-        title: "タリーズ 1,000円ギフト",
-        image: "https://hbb.afl.rakuten.co.jp/hgb/50cd90e5.ba52a2fd.50cd90e6.09db1cba/?me_id=1405809&item_id=10000056&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakkenshop%2Fcabinet%2F10345128%2F10788053%2Fimgrc0089973014.jpg%3F_ex%3D128x128&s=128x128&t=picttext",
-        pixel: ""
-    },
-    {
         url: "https://hb.afl.rakuten.co.jp/ichiba/50cd90e5.ba52a2fd.50cd90e6.09db1cba/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakkenshop%2Frakken_112-237%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
         title: "大戸屋 2,000円ギフト",
         image: "https://hbb.afl.rakuten.co.jp/hgb/50cd90e5.ba52a2fd.50cd90e6.09db1cba/?me_id=1405809&item_id=10000115&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakkenshop%2Fcabinet%2F10345128%2F10345136%2F2000yen_127188.jpg%3F_ex%3D128x128&s=128x128&t=picttext",
