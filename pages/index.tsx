@@ -640,8 +640,15 @@ export default function Home() {
         /* Chart Toggle Styles */
         .chart-toggle-container {
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          align-items: center;
           margin: 20px 0;
+          gap: 12px;
+        }
+        .disclaimer-text {
+          font-size: 13px;
+          color: #6b7280;
+          margin: 0;
         }
         .chart-toggle-button {
           display: flex;
