@@ -126,28 +126,35 @@ def get_article_details(article_id):
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = re.compile(
-        r"\{\s*"
-        r"id:\s*'([^']+)',\s*"
-        r"title:\s*'([^']+)',\s*"
-        r"date:\s*'([^']+)',.*?"
-        r"content:\s*`(.*?)`,\s*"
-        r"\}", 
-        re.DOTALL
-    )
+    # Search for the article block
+    article_pattern = re.compile(rf"id:\s*'{article_id}',(.*?)\s*content:\s*`", re.DOTALL)
+    match = article_pattern.search(content)
     
-    for match in pattern.finditer(content):
-        if match.group(1) == article_id:
-            title = match.group(2).replace('\\n', '\n')
-            article_content = match.group(4)
+    if match:
+        props_block = match.group(1)
+        
+        # 1. Try to get thumbnail_text (keywords)
+        text_match = re.search(r"thumbnail_text:\s*'([^']+)'", props_block)
+        if text_match:
+            title = text_match.group(1).replace('\\n', '\n')
+            return title, "" # Return empty subtitle for keyword-only mode
             
-            subtitle = ""
+        # 2. Fallback to regular title
+        title_match = re.search(r"title:\s*'([^']+)'", props_block)
+        title = title_match.group(1).replace('\\n', '\n') if title_match else ""
+        
+        # 3. Get subtitle from intro (if not in keyword-only mode)
+        # Note: We'll skip subtitle if thumbnail_text was found to keep it "keyword only"
+        article_content_match = re.search(rf"id:\s*'{article_id}'.*?content:\s*`(.*?)`", content, re.DOTALL)
+        subtitle = ""
+        if article_content_match:
+            article_content = article_content_match.group(1)
             intro_match = re.search(r'<p class="intro">(.*?)</p>', article_content, re.DOTALL)
             if intro_match:
                 raw_text = re.sub(r'<[^>]+>', '', intro_match.group(1)).strip()
                 subtitle = raw_text.replace('\n', '')
                 
-            return title, subtitle
+        return title, subtitle
             
     return "", ""
 

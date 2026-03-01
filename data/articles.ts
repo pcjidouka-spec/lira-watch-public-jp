@@ -4,6 +4,7 @@ export interface Article {
   date: string;
   content: string; // HTML content
   thumbnail?: string;
+  thumbnail_text?: string;
   tags?: string[];
 }
 
@@ -12,6 +13,7 @@ export const articles: Article[] = [
   {
     id: 'youtube-market-outlook-20260301',
     title: '【地政学的リスク急騰】\n週明けの不透明な相場予想に必見のYouTube動画4選',
+    thumbnail_text: '地政学リスク・原油高\n週明け相場 注目動画4選',
     date: '2026/03/01',
     thumbnail: '/images/youtube-market-outlook-20260301_60.png',
     tags: ['FX', '相場展望', 'YouTube', '地政学的リスク', '原油'],
