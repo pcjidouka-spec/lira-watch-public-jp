@@ -75,7 +75,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
         .header {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
-          padding: 20px;
+          padding: 15px 20px; /* Reduced from 20px */
           text-align: center;
           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -96,7 +96,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           align-items: center;
           justify-content: center;
           gap: 15px;
-          margin-bottom: 10px;
+          margin-bottom: 5px; /* Reduced from 10px */
         }
         .logo-image {
           width: 60px;
@@ -130,12 +130,12 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
         .main-wrapper {
           max-width: 1240px; /* 少し広めに */
           margin: 0 auto;
-          padding: 20px;
+          padding: 15px; /* Reduced from 20px */
         }
         .content-grid {
           display: grid;
           grid-template-columns: 3fr 1fr; /* サイドバーを可変幅（約25%）に変更 */
-          gap: 30px;
+          gap: 20px; /* Reduced from 30px */
           align-items: start;
         }
 
@@ -148,7 +148,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           /* サイドバーコンテンツ */
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 12px; /* Reduced from 20px */
           width: 100%; /* Ensure it fills the grid track */
           max-width: 100%; /* Prevent expanding beyond grid track */
           overflow-x: hidden; /* Cut off any horizontal overflow */
@@ -158,8 +158,8 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
         .footer {
           background: #1f2937;
           color: white;
-          padding: 30px 20px;
-          margin-top: 40px;
+          padding: 20px 20px; /* Reduced from 30px 20px */
+          margin-top: 25px; /* Reduced from 40px */
           text-align: center;
         }
         .footer-content {

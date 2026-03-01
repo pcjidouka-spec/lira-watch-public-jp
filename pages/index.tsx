@@ -369,8 +369,8 @@ export default function Home() {
         .blog-post {
           background: white;
           border-radius: 8px;
-          padding: 30px;
-          margin-bottom: 30px;
+          padding: 20px; /* Reduced from 30px */
+          margin-bottom: 20px; /* Reduced from 30px */
           box-shadow: 0 1px 3px rgba(0,0,0,0.05);
           border: 1px solid #e5e7eb;
         }
@@ -379,9 +379,9 @@ export default function Home() {
         }
 
         .post-header {
-          margin-bottom: 20px;
+          margin-bottom: 15px; /* Reduced from 20px */
           border-bottom: 1px solid #f3f4f6;
-          padding-bottom: 15px;
+          padding-bottom: 10px; /* Reduced from 15px */
         }
         .post-meta {
           display: flex;
@@ -439,7 +439,7 @@ export default function Home() {
           font-size: 16px;
           color: #4b5563;
           line-height: 1.8;
-          margin-bottom: 24px;
+          margin-bottom: 16px; /* Reduced from 24px */
         }
         .internal-link {
           color: #2563eb;
@@ -454,17 +454,17 @@ export default function Home() {
           font-size: 20px;
           border-left: 4px solid #3b82f6;
           padding-left: 12px;
-          margin: 20px 0 15px 0; /* Reduced top/bottom margins slightly */
+          margin: 15px 0 10px 0; /* Reduced top/bottom margins */
           color: #1f2937;
           font-weight: 700;
         }
         
         .ranking-wrapper {
-             margin-bottom: 20px; /* Reduced from default default 40px inside component styling if overridden */
+             margin-bottom: 15px; /* Reduced from 20px */
         }
 
         .ad-in-post {
-          margin: 20px 0; /* Reduced from 30px */
+          margin: 15px 0; /* Reduced from 20px */
           background: #f9fafb;
           padding: 10px;
           border-radius: 4px;
@@ -476,10 +476,10 @@ export default function Home() {
         }
 
         .post-footer {
-          margin-top: 30px;
-          padding-top: 15px;
+          margin-top: 20px; /* Reduced from 30px */
+          padding-top: 10px; /* Reduced from 15px */
           border-top: 1px dashed #e5e7eb;
-          font-size: 12px;
+          font-size: 11px; /* Reduced from 12px */
           color: #9ca3af;
           text-align: right;
         }
@@ -514,7 +514,7 @@ export default function Home() {
         .sidebar-widget {
           background: white;
           border-radius: 8px;
-          margin-bottom: 20px;
+          margin-bottom: 12px; /* Reduced from 20px */
           box-shadow: 0 1px 2px rgba(0,0,0,0.05);
           overflow: hidden;
           border: 1px solid #e5e7eb;
@@ -534,7 +534,7 @@ export default function Home() {
           color: #374151;
         }
         .widget-content, .profile-content {
-          padding: 15px;
+          padding: 12px 15px; /* Reduced from 15px */
         }
         
         .risk-block, .disclaimer-block {
@@ -583,8 +583,8 @@ export default function Home() {
         }
         .sidebar-article-item {
           border-bottom: 1px solid #f3f4f6;
-          padding: 8px 0;
-          margin-bottom: 4px;
+          padding: 6px 0; /* Reduced from 8px */
+          margin-bottom: 2px; /* Reduced from 4px */
           /* Flex or inline setup if needed, but span is inline by default */
         }
         .sidebar-article-item:last-child {
