@@ -49,12 +49,19 @@ function getArticles() {
                     description = textContent.replace(/\s+/g, ' ').trim().substring(0, 120) + '...';
                 }
 
+                const tagsMatch = objStr.match(/tags:\s*\[([\s\S]*?)\]/);
+                let tags = [];
+                if (tagsMatch) {
+                    tags = tagsMatch[1].split(',').map(t => t.trim().replace(/^['"]|['"]$/g, ''));
+                }
+
                 if (idMatch && titleMatch && dateMatch) {
                     articles.push({
                         id: idMatch[1],
                         title: titleMatch[1],
                         date: dateMatch[1],
-                        description: description
+                        description: description,
+                        tags: tags
                     });
                 }
             });
@@ -83,14 +90,24 @@ function generateRSS() {
     let rssContent = RSS_HEADER;
 
     articles.forEach(article => {
-        rssContent += `
+        let itemXml = `
   <item>
     <title>${article.title}</title>
     <link>https://www.lira-watch.sbs/articles/${article.id}</link>
     <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>
     <description>${article.description}</description>
-    <pubDate>${formatDate(article.date)}</pubDate>
+    <pubDate>${formatDate(article.date)}</pubDate>`;
+
+        if (article.tags && article.tags.length > 0) {
+            article.tags.forEach(tag => {
+                itemXml += `
+    <category>${tag}</category>`;
+            });
+        }
+
+        itemXml += `
   </item>`;
+        rssContent += itemXml;
     });
 
     rssContent += RSS_FOOTER;

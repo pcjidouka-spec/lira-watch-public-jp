@@ -45,6 +45,13 @@ export default function ArticlePage({ article }: ArticlePageProps) {
               <div className="article-header">
                 <span className="article-date">{article.date}</span>
                 <h1 className="article-title">{article.title}</h1>
+                {article.tags && article.tags.length > 0 && (
+                  <div className="article-tags">
+                    {article.tags.map(tag => (
+                      <span key={tag} className="article-tag">#{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {article.thumbnail && (
@@ -130,7 +137,21 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           font-size: 28px;
           color: #1f2937;
           margin-top: 8px;
-          margin-bottom: 0px;
+          margin-bottom: 12px;
+        }
+        .article-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 12px;
+        }
+        .article-tag {
+          font-size: 14px;
+          color: #6b7280;
+          background: #f3f4f6;
+          padding: 4px 10px;
+          border-radius: 20px;
+          font-weight: 500;
         }
         
         .article-body :global(h3) {

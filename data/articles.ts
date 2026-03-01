@@ -4,6 +4,7 @@ export interface Article {
   date: string;
   content: string; // HTML content
   thumbnail?: string;
+  tags?: string[];
 }
 
 // 楽天記事削除
@@ -13,6 +14,7 @@ export const articles: Article[] = [
     title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」がおすすめです！',
     date: '2026/02/28',
     thumbnail: '/images/gaitame_campaign_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', '高金利通貨', '外為どっとコム'],
     content: `
       <p class="intro">
         外為どっとコムにて、非常にお得な「スワップポイント最大60％増額キャンペーン」が実施されます！<br>
@@ -87,6 +89,7 @@ export const articles: Article[] = [
     title: '【最大24,000円】DanDanBANKのキャンペーンが超おトク！',
     date: '2026/02/15',
     thumbnail: '/images/dandan_campaign_60.png',
+    tags: ['DanDanBANK', 'キャンペーン', '銀行', 'ポイ活'],
     content: `
       <p class="intro">
         今、ポイ活ユーザーの間で話題なのが「DanDanBANK」の新規口座開設キャンペーンです。
@@ -142,6 +145,7 @@ export const articles: Article[] = [
     title: '【予測】高市政権の大勝で「円安」が再加速する理由と時期',
     date: '2026/02/11',
     thumbnail: '/images/takaichi_yen_60.png',
+    tags: ['FX', '円安', '高市政権', '経済予測'],
     content: `
       <p class="intro">
         選挙後の「円高」は一時的な調整に過ぎず、中長期では「積極財政×利上げ抑制」のポリシーミックスが強烈な円安圧力を生むことが懸念されます。
@@ -195,6 +199,7 @@ export const articles: Article[] = [
     title: 'みんなのFX：スワップNo.1チャレンジキャンペーンの凄さを徹底解説',
     date: '2026/02/03',
     thumbnail: '/images/minfx_campaign_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', 'みんなのFX'],
     content: `
       <p class="intro">
         トルコリラ/円のスワップポイントランキングでも常に上位を占めている「みんなのFX」。実は、キャンペーンを含めると実質的にはランキング1位の状態が続いています。
@@ -229,6 +234,7 @@ export const articles: Article[] = [
     title: 'トライオートFX：トルコリラ/円 キャンペーン概要',
     date: '2026/02/02',
     thumbnail: '/images/triauto_campaign_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', 'トライオートFX'],
     content: `
       <p class="intro">
         トライオートFXにて、トルコリラ/円を対象とした非常に魅力的なキャンペーンが開催されています。
@@ -265,6 +271,7 @@ export const articles: Article[] = [
     title: '2月開始スワップポイント増額キャンペーンまとめ（外為、SBI、セントラル短資FX）',
     date: '2026/01/30',
     thumbnail: '/images/feb_campaigns_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', 'キャンペーンまとめ'],
     content: `
       <p class="intro">
         2月からスタートする注目のスワップポイント増額キャンペーンをまとめました。各社とも非常に魅力的な内容となっています。
@@ -331,6 +338,7 @@ export const articles: Article[] = [
     title: '米国の為替政策と円高の陰で進むドル安',
     date: '2026/01/29',
     thumbnail: '/images/dollar-depreciation-20260129_60.png',
+    tags: ['FX', 'ドル安', '為替政策', 'トランプ政権'],
     content: `
       <p class="intro">
         昨今の為替市場では円高の動きが注目されていますが、その背景には、単なる日本円の独歩高ではなく、トランプ大統領やベッセント次期財務長官の発言を巡る「ドルの不信感」と、それに伴う「資産インフレ」の予兆が隠されています。
@@ -379,6 +387,7 @@ export const articles: Article[] = [
     title: '【速報】円高153円台突入！日米協調介入の予兆と構造的円高要因を徹底解説',
     date: '2026/01/28',
     thumbnail: '/images/yen-appreciation-factors-20260128_60.png',
+    tags: ['FX', '円高', '為替介入', '経済速報'],
     content: `
       <div class="infographic-box">
         <h3 style="text-align: center; margin-bottom: 20px;">📊 円高進行 速報まとめ</h3>
@@ -471,6 +480,7 @@ export const articles: Article[] = [
     title: 'ドル円（トルコリラ円）急落！為替介入か？今後の可能性は？',
     date: '2026/01/24',
     thumbnail: '/images/usdjpy-rate-check-20260124_60.png',
+    tags: ['FX', 'ドル円', 'トルコリラ', '為替介入'],
     content: `
       <div class="infographic-box">
         <h3 style="text-align: center; margin-bottom: 20px;">📊 為替相場 速報まとめ</h3>
@@ -561,6 +571,7 @@ export const articles: Article[] = [
     title: '【1/16〜1/30限定】セントラル短資FX「トルコリラ祭り」開催中！',
     date: '2026/01/16',
     thumbnail: '/images/central-tanshi-campaign-20260116_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', 'セントラル短資FX'],
     content: `
       <p class="intro">本日スタート！セントラル短資FXにて、トルコリラ/円の取引で最大3万円＋αのキャッシュバックが受け取れる激熱キャンペーン「トルコリラ祭り」が開催されています。</p>
       <div style="text-align: center; margin: 24px 0;">
@@ -602,6 +613,7 @@ export const articles: Article[] = [
     title: '【2026年最新】ポイントサイト経由でFX口座を開設して賢く稼ぐ裏ワザ',
     date: '2026/01/11',
     thumbnail: '/images/fx-account-points-20260111_60.png',
+    tags: ['FX', 'ポイントサイト', '口座開設', '裏ワザ'],
     content: `
       <p class="intro">FXを始める際、公式サイトから直接申し込むのは非常にもったいないことをご存知でしょうか？ポイントサイトを経由するだけで、数万円相当のポイントが還元されます。</p>
       <div style="text-align: center; margin: 24px 0;">
@@ -659,6 +671,7 @@ export const articles: Article[] = [
     title: 'トルコリラを対象としたおすすめ3社のスワップ増額キャンペーン',
     date: '2026/01/10',
     thumbnail: '/images/campaign-20260110_60.png',
+    tags: ['FX', 'トルコリラ', 'キャンペーン', 'スワップ投資'],
     content: `
       <div class="campaign-section">
         <h3>インヴァスト証券（トライオートFX）</h3>
@@ -696,6 +709,7 @@ export const articles: Article[] = [
     title: 'トルコリラ投資の安全圏はどこ？最大変動率から逆算する「最低必要証拠金」の考え方',
     date: '2026/01/09',
     thumbnail: '/images/risk-management-20260109_60.png',
+    tags: ['FX', 'トルコリラ', 'リスク管理', '長期投資'],
     content: `
       <p class="intro">高スワップポイントが魅力のトルコリラ/円（TRY/JPY）。しかし、その裏側にある「価格変動リスク」を正しく把握しなければ、一瞬でロスカットの憂き目に遭う可能性もあります。本記事では、過去のデータから導き出す「最大変動率」と、FX会社の「ロスカットルール」をもとに、破綻しないために最低限必要な証拠金（レバレッジ）の計算方法を解説します。</p>
       <div style="text-align: center; margin: 24px 0;">
@@ -786,6 +800,7 @@ export const articles: Article[] = [
     title: '【2025年トルコリラ投資の実績】トルコリラ投資、スワップ込みで結局いくら儲かった？',
     date: '2026/01/08',
     thumbnail: '/images/performance-review-20260108_60.png',
+    tags: ['FX', 'トルコリラ', '投資実績', 'スワップ投資'],
     content: `
       <p class="intro">高金利通貨として注目を集め続けるトルコリラ/円（TRY/JPY）。「為替で負けてもスワップで勝てる」と言われるこの通貨ペアで、2025年の1年間運用した場合の驚きの収益結果を検証します。</p>
       <div style="text-align: center; margin: 24px 0;">
