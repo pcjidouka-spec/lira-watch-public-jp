@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ProviderRanking } from '@/types';
 import { useCampaignUpdates } from '@/hooks/useCampaignUpdates';
 
@@ -14,6 +14,7 @@ const getProviderId = (p: any): string => {
 };
 export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings }) => {
   const { hasNewCampaign } = useCampaignUpdates();
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Combine data into rows for the unified table structure
   const maxRows = Math.max(buyRankings.length, sellRankings.length);
@@ -62,7 +63,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
             </tr>
           </thead>
           <tbody>
-            {rows.map((row, index) => (
+            {(isExpanded ? rows : rows.slice(0, 3)).map((row, index) => (
               <tr key={index} className="ranking-row">
                 {/* Buy Side */}
                 <td className="td-rank">
@@ -185,6 +186,25 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           </tbody>
         </table>
       </div>
+
+      {rows.length > 3 && (
+        <div className="toggle-wrapper">
+          <button
+            className="toggle-button"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? (
+              <>
+                <span className="icon">▲</span> 表示を閉じる
+              </>
+            ) : (
+              <>
+                <span className="icon">▼</span> すべてのランキングを見る（全{rows.length}社）
+              </>
+            )}
+          </button>
+        </div>
+      )}
 
       <style jsx>{`
         .ranking-container {
@@ -472,6 +492,40 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
              font-size: 14px;
              padding: 10px;
            }
+        }
+
+        /* Toggle Button Styles */
+        .toggle-wrapper {
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          background: #f9fafb;
+          border-top: 1px solid #e5e7eb;
+        }
+        .toggle-button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: white;
+          border: 1px solid #d1d5db;
+          color: #374151;
+          padding: 10px 24px;
+          border-radius: 30px;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .toggle-button:hover {
+          background-color: #f3f4f6;
+          border-color: #9ca3af;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .toggle-button .icon {
+          font-size: 12px;
+          color: #6b7280;
         }
       `}</style>
     </div>
