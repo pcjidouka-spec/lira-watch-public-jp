@@ -255,7 +255,7 @@ export default function Home() {
         <meta name="google-adsense-account" content="ca-pub-6343144082717938" />
       </Head>
 
-      {/* --- メインコンテンツ: ブログ記事フィード形式 --- */}
+      {/* --- メインコンテンツ --- */}
 
       {/* 1. ランキング更新 (Top Post) */}
       <article className="blog-post featured-post">
@@ -517,7 +517,7 @@ export default function Home() {
           box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* Legacy Blog Post Styles (keeping for ranking post) */
+        /* Blog Post Styles */
         .blog-post {
           background: white;
           border-radius: 8px;

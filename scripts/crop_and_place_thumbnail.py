@@ -11,160 +11,21 @@ TARGET_WIDTH = 640
 TARGET_HEIGHT = 160
 FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 
-def crop_and_resize(input_path, output_path, title="", subtitle="", no_overlay=False, no_crop=False):
-    img = Image.open(input_path).convert("RGBA")
+def process_thumbnail(input_path, output_path):
+    img = Image.open(input_path).convert("RGB")
     
-    if no_crop:
-        # User requested to keep the original size/ratio
-        pass
-    else:
-        # Calculate target aspect ratio
-        target_aspect = TARGET_WIDTH / TARGET_HEIGHT
-        img_aspect = img.width / img.height
-        
-        # Resize and crop to fill 640x160
-        if img_aspect > target_aspect:
-            # Image is wider than needed, crop sides
-            new_height = TARGET_HEIGHT
-            new_width = int(new_height * img_aspect)
-            img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-            left = (img.width - TARGET_WIDTH) // 2
-            top = 0
-            right = left + TARGET_WIDTH
-            bottom = TARGET_HEIGHT
-        else:
-            # Image is taller than needed, crop top/bottom
-            new_width = TARGET_WIDTH
-            new_height = int(new_width / img_aspect)
-            img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-            left = 0
-            top = (img.height - TARGET_HEIGHT) // 2
-            right = TARGET_WIDTH
-            bottom = top + TARGET_HEIGHT
-            
-        img = img.crop((left, top, right, bottom))
-
-    if not no_overlay and not no_crop:
-        # --- Draw Text Overlay ---
-        overlay = Image.new('RGBA', (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
-        overlay_draw = ImageDraw.Draw(overlay)
-        # Gradient overlay from left
-        for x in range(TARGET_WIDTH):
-            alpha = int(200 * (1 - x / (TARGET_WIDTH * 0.8)))
-            if alpha < 0: alpha = 0
-            overlay_draw.line([(x, 0), (x, TARGET_HEIGHT)], fill=(0, 0, 0, alpha))
-        
-        img = Image.alpha_composite(img, overlay)
-        draw = ImageDraw.Draw(img)
-
-        try:
-            title_font = ImageFont.truetype(FONT_PATH, 26)
-            subtitle_font = ImageFont.truetype(FONT_PATH, 14)
-        except:
-            title_font = ImageFont.load_default()
-            subtitle_font = ImageFont.load_default()
-
-        # --- Helper for text wrapping ---
-        def wrap_text(text, font, max_width):
-            # Support manual newlines
-            paragraphs = text.split('\n')
-            final_lines = []
-            
-            for p in paragraphs:
-                if not p:
-                    continue
-                current_line = ""
-                chars = list(p)
-                for char in chars:
-                    test_line = current_line + char
-                    w = draw.textlength(test_line, font=font)
-                    if w <= max_width:
-                        current_line = test_line
-                    else:
-                        final_lines.append(current_line)
-                        current_line = char
-                if current_line:
-                    final_lines.append(current_line)
-            return final_lines
-
-        # Wrap Title
-        title_max_width = TARGET_WIDTH * 0.9
-        title_lines = wrap_text(title, title_font, title_max_width)
-        if len(title_lines) > 2:
-            title_lines = title_lines[:2]
-            title_lines[1] = title_lines[1][:len(title_lines[1])-1] + "..."
-
-        # Wrap Subtitle
-        subtitle_max_width = TARGET_WIDTH * 0.8
-        subtitle_lines = wrap_text(subtitle, subtitle_font, subtitle_max_width)
-        if len(subtitle_lines) > 2:
-            subtitle_lines = subtitle_lines[:2]
-            subtitle_lines[1] = subtitle_lines[1][:len(subtitle_lines[1])-1] + "..."
-
-        # Calculate Total Height for Vertical Centering
-        line_spacing_title = 32
-        line_spacing_sub = 18
-        total_text_height = (len(title_lines) * line_spacing_title) + (len(subtitle_lines) * line_spacing_sub)
-        y_cursor = (TARGET_HEIGHT - total_text_height) // 2
-
-        # Draw Title
-        for line in title_lines:
-            w = draw.textlength(line, font=title_font)
-            x = (TARGET_WIDTH - w) // 2
-            draw.text((x, y_cursor), line, font=title_font, fill=(255, 255, 255, 255))
-            y_cursor += line_spacing_title
-
-        # Draw Subtitle
-        y_cursor += 5
-        for line in subtitle_lines:
-            w = draw.textlength(line, font=subtitle_font)
-            x = (TARGET_WIDTH - w) // 2
-            draw.text((x, y_cursor), line, font=subtitle_font, fill=(220, 220, 220, 255))
-            y_cursor += line_spacing_sub
-    
-    # Save image
-    img = img.convert("RGB")
-    img.save(output_path, quality=95) # Higher quality for larger images
-    msg = "Successfully saved " + ("(original size)" if no_crop else "(cropped 640x160)")
-    if not (no_overlay or no_crop):
-        msg += " with centered labels"
-    print(f"{msg} to {output_path}")
+    # We no longer crop or overlay text manually.
+    # We rely on AI-native typography and 16:9 aspect ratio.
+    # Just save at high quality.
+    img.save(output_path, quality=95)
+    print(f"Successfully processed and saved 16:9 thumbnail to {output_path}")
 
 def get_article_details(article_id):
+    # This is still used by the main block to verify article existence, 
+    # even if we don't use title/subtitle for overlay anymore.
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
         content = f.read()
-
-    # Search for the article block
-    article_pattern = re.compile(rf"id:\s*'{article_id}',(.*?)\s*content:\s*`", re.DOTALL)
-    match = article_pattern.search(content)
-    
-    if match:
-        props_block = match.group(1)
-        
-        # 1. Try to get thumbnail_text (keywords)
-        text_match = re.search(r"thumbnail_text:\s*'([^']+)'", props_block)
-        if text_match:
-            title = text_match.group(1).replace('\\n', '\n')
-            return title, "" # Return empty subtitle for keyword-only mode
-            
-        # 2. Fallback to regular title
-        title_match = re.search(r"title:\s*'([^']+)'", props_block)
-        title = title_match.group(1).replace('\\n', '\n') if title_match else ""
-        
-        # 3. Get subtitle from intro (if not in keyword-only mode)
-        # Note: We'll skip subtitle if thumbnail_text was found to keep it "keyword only"
-        article_content_match = re.search(rf"id:\s*'{article_id}'.*?content:\s*`(.*?)`", content, re.DOTALL)
-        subtitle = ""
-        if article_content_match:
-            article_content = article_content_match.group(1)
-            intro_match = re.search(r'<p class="intro">(.*?)</p>', article_content, re.DOTALL)
-            if intro_match:
-                raw_text = re.sub(r'<[^>]+>', '', intro_match.group(1)).strip()
-                subtitle = raw_text.replace('\n', '')
-                
-        return title, subtitle
-            
-    return "", ""
+    return article_id in content
 
 def inject_to_articles(article_id, img_rel_path):
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
@@ -211,13 +72,11 @@ def inject_to_articles(article_id, img_rel_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python crop_and_place_thumbnail.py <input_image_path> <article_id> [--no-overlay] [--no-crop]")
+        print("Usage: python crop_and_place_thumbnail.py <input_image_path> <article_id>")
         sys.exit(1)
         
     input_image = sys.argv[1]
     article_id = sys.argv[2]
-    no_overlay = "--no-overlay" in sys.argv
-    no_crop = "--no-crop" in sys.argv
     
     if not os.path.exists(input_image):
         print(f"Error: Could not find input image at {input_image}")
@@ -227,6 +86,9 @@ if __name__ == "__main__":
     output_path = os.path.join(IMAGES_DIR, output_filename)
     rel_path = f"/images/{output_filename}"
     
-    title, subtitle = get_article_details(article_id)
-    crop_and_resize(input_image, output_path, title, subtitle, no_overlay=no_overlay, no_crop=no_crop)
-    inject_to_articles(article_id, rel_path)
+    if get_article_details(article_id):
+        process_thumbnail(input_image, output_path)
+        inject_to_articles(article_id, rel_path)
+    else:
+        print(f"Error: Article ID '{article_id}' not found in articles.ts.")
+        sys.exit(1)
