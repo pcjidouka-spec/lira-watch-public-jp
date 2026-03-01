@@ -279,10 +279,6 @@ export default function Home() {
             </div>
           )}
         </div>
-
-        <footer className="post-footer">
-          <p>※ データは各社公式サイトより毎日自動取得しています。</p>
-        </footer>
       </article>
 
       {/* 2. 記事フィード */}
