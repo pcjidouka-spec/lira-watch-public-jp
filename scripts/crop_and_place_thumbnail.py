@@ -11,36 +11,40 @@ TARGET_WIDTH = 640
 TARGET_HEIGHT = 160
 FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 
-def crop_and_resize(input_path, output_path, title="", subtitle="", no_overlay=False):
+def crop_and_resize(input_path, output_path, title="", subtitle="", no_overlay=False, no_crop=False):
     img = Image.open(input_path).convert("RGBA")
     
-    # Calculate target aspect ratio
-    target_aspect = TARGET_WIDTH / TARGET_HEIGHT
-    img_aspect = img.width / img.height
-    
-    # Resize and crop to fill 640x160
-    if img_aspect > target_aspect:
-        # Image is wider than needed, crop sides
-        new_height = TARGET_HEIGHT
-        new_width = int(new_height * img_aspect)
-        img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-        left = (img.width - TARGET_WIDTH) // 2
-        top = 0
-        right = left + TARGET_WIDTH
-        bottom = TARGET_HEIGHT
+    if no_crop:
+        # User requested to keep the original size/ratio
+        pass
     else:
-        # Image is taller than needed, crop top/bottom
-        new_width = TARGET_WIDTH
-        new_height = int(new_width / img_aspect)
-        img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-        left = 0
-        top = (img.height - TARGET_HEIGHT) // 2
-        right = TARGET_WIDTH
-        bottom = top + TARGET_HEIGHT
+        # Calculate target aspect ratio
+        target_aspect = TARGET_WIDTH / TARGET_HEIGHT
+        img_aspect = img.width / img.height
         
-    img = img.crop((left, top, right, bottom))
+        # Resize and crop to fill 640x160
+        if img_aspect > target_aspect:
+            # Image is wider than needed, crop sides
+            new_height = TARGET_HEIGHT
+            new_width = int(new_height * img_aspect)
+            img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            left = (img.width - TARGET_WIDTH) // 2
+            top = 0
+            right = left + TARGET_WIDTH
+            bottom = TARGET_HEIGHT
+        else:
+            # Image is taller than needed, crop top/bottom
+            new_width = TARGET_WIDTH
+            new_height = int(new_width / img_aspect)
+            img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            left = 0
+            top = (img.height - TARGET_HEIGHT) // 2
+            right = TARGET_WIDTH
+            bottom = top + TARGET_HEIGHT
+            
+        img = img.crop((left, top, right, bottom))
 
-    if not no_overlay:
+    if not no_overlay and not no_crop:
         # --- Draw Text Overlay ---
         overlay = Image.new('RGBA', (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
         overlay_draw = ImageDraw.Draw(overlay)
@@ -120,8 +124,10 @@ def crop_and_resize(input_path, output_path, title="", subtitle="", no_overlay=F
     
     # Save image
     img = img.convert("RGB")
-    img.save(output_path, quality=90)
-    msg = "Successfully cropped and saved" + (" (no overlay)" if no_overlay else " (with centered labels)")
+    img.save(output_path, quality=95) # Higher quality for larger images
+    msg = "Successfully saved " + ("(original size)" if no_crop else "(cropped 640x160)")
+    if not (no_overlay or no_crop):
+        msg += " with centered labels"
     print(f"{msg} to {output_path}")
 
 def get_article_details(article_id):
@@ -205,11 +211,13 @@ def inject_to_articles(article_id, img_rel_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python crop_and_place_thumbnail.py <input_image_path> <article_id>")
+        print("Usage: python crop_and_place_thumbnail.py <input_image_path> <article_id> [--no-overlay] [--no-crop]")
         sys.exit(1)
         
     input_image = sys.argv[1]
     article_id = sys.argv[2]
+    no_overlay = "--no-overlay" in sys.argv
+    no_crop = "--no-crop" in sys.argv
     
     if not os.path.exists(input_image):
         print(f"Error: Could not find input image at {input_image}")
@@ -220,5 +228,5 @@ if __name__ == "__main__":
     rel_path = f"/images/{output_filename}"
     
     title, subtitle = get_article_details(article_id)
-    crop_and_resize(input_image, output_path, title, subtitle)
+    crop_and_resize(input_image, output_path, title, subtitle, no_overlay=no_overlay, no_crop=no_crop)
     inject_to_articles(article_id, rel_path)
