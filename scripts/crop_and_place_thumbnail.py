@@ -11,7 +11,7 @@ TARGET_WIDTH = 640
 TARGET_HEIGHT = 160
 FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 
-def crop_and_resize(input_path, output_path, title="", subtitle=""):
+def crop_and_resize(input_path, output_path, title="", subtitle="", no_overlay=False):
     img = Image.open(input_path).convert("RGBA")
     
     # Calculate target aspect ratio
@@ -40,87 +40,89 @@ def crop_and_resize(input_path, output_path, title="", subtitle=""):
         
     img = img.crop((left, top, right, bottom))
 
-    # --- Draw Text Overlay ---
-    overlay = Image.new('RGBA', (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
-    overlay_draw = ImageDraw.Draw(overlay)
-    # Gradient overlay from left
-    for x in range(TARGET_WIDTH):
-        alpha = int(200 * (1 - x / (TARGET_WIDTH * 0.8)))
-        if alpha < 0: alpha = 0
-        overlay_draw.line([(x, 0), (x, TARGET_HEIGHT)], fill=(0, 0, 0, alpha))
-    
-    img = Image.alpha_composite(img, overlay)
-    draw = ImageDraw.Draw(img)
-
-    try:
-        title_font = ImageFont.truetype(FONT_PATH, 26) # Slightly smaller for better fit
-        subtitle_font = ImageFont.truetype(FONT_PATH, 14)
-    except:
-        title_font = ImageFont.load_default()
-        subtitle_font = ImageFont.load_default()
-
-    # --- Helper for text wrapping (Japanese character optimized) ---
-    def wrap_text(text, font, max_width):
-        # Support manual newlines
-        paragraphs = text.split('\n')
-        final_lines = []
+    if not no_overlay:
+        # --- Draw Text Overlay ---
+        overlay = Image.new('RGBA', (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
+        overlay_draw = ImageDraw.Draw(overlay)
+        # Gradient overlay from left
+        for x in range(TARGET_WIDTH):
+            alpha = int(200 * (1 - x / (TARGET_WIDTH * 0.8)))
+            if alpha < 0: alpha = 0
+            overlay_draw.line([(x, 0), (x, TARGET_HEIGHT)], fill=(0, 0, 0, alpha))
         
-        for p in paragraphs:
-            if not p:
-                continue
-            current_line = ""
-            chars = list(p)
-            for char in chars:
-                test_line = current_line + char
-                w = draw.textlength(test_line, font=font)
-                if w <= max_width:
-                    current_line = test_line
-                else:
+        img = Image.alpha_composite(img, overlay)
+        draw = ImageDraw.Draw(img)
+
+        try:
+            title_font = ImageFont.truetype(FONT_PATH, 26)
+            subtitle_font = ImageFont.truetype(FONT_PATH, 14)
+        except:
+            title_font = ImageFont.load_default()
+            subtitle_font = ImageFont.load_default()
+
+        # --- Helper for text wrapping ---
+        def wrap_text(text, font, max_width):
+            # Support manual newlines
+            paragraphs = text.split('\n')
+            final_lines = []
+            
+            for p in paragraphs:
+                if not p:
+                    continue
+                current_line = ""
+                chars = list(p)
+                for char in chars:
+                    test_line = current_line + char
+                    w = draw.textlength(test_line, font=font)
+                    if w <= max_width:
+                        current_line = test_line
+                    else:
+                        final_lines.append(current_line)
+                        current_line = char
+                if current_line:
                     final_lines.append(current_line)
-                    current_line = char
-            if current_line:
-                final_lines.append(current_line)
-        return final_lines
+            return final_lines
 
-    # Wrap Title
-    title_max_width = TARGET_WIDTH * 0.9
-    title_lines = wrap_text(title, title_font, title_max_width)
-    if len(title_lines) > 2:
-        title_lines = title_lines[:2]
-        title_lines[1] = title_lines[1][:len(title_lines[1])-1] + "..."
+        # Wrap Title
+        title_max_width = TARGET_WIDTH * 0.9
+        title_lines = wrap_text(title, title_font, title_max_width)
+        if len(title_lines) > 2:
+            title_lines = title_lines[:2]
+            title_lines[1] = title_lines[1][:len(title_lines[1])-1] + "..."
 
-    # Wrap Subtitle
-    subtitle_max_width = TARGET_WIDTH * 0.8
-    subtitle_lines = wrap_text(subtitle, subtitle_font, subtitle_max_width)
-    if len(subtitle_lines) > 2:
-        subtitle_lines = subtitle_lines[:2]
-        subtitle_lines[1] = subtitle_lines[1][:len(subtitle_lines[1])-1] + "..."
+        # Wrap Subtitle
+        subtitle_max_width = TARGET_WIDTH * 0.8
+        subtitle_lines = wrap_text(subtitle, subtitle_font, subtitle_max_width)
+        if len(subtitle_lines) > 2:
+            subtitle_lines = subtitle_lines[:2]
+            subtitle_lines[1] = subtitle_lines[1][:len(subtitle_lines[1])-1] + "..."
 
-    # Calculate Total Height for Vertical Centering
-    line_spacing_title = 32
-    line_spacing_sub = 18
-    total_text_height = (len(title_lines) * line_spacing_title) + (len(subtitle_lines) * line_spacing_sub)
-    y_cursor = (TARGET_HEIGHT - total_text_height) // 2
+        # Calculate Total Height for Vertical Centering
+        line_spacing_title = 32
+        line_spacing_sub = 18
+        total_text_height = (len(title_lines) * line_spacing_title) + (len(subtitle_lines) * line_spacing_sub)
+        y_cursor = (TARGET_HEIGHT - total_text_height) // 2
 
-    # Draw Title (Centered X)
-    for line in title_lines:
-        w = draw.textlength(line, font=title_font)
-        x = (TARGET_WIDTH - w) // 2
-        draw.text((x, y_cursor), line, font=title_font, fill=(255, 255, 255, 255))
-        y_cursor += line_spacing_title
+        # Draw Title
+        for line in title_lines:
+            w = draw.textlength(line, font=title_font)
+            x = (TARGET_WIDTH - w) // 2
+            draw.text((x, y_cursor), line, font=title_font, fill=(255, 255, 255, 255))
+            y_cursor += line_spacing_title
 
-    # Draw Subtitle (Centered X)
-    y_cursor += 5 # Extra gap
-    for line in subtitle_lines:
-        w = draw.textlength(line, font=subtitle_font)
-        x = (TARGET_WIDTH - w) // 2
-        draw.text((x, y_cursor), line, font=subtitle_font, fill=(220, 220, 220, 255))
-        y_cursor += line_spacing_sub
+        # Draw Subtitle
+        y_cursor += 5
+        for line in subtitle_lines:
+            w = draw.textlength(line, font=subtitle_font)
+            x = (TARGET_WIDTH - w) // 2
+            draw.text((x, y_cursor), line, font=subtitle_font, fill=(220, 220, 220, 255))
+            y_cursor += line_spacing_sub
     
-    # Save image (converting to RGB to drop alpha)
+    # Save image
     img = img.convert("RGB")
     img.save(output_path, quality=90)
-    print(f"Successfully cropped, labeled (centered), and saved to {output_path}")
+    msg = "Successfully cropped and saved" + (" (no overlay)" if no_overlay else " (with centered labels)")
+    print(f"{msg} to {output_path}")
 
 def get_article_details(article_id):
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
