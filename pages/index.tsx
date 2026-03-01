@@ -639,13 +639,15 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 20px 0;
+          margin: 20px auto; /* Centered container */
           gap: 12px;
+          width: fit-content; /* Container width matches the widest child (the button) */
         }
         .disclaimer-text {
           font-size: 13px;
           color: #6b7280;
           margin: 0;
+          /* Centered by default due to parent's align-items: center */
         }
         .chart-toggle-button {
           display: flex;
