@@ -61,21 +61,26 @@ def crop_and_resize(input_path, output_path, title="", subtitle=""):
 
     # --- Helper for text wrapping (Japanese character optimized) ---
     def wrap_text(text, font, max_width):
-        lines = []
-        current_line = ""
-        # Simple heuristic: split by character, but try to avoid breaking before punctuation
-        chars = list(text)
-        for i, char in enumerate(chars):
-            test_line = current_line + char
-            w = draw.textlength(test_line, font=font)
-            if w <= max_width:
-                current_line = test_line
-            else:
-                lines.append(current_line)
-                current_line = char
-        if current_line:
-            lines.append(current_line)
-        return lines
+        # Support manual newlines
+        paragraphs = text.split('\n')
+        final_lines = []
+        
+        for p in paragraphs:
+            if not p:
+                continue
+            current_line = ""
+            chars = list(p)
+            for char in chars:
+                test_line = current_line + char
+                w = draw.textlength(test_line, font=font)
+                if w <= max_width:
+                    current_line = test_line
+                else:
+                    final_lines.append(current_line)
+                    current_line = char
+            if current_line:
+                final_lines.append(current_line)
+        return final_lines
 
     # Wrap Title
     title_max_width = TARGET_WIDTH * 0.9

@@ -11,7 +11,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 'youtube-market-outlook-20260301',
-    title: '【地政学的リスク急騰】週明けの不透明な相場予想に必見のYouTube動画4選',
+    title: '【地政学的リスク急騰】\n週明けの不透明な相場予想に必見のYouTube動画4選',
     date: '2026/03/01',
     thumbnail: '/images/youtube-market-outlook-20260301_60.png',
     tags: ['FX', '相場展望', 'YouTube', '地政学的リスク', '原油'],
@@ -19,6 +19,11 @@ export const articles: Article[] = [
       <p class="intro">
         週明けの不透明な相場環境を乗り切るために、中東の地政学的リスクと市場の動向を掴む上で必見のYouTube動画を4本、厳選してご紹介します。詳細はぜひ各動画を検索してご確認ください！
       </p>
+
+      <div style="text-align: center; margin: 24px 0;">
+        <img src="/images/youtube-market-outlook-20260301_60.png" alt="【地政学的リスク急騰】
+週明けの不透明な相場予想に必見のYouTube動画4選" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      </div>
 
 
 

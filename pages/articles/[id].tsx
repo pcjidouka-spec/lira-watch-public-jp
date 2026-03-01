@@ -136,8 +136,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-title {
           font-size: 28px;
           color: #1f2937;
-          margin-top: 8px;
-          margin-bottom: 12px;
+          margin-bottom: 20px;
+          line-height: 1.3;
+          white-space: pre-wrap;
         }
         .article-tags {
           display: flex;
