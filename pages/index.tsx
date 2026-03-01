@@ -136,6 +136,36 @@ export default function Home() {
       </div>
 
       <div className="sidebar-widget">
+        <div className="widget-header">
+          <h3>新着記事</h3>
+        </div>
+        <div className="widget-content">
+          <ul className="sidebar-article-list">
+            {articles.slice(0, 5).map((article) => {
+              // Check if article is within 5 days
+              const articleDate = new Date(article.date.replace(/\//g, '-'));
+              const today = new Date();
+              const diffTime = today.getTime() - articleDate.getTime();
+              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+              const isNew = diffDays <= 5;
+
+              return (
+                <li key={article.id} className="sidebar-article-item">
+                  <span className="sidebar-bullet">・</span>
+                  <span className="sidebar-article-date">{article.date}</span>
+                  <span className="sidebar-spacer"> </span>
+                  <Link href={`/articles/${article.id}`} className={`sidebar-article-link ${isNew ? 'sidebar-new-article' : ''}`}>
+                    {article.title}
+                  </Link>
+                  {isNew && <span className="sidebar-new-badge">New</span>}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      <div className="sidebar-widget">
         <ArchiveList />
       </div>
 
