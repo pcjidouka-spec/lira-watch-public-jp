@@ -418,12 +418,16 @@ export default function Home() {
           overflow: hidden;
           border-radius: 8px 8px 0 0;
           aspect-ratio: 16 / 9;
+          background: #000; /* Letterbox background to prevent white gaps */
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .post-thumbnail-card img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain; /* Ensure full image is visible */
           display: block;
         }
 
