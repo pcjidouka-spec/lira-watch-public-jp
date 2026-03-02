@@ -16,7 +16,7 @@ import { RakutenAds } from '@/components/RakutenAds';
 import { ArticleTree } from '@/components/ArticleTree';
 import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function MxnJpyRanking() {
   const router = useRouter();
   const {
     buyRanking,
@@ -26,7 +26,7 @@ export default function Home() {
     siteUpdatedAt,
     loading,
     error,
-  } = useSwapData();
+  } = useSwapData('MXN/JPY');
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
   const [mainFeedTab, setMainFeedTab] = useState<'recent' | 'tree'>('recent');
@@ -119,7 +119,7 @@ export default function Home() {
             いつもありがとうございます。<br />
             これからも有用な情報をお届け出来るよう、応援して下さい♪
           </p>
-          <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="https://fx.blogmura.com/mexico-peso/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <span className="iine-banner" style={{ marginBottom: '8px' }}>いいね♪</span>
           </a>
           <br />
@@ -179,7 +179,7 @@ export default function Home() {
 
       <div className="sidebar-widget">
         <div className="widget-header">
-          <h3>トルコリラ/円</h3>
+          <h3>メキシコペソ/円</h3>
         </div>
         <div className="widget-content">
           <IdeasWidget height="300" />
@@ -194,7 +194,7 @@ export default function Home() {
           <h3>LIVEチャート</h3>
         </div>
         <div className="widget-content">
-          <AdvancedChart symbol="FX:TRYJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
+          <AdvancedChart symbol="FX:MXNJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
           <div style={{ height: '10px' }}></div>
           <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar" height="700px" />
         </div>
@@ -217,7 +217,7 @@ export default function Home() {
           <h3>リスク管理について</h3>
         </div>
         <div className="widget-content risk-block">
-          <p>トルコリラは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
+          <p>メキシコペソは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
         </div>
       </div>
 
@@ -240,17 +240,17 @@ export default function Home() {
   return (
     <BlogLayout sidebar={sidebarContent} lastUpdated={siteUpdatedAt || lastUpdated || undefined}>
       <Head>
-        <title>トルコリラ・ウォッチ | lira-watch.sbs - TRY/JPYスワップポイント比較ブログ</title>
-        <meta name="description" content="トルコリラ円（TRY/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨トルコリラの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
-        <meta name="keywords" content="トルコリラ, TRY/JPY, スワップポイント, 比較, FX, トルコリラ円, スワップ投資, 高金利通貨, ランキング, ブログ" />
+        <title>メキシコペソ・ウォッチ | lira-watch.sbs - MXN/JPYスワップポイント比較ブログ</title>
+        <meta name="description" content="メキシコペソ円（MXN/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨メキシコペソの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
+        <meta name="keywords" content="メキシコペソ, MXN/JPY, スワップポイント, 比較, FX, メキシコペソ円, スワップ投資, 高金利通貨, ランキング, ブログ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="canonical" href="https://lira-watch.sbs/" />
 
         {/* OGP Tags */}
-        <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
-        <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
+        <meta property="og:title" content={latestArticle ? `${latestArticle.title} | メキシコペソ・ウォッチ` : "メキシコペソ・ウォッチ | MXN/JPYスワップポイント比較・推移"} />
+        <meta property="og:description" content="メキシコペソ円（MXN/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content="https://lira-watch.sbs/" />
         {latestArticle?.thumbnail ? (
@@ -258,7 +258,7 @@ export default function Home() {
         ) : (
           <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
         )}
-        <meta property="og:site_name" content="トルコリラ・ウォッチ" />
+        <meta property="og:site_name" content="メキシコペソ・ウォッチ" />
         <meta property="og:locale" content="ja_JP" />
 
         {/* Google AdSense */}
@@ -275,18 +275,18 @@ export default function Home() {
             <span className="post-time">{siteUpdatedAt ? siteUpdatedAt.split(' ')[1] : '05:00'}</span>
             <span className="post-category">ランキング更新</span>
           </div>
-          <h1 className="post-title">【毎日更新】トルコリラ円スワップポイントランキング・推移</h1>
+          <h1 className="post-title">【毎日更新】メキシコペソ円スワップポイントランキング・推移</h1>
         </header>
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のトルコリラ円（TRY/JPY）<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のメキシコペソ円（MXN/JPY）<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
             スワップポイントランキング
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
-              <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+              <a href="https://fx.blogmura.com/mexico-peso/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
                 <span className="iine-banner">いいね♪</span>
               </a>
               <span style={{ fontSize: '14px', fontWeight: 'normal', color: '#6b7280', marginLeft: '8px' }}>←応援お願いします。</span>
@@ -297,6 +297,7 @@ export default function Home() {
             <RankingTable
               buyRankings={buyRanking}
               sellRankings={sellRanking}
+              currencyLabel="メキシコペソ"
             />
           </div>
 

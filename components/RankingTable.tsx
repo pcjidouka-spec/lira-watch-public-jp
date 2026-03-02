@@ -5,6 +5,7 @@ import { useCampaignUpdates } from '@/hooks/useCampaignUpdates';
 interface RankingTableProps {
   buyRankings: ProviderRanking[];
   sellRankings: ProviderRanking[];
+  currencyLabel?: string;
 }
 
 // Helper function to get provider_id consistently
@@ -12,7 +13,7 @@ const getProviderId = (p: any): string => {
   if (!p) return '';
   return String(p.provider_id || '').toLowerCase();
 };
-export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings }) => {
+export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ' }) => {
   const { hasNewCampaign } = useCampaignUpdates();
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -42,7 +43,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
 
   return (
     <div className="ranking-container">
-      <div className="main-header">トルコリラ 円スワップポイント</div>
+      <div className="main-header">{currencyLabel} 円スワップポイント</div>
 
       <div className="table-wrapper">
         <table className="merged-table">

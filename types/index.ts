@@ -2,6 +2,7 @@ export interface SwapData {
   target_date: string;
   provider_id: string;
   name: string;
+  currency_pair?: string;
   days: number | null;
   swap_buy: number | null;
   swap_sell: number | null;

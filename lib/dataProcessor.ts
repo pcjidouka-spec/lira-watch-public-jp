@@ -22,6 +22,7 @@ export function parseCSVData(csvText: string): SwapData[] {
     const swapData: SwapData = {
       target_date: record.target_date || '',
       provider_id: record.provider_id || '',
+      currency_pair: record.currency_pair || 'TRY/JPY', // デフォルト値
       name: record.name || '',
       days: record.days === 'None' || !record.days ? null : parseInt(record.days, 10),
       swap_buy: record.swap_buy === 'None' || !record.swap_buy ? null : parseFloat(record.swap_buy),
@@ -141,9 +142,9 @@ export function getLatestMonthlyData(data: SwapData[]): SwapData[] {
  * 買いスワップランキングを生成（降順）- 月次平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
-export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>): ProviderRanking[] {
-  // 月次平均計算では、実際に取得できた成功データのみを使用（エラーや欠損データは除外）
-  const successData = data.filter(d => d.status === 'success');
+export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
+  // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
+  const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const monthlyData = getLatestMonthlyData(successData);
 
   // 事業者ごとに月次平均を計算（付与日数加重平均）
@@ -217,9 +218,9 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
  * 売りスワップランキングを生成（絶対値が小さい順）- 月次平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
-export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>): ProviderRanking[] {
-  // 月次平均計算では、実際に取得できた成功データのみを使用（エラーや欠損データは除外）
-  const successData = data.filter(d => d.status === 'success');
+export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
+  // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
+  const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const monthlyData = getLatestMonthlyData(successData);
 
   // 事業者ごとに月次平均を計算（付与日数加重平均）

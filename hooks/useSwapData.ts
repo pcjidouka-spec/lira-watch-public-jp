@@ -7,7 +7,7 @@ import {
   getSellRanking,
 } from '@/lib/dataProcessor';
 
-export function useSwapData() {
+export function useSwapData(currencyPair: string = 'TRY/JPY') {
   const [data, setData] = useState<SwapData[]>([]);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [siteUpdatedAt, setSiteUpdatedAt] = useState<string | null>(null);
@@ -116,8 +116,8 @@ export function useSwapData() {
     loadData();
   }, []);
 
-  const buyRanking = data.length > 0 ? getBuyRanking(data, providerConfigs) : [];
-  const sellRanking = data.length > 0 ? getSellRanking(data, providerConfigs) : [];
+  const buyRanking = data.length > 0 ? getBuyRanking(data, providerConfigs, currencyPair) : [];
+  const sellRanking = data.length > 0 ? getSellRanking(data, providerConfigs, currencyPair) : [];
 
   // Add URL information to rankings
   const buyRankingWithUrls = buyRanking.map(rank => ({
