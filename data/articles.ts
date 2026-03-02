@@ -171,7 +171,14 @@ export const articles: Article[] = [
         <p><strong>条件：</strong> 期間中の入金額（出金を引いた純増額）が10万円以上で30%増額、100万円以上で60%増額</p>
         <p><strong>対象：</strong> トルコリラ/円（買）、米ドル/トルコリラ（売）、ユーロ/トルコリラ（売）の新規ポジション</p>
         <p><strong>期間：</strong> 2026年3月2日～3月28日</p>
-        <p><strong>特典：</strong> 上限なしでFXポイント還元（「らくらくFX積立」での買付に利用可能）</p>
+        <p><strong>特典：</strong> FXポイント還元（「らくらくFX積立」での買付に利用可能）</p>
+        <p style="font-size: 0.9em; margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+          <strong>【適用対象ポジションLot数上限】</strong><br>
+          対象期間中の各営業日においてスワップポイント上乗せ金額の適用対象となるポジションのLot数には、所定の上限がございます。通貨ペア毎の上限は次の通りです。<br>
+          ・トルコリラ/円（TRY/JPY）：1,000Lot（100万通貨）まで<br>
+          ・米ドル/トルコリラ（USD/TRY）：200Lot（20万通貨）まで<br>
+          ・ユーロ/トルコリラ（EUR/TRY）：200Lot（20万通貨）まで
+        </p>
       </div>
 
       <h3>【参加するための必須条件・注意点】</h3>
