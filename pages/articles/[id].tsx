@@ -17,6 +17,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
       <Head>
         <title>{article.title} | トルコリラ・ウォッチ</title>
         <meta name="description" content={article.title} />
+        {article.tags && article.tags.length > 0 && (
+          <meta name="keywords" content={article.tags.join(', ')} />
+        )}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* OGP Tags */}
