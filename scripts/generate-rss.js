@@ -3,7 +3,7 @@ const path = require('path');
 
 // RSS Header definition
 const RSS_HEADER = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
   <title>トルコリラ・ウォッチ (lira-watch)</title>
   <link>https://www.lira-watch.sbs/</link>
@@ -40,6 +40,7 @@ function getArticles() {
                 const idMatch = objStr.match(/id:\s*'([^']+)'/);
                 const titleMatch = objStr.match(/title:\s*'([^']+)'/);
                 const dateMatch = objStr.match(/date:\s*'([^']+)'/);
+                const thumbnailMatch = objStr.match(/thumbnail:\s*'([^']+)'/);
                 const contentMatch = objStr.match(/content:\s*`([\s\S]*?)`/);
 
                 // Extract description from content (first <p> tag or first 100 chars)
@@ -60,6 +61,7 @@ function getArticles() {
                         id: idMatch[1],
                         title: titleMatch[1],
                         date: dateMatch[1],
+                        thumbnail: thumbnailMatch ? thumbnailMatch[1] : null,
                         description: description,
                         tags: tags
                     });
@@ -97,6 +99,13 @@ function generateRSS() {
     <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>
     <description>${article.description}</description>
     <pubDate>${formatDate(article.date)}</pubDate>`;
+
+        if (article.thumbnail) {
+            const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
+            itemXml += `
+    <media:thumbnail url="${imageUrl}" />
+    <enclosure url="${imageUrl}" type="image/png" />`;
+        }
 
         if (article.tags && article.tags.length > 0) {
             article.tags.forEach(tag => {

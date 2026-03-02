@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
   <title>トルコリラ・ウォッチ (lira-watch)</title>
   <link>https://www.lira-watch.sbs/</link>
@@ -12,6 +12,8 @@
     <guid>https://www.lira-watch.sbs/articles/recommended-campaigns-20260302</guid>
     <description>2026年3月2日より開始される、高金利通貨を対象とした2つの主要なスワップポイント増額キャンペーンをご紹介します。トルコリラ円などの高金利通貨を運用している方、これから始めようとしている方は必見の内容です。 1. インヴァスト証券（トライ...</description>
     <pubDate>Sun, 01 Mar 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/recommended-campaigns-20260302_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/recommended-campaigns-20260302_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -25,6 +27,8 @@
     <guid>https://www.lira-watch.sbs/articles/youtube-market-outlook-20260301</guid>
     <description>週明けの不透明な相場環境を乗り切るために、中東の地政学的リスクと市場の動向を掴む上で必見のYouTube動画を4本、厳選してご紹介します。詳細はぜひ各動画を検索してご確認ください！ 1. 【PIVOT 公式チャンネル】 動画タイトル： 【イ...</description>
     <pubDate>Sat, 28 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/youtube-market-outlook-20260301_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/youtube-market-outlook-20260301_60.png" type="image/png" />
     <category>FX</category>
     <category>相場展望</category>
     <category>YouTube</category>
@@ -37,6 +41,8 @@
     <guid>https://www.lira-watch.sbs/articles/gaitame-swap-campaign-20260228</guid>
     <description>外為どっとコムにて、非常にお得な「スワップポイント最大60％増額キャンペーン」が実施されます！ 一番の重要なポイントは、最大の60％増額を狙うには100万円の入金が必要ですが、10万円の入金でもしっかり30％増額の恩恵を受けられるという点で...</description>
     <pubDate>Fri, 27 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/gaitame_campaign_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/gaitame_campaign_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -49,6 +55,8 @@
     <guid>https://www.lira-watch.sbs/articles/dandanbank-campaign-20260215</guid>
     <description>今、ポイ活ユーザーの間で話題なのが「DanDanBANK」の新規口座開設キャンペーンです。 1. もらえる特典（合計24,000円相当） 口座開設＋10万円預け入れ： 2,000円 給与受取（月3万円〜）： 1,000円 カード新規入会＆利...</description>
     <pubDate>Sat, 14 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/dandan_campaign_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/dandan_campaign_60.png" type="image/png" />
     <category>DanDanBANK</category>
     <category>キャンペーン</category>
     <category>銀行</category>
@@ -60,6 +68,8 @@
     <guid>https://www.lira-watch.sbs/articles/takaichi-yen-weakness-prediction-20260211</guid>
     <description>選挙後の「円高」は一時的な調整に過ぎず、中長期では「積極財政×利上げ抑制」のポリシーミックスが強烈な円安圧力を生むことが懸念されます。 なぜ今、円安トレンドへの回帰が予測されるのか？ 衆議院選挙（2026年2月）での自民党大勝を受け、マーケ...</description>
     <pubDate>Tue, 10 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/takaichi_yen_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/takaichi_yen_60.png" type="image/png" />
     <category>FX</category>
     <category>円安</category>
     <category>高市政権</category>
@@ -71,6 +81,8 @@
     <guid>https://www.lira-watch.sbs/articles/min-fx-swap-campaign-20260203</guid>
     <description>トルコリラ/円のスワップポイントランキングでも常に上位を占めている「みんなのFX」。実は、キャンペーンを含めると実質的にはランキング1位の状態が続いています。 みんなのFX：スワップNo.1チャレンジキャンペーン ● 他社との差額を全額キャ...</description>
     <pubDate>Mon, 02 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/minfx_campaign_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/minfx_campaign_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -82,6 +94,8 @@
     <guid>https://www.lira-watch.sbs/articles/triauto-campaign-20260202</guid>
     <description>トライオートFXにて、トルコリラ/円を対象とした非常に魅力的なキャンペーンが開催されています。 トライオートFX：トルコリラ/円 キャンペーン かなりおススメのキャンペーンです。 開催期間： 2026年2月2日（月）～ 2026年2月27日...</description>
     <pubDate>Sun, 01 Feb 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/triauto_campaign_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/triauto_campaign_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -93,6 +107,8 @@
     <guid>https://www.lira-watch.sbs/articles/feb-swap-campaigns-20260130</guid>
     <description>2月からスタートする注目のスワップポイント増額キャンペーンをまとめました。各社とも非常に魅力的な内容となっています。 1. 外為どっとコム：最大40％増額キャンペーン 最高におススメのキャンペーンです。 全通貨よいですが、米ドル/トルコリラ...</description>
     <pubDate>Thu, 29 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/feb_campaigns_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/feb_campaigns_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -104,6 +120,8 @@
     <guid>https://www.lira-watch.sbs/articles/dollar-depreciation-20260129</guid>
     <description>昨今の為替市場では円高の動きが注目されていますが、その背景には、単なる日本円の独歩高ではなく、トランプ大統領やベッセント次期財務長官の発言を巡る「ドルの不信感」と、それに伴う「資産インフレ」の予兆が隠されています。 1. ベッセント発言と「...</description>
     <pubDate>Wed, 28 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/dollar-depreciation-20260129_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/dollar-depreciation-20260129_60.png" type="image/png" />
     <category>FX</category>
     <category>ドル安</category>
     <category>為替政策</category>
@@ -115,6 +133,8 @@
     <guid>https://www.lira-watch.sbs/articles/yen-appreciation-factors-20260128</guid>
     <description>📊 円高進行 速報まとめ 項目 内容 現在の水準 一時153円台（約2ヶ月半ぶりの円高水準） トリガー 財務大臣の口先介入 ＋ 日銀・NY連銀による「レートチェック」 注目ポイント 28年ぶりの日米協調介入のサインか？ 懸念材料 対米投資...</description>
     <pubDate>Tue, 27 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/yen-appreciation-factors-20260128_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/yen-appreciation-factors-20260128_60.png" type="image/png" />
     <category>FX</category>
     <category>円高</category>
     <category>為替介入</category>
@@ -126,6 +146,8 @@
     <guid>https://www.lira-watch.sbs/articles/usdjpy-rate-check-20260124</guid>
     <description>📊 為替相場 速報まとめ 項目 内容 発生事象 日銀・NY連銀による「レートチェック」報道 動き ドル円 157円台後半 ➔ 155円台へ急落 意味 単独介入ではなく「日米協調」の姿勢を示唆米国もドル高・円安を懸念している可能性大 警戒 ...</description>
     <pubDate>Fri, 23 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/usdjpy-rate-check-20260124_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/usdjpy-rate-check-20260124_60.png" type="image/png" />
     <category>FX</category>
     <category>ドル円</category>
     <category>トルコリラ</category>
@@ -137,6 +159,8 @@
     <guid>https://www.lira-watch.sbs/articles/central-tanshi-campaign-20260116</guid>
     <description>本日スタート！セントラル短資FXにて、トルコリラ/円の取引で最大3万円＋αのキャッシュバックが受け取れる激熱キャンペーン「トルコリラ祭り」が開催されています。 1. キャンペーン概要 期間： 2026年1月16日(金) 〜 1月30日(金)...</description>
     <pubDate>Thu, 15 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/central-tanshi-campaign-20260116_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/central-tanshi-campaign-20260116_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>スワップ投資</category>
@@ -148,6 +172,8 @@
     <guid>https://www.lira-watch.sbs/articles/fx-account-points-20260111</guid>
     <description>FXを始める際、公式サイトから直接申し込むのは非常にもったいないことをご存知でしょうか？ポイントサイトを経由するだけで、数万円相当のポイントが還元されます。 1. FX口座開設におすすめのポイントサイト3選 2026年1月現在、FX案件の還...</description>
     <pubDate>Sat, 10 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/fx-account-points-20260111_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/fx-account-points-20260111_60.png" type="image/png" />
     <category>FX</category>
     <category>ポイントサイト</category>
     <category>口座開設</category>
@@ -159,6 +185,8 @@
     <guid>https://www.lira-watch.sbs/articles/campaign-20260110</guid>
     <description>インヴァスト証券（トライオートFX） 「高金利3通貨ペアスワップポイント最大60％増額キャンペーン」 特典内容： キャンペーン期間中のトルコリラ/円の新規買建玉（増加分）に対し、スワップポイントを60％上乗せ。 期間： 2026年1月5日 ...</description>
     <pubDate>Fri, 09 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/campaign-20260110_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/campaign-20260110_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>キャンペーン</category>
@@ -170,6 +198,8 @@
     <guid>https://www.lira-watch.sbs/articles/risk-management-20260109</guid>
     <description>高スワップポイントが魅力のトルコリラ/円（TRY/JPY）。しかし、その裏側にある「価格変動リスク」を正しく把握しなければ、一瞬でロスカットの憂き目に遭う可能性もあります。本記事では、過去のデータから導き出す「最大変動率」と、FX会社の「ロ...</description>
     <pubDate>Thu, 08 Jan 2026 15:00:00 GMT</pubDate>
+    <media:thumbnail url="https://www.lira-watch.sbs/images/risk-management-20260109_60.png" />
+    <enclosure url="https://www.lira-watch.sbs/images/risk-management-20260109_60.png" type="image/png" />
     <category>FX</category>
     <category>トルコリラ</category>
     <category>リスク管理</category>

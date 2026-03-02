@@ -55,6 +55,7 @@ export default function Home() {
   };
 
   const displayArticles = getFilteredArticles();
+  const latestArticle = articles[0]; // Assuming articles are sorted by date desc
 
   if (loading) {
     return (
@@ -243,11 +244,15 @@ export default function Home() {
         <link rel="canonical" href="https://lira-watch.sbs/" />
 
         {/* OGP Tags */}
-        <meta property="og:title" content="トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移" />
+        <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
         <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content="https://lira-watch.sbs/" />
-        <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
+        {latestArticle?.thumbnail ? (
+          <meta property="og:image" content={`https://lira-watch.sbs${latestArticle.thumbnail}`} />
+        ) : (
+          <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
+        )}
         <meta property="og:site_name" content="トルコリラ・ウォッチ" />
         <meta property="og:locale" content="ja_JP" />
 
@@ -257,8 +262,8 @@ export default function Home() {
 
       {/* --- メインコンテンツ --- */}
 
-      {/* 1. ランキング更新 (Top Post) */}
-      <article className="blog-post featured-post">
+      {/* 1. ランキング更新 (Top Post as Section for better card recognition) */}
+      <section className="blog-post featured-post">
         <header className="post-header">
           <div className="post-meta">
             <span className="post-date">{siteUpdatedAt ? siteUpdatedAt.split(' ')[0] : (lastUpdated || '2026/01/01')}</span>
@@ -317,7 +322,7 @@ export default function Home() {
             </div>
           )}
         </div>
-      </article>
+      </section>
 
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
