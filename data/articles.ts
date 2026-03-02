@@ -11,6 +11,65 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
   {
+    id: 'recommended-campaigns-20260302',
+    title: '【2026年3月】トルコリラ・高金利通貨のスワップ増額キャンペーンおすすめ2選',
+    thumbnail_text: '3月開始！\nスワップ増額\nおすすめ2選',
+    date: '2026/03/02',
+    thumbnail: '/images/recommended-campaigns-20260302_60.png',
+    tags: ['FX', 'トルコリラ', 'スワップ投資', 'キャンペーン', 'インヴァスト証券', 'LIGHT FX'],
+    content: `
+      <p class="intro">
+        2026年3月2日より開始される、高金利通貨を対象とした2つの主要なスワップポイント増額キャンペーンをご紹介します。トルコリラ円などの高金利通貨を運用している方、これから始めようとしている方は必見の内容です。
+      </p>
+
+      <h3>1. インヴァスト証券（トライオートFX）：トルコリラ/円スワップ増額</h3>
+      <p>
+        トルコリラ/円の新規買建玉を対象に、スワップポイントが大幅に上乗せされるキャンペーンです。
+      </p>
+      <div class="campaign-details">
+        <p><strong>開催期間：</strong> 2026年3月2日（月）取引開始 ～ 2026年3月31日（火）取引終了。</p>
+        <p><strong>特典内容：</strong> 対象となる買建玉に対し、スワップポイントを50%増額（キャッシュバック金額は10万通貨あたり131円）。</p>
+        <p><strong>主な条件：</strong></p>
+        <ul>
+          <li>キャンペーン専用フォームからの申し込み。</li>
+          <li>期間中の実質入金額（入金－出金）が合計50万円以上であること。</li>
+          <li>2026年2月27日時点の建玉数量と比較した、新規買建玉の増加分が対象。</li>
+          <li>対象となる買建玉数量の上限は最大50万通貨。</li>
+        </ul>
+        <p><strong>付与時期：</strong> 2026年4月末までに口座へ入金予定。</p>
+      </div>
+      <div class="campaign-link">
+        <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+        <a href="https://www.invast.jp/triauto/campaign/fx/tryswap/202603/" target="_blank" rel="noopener noreferrer">https://www.invast.jp/triauto/campaign/fx/tryswap/202603/</a>
+      </div>
+
+      <h3>2. LIGHT FX：最大50%スワップ増額</h3>
+      <p>
+        人気の3通貨ペア（LIGHTペア）を対象に、毎営業日のスワップポイントに増額率を乗じた金額がプレゼントされます。
+      </p>
+      <div class="campaign-details">
+        <p><strong>開催期間：</strong> 2026年3月2日 ～ 2026年3月31日 マーケットクローズまで。</p>
+        <p><strong>対象通貨ペア：</strong> メキシコペソ/円 LIGHT、トルコリラ/円 LIGHT、南アフリカランド/円 LIGHT。<br><small>※「LIGHT」がつかない通常の通貨ペアは対象外。</small></p>
+        <p><strong>特典内容：</strong> キャンペーン期間中に約定した新規買いポジションに対し、最大50%の増額分をまとめてプレゼント。</p>
+        <p><strong>主な条件：</strong></p>
+        <ul>
+          <li>キャンペーン専用申込フォームからのエントリーが必要（取引後の申し込みも可）。</li>
+          <li>建玉上限は各通貨ペアごとに30Lotまで。</li>
+          <li>両建ての場合は、新規の買ポジションと売ポジションの差分が対象。</li>
+        </ul>
+        <p><strong>付与時期：</strong> キャンペーン終了月の翌月末までに、入出金口座へ付与。</p>
+      </div>
+      <div class="campaign-link">
+        <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+        <a href="https://lightfx.jp/campaign/swapup_202603/?utm_source=hp&utm_medium=bnr&utm_campaign=cp" target="_blank" rel="noopener noreferrer">https://lightfx.jp/campaign/swapup_202603/?utm_source=hp&utm_medium=bnr&utm_campaign=cp</a>
+      </div>
+
+      <p style="font-weight: bold; margin-top: 20px;">
+        どちらのキャンペーンも期間中の「新規ポジション」が対象となっています。スワップポイントが高い今の時期、これらのキャンペーンを賢く利用して収益の最大化を狙いましょう！
+      </p>
+    `,
+  },
+  {
     id: 'youtube-market-outlook-20260301',
     title: '【地政学的リスク急騰】\n週明けの不透明な相場予想に必見のYouTube動画4選',
     thumbnail_text: '地政学リスク・原油高\n週明け相場 注目動画4選',
