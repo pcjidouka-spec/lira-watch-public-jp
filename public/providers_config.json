@@ -62,8 +62,8 @@
       "id": "invast",
       "name": "トライオートFX",
       "url": "https://www.invast.jp/triauto/market/swap-calendar/",
-      "currency_pair_selector": "トルコリラ/円（TRY/JPY）",
       "campaign_url": "https://www.invast.jp/triauto/campaign/",
+      "use_browser": true,
       "instructions": {
         "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
         "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
