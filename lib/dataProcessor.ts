@@ -119,40 +119,54 @@ export function getLatestData(data: SwapData[]): SwapData[] {
 }
 
 /**
- * 最新月のデータを取得
+ * 過去15日間のデータを取得
  */
-export function getLatestMonthlyData(data: SwapData[]): SwapData[] {
+export function getPast15DaysData(data: SwapData[]): SwapData[] {
   if (data.length === 0) return [];
 
-  const sorted = [...data].sort((a, b) =>
-    new Date(b.target_date).getTime() - new Date(a.target_date).getTime()
-  );
+  // Sort descending by date
+  const sorted = [...data].sort((a, b) => {
+    const timeA = a.target_date ? new Date(a.target_date).getTime() : 0;
+    const timeB = b.target_date ? new Date(b.target_date).getTime() : 0;
+    return timeB - timeA;
+  });
 
-  const latestDate = new Date(sorted[0].target_date);
-  const latestYear = latestDate.getFullYear();
-  const latestMonth = latestDate.getMonth() + 1;
+  const latestDateStr = sorted[0].target_date;
+  if (!latestDateStr) return [];
+
+  // Consider the most recent date in the dataset as 'today' to avoid issues with missing recent data
+  const latestDate = new Date(latestDateStr);
+
+  // Calculate the cutoff date (15 days ago from the latest date)
+  const cutoffDate = new Date(latestDate);
+  cutoffDate.setDate(latestDate.getDate() - 14); // -14 to include the latest date, making it 15 days total
+
+  // Set cutoff time to start of day for accurate comparison
+  cutoffDate.setHours(0, 0, 0, 0);
 
   return sorted.filter(d => {
+    if (!d.target_date) return false;
     const d_date = new Date(d.target_date);
-    return d_date.getFullYear() === latestYear && d_date.getMonth() + 1 === latestMonth;
+    d_date.setHours(0, 0, 0, 0);
+    return d_date >= cutoffDate && d_date <= latestDate;
   });
 }
 
 /**
- * 買いスワップランキングを生成（降順）- 月次平均
+ * 買いスワップランキングを生成（降順）- 過去15日間平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
-  const monthlyData = getLatestMonthlyData(successData);
+  const past15DaysData = getPast15DaysData(successData);
 
-  // 事業者ごとに月次平均を計算（付与日数加重平均）
+  // 事業者ごとに平均を計算（付与日数加重平均）
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
-  for (const record of monthlyData) {
+  for (const record of past15DaysData) {
     // 0のデータは平均計算から除外
-    if (record.swap_buy !== null && record.swap_buy !== 0) {
+    if (record.swap_buy !== null && record.swap_buy !== 0 && !isNaN(record.swap_buy)) {
       // daysがnullまたは0の場合は1として扱う
       const days = record.days && record.days > 0 ? record.days : 1;
 
@@ -185,7 +199,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
     // 売りスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
     let sellWeightedSum = 0;
     let sellTotalDays = 0;
-    for (const record of monthlyData) {
+    for (const record of past15DaysData) {
       if (record.provider_id === providerId && record.swap_sell !== null && record.swap_sell !== 0) {
         const days = record.days && record.days > 0 ? record.days : 1;
         sellWeightedSum += record.swap_sell * days;
@@ -197,7 +211,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
       : 0;
 
     // 最新のactual_dateを取得
-    const latestRecord = monthlyData.find(d => d.provider_id === providerId);
+    const latestRecord = past15DaysData.find(d => d.provider_id === providerId);
 
     ranking.push({
       provider_id: providerId,
@@ -215,20 +229,20 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
 }
 
 /**
- * 売りスワップランキングを生成（絶対値が小さい順）- 月次平均
+ * 売りスワップランキングを生成（絶対値が小さい順）- 過去15日間平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
-  const monthlyData = getLatestMonthlyData(successData);
+  const past15DaysData = getPast15DaysData(successData);
 
-  // 事業者ごとに月次平均を計算（付与日数加重平均）
+  // 事業者ごとに平均を計算（付与日数加重平均）
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
-  for (const record of monthlyData) {
+  for (const record of past15DaysData) {
     // 0のデータは平均計算から除外
-    if (record.swap_sell !== null && record.swap_sell !== 0) {
+    if (record.swap_sell !== null && record.swap_sell !== 0 && !isNaN(record.swap_sell)) {
       // daysがnullまたは0の場合は1として扱う
       const days = record.days && record.days > 0 ? record.days : 1;
 
@@ -261,7 +275,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
     // 買いスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
     let buyWeightedSum = 0;
     let buyTotalDays = 0;
-    for (const record of monthlyData) {
+    for (const record of past15DaysData) {
       if (record.provider_id === providerId && record.swap_buy !== null && record.swap_buy !== 0) {
         const days = record.days && record.days > 0 ? record.days : 1;
         buyWeightedSum += record.swap_buy * days;
@@ -273,7 +287,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
       : 0;
 
     // 最新のactual_dateを取得
-    const latestRecord = monthlyData.find(d => d.provider_id === providerId);
+    const latestRecord = past15DaysData.find(d => d.provider_id === providerId);
 
     ranking.push({
       provider_id: providerId,

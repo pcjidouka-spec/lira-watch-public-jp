@@ -4,11 +4,13 @@ import React, { useEffect, useRef } from 'react';
 // ユーザーがコミュニティの投稿（トレードアイデア）を確認しやすくなります。
 interface IdeasWidgetProps {
     height?: string;
+    symbol?: string;
+    label?: string;
 }
 
 // Symbol Overview ウィジェットを使用することで、詳細タブに「アイデア」や「ニュース」を表示させることができ、
 // ユーザーがコミュニティの投稿（トレードアイデア）を確認しやすくなります。
-export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px" }) => {
+export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px", symbol = "FX:TRYJPY|1D", label = "TRYJPY" }) => {
     const container = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -22,7 +24,7 @@ export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px" }) =>
         script.innerHTML = JSON.stringify({
             "symbols": [
                 [
-                    "FX:TRYJPY|1D"
+                    symbol
                 ]
             ],
             "chartOnly": false,
@@ -70,7 +72,7 @@ export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px" }) =>
             <div className="tradingview-widget-container__widget" style={{ height: 'calc(100% - 32px)', width: '100%' }}></div>
             <div className="tradingview-widget-copyright">
                 <a href="https://jp.tradingview.com/" rel="noopener nofollow" target="_blank">
-                    <span className="blue-text">TradingView提供のTRYJPY詳細</span>
+                    <span className="blue-text">TradingView提供の{label}詳細</span>
                 </a>
             </div>
         </div>

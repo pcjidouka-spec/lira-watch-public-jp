@@ -39,7 +39,8 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
         // Load provider configs (キャッシュバスティング付き)
         try {
           const configTimestamp = new Date().getTime();
-          const configResponse = await fetch(`/providers_config.json?t=${configTimestamp}`);
+          const configFile = currencyPair === 'MXN/JPY' ? '/providers_config_mxn.json' : '/providers_config.json';
+          const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
           if (configResponse.ok) {
             const configData = await configResponse.json();
             const configMap = new Map<string, ProviderConfig>();
@@ -60,7 +61,8 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
 
         // Fetch Master History (キャッシュバスティング付き)
         const timestamp = new Date().getTime();
-        const response = await fetch(`/data/master_history.csv?t=${timestamp}`);
+        const historyFile = currencyPair === 'MXN/JPY' ? '/data/master_history_mxn.csv' : '/data/master_history.csv';
+        const response = await fetch(`${historyFile}?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('データの読み込みに失敗しました');
         }
