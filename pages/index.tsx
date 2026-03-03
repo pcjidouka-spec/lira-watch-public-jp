@@ -18,6 +18,11 @@ import { useRouter } from 'next/router';
 
 export default function Home() {
   const router = useRouter();
+  const tryData = useSwapData('TRY/JPY');
+  const mxnData = useSwapData('MXN/JPY');
+  const [currencyTab, setCurrencyTab] = useState<'TRY' | 'MXN'>('TRY');
+  const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
+
   const {
     buyRanking,
     sellRanking,
@@ -26,7 +31,8 @@ export default function Home() {
     siteUpdatedAt,
     loading,
     error,
-  } = useSwapData();
+  } = currencyTab === 'TRY' ? tryData : mxnData;
+
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
   const [mainFeedTab, setMainFeedTab] = useState<'recent' | 'tree'>('recent');
@@ -179,7 +185,7 @@ export default function Home() {
 
       <div className="sidebar-widget">
         <div className="widget-header">
-          <h3>トルコリラ/円</h3>
+          <h3>{sidebarChartTab === 'TRY' ? 'トルコリラ/円' : 'メキシコペソ/円'}</h3>
         </div>
         <div className="widget-content">
           <IdeasWidget height="300" />
@@ -190,13 +196,39 @@ export default function Home() {
       <RakutenAds />
 
       <div className="sidebar-widget">
-        <div className="widget-header">
+        <div className="widget-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <h3>LIVEチャート</h3>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <button
+              onClick={() => setSidebarChartTab('TRY')}
+              style={{
+                padding: '2px 8px', fontSize: '12px', borderRadius: '4px', border: '1px solid #d1d5db',
+                background: sidebarChartTab === 'TRY' ? '#3b82f6' : '#f3f4f6',
+                color: sidebarChartTab === 'TRY' ? 'white' : '#4b5563',
+                cursor: 'pointer', fontWeight: 600,
+              }}
+            >TRY</button>
+            <button
+              onClick={() => setSidebarChartTab('MXN')}
+              style={{
+                padding: '2px 8px', fontSize: '12px', borderRadius: '4px', border: '1px solid #d1d5db',
+                background: sidebarChartTab === 'MXN' ? '#10b981' : '#f3f4f6',
+                color: sidebarChartTab === 'MXN' ? 'white' : '#4b5563',
+                cursor: 'pointer', fontWeight: 600,
+              }}
+            >MXN</button>
+          </div>
         </div>
         <div className="widget-content">
-          <AdvancedChart symbol="FX:TRYJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
-          <div style={{ height: '10px' }}></div>
-          <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar" height="700px" />
+          {sidebarChartTab === 'TRY' ? (
+            <>
+              <AdvancedChart symbol="FX:TRYJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
+              <div style={{ height: '10px' }}></div>
+              <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar" height="700px" />
+            </>
+          ) : (
+            <AdvancedChart symbol="FX:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
+          )}
         </div>
       </div>
 
@@ -217,7 +249,7 @@ export default function Home() {
           <h3>リスク管理について</h3>
         </div>
         <div className="widget-content risk-block">
-          <p>トルコリラは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
+          <p>トルコリラとメキシコペソは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
         </div>
       </div>
 
@@ -227,11 +259,6 @@ export default function Home() {
         </div>
         <div className="widget-content disclaimer-block">
           <p>本サイトのデータは自動収集されており、正確性を完全に保証するものではありません。投資判断は必ず各FX会社の公式サイトをご確認の上、自己責任で行ってください。</p>
-          <div style={{ marginTop: '15px', textAlign: 'right' }}>
-            <Link href="/mxnjpy" style={{ fontSize: '11px', color: '#d1d5db', textDecoration: 'none' }}>
-              メキシコペソ/円（開発中）
-            </Link>
-          </div>
         </div>
       </div>
     </>
@@ -275,16 +302,36 @@ export default function Home() {
             <span className="post-time">{siteUpdatedAt ? siteUpdatedAt.split(' ')[1] : '05:00'}</span>
             <span className="post-category">ランキング更新</span>
           </div>
-          <h1 className="post-title">【毎日更新】トルコリラ円スワップポイントランキング・推移</h1>
+          <h1 className="post-title">【毎日更新】スワップポイントランキング・推移</h1>
         </header>
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のトルコリラ円（TRY/JPY）<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点における、各FX会社の{currencyTab === 'TRY' ? 'トルコリラ円（TRY/JPY）' : 'メキシコペソ円（MXN/JPY）'}<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
-          <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+          <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
             スワップポイントランキング
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <button
+                onClick={() => setCurrencyTab('TRY')}
+                style={{
+                  padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                  background: currencyTab === 'TRY' ? '#3b82f6' : '#f3f4f6',
+                  color: currencyTab === 'TRY' ? 'white' : '#4b5563',
+                  cursor: 'pointer', fontWeight: 700,
+                }}
+              >🇹🇷 TRY/JPY</button>
+              <button
+                onClick={() => setCurrencyTab('MXN')}
+                style={{
+                  padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                  background: currencyTab === 'MXN' ? '#10b981' : '#f3f4f6',
+                  color: currencyTab === 'MXN' ? 'white' : '#4b5563',
+                  cursor: 'pointer', fontWeight: 700,
+                }}
+              >🇲🇽 MXN/JPY</button>
+            </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
               <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
                 <span className="iine-banner">いいね♪</span>
@@ -297,6 +344,7 @@ export default function Home() {
             <RankingTable
               buyRankings={buyRanking}
               sellRankings={sellRanking}
+              currencyLabel={currencyTab === 'TRY' ? 'トルコリラ' : 'メキシコペソ'}
             />
           </div>
 
@@ -322,8 +370,8 @@ export default function Home() {
           {data.length > 0 && showCharts && (
             <div className="charts-wrapper top-margin-reduced">
               <h2 className="section-title chart-title">スワップポイント推移チャート（各事業者別・日次）</h2>
-              <HistoricalChart data={data} type="buy" ranking={buyRanking} />
-              <HistoricalChart data={data} type="sell" ranking={sellRanking} />
+              <HistoricalChart data={data} type="buy" ranking={buyRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
+              <HistoricalChart data={data} type="sell" ranking={sellRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
             </div>
           )}
         </div>
