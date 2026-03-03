@@ -220,15 +220,16 @@ export default function Home() {
           </div>
         </div>
         <div className="widget-content">
-          {sidebarChartTab === 'TRY' ? (
-            <>
-              <AdvancedChart symbol="FX:TRYJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
-              <div style={{ height: '10px' }}></div>
-              <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar" height="700px" />
-            </>
-          ) : (
+          <div style={{ display: sidebarChartTab === 'TRY' ? 'block' : 'none' }}>
+            <AdvancedChart symbol="FX:TRYJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
+            <div style={{ height: '10px' }}></div>
+            <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar_try" height="700px" />
+          </div>
+          <div style={{ display: sidebarChartTab === 'MXN' ? 'block' : 'none' }}>
             <AdvancedChart symbol="FX:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
-          )}
+            <div style={{ height: '10px' }}></div>
+            <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar_mxn" height="700px" />
+          </div>
         </div>
       </div>
 
@@ -321,7 +322,7 @@ export default function Home() {
                   color: currencyTab === 'TRY' ? 'white' : '#4b5563',
                   cursor: 'pointer', fontWeight: 700,
                 }}
-              >🇹🇷 TRY/JPY</button>
+              >TRY/JPY</button>
               <button
                 onClick={() => setCurrencyTab('MXN')}
                 style={{
@@ -330,7 +331,7 @@ export default function Home() {
                   color: currencyTab === 'MXN' ? 'white' : '#4b5563',
                   cursor: 'pointer', fontWeight: 700,
                 }}
-              >🇲🇽 MXN/JPY</button>
+              >MXN/JPY</button>
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
               <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
