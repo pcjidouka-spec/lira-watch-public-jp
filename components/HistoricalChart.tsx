@@ -7,6 +7,7 @@ interface HistoricalChartProps {
   data: SwapData[];
   type: 'buy' | 'sell';
   ranking: ProviderRanking[];
+  currencyPair?: string;
 }
 
 const COLORS = [
@@ -15,15 +16,15 @@ const COLORS = [
   '#14b8a6', '#a855f7', '#e11d48', '#0ea5e9', '#22c55e',
 ];
 
-export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ranking }) => {
+export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ranking, currencyPair = 'TRY/JPY' }) => {
   const [providerConfigs, setProviderConfigs] = useState<Map<string, ProviderConfig>>(new Map());
 
   useEffect(() => {
     async function loadProviderConfigs() {
       try {
-        // キャッシュバスティング付きで読み込み
         const configTimestamp = new Date().getTime();
-        const configResponse = await fetch(`/providers_config.json?t=${configTimestamp}`);
+        const configFile = currencyPair === 'MXN/JPY' ? '/providers_config_mxn.json' : '/providers_config.json';
+        const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
         if (configResponse.ok) {
           const configData = await configResponse.json();
           const configMap = new Map<string, ProviderConfig>();

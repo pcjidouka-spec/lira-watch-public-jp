@@ -182,7 +182,7 @@ export default function MxnJpyRanking() {
           <h3>メキシコペソ/円</h3>
         </div>
         <div className="widget-content">
-          <IdeasWidget height="300" />
+          <IdeasWidget height="300" symbol="OANDA:MXNJPY|1D" label="MXNJPY" />
         </div>
       </div>
 
@@ -194,7 +194,7 @@ export default function MxnJpyRanking() {
           <h3>LIVEチャート</h3>
         </div>
         <div className="widget-content">
-          <AdvancedChart symbol="FX:MXNJPY" interval="60" containerId="tv_tryjpy_sidebar" height="700px" />
+          <AdvancedChart symbol="FX_IDC:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
           <div style={{ height: '10px' }}></div>
           <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar" height="700px" />
         </div>
@@ -323,8 +323,8 @@ export default function MxnJpyRanking() {
           {data.length > 0 && showCharts && (
             <div className="charts-wrapper top-margin-reduced">
               <h2 className="section-title chart-title">スワップポイント推移チャート（各事業者別・日次）</h2>
-              <HistoricalChart data={data} type="buy" ranking={buyRanking} />
-              <HistoricalChart data={data} type="sell" ranking={sellRanking} />
+              <HistoricalChart data={data} type="buy" ranking={buyRanking} currencyPair="MXN/JPY" />
+              <HistoricalChart data={data} type="sell" ranking={sellRanking} currencyPair="MXN/JPY" />
             </div>
           )}
         </div>
