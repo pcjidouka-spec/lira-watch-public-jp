@@ -333,7 +333,7 @@ export default function Home() {
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点における、各FX会社の{currencyTab === 'TRY' ? 'トルコリラ円（TRY/JPY）' : 'メキシコペソ円（MXN/JPY）'}<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。上のボタンでTRY・MXNを切り替えられます。
           </p>
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
@@ -395,7 +395,29 @@ export default function Home() {
 
           {data.length > 0 && showCharts && (
             <div className="charts-wrapper top-margin-reduced">
-              <h2 className="section-title chart-title">スワップポイント推移チャート（各事業者別・日次）</h2>
+              <h2 className="section-title chart-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
+                スワップポイント推移チャート（各事業者別・日次）
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <button
+                    onClick={() => setCurrencyTab('TRY')}
+                    style={{
+                      padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'TRY' ? '#3b82f6' : '#f3f4f6',
+                      color: currencyTab === 'TRY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >TRY/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('MXN')}
+                    style={{
+                      padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'MXN' ? '#10b981' : '#f3f4f6',
+                      color: currencyTab === 'MXN' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >MXN/JPY</button>
+                </span>
+              </h2>
               <HistoricalChart data={data} type="buy" ranking={buyRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
               <HistoricalChart data={data} type="sell" ranking={sellRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
             </div>
