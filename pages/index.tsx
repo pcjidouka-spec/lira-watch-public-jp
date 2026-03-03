@@ -184,11 +184,36 @@ export default function Home() {
       </div>
 
       <div className="sidebar-widget">
-        <div className="widget-header">
+        <div className="widget-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <h3>{sidebarChartTab === 'TRY' ? 'トルコリラ/円' : 'メキシコペソ/円'}</h3>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <button
+              onClick={() => setSidebarChartTab('TRY')}
+              style={{
+                padding: '2px 8px', fontSize: '12px', borderRadius: '4px', border: '1px solid #d1d5db',
+                background: sidebarChartTab === 'TRY' ? '#3b82f6' : '#f3f4f6',
+                color: sidebarChartTab === 'TRY' ? 'white' : '#4b5563',
+                cursor: 'pointer', fontWeight: 600,
+              }}
+            >TRY</button>
+            <button
+              onClick={() => setSidebarChartTab('MXN')}
+              style={{
+                padding: '2px 8px', fontSize: '12px', borderRadius: '4px', border: '1px solid #d1d5db',
+                background: sidebarChartTab === 'MXN' ? '#10b981' : '#f3f4f6',
+                color: sidebarChartTab === 'MXN' ? 'white' : '#4b5563',
+                cursor: 'pointer', fontWeight: 600,
+              }}
+            >MXN</button>
+          </div>
         </div>
         <div className="widget-content">
-          <IdeasWidget height="300" />
+          <div style={{ display: sidebarChartTab === 'TRY' ? 'block' : 'none' }}>
+            <IdeasWidget height="300" symbol="FX:TRYJPY|1D" label="TRYJPY" />
+          </div>
+          <div style={{ display: sidebarChartTab === 'MXN' ? 'block' : 'none' }}>
+            <IdeasWidget height="300" symbol="FX:MXNJPY|1D" label="MXNJPY" />
+          </div>
         </div>
       </div>
 
