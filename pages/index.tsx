@@ -212,7 +212,7 @@ export default function Home() {
             <IdeasWidget height="300" symbol="FX:TRYJPY|1D" label="TRYJPY" />
           </div>
           <div style={{ display: sidebarChartTab === 'MXN' ? 'block' : 'none' }}>
-            <IdeasWidget height="300" symbol="FX:MXNJPY|1D" label="MXNJPY" />
+            <IdeasWidget height="300" symbol="OANDA:MXNJPY|1D" label="MXNJPY" />
           </div>
         </div>
       </div>
@@ -251,7 +251,7 @@ export default function Home() {
             <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar_try" height="700px" />
           </div>
           <div style={{ display: sidebarChartTab === 'MXN' ? 'block' : 'none' }}>
-            <AdvancedChart symbol="FX:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
+            <AdvancedChart symbol="OANDA:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
             <div style={{ height: '10px' }}></div>
             <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar_mxn" height="700px" />
           </div>
