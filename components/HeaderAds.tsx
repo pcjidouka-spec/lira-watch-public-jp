@@ -53,8 +53,52 @@ const AD_ITEMS = [
         url: "https://hb.afl.rakuten.co.jp/ichiba/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmayumi-store%2Fnt-st2-p%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
         title: "日本通信 SIM スターターパック",
         image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35",
+        title: "A8広告1",
+        image: "https://www22.a8.net/svt/bgt?aid=260304919922&wid=001&eno=01&mid=s00000025808001021000&mc=1",
+        trackingPixel: "https://www16.a8.net/0.gif?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+DJM182+1JUK+HZ2R5",
+        title: "A8広告2",
+        image: "https://www28.a8.net/svt/bgt?aid=260304919819&wid=001&eno=01&mid=s00000007238003019000&mc=1",
+        trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+DJM182+1JUK+HZ2R5"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+BH6ULU+3SPO+9FMXR5",
+        title: "A8広告3",
+        image: "https://www21.a8.net/svt/bgt?aid=260304919694&wid=001&eno=01&mid=s00000017718057046000&mc=1",
+        trackingPixel: "https://www18.a8.net/0.gif?a8mat=4AZ8K7+BH6ULU+3SPO+9FMXR5"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+BD0TDE+5TB0+601S1",
+        title: "A8広告4",
+        image: "https://www23.a8.net/svt/bgt?aid=260304919687&wid=001&eno=01&mid=s00000027126001008000&mc=1",
+        trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+BD0TDE+5TB0+601S1"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+CZDANM+4EKC+626XT",
+        title: "A8広告5",
+        image: "https://www22.a8.net/svt/bgt?aid=260304919785&wid=001&eno=01&mid=s00000020550001018000&mc=1",
+        trackingPixel: "https://www12.a8.net/0.gif?a8mat=4AZ8K7+CZDANM+4EKC+626XT"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+E97O8I+14CS+609HT",
+        title: "A8広告6",
+        image: "https://www21.a8.net/svt/bgt?aid=260304919862&wid=001&eno=01&mid=s00000005230001009000&mc=1",
+        trackingPixel: "https://www11.a8.net/0.gif?a8mat=4AZ8K7+E97O8I+14CS+609HT"
     }
 ];
+
+// Add trackingPixel typing if not present implicitely
+type AdItem = {
+    url: string;
+    title: string;
+    image: string;
+    trackingPixel?: string;
+};
 
 interface HeaderAdsProps {
     position: 'left' | 'right';
@@ -67,13 +111,16 @@ export const HeaderAds: React.FC<HeaderAdsProps> = ({ position }) => {
 
     return (
         <div className={`header-ads-container ${position}`}>
-            {items.map((item, idx) => (
+            {items.map((item: AdItem, idx: number) => (
                 <a key={idx} href={item.url} target="_blank" rel="nofollow sponsored" className="header-ad-item" title={item.title}>
                     <img
                         src={item.image || AMAZON_LOGO_URL}
                         alt={item.title}
                         style={!item.image ? { padding: '10px', objectFit: 'contain' } : undefined}
                     />
+                    {item.trackingPixel && (
+                        <img src={item.trackingPixel} alt="" style={{ display: 'none' }} width="1" height="1" />
+                    )}
                 </a>
             ))}
             <style jsx>{`
