@@ -57,6 +57,18 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                 )}
               </div>
 
+              {/* サムネイル画像を本文先頭に表示（にほんブログ村等のクローラー対応） */}
+              {article.thumbnail && (
+                <p className="txt-img" style={{ textAlign: 'center', margin: '0 0 24px 0' }}>
+                  <img
+                    src={article.thumbnail}
+                    style={{ maxWidth: '100%', width: '600px' }}
+                    className="image-center"
+                    alt={article.title}
+                  />
+                </p>
+              )}
+
               <div
                 className="article-body"
                 dangerouslySetInnerHTML={{ __html: article.content }}
