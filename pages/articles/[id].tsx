@@ -188,6 +188,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-body :global(a) {
           color: #2563eb;
           text-decoration: underline;
+          word-break: break-all;
         }
         
         .article-body :global(a:hover) {
@@ -206,12 +207,12 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           border: 1px solid #e5e7eb;
           padding: 12px;
           text-align: left;
+          word-break: break-word;
         }
         .article-body :global(th) {
           background-color: #f8fafc;
           font-weight: 600;
           color: #1f2937;
-          white-space: nowrap;
         }
         .article-body :global(tr:nth-child(even)) {
           background-color: #f9fafb;
