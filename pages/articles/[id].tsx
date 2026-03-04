@@ -178,6 +178,12 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-body :global(strong) {
           color: #1f2937;
         }
+
+        .article-body :global(img) {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px; /* Optional, makes it look a bit nicer */
+        }
         
         .article-body :global(a) {
           color: #2563eb;
