@@ -211,7 +211,7 @@ export default function Home() {
           {sidebarChartTab === 'TRY' ? (
             <IdeasWidget key="ideas-try" height="300" symbol="FX:TRYJPY|1D" label="TRYJPY" />
           ) : (
-            <IdeasWidget key="ideas-mxn" height="300" symbol="OANDA:MXNJPY|1D" label="MXNJPY" />
+            <IdeasWidget key="ideas-mxn" height="300" symbol="SAXO:MXNJPY|1D" label="MXNJPY" />
           )}
         </div>
       </div>
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
           ) : (
             <div key="live-mxn">
-              <AdvancedChart symbol="OANDA:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
+              <AdvancedChart symbol="SAXO:MXNJPY" interval="60" containerId="tv_mxnjpy_sidebar" height="700px" />
               <div style={{ height: '10px' }}></div>
               <AdvancedChart symbol="FX:USDJPY" interval="60" containerId="tv_usdjpy_sidebar_mxn" height="700px" />
             </div>
