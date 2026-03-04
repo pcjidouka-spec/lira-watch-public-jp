@@ -152,7 +152,7 @@ export const HeaderAds: React.FC<HeaderAdsProps> = ({ position }) => {
                 .header-ad-item img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
 
                 @media (max-width: 1200px) {
