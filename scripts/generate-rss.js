@@ -6,7 +6,7 @@ const RSS_HEADER = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
   <title>トルコリラ・ウォッチ (lira-watch)</title>
-  <link>https://www.lira-watch.sbs/</link>
+  <link>https://lira-watch.sbs/</link>
   <description>トルコリラのスワップポイント比較と長期投資記録</description>
   <language>ja</language>
 `;
@@ -96,14 +96,14 @@ function generateRSS() {
         let itemXml = `
   <item>
     <title>${article.title}</title>
-    <link>https://www.lira-watch.sbs/articles/${article.id}</link>
-    <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>
+    <link>https://lira-watch.sbs/articles/${article.id}</link>
+    <guid>https://lira-watch.sbs/articles/${article.id}</guid>
     <description>${article.description}${article.tags && article.tags.length > 0 ? ' ' + article.tags.map(t => '#' + t).join(' ') : ''}</description>
     <pubDate>${formatDate(article.date)}</pubDate>
     <content:encoded><![CDATA[${article.fullContent}]]></content:encoded>`;
 
         if (article.thumbnail) {
-            const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
+            const imageUrl = `https://lira-watch.sbs${article.thumbnail}`;
             itemXml += `
     <media:thumbnail url="${imageUrl}" />
     <enclosure url="${imageUrl}" type="image/png" />`;
