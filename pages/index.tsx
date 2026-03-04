@@ -453,12 +453,13 @@ export default function Home() {
                 const diffTime = today.getTime() - articleDate.getTime();
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 const isNew = diffDays <= 5;
+                const isOldArticle = articleDate <= new Date('2026-02-15');
 
                 return (
                   <article key={article.id} className="blog-post-card">
                     <header className="post-header-card">
                       {article.thumbnail && (
-                        <div className="post-thumbnail-card">
+                        <div className={isOldArticle ? "post-thumbnail-card-old" : "post-thumbnail-card"}>
                           <Link href={`/articles/${article.id}`}>
                             <img src={article.thumbnail} alt={article.title} />
                           </Link>
@@ -561,6 +562,24 @@ export default function Home() {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          display: block;
+        }
+
+        .post-thumbnail-card-old {
+          margin: -16px -16px 12px -16px;
+          overflow: hidden;
+          border-radius: 8px 8px 0 0;
+          background: #f9fafb;
+        }
+
+        .post-thumbnail-card-old a {
+          display: block;
+          width: 100%;
+        }
+
+        .post-thumbnail-card-old img {
+          width: 100%;
+          height: auto;
           display: block;
         }
 
