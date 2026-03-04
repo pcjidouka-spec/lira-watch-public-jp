@@ -542,17 +542,17 @@ export default function Home() {
           margin: -16px -16px 12px -16px;
           overflow: hidden;
           border-radius: 8px 8px 0 0;
-          aspect-ratio: 16 / 9;
-          background: #000; /* Letterbox background to prevent white gaps */
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background: #f9fafb;
+        }
+
+        .post-thumbnail-card a {
+          display: block;
+          width: 100%;
         }
 
         .post-thumbnail-card img {
           width: 100%;
-          height: 100%;
-          object-fit: contain; /* Ensure full image is visible */
+          height: auto;
           display: block;
         }
 
