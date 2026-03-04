@@ -13,8 +13,8 @@ export const AdvancedChart: React.FC<AdvancedChartProps> = ({ symbol, interval =
     useEffect(() => {
         if (!container.current) return;
 
-        // scriptタグが既にある場合は追加しない（React.StrictMode対策）
-        if (container.current.querySelector('script')) return;
+        // Clear previous widget before injecting new one
+        container.current.innerHTML = '';
 
         const script = document.createElement('script');
         script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";

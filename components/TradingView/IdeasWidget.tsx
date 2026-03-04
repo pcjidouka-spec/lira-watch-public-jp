@@ -15,7 +15,9 @@ export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px", symb
 
     useEffect(() => {
         if (!container.current) return;
-        if (container.current.querySelector('script')) return;
+
+        // Clear previous widget before injecting new one
+        container.current.innerHTML = '';
 
         const script = document.createElement('script');
         script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
@@ -65,7 +67,7 @@ export const IdeasWidget: React.FC<IdeasWidgetProps> = ({ height = "500px", symb
         });
 
         container.current.appendChild(script);
-    }, []);
+    }, [symbol]);
 
     return (
         <div className="tradingview-widget-container" ref={container} style={{ height: height, width: '100%' }}>
