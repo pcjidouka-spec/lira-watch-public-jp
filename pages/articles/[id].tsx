@@ -26,10 +26,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:title" content={`${article.title} | トルコリラ・ウォッチ`} />
         <meta property="og:description" content={article.title} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://lira-watch.sbs/articles/${article.id}`} />
+        <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
         <meta
           property="og:image"
-          content={article.thumbnail ? `https://lira-watch.sbs${article.thumbnail}` : "https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
+          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
         />
       </Head>
 

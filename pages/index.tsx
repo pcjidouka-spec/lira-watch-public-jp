@@ -301,17 +301,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="canonical" href="https://lira-watch.sbs/" />
+        <link rel="canonical" href="https://www.lira-watch.sbs/" />
 
         {/* OGP Tags */}
         <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
         <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
         <meta property="og:type" content="blog" />
-        <meta property="og:url" content="https://lira-watch.sbs/" />
+        <meta property="og:url" content="https://www.lira-watch.sbs/" />
         {latestArticle?.thumbnail ? (
-          <meta property="og:image" content={`https://lira-watch.sbs${latestArticle.thumbnail}`} />
+          <meta property="og:image" content={`https://www.lira-watch.sbs${latestArticle.thumbnail}`} />
         ) : (
-          <meta property="og:image" content="https://lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
+          <meta property="og:image" content="https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
         )}
         <meta property="og:site_name" content="トルコリラ・ウォッチ" />
         <meta property="og:locale" content="ja_JP" />

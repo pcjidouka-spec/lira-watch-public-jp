@@ -2,7 +2,7 @@ const https = require('https');
 
 const PING_URL = 'https://ping.blogmura.com/xmlrpc/nnzyvgc8ql4z/';
 const SITE_NAME = 'トルコリラ・ウォッチ';
-const SITE_URL = 'https://lira-watch.sbs/';
+const SITE_URL = 'https://www.lira-watch.sbs/';
 
 const xmlPayload = `<?xml version="1.0"?>
 <methodCall>
