@@ -49,6 +49,17 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <main className="main-content">
           <div className="content-wrapper">
             <article className="article">
+              {/* サムネイル画像を本文中の最上部（タイトルの前）に配置（にほんブログ村等の軽量クローラー対応） */}
+              {article.thumbnail && (
+                <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''}`}>
+                  <img
+                    src={article.thumbnail}
+                    className="meta-thumbnail-image"
+                    alt={article.title}
+                  />
+                </div>
+              )}
+
               <div className="article-header">
                 <span className="article-date">{article.date}</span>
                 <h1 className="article-title">{article.title}</h1>
@@ -60,17 +71,6 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                   </div>
                 )}
               </div>
-
-              {/* サムネイル画像を本文先頭に表示（にほんブログ村等のクローラー対応） */}
-              {article.thumbnail && (
-                <p className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''}`}>
-                  <img
-                    src={article.thumbnail}
-                    className="meta-thumbnail-image"
-                    alt={article.title}
-                  />
-                </p>
-              )}
 
               <div
                 className="article-body"
