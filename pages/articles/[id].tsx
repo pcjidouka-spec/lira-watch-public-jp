@@ -12,6 +12,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
     return <div>記事が見つかりません。</div>;
   }
 
+  // 2026/03/02以降の記事かどうかを判定
+  const articleDate = new Date(article.date.replace(/\//g, '-'));
+  const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
+
   return (
     <>
       <Head>
@@ -59,11 +63,10 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
               {/* サムネイル画像を本文先頭に表示（にほんブログ村等のクローラー対応） */}
               {article.thumbnail && (
-                <p className="txt-img" style={{ textAlign: 'center', margin: '0 0 24px 0' }}>
+                <p className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''}`}>
                   <img
                     src={article.thumbnail}
-                    style={{ maxWidth: '100%', width: '600px' }}
-                    className="image-center"
+                    className="meta-thumbnail-image"
                     alt={article.title}
                   />
                 </p>
@@ -175,6 +178,33 @@ export default function ArticlePage({ article }: ArticlePageProps) {
            color: #4b5563;
            font-size: 18px;
            margin-bottom: 16px;
+        }
+        
+        .article-thumbnail-container {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          background: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          overflow: hidden;
+          margin: 0 0 32px 0;
+        }
+
+        .article-thumbnail-container.cover-mode {
+          background: transparent;
+        }
+        
+        .meta-thumbnail-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
+        }
+
+        .article-thumbnail-container.cover-mode .meta-thumbnail-image {
+          object-fit: cover;
         }
         .article-body :global(.campaign-details) {
            background: #f8fafc;
