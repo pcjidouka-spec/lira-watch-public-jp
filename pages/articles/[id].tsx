@@ -63,19 +63,20 @@ export default function ArticlePage({ article }: ArticlePageProps) {
               <div className="article-header">
                 <span className="article-date">{article.date}</span>
                 <h1 className="article-title">{article.title}</h1>
-                {article.tags && article.tags.length > 0 && (
-                  <div className="article-tags">
-                    {article.tags.map(tag => (
-                      <span key={tag} className="article-tag">#{tag}</span>
-                    ))}
-                  </div>
-                )}
               </div>
 
               <div
                 className="article-body"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
+
+              {article.tags && article.tags.length > 0 && (
+                <div className="article-tags bottom-tags">
+                  {article.tags.map(tag => (
+                    <span key={tag} className="article-tag">#{tag}</span>
+                  ))}
+                </div>
+              )}
             </article>
 
             <div className="back-link">
@@ -151,7 +152,11 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
-          margin-top: 12px;
+        }
+        .article-tags.bottom-tags {
+          margin-top: 40px;
+          padding-top: 20px;
+          border-top: 1px solid #e2e8f0;
         }
         .article-tag {
           font-size: 14px;
