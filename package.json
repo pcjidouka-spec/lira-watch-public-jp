@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-rss.js && next build && node scripts/copy-public.js",
+    "build": "node scripts/generate-rss.js && node scripts/generate-sitemap.js && next build && node scripts/copy-public.js",
     "start": "next start",
     "lint": "next lint",
     "ping:blogmura": "node scripts/ping_blogmura.js"
