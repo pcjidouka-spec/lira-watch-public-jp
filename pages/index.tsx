@@ -454,12 +454,13 @@ export default function Home() {
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 const isNew = diffDays <= 5;
                 const isOldArticle = articleDate <= new Date('2026-02-15');
+                const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
 
                 return (
                   <article key={article.id} className="blog-post-card">
                     <header className="post-header-card">
                       {article.thumbnail && (
-                        <div className={isOldArticle ? "post-thumbnail-card-old" : "post-thumbnail-card"}>
+                        <div className={`${isOldArticle ? "post-thumbnail-card-old" : "post-thumbnail-card"} ${isAfterMarch2026 ? "cover-mode" : ""}`}>
                           <Link href={`/articles/${article.id}`}>
                             <img src={article.thumbnail} alt={article.title} />
                           </Link>
@@ -570,6 +571,14 @@ export default function Home() {
           overflow: hidden;
           border-radius: 8px 8px 0 0;
           background: #f9fafb;
+        }
+
+        .post-thumbnail-card.cover-mode {
+          background: transparent;
+        }
+
+        .post-thumbnail-card.cover-mode img {
+          object-fit: cover;
         }
 
         .post-thumbnail-card-old a {
