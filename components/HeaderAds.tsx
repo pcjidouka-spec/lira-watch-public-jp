@@ -35,6 +35,12 @@ const AD_ITEMS = [
         image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
     },
     {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AV5OF+584ZXU+4SM6+609HT",
+        title: "松井証券 MATSUI FX",
+        image: "https://www21.a8.net/svt/bgt?aid=260114559316&wid=001&eno=01&mid=s00000022371001009000&mc=1",
+        trackingPixel: "https://www19.a8.net/0.gif?a8mat=4AV5OF+584ZXU+4SM6+609HT"
+    },
+    {
         url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35",
         title: "A8広告1",
         image: "https://www22.a8.net/svt/bgt?aid=260304919922&wid=001&eno=01&mid=s00000025808001021000&mc=1",
