@@ -427,98 +427,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A8.net Affiliate Ad (Rakuten Style) */}
-      <div className="affiliate-card-wrapper">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" rel="nofollow sponsored" target="_blank" className="affiliate-product-card">
-          <div className="product-image">
-            <img src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" alt="おすすめ情報" />
-          </div>
-          <div className="product-info">
-            <div className="product-title">SBI新生銀行：SBIハイパー預金で2,000円＆キャンペーン最大2万円！</div>
-            <div className="product-action-row">
-              <span className="rakuten-btn">詳細を見る</span>
-            </div>
-          </div>
-        </a>
+      {/* Side-by-Side Affiliate Banners */}
+      <div className="top-banners-grid">
+        <div className="banner-item">
+          <a href="https://hb.afl.rakuten.co.jp/ichiba/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmayumi-store%2Fnt-st2-p%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored">
+            <img src="https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext" alt="日本通信 SIM" />
+          </a>
+        </div>
+        <div className="banner-item">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" target="_blank" rel="nofollow sponsored">
+            <img src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" alt="SBIハイパー預金" />
+          </a>
+        </div>
         <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" alt="" style={{ border: 0 }} />
       </div>
 
       <style jsx>{`
-        .affiliate-card-wrapper {
+        .top-banners-grid {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
           margin: 30px auto;
           max-width: 600px;
           padding: 0 20px;
         }
-        .affiliate-product-card {
-          display: flex;
-          background: white;
-          border: 1px solid #bf0000; /* Rakuten Red border */
-          border-radius: 4px;
-          text-decoration: none;
-          color: #333;
-          overflow: hidden;
-          transition: background 0.2s;
-        }
-        .affiliate-product-card:hover {
-          background: #fffafa;
-        }
-        .product-image {
-          width: 120px;
-          height: 120px;
-          flex-shrink: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: white;
-          padding: 5px;
-        }
-        .product-image img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-        }
-        .product-info {
+        .banner-item {
           flex: 1;
-          padding: 12px;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          border-left: 1px solid #eee;
+          justify-content: center;
+          align-items: center;
+          background: white;
+          padding: 8px;
+          border-radius: 6px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          border: 1px solid #eee;
+          max-width: 150px;
         }
-        .product-title {
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 1.4;
-          color: #333;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+        .banner-item a {
+          display: block;
+          line-height: 0;
         }
-        .product-action-row {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: 8px;
-        }
-        .rakuten-btn {
-          background: #bf0000;
-          color: white;
-          padding: 4px 15px;
-          border-radius: 3px;
-          font-size: 12px;
-          font-weight: bold;
+        .banner-item img {
+          max-width: 100%;
+          height: auto;
+          display: block;
         }
 
         @media (max-width: 480px) {
-          .affiliate-card-wrapper {
+          .top-banners-grid {
+            gap: 10px;
             padding: 0 10px;
           }
-          .product-image {
-            width: 90px;
-            height: 90px;
-          }
-          .product-title {
-            font-size: 13px;
+          .banner-item {
+            padding: 5px;
+            max-width: 120px;
           }
         }
       `}</style>
