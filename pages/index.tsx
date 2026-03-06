@@ -427,6 +427,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* A8.net Affiliate Banner */}
+      <div className="top-page-ad-container" style={{ textAlign: 'center', margin: '30px 0' }}>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" rel="nofollow">
+          <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" />
+        </a>
+        <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" alt="" />
+      </div>
+
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
         <div className="feed-header-tabs">
