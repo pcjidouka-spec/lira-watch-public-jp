@@ -21,56 +21,36 @@ function getArticles() {
         const articlesPath = path.join(__dirname, '../data/articles.ts');
         const content = fs.readFileSync(articlesPath, 'utf8');
 
-        // Simple parsing logic to extract article objects from the TS file
-        // We look for objects inside the articles array. Note: This is a regex-based approximation
-        // suitable for the build script without compiling TS. Use with care if file structure changes.
+        // Robust parsing by converting the straightforward TS array export to eval-able JS
+        const jsContent = content
+            .replace(/export interface Article \{[\s\S]*?\}/, '')
+            .replace(/export const articles:\s*Article\[\]\s*=/, 'module.exports =');
 
-        // Extract the array content
-        const match = content.match(/export const articles: Article\[\] = \[([\s\S]*?)\];/);
-        if (!match) return [];
+        const tempPath = path.join(__dirname, '../data/articles.temp.js');
+        fs.writeFileSync(tempPath, jsContent);
 
-        const rawData = match[1];
-        const articles = [];
+        delete require.cache[require.resolve('../data/articles.temp.js')];
+        const parsedArticles = require('../data/articles.temp.js');
 
-        // Split by article objects (assuming basic formatting with braces)
-        const objectMatches = rawData.match(/\{[\s\S]*?\}(?=,\s*\{|\s*\])/g);
+        fs.unlinkSync(tempPath);
 
-        if (objectMatches) {
-            objectMatches.forEach(objStr => {
-                const idMatch = objStr.match(/id:\s*'([^']+)'/);
-                const titleMatch = objStr.match(/title:\s*'([^']+)'/);
-                const dateMatch = objStr.match(/date:\s*'([^']+)'/);
-                const thumbnailMatch = objStr.match(/thumbnail:\s*'([^']+)'/);
-                const contentMatch = objStr.match(/content:\s*`([\s\S]*?)`/);
-
-                // Extract description from content (first <p> tag or first 100 chars)
-                let description = '';
-                if (contentMatch) {
-                    const textContent = contentMatch[1].replace(/<[^>]+>/g, ''); // strip HTML
-                    description = textContent.replace(/\s+/g, ' ').trim().substring(0, 120) + '...';
-                }
-
-                const tagsMatch = objStr.match(/tags:\s*\[([\s\S]*?)\]/);
-                let tags = [];
-                if (tagsMatch) {
-                    tags = tagsMatch[1].split(',').map(t => t.trim().replace(/^['"]|['"]$/g, ''));
-                }
-
-                if (idMatch && titleMatch && dateMatch) {
-                    articles.push({
-                        id: idMatch[1],
-                        title: titleMatch[1],
-                        date: dateMatch[1],
-                        thumbnail: thumbnailMatch ? thumbnailMatch[1] : null,
-                        description: description,
-                        fullContent: contentMatch ? contentMatch[1] : '',
-                        tags: tags
-                    });
-                }
-            });
-        }
-
-        return articles;
+        return parsedArticles.map(article => {
+            let description = '';
+            let rawContent = article.content || '';
+            if (rawContent) {
+                const textContent = rawContent.replace(/<[^>]+>/g, ''); // strip HTML
+                description = textContent.replace(/\s+/g, ' ').trim().substring(0, 120) + '...';
+            }
+            return {
+                id: article.id,
+                title: article.title,
+                date: article.date,
+                thumbnail: article.thumbnail,
+                description: description,
+                fullContent: rawContent,
+                tags: article.tags || []
+            };
+        });
     } catch (error) {
         console.error('Error reading articles:', error);
         return [];
@@ -93,18 +73,30 @@ function generateRSS() {
     let rssContent = RSS_HEADER;
 
     articles.forEach(article => {
+        let encodedTags = article.tags && article.tags.length > 0 ? ' ' + article.tags.map(t => '#' + t).join(' ') : '';
+        let descriptionHTML = article.description + encodedTags;
+        let contentHTML = article.fullContent;
+
+        if (article.thumbnail) {
+            const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
+            const imgTag = `<img src="${imageUrl}" alt="${article.title}" border="0" /> `;
+            descriptionHTML = imgTag + descriptionHTML;
+            contentHTML = imgTag + contentHTML;
+        }
+
         let itemXml = `
   <item>
-    <title>${article.title}</title>
+    <title><![CDATA[${article.title}]]></title>
     <link>https://www.lira-watch.sbs/articles/${article.id}</link>
     <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>
-    <description>${article.description}${article.tags && article.tags.length > 0 ? ' ' + article.tags.map(t => '#' + t).join(' ') : ''}</description>
+    <description><![CDATA[${descriptionHTML}]]></description>
     <pubDate>${formatDate(article.date)}</pubDate>
-    <content:encoded><![CDATA[${article.fullContent}]]></content:encoded>`;
+    <content:encoded><![CDATA[${contentHTML}]]></content:encoded>`;
 
         if (article.thumbnail) {
             const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
             itemXml += `
+    <media:content url="${imageUrl}" medium="image" />
     <media:thumbnail url="${imageUrl}" />
     <enclosure url="${imageUrl}" type="image/png" />`;
         }
@@ -112,7 +104,7 @@ function generateRSS() {
         if (article.tags && article.tags.length > 0) {
             article.tags.forEach(tag => {
                 itemXml += `
-    <category>${tag}</category>`;
+    <category><![CDATA[${tag}]]></category>`;
             });
         }
 
