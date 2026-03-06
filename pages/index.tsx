@@ -427,13 +427,101 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A8.net Affiliate Banner */}
-      <div className="top-page-ad-container" style={{ textAlign: 'center', margin: '30px 0' }}>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" rel="nofollow">
-          <img width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" />
+      {/* A8.net Affiliate Ad (Rakuten Style) */}
+      <div className="affiliate-card-wrapper">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" rel="nofollow sponsored" target="_blank" className="affiliate-product-card">
+          <div className="product-image">
+            <img src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" alt="おすすめ情報" />
+          </div>
+          <div className="product-info">
+            <div className="product-title">SBI新生銀行：SBIハイパー預金で2,000円＆キャンペーン最大2万円！</div>
+            <div className="product-action-row">
+              <span className="rakuten-btn">詳細を見る</span>
+            </div>
+          </div>
         </a>
-        <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" alt="" />
+        <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" alt="" style={{ border: 0 }} />
       </div>
+
+      <style jsx>{`
+        .affiliate-card-wrapper {
+          margin: 30px auto;
+          max-width: 600px;
+          padding: 0 20px;
+        }
+        .affiliate-product-card {
+          display: flex;
+          background: white;
+          border: 1px solid #bf0000; /* Rakuten Red border */
+          border-radius: 4px;
+          text-decoration: none;
+          color: #333;
+          overflow: hidden;
+          transition: background 0.2s;
+        }
+        .affiliate-product-card:hover {
+          background: #fffafa;
+        }
+        .product-image {
+          width: 120px;
+          height: 120px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: white;
+          padding: 5px;
+        }
+        .product-image img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+        .product-info {
+          flex: 1;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-left: 1px solid #eee;
+        }
+        .product-title {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.4;
+          color: #333;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .product-action-row {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 8px;
+        }
+        .rakuten-btn {
+          background: #bf0000;
+          color: white;
+          padding: 4px 15px;
+          border-radius: 3px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+          .affiliate-card-wrapper {
+            padding: 0 10px;
+          }
+          .product-image {
+            width: 90px;
+            height: 90px;
+          }
+          .product-title {
+            font-size: 13px;
+          }
+        }
+      `}</style>
 
       {/* 2. 記事フィード */}
       <div id="new-articles" className="article-feed">
