@@ -11,6 +11,55 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
   {
+    id: 'sbi-hyper-deposit-campaign-20260306',
+    title: '【先着20名】SBIハイパー預金で確実2,000円GET！特大キャンペーンも同時開催中💰',
+    thumbnail_text: 'SBIハイパー預金\n確実2,000円\n年365％上乗せ',
+    date: '2026/03/06',
+    thumbnail: '/images/sbi-hyper-deposit-campaign-20260306_60.png',
+    tags: ['SBI新生銀行', 'SBIハイパー預金', 'キャンペーン', 'ポイ活', '貯金'],
+    content: `
+      <p class="intro">
+        こんにちは！ 現在、SBI新生銀行の「SBIハイパー預金」で、組み合わせ次第で総額1万6,000円〜2万円以上も狙える激アツなキャンペーンが開催されています。
+      </p>
+
+      <p>まずは、どなたでも確実に<strong>【現金2,000円】</strong>がもらえる私の紹介コードを公開します！</p>
+
+      <div class="campaign-details">
+        <p style="font-size: 1.2em; font-weight: bold; color: #ef4444; background: #fee2e2; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 0;">
+          🔑 私の紹介コード：M104747726
+        </p>
+        <p style="text-align: center; font-size: 0.9em; margin-top: 5px;">（※紹介枠は最大20名まで！早い者勝ちです）</p>
+
+        <h3>【2,000円をもらう3ステップ】</h3>
+        <p>2026年3月31日（火）までに、以下の3つを完了するだけ！</p>
+        <ol>
+          <li><strong>SBIハイパー預金口座の開設</strong></li>
+          <li><strong>エントリーフォームに紹介番号【M104747726】を入力</strong></li>
+          <li><strong>SBIハイパー預金口座の残高を50,000円以上にする</strong></li>
+        </ol>
+      </div>
+
+      <div class="campaign-details" style="border-color: #f59e0b; background: #fffbeb;">
+        <h3 style="color: #d97706; margin-top: 0;">🚀 さらに！100万円入金でキャンペーン特典を総取り！</h3>
+        <p>
+          現在、「年利365％上乗せ（先着10万人）」「最大1万円が当たるおみくじ」1万6,000円以上の獲得が狙えるボーナスステージになっています！<br>
+          また、SBI証券の口座をまだお持ちでない方は、口座開設と条件達成でさらに5,000円がプレゼントされます。
+        </p>
+      </div>
+
+      <p>それぞれのキャンペーンは「先着順」や「エントリー必須」のものが多いため、まずは急いで詳細をチェックしてください！</p>
+
+      <div class="campaign-link" style="margin-top: 30px;">
+        <p style="font-weight: bold; color: #2563eb;">▼各種キャンペーンの詳しい条件・エントリー・口座開設はこちら▼</p>
+        <a href="https://www.sbishinseibank.co.jp/campaign/sbihyper_introduce_2603/" target="_blank" rel="noopener noreferrer">https://www.sbishinseibank.co.jp/campaign/sbihyper_introduce_2603/</a>
+      </div>
+
+      <p style="font-weight: bold; margin-top: 20px;">
+        新生活に向けて、お得に現金をGETできる大チャンスをお見逃しなく！
+      </p>
+    `,
+  },
+  {
     id: 'complex-tax-return-automation-20260304',
     title: 'FX20業者・株13社・仮想通貨7社…複雑すぎる投資の確定申告をAIで整理した話',
     thumbnail_text: '確定申告\n複数口座の申告\nAI\n自動化の限界点',
