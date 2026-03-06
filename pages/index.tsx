@@ -12,7 +12,6 @@ import { Timeline } from '@/components/TradingView/Timeline';
 import { IdeasWidget } from '@/components/TradingView/IdeasWidget';
 import { BlogLayout } from '@/components/BlogLayout';
 import { BlogmuraButtons } from '@/components/BlogmuraButtons';
-import { RakutenAds } from '@/components/RakutenAds';
 import { ArticleTree } from '@/components/ArticleTree';
 import { useRouter } from 'next/router';
 
@@ -216,8 +215,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      <RakutenAds />
 
       <div className="sidebar-widget">
         <div className="widget-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
