@@ -14,9 +14,18 @@ FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 def process_thumbnail(input_path, output_path):
     img = Image.open(input_path).convert("RGB")
     
-    # We no longer crop or overlay text manually.
-    # We rely on AI-native typography and 16:9 aspect ratio.
-    # Just save at high quality.
+    # AI generated images are usually 1:1. We want to auto-crop them to 16:9
+    w, h = img.size
+    
+    # Target 16:9 ratio
+    target_h = int(w * 9 / 16)
+    
+    if h > target_h:
+        # It's taller than 16:9, so we crop the center
+        top = (h - target_h) // 2
+        bottom = top + target_h
+        img = img.crop((0, top, w, bottom))
+    
     img.save(output_path, quality=95)
     print(f"Successfully processed and saved 16:9 thumbnail to {output_path}")
 

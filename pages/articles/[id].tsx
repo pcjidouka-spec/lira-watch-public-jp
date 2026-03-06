@@ -187,7 +187,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         
         .article-thumbnail-container {
           width: 100%;
-          aspect-ratio: 4 / 3;
+          aspect-ratio: 16 / 9;
           background: #000;
           display: flex;
           align-items: center;
