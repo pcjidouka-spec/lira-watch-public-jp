@@ -303,7 +303,7 @@ export default function Home() {
         {/* OGP Tags */}
         <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
         <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
-        <meta property="og:type" content="blog" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.lira-watch.sbs/" />
         {latestArticle?.thumbnail ? (
           <meta property="og:image" content={`https://www.lira-watch.sbs${latestArticle.thumbnail}`} />

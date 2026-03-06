@@ -37,7 +37,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           property="og:image"
           content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
         />
-        <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) + '...'} />
+        <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
+        <meta property="og:locale" content="ja_JP" />
       </Head>
 
       <div className="content-wrapper">
