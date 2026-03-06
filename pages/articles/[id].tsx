@@ -27,14 +27,15 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* OGP Tags */}
-        <meta property="og:title" content={`${article.title} | トルコリラ・ウォッチ`} />
-        <meta property="og:description" content={article.title} />
+        <meta property="og:site_name" content="トルコリラ・ウォッチ" />
+        <meta property="og:title" content={article.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
         <meta
           property="og:image"
           content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
         />
+        <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) + '...'} />
       </Head>
 
       <div className="container">
