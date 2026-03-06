@@ -19,14 +19,16 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           <HeaderAds position="left" />
 
           <div className="header-content">
-            <div className="logo-section">
-              <img
-                src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
-                alt="トルコリラ・ウォッチ ロゴ"
-                className="logo-image"
-              />
-              <h1 className="site-title">トルコリラ・ウォッチ</h1>
-            </div>
+            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="logo-section" style={{ cursor: 'pointer' }}>
+                <img
+                  src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
+                  alt="トルコリラ・ウォッチ ロゴ"
+                  className="logo-image"
+                />
+                <h1 className="site-title">トルコリラ・ウォッチ</h1>
+              </div>
+            </Link>
             <p className="site-subtitle">TRY/JPY スワップポイント比較・運用ブログ</p>
             {lastUpdated && <p className="last-updated">最終更新: {lastUpdated}</p>}
           </div>
