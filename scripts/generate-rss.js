@@ -88,18 +88,21 @@ function generateRSS() {
   <item>
     <title><![CDATA[${article.title}]]></title>
     <link>https://www.lira-watch.sbs/articles/${article.id}</link>
-    <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>
-    <description><![CDATA[${descriptionHTML}]]></description>
-    <pubDate>${formatDate(article.date)}</pubDate>
-    <content:encoded><![CDATA[${contentHTML}]]></content:encoded>`;
+    <guid>https://www.lira-watch.sbs/articles/${article.id}</guid>`;
 
+        // Image tags first (before description) for Blog Mura compatibility
         if (article.thumbnail) {
             const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
             itemXml += `
-    <media:content url="${imageUrl}" medium="image" />
+    <enclosure url="${imageUrl}" length="0" type="image/png" />
     <media:thumbnail url="${imageUrl}" />
-    <enclosure url="${imageUrl}" type="image/png" />`;
+    <media:content url="${imageUrl}" medium="image" />`;
         }
+
+        itemXml += `
+    <description><![CDATA[${descriptionHTML}]]></description>
+    <pubDate>${formatDate(article.date)}</pubDate>
+    <content:encoded><![CDATA[${contentHTML}]]></content:encoded>`;
 
         if (article.tags && article.tags.length > 0) {
             article.tags.forEach(tag => {
