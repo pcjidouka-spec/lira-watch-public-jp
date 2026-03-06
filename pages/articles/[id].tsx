@@ -77,6 +77,14 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                 className="article-body"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
+
+              {/* A8.net Affiliate Banner */}
+              <div className="article-ad-container" style={{ textAlign: 'center', marginTop: '40px', marginBottom: '20px' }}>
+                <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" rel="nofollow">
+                  <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260304919938&wid=001&eno=01&mid=s00000018318001042000&mc=1" />
+                </a>
+                <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K7+FIGM7M+3XCC+67C4H" alt="" />
+              </div>
             </article>
 
             <div className="back-link">
