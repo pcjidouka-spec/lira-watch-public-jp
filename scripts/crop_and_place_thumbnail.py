@@ -14,20 +14,20 @@ FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 def process_thumbnail(input_path, output_path):
     img = Image.open(input_path).convert("RGB")
     
-    # AI generated images are usually 1:1. We want to auto-crop them to 2:1
+    # AI generated images are usually 1:1. We want to auto-crop them to 4:3
     w, h = img.size
     
-    # Target 2:1 ratio
-    target_h = int(w * 1 / 2)
+    # Target 4:3 ratio
+    target_h = int(w * 3 / 4)
     
     if h > target_h:
-        # It's taller than 2:1, so we crop the center
+        # It's taller than 4:3, so we crop the center
         top = (h - target_h) // 2
         bottom = top + target_h
         img = img.crop((0, top, w, bottom))
     
     img.save(output_path, quality=95)
-    print(f"Successfully processed and saved 2:1 thumbnail to {output_path}")
+    print(f"Successfully processed and saved 4:3 thumbnail to {output_path}")
 
 def get_article_details(article_id):
     # This is still used by the main block to verify article existence, 
