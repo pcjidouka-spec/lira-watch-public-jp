@@ -7,7 +7,7 @@ import { MobileArticleDrawer } from './MobileArticleDrawer';
 
 interface BlogLayoutProps {
   children: ReactNode;
-  sidebar: ReactNode;
+  sidebar?: ReactNode;
   lastUpdated?: string;
 }
 
@@ -36,13 +36,15 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
       </header>
 
       <div className="main-wrapper">
-        <div className="content-grid">
+        <div className={`content-grid ${!sidebar ? 'no-sidebar' : ''}`}>
           <main className="main-column">
             {children}
           </main>
-          <aside className="sidebar-column">
-            {sidebar}
-          </aside>
+          {sidebar && (
+            <aside className="sidebar-column">
+              {sidebar}
+            </aside>
+          )}
         </div>
       </div>
 
@@ -137,6 +139,12 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           grid-template-columns: 3fr 1fr; /* サイドバーを可変幅（約25%）に変更 */
           gap: 20px; /* Reduced from 30px */
           align-items: start;
+        }
+
+        .content-grid.no-sidebar {
+          grid-template-columns: 1fr;
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         .main-column {

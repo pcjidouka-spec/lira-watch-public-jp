@@ -18,50 +18,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
   const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
   const isOldArticle = articleDate <= new Date('2026-02-28');
 
-  // Simple Sidebar for article pages (can be empty or fixed)
-  const sidebarContent = (
-    <div className="article-sidebar">
-      <div className="sidebar-section">
-        <h3 className="sidebar-title">最近の記事</h3>
-        {articles.slice(0, 5).map(a => (
-          <Link key={a.id} href={`/articles/${a.id}`} className="sidebar-article-link">
-            {a.title}
-          </Link>
-        ))}
-      </div>
-      <style jsx>{`
-        .sidebar-section {
-          background: white;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-          margin-bottom: 20px;
-        }
-        .sidebar-title {
-          font-size: 16px;
-          font-weight: bold;
-          margin-bottom: 12px;
-          border-bottom: 2px solid #764ba2;
-          padding-bottom: 5px;
-        }
-        .sidebar-article-link {
-          display: block;
-          font-size: 13px;
-          color: #4b5563;
-          text-decoration: none;
-          margin-bottom: 8px;
-          line-height: 1.4;
-        }
-        .sidebar-article-link:hover {
-          color: #764ba2;
-          text-decoration: underline;
-        }
-      `}</style>
-    </div>
-  );
-
   return (
-    <BlogLayout sidebar={sidebarContent}>
+    <BlogLayout>
       <Head>
         <title>{article.title} | トルコリラ・ウォッチ</title>
         <meta name="description" content={article.title} />
