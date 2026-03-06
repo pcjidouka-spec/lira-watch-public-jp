@@ -15,6 +15,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
   // 2026/03/02以降の記事かどうかを判定
   const articleDate = new Date(article.date.replace(/\//g, '-'));
   const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
+  const isOldArticle = articleDate <= new Date('2026-02-28');
 
   return (
     <>
@@ -52,7 +53,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
             <article className="article">
               {/* サムネイル画像を本文中の最上部（タイトルの前）に配置（にほんブログ村等の軽量クローラー対応） */}
               {article.thumbnail && (
-                <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''}`}>
+                <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''} ${isOldArticle ? 'old-article' : ''}`}>
                   <img
                     src={article.thumbnail}
                     className="meta-thumbnail-image"
@@ -195,6 +196,11 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           border-radius: 8px;
           overflow: hidden;
           margin: 0 0 32px 0;
+        }
+
+        .article-thumbnail-container.old-article {
+          aspect-ratio: auto;
+          background: transparent;
         }
 
         .article-thumbnail-container.cover-mode {

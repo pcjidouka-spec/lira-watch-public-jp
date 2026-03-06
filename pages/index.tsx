@@ -461,7 +461,7 @@ export default function Home() {
                 const diffTime = today.getTime() - articleDate.getTime();
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 const isNew = diffDays <= 5;
-                const isOldArticle = articleDate <= new Date('2026-02-15');
+                const isOldArticle = articleDate <= new Date('2026-02-28');
                 const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
 
                 return (
