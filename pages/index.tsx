@@ -544,7 +544,7 @@ export default function Home() {
           margin: -16px -16px 12px -16px;
           overflow: hidden;
           border-radius: 8px 8px 0 0;
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 4 / 3;
           background: #000; /* Letterbox background to prevent white gaps */
           display: flex;
           align-items: center;
