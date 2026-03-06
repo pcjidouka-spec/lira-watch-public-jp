@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { articles, Article } from '../../data/articles';
+import { BlogLayout } from '../../components/BlogLayout';
 
 interface ArticlePageProps {
   article: Article;
@@ -17,8 +18,50 @@ export default function ArticlePage({ article }: ArticlePageProps) {
   const isAfterMarch2026 = articleDate >= new Date('2026-03-02');
   const isOldArticle = articleDate <= new Date('2026-02-28');
 
+  // Simple Sidebar for article pages (can be empty or fixed)
+  const sidebarContent = (
+    <div className="article-sidebar">
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">最近の記事</h3>
+        {articles.slice(0, 5).map(a => (
+          <Link key={a.id} href={`/articles/${a.id}`} className="sidebar-article-link">
+            {a.title}
+          </Link>
+        ))}
+      </div>
+      <style jsx>{`
+        .sidebar-section {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+        }
+        .sidebar-title {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 12px;
+          border-bottom: 2px solid #764ba2;
+          padding-bottom: 5px;
+        }
+        .sidebar-article-link {
+          display: block;
+          font-size: 13px;
+          color: #4b5563;
+          text-decoration: none;
+          margin-bottom: 8px;
+          line-height: 1.4;
+        }
+        .sidebar-article-link:hover {
+          color: #764ba2;
+          text-decoration: underline;
+        }
+      `}</style>
+    </div>
+  );
+
   return (
-    <>
+    <BlogLayout sidebar={sidebarContent}>
       <Head>
         <title>{article.title} | トルコリラ・ウォッチ</title>
         <meta name="description" content={article.title} />
@@ -39,99 +82,48 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 100) + '...'} />
       </Head>
 
-      <div className="container">
-        <header className="header">
-          <div className="header-content">
-            <Link href="/" className="site-title-link">
-              <h1 className="site-title">トルコリラ・ウォッチ</h1>
-            </Link>
-          </div>
-        </header>
-
-        <main className="main-content">
-          <div className="content-wrapper">
-            <article className="article">
-              {/* サムネイル画像を本文中の最上部（タイトルの前）に配置（にほんブログ村等の軽量クローラー対応） */}
-              {article.thumbnail && (
-                <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''} ${isOldArticle ? 'old-article' : ''}`}>
-                  <img
-                    src={article.thumbnail}
-                    className="meta-thumbnail-image"
-                    alt={article.title}
-                  />
-                </div>
-              )}
-
-              <div className="article-header">
-                <span className="article-date">{article.date}</span>
-                <h1 className="article-title">{article.title}</h1>
-                {article.tags && article.tags.length > 0 && (
-                  <div className="article-tags top-tags">
-                    {article.tags.map(tag => (
-                      <span key={tag} className="article-tag">#{tag}</span>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div
-                className="article-body"
-                dangerouslySetInnerHTML={{ __html: article.content }}
+      <div className="content-wrapper">
+        <article className="article">
+          {/* サムネイル画像を本文中の最上部（タイトルの前）に配置（にほんブログ村等の軽量クローラー対応） */}
+          {article.thumbnail && (
+            <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''} ${isOldArticle ? 'old-article' : ''}`}>
+              <img
+                src={article.thumbnail}
+                className="meta-thumbnail-image"
+                alt={article.title}
               />
-            </article>
-
-            <div className="back-link">
-              <Link href="/">トップページへ戻る</Link>
             </div>
-          </div>
-        </main>
+          )}
 
-        <footer className="footer">
-          <div className="footer-content">
-            <p className="copyright">&copy; 2026 トルコリラ・ウォッチ (lira-watch.sbs)</p>
-            <div className="footer-links">
-              <Link href="/privacy">プライバシーポリシー</Link> | <Link href="/contact">お問い合わせ</Link> | <Link href="/operator">運営者情報</Link>
-            </div>
+          <div className="article-header">
+            <span className="article-date">{article.date}</span>
+            <h1 className="article-title">{article.title}</h1>
+            {article.tags && article.tags.length > 0 && (
+              <div className="article-tags top-tags">
+                {article.tags.map(tag => (
+                  <span key={tag} className="article-tag">#{tag}</span>
+                ))}
+              </div>
+            )}
           </div>
-        </footer>
+
+          <div
+            className="article-body"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
+        </article>
+
+        <div className="back-link">
+          <Link href="/">トップページへ戻る</Link>
+        </div>
       </div>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          background: #f9fafb;
-          display: flex;
-          flex-direction: column;
-        }
-        .header {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          padding: 20px;
-          text-align: center;
-        }
-        .site-title {
-          font-size: 24px;
-          font-weight: 700;
-          margin: 0;
-          color: white;
-          cursor: pointer;
-        }
-        .site-title-link {
-          text-decoration: none;
-        }
-        .main-content {
-          flex: 1;
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 40px 20px;
-          width: 100%;
-          box-sizing: border-box;
-        }
         .content-wrapper {
           background: white;
           padding: 40px;
           border-radius: 12px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         .article-header {
           margin-bottom: 32px;
@@ -235,7 +227,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-body :global(img) {
           max-width: 100%;
           height: auto;
-          border-radius: 8px; /* Optional, makes it look a bit nicer */
+          border-radius: 8px;
         }
         
         .article-body :global(a) {
@@ -297,48 +289,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .back-link a:hover {
           background: #e5e7eb;
         }
-        .footer {
-          background: #1f2937;
-          color: white;
-          padding: 24px;
-          margin-top: 8px;
-          text-align: center;
-        }
-        .footer-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-        }
-        .copyright {
-          font-size: 12px;
-          opacity: 0.8;
-          margin: 0;
-        }
-        .footer-links {
-          font-size: 12px;
-        }
-        .footer-links :global(a) {
-          color: #d1d5db;
-          text-decoration: none;
-          margin: 0 5px;
-        }
-        .footer-links :global(a:hover) {
-          color: white;
-          text-decoration: underline;
-        }
 
         @media (max-width: 600px) {
-          .main-content {
-            padding: 16px 0 !important; /* 上下のみ */
-            width: auto !important;
-            margin-left: 12px !important;
-            margin-right: 12px !important;
-            box-sizing: border-box !important;
-          }
           .content-wrapper {
             padding: 24px 16px !important;
             border-radius: 8px !important;
@@ -391,7 +343,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           }
         }
       `}</style>
-    </>
+    </BlogLayout>
   );
 }
 
