@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BlogmuraButtons } from './BlogmuraButtons';
 import { HeaderAds } from './HeaderAds';
@@ -12,6 +12,12 @@ interface BlogLayoutProps {
 }
 
 export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastUpdated }) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="blog-container">
       <header className="header">
@@ -21,11 +27,15 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           <div className="header-content">
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="logo-section" style={{ cursor: 'pointer' }}>
-                <img
-                  src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
-                  alt="トルコリラ・ウォッチ ロゴ"
-                  className="logo-image"
-                />
+                {mounted ? (
+                  <img
+                    src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
+                    alt="トルコリラ・ウォッチ ロゴ"
+                    className="logo-image"
+                  />
+                ) : (
+                  <div className="logo-image" style={{ visibility: 'hidden' }}></div>
+                )}
                 <h1 className="site-title">トルコリラ・ウォッチ</h1>
               </div>
             </Link>

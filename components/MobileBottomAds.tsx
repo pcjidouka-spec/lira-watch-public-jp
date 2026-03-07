@@ -8,8 +8,13 @@ const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/
 
 export const MobileBottomAds: React.FC = () => {
     const [isDismissed, setIsDismissed] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    if (isDismissed) {
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted || isDismissed) {
         return null;
     }
 

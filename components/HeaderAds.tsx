@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AD_ITEMS, AdItem } from '../data/ad_items';
 
 const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png";
@@ -11,9 +11,19 @@ interface HeaderAdsProps {
 }
 
 export const HeaderAds: React.FC<HeaderAdsProps> = ({ position }) => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     // リンクを左右に分割
     const half = Math.ceil(AD_ITEMS.length / 2);
     const items = position === 'left' ? AD_ITEMS.slice(0, half) : AD_ITEMS.slice(half);
+
+    if (!mounted) {
+        return <div className={`header-ads-container ${position}`}></div>; // SSR時は空のコンテナを返す
+    }
 
     return (
         <div className={`header-ads-container ${position}`}>

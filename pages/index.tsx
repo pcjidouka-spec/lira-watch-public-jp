@@ -459,7 +459,7 @@ export default function Home() {
                       {article.thumbnail && (
                         <div className={`${isOldArticle ? "post-thumbnail-card-old" : "post-thumbnail-card"} ${isAfterMarch2026 ? "cover-mode" : ""}`}>
                           <Link href={`/articles/${article.id}`}>
-                            <img src={article.thumbnail} alt={article.title} />
+                            <img src={`https://www.lira-watch.sbs${article.thumbnail}`} alt={article.title} />
                           </Link>
                         </div>
                       )}
@@ -1073,3 +1073,4 @@ export default function Home() {
     </BlogLayout >
   );
 }
+

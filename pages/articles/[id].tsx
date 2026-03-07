@@ -47,7 +47,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           {article.thumbnail && (
             <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''} ${isOldArticle ? 'old-article' : ''}`}>
               <img
-                src={article.thumbnail}
+                src={`https://www.lira-watch.sbs${article.thumbnail}`}
                 className="meta-thumbnail-image"
                 alt={article.title}
               />
