@@ -1,0 +1,160 @@
+{
+  "target_date": "2026-02-05",
+  "currency_pair": "TRY/JPY",
+  "generated_at": "2026-02-07 06:59:22",
+  "providers": {
+    "central_tanshi": {
+      "name": "セントラル短資FX",
+      "days": 1.0,
+      "swap_buy": 28.1,
+      "swap_sell": -28.1,
+      "settlement_date": "2/6",
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "click365_okasan": {
+      "name": "クリック365",
+      "days": 1.0,
+      "swap_buy": 26.0,
+      "swap_sell": -26.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "dmm": {
+      "name": "DMM FX",
+      "days": 3.0,
+      "swap_buy": 25.0,
+      "swap_sell": -28.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "gaitame": {
+      "name": "外為どっとコム",
+      "days": 1.0,
+      "swap_buy": 25.0,
+      "swap_sell": -40.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "gmo": {
+      "name": "GMO外貨",
+      "days": 1.0,
+      "swap_buy": 25.1,
+      "swap_sell": -25.1,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "gmo_click": {
+      "name": "GMOクリック証券",
+      "days": 1.0,
+      "swap_buy": 27.0,
+      "swap_sell": -27.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "hirose": {
+      "name": "ヒロセ通商",
+      "days": 1.0,
+      "swap_buy": 25.0,
+      "swap_sell": -30.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "invast": {
+      "name": "トライオートFX",
+      "days": 1.0,
+      "swap_buy": 26.5,
+      "swap_sell": -37.5,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "jfx": {
+      "name": "JFX",
+      "days": 1.0,
+      "swap_buy": 24.0,
+      "swap_sell": -31.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "linefx": {
+      "name": "linefx",
+      "days": null,
+      "swap_buy": null,
+      "swap_sell": null,
+      "settlement_date": null,
+      "status": "error",
+      "actual_date": null
+    },
+    "matsui": {
+      "name": "MATSUI FX",
+      "days": 1.0,
+      "swap_buy": 25.0,
+      "swap_sell": -25.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "saxo": {
+      "name": "サクソバンク証券",
+      "days": 1.0,
+      "swap_buy": 26.0,
+      "swap_sell": -35.0,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/01/30"
+    },
+    "sbi": {
+      "name": "SBI FXトレード",
+      "days": null,
+      "swap_buy": null,
+      "swap_sell": null,
+      "settlement_date": null,
+      "status": "error",
+      "actual_date": "2026/02/05"
+    },
+    "traders_light": {
+      "name": "LIGHT FX",
+      "days": 1.0,
+      "swap_buy": 25.2,
+      "swap_sell": -25.2,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "traders_light_light": {
+      "name": "LIGHT FX（LIGHT）",
+      "days": 1.0,
+      "swap_buy": 25.2,
+      "swap_sell": -25.2,
+      "settlement_date": "02/05",
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "traders_min": {
+      "name": "みんなのFX",
+      "days": 1.0,
+      "swap_buy": 25.1,
+      "swap_sell": -25.1,
+      "settlement_date": null,
+      "status": "success",
+      "actual_date": "2026/02/05"
+    },
+    "traders_min_light": {
+      "name": "みんなのFX（LIGHT）",
+      "days": null,
+      "swap_buy": null,
+      "swap_sell": null,
+      "settlement_date": null,
+      "status": "error",
+      "actual_date": null
+    }
+  }
+}

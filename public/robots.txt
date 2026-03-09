@@ -1,0 +1,8 @@
+# robots.txt for lira-watch.sbs
+# Allow all crawlers including AI bots
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lira-watch.sbs/sitemap.xml

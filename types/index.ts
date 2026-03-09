@@ -1,0 +1,32 @@
+export interface SwapData {
+  target_date: string;
+  provider_id: string;
+  name: string;
+  currency_pair?: string;
+  days: number | null;
+  swap_buy: number | null;
+  swap_sell: number | null;
+  settlement_date: string | null;
+  status: 'success' | 'error';
+  actual_date?: string; // Optional: for delayed data (e.g. Saxo)
+}
+
+export interface ProviderRanking {
+  provider_id: string;
+  name: string;
+  swap_buy: number;
+  swap_sell: number;
+  latest_date: string;
+  url?: string;
+  campaign_url?: string;
+  actual_date?: string; // Optional
+}
+
+export interface ProviderConfig {
+  id: string;
+  name: string;
+  url: string;
+  currency_pair_selector: string;
+  campaign_url?: string;
+}
+

@@ -1,0 +1,81 @@
+export type AdItem = {
+    url: string;
+    title: string;
+    image: string;
+    trackingPixel?: string;
+};
+
+export const AD_ITEMS: AdItem[] = [
+    {
+        url: "https://rpx.a8.net/svt/ejp?a8mat=4AV5OF+1VA04Y+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26011467448_4AV5OF_1VA04Y_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F",
+        title: "楽天市場",
+        image: "https://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cd9f2a.b9209cb6.50cd9f2b.14e117e9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmakuraseizou%2Fs003%2F&link_type=picttext",
+        title: "そば殻枕",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50cd9f2a.b9209cb6.50cd9f2b.14e117e9/?me_id=1337128&item_id=10000107&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmakuraseizou%2Fcabinet%2Fnarajirou%2Fimgrc0169565820.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cda52b.4cf3b824.50cda52c.5d187712/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgeneless%2F03-0112yh%2F&link_type=picttext",
+        title: "カーディガン",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50cda52b.4cf3b824.50cda52c.5d187712/?me_id=1334588&item_id=10002249&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fgeneless%2Fcabinet%2Fshouhin01%2F03line%2Fygh_01%2F03-0112-00.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cda82a.411ce472.50cda82b.360f1622/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4571495432325%2F&link_type=picttext",
+        title: "冷蔵庫",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50cda82a.411ce472.50cda82b.360f1622/?me_id=1243088&item_id=10975178&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fa-price%2Fcabinet%2Fdesign%2F20%2F0-4571495434251.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cdc9eb.ebe26f21.50cdc9ec.83ea9686/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffordear-nizimusubi%2Fb0dsj82zvx%2F&link_type=picttext",
+        title: "プロテイン",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50cdc9eb.ebe26f21.50cdc9ec.83ea9686/?me_id=1437967&item_id=10087846&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ffordear-nizimusubi%2Fcabinet%2Frakub220_0017%2Fb0dsj82zvx00.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmayumi-store%2Fnt-st2-p%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
+        title: "日本通信 SIM スターターパック",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AV5OF+584ZXU+4SM6+609HT",
+        title: "松井証券 MATSUI FX",
+        image: "https://www21.a8.net/svt/bgt?aid=260114559316&wid=001&eno=01&mid=s00000022371001009000&mc=1",
+        trackingPixel: "https://www19.a8.net/0.gif?a8mat=4AV5OF+584ZXU+4SM6+609HT"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35",
+        title: "A8広告1",
+        image: "https://www22.a8.net/svt/bgt?aid=260304919922&wid=001&eno=01&mid=s00000025808001021000&mc=1",
+        trackingPixel: "https://www16.a8.net/0.gif?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+DJM182+1JUK+HZ2R5",
+        title: "A8広告2",
+        image: "https://www28.a8.net/svt/bgt?aid=260304919819&wid=001&eno=01&mid=s00000007238003019000&mc=1",
+        trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+DJM182+1JUK+HZ2R5"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+BH6ULU+3SPO+9FMXR5",
+        title: "A8広告3",
+        image: "https://www21.a8.net/svt/bgt?aid=260304919694&wid=001&eno=01&mid=s00000017718057046000&mc=1",
+        trackingPixel: "https://www18.a8.net/0.gif?a8mat=4AZ8K7+BH6ULU+3SPO+9FMXR5"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+BD0TDE+5TB0+601S1",
+        title: "A8広告4",
+        image: "https://www23.a8.net/svt/bgt?aid=260304919687&wid=001&eno=01&mid=s00000027126001008000&mc=1",
+        trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+BD0TDE+5TB0+601S1"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+CZDANM+4EKC+626XT",
+        title: "A8広告5",
+        image: "https://www22.a8.net/svt/bgt?aid=260304919785&wid=001&eno=01&mid=s00000020550001018000&mc=1",
+        trackingPixel: "https://www12.a8.net/0.gif?a8mat=4AZ8K7+CZDANM+4EKC+626XT"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+E97O8I+14CS+609HT",
+        title: "A8広告6",
+        image: "https://www21.a8.net/svt/bgt?aid=260304919862&wid=001&eno=01&mid=s00000005230001009000&mc=1",
+        trackingPixel: "https://www11.a8.net/0.gif?a8mat=4AZ8K7+E97O8I+14CS+609HT"
+    }
+];
