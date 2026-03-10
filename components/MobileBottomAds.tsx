@@ -2,30 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { AD_ITEMS } from '../data/ad_items';
 
 const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png";
-const ROTATE_INTERVAL_MS = 5000; // 5秒ごとにバナー切り替え
 
 export const MobileBottomAds: React.FC = () => {
     const [isDismissed, setIsDismissed] = useState(false);
     const [mounted, setMounted] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    useEffect(() => {
-        if (!mounted || isDismissed || AD_ITEMS.length <= 1) return;
-        const timer = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % AD_ITEMS.length);
-        }, ROTATE_INTERVAL_MS);
-        return () => clearInterval(timer);
-    }, [mounted, isDismissed]);
-
     if (!mounted || isDismissed) {
         return null;
     }
 
-    const currentItem = AD_ITEMS[activeIndex];
+    const items = AD_ITEMS.slice(0, 3);
 
     return (
         <div className="mobile-bottom-ads">
@@ -36,30 +26,25 @@ export const MobileBottomAds: React.FC = () => {
             >
                 ×
             </button>
-            <div className="ads-carousel">
-                <a
-                    href={currentItem.url}
-                    target="_blank"
-                    rel="nofollow sponsored"
-                    className="ad-item"
-                    title={currentItem.title}
-                >
-                    <img
-                        src={currentItem.image || AMAZON_LOGO_URL}
-                        alt={currentItem.title}
-                    />
-                </a>
-                {currentItem.trackingPixel && (
-                    <img src={currentItem.trackingPixel} alt="" style={{ display: 'none' }} width="1" height="1" />
-                )}
-            </div>
-            <div className="ads-dots">
-                {AD_ITEMS.map((_, idx) => (
-                    <span
-                        key={idx}
-                        className={`dot ${idx === activeIndex ? 'active' : ''}`}
-                        aria-hidden
-                    />
+            <div className="ads-row">
+                {items.map((item, idx) => (
+                    <React.Fragment key={idx}>
+                        <a
+                            href={item.url}
+                            target="_blank"
+                            rel="nofollow sponsored"
+                            className="ad-item"
+                            title={item.title}
+                        >
+                            <img
+                                src={item.image || AMAZON_LOGO_URL}
+                                alt={item.title}
+                            />
+                        </a>
+                        {item.trackingPixel && (
+                            <img src={item.trackingPixel} alt="" style={{ display: 'none' }} width="1" height="1" />
+                        )}
+                    </React.Fragment>
                 ))}
             </div>
             <style jsx>{`
@@ -99,18 +84,20 @@ export const MobileBottomAds: React.FC = () => {
                     background: #5a67d8;
                 }
 
-                .ads-carousel {
+                .ads-row {
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    gap: 8px;
+                    flex-wrap: wrap;
                 }
 
                 .ad-item {
-                    flex-shrink: 0;
-                    width: 100px;
-                    height: 90px;
+                    flex: 1;
+                    min-width: 0;
+                    max-width: 120px;
+                    height: 45px;
                     background: white;
-                    border-radius: 8px;
+                    border-radius: 6px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -126,24 +113,7 @@ export const MobileBottomAds: React.FC = () => {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
-                    padding: 5px;
-                }
-
-                .ads-dots {
-                    display: flex;
-                    justify-content: center;
-                    gap: 6px;
-                    margin-top: 8px;
-                }
-                .dot {
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background: #ccc;
-                    transition: background 0.3s;
-                }
-                .dot.active {
-                    background: #667eea;
+                    padding: 4px;
                 }
 
                 @media (max-width: 1200px) {
