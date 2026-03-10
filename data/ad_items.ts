@@ -37,10 +37,10 @@ export const AD_ITEMS: AdItem[] = [
         image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
     },
     {
-        url: "https://px.a8.net/svt/ejp?a8mat=4AV5OF+584ZXU+4SM6+609HT",
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZAW0+ADAT2Q+3XCC+BZ0Z5",
         title: "松井証券 MATSUI FX",
-        image: "https://www21.a8.net/svt/bgt?aid=260114559316&wid=001&eno=01&mid=s00000022371001009000&mc=1",
-        trackingPixel: "https://www19.a8.net/0.gif?a8mat=4AV5OF+584ZXU+4SM6+609HT"
+        image: "https://www29.a8.net/svt/bgt?aid=260307936627&wid=001&eno=01&mid=s00000018318002011000&mc=1",
+        trackingPixel: "https://www18.a8.net/0.gif?a8mat=4AZAW0+ADAT2Q+3XCC+BZ0Z5"
     },
     {
         url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+F8XOJ6+5J4W+62U35",
@@ -77,5 +77,11 @@ export const AD_ITEMS: AdItem[] = [
         title: "A8広告6",
         image: "https://www21.a8.net/svt/bgt?aid=260304919862&wid=001&eno=01&mid=s00000005230001009000&mc=1",
         trackingPixel: "https://www11.a8.net/0.gif?a8mat=4AZ8K7+E97O8I+14CS+609HT"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+BOXHGY+5NHA+5ZMCH",
+        title: "A8バナー7",
+        image: "https://www28.a8.net/svt/bgt?aid=260304919707&wid=001&eno=01&mid=s00000026371001006000&mc=1",
+        trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+BOXHGY+5NHA+5ZMCH"
     }
 ];
