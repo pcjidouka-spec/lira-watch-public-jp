@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-10T04:26:46.181095",
+  "updated_at": "2026-03-11T05:06:18.125492",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -18,7 +18,7 @@
       "updated_at": "2026-03-02T15:14:47.611320"
     },
     "invast": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-03-06T04:00:18.380839"
     },
     "traders_min": {
@@ -26,7 +26,7 @@
       "updated_at": "2026-03-02T15:15:05.562491"
     },
     "traders_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-03-06T04:00:19.433650"
     },
     "sbi": {
@@ -62,7 +62,7 @@
       "updated_at": "2026-03-02T15:15:06.411420"
     },
     "traders_light_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-03-06T04:00:20.242765"
     },
     "hirose": {
