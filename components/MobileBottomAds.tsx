@@ -2,20 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { AD_ITEMS } from '../data/ad_items';
 
 const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png";
+const ROTATE_INTERVAL_MS = 5000;
 
 export const MobileBottomAds: React.FC = () => {
     const [isDismissed, setIsDismissed] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [activeSetIndex, setActiveSetIndex] = useState(0);
 
     useEffect(() => {
         setMounted(true);
     }, []);
 
+    useEffect(() => {
+        if (!mounted || isDismissed || AD_ITEMS.length === 0) return;
+        const setCount = Math.ceil(AD_ITEMS.length / 3) || 1;
+        const timer = setInterval(() => {
+            setActiveSetIndex((prev) => (prev + 1) % setCount);
+        }, ROTATE_INTERVAL_MS);
+        return () => clearInterval(timer);
+    }, [mounted, isDismissed]);
+
     if (!mounted || isDismissed) {
         return null;
     }
 
-    const items = AD_ITEMS.slice(0, 3);
+    const start = activeSetIndex * 3;
+    const items = AD_ITEMS.slice(start, start + 3);
+    const setCount = Math.ceil(AD_ITEMS.length / 3) || 1;
 
     return (
         <div className="mobile-bottom-ads">
@@ -47,6 +60,13 @@ export const MobileBottomAds: React.FC = () => {
                     </React.Fragment>
                 ))}
             </div>
+            {setCount > 1 && (
+                <div className="ads-dots">
+                    {Array.from({ length: setCount }).map((_, idx) => (
+                        <span key={idx} className={`dot ${idx === activeSetIndex ? 'active' : ''}`} aria-hidden />
+                    ))}
+                </div>
+            )}
             <style jsx>{`
                 .mobile-bottom-ads {
                     display: none;
@@ -94,8 +114,8 @@ export const MobileBottomAds: React.FC = () => {
                 .ad-item {
                     flex: 1;
                     min-width: 0;
-                    max-width: 120px;
-                    height: 45px;
+                    max-width: 180px;
+                    height: 68px;
                     background: white;
                     border-radius: 6px;
                     display: flex;
@@ -114,6 +134,23 @@ export const MobileBottomAds: React.FC = () => {
                     height: 100%;
                     object-fit: contain;
                     padding: 4px;
+                }
+
+                .ads-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 6px;
+                    margin-top: 8px;
+                }
+                .dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: #ccc;
+                    transition: background 0.3s;
+                }
+                .dot.active {
+                    background: #667eea;
                 }
 
                 @media (max-width: 1200px) {

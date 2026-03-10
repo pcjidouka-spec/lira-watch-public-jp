@@ -37,7 +37,7 @@ export const HeaderAds: React.FC<HeaderAdsProps> = ({ position }) => {
             ))}
             <style jsx>{`
                 .header-ads-container {
-                    width: 240px;
+                    width: 360px;
                     flex-shrink: 0;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -53,7 +53,7 @@ export const HeaderAds: React.FC<HeaderAdsProps> = ({ position }) => {
                     overflow: hidden;
                     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
                     transition: transform 0.2s, box-shadow 0.2s;
-                    height: 50px;
+                    height: 75px;
                 }
                 .header-ad-item:hover {
                     transform: translateY(-2px);
