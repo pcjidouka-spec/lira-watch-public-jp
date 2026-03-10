@@ -1,9 +1,10 @@
 import React, { ReactNode, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BlogmuraButtons } from './BlogmuraButtons';
-import { HeaderAds } from './HeaderAds';
+import { HeaderAds, ROTATE_INTERVAL_MS, ITEMS_PER_SET } from './HeaderAds';
 import { MobileBottomAds } from './MobileBottomAds';
 import { MobileArticleDrawer } from './MobileArticleDrawer';
+import { AD_ITEMS } from '../data/ad_items';
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -13,16 +14,28 @@ interface BlogLayoutProps {
 
 export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastUpdated }) => {
   const [mounted, setMounted] = useState(false);
+  const [headerAdSetIndex, setHeaderAdSetIndex] = useState(0);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (!mounted || AD_ITEMS.length === 0) return;
+    const setCount = Math.ceil(AD_ITEMS.length / ITEMS_PER_SET) || 1;
+    const timer = setInterval(() => {
+      setHeaderAdSetIndex((prev) => (prev + 1) % setCount);
+    }, ROTATE_INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, [mounted]);
+
+  const headerAdSetCount = AD_ITEMS.length ? Math.ceil(AD_ITEMS.length / ITEMS_PER_SET) : 1;
+
   return (
     <div className="blog-container">
       <header className="header">
         <div className="header-wrapper">
-          <HeaderAds position="left" />
+          <HeaderAds position="left" activeSetIndex={headerAdSetIndex} />
 
           <div className="header-content">
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -43,8 +56,15 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
             {lastUpdated && <p className="last-updated">最終更新: {lastUpdated}</p>}
           </div>
 
-          <HeaderAds position="right" />
+          <HeaderAds position="right" activeSetIndex={headerAdSetIndex} />
         </div>
+        {headerAdSetCount > 1 && (
+          <div className="header-ads-dots">
+            {Array.from({ length: headerAdSetCount }).map((_, idx) => (
+              <span key={idx} className={`header-dot ${idx === headerAdSetIndex ? 'active' : ''}`} aria-hidden />
+            ))}
+          </div>
+        )}
       </header>
 
       <div className="main-wrapper">
@@ -138,6 +158,29 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
           background: rgba(255,255,255,0.2);
           padding: 2px 8px;
           border-radius: 12px;
+        }
+
+        .header-ads-dots {
+          display: flex;
+          justify-content: center;
+          gap: 6px;
+          margin-top: 8px;
+        }
+        .header-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.5);
+          transition: background 0.3s;
+        }
+        .header-dot.active {
+          background: white;
+        }
+
+        @media (max-width: 1200px) {
+          .header-ads-dots {
+            display: none;
+          }
         }
 
         /* Layout Grid */

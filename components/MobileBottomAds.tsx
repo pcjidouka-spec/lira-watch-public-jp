@@ -3,6 +3,7 @@ import { AD_ITEMS } from '../data/ad_items';
 
 const AMAZON_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png";
 const ROTATE_INTERVAL_MS = 5000;
+const ITEMS_PER_ROW = 4;
 
 export const MobileBottomAds: React.FC = () => {
     const [isDismissed, setIsDismissed] = useState(false);
@@ -15,7 +16,7 @@ export const MobileBottomAds: React.FC = () => {
 
     useEffect(() => {
         if (!mounted || isDismissed || AD_ITEMS.length === 0) return;
-        const setCount = Math.ceil(AD_ITEMS.length / 3) || 1;
+        const setCount = Math.ceil(AD_ITEMS.length / ITEMS_PER_ROW) || 1;
         const timer = setInterval(() => {
             setActiveSetIndex((prev) => (prev + 1) % setCount);
         }, ROTATE_INTERVAL_MS);
@@ -26,9 +27,9 @@ export const MobileBottomAds: React.FC = () => {
         return null;
     }
 
-    const start = activeSetIndex * 3;
-    const items = AD_ITEMS.slice(start, start + 3);
-    const setCount = Math.ceil(AD_ITEMS.length / 3) || 1;
+    const start = activeSetIndex * ITEMS_PER_ROW;
+    const items = AD_ITEMS.slice(start, start + ITEMS_PER_ROW);
+    const setCount = Math.ceil(AD_ITEMS.length / ITEMS_PER_ROW) || 1;
 
     return (
         <div className="mobile-bottom-ads">
@@ -114,7 +115,7 @@ export const MobileBottomAds: React.FC = () => {
                 .ad-item {
                     flex: 1;
                     min-width: 0;
-                    max-width: 180px;
+                    max-width: 90px;
                     height: 68px;
                     background: white;
                     border-radius: 6px;
