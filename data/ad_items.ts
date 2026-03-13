@@ -83,5 +83,11 @@ export const AD_ITEMS: AdItem[] = [
         title: "A8バナー7",
         image: "https://www28.a8.net/svt/bgt?aid=260304919707&wid=001&eno=01&mid=s00000026371001006000&mc=1",
         trackingPixel: "https://www15.a8.net/0.gif?a8mat=4AZ8K7+BOXHGY+5NHA+5ZMCH"
+    },
+    {
+        url: "https://px.a8.net/svt/ejp?a8mat=4AZ8K7+DNS2GI+5PYG+5YZ75",
+        title: "ALTERNA（オルタナ） - 安定資産という新しい選択肢",
+        image: "https://www23.a8.net/svt/bgt?aid=260304919826&wid=001&eno=01&mid=s00000026692001003000&mc=1",
+        trackingPixel: "https://www18.a8.net/0.gif?a8mat=4AZ8K7+DNS2GI+5PYG+5YZ75"
     }
 ];
