@@ -6,6 +6,8 @@ export default function Operator() {
         <>
             <Head>
                 <title>運営者情報 | トルコリラ・ウォッチ</title>
+                <meta name="description" content="トルコリラ・ウォッチ（lira-watch.sbs）の運営者情報ページです。お問い合わせやサイトの運営方針についてご確認いただけます。" />
+                <meta name="keywords" content="トルコリラ・ウォッチ, 運営者情報, お問い合わせ, FX, スワップポイント" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
 

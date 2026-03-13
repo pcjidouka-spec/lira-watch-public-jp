@@ -295,9 +295,9 @@ export default function Home() {
   return (
     <BlogLayout sidebar={sidebarContent} lastUpdated={siteUpdatedAt || lastUpdated || undefined}>
       <Head>
-        <title>トルコリラ・ウォッチ | lira-watch.sbs - TRY/JPYスワップポイント比較ブログ</title>
-        <meta name="description" content="トルコリラ円（TRY/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨トルコリラの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
-        <meta name="keywords" content="トルコリラ, TRY/JPY, スワップポイント, 比較, FX, トルコリラ円, スワップ投資, 高金利通貨, ランキング, ブログ" />
+        <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
+        <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
+        <meta name="keywords" content="トルコリラ, メキシコペソ, TRY/JPY, MXN/JPY, スワップポイント, 比較, FX, トルコリラ円, スワップ投資, 高金利通貨, ランキング, 不労所得, スワップ生活, 確定申告, ブログ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.png" type="image/png" />

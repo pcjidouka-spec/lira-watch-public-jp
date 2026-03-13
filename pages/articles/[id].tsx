@@ -22,9 +22,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
     <BlogLayout>
       <Head>
         <title>{article.title} | トルコリラ・ウォッチ</title>
-        <meta name="description" content={article.title} />
+        <meta name="description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 160) + '...'} />
         {article.tags && article.tags.length > 0 && (
-          <meta name="keywords" content={article.tags.join(', ')} />
+          <meta name="keywords" content={article.tags.join(', ') + ', トルコリラ, スワップポイント, FX'} />
         )}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
