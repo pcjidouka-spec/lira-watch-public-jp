@@ -39,7 +39,12 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
         // Load provider configs (キャッシュバスティング付き)
         try {
           const configTimestamp = new Date().getTime();
-          const configFile = currencyPair === 'MXN/JPY' ? '/providers_config_mxn.json' : '/providers_config.json';
+          const configFile =
+          currencyPair === 'MXN/JPY'
+            ? '/providers_config_mxn.json'
+            : currencyPair === 'USD/JPY'
+              ? '/providers_config_usd.json'
+              : '/providers_config.json';
           const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
           if (configResponse.ok) {
             const configData = await configResponse.json();
@@ -61,7 +66,12 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
 
         // Fetch Master History (キャッシュバスティング付き)
         const timestamp = new Date().getTime();
-        const historyFile = currencyPair === 'MXN/JPY' ? '/data/master_history_mxn.csv' : '/data/master_history.csv';
+        const historyFile =
+          currencyPair === 'MXN/JPY'
+            ? '/data/master_history_mxn.csv'
+            : currencyPair === 'USD/JPY'
+              ? '/data/master_history_usd.csv'
+              : '/data/master_history.csv';
         const response = await fetch(`${historyFile}?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('データの読み込みに失敗しました');
@@ -116,7 +126,7 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
     }
 
     loadData();
-  }, []);
+  }, [currencyPair]);
 
   const buyRanking = data.length > 0 ? getBuyRanking(data, providerConfigs, currencyPair) : [];
   const sellRanking = data.length > 0 ? getSellRanking(data, providerConfigs, currencyPair) : [];

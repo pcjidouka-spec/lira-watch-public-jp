@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-11T05:06:18.125492",
+  "updated_at": "2026-03-13T04:00:41.364833",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -50,7 +50,7 @@
       "updated_at": "2026-01-25T04:00:10.820724"
     },
     "line_fx": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-03-07T04:00:24.050228"
     },
     "dmm": {

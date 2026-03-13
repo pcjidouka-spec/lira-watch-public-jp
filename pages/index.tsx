@@ -19,9 +19,12 @@ export default function Home() {
   const router = useRouter();
   const tryData = useSwapData('TRY/JPY');
   const mxnData = useSwapData('MXN/JPY');
-  const [currencyTab, setCurrencyTab] = useState<'TRY' | 'MXN'>('TRY');
+  const usdData = useSwapData('USD/JPY');
+  const [currencyTab, setCurrencyTab] = useState<'TRY' | 'MXN' | 'USD'>('TRY');
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
+  const activeSwapData =
+    currencyTab === 'TRY' ? tryData : currencyTab === 'MXN' ? mxnData : usdData;
   const {
     buyRanking,
     sellRanking,
@@ -30,7 +33,7 @@ export default function Home() {
     siteUpdatedAt,
     loading,
     error,
-  } = currencyTab === 'TRY' ? tryData : mxnData;
+  } = activeSwapData;
 
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
@@ -360,7 +363,7 @@ export default function Home() {
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点における、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
@@ -384,6 +387,15 @@ export default function Home() {
                   cursor: 'pointer', fontWeight: 700,
                 }}
               >MXN/JPY</button>
+              <button
+                onClick={() => setCurrencyTab('USD')}
+                style={{
+                  padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                  background: currencyTab === 'USD' ? '#f59e0b' : '#f3f4f6',
+                  color: currencyTab === 'USD' ? 'white' : '#4b5563',
+                  cursor: 'pointer', fontWeight: 700,
+                }}
+              >USD/JPY</button>
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
               <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
@@ -397,7 +409,9 @@ export default function Home() {
             <RankingTable
               buyRankings={buyRanking}
               sellRankings={sellRanking}
-              currencyLabel={currencyTab === 'TRY' ? 'トルコリラ' : 'メキシコペソ'}
+              currencyLabel={
+                currencyTab === 'TRY' ? 'トルコリラ' : currencyTab === 'MXN' ? 'メキシコペソ' : '米ドル円'
+              }
             />
           </div>
 
@@ -443,10 +457,29 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >MXN/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('USD')}
+                    style={{
+                      padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'USD' ? '#f59e0b' : '#f3f4f6',
+                      color: currencyTab === 'USD' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >USD/JPY</button>
                 </span>
               </h2>
-              <HistoricalChart data={data} type="buy" ranking={buyRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
-              <HistoricalChart data={data} type="sell" ranking={sellRanking} currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : 'MXN/JPY'} />
+              <HistoricalChart
+                data={data}
+                type="buy"
+                ranking={buyRanking}
+                currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : currencyTab === 'MXN' ? 'MXN/JPY' : 'USD/JPY'}
+              />
+              <HistoricalChart
+                data={data}
+                type="sell"
+                ranking={sellRanking}
+                currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : currencyTab === 'MXN' ? 'MXN/JPY' : 'USD/JPY'}
+              />
             </div>
           )}
         </div>
