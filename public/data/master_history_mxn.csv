@@ -183,7 +183,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-02-25,jfx,MXN/JPY,JFX,3.0,None,None,None,error,2026/03/04
 2026-02-25,linefx,MXN/JPY,linefx,3.0,None,None,None,error,None
 2026-02-25,matsui,MXN/JPY,MATSUI FX,3.0,None,None,None,error,None
-2026-02-25,saxo,MXN/JPY,サクソバンク証券,3.0,10.89,-20.33,None,success,2026/02/25
+2026-02-25,saxo,MXN/JPY,サクソバンク証券,1.0,3.63,-6.777,None,success,2026/02/25
 2026-02-25,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,error,2026/02/25
 2026-02-25,traders_light,MXN/JPY,LIGHT FX,3.0,None,None,None,error,None
 2026-02-25,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/02/25
@@ -316,7 +316,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-03-05,jfx,MXN/JPY,JFX,1.0,None,None,None,error,2026/03/05
 2026-03-05,linefx,MXN/JPY,linefx,1.0,12.0,-17.0,None,success,2026/03/05
 2026-03-05,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,2026/03/05
-2026-03-05,saxo,MXN/JPY,サクソバンク証券,3.0,32.59,-58.3,None,success,2026-03-05
+2026-03-05,saxo,MXN/JPY,サクソバンク証券,1.0,10.863,-19.433,None,success,2026-03-05
 2026-03-05,sbi,MXN/JPY,SBI FXトレード,3.0,None,None,None,error,None
 2026-03-05,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,03/05,success,2026/03/05
 2026-03-05,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,03/05,success,2026/03/05
