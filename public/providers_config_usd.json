@@ -128,6 +128,17 @@
         "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。",
         "swap_point_adjustment": "【最重要：単位】ヒロセは1,000通貨単位で表示されていることが多いです。表が1,000通貨あたりの場合、JSONでは1万通貨換算にそろえるため買・売の数値をそのまま出してください（後処理で1桁台なら10倍します）。1万通貨あたりで既に13円前後ならそのまま。131のように大きい場合は1,000通貨あたりの可能性があるので÷10して13程度になるか確認してください。"
       }
+    },
+    {
+      "id": "saxo",
+      "name": "サクソバンク証券",
+      "url": "https://www.home.saxo/ja-jp/rates-and-conditions/forex/trading-conditions#swappoint",
+      "currency_pair_selector": "USD/JPY",
+      "campaign_url": "https://www.home.saxo/ja-jp/campaigns/summary",
+      "instructions": {
+        "date_handling": "【特例処理】この事業者はブラウザ操作をバイパスし、PDFダウンローダー(saxo_pdf_handler.py)経由で直接テキスト抽出されます。"
+      },
+      "data_delay_expected": true
     }
   ],
   "common_instructions": {
