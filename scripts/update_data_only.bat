@@ -24,7 +24,7 @@ cd ..
 REM 2. lira-watch/public/data/master_history.csvにコピー
 echo.
 echo [2/2] HP用データファイルを更新中...
-copy /Y tryuniondata\master_history.csv lira-watch\public\data\master_history.csv
+copy /Y tryuniondata_try\master_history.csv lira-watch\public\data\master_history.csv
 if errorlevel 1 (
     echo エラー: データファイルのコピーに失敗しました
     pause
