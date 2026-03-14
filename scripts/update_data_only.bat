@@ -10,21 +10,21 @@ echo ========================================
 echo 実行日時: %date% %time%
 echo.
 
-REM 1. union_data_managerでmaster_history.csvを更新
-echo [1/2] master_history.csvを更新中...
+REM 1. union_data_managerでmaster_history_try.csvを更新
+echo [1/2] master_history_try.csvを更新中...
 cd guicatch
 python union_data_manager.py
 if errorlevel 1 (
-    echo エラー: master_history.csvの更新に失敗しました
+    echo エラー: master_history_try.csvの更新に失敗しました
     pause
     exit /b 1
 )
 cd ..
 
-REM 2. lira-watch/public/data/master_history.csvにコピー
+REM 2. lira-watch/public/data/master_history_try.csvにコピー
 echo.
 echo [2/2] HP用データファイルを更新中...
-copy /Y tryuniondata_try\master_history.csv lira-watch\public\data\master_history.csv
+copy /Y tryuniondata_try\master_history_try.csv lira-watch\public\data\master_history_try.csv
 if errorlevel 1 (
     echo エラー: データファイルのコピーに失敗しました
     pause

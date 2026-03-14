@@ -71,7 +71,7 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
             ? '/data/master_history_mxn.csv'
             : currencyPair === 'USD/JPY'
               ? '/data/master_history_usd.csv'
-              : '/data/master_history.csv';
+              : '/data/master_history_try.csv';
         const response = await fetch(`${historyFile}?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('データの読み込みに失敗しました');
