@@ -89,5 +89,15 @@ export const AD_ITEMS: AdItem[] = [
         title: "ALTERNA（オルタナ） - 安定資産という新しい選択肢",
         image: "https://www23.a8.net/svt/bgt?aid=260304919826&wid=001&eno=01&mid=s00000026692001003000&mc=1",
         trackingPixel: "https://www18.a8.net/0.gif?a8mat=4AZ8K7+DNS2GI+5PYG+5YZ75"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cda82c.59ad1b6e.50cda82d.a8b4cca9/?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fcaa7126df45d04781980b8ae352cbd55%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjoxLCJhbXAiOmZhbHNlfQ%3D%3D",
+        title: "Fitbit Inspire 3 フィットネストラッカー",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/520224aa.dceef8ab.520224ab.7c236384/?me_id=1418268&item_id=10001182&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmk2-market%2Fcabinet%2Famayahoo%2F09560750%2F1428-002203.jpg%3F_ex%3D240x240&s=240x240&t=picttext"
+    },
+    {
+        url: "https://hb.afl.rakuten.co.jp/ichiba/50cda82c.59ad1b6e.50cda82d.a8b4cca9/?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2F950ed61c670fcdcdb71302d60d62d813%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjEsImFtcCI6ZmFsc2V9",
+        title: "RENPHO 体組成計",
+        image: "https://hbb.afl.rakuten.co.jp/hgb/520212c5.f08971a7.520212c6.a713260c/?me_id=1416242&item_id=10000105&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frenpho%2Fcabinet%2Fall_page%2Fmain_picture%2F14.jpg%3F_ex%3D240x240&s=240x240&t=pict"
     }
 ];
