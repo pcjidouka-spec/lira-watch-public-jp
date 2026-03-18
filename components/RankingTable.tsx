@@ -26,11 +26,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
 
     // Hardcode DMM FX URLs as they are not in providers_config.json
     if (buy && buy.name === 'DMM FX') {
-      buy.url = 'https://fx.dmm.com/fx/service/swap/';
+      buy.url = 'https://fx.dmm.com/fx/service/swapcalendar/';
       buy.campaign_url = 'https://fx.dmm.com/campaign/';
     }
     if (sell && sell.name === 'DMM FX') {
-      sell.url = 'https://fx.dmm.com/fx/service/swap/';
+      sell.url = 'https://fx.dmm.com/fx/service/swapcalendar/';
       sell.campaign_url = 'https://fx.dmm.com/campaign/';
     }
 
