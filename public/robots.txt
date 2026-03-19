@@ -1,8 +1,19 @@
-# robots.txt for lira-watch.sbs
-# Allow all crawlers including AI bots
+# robots.txt — トルコリラ・ウォッチ（lira-watch.sbs）
+#
+# 【サイト内容（2026年時点）】
+# - トップ: FXスワップポイント比較（トルコリラ/円・メキシコペソ/円・米ドル/円）とチャート
+# - 記事: /articles/<id>/（コラム・キャンペーン情報など。一覧は data/articles.ts）
+# - 静的ページ: /contact/（お問い合わせ）, /operator/（運営者情報）, /privacy/（プライバシー）
+#
+# 【フィード】ビルド時に data/articles.ts から生成 → public に出力
+# - サイトマップ: /sitemap.xml（記事URL・トップを含む）
+# - RSS 2.0: /rss.xml（記事の購読用。HTMLでは link rel="alternate" でも参照）
+#
+# HP更新フロー（update_and_build 等）で npm run build すると rss.xml / sitemap.xml は
+# 自動で再生成される。本ファイル（robots.txt）は手動メンテ。
 
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://lira-watch.sbs/sitemap.xml
+# 正規ドメインは www（_document / RSS / サイトマップと一致）
+Sitemap: https://www.lira-watch.sbs/sitemap.xml
