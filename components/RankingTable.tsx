@@ -100,6 +100,31 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                           <img width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4AV5OF+5TKLPU+25B2+601S1" alt="" style={{ border: 0 }} />
                         </>
                       )}
+                      {getProviderId(row.buy) === 'hirose' && (
+                        <>
+                          <a
+                            href="https://t.afi-b.com/visit.php?a=01064i-P15468G&p=79755021"
+                            rel="nofollow noopener noreferrer"
+                            target="_blank"
+                            className="hirose-banner"
+                          >
+                            <img
+                              src="https://www.afi-b.com/upload_image/1064-1202089209-3.gif"
+                              width={88}
+                              height={31}
+                              style={{ border: 'none' }}
+                              alt="FX"
+                            />
+                          </a>
+                          <img
+                            src="https://t.afi-b.com/lead/01064i/79755021/P15468G"
+                            width={1}
+                            height={1}
+                            style={{ border: 'none' }}
+                            alt=""
+                          />
+                        </>
+                      )}
                       {getProviderId(row.buy) === 'matsui' && (
                         <>
                           <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+584ZXU+4SM6+609HT" rel="nofollow" target="_blank" className="matsui-banner">
@@ -155,6 +180,31 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                             <img width="32" height="24" alt="JFX" src="https://www23.a8.net/svt/bgt?aid=260114559352&wid=001&eno=01&mid=s00000010019001008000&mc=1" />
                           </a>
                           <img width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4AV5OF+5TKLPU+25B2+601S1" alt="" style={{ border: 0 }} />
+                        </>
+                      )}
+                      {getProviderId(row.sell) === 'hirose' && (
+                        <>
+                          <a
+                            href="https://t.afi-b.com/visit.php?a=01064i-P15468G&p=79755021"
+                            rel="nofollow noopener noreferrer"
+                            target="_blank"
+                            className="hirose-banner"
+                          >
+                            <img
+                              src="https://www.afi-b.com/upload_image/1064-1202089209-3.gif"
+                              width={88}
+                              height={31}
+                              style={{ border: 'none' }}
+                              alt="FX"
+                            />
+                          </a>
+                          <img
+                            src="https://t.afi-b.com/lead/01064i/79755021/P15468G"
+                            width={1}
+                            height={1}
+                            style={{ border: 'none' }}
+                            alt=""
+                          />
                         </>
                       )}
                       {getProviderId(row.sell) === 'matsui' && (
@@ -428,6 +478,21 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        /* ヒロセ通商 AFB バナー */
+        .hirose-banner {
+          display: inline-block;
+          margin-left: 4px;
+          line-height: 0;
+        }
+        .hirose-banner img {
+          vertical-align: middle;
+          transition: all 0.2s;
+        }
+        .hirose-banner:hover img {
+          transform: scale(1.03);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         /* Matsui Banner */
         .matsui-banner {
           display: inline-block;
@@ -532,4 +597,4 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
     </div>
   );
 };
-// Last updated to trigger build: 2026-01-27 00:28
+// Last updated to trigger build: 2026-03-20 ヒロセ AFB バナー追加
