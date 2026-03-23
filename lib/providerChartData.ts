@@ -15,8 +15,8 @@ export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', pro
   for (const record of successData) {
     const value = type === 'buy' ? record.swap_buy : record.swap_sell;
 
-    // 値がない場合はスキップ（0は有効な値として扱う）
-    if (value === null) continue;
+    // 値がない場合、または0の場合はスキップ（外れ値や取得エラー等による0をグラフに描画しない）
+    if (value === null || value === 0) continue;
 
     // 日付文字列 (YYYY-MM-DD or YYYY/MM/DD)
     // actual_dateがある場合はそちらを優先（データの実際の日付を使用）

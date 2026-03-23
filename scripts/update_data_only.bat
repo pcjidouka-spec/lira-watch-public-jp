@@ -13,7 +13,7 @@ echo.
 REM 1. union_data_managerでmaster_history_try.csvを更新
 echo [1/2] master_history_try.csvを更新中...
 cd guicatch
-python union_data_manager.py
+"C:\Users\pcjid\AppData\Local\Python\pythoncore-3.14-64\python.exe" union_data_manager.py
 if errorlevel 1 (
     echo エラー: master_history_try.csvの更新に失敗しました
     pause
@@ -39,6 +39,7 @@ echo.
 echo 開発サーバーをリロードすると、新しいデータが反映されます。
 echo.
 pause
+
 
 
 

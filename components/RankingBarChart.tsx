@@ -8,7 +8,13 @@ interface RankingBarChartProps {
 }
 
 export const RankingBarChart: React.FC<RankingBarChartProps> = ({ rankings, type, title }) => {
-  if (rankings.length === 0) {
+  // 値が0のデータはグラフから除外する
+  const filteredRankings = rankings.filter(r => {
+    const val = type === 'buy' ? r.swap_buy : r.swap_sell;
+    return val !== 0;
+  });
+
+  if (filteredRankings.length === 0) {
     return (
       <div className="ranking-chart-container">
         <h2 className="ranking-title">{title}</h2>
@@ -18,7 +24,7 @@ export const RankingBarChart: React.FC<RankingBarChartProps> = ({ rankings, type
   }
 
   // 買いの場合は通常通り、売りの場合は絶対値で計算
-  const values = rankings.map(r => type === 'buy' ? r.swap_buy : Math.abs(r.swap_sell));
+  const values = filteredRankings.map(r => type === 'buy' ? r.swap_buy : Math.abs(r.swap_sell));
   const maxValue = Math.max(...values);
   const minValue = Math.min(...values);
   const range = maxValue - minValue || 1; // ゼロ除算を防ぐ
@@ -27,7 +33,7 @@ export const RankingBarChart: React.FC<RankingBarChartProps> = ({ rankings, type
     <div className="ranking-chart-container">
       <h2 className="ranking-title">{title}</h2>
       <div className="bar-chart">
-        {rankings.map((rank, index) => {
+        {filteredRankings.map((rank, index) => {
           const originalValue = type === 'buy' ? rank.swap_buy : rank.swap_sell;
           const displayValue = type === 'buy' ? rank.swap_buy : Math.abs(rank.swap_sell);
           const percentage = ((displayValue - minValue) / range) * 100;
