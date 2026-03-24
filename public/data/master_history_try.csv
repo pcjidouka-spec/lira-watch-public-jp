@@ -196,7 +196,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2025-12-30,invast,TRY/JPY,トライオートFX,0.0,0.0,0.0,None,success,
 2025-12-30,linefx,TRY/JPY,linefx,0.0,0.0,0.0,12/30(火),success,
 2025-12-30,matsui,TRY/JPY,MATSUI FX,None,None,None,None,error,
-2025-12-30,sbi,TRY/JPY,SBI FXトレード,25.0,-1.0,None,01月06日,success,
+2025-12-30,sbi,TRY/JPY,SBI FXトレード,0.0,0.0,0.0,01月06日,success,
 2025-12-30,traderslight,TRY/JPY,traderslight,0.0,None,None,12/30,success,
 2025-12-31,centraltanshi,TRY/JPY,centraltanshi,None,None,None,None,error,
 2025-12-31,click365okasan,TRY/JPY,クリック365,0.0,0.0,0.0,None,success,
@@ -762,7 +762,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-02-17,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/02/17
 2026-02-17,linefx,TRY/JPY,linefx,1.0,22.0,-32.0,None,success,2026/02/17
 2026-02-17,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/02/17
-2026-02-17,saxo,TRY/JPY,サクソバンク証券,1.0,5.688,-6.938,None,success,2026/02/12
+2026-02-17,saxo,TRY/JPY,サクソバンク証券,1.0,22.752,-27.752,None,success,2026/02/12
 2026-02-17,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-24.0,None,success,2026/02/17
 2026-02-17,traders_light,TRY/JPY,LIGHT FX,1.0,24.1,-24.1,None,success,2026/02/17
 2026-02-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/02/17
