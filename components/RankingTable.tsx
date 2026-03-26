@@ -87,11 +87,6 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                         </a>
                       )}
 
-                      {getProviderId(row.buy) === 'dmm' && (
-                        <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+1UOKJ6+1WP2+6DZBL" rel="nofollow" target="_blank" className="dmm-banner">
-                          <img src="https://www26.a8.net/svt/bgt?aid=260114559112&wid=001&eno=01&mid=s00000008903001073000&mc=1" alt="DMM FX" width="32" height="24" />
-                        </a>
-                      )}
                       {getProviderId(row.buy) === 'jfx' && (
                         <>
                           <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+5TKLPU+25B2+601S1" rel="nofollow" target="_blank" className="jfx-banner">
@@ -169,11 +164,6 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                         </a>
                       )}
 
-                      {getProviderId(row.sell) === 'dmm' && (
-                        <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+1UOKJ6+1WP2+6DZBL" rel="nofollow" target="_blank" className="dmm-banner">
-                          <img src="https://www26.a8.net/svt/bgt?aid=260114559112&wid=001&eno=01&mid=s00000008903001073000&mc=1" alt="DMM FX" width="32" height="24" />
-                        </a>
-                      )}
                       {getProviderId(row.sell) === 'jfx' && (
                         <>
                           <a href="https://px.a8.net/svt/ejp?a8mat=4AV5OF+5TKLPU+25B2+601S1" rel="nofollow" target="_blank" className="jfx-banner">
@@ -442,23 +432,6 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         @keyframes pulse {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.7; }
-        }
-
-        /* DMM Banner */
-        .dmm-banner {
-          display: inline-block;
-          margin-left: 4px;
-          line-height: 0;
-        }
-        .dmm-banner img {
-          border: 1px solid #e5e7eb;
-          border-radius: 4px;
-          vertical-align: middle;
-          transition: all 0.2s;
-        }
-        .dmm-banner:hover img {
-          transform: scale(1.05);
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         /* JFX Banner */
