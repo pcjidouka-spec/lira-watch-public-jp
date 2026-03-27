@@ -15,7 +15,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が今月も開催！10万円からでも30％上乗せのチャンス',
   thumbnail_text: '外為どっとコム\nスワップ最大60％増額\n10万円から30％上乗せ',
   date: '2026/03/28',
-  thumbnail: '/images/gaitame_campaign_60.png',
+  thumbnail: '/images/gaitame_campaign_2604_v2.png',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '高金利通貨', '外為どっとコム'],
   content: `
     <p class="intro">
