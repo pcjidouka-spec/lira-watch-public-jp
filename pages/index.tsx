@@ -636,7 +636,7 @@ export default function Home() {
         }
 
         .post-thumbnail-card.cover-mode img {
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .post-thumbnail-card-old a {

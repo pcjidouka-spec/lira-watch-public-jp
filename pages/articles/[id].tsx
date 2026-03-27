@@ -212,7 +212,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         }
 
         .article-thumbnail-container.cover-mode .meta-thumbnail-image {
-          object-fit: cover;
+          object-fit: contain;
         }
         .article-body :global(.campaign-details) {
            background: #f8fafc;
