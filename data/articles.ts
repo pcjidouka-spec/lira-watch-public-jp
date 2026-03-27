@@ -11,6 +11,100 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
 {
+  id: 'gaitame-swap-campaign-20260328-increase',
+  title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が今月も開催！10万円からでも30％上乗せのチャンス',
+  thumbnail_text: '外為どっとコム\nスワップ最大60％増額\n10万円から30％上乗せ',
+  date: '2026/03/28',
+  thumbnail: '/images/gaitame_campaign_60.png',
+  tags: ['FX', 'トルコリラ', 'スワップ投資', '高金利通貨', '外為どっとコム'],
+  content: `
+    <p class="intro">
+      外為どっとコムにて、先月に引き続き非常にお得な<strong>「スワップポイント最大60％増額キャンペーン」</strong>が実施されます！
+      今回の最大の注目ポイントも、100万円以上の入金で60％増額、10万円以上の入金でも30％増額の恩恵を受けられる点です。
+      少額から参加したい方にも、しっかり利益を狙いたい方にも見逃せない内容となっています。
+    </p>
+
+    <h3>【上乗せで具体的にいくら増える？（目安の計算）】</h3>
+    <p>
+      公式サイトのシミュレーションによると、対象期間中に複数の通貨ペアを運用した場合、以下のようなまとまったポイント還元が期待できます。
+    </p>
+    <ul>
+      <li><strong>入金100万円以上（60％増額）の場合：</strong> 合計で <span style="color: #ef4444; font-weight: bold;">76,995円相当</span> のポイント上乗せ！</li>
+      <li><strong>入金10万円以上〜100万円未満（30％増額）の場合：</strong> 合計で <span style="color: #ef4444; font-weight: bold;">38,555円相当</span> のポイント上乗せ！</li>
+    </ul>
+
+    <p>
+      また、1日・一定数量あたりの上乗せ目安（60％増額時）は以下の通り、先月よりもさらに魅力的な水準となっています。
+    </p>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>対象通貨ペア・ポジション</th>
+          <th>数量</th>
+          <th>1日あたりの上乗せ目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>トルコリラ/円（買）</td>
+          <td>10万通貨</td>
+          <td>約146円相当上乗せ</td>
+        </tr>
+        <tr>
+          <td>米ドル/トルコリラ（売）</td>
+          <td>1万通貨</td>
+          <td>約499円相当上乗せ</td>
+        </tr>
+        <tr>
+          <td>ユーロ/トルコリラ（売）</td>
+          <td>1万通貨</td>
+          <td>約683円相当上乗せ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>【キャンペーンの概要】</h3>
+    <div class="campaign-details">
+      <ul>
+        <li><strong>条件：</strong> 期間中の入金額（出金を引いた純増額）が10万円以上で30%増額、100万円以上で60%増額</li>
+        <li><strong>対象：</strong> 『外貨ネクストネオ』でのトルコリラ/円（買）、米ドル/トルコリラ（売）、ユーロ/トルコリラ（売）の新規ポジション</li>
+        <li><strong>期間：</strong> 2026年3月30日(月)午前7時00分 ～ 2026年5月2日(土)午前5時55分</li>
+        <li><strong>特典：</strong> FXポイント還元（1ポイント＝1円として『らくらくFX積立』での買付に利用可能）</li>
+      </ul>
+      <p style="font-size: 0.9em; margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+        <strong>【適用対象ポジションLot数上限】</strong><br>
+        各営業日のクローズ時点で適用対象となる数量には上限があります（入金額にかかわらず共通）。<br>
+        ・トルコリラ/円：1,000Lot（100万通貨）まで<br>
+        ・米ドル/トルコリラ：200Lot（20万通貨）まで<br>
+        ・ユーロ/トルコリラ：200Lot（20万通貨）まで
+      </p>
+    </div>
+
+    <h3>【参加するための必須条件・注意点】</h3>
+    <ul>
+      <li>専用フォームからの<strong>「エントリー」</strong>が必須です。入金や取引のあとでも期間内であれば有効です。</li>
+      <li>特典のFXポイントを受け取るには、キャンペーン終了までに<strong>『らくらくFX積立』の口座開設</strong>を完了しておく必要があります。</li>
+      <li>今回のキャンペーンは、同時開催中の「ご入金＆お取引でもれなく最大3%キャッシュバックキャンペーン」などと重複適用が可能です。</li>
+    </ul>
+
+    <p style="font-weight: bold; margin-top: 20px;">
+      新興国通貨であるトルコリラは、相場の急変動などのリスクもありますが、こうした増額キャンペーンを賢く利用することで、より効率的な運用が目指せます。
+      ぜひ詳細をチェックして、まずはエントリーから始めてみてください！
+    </p>
+
+    <div class="campaign-link" style="margin-top: 30px;">
+      <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+      <a href="https://www.gaitame.com/campaign/increase-swap-2604/" target="_blank" rel="noopener noreferrer">
+        https://www.gaitame.com/campaign/increase-swap-2604/
+      </a>
+    </div>
+
+    <p style="font-size: 0.8em; color: #6b7280; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px;">
+      ※本記事は提供されたソースに基づき作成されています。投資に関する最終決定はご自身の判断で行ってください。
+    </p>
+  `,
+},
+{
   id: 'central-tanshi-high-yield-swap-20260313',
   title: '【最大4万円のチャンス！】セントラル短資FXの高金利通貨スワップ増量キャンペーンがすごい！（最大68％増）',
   thumbnail_text: 'セントラル短資FX\n高金利通貨\n最大4万円キャッシュバック',
