@@ -119,7 +119,7 @@ export function getLatestData(data: SwapData[]): SwapData[] {
 }
 
 /**
- * 直近約1か月（30日間・データセット最新日を終端）のデータを取得
+ * 直近約2週間（14日分・データセット最新日を終端）のデータを取得
  */
 export function getPast30DaysData(data: SwapData[]): SwapData[] {
   if (data.length === 0) return [];
@@ -137,9 +137,9 @@ export function getPast30DaysData(data: SwapData[]): SwapData[] {
   // Consider the most recent date in the dataset as 'today' to avoid issues with missing recent data
   const latestDate = new Date(latestDateStr);
 
-  // Calculate the cutoff date (30 days inclusive from the latest date)
+  // Calculate the cutoff date (14 days inclusive from the latest date)
   const cutoffDate = new Date(latestDate);
-  cutoffDate.setDate(latestDate.getDate() - 29);
+  cutoffDate.setDate(latestDate.getDate() - 13);
 
   // Set cutoff time to start of day for accurate comparison
   cutoffDate.setHours(0, 0, 0, 0);
@@ -153,7 +153,7 @@ export function getPast30DaysData(data: SwapData[]): SwapData[] {
 }
 
 /**
- * 買いスワップランキングを生成（降順）- 直近約1か月の付与日数加重平均
+ * 買いスワップランキングを生成（降順）- 直近約2週間の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
@@ -229,7 +229,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
 }
 
 /**
- * 売りスワップランキングを生成（絶対値が小さい順）- 直近約1か月の付与日数加重平均
+ * 売りスワップランキングを生成（絶対値が小さい順）- 直近約2週間の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {

@@ -44,7 +44,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
   return (
     <div className="ranking-container">
       <div className="main-header">{currencyLabel} 円スワップポイント</div>
-      <div className="ranking-period-note">順位は直近約1か月の付与日数加重平均に基づきます</div>
+      <div className="ranking-period-note">順位は直近約2週間の付与日数加重平均に基づきます</div>
 
       <div className="table-wrapper">
         <table className="merged-table">
