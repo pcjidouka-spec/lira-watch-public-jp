@@ -119,9 +119,9 @@ export function getLatestData(data: SwapData[]): SwapData[] {
 }
 
 /**
- * 過去15日間のデータを取得
+ * 直近約1か月（30日間・データセット最新日を終端）のデータを取得
  */
-export function getPast15DaysData(data: SwapData[]): SwapData[] {
+export function getPast30DaysData(data: SwapData[]): SwapData[] {
   if (data.length === 0) return [];
 
   // Sort descending by date
@@ -137,9 +137,9 @@ export function getPast15DaysData(data: SwapData[]): SwapData[] {
   // Consider the most recent date in the dataset as 'today' to avoid issues with missing recent data
   const latestDate = new Date(latestDateStr);
 
-  // Calculate the cutoff date (15 days ago from the latest date)
+  // Calculate the cutoff date (30 days inclusive from the latest date)
   const cutoffDate = new Date(latestDate);
-  cutoffDate.setDate(latestDate.getDate() - 14); // -14 to include the latest date, making it 15 days total
+  cutoffDate.setDate(latestDate.getDate() - 29);
 
   // Set cutoff time to start of day for accurate comparison
   cutoffDate.setHours(0, 0, 0, 0);
@@ -153,18 +153,18 @@ export function getPast15DaysData(data: SwapData[]): SwapData[] {
 }
 
 /**
- * 買いスワップランキングを生成（降順）- 過去15日間平均
+ * 買いスワップランキングを生成（降順）- 直近約1か月の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
-  const past15DaysData = getPast15DaysData(successData);
+  const windowData = getPast30DaysData(successData);
 
   // 事業者ごとに平均を計算（付与日数加重平均）
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
-  for (const record of past15DaysData) {
+  for (const record of windowData) {
     // 0のデータは平均計算から除外
     if (record.swap_buy !== null && record.swap_buy !== 0 && !isNaN(record.swap_buy)) {
       // daysがnullまたは0の場合は1として扱う
@@ -199,7 +199,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
     // 売りスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
     let sellWeightedSum = 0;
     let sellTotalDays = 0;
-    for (const record of past15DaysData) {
+    for (const record of windowData) {
       if (record.provider_id === providerId && record.swap_sell !== null && record.swap_sell !== 0) {
         const days = record.days && record.days > 0 ? record.days : 1;
         sellWeightedSum += record.swap_sell * days;
@@ -211,7 +211,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
       : 0;
 
     // 最新のactual_dateを取得
-    const latestRecord = past15DaysData.find(d => d.provider_id === providerId);
+    const latestRecord = windowData.find(d => d.provider_id === providerId);
 
     ranking.push({
       provider_id: providerId,
@@ -229,18 +229,18 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
 }
 
 /**
- * 売りスワップランキングを生成（絶対値が小さい順）- 過去15日間平均
+ * 売りスワップランキングを生成（絶対値が小さい順）- 直近約1か月の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
-  const past15DaysData = getPast15DaysData(successData);
+  const windowData = getPast30DaysData(successData);
 
   // 事業者ごとに平均を計算（付与日数加重平均）
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
-  for (const record of past15DaysData) {
+  for (const record of windowData) {
     // 0のデータは平均計算から除外
     if (record.swap_sell !== null && record.swap_sell !== 0 && !isNaN(record.swap_sell)) {
       // daysがnullまたは0の場合は1として扱う
@@ -275,7 +275,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
     // 買いスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
     let buyWeightedSum = 0;
     let buyTotalDays = 0;
-    for (const record of past15DaysData) {
+    for (const record of windowData) {
       if (record.provider_id === providerId && record.swap_buy !== null && record.swap_buy !== 0) {
         const days = record.days && record.days > 0 ? record.days : 1;
         buyWeightedSum += record.swap_buy * days;
@@ -287,7 +287,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
       : 0;
 
     // 最新のactual_dateを取得
-    const latestRecord = past15DaysData.find(d => d.provider_id === providerId);
+    const latestRecord = windowData.find(d => d.provider_id === providerId);
 
     ranking.push({
       provider_id: providerId,

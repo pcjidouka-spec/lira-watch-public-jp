@@ -44,6 +44,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
   return (
     <div className="ranking-container">
       <div className="main-header">{currencyLabel} 円スワップポイント</div>
+      <div className="ranking-period-note">順位は直近約1か月の付与日数加重平均に基づきます</div>
 
       <div className="table-wrapper">
         <table className="merged-table">
@@ -271,6 +272,15 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           letter-spacing: 0.05em;
           text-shadow: 0 2px 4px rgba(0,0,0,0.2);
           background: linear-gradient(to bottom, #ef4444, #dc2626); /* Gradient for better look */
+        }
+
+        .ranking-period-note {
+          text-align: center;
+          font-size: 13px;
+          color: #4b5563;
+          padding: 8px 12px 10px;
+          background: #f9fafb;
+          border-bottom: 1px solid #e5e7eb;
         }
 
         .table-wrapper {
@@ -525,6 +535,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
            .main-header {
              font-size: 20px;
              padding: 8px;
+           }
+
+           .ranking-period-note {
+             font-size: 12px;
+             padding: 6px 8px 8px;
            }
            
            .th-side-header {
