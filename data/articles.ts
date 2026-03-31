@@ -11,6 +11,47 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
 {
+  id: 'central-tanshi-abnormal-swap-20260331',
+  title: 'セントラル短資の異常スワップはいつまで続く？',
+  thumbnail_text: 'セントラル短資\n異常スワップ\n年率33％超え',
+  date: '2026/03/31',
+  thumbnail: '/images/central-tanshi-abnormal-swap-20260331_60.png',
+  tags: ['FX', 'トルコリラ', 'スワップ投資', 'セントラル短資FX', '高金利通貨'],
+  content: `
+    <p class="intro">
+      セントラル短資FXの2026年3月の実績が驚異的な数字を叩き出しています。1000万通貨の運用で、3月31日単日のスワップ損益が「33,699円」、月間のスワップ損益合計はなんと「969,214円」にも達しました。
+    </p>
+
+    <div class="article-image-container" style="text-align: center; margin: 20px 0;">
+      <img src="/images/central-tanshi-screenshot-20260331.png" alt="セントラル短資FX 2026年3月実績" style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p style="font-size: 0.8em; color: #666; margin-top: 8px;">（セントラル短資FX 2026年3月の運用画面）</p>
+    </div>
+
+    <p>
+      この実績を年率換算すると約33%になります。もしレバレッジ3倍で運用していたとすれば、年率100%近い（？！）計算になります。
+    </p>
+
+    <h3>【他社キャンペーンとの比較】</h3>
+    <p>
+      実は今回、SBI FXトレードの「春のスワップ20％増額キャンペーン」を紹介する予定でした。しかし、基本スワップ24円に20%を上乗せしたとしても、現在のセントラル短資の圧倒的なスワップ水準には全く及ばないため、紹介を断念せざるを得ませんでした。
+    </p>
+
+    <h3>【この異常高水準はいつまで続くのか？】</h3>
+    <p>
+      果たして、セントラル短資はこの異常に高いスワップ水準をこのまま継続できるのかが焦点です。
+      トルコの3月政策金利は37％とほぼ限界に近い水準にあり、いずれは低下してくると予想されます。
+    </p>
+    <p>
+      スワップが下がってくる傾向については、当ブログで毎日更新中のデータでご確認いただけます。タイミングを見計らって、改めて他社のキャンペーン情報などもお届けする予定です。
+    </p>
+
+    <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin-top: 30px; border: 1px solid #e2e8f0;">
+      <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">📊 最新データはブログでチェック！</p>
+      <p style="text-align: center;">下がってくる傾向は毎日更新中のブログで確認できます！（いいね♪押してね！）</p>
+    </div>
+  `,
+},
+{
   id: 'gaitame-swap-campaign-20260328-increase',
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が今月も開催！10万円からでも30％上乗せのチャンス',
   thumbnail_text: '外為どっとコム\nスワップ最大60％増額\n10万円から30％上乗せ',
