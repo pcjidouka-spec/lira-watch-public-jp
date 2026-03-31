@@ -14,20 +14,35 @@ FONT_PATH = "C:\\Windows\\Fonts\\meiryob.ttc"  # Using Meiryo Bold for Japanese
 def process_thumbnail(input_path, output_path):
     img = Image.open(input_path).convert("RGB")
     
-    # AI generated images are usually 1:1. We want to auto-crop them to 4:3
+    # AI generated images are usually 1:1. We want to pad them to 4:3 instead of cropping
+    # to avoid losing text at the top or bottom.
     w, h = img.size
     
-    # Target 4:3 ratio
-    target_h = int(w * 3 / 4)
+    target_aspect = 4 / 3
+    current_aspect = w / h
     
-    if h > target_h:
-        # It's taller than 4:3, so we crop the center
-        top = (h - target_h) // 2
-        bottom = top + target_h
-        img = img.crop((0, top, w, bottom))
+    if current_aspect < target_aspect:
+        # Image is too tall/narrow (like 1:1). Pad the sides (letterbox)
+        new_w = int(h * target_aspect)
+        new_h = h
+        # Use white as fallback, or we could pick a dominant color. Using white for safety.
+        new_img = Image.new("RGB", (new_w, new_h), (255, 255, 255))
+        # Center the original image
+        offset_x = (new_w - w) // 2
+        new_img.paste(img, (offset_x, 0))
+        img = new_img
+    elif current_aspect > target_aspect:
+        # Image is too wide. Pad the top and bottom.
+        new_w = w
+        new_h = int(w / target_aspect)
+        new_img = Image.new("RGB", (new_w, new_h), (255, 255, 255))
+        # Center the original image
+        offset_y = (new_h - h) // 2
+        new_img.paste(img, (0, offset_y))
+        img = new_img
     
     img.save(output_path, quality=95)
-    print(f"Successfully processed and saved 4:3 thumbnail to {output_path}")
+    print(f"Successfully processed and saved 4:3 padded/letterboxed thumbnail to {output_path}")
 
 def get_article_details(article_id):
     # This is still used by the main block to verify article existence, 
