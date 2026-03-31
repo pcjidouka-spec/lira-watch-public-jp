@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-03-30T04:00:33.888094",
+  "updated_at": "2026-03-31T04:00:34.064035",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-03-02T15:14:45.781790"
     },
     "gmo": {
-      "has_new": false,
-      "updated_at": "2026-02-27T20:29:52.131437"
+      "has_new": true,
+      "updated_at": "2026-03-31T04:00:03.534351"
     },
     "central_tanshi": {
       "has_new": false,
