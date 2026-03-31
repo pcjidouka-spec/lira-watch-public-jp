@@ -186,7 +186,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .article-thumbnail-container {
           width: 33.33%;
           aspect-ratio: 4 / 3;
-          background: #000;
+          background: transparent;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -194,11 +194,14 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           overflow: hidden;
           flex-shrink: 0;
           position: relative;
+          padding: 4px;
+          box-sizing: border-box;
         }
 
         .article-thumbnail-container.old-article {
           aspect-ratio: auto;
           background: transparent;
+          padding: 0;
         }
 
         .article-thumbnail-container.cover-mode {
@@ -206,10 +209,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         }
         
         .meta-thumbnail-image {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
           display: block;
         }

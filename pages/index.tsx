@@ -603,11 +603,13 @@ export default function Home() {
           overflow: hidden;
           border-radius: 8px 8px 0 0;
           aspect-ratio: 4 / 3;
-          background: #000; /* Letterbox background to prevent white gaps */
+          background: transparent; /* Changed from #000 to mimic previous settings better */
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
+          padding: 8px; /* Added padding to prevent text from touching rounded corners */
+          box-sizing: border-box;
         }
 
         .post-thumbnail-card a {
@@ -619,10 +621,8 @@ export default function Home() {
         }
 
         .post-thumbnail-card img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
           display: block;
         }
