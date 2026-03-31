@@ -193,6 +193,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           border-radius: 8px;
           overflow: hidden;
           flex-shrink: 0;
+          position: relative;
         }
 
         .article-thumbnail-container.old-article {
@@ -207,6 +208,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         .meta-thumbnail-image {
           width: 100%;
           height: 100%;
+          max-width: 100%;
+          max-height: 100%;
           object-fit: contain;
           display: block;
         }

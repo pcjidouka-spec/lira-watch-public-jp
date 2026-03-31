@@ -47,7 +47,7 @@ export const articles: Article[] = [
 
     <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin-top: 30px; border: 1px solid #e2e8f0;">
       <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">📊 最新データはブログでチェック！</p>
-      <p style="text-align: center;">下がってくる傾向は毎日更新中のブログで確認できます！（いいね♪押してね！）</p>
+      <p style="text-align: center;">（この記事がよかったら、いいね♪押してください！）</p>
     </div>
   `,
 },
