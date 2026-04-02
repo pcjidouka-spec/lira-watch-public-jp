@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T09:11:04.211552",
+  "updated_at": "2026-04-02T16:01:47.640061",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -14,36 +14,36 @@
       "updated_at": "2026-03-13T11:32:27.035780"
     },
     "jfx": {
-      "has_new": false,
-      "updated_at": "2026-03-02T15:14:47.611320"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:13.547866"
     },
     "invast": {
-      "has_new": false,
-      "updated_at": "2026-03-06T04:00:18.380839"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:43.707320"
     },
     "traders_min": {
-      "has_new": false,
-      "updated_at": "2026-03-02T15:15:05.562491"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:44.120487"
     },
     "traders_light": {
-      "has_new": false,
-      "updated_at": "2026-03-06T04:00:19.433650"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:44.489902"
     },
     "sbi": {
       "has_new": true,
-      "updated_at": "2026-03-31T15:00:37.693534"
+      "updated_at": "2026-04-02T16:01:45.491975"
     },
     "matsui": {
       "has_new": true,
-      "updated_at": "2026-04-01T00:00:34.085933"
+      "updated_at": "2026-04-02T16:01:45.755483"
     },
     "gaitame": {
       "has_new": true,
-      "updated_at": "2026-03-31T15:00:38.435120"
+      "updated_at": "2026-04-02T16:01:46.031100"
     },
     "click365_okasan": {
-      "has_new": false,
-      "updated_at": "2026-03-02T15:15:08.788703"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:46.552672"
     },
     "moneysquare": {
       "has_new": false,
@@ -51,23 +51,23 @@
     },
     "line_fx": {
       "has_new": true,
-      "updated_at": "2026-03-28T20:34:06.727987"
+      "updated_at": "2026-04-02T16:01:47.036689"
     },
     "dmm": {
       "has_new": false,
       "updated_at": "2026-01-26T04:00:02.904188"
     },
     "traders_min_light": {
-      "has_new": false,
-      "updated_at": "2026-03-02T15:15:06.411420"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:44.833655"
     },
     "traders_light_light": {
-      "has_new": false,
-      "updated_at": "2026-03-06T04:00:20.242765"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:45.211279"
     },
     "hirose": {
-      "has_new": false,
-      "updated_at": "2026-03-21T04:00:39.446680"
+      "has_new": true,
+      "updated_at": "2026-04-02T16:01:47.323050"
     },
     "saxo": {
       "has_new": false,
