@@ -163,17 +163,6 @@
       }
     },
     {
-      "id": "line_fx",
-      "name": "LINE FX",
-      "url": "https://www.line-fx.com/market/swap-calendar?to=%2Fregister&service=FX&utm_source=fx_exads&utm_medium=Yahoo_brand&utm_campaign=lp5000&utm_content=brand&utm_term=lp5000_YSS0006_0260_240813&yclid=YSS.EAIaIQobChMIj5fjpLO0jwMVE4CmAx1MBRUwEAAYASAAEgKw__D_BwE&sa_p=YSA&sa_cc&sa_t=1756621034624&sa_ra=68&_gl=1%2Anzov13%2A_gcl_au%2ANzMwOTAxNTMyLjE3NTYyMjUxMjU.%2A_ga%2AMTYwMDY4MDIzOS4xNzU2MjI1MTI1%2A_ga_H9CHQ9FYBD%2AczE3NTY2MjA5ODEkbzIkZzEkdDE3NTY2MjEwMzckajQkbDAkaDA.",
-      "currency_pair_selector": "メキシコペソ/円（MXN/JPY）",
-      "campaign_url": "https://www.line-fx.com/cp",
-      "instructions": {
-        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
-        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
-      }
-    },
-    {
       "id": "hirose",
       "name": "ヒロセ通商",
       "url": "https://hirose-fx.co.jp/contents/news/Swap",
