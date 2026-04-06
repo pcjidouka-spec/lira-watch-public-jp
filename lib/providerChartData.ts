@@ -88,10 +88,15 @@ export function prepareChartData(providerMap: Map<string, { name: string; data: 
     new Date(a).getTime() - new Date(b).getTime()
   );
 
+  // X軸を過去3ヶ月に制限
+  const threeMonthsAgo = new Date();
+  threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+  const filteredDates = sortedDates.filter(d => new Date(d) >= threeMonthsAgo);
+
   // 各日付ごとに各事業者の値を取得
   const chartData: any[] = [];
 
-  for (const date of sortedDates) {
+  for (const date of filteredDates) {
     const dataPoint: any = { date };
 
     for (const [providerId, info] of providerMap.entries()) {

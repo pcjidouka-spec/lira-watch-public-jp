@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-04-02T17:00:32.804064",
+  "updated_at": "2026-04-06T04:00:44.891052",
   "providers": {
     "gmo_click": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-01T00:00:22.211684"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-03-31T04:00:03.534351"
     },
     "central_tanshi": {
@@ -48,10 +48,6 @@
     "moneysquare": {
       "has_new": false,
       "updated_at": "2026-01-25T04:00:10.820724"
-    },
-    "line_fx": {
-      "has_new": true,
-      "updated_at": "2026-04-02T16:01:47.036689"
     },
     "dmm": {
       "has_new": false,
