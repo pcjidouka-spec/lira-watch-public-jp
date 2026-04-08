@@ -672,7 +672,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-06,gmo,MXN/JPY,GMO外貨,1.0,None,None,None,error,None
 2026-04-06,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/04/06
 2026-04-06,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/04/06
-2026-04-06,invast,MXN/JPY,トライオートFX,1.0,7.35,-14.95,None,success,2026/04/06
+2026-04-06,invast,MXN/JPY,トライオートFX,1.0,14.7,-29.9,None,success,2026/04/06
 2026-04-06,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/04/06
 2026-04-06,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/04/06
 2026-04-06,saxo,MXN/JPY,サクソバンク証券,1.0,None,None,None,error,None
