@@ -721,10 +721,10 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-07,click365_okasan,MXN/JPY,クリック365,1.0,14.0,-14.0,4/7,success,2026/04/07
 2026-04-07,dmm,MXN/JPY,DMM FX,1.0,14.0,-17.0,None,success,2026/04/07
 2026-04-07,gaitame,MXN/JPY,外為どっとコム,1.0,14.0,-19.0,None,success,2026/04/07
-2026-04-07,gmo,MXN/JPY,GMO外貨,1.0,5.0,-14.1,None,success,2026/04/07
+2026-04-07,gmo,MXN/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/04/07
 2026-04-07,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/04/07
 2026-04-07,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/04/07
-2026-04-07,invast,MXN/JPY,トライオートFX,1.0,7.35,-14.95,None,success,2026/04/07
+2026-04-07,invast,MXN/JPY,トライオートFX,1.0,14.7,-29.9,None,success,2026/04/07
 2026-04-07,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/04/07
 2026-04-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/07
 2026-04-07,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/07
