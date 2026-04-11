@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-11T04:00:31.836884",
+  "updated_at": "2026-04-12T04:00:41.176226",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -38,7 +38,7 @@
       "updated_at": "2026-04-11T04:00:26.512634"
     },
     "gaitame": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-07T04:00:23.662162"
     },
     "click365_okasan": {
