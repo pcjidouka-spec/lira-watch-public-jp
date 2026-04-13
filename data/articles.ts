@@ -1,6 +1,7 @@
 export interface Article {
   id: string;
   title: string;
+  share_title?: string; // OGP/Twitter用の短縮タイトル（30文字以内推奨）
   date: string;
   content: string; // HTML content
   thumbnail?: string;
@@ -10,6 +11,399 @@ export interface Article {
 
 // 楽天記事削除
 export const articles: Article[] = [
+{
+  id: 'hormuz-supply-shock-xday-20260413',
+  title: 'ホルムズ封鎖で供給ショックが訪れる「Xデイ」── 備蓄は7月上旬に枯渇か？',
+  share_title: '備蓄は7月上旬に枯渇か？ ── ホルムズ封鎖「Xデイ」',
+  thumbnail_text: 'ホルムズ封鎖\n供給ショック\n備蓄は7月上旬に枯渇か？',
+  date: '2026/04/13',
+  thumbnail: '/images/hormuz-supply-shock-xday-20260413_60.png',
+  tags: ['原油価格', 'ホルムズ海峡', 'イラン戦争', '供給ショック', '備蓄', 'ガソリン価格'],
+  content: `
+    <p class="intro">
+      2月28日の対イラン軍事作戦から約1ヶ月半。4月12日にはイスラマバードでの和平交渉が決裂し、トランプ大統領はホルムズ海峡の海上封鎖を宣言しました（<a href="https://www.cbsnews.com/news/trump-strait-of-hormuz-blockade-iran/" target="_blank" rel="noopener noreferrer">CBS News</a>）。原油は$60台から$95前後へ約5割上昇 ── ガソリン・光熱費への波及も始まっていますが、本当の供給ショックはまだ来ていません。公開データとアナリストの分析をもとに、備蓄がいつ尽き、原油価格がいつ次の急騰局面を迎えるのかを予測します。
+    </p>
+
+    <h3>供給ギャップの全体像 ── 足りないのは日量1,100万バレル</h3>
+    <p>
+      ホルムズ海峡は平時に日量約2,000万バレルの原油が通過する世界最大のチョークポイントです（<a href="https://www.eia.gov/todayinenergy/detail.php?id=65504" target="_blank" rel="noopener noreferrer">EIA</a>）。陸路のパイプラインによる迂回手段を考慮しても、日量1,100万バレル ── <strong>世界の石油供給の約1割</strong>が不足します。
+    </p>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>供給の内訳</th>
+          <th>日量（百万バレル）</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ホルムズ海峡 通常通過量</td>
+          <td style="text-align: right; font-weight: bold;">~20</td>
+          <td>世界の海上原油輸送の約20%</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="background: #f8fafc; font-weight: bold; color: #475569;">迂回手段（パイプライン）</td>
+        </tr>
+        <tr>
+          <td>　サウジ東西パイプライン（ヤンブー向け）</td>
+          <td style="text-align: right;">5〜7</td>
+          <td>3/28に日量700万バレルに到達（<a href="https://fortune.com/2026/03/28/saudi-arabia-east-west-oil-pipeline-strait-hormuz-bypass-7-million-barrels-yanbu-red-sea/" target="_blank" rel="noopener noreferrer">Fortune</a>）</td>
+        </tr>
+        <tr>
+          <td>　UAE ADCOPパイプライン（フジャイラ向け）</td>
+          <td style="text-align: right;">1.5〜1.8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>　イラク→トルコ セイハンパイプライン</td>
+          <td style="text-align: right;">0.3</td>
+          <td>能力限定的</td>
+        </tr>
+        <tr>
+          <td>　<strong>パイプライン合計</strong></td>
+          <td style="text-align: right; font-weight: bold;">~9</td>
+          <td></td>
+        </tr>
+        <tr style="background: #fef2f2;">
+          <td><strong>純供給ギャップ（迂回不能分）</strong></td>
+          <td style="text-align: right; color: #ef4444; font-weight: bold;">~11</td>
+          <td>世界供給の約11%が消失</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      この日量1,100万バレルの不足分を埋めるのが、<strong>備蓄放出</strong>と<strong>OPEC余剰生産能力</strong>です。しかし、どちらにも限りがあります。
+    </p>
+
+    <h3>備蓄放出 ── 史上最大の放出でも「20日分」</h3>
+    <p>
+      3月11日、IEA加盟32カ国は史上最大の<strong>4億バレル</strong>の協調備蓄放出を決定しました（<a href="https://www.iea.org/news/iea-member-countries-to-carry-out-largest-ever-oil-stock-release-amid-market-disruptions-from-middle-east-conflict" target="_blank" rel="noopener noreferrer">IEA</a>）。しかし、この数字の意味を冷静に見る必要があります。
+    </p>
+
+    <div class="campaign-details">
+      <h3 style="margin-top: 0;">4億バレルの正体</h3>
+      <p style="font-size: 0.9em; color: #64748b; margin-bottom: 10px;">※ 何日分の供給に相当するかは、分母の取り方で大きく変わります。</p>
+      <ul>
+        <li>世界全体の消費量（日量約1億バレル）で割ると → <strong>わずか4日分</strong></li>
+        <li>ホルムズ途絶量（日量2,000万バレル）で割ると → <strong>約20日分</strong></li>
+        <li>IEA加盟国の備蓄総量（約12.5億バレル）の<strong>33%</strong>を放出</li>
+        <li>米国だけでSPR残高4.15億バレルの<strong>41%</strong>にあたる1.72億バレルを放出</li>
+      </ul>
+    </div>
+
+    <h4>各国の備蓄と枯渇タイミング</h4>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>国・地域</th>
+          <th>備蓄量</th>
+          <th>放出ペース</th>
+          <th>枯渇の目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>米国SPR</td>
+          <td>4.15億バレル（うち1.72億放出）</td>
+          <td>日量140万バレル/120日間</td>
+          <td style="color: #ef4444; font-weight: bold;">7月上旬</td>
+        </tr>
+        <tr>
+          <td>日本</td>
+          <td>230日分（4/6時点、官民合計）</td>
+          <td>計70日分を2段階で放出（<a href="https://www.nikkei.com/article/DGXZQOUA0971B0Z00C26A4000000/" target="_blank" rel="noopener noreferrer">日経</a>）</td>
+          <td style="color: #ef4444; font-weight: bold;">第1弾4月末、第2弾5〜6月</td>
+        </tr>
+        <tr>
+          <td>中国</td>
+          <td>推定約12億バレル（非公開）</td>
+          <td>中東輸入の約5ヶ月分</td>
+          <td style="color: #f59e0b;">8月頃</td>
+        </tr>
+        <tr>
+          <td>IEA 32カ国合計</td>
+          <td>約12.5億バレル（うち4億放出）</td>
+          <td>日量330万バレル/120日間</td>
+          <td style="color: #ef4444; font-weight: bold;">7月上旬（放出分）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <a href="https://www.kpler.com/" target="_blank" rel="noopener noreferrer">Kpler</a>（コモディティ貨物追跡・貿易データ分析の世界的大手）の分析（4/7時点）によると、市場はすでに<strong>日量約600万バレル</strong>のペースで在庫を取り崩しています。備蓄放出の限界が近づけば、このギャップは<strong>日量1,000〜1,100万バレル</strong>に拡大するリスクがあります（<a href="https://www.kpler.com/blog/iran-war-and-the-strait-of-hormuz-oil-market-implications-six-weeks-in" target="_blank" rel="noopener noreferrer">Kpler</a>）。
+    </p>
+
+    <h3>OPEC余剰生産能力 ── もう一つの限界</h3>
+    <p>
+      OPECの余剰生産能力は<strong>日量400〜500万バレル</strong>と推定されていますが、この数字にも注意が必要です。
+    </p>
+    <ul>
+      <li>余剰能力の大部分はサウジアラビアとUAEに集中 ── まさに封鎖の当事国</li>
+      <li>サウジは東西パイプライン経由で日量700万バレルまで出荷を増やしたが、<strong>パイプライン容量が上限</strong></li>
+      <li>イラク南部の生産は封鎖開始後に<strong>70%以上減少</strong>（日量430万→130万バレル、<a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener noreferrer">Wikipedia</a>）</li>
+      <li>生産できても「出荷できない」── これがホルムズ封鎖の本質</li>
+    </ul>
+
+    <h3>供給ショックの3段階</h3>
+    <p>
+      以上の情報を統合すると、供給ショックは一度に来るのではなく、<strong>段階的に深刻化する</strong>構造が見えます。
+    </p>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>フェーズ</th>
+          <th>時期</th>
+          <th>状況</th>
+          <th>原油価格の目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. 備蓄バッファー期</strong></td>
+          <td>3月〜5月上旬</td>
+          <td>IEA備蓄放出+OPEC増産+パイプライン迂回で日量3〜4百万バレルのギャップを吸収。市場は「まだ持つ」と判断</td>
+          <td>$95〜115</td>
+        </tr>
+        <tr style="background: #fefce8;">
+          <td><strong>2. 備蓄枯渇期</strong></td>
+          <td style="color: #f59e0b; font-weight: bold;">5月〜7月</td>
+          <td>日本等アジア主要国の放出分が枯渇（5月）。IEA放出枠の残りが急減。ギャップが日量5〜6百万バレルに拡大</td>
+          <td style="color: #ef4444; font-weight: bold;">$120〜150</td>
+        </tr>
+        <tr style="background: #fef2f2;">
+          <td><strong>3. 純供給危機</strong></td>
+          <td style="color: #ef4444; font-weight: bold;">7月以降</td>
+          <td>IEA/SPR放出完了。備蓄なしで需給を合わせるには<strong>需要破壊</strong>（景気後退による消費減）が必要</td>
+          <td style="color: #ef4444; font-weight: bold;">$150〜200+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>アナリストの見立て</h4>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>機関</th>
+          <th>予測</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>EIA</strong>（米エネルギー情報局）</td>
+          <td>Brent 2Q26にピーク<strong>$115</strong>、4Q26に$88（封鎖の段階的緩和を前提、<a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank" rel="noopener noreferrer">STEO 4月号</a>）</td>
+        </tr>
+        <tr>
+          <td><strong>Goldman Sachs</strong></td>
+          <td>封鎖がもう1ヶ月続けばBrent年間<strong>$100超</strong>。Q3に<strong>$120</strong>（<a href="https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/04/51750505/brent-to-stay-above-100-through-2026-if-hormuz-closure-drags-on-another-month-warns-goldman-sachs" target="_blank" rel="noopener noreferrer">Benzinga</a>）</td>
+        </tr>
+        <tr>
+          <td><strong>JP Morgan</strong></td>
+          <td>5月中旬まで封鎖ならBrent<strong>$150に向けてオーバーシュート</strong>（<a href="https://www.thestreet.com/economy/j-p-morgan-delivers-stark-warning-on-where-oil-prices-are-headed" target="_blank" rel="noopener noreferrer">TheStreet</a>）</td>
+        </tr>
+        <tr>
+          <td><strong>Rystad Energy</strong></td>
+          <td>2ヶ月の戦争で4月Brent<strong>$110</strong>。4ヶ月なら6月に<strong>$135</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Macquarie</strong></td>
+          <td>6月まで封鎖ならBrent<strong>$200超の確率40%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Kpler</strong></td>
+          <td>需給均衡には<strong>$160〜170</strong>が必要と試算（<a href="https://www.kpler.com/blog/iran-war-and-the-strait-of-hormuz-oil-market-implications-six-weeks-in" target="_blank" rel="noopener noreferrer">Kpler</a>）</td>
+        </tr>
+        <tr>
+          <td><strong>Onyx Capital</strong></td>
+          <td>米国の海上封鎖で<strong>$150超</strong>（<a href="https://www.bloomberg.com/jp/news/articles/2026-04-13/TDF2JBT96OSG00" target="_blank" rel="noopener noreferrer">Bloomberg</a>）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>本日（4/13）の海上封鎖宣言が変えたもの</h3>
+    <p>
+      トランプ大統領は4月12日、「国際水域においてイランに通行料を支払ったすべての船舶を捜索・阻止するよう米海軍に命じた」と宣言しました（<a href="https://www.nikkei.com/article/DGXZQOGN1221T0S6A410C2000000/" target="_blank" rel="noopener noreferrer">日経新聞</a>）。CENTCOMは4月13日からの封鎖実施を発表しています。
+    </p>
+    <p>
+      これが供給ショックのタイムラインに与える影響は大きい。封鎖開始以降、一部の船舶はイランに1隻あたり約200万ドルの「通行料」を支払って海峡を通過していました（<a href="https://www.newsweekjapan.jp/stories/world/2026/03/592214.php" target="_blank" rel="noopener noreferrer">Newsweek</a>）。この「灰色の抜け道」が米国によって塞がれたことで：
+    </p>
+    <ul>
+      <li><strong>封鎖解除シナリオが後退</strong> ── 4/12の交渉決裂+米国の対抗封鎖で、短期解決の見通しがさらに遠のいた</li>
+      <li><strong>上記タイムラインの前倒しリスク</strong> ── 通行料経由で細々と流れていた原油が完全に止まれば、備蓄の取り崩しペースが加速する</li>
+      <li><strong>フェーズ2への移行が早まる可能性</strong> ── 5月を待たずに「備蓄枯渇期」の兆候が出始める可能性</li>
+    </ul>
+
+    <h3>封鎖が解除される場合のシナリオ</h3>
+    <p>
+      すべてが悪化するわけではありません。封鎖が解除されるシナリオも整理しておきます。
+    </p>
+    <ul>
+      <li><strong>1ヶ月以内の解除:</strong> 原油は封鎖前の$60台に急速に回帰。戦争プレミアムが剥落し、備蓄を再び積み増すフェーズに入る。EIA予測ではBrent 2027年に$76。</li>
+      <li><strong>3ヶ月以内の段階的解除:</strong> 原油は$75〜85程度に緩やかに下落。備蓄の回復には時間がかかり、リスクプレミアムが残る。</li>
+      <li><strong>部分的解除（非イラン港のみ再開）:</strong> CENTCOMは「非イラン港向け船舶の通航は妨げない」と明確化しており（<a href="https://www.cnn.com/2026/04/12/world/live-news/iran-us-war-talks-trump" target="_blank" rel="noopener noreferrer">CNN</a>）、この形での部分正常化が最も現実的。ただしイラン産原油は引き続き市場から消失。</li>
+    </ul>
+
+    <div style="margin-top: 30px; padding: 0; border-radius: 12px; overflow: hidden; border: 2px solid #ef4444; box-shadow: 0 4px 24px rgba(239, 68, 68, 0.15);">
+      <div style="background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); padding: 16px 20px;">
+        <p style="margin: 0; font-size: 0.75em; color: #fca5a5; font-weight: bold; letter-spacing: 0.1em;">KEY TAKEAWAY</p>
+        <h3 style="margin: 4px 0 0 0; color: #ffffff; font-size: 1.2em;">供給ショックの「Xデイ」</h3>
+      </div>
+      <div style="padding: 0;">
+        <table class="article-table" style="margin: 0; border-radius: 0;">
+          <thead>
+            <tr style="background: #1e293b;">
+              <th style="color: #f8fafc; font-size: 1em; padding: 12px 16px;">Xデイ</th>
+              <th style="color: #f8fafc; font-size: 1em; padding: 12px 16px;">時期</th>
+              <th style="color: #f8fafc; font-size: 1em; padding: 12px 16px;">何が起きるか</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size: 1em; padding: 14px 16px;"><strong>X1: アジア備蓄放出完了</strong></td>
+              <td style="color: #ef4444; font-weight: bold; font-size: 1.1em; padding: 14px 16px; white-space: nowrap;">5月〜6月</td>
+              <td style="padding: 14px 16px;">日本（第2弾20日分）・韓国等の放出分が完了。アジア市場で調達競争激化</td>
+            </tr>
+            <tr style="background: #fefce8;">
+              <td style="font-size: 1em; padding: 14px 16px;"><strong>X2: IEA放出枠終了</strong></td>
+              <td style="color: #ef4444; font-weight: bold; font-size: 1.1em; padding: 14px 16px; white-space: nowrap;">7月上旬</td>
+              <td style="padding: 14px 16px;">協調備蓄放出が完了。備蓄のバッファーがなくなり、市場はリアルタイムの需給で価格が決まる</td>
+            </tr>
+            <tr style="background: #fef2f2;">
+              <td style="font-size: 1em; padding: 14px 16px;"><strong>X3: 需要破壊ライン</strong></td>
+              <td style="color: #ef4444; font-weight: bold; font-size: 1.1em; padding: 14px 16px; white-space: nowrap;">7月以降</td>
+              <td style="padding: 14px 16px;">原油$150〜200+。景気後退による消費減でようやく需給が均衡する水準</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border-radius: 12px; border-left: 4px solid #f59e0b;">
+      <p style="margin: 0 0 8px 0; font-size: 0.8em; color: #f59e0b; font-weight: bold; letter-spacing: 0.05em;">NEXT ARTICLE</p>
+      <p style="margin: 0 0 8px 0; font-size: 1.05em; color: #f8fafc; font-weight: bold;">オイルショックにトルコはいつまで耐えられるのか ── 2018年の悪夢再来か</p>
+      <p style="margin: 0; font-size: 0.85em; color: #94a3b8;">原油輸入の9割を中東に依存するトルコ。2018年通貨危機では47日で35%暴落した記憶が蘇る。外貨準備・経常赤字・参戦リスク ── トルコリラの耐久力を検証します。</p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 14px 18px; background: #f8fafc; border-radius: 8px; text-align: center;">
+      <p style="margin: 0; font-size: 0.85em; color: #475569;">供給ショックの進行を継続ウォッチしています。最新記事は<strong>ブックマーク</strong>でチェックしてください。</p>
+    </div>
+  `,
+},
+{
+  id: 'turkey-oilshock-endurance-20260413',
+  title: 'オイルショックにトルコはいつまで耐えられるのか ── 2018年の悪夢再来か',
+  thumbnail_text: 'トルコリラ\nオイルショック\n2018年の悪夢',
+  date: '2026/04/13',
+  thumbnail: '/images/turkey-oilshock-endurance-20260413_60.png',
+  tags: ['トルコリラ', 'オイルショック', '2018年通貨危機', 'USD/TRY', 'エルドアン', '外貨準備'],
+  content: `
+    <p class="intro">
+      前回の記事「<a href="/articles/hormuz-supply-shock-xday-20260413">ホルムズ封鎖で供給ショックが訪れる『Xデイ』</a>」では、備蓄が5月〜7月にかけて枯渇し、原油が$120〜200+に向かうタイムラインを整理しました。本記事では、このオイルショックがトルコリラに与える影響を、2018年の通貨危機との比較を交えながら考察します。結論を先に言えば、<strong>トルコの「耐久力」には明確な期限があります。</strong>
+    </p>
+
+    <h3>【1】2018年の悪夢 ── 47日で35%暴落した記憶</h3>
+    <p>
+      トルコリラの直近最大の危機は2018年8月でした。米国人牧師アンドリュー・ブランソンの拘束をめぐり、トランプ大統領（当時）がトルコへの鉄鋼・アルミ関税を倍増。<strong>リラは47日間で対ドル35%下落</strong>し、8月10日には1日で10%暴落して過去最安値の7.24をつけました（<a href="https://en.wikipedia.org/wiki/Turkish_economic_crisis_(2018%E2%80%93current)" target="_blank" rel="noopener noreferrer">Wikipedia</a>）。
+    </p>
+
+    <div class="campaign-details">
+      <h3 style="margin-top: 0;">2018年 vs 2026年：トルコの体力比較</h3>
+      <table class="article-table">
+        <thead>
+          <tr><th>指標</th><th>2018年（危機直前）</th><th>2026年（現在）</th><th>判定</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>政策金利</td><td>17.75%→24%（緊急625bp利上げ）</td><td>37%</td><td style="color: #f59e0b;">高いが利上げ余地は限定的</td></tr>
+          <tr><td>ネット外貨準備</td><td>約280億ドル</td><td>約250億ドル</td><td style="color: #ef4444;">2018年より少ない</td></tr>
+          <tr><td>経常赤字/GDP</td><td>-5.5%</td><td>-4.5%</td><td style="color: #22c55e;">やや改善</td></tr>
+          <tr><td>インフレ率</td><td>約16%</td><td>約40%超</td><td style="color: #ef4444;">大幅に悪化</td></tr>
+          <tr><td>ショックの性質</td><td>米国制裁（外交問題）</td><td>原油高＋制裁リスク＋参戦リスク</td><td style="color: #ef4444;">複合的で深刻</td></tr>
+          <tr><td>出口</td><td>10月にブランソン解放→回復</td><td>封鎖解除の見通し不透明</td><td style="color: #ef4444;">出口が見えない</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>2018年は「ブランソン解放」という明確な出口があり、中銀の625bp緊急利上げが効いて収束しました。しかし2026年のオイルショックには<strong>明確な出口がありません。</strong></p>
+
+    <h3>【2】トルコの「耐久力」── 供給ショックのタイムラインと重ねる</h3>
+    <p>原油高がトルコ経済を圧迫する経路は「原油高→経常赤字拡大→外貨準備の減少→通貨防衛の限界」です。IMFの標準的な波及モデル（<a href="https://www.imf.org/en/publications/wp/issues/2026/02/19/optimal-exchange-rate-policy-with-oil-shocks-572706" target="_blank" rel="noopener noreferrer">IMF WP/2026</a>）に基づき、前回記事の<a href="/articles/hormuz-supply-shock-xday-20260413">供給ショック「Xデイ」タイムライン</a>と重ねてみます。</p>
+    <table class="article-table">
+      <thead><tr><th>指標</th><th>現在値</th><th>危険水準</th><th>判定</th></tr></thead>
+      <tbody>
+        <tr><td>グロス外貨準備</td><td>約950億ドル</td><td>-</td><td>見かけは十分</td></tr>
+        <tr><td>ネット外貨準備</td><td style="color: #f59e0b; font-weight: bold;">約250億ドル</td><td>-</td><td>脆弱（2018年以下）</td></tr>
+        <tr><td>輸入カバー月数</td><td style="color: #ef4444; font-weight: bold;">3.5ヶ月</td><td>3ヶ月以下</td><td>危険水準ギリギリ</td></tr>
+        <tr><td>経常赤字/GDP</td><td style="color: #ef4444; font-weight: bold;">-4.5%</td><td>-5%以下</td><td>原油高で悪化中</td></tr>
+        <tr><td>格付け</td><td style="color: #ef4444;">B+/B3（見通しネガティブ）</td><td>引き下げ</td><td>2026年3月変更済み</td></tr>
+      </tbody>
+    </table>
+    <h4>供給ショックのフェーズとトルコの耐久力</h4>
+    <table class="article-table">
+      <thead><tr><th>時期</th><th>原油価格</th><th>トルコの状況</th><th>リラの動き</th></tr></thead>
+      <tbody>
+        <tr><td><strong>〜5月上旬</strong></td><td>$95〜115</td><td>高金利キャリーが支える。経常赤字拡大するが外貨準備はまだ持つ</td><td style="color: #22c55e;">ドルと連動</td></tr>
+        <tr style="background: #fefce8;"><td><strong>5月〜7月</strong></td><td>$120〜150</td><td>インフレが名目金利を上回り<strong>実質金利が低下</strong>。キャリーの魅力消失</td><td style="color: #f59e0b;">乖離開始</td></tr>
+        <tr style="background: #fef2f2;"><td><strong>7月以降</strong></td><td>$150〜200+</td><td>外貨準備急減。中銀が介入断念。格付け引き下げ</td><td style="color: #ef4444; font-weight: bold;">デカップリング、暴落</td></tr>
+      </tbody>
+    </table>
+
+    <h3>【3】デカップリングを前倒しする4つのトリガー</h3>
+    <p>上のタイムラインは緩やかな悪化経路です。<strong>2018年のブランソン事件がそうであったように</strong>、以下のトリガーが突発的にリラを暴落させる可能性があります。</p>
+    <h4>トリガー1：外貨準備の枯渇</h4>
+    <p>ネット準備250億ドルは2018年の280億ドルを下回っています。原油高で経常赤字が拡大し、中銀の介入余力が尽きた時点でリラは急落します。</p>
+    <h4>トリガー2：格付け引き下げ</h4>
+    <p>さらなる引き下げで<strong>新興国債券インデックスからの除外</strong>→機関投資家の機械的売却が発動。</p>
+    <h4>トリガー3：エルドアン大統領の参戦</h4>
+    <p>確率10〜20%。実現すれば格付け5段階引き下げ、外貨準備5ヶ月で枯渇、<strong>年率85%減価</strong>（1年で約7分の1）。トリガーとなりうるのは、クルドへの米軍支援拡大、イランからの軍事支援要請、シリア北部の戦闘激化、国内政治危機です。</p>
+    <h4>トリガー4：米国の二次制裁 ── 2018年の再来パターン</h4>
+    <p><strong>2018年との最大の共通点。</strong>ブランソン事件では制裁示唆だけで47日間に35%暴落。2026年はトルコ企業のイラン制裁回避が米OFACに認定されるリスク。エルドアンの親イラン姿勢がリスクを高めています。</p>
+
+    <h3>【4】2018年との決定的な違い ── 出口があるか</h3>
+    <ul>
+      <li>封鎖の解除は米イラン交渉次第 ── 4/12の交渉決裂で短期解決の見通しは後退</li>
+      <li>中銀の利上げ余地は37%の高金利下で2018年より限定的</li>
+      <li>原油高は外的ショック ── トルコが自力で解決できない</li>
+      <li>参戦リスク・制裁リスクという2018年にはなかった追加リスク</li>
+    </ul>
+
+    <h3>【5】リスク緩和要因</h3>
+    <ul>
+      <li><strong>中銀の利上げ実績:</strong> 2023-2024年に8.5%→50%の実績。危機時のリラ防衛経験あり</li>
+      <li><strong>IMF・スワップライン:</strong> 2001年のIMF経験あり。湾岸諸国からのスワップ供与も選択肢</li>
+      <li><strong>BTC/TANAPパイプライン:</strong> ホルムズ迂回のトルコの地理的優位性</li>
+      <li><strong>封鎖解除:</strong> 早期解除なら戦争プレミアム剥落で正常化</li>
+    </ul>
+
+    <h3>【6】ウォッチポイント</h3>
+    <ol>
+      <li><strong>原油$120突破</strong> ── 経常赤字加速ライン</li>
+      <li><strong>中銀の介入ペース</strong> ── 外貨準備の月次減少が加速していないか</li>
+      <li><strong>格付け会社のアクション</strong> ── インデックス除外→機械的売却</li>
+      <li><strong>エルドアンの発言</strong> ── 「参戦」「NATO脱退」のキーワード</li>
+      <li><strong>米国の制裁リスト</strong> ── トルコ企業名指し＝2018年の再来</li>
+    </ol>
+
+    <div class="campaign-details">
+      <h3 style="margin-top: 0;">まとめ：トルコの耐久力と「Xデイ」</h3>
+      <table class="article-table">
+        <thead><tr><th>リスク要因</th><th>耐久力</th><th>2018年との比較</th></tr></thead>
+        <tbody>
+          <tr><td>原油高→経常赤字拡大</td><td>封鎖6ヶ月で外貨準備が危機水準に接近</td><td>2018年にはなかった外的ショック</td></tr>
+          <tr><td>外貨準備・格付け</td><td>ネット準備は2018年以下</td><td style="color: #ef4444;">体力が落ちている</td></tr>
+          <tr><td>米国制裁リスク</td><td>親イラン姿勢が高める</td><td style="color: #ef4444;">ブランソン事件の再現パターン</td></tr>
+          <tr><td>参戦リスク（10-20%）</td><td>実現すれば年率85%減価</td><td>2018年にはなかったリスク</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 15px;">高金利スワップを前提とした投資は、トルコの耐久力が持つ間だけ有効です。前回記事の「Xデイ」（5月・7月）と本記事のトリガーを重ね合わせ、<strong>リスクの変化を継続的に監視すること</strong>が重要です。</p>
+    </div>
+
+    <p style="margin-top: 30px; padding: 15px; background: #f1f5f9; border-radius: 8px; font-size: 0.85em; color: #64748b;">
+      <strong>免責事項:</strong> 本記事は情報提供を目的としたものであり、特定の金融商品の売買や投資行動を推奨するものではありません。当サイトは金融商品取引業の登録を受けた者が運営するものではありません。記事中の数値は概算であり、実際の市場動向を保証するものではありません。投資判断はご自身の責任においてお願いいたします。
+    </p>
+  `,
+},
 {
   id: 'central-tanshi-abnormal-swap-20260331',
   title: 'セントラル短資の異常スワップはいつまで続く？',

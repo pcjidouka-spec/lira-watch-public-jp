@@ -30,7 +30,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
         {/* OGP Tags */}
         <meta property="og:site_name" content="トルコリラ・ウォッチ" />
-        <meta property="og:title" content={article.title} />
+        <meta property="og:title" content={article.share_title || article.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
         <meta
@@ -42,7 +42,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:title" content={article.share_title || article.title} />
         <meta name="twitter:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
         <meta
           name="twitter:image"
