@@ -294,58 +294,61 @@ export const articles: Article[] = [
 },
 {
   id: 'turkey-oilshock-endurance-20260413',
-  title: 'オイルショックにトルコはいつまで耐えられるのか ── 暴落の4つのトリガー',
-  share_title: 'トルコリラ暴落はいつ来るか ── 4つのトリガーと時間軸',
+  title: 'トルコリラ暴落の4つのトリガーと時間軸',
+  share_title: 'トルコリラ暴落はいつ来るか？ 4つのトリガーを整理した',
   thumbnail_text: 'トルコリラ\nオイルショック\n暴落はいつ来るか',
   date: '2026/04/13',
   thumbnail: '/images/turkey-oilshock-endurance-20260413_60.png',
   tags: ['トルコリラ', 'オイルショック', 'USD/TRY', 'トルコ経済', '外貨準備', '中東情勢'],
   content: `
     <p class="intro">
-      <a href="/articles/hormuz-supply-shock-xday-20260413">前回の記事</a>でご紹介したとおり、備蓄が5月〜7月にかけて枯渇し、原油が$120〜200+に向かう厳しい状況が迫っています。中東情勢の緊迫化も重なるなかで、トルコリラの暴落リスクは確実に高まっています。どのようなリスクがあり、そしてそれはいつ来るのでしょうか？
+      原油備蓄は5月〜7月に枯渇し、価格は$120〜200+へ。中東情勢も緊迫化するなか、<strong>トルコリラの暴落リスクが高まっています。</strong>いつ、何がトリガーになるのでしょうか？
     </p>
 
-    <h3>トルコの現在の体力 ── 数字で見る脆弱性</h3>
-    <p>まず、トルコ経済が現時点でどれだけのショックに耐えられるのかを確認します。</p>
+    <h3>トルコの体力 ── 6つの数字</h3>
     <table class="article-table">
       <thead><tr><th>指標</th><th>現在値</th><th>危険水準</th><th>判定</th></tr></thead>
       <tbody>
         <tr><td>外貨準備（ネット）</td><td style="color: #f59e0b; font-weight: bold;">約250億ドル<span style="font-size: 0.8em; color: #64748b;">（グロス約950億ドル）</span></td><td>-</td><td>脆弱</td></tr>
         <tr><td>輸入カバー月数</td><td style="color: #ef4444; font-weight: bold;">3.5ヶ月</td><td>3ヶ月以下</td><td style="color: #ef4444;">既に警戒水準</td></tr>
-        <tr><td>政策金利</td><td>37%</td><td>-</td><td style="color: #f59e0b;">高いが利上げ余地は限定的</td></tr>
+        <tr><td>政策金利</td><td>37%</td><td>-</td><td style="color: #f59e0b;">利上げ余地は限定的</td></tr>
         <tr><td>インフレ率</td><td style="color: #ef4444; font-weight: bold;">約40%超</td><td>-</td><td style="color: #ef4444;">実質金利はマイナス</td></tr>
         <tr><td>経常赤字/GDP</td><td style="color: #ef4444; font-weight: bold;">-4.5%</td><td>-5%以下</td><td>原油高で悪化中</td></tr>
         <tr><td>格付け</td><td style="color: #ef4444;">B+/B3（見通しネガティブ）</td><td>引き下げ</td><td>2026年3月変更済み</td></tr>
       </tbody>
     </table>
-    <p>ネット外貨準備が約250億ドル、輸入カバー月数は既に警戒ラインの3.5ヶ月。原油高が進めば経常赤字は急拡大し、この体力は急速に削られていきます。</p>
+    <p>外貨準備250億ドル、輸入カバー3.5ヶ月。原油高が進めば、この体力は急速に削られます。</p>
 
-    <h3>いつ来るのか ── 供給ショックとリラ暴落のタイムライン</h3>
-    <p>原油高がトルコ経済を圧迫する経路は「原油高→経常赤字拡大→外貨準備の減少→通貨防衛の限界」です。IMFの標準的な波及モデル（<a href="https://www.imf.org/en/publications/wp/issues/2026/02/19/optimal-exchange-rate-policy-with-oil-shocks-572706" target="_blank" rel="noopener noreferrer">IMF WP/2026</a>）に基づき、<a href="/articles/hormuz-supply-shock-xday-20260413">供給ショック「Xデイ」タイムライン</a>と重ねてみます。</p>
+    <h3>暴落はいつ来るか ── 3段階のタイムライン</h3>
+    <p>原油高→経常赤字拡大→外貨準備の減少→通貨防衛の限界。<a href="/articles/hormuz-supply-shock-xday-20260413">供給ショック「Xデイ」</a>と重ねると、以下のシナリオが見えます（<a href="https://www.imf.org/en/publications/wp/issues/2026/02/19/optimal-exchange-rate-policy-with-oil-shocks-572706" target="_blank" rel="noopener noreferrer">IMF WP/2026</a>）。</p>
     <table class="article-table">
       <thead><tr><th>時期</th><th>原油価格</th><th>トルコの状況</th><th>リラの動き</th></tr></thead>
       <tbody>
-        <tr><td><strong>〜5月上旬</strong></td><td>$95〜115</td><td>高金利キャリーが辛うじて支える。経常赤字拡大するが外貨準備はまだ持つ</td><td style="color: #22c55e;">安定推移</td></tr>
-        <tr style="background: #fefce8;"><td><strong>5月〜7月</strong></td><td>$120〜150</td><td>既にマイナスの実質金利がさらに悪化。<strong>キャリーの魅力が完全に消失</strong></td><td style="color: #f59e0b;">下落開始</td></tr>
-        <tr style="background: #fef2f2;"><td><strong>7月以降</strong></td><td>$150〜200+</td><td>外貨準備急減。中銀が介入断念。格付け引き下げ</td><td style="color: #ef4444; font-weight: bold;">急落</td></tr>
+        <tr><td><strong>〜5月上旬</strong></td><td>$95〜115</td><td>キャリーが辛うじて支える</td><td style="color: #22c55e;">安定推移</td></tr>
+        <tr style="background: #fefce8;"><td><strong>5月〜7月</strong></td><td>$120〜150</td><td><strong>キャリーの魅力が消失</strong></td><td style="color: #f59e0b;">下落開始</td></tr>
+        <tr style="background: #fef2f2;"><td><strong>7月以降</strong></td><td>$150〜200+</td><td>外貨準備急減。中銀が介入断念</td><td style="color: #ef4444; font-weight: bold;">急落</td></tr>
       </tbody>
     </table>
-    <p>このタイムラインは緩やかな悪化経路です。しかし、以下のトリガーが発動すれば暴落は一気に前倒しされます。</p>
+    <p>上記は緩やかな悪化経路です。以下のトリガーが発動すれば、暴落は一気に前倒しされます。</p>
 
     <h3>暴落を前倒しする4つのトリガー</h3>
     <h4>トリガー1：外貨準備の枯渇</h4>
-    <p>ネット準備はわずか約250億ドル。原油高で経常赤字が拡大し、中銀の介入余力が尽きた時点でリラは急落します。</p>
+    <p>ネット準備はわずか250億ドル。中銀の介入余力が尽きた時点でリラは急落します。</p>
     <h4>トリガー2：格付け引き下げ</h4>
-    <p>さらなる引き下げで<strong>新興国債券インデックスからの除外</strong>→機関投資家の機械的売却が発動。</p>
+    <p>新興国債券インデックスから除外されれば、機関投資家の機械的売却が発動します。</p>
     <h4>トリガー3：エルドアン大統領の参戦</h4>
-    <p>確率10〜20%。実現すれば格付け5段階引き下げ、外貨準備5ヶ月で枯渇、<strong>年率85%減価</strong>（1年で約7分の1、過去の新興国参戦事例からの推計）。トリガーとなりうるのは、クルドへの米軍支援拡大、イランからの軍事支援要請、シリア北部の戦闘激化、国内政治危機です。</p>
+    <p>確率10〜20%。実現すれば<strong>年率85%減価</strong>（1年で約7分の1）。</p>
+    <ul>
+      <li>格付け5段階引き下げ、外貨準備5ヶ月で枯渇</li>
+      <li>トリガー: クルドへの米軍支援拡大、イランからの軍事支援要請、シリア北部の戦闘激化</li>
+    </ul>
     <h4>トリガー4：米国の二次制裁</h4>
-    <p>トルコ企業のイラン制裁回避が米OFACに認定されるリスク。エルドアンの親イラン姿勢がリスクを高めています。過去には米国の制裁示唆だけでリラが急落した<a href="#ref-2018">前例</a>もあります。</p>
+    <p>トルコ企業のイラン制裁回避が米OFACに認定されるリスク。過去には制裁示唆だけで<a href="#ref-2018">リラが急落した前例</a>もあります。</p>
 
     <div style="margin-top: 30px; padding: 0; border-radius: 12px; overflow: hidden; border: 2px solid #ef4444; box-shadow: 0 4px 24px rgba(239, 68, 68, 0.15);">
       <div style="background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); padding: 16px 20px;">
         <p style="margin: 0; font-size: 0.75em; color: #fca5a5; font-weight: bold; letter-spacing: 0.1em;">KEY TAKEAWAY</p>
-        <h3 style="margin: 4px 0 0 0; color: #ffffff; font-size: 1.2em;">トルコリラの暴落リスクと時間軸</h3>
+        <h3 style="margin: 4px 0 0 0; color: #ffffff; font-size: 1.2em;">暴落リスクと時間軸</h3>
       </div>
       <div style="padding: 0;">
         <table class="article-table" style="margin: 0; border-radius: 0;">
@@ -364,35 +367,41 @@ export const articles: Article[] = [
             </tr>
             <tr style="background: #fefce8;">
               <td style="padding: 14px 16px;">外貨準備の枯渇</td>
-              <td style="padding: 14px 16px;">封鎖6ヶ月で危機水準に接近</td>
+              <td style="padding: 14px 16px;">封鎖6ヶ月で危機水準</td>
               <td style="padding: 14px 16px; color: #ef4444;">通貨防衛の限界</td>
             </tr>
             <tr>
               <td style="padding: 14px 16px;">米国の二次制裁</td>
-              <td style="padding: 14px 16px;">突発的（予測困難）</td>
+              <td style="padding: 14px 16px;">突発的</td>
               <td style="padding: 14px 16px; color: #ef4444;">急落トリガー</td>
             </tr>
             <tr style="background: #fef2f2;">
               <td style="padding: 14px 16px;">参戦リスク（10-20%）</td>
-              <td style="padding: 14px 16px;">突発的（予測困難）</td>
+              <td style="padding: 14px 16px;">突発的</td>
               <td style="padding: 14px 16px; color: #ef4444; font-weight: bold;">年率85%減価</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div style="padding: 16px 20px; background: #fef2f2;">
-        <p style="margin: 0; font-size: 0.95em;">高金利スワップを前提とした投資は、トルコの耐久力が持つ間だけ有効です。<a href="/articles/hormuz-supply-shock-xday-20260413">前回記事の「Xデイ」タイムライン</a>と本記事の4つのトリガーを重ね合わせ、<strong>リスクの変化を継続的に監視すること</strong>が重要です。</p>
+        <p style="margin: 0; font-size: 0.95em;">スワップ投資はトルコの耐久力が持つ間だけ有効です。<a href="/articles/hormuz-supply-shock-xday-20260413">「Xデイ」タイムライン</a>と4つのトリガーを重ね、<strong>リスクの変化を監視してください。</strong></p>
       </div>
     </div>
 
     <div id="ref-2018" style="margin-top: 40px; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
       <h3 style="margin-top: 0; font-size: 1em; color: #64748b;">参考：2018年の通貨危機（第一期トランプ政権）</h3>
       <p style="font-size: 0.9em;">
-        トルコリラの直近最大の危機は2018年8月でした。米国人牧師アンドリュー・ブランソンの拘束をめぐり、トランプ大統領（当時）がトルコへの鉄鋼・アルミ関税を倍増。<strong>リラは47日間で対ドル35%下落</strong>し、8月10日には1日で10%暴落して過去最安値の7.24をつけました（<a href="https://en.wikipedia.org/wiki/Turkish_economic_crisis_(2018%E2%80%93current)" target="_blank" rel="noopener noreferrer">Wikipedia</a>）。10月にブランソン解放という明確な「出口」があり、中銀の625bp緊急利上げとともに収束しました。
+        2018年8月、米国人牧師ブランソンの拘束問題でトランプ大統領がトルコへの関税を倍増。<strong>リラは47日間で35%下落。</strong>8月10日には1日で10%暴落し、過去最安値7.24をつけました（<a href="https://en.wikipedia.org/wiki/Turkish_economic_crisis_(2018%E2%80%93current)" target="_blank" rel="noopener noreferrer">Wikipedia</a>）。10月のブランソン解放と625bp緊急利上げで収束。
       </p>
       <p style="font-size: 0.85em; color: #475569; margin-top: 12px;">
-        2026年の状況との違いは、(1) 原油高という外的ショックでトルコが自力で解決できない、(2) 封鎖解除の見通しが不透明で出口が見えない、(3) 参戦リスク・制裁リスクという追加リスクがある、(4) 既にインフレ40%超・金利37%で利上げ余地が限定的、という点です。
+        2026年との違い:
       </p>
+      <ul style="font-size: 0.85em; color: #475569; margin-top: 4px;">
+        <li>原油高は外的ショック。トルコが自力で解決できない</li>
+        <li>封鎖解除の見通しが不透明。出口が見えない</li>
+        <li>参戦リスク・制裁リスクという追加リスク</li>
+        <li>インフレ40%超・金利37%で利上げ余地が限定的</li>
+      </ul>
       <details style="margin-top: 12px;">
         <summary style="cursor: pointer; font-size: 0.85em; color: #3b82f6; font-weight: bold;">2018年 vs 2026年 詳細比較テーブル</summary>
         <table class="article-table" style="margin-top: 12px; font-size: 0.85em;">
