@@ -213,8 +213,9 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
     // 最新のactual_dateを取得
     const latestRecord = windowData.find(d => d.provider_id === providerId);
 
-    // 最新日の単日値を取得
-    const latestDate = info.dates[info.dates.length - 1] || '';
+    // 最新日の単日値を取得（datesは降順ソート済みwindowDataから追加されるので最初が最新）
+    const sortedDates = [...info.dates].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+    const latestDate = sortedDates[0] || '';
     const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
     const latestBuy = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
     const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
@@ -298,7 +299,8 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
     const latestRecord = windowData.find(d => d.provider_id === providerId);
 
     // 最新日の単日値を取得
-    const latestDate = info.dates[info.dates.length - 1] || '';
+    const sortedDates = [...info.dates].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+    const latestDate = sortedDates[0] || '';
     const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
     const latestBuyVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
     const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
