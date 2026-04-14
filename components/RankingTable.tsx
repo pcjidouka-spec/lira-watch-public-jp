@@ -141,7 +141,14 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                   )}
                 </td>
                 <td className="td-value buy">
-                  {row.buy ? `${row.buy.swap_buy.toFixed(1)}円` : ''}
+                  {row.buy && (
+                    <div className="value-container">
+                      <span className="avg-value">{row.buy.swap_buy.toFixed(1)}円</span>
+                      {row.buy.latest_buy != null && (
+                        <span className="latest-value">最新 {row.buy.latest_buy.toFixed(1)}円</span>
+                      )}
+                    </div>
+                  )}
                 </td>
 
                 {/* Sell Side */}
@@ -218,7 +225,14 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                   )}
                 </td>
                 <td className="td-value sell">
-                  {row.sell ? `${row.sell.swap_sell.toFixed(1)}円` : ''}
+                  {row.sell && (
+                    <div className="value-container">
+                      <span className="avg-value">{row.sell.swap_sell.toFixed(1)}円</span>
+                      {row.sell.latest_sell != null && (
+                        <span className="latest-value">最新 {row.sell.latest_sell.toFixed(1)}円</span>
+                      )}
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}
@@ -525,6 +539,22 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         }
         .td-value.buy { color: #059669; }
         .td-value.sell { color: #2563eb; }
+
+        .value-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2px;
+        }
+        .avg-value {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        .latest-value {
+          font-size: 11px;
+          font-weight: 500;
+          color: #6b7280;
+        }
 
         @media (max-width: 768px) {
            .merged-table {

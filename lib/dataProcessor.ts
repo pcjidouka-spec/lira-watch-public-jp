@@ -213,12 +213,20 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
     // 最新のactual_dateを取得
     const latestRecord = windowData.find(d => d.provider_id === providerId);
 
+    // 最新日の単日値を取得
+    const latestDate = info.dates[info.dates.length - 1] || '';
+    const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
+    const latestBuy = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
+    const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
+
     ranking.push({
       provider_id: providerId,
       name: info.name,
       swap_buy: avgBuy,
       swap_sell: avgSell,
-      latest_date: info.dates[info.dates.length - 1] || '',
+      latest_buy: latestBuy,
+      latest_sell: latestSellVal,
+      latest_date: latestDate,
       actual_date: latestRecord?.actual_date,
     });
   }
@@ -289,12 +297,20 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
     // 最新のactual_dateを取得
     const latestRecord = windowData.find(d => d.provider_id === providerId);
 
+    // 最新日の単日値を取得
+    const latestDate = info.dates[info.dates.length - 1] || '';
+    const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
+    const latestBuyVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
+    const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
+
     ranking.push({
       provider_id: providerId,
       name: info.name,
       swap_buy: avgBuy,
       swap_sell: avgSell,
-      latest_date: info.dates[info.dates.length - 1] || '',
+      latest_buy: latestBuyVal,
+      latest_sell: latestSellVal,
+      latest_date: latestDate,
       actual_date: latestRecord?.actual_date,
     });
   }

@@ -16,6 +16,8 @@ export interface ProviderRanking {
   name: string;
   swap_buy: number;
   swap_sell: number;
+  latest_buy?: number | null;  // 最新日の単日値
+  latest_sell?: number | null; // 最新日の単日値
   latest_date: string;
   url?: string;
   campaign_url?: string;
