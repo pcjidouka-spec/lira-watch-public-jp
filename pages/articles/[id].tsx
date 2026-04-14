@@ -78,10 +78,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
       <div className="content-wrapper">
         <article className="article">
-          <div className="article-top-section">
-            {/* サムネイル画像を1/3のサイズで配置 */}
+          <div className="article-header-full">
             {article.thumbnail && (
-              <div className={`txt-img article-thumbnail-container ${isAfterMarch2026 ? 'cover-mode' : ''} ${isOldArticle ? 'old-article' : ''}`}>
+              <div className="article-thumbnail-hero">
                 <img
                   src={`https://www.lira-watch.sbs${article.thumbnail}`}
                   className="meta-thumbnail-image"
@@ -92,7 +91,6 @@ export default function ArticlePage({ article }: ArticlePageProps) {
                 />
               </div>
             )}
-
             <div className="article-header">
               <span className="article-date">{article.date}</span>
               <h1 className="article-title">{article.title}</h1>
@@ -124,99 +122,27 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           border-radius: 12px;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+        .article-header-full {
+          margin-bottom: 32px;
+        }
+        .article-thumbnail-hero {
+          width: 100%;
+          margin-bottom: 24px;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .meta-thumbnail-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;
+        }
+
         .article-header {
           flex: 1;
           border-bottom: 2px solid #e5e7eb;
           padding-bottom: 16px;
-        }
-        .article-top-section {
-          display: flex;
-          gap: 32px;
-          align-items: flex-start;
-          margin-bottom: 32px;
-        }
-        .article-date {
-          color: #6b7280;
-          font-size: 14px;
-        }
-        .article-title {
-          font-size: 28px;
-          color: #1f2937;
-          margin-bottom: 20px;
-          line-height: 1.3;
-          white-space: pre-wrap;
-        }
-        .article-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-        .article-tags.top-tags {
-          margin-top: 12px;
-          padding-top: 12px;
-          border-top: 1px dashed #e2e8f0;
-        }
-        .article-tag {
-          font-size: 14px;
-          color: #6b7280;
-          background: #f3f4f6;
-          padding: 4px 10px;
-          border-radius: 20px;
-          font-weight: 500;
-        }
-        
-        .article-body :global(h3) {
-          font-size: 22px;
-          color: #1f2937;
-          border-left: 5px solid #764ba2;
-          padding-left: 12px;
-          margin-top: 40px;
-          margin-bottom: 16px;
-        }
-        .article-body :global(h3:first-child) {
-          margin-top: 0;
-        }
-        .article-body :global(.campaign-title) {
-           font-weight: bold;
-           color: #4b5563;
-           font-size: 18px;
-           margin-bottom: 16px;
-        }
-        
-        .article-thumbnail-container {
-          width: 33.33%;
-          aspect-ratio: 4 / 3;
-          background: transparent;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 8px;
-          overflow: hidden;
-          flex-shrink: 0;
-          position: relative;
-          padding: 4px;
-          box-sizing: border-box;
-        }
-
-        .article-thumbnail-container.old-article {
-          aspect-ratio: auto;
-          background: transparent;
-          padding: 0;
-        }
-
-        .article-thumbnail-container.cover-mode {
-          background: transparent;
-        }
-        
-        .meta-thumbnail-image {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          display: block;
-        }
-
-        .article-thumbnail-container.cover-mode .meta-thumbnail-image {
-          object-fit: contain;
         }
         .article-body :global(.campaign-details) {
            background: #f8fafc;

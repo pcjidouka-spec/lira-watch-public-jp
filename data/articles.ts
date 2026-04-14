@@ -296,7 +296,7 @@ export const articles: Article[] = [
   id: 'turkey-oilshock-endurance-20260413',
   title: 'トルコリラ暴落の4つのトリガーと時間軸',
   share_title: 'トルコリラ暴落はいつ来るか？ 4つのトリガーを整理した',
-  thumbnail_text: 'トルコリラ\nオイルショック\n暴落はいつ来るか',
+  thumbnail_text: 'トルコリラ暴落\n4つのトリガーと時間軸',
   date: '2026/04/13',
   thumbnail: '/images/turkey-oilshock-endurance-20260413_60.png',
   tags: ['トルコリラ', 'オイルショック', 'USD/TRY', 'トルコ経済', '外貨準備', '中東情勢'],
@@ -384,7 +384,7 @@ export const articles: Article[] = [
         </table>
       </div>
       <div style="padding: 16px 20px; background: #fef2f2;">
-        <p style="margin: 0; font-size: 0.95em;">スワップ投資はトルコの耐久力が持つ間だけ有効です。<a href="/articles/hormuz-supply-shock-xday-20260413">「Xデイ」タイムライン</a>と4つのトリガーを重ね、<strong>リスクの変化を監視してください。</strong></p>
+        <p style="margin: 0; font-size: 0.95em;">スワップ投資はトルコの耐久力が持つ間だけ有効です。<strong>リスクの変化を監視してください。</strong></p>
       </div>
     </div>
 
@@ -431,8 +431,8 @@ export const articles: Article[] = [
     </div>
   `,
 },
-{
-  id: 'central-tanshi-abnormal-swap-20260331',
+  {
+    id: 'central-tanshi-abnormal-swap-20260331',
   title: 'セントラル短資の異常スワップはいつまで続く？',
   thumbnail_text: 'セントラル短資\n異常スワップ\n年率33％超え',
   date: '2026/03/31',
