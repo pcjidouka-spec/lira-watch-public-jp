@@ -78,9 +78,9 @@ export default function ArticlePage({ article }: ArticlePageProps) {
 
       <div className="content-wrapper">
         <article className="article">
-          <div className="article-header-full">
+          <div className="article-top-section">
             {article.thumbnail && (
-              <div className="article-thumbnail-hero">
+              <div className="article-thumbnail-container cover-mode">
                 <img
                   src={`https://www.lira-watch.sbs${article.thumbnail}`}
                   className="meta-thumbnail-image"
@@ -122,21 +122,37 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           border-radius: 12px;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        .article-header-full {
+        .article-top-section {
+          display: flex;
+          gap: 32px;
+          align-items: flex-start;
           margin-bottom: 32px;
         }
-        .article-thumbnail-hero {
-          width: 100%;
-          margin-bottom: 24px;
-          border-radius: 12px;
+        .article-thumbnail-container {
+          width: 33.33%;
+          aspect-ratio: 4 / 3;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
           overflow: hidden;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          flex-shrink: 0;
+          position: relative;
+          padding: 4px;
+          box-sizing: border-box;
+        }
+        .article-thumbnail-container.cover-mode {
+          background: transparent;
         }
         .meta-thumbnail-image {
           width: 100%;
-          height: auto;
+          height: 100%;
+          object-fit: contain;
           display: block;
-          object-fit: cover;
+        }
+        .article-thumbnail-container.cover-mode .meta-thumbnail-image {
+          object-fit: contain;
         }
 
         .article-header {

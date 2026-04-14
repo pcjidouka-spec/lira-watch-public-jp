@@ -46,8 +46,8 @@ def process_thumbnail(input_path, output_path, text_lines=None):
 
 def overlay_text(img, text_lines):
     """Overlay text on image with semi-transparent background band (zabuton)."""
-    draw = ImageDraw.Draw(img, "RGBA")
     w, h = img.size
+    img = img.convert("RGBA")
 
     # Font size: 10-15% of image height
     main_font_size = max(48, int(h * 0.08))
@@ -63,30 +63,31 @@ def overlay_text(img, text_lines):
 
     fonts = [main_font] + [sub_font] * (len(text_lines) - 1)
 
-    # Calculate total text height
-    line_spacing = 12
+    # Measure text sizes
+    temp_draw = ImageDraw.Draw(img)
+    line_spacing = 16
     total_height = 0
     line_sizes = []
     for i, line in enumerate(text_lines):
-        bbox = draw.textbbox((0, 0), line, font=fonts[i])
+        bbox = temp_draw.textbbox((0, 0), line, font=fonts[i])
         lw, lh = bbox[2] - bbox[0], bbox[3] - bbox[1]
         line_sizes.append((lw, lh))
         total_height += lh + (line_spacing if i < len(text_lines) - 1 else 0)
 
-    # Draw semi-transparent background band (zabuton) at bottom
-    padding = 20
+    # Draw semi-transparent band on a separate layer
+    padding = 24
     band_top = h - total_height - padding * 2
-    draw.rectangle(
-        [(0, band_top), (w, h)],
-        fill=(0, 0, 0, 180)
-    )
+    overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    overlay_draw = ImageDraw.Draw(overlay)
+    overlay_draw.rectangle([(0, band_top), (w, h)], fill=(0, 0, 0, 180))
+    img = Image.alpha_composite(img, overlay)
 
-    # Draw text with stroke (outline) for readability
+    # Draw text with stroke on final image
+    draw = ImageDraw.Draw(img)
     y = band_top + padding
     for i, line in enumerate(text_lines):
         lw = line_sizes[i][0]
-        x = (w - lw) // 2  # Center horizontally
-        # Stroke (outline)
+        x = (w - lw) // 2
         draw.text((x, y), line, font=fonts[i], fill=(255, 255, 255, 255),
                   stroke_width=3, stroke_fill=(0, 0, 0, 255))
         y += line_sizes[i][1] + line_spacing
