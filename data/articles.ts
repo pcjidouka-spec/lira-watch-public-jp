@@ -333,8 +333,7 @@ export const articles: Article[] = [
     <table class="article-table">
       <thead><tr><th>指標</th><th>現在値</th><th>危険水準</th><th>判定</th></tr></thead>
       <tbody>
-        <tr><td>グロス外貨準備</td><td>約950億ドル</td><td>-</td><td>見かけは十分</td></tr>
-        <tr><td>ネット外貨準備（スワップ込み）</td><td style="color: #f59e0b; font-weight: bold;">約250億ドル</td><td>-</td><td>脆弱（2018年以下）</td></tr>
+        <tr><td>外貨準備（ネット）</td><td style="color: #f59e0b; font-weight: bold;">約250億ドル<span style="font-size: 0.8em; color: #64748b;">（グロス約950億ドル）</span></td><td>-</td><td>脆弱（2018年以下）</td></tr>
         <tr><td>輸入カバー月数</td><td style="color: #ef4444; font-weight: bold;">3.5ヶ月</td><td>3ヶ月以下</td><td style="color: #ef4444;">既に警戒水準</td></tr>
         <tr><td>経常赤字/GDP</td><td style="color: #ef4444; font-weight: bold;">-4.5%</td><td>-5%以下</td><td>原油高で悪化中</td></tr>
         <tr><td>格付け</td><td style="color: #ef4444;">B+/B3（見通しネガティブ）</td><td>引き下げ</td><td>2026年3月変更済み</td></tr>
