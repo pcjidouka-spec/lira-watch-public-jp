@@ -37,3 +37,4 @@ next-env.d.ts
 # deploy scripts (may contain sensitive info)
 deploy.ps1
 deploy.sh
+.gstack/
