@@ -136,10 +136,8 @@
       "url": "https://www.home.saxo/ja-jp/rates-and-conditions/forex/trading-conditions#swappoint",
       "currency_pair_selector": "USD/JPY",
       "campaign_url": "https://www.home.saxo/ja-jp/campaigns/summary",
-      "instructions": {
-        "date_handling": "【特例処理】この事業者はブラウザ操作をバイパスし、PDFダウンローダー(saxo_pdf_handler.py)経由で直接テキスト抽出されます。"
-      },
-      "data_delay_expected": true
+      "schedule_type": "weekly",
+      "pdf_url": "https://cdn-storage.saxobank.com/jp/swappoint/swappoint-weekly.pdf"
     }
   ],
   "common_instructions": {
