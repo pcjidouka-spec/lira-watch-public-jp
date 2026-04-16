@@ -271,7 +271,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-06,hirose,USD/JPY,ヒロセ通商,1.0,138.0,-173.0,None,success,2026/04/06
 2026-04-06,invast,USD/JPY,トライオートFX,1.0,160.0,-235.0,None,success,2026/04/06
 2026-04-06,jfx,USD/JPY,JFX,1.0,141.0,-171.0,None,success,2026/04/06
-2026-04-06,saxo,USD/JPY,サクソバンク証券,1,80.00,-202.00,,success,2026-04-06
+2026-04-06,saxo,USD/JPY,サクソバンク証券,1,80.0,-202.0,,success,2026-04-06
 2026-04-06,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-04-06,traders_light,USD/JPY,LIGHT FX,1.0,160.0,-160.0,04/06,success,2026/04/06
 2026-04-06,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/04/06
@@ -283,7 +283,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-07,hirose,USD/JPY,ヒロセ通商,1.0,141.0,-171.0,None,success,2026/04/07
 2026-04-07,invast,USD/JPY,トライオートFX,1.0,160.0,-235.0,None,success,2026/04/07
 2026-04-07,jfx,USD/JPY,JFX,1.0,141.0,-171.0,None,success,2026/04/07
-2026-04-07,saxo,USD/JPY,サクソバンク証券,1,80.00,-196.00,,success,2026-04-07
+2026-04-07,saxo,USD/JPY,サクソバンク証券,1,80.0,-196.0,,success,2026-04-07
 2026-04-07,sbi,USD/JPY,SBI FXトレード,1.0,135.0,-143.0,04月09日,success,2026/04/07
 2026-04-07,traders_light,USD/JPY,LIGHT FX,1.0,160.0,-160.0,None,success,2026/04/07
 2026-04-07,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/04/07
@@ -295,7 +295,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-08,hirose,USD/JPY,ヒロセ通商,1.0,135.0,-170.0,None,success,2026/04/08
 2026-04-08,invast,USD/JPY,トライオートFX,1.0,160.0,-235.0,None,success,2026/04/08
 2026-04-08,jfx,USD/JPY,JFX,1.0,135.0,-170.0,None,success,2026/04/08
-2026-04-08,saxo,USD/JPY,サクソバンク証券,1,78.00,-193.00,,success,2026-04-08
+2026-04-08,saxo,USD/JPY,サクソバンク証券,1,78.0,-193.0,,success,2026-04-08
 2026-04-08,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-04-08,traders_light,USD/JPY,LIGHT FX,1.0,130.0,-130.0,None,success,2026/04/08
 2026-04-08,traders_min,USD/JPY,みんなのFX,1.0,130.0,-130.0,04/08,success,2026/04/08
@@ -307,7 +307,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-09,hirose,USD/JPY,ヒロセ通商,1.0,140.0,-170.0,None,success,2026/04/09
 2026-04-09,invast,USD/JPY,トライオートFX,1.0,160.0,-235.0,None,success,2026/04/09
 2026-04-09,jfx,USD/JPY,JFX,1.0,133.0,-163.0,None,success,2026/04/09
-2026-04-09,saxo,USD/JPY,サクソバンク証券,3,224.00,-569.00,,success,2026-04-09
+2026-04-09,saxo,USD/JPY,サクソバンク証券,3,74.67,-189.67,,success,2026-04-09
 2026-04-09,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-04-09,traders_light,USD/JPY,LIGHT FX,1.0,None,None,04/09,error,2026/04/09
 2026-04-09,traders_min,USD/JPY,みんなのFX,1.0,130.0,-130.0,None,success,2026/04/09
@@ -319,7 +319,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-10,hirose,USD/JPY,ヒロセ通商,1.0,140.0,-170.0,None,success,2026/04/10
 2026-04-10,invast,USD/JPY,トライオートFX,1.0,160.0,-235.0,None,success,2026/04/10
 2026-04-10,jfx,USD/JPY,JFX,1.0,133.0,-163.0,None,success,2026/04/10
-2026-04-10,saxo,USD/JPY,サクソバンク証券,1,76.00,-192.00,None,success,2026-04-10
+2026-04-10,saxo,USD/JPY,サクソバンク証券,1,76.0,-192.0,None,success,2026-04-10
 2026-04-10,sbi,USD/JPY,SBI FXトレード,1.0,132.0,-140.0,04月14日,success,2026/04/10
 2026-04-10,traders_light,USD/JPY,LIGHT FX,1.0,140.0,-140.0,None,success,2026/04/10
 2026-04-10,traders_min,USD/JPY,みんなのFX,1.0,140.0,-140.0,None,success,2026/04/10
