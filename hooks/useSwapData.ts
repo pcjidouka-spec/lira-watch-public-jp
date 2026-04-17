@@ -40,11 +40,11 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
         try {
           const configTimestamp = new Date().getTime();
           const configFile =
-          currencyPair === 'MXN/JPY'
-            ? '/providers_config_mxn.json'
-            : currencyPair === 'USD/JPY'
-              ? '/providers_config_usd.json'
-              : '/providers_config.json';
+            currencyPair === 'MXN/JPY' ? '/providers_config_mxn.json'
+            : currencyPair === 'USD/JPY' ? '/providers_config_usd.json'
+            : currencyPair === 'EUR/USD' ? '/providers_config_eurusd.json'
+            : currencyPair === 'GBP/USD' ? '/providers_config_gbpusd.json'
+            : '/providers_config.json';
           const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
           if (configResponse.ok) {
             const configData = await configResponse.json();
@@ -67,11 +67,11 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
         // Fetch Master History (キャッシュバスティング付き)
         const timestamp = new Date().getTime();
         const historyFile =
-          currencyPair === 'MXN/JPY'
-            ? '/data/master_history_mxn.csv'
-            : currencyPair === 'USD/JPY'
-              ? '/data/master_history_usd.csv'
-              : '/data/master_history_try.csv';
+          currencyPair === 'MXN/JPY' ? '/data/master_history_mxn.csv'
+          : currencyPair === 'USD/JPY' ? '/data/master_history_usd.csv'
+          : currencyPair === 'EUR/USD' ? '/data/master_history_eurusd.csv'
+          : currencyPair === 'GBP/USD' ? '/data/master_history_gbpusd.csv'
+          : '/data/master_history_try.csv';
         const response = await fetch(`${historyFile}?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('データの読み込みに失敗しました');
