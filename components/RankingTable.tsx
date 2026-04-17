@@ -6,6 +6,7 @@ interface RankingTableProps {
   buyRankings: ProviderRanking[];
   sellRankings: ProviderRanking[];
   currencyLabel?: string;
+  unitLabel?: string;
 }
 
 // Helper function to get provider_id consistently
@@ -13,7 +14,9 @@ const getProviderId = (p: any): string => {
   if (!p) return '';
   return String(p.provider_id || '').toLowerCase();
 };
-export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ' }) => {
+export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel }) => {
+  const valueSuffix = unitLabel ? '' : '円';
+  const valueColumnLabel = unitLabel ? `金額（${unitLabel}）` : '金額';
   const { hasNewCampaign } = useCampaignUpdates();
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -57,11 +60,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
               {/* Buy Columns */}
               <th className="th-rank">順位</th>
               <th className="th-name">FX会社</th>
-              <th className="th-value">金額</th>
+              <th className="th-value">{valueColumnLabel}</th>
               {/* Sell Columns */}
               <th className="th-rank border-left">順位</th>
               <th className="th-name">FX会社</th>
-              <th className="th-value">金額</th>
+              <th className="th-value">{valueColumnLabel}</th>
             </tr>
           </thead>
           <tbody>
@@ -143,9 +146,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                 <td className="td-value buy">
                   {row.buy && (
                     <div className="value-container">
-                      <span className="avg-value">{row.buy.swap_buy.toFixed(1)}円</span>
+                      <span className="avg-value">{row.buy.swap_buy.toFixed(1)}{valueSuffix}</span>
                       {row.buy.latest_buy != null && (
-                        <span className="latest-value">最新 {row.buy.latest_buy.toFixed(1)}円</span>
+                        <span className="latest-value">最新 {row.buy.latest_buy.toFixed(1)}{valueSuffix}</span>
                       )}
                     </div>
                   )}
@@ -227,9 +230,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                 <td className="td-value sell">
                   {row.sell && (
                     <div className="value-container">
-                      <span className="avg-value">{row.sell.swap_sell.toFixed(1)}円</span>
+                      <span className="avg-value">{row.sell.swap_sell.toFixed(1)}{valueSuffix}</span>
                       {row.sell.latest_sell != null && (
-                        <span className="latest-value">最新 {row.sell.latest_sell.toFixed(1)}円</span>
+                        <span className="latest-value">最新 {row.sell.latest_sell.toFixed(1)}{valueSuffix}</span>
                       )}
                     </div>
                   )}
@@ -242,6 +245,11 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           </tbody>
         </table>
       </div>
+      {unitLabel === 'USD' && (
+        <p className="cross-pair-note" style={{ fontSize: '12px', color: '#6b7280', marginTop: '8px', padding: '0 12px' }}>
+          ※ 各社公表の 10,000 通貨単位あたりの USD 建てスワップを表示しています。
+        </p>
+      )}
 
       {rows.length > 3 && (
         <div className="toggle-wrapper">
