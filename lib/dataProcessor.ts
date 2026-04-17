@@ -217,10 +217,8 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
     const sortedDates = [...info.dates].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
     const latestDate = sortedDates[0] || '';
     const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
-    const latestRaw = latestDayRecords.length > 0 ? latestDayRecords[0] : null;
-    const latestDays = latestRaw && latestRaw.days && latestRaw.days > 0 ? latestRaw.days : 1;
-    const latestBuy = latestRaw && latestRaw.swap_buy !== null ? latestRaw.swap_buy / latestDays : null;
-    const latestSellVal = latestRaw && latestRaw.swap_sell !== null ? latestRaw.swap_sell / latestDays : null;
+    const latestBuy = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
+    const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
 
     ranking.push({
       provider_id: providerId,
@@ -304,10 +302,8 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
     const sortedDates = [...info.dates].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
     const latestDate = sortedDates[0] || '';
     const latestDayRecords = windowData.filter(d => d.provider_id === providerId && d.target_date === latestDate);
-    const latestRaw = latestDayRecords.length > 0 ? latestDayRecords[0] : null;
-    const latestDays = latestRaw && latestRaw.days && latestRaw.days > 0 ? latestRaw.days : 1;
-    const latestBuyVal = latestRaw && latestRaw.swap_buy !== null ? latestRaw.swap_buy / latestDays : null;
-    const latestSellVal = latestRaw && latestRaw.swap_sell !== null ? latestRaw.swap_sell / latestDays : null;
+    const latestBuyVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_buy !== null ? latestDayRecords[0].swap_buy : null;
+    const latestSellVal = latestDayRecords.length > 0 && latestDayRecords[0].swap_sell !== null ? latestDayRecords[0].swap_sell : null;
 
     ranking.push({
       provider_id: providerId,
