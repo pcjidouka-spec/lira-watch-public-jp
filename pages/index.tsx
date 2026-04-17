@@ -20,7 +20,11 @@ export default function Home() {
   const tryData = useSwapData('TRY/JPY');
   const mxnData = useSwapData('MXN/JPY');
   const usdData = useSwapData('USD/JPY');
+  const eurusdData = useSwapData('EUR/USD');
+  const gbpusdData = useSwapData('GBP/USD');
   const [currencyTab, setCurrencyTab] = useState<'TRY' | 'MXN' | 'USD'>('TRY');
+  const [crossTab, setCrossTab] = useState<'EUR/USD' | 'GBP/USD'>('EUR/USD');
+  const [showCrossCharts, setShowCrossCharts] = useState(false);
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
   const activeSwapData =
@@ -34,6 +38,15 @@ export default function Home() {
     loading,
     error,
   } = activeSwapData;
+
+  const activeCrossData = crossTab === 'EUR/USD' ? eurusdData : gbpusdData;
+  const {
+    buyRanking: crossBuyRanking,
+    sellRanking: crossSellRanking,
+    data: crossData,
+    lastUpdated: crossLastUpdated,
+    siteUpdatedAt: crossSiteUpdatedAt,
+  } = activeCrossData;
 
   const [showCharts, setShowCharts] = useState(false);
   const [sidebarTab, setSidebarTab] = useState<'recent' | 'tree'>('recent');
@@ -363,7 +376,7 @@ export default function Home() {
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点のデータに基づき、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>（順位は直近約2週間の付与日数加重平均）とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点のデータに基づき、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>（順位は直近約2週間の付与日数加重平均）、<a href="#cross-pair-ranking" className="internal-link">クロスペア（EUR/USD・GBP/USD）スワップ</a>、キャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
@@ -481,6 +494,99 @@ export default function Home() {
                 currencyPair={currencyTab === 'TRY' ? 'TRY/JPY' : currencyTab === 'MXN' ? 'MXN/JPY' : 'USD/JPY'}
               />
             </div>
+          )}
+        </div>
+      </section>
+
+      {/* 1.5. クロスカレンシーペア スワップポイント */}
+      <section className="blog-post" id="cross-pair-ranking">
+        <header className="post-header">
+          <div className="post-meta">
+            <span className="post-date">{crossSiteUpdatedAt ? crossSiteUpdatedAt.split(' ')[0] : (crossLastUpdated || '')}</span>
+            <span className="post-category">クロスペア</span>
+          </div>
+          <h2 className="post-title">クロスカレンシーペア スワップポイント（EUR/USD・GBP/USD）</h2>
+        </header>
+
+        <div className="post-content">
+          <p className="lead-text">
+            USD建てのクロスカレンシーペアのスワップポイント比較ランキング。L3相関分析等にご活用ください。
+          </p>
+
+          <h2 className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
+            クロスペア スワップポイントランキング
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <button
+                onClick={() => setCrossTab('EUR/USD')}
+                style={{
+                  padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                  background: crossTab === 'EUR/USD' ? '#8b5cf6' : '#f3f4f6',
+                  color: crossTab === 'EUR/USD' ? 'white' : '#4b5563',
+                  cursor: 'pointer', fontWeight: 700,
+                }}
+              >EUR/USD</button>
+              <button
+                onClick={() => setCrossTab('GBP/USD')}
+                style={{
+                  padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                  background: crossTab === 'GBP/USD' ? '#ef4444' : '#f3f4f6',
+                  color: crossTab === 'GBP/USD' ? 'white' : '#4b5563',
+                  cursor: 'pointer', fontWeight: 700,
+                }}
+              >GBP/USD</button>
+            </span>
+          </h2>
+
+          {(eurusdData.loading || gbpusdData.loading) ? (
+            <p style={{ padding: '20px', textAlign: 'center', color: '#6b7280' }}>クロスペアデータを読み込み中…</p>
+          ) : (eurusdData.error && gbpusdData.error) ? (
+            <p style={{ padding: '20px', textAlign: 'center', color: '#ef4444' }}>クロスペアデータの読み込みに失敗しました</p>
+          ) : (
+            <>
+              <div className="ranking-wrapper">
+                <RankingTable
+                  buyRankings={crossBuyRanking}
+                  sellRankings={crossSellRanking}
+                  currencyLabel={crossTab}
+                  unitLabel="USD"
+                />
+              </div>
+
+              <div className="chart-toggle-container">
+                <button
+                  className="chart-toggle-button"
+                  onClick={() => setShowCrossCharts(!showCrossCharts)}
+                >
+                  {showCrossCharts ? (
+                    <>
+                      <span className="icon">▲</span> チャートを閉じる
+                    </>
+                  ) : (
+                    <>
+                      <span className="icon">▼</span> クロスペア スワップポイント推移チャートを表示
+                    </>
+                  )}
+                </button>
+                <p className="disclaimer-text">※ データは各社公式サイトより毎日自動取得しています。</p>
+              </div>
+
+              {crossData.length > 0 && showCrossCharts && (
+                <div className="charts-wrapper top-margin-reduced">
+                  <HistoricalChart
+                    data={crossData}
+                    type="buy"
+                    ranking={crossBuyRanking}
+                    currencyPair={crossTab}
+                  />
+                  <HistoricalChart
+                    data={crossData}
+                    type="sell"
+                    ranking={crossSellRanking}
+                    currencyPair={crossTab}
+                  />
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>
