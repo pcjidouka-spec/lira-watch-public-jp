@@ -372,3 +372,15 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-16,traders_light,USD/JPY,LIGHT FX,1.0,130.0,None,None,success,2026/04/16
 2026-04-16,traders_min,USD/JPY,みんなのFX,1.0,130.0,None,None,success,2026/04/16
 2026-04-16,invast,USD/JPY,トライオートFX,1.0,150.0,-225.0,None,success,2026/04/16
+2026-04-17,central_tanshi,USD/JPY,セントラル短資FX,1.0,None,None,None,error,None
+2026-04-17,dmm,USD/JPY,DMM FX,1.0,137.0,None,None,error,2026/04/17
+2026-04-17,gaitame,USD/JPY,外為どっとコム,1.0,130.0,-160.0,None,success,2026/04/17
+2026-04-17,gmo,USD/JPY,GMO外貨,1.0,138.0,-138.0,None,success,2026/04/17
+2026-04-17,gmo_click,USD/JPY,GMOクリック証券,1.0,138.0,-138.0,None,success,2026/04/17
+2026-04-17,hirose,USD/JPY,ヒロセ通商,1.0,132.0,-162.0,None,success,2026/04/17
+2026-04-17,invast,USD/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-04-17,jfx,USD/JPY,JFX,1.0,132.0,-162.0,None,success,2026/04/17
+2026-04-17,saxo,USD/JPY,サクソバンク証券,1.0,None,None,None,error,None
+2026-04-17,sbi,USD/JPY,SBI FXトレード,1.0,131.0,-139.0,04月21日,success,2026/04/17
+2026-04-17,traders_light,USD/JPY,LIGHT FX,1.0,140.0,None,None,success,2026/04/17
+2026-04-17,traders_min,USD/JPY,みんなのFX,1.0,140.0,None,None,success,2026/04/17
