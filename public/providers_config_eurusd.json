@@ -1,0 +1,122 @@
+{
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?year=2025&month=08&pare=USDJPY",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。"
+      }
+    },
+    {
+      "id": "dmm",
+      "name": "DMM FX",
+      "url": "https://fx.dmm.com/fx/service/swapcalendar/",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://fx.dmm.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨ペア選択方法】DMMのスワップカレンダーページでは、通貨ペアの切替にネイティブの<select>ドロップダウンではなく、タブ・ボタン・カスタムUIを使用している場合があります。select_dropdownアクションが失敗した場合は、ページ上に表示されている通貨ペア名のテキストやタブを直接クリックして選択してください。また、表が非常に長いため、データが見つかるまで何度もスクロールを行ってください。"
+      }
+    },
+    {
+      "id": "gmo",
+      "name": "GMO外貨",
+      "url": "https://www.gaikaex.com/gaikaex/mark/swap/calendar.php?pair=1",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.gaikaex.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。"
+      }
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：マルチ通貨テーブルへの対応】セントラル短資FXの表は複数通貨ペアが横に並ぶ形式です。ドロップダウンでUSD/JPYを含むグループを選択してください。個別通貨の選択肢がない場合はグループを選んでそのまま進んでください。extractで全通貨ペアのデータが含まれても問題ありません。後処理でUSD/JPYだけを抽出します。完璧にUSD/JPYだけを抽出しようとせず、対象日の行が取れたら即座にdoneしてください。データの抽出に際しては、対象日の行だけでなく、その後の3行分も含めて抽出してください（付与日数の判定のため）。表が長いため、データが見つかるまでスクロールしてください。"
+      }
+    },
+    {
+      "id": "jfx",
+      "name": "JFX",
+      "url": "https://www.jfx.co.jp/category/swap/",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.jfx.co.jp/category/campaign/index.html",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "table_extraction": "【JFX・raw_data用・トルコリラJFXと同方針】表のヘッダー（項目名）と、データ行をテキスト形式（Markdownの表形式）で出力してください。日付列・受渡日列など日付に相当する列がある場合は必ず含めてください。表が長い場合は対象日付（一昨日）の行とその前後2〜3行を含む範囲で十分です。『対象日の行のみ』で日付列を省略すると後段で日付を特定できず失敗するため、ヘッダーにある日付関連の列は省略しないでください。",
+        "swap_point_adjustment": "【重要：単位変換（1,000→10,000通貨）】JFXの米ドル/円は「1,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、抽出する際は表に記載されているスワップポイント（買・売ともに）を必ず『10倍した数値』として抽出・報告してください。例：表に「13.2」とあれば「132」として報告。",
+        "currency_check": "【最重要：通貨ペア厳重確認】JFXの表にはUSD/JPY、TRY/JPY、MXN/JPY、ZAR/JPYなど複数の通貨が並んでいます。★絶対にTRY/JPYやMXN/JPYやZAR/JPYの行を読み取らないでください★。JFXの1000通貨単位において、USD/JPYの買スワップは通常10〜20円程度（10倍後は100〜200前後）、TRY/JPYは2〜3円程度（10倍後は20〜35）、MXN/JPYは14〜19円程度（10倍後は140〜190）です。10倍換算後の買スワップが20〜35程度ならTRY/JPY、140〜190程度ならMXN/JPYを誤って読み取っている可能性が非常に高いです。必ず行のラベルが「米ドル/円」「USD/JPY」であることを目視で確認してください。",
+        "validation_range": "【数値検証】10倍換算後のUSD/JPYの正常範囲の目安：買スワップ 100〜200、売スワップ -200〜-100。この範囲を大幅に外れる場合（特に20〜35や140〜190の値はTRY/JPYかMXN/JPYかZAR/JPYの行を誤って読んでいます）。データを破棄し、USD/JPYの行を再確認してください。"
+      }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/market/swap-calendar/",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/",
+      "use_browser": true,
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。",
+        "table_extraction": "【インヴァスト必須】出力する Markdown 表には、必ず米ドル/円（USD/JPY）のスワップ表を含めてください。日本225・米国指数など他商品の表だけを書き出すのは不可です。通貨で『米ドル/円（USD/JPY）』を選択した状態の表を抽出してください。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
+        "product_selection": "【重要：商品選択・トルコリラLIGHT FXと同文】このページには「USDJPY」と「USDJPY LIGHT」の2つの商品（列）があります。必ず通常の『USDJPY』の行・列からデータを抽出してください。『USDJPY LIGHT』のデータは抽出しないでください。LIGHT列だけ読むと買・売が「-」空欄になり取得失敗になります。通貨ドロップダウンで米ドル/円を選択したあと、表の見出しを確認し LIGHT が付いていない買・売の数値を書き写してください。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。",
+        "swap_point_adjustment": "【最重要】SBIの表は1万通貨単位です。買・売は表の数値をそのまま swap_buy / swap_sell に入れてください。÷10しないでください。USD/JPYは買がおおよそ110〜170、売が-170〜-110前後が妥当です（実データ目安）。"
+      }
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【外為どっとコム専用：読み込み待ち＋タブ操作】このサイトはトップの骨組みが先に表示され、スワップの表が表示されるまで数十秒かかることがあります。URL到達後は必ず最低20〜40秒以上待機してください。ロード中に表が無いと判断したり、すぐに再読み込みしたりしないでください。【最重要：タブ切替】ページ上部にある「直近のスワップ」と「月毎のスワップ」のタブを確認してください。スクロールを始める前に、まず「直近のスワップ」タブをクリックして表を表示させてください。タブをクリックせずにスクロールし続けると、データ領域を通り過ぎてフッターに到達してしまいます。タブクリック後、表が表示されたらデータを探してください。"
+      }
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "米ドル/円（USD/JPY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【最重要：通貨ペア選択を必ず行うこと】ヒロセ通商のスワップページは、デフォルトで特定の通貨ペア（USD/JPYなど）が表示されています。データを抽出する前に、必ず通貨ペアのドロップダウンまたはセレクタから指定された通貨ペアを選択してください。選択せずにデフォルト表示のデータを抽出すると、間違った通貨ペアのデータになります。select_dropdownが失敗した場合は、通貨ペア名のテキストやリンクを直接クリックして切り替えてください。また表が長いため、データが見つかるまでスクロールしてください。",
+        "swap_point_adjustment": "【最重要：単位】ヒロセは1,000通貨単位で表示されていることが多いです。表が1,000通貨あたりの場合、JSONでは1万通貨換算にそろえるため買・売の数値をそのまま出してください（後処理で1桁台なら10倍します）。1万通貨あたりで既に13円前後ならそのまま。131のように大きい場合は1,000通貨あたりの可能性があるので÷10して13程度になるか確認してください。"
+      }
+    }
+  ]
+}
