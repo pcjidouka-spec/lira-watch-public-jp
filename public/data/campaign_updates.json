@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-04-18T04:00:32.336924",
+  "updated_at": "2026-04-19T04:00:37.257269",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-04-08T04:00:02.136280"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-14T04:00:03.203593"
     },
     "central_tanshi": {
@@ -18,7 +18,7 @@
       "updated_at": "2026-04-02T16:01:13.547866"
     },
     "invast": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-14T04:00:18.667748"
     },
     "traders_min": {
@@ -30,12 +30,12 @@
       "updated_at": "2026-04-02T16:01:44.489902"
     },
     "sbi": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-14T04:00:26.682898"
     },
     "matsui": {
-      "has_new": false,
-      "updated_at": "2026-04-11T04:00:26.512634"
+      "has_new": true,
+      "updated_at": "2026-04-19T04:00:29.437914"
     },
     "gaitame": {
       "has_new": true,
