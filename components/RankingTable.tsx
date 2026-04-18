@@ -7,6 +7,7 @@ interface RankingTableProps {
   sellRankings: ProviderRanking[];
   currencyLabel?: string;
   unitLabel?: string;
+  noteText?: string;
 }
 
 // Helper function to get provider_id consistently
@@ -14,7 +15,7 @@ const getProviderId = (p: any): string => {
   if (!p) return '';
   return String(p.provider_id || '').toLowerCase();
 };
-export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel }) => {
+export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel, noteText }) => {
   const valueSuffix = unitLabel ? '' : '円';
   const valueColumnLabel = unitLabel ? `金額（${unitLabel}）` : '金額';
   const { hasNewCampaign } = useCampaignUpdates();
@@ -245,9 +246,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           </tbody>
         </table>
       </div>
-      {unitLabel === 'USD' && (
+      {noteText && (
         <p className="cross-pair-note" style={{ fontSize: '12px', color: '#6b7280', marginTop: '8px', padding: '0 12px' }}>
-          ※ 各社公表の 10,000 通貨単位あたりの USD 建てスワップを表示しています。
+          {noteText}
         </p>
       )}
 

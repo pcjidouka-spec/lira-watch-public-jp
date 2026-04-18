@@ -45,7 +45,10 @@ export default function Home() {
   } = activeSwapData;
 
   const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY';
-  const activeUnitLabel = (currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD') ? 'USD' : undefined;
+  const isCrossPair = currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD';
+  const activeNoteText = isCrossPair
+    ? '※ クロスペアは各社が円換算した 1万通貨単位あたりの値です。GBP/USDなど金利差が小さい通貨ペアでは、各社のスワップポリシーやマージンにより値や符号が異なる場合があります。'
+    : undefined;
   const currencyLabelMap: Record<CurrencyTab, string> = {
     'TRY/JPY': 'トルコリラ',
     'MXN/JPY': 'メキシコペソ',
@@ -475,7 +478,7 @@ export default function Home() {
               buyRankings={buyRanking}
               sellRankings={sellRanking}
               currencyLabel={currencyLabelMap[currencyTab]}
-              unitLabel={activeUnitLabel}
+              noteText={activeNoteText}
             />
           </div>
 
