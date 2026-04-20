@@ -157,6 +157,10 @@ export function getPast30DaysData(data: SwapData[]): SwapData[] {
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
+  // クロスペア（EUR/USD, GBP/USD）では買スワップ 0 円が正常値のため、
+  // ランキング除外フィルタを無効化する。JPY クロスでは 0 = 取得失敗/取扱なしの
+  // 可能性が高いため従来通り除外。
+  const isCrossPair = currencyPair === 'EUR/USD' || currencyPair === 'GBP/USD';
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const windowData = getPast30DaysData(successData);
@@ -165,26 +169,29 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
   for (const record of windowData) {
-    // 0のデータは平均計算から除外
-    if (record.swap_buy !== null && record.swap_buy !== 0 && !isNaN(record.swap_buy)) {
-      // daysがnullまたは0の場合は1として扱う
-      const days = record.days && record.days > 0 ? record.days : 1;
+    // 0のデータは平均計算から除外（クロスペアでは 0 も有効値として扱う）
+    if (record.swap_buy !== null && !isNaN(record.swap_buy)) {
+      const isValidForAverage = isCrossPair || record.swap_buy !== 0;
+      if (isValidForAverage) {
+        // daysがnullまたは0の場合は1として扱う
+        const days = record.days && record.days > 0 ? record.days : 1;
 
-      if (!providerMap.has(record.provider_id)) {
-        // providers_config.jsonのnameを優先的に使用
-        const configName = providerConfigs?.get(record.provider_id)?.name;
-        const displayName = configName || record.name;
-        providerMap.set(record.provider_id, {
-          name: displayName,
-          weightedSum: 0,
-          totalDays: 0,
-          dates: [],
-        });
+        if (!providerMap.has(record.provider_id)) {
+          // providers_config.jsonのnameを優先的に使用
+          const configName = providerConfigs?.get(record.provider_id)?.name;
+          const displayName = configName || record.name;
+          providerMap.set(record.provider_id, {
+            name: displayName,
+            weightedSum: 0,
+            totalDays: 0,
+            dates: [],
+          });
+        }
+        const info = providerMap.get(record.provider_id)!;
+        info.weightedSum += record.swap_buy * days;
+        info.totalDays += days;
+        info.dates.push(record.target_date);
       }
-      const info = providerMap.get(record.provider_id)!;
-      info.weightedSum += record.swap_buy * days;
-      info.totalDays += days;
-      info.dates.push(record.target_date);
     }
   }
 
@@ -233,7 +240,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
   }
 
   return ranking
-    .filter(r => r.swap_buy !== 0) // 0円の業者を除外
+    .filter(r => isCrossPair ? true : r.swap_buy !== 0) // 0円の業者を除外（クロスペアでは残す）
     .sort((a, b) => b.swap_buy - a.swap_buy);
 }
 
