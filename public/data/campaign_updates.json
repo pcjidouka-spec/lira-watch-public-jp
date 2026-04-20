@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-20T04:00:35.960251",
+  "updated_at": "2026-04-21T04:00:33.204314",
   "providers": {
     "gmo_click": {
-      "has_new": false,
-      "updated_at": "2026-04-08T04:00:02.136280"
+      "has_new": true,
+      "updated_at": "2026-04-21T04:00:02.146591"
     },
     "gmo": {
       "has_new": false,
