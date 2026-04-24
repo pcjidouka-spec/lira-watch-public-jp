@@ -936,7 +936,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-22,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,None,None,None,error,None
 2026-04-23,central_tanshi,TRY/JPY,セントラル短資FX,1.0,27.0,None,None,success,2026/04/23
 2026-04-23,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/04/23
-2026-04-23,dmm,TRY/JPY,DMM FX,3.0,None,None,None,error,2026/04/22
 2026-04-23,gaitame,TRY/JPY,外為どっとコム,1.0,25.0,-40.0,None,success,2026/04/23
 2026-04-23,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/04/23
 2026-04-23,gmo_click,TRY/JPY,GMOクリック証券,1.0,27.0,-27.0,None,success,2026/04/23
@@ -950,3 +949,19 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-23,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/04/23
 2026-04-23,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/04/23
 2026-04-23,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/04/23
+2026-04-24,central_tanshi,TRY/JPY,セントラル短資FX,2.0,None,None,None,error,None
+2026-04-24,click365_okasan,TRY/JPY,クリック365,2.0,24.0,-24.0,None,success,2026/04/23
+2026-04-24,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/04/24
+2026-04-24,gaitame,TRY/JPY,外為どっとコム,2.0,25.0,-40.0,None,success,2026/04/24
+2026-04-24,gmo,TRY/JPY,GMO外貨,2.0,25.1,-25.1,None,success,2026/04/24
+2026-04-24,gmo_click,TRY/JPY,GMOクリック証券,2.0,27.0,-27.0,None,success,2026/04/24
+2026-04-24,hirose,TRY/JPY,ヒロセ通商,2.0,25.0,-30.0,None,success,2026/04/24
+2026-04-24,invast,TRY/JPY,トライオートFX,2.0,None,None,None,error,None
+2026-04-24,jfx,TRY/JPY,JFX,2.0,25.0,-32.0,None,success,2026/04/24
+2026-04-24,matsui,TRY/JPY,MATSUI FX,2.0,25.0,-25.0,None,success,2026/04/24
+2026-04-24,saxo,TRY/JPY,サクソバンク証券,2.0,None,None,None,error,None
+2026-04-24,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,04月28日,success,2026/04/24
+2026-04-24,traders_light,TRY/JPY,LIGHT FX,2.0,25.2,-25.2,None,success,2026/04/24
+2026-04-24,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,25.2,-25.2,None,success,2026/04/24
+2026-04-24,traders_min,TRY/JPY,みんなのFX,2.0,25.3,-25.3,None,success,2026/04/24
+2026-04-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,25.3,-25.3,None,success,2026/04/24
