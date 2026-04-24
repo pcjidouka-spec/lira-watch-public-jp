@@ -66,3 +66,4 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-23,hirose,GBP/USD,ヒロセ通商,3,1.6,-7.97,,success,
 2026-04-23,jfx,GBP/USD,JFX,3,1.33,-7.67,,success,
 2026-04-23,gaitame,GBP/USD,外為どっとコム,3,0.0,-15.67,,success,
+2026-04-23,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
