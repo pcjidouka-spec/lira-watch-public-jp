@@ -428,5 +428,5 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-24,saxo,USD/JPY,サクソバンク証券,1.0,None,None,None,error,None
 2026-04-24,sbi,USD/JPY,SBI FXトレード,1.0,131.0,-139.0,04月28日,success,2026/04/24
 2026-04-24,invast,USD/JPY,トライオートFX,1.0,151.0,-226.0,None,success,2026/04/24
-2026-04-24,traders_light,USD/JPY,LIGHT FX,1.0,None,None,None,error,2026/04/23
-2026-04-24,traders_min,USD/JPY,みんなのFX,1.0,None,None,None,error,2026/04/23
+2026-04-24,traders_light,USD/JPY,LIGHT FX,1.0,145.0,-145.0,None,success,2026/04/23
+2026-04-24,traders_min,USD/JPY,みんなのFX,1.0,145.0,-145.0,None,success,2026/04/23
