@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T04:00:32.973397",
+  "updated_at": "2026-04-28T04:00:33.817416",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -10,8 +10,8 @@
       "updated_at": "2026-04-14T04:00:03.203593"
     },
     "central_tanshi": {
-      "has_new": false,
-      "updated_at": "2026-03-13T11:32:27.035780"
+      "has_new": true,
+      "updated_at": "2026-04-28T04:00:03.971135"
     },
     "jfx": {
       "has_new": false,
@@ -30,8 +30,8 @@
       "updated_at": "2026-04-02T16:01:44.489902"
     },
     "sbi": {
-      "has_new": false,
-      "updated_at": "2026-04-14T04:00:26.682898"
+      "has_new": true,
+      "updated_at": "2026-04-28T04:00:26.190223"
     },
     "matsui": {
       "has_new": true,
@@ -62,12 +62,12 @@
       "updated_at": "2026-04-02T16:01:45.211279"
     },
     "hirose": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-04-22T04:00:36.432500"
     },
     "saxo": {
-      "has_new": false,
-      "updated_at": "2026-02-25T04:00:13.555764"
+      "has_new": true,
+      "updated_at": "2026-04-28T04:00:33.706460"
     }
   }
 }
