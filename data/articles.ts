@@ -12,6 +12,92 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
 {
+  id: 'gaitame-swap-campaign-202605',
+  title: '【2026年5月】外為どっとコム：トルコリラスワップ最大60％増額キャンペーンが再び開催！',
+  share_title: 'トルコリラスワップ最大60％増額キャンペーンが5月も開催！（外為どっとコム）',
+  thumbnail_text: '外為どっとコム\nスワップ最大60％増額\nトルコリラ 5月開催',
+  date: '2026/05/02',
+  thumbnail: '/images/gaitame-swap-campaign-202605_60.png',
+  tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
+  content: `
+    <p class="intro">
+      外為どっとコムにて、2026年5月も非常にお得な<strong>「入金額に応じてスワップポイント最大60％増額キャンペーン」</strong>が開催されます。
+      過去のキャンペーンと同様、今回も入金額（純増額）に応じてスワップポイントが大幅に上乗せされる内容となっており、トルコリラ運用を検討している方には見逃せないチャンスです。
+    </p>
+
+    <h3>1. キャンペーン概要：入金額に応じて最大60%増額</h3>
+    <p>
+      今回のキャンペーンでは、対象期間中に新規建てされたポジションに対し、入金額（純増額）に応じた割合のスワップポイントが「FXポイント」として上乗せ付与されます。
+    </p>
+
+    <div class="campaign-details">
+      <ul>
+        <li><strong>対象期間：</strong> 2026年5月4日(月)午前7時00分 ～ 2026年5月30日(土)午前5時55分</li>
+        <li><strong>対象通貨ペア：</strong> トルコリラ/円（買）、米ドル/トルコリラ（売）、ユーロ/トルコリラ（売）</li>
+        <li><strong>特典内容：</strong> スワップポイントの最大60%相当をFXポイント（1pt=1円）で還元</li>
+      </ul>
+    </div>
+
+    <h3>2. 入金額に応じた上乗せ料率</h3>
+    <p>キャンペーン期間中の「入金額（純増額）」によって、上乗せされる料率が異なります。</p>
+    <ul>
+      <li><strong>100万円以上の入金：</strong> 受取スワップポイント平均値の<strong>60％相当</strong>を上乗せ</li>
+      <li><strong>10万円以上〜100万円未満の入金：</strong> 受取スワップポイント平均値の<strong>30％相当</strong>を上乗せ</li>
+    </ul>
+    <p style="font-size: 0.9em; color: #666;">※入金額（純増額）＝ 期間中の入金合計 － 期間中の出金合計</p>
+
+    <h3>3. 具体的にいくら増える？（60％増額時の適用例）</h3>
+    <p>10万通貨（100Lot）あたりの1日あたりの上乗せ目安は以下の通りです。</p>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>対象通貨ペア</th>
+          <th>上乗せ目安（1日）</th>
+          <th>合計目安（1日）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>トルコリラ/円</td>
+          <td style="color: #ef4444; font-weight: bold;">+150円相当</td>
+          <td>約400円相当</td>
+        </tr>
+        <tr>
+          <td>米ドル/トルコリラ</td>
+          <td style="color: #ef4444; font-weight: bold;">+5,260円相当</td>
+          <td>約14,010円相当</td>
+        </tr>
+        <tr>
+          <td>ユーロ/トルコリラ</td>
+          <td style="color: #ef4444; font-weight: bold;">+7,020円相当</td>
+          <td>約18,710円相当</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>4. 参加のための必須条件と注意点</h3>
+    <ul>
+      <li><strong>エントリーが必須：</strong> 所定のフォームからのエントリーが必要です。</li>
+      <li><strong>『らくらくFX積立』口座が必要：</strong> 特典のFXポイントは同口座に付与されるため、口座開設を完了させておく必要があります。</li>
+      <li><strong>数量上限：</strong> 各営業日クローズ時点の数量には上限があります（トルコリラ/円：100万通貨、他2ペア：20万通貨まで）。</li>
+      <li><strong>新規ポジションが対象：</strong> 期間中に新しく建てたポジションのみが対象です。</li>
+    </ul>
+
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+    <p>
+      トルコリラなどの新興国通貨は相場急変動のリスクがありますが、このような増額キャンペーンを併用することで、より効率的なスワップ運用の検討が可能です。特典の付与は2026年6月末までを予定しています。
+    </p>
+
+    <div class="campaign-link" style="margin-top: 30px;">
+      <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+      <a href="https://www.gaitame.com/campaign/increase-swap-2605/" target="_blank" rel="noopener noreferrer">
+        https://www.gaitame.com/campaign/increase-swap-2605/
+      </a>
+    </div>
+  `,
+},
+{
   id: 'invast-tryauto-tryswap-campaign-202605',
   title: '【2026年5月】インヴァスト証券：トルコリラ/円スワップ50%増額キャンペーンが再び開催！',
   share_title: 'トルコリラ/円スワップ50%増額キャンペーンが5月も開催！（インヴァスト証券）',
