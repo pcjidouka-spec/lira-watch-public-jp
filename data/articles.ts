@@ -15,7 +15,6 @@ export const articles: Article[] = [
   id: 'gaitame-swap-campaign-202605',
   title: '【2026年5月】外為どっとコム：トルコリラスワップ最大60％増額キャンペーンが再び開催！',
   share_title: 'トルコリラスワップ最大60％増額キャンペーンが5月も開催！（外為どっとコム）',
-  thumbnail_text: '外為どっとコム\nスワップ最大60％増額\nトルコリラ 5月開催',
   date: '2026/05/02',
   thumbnail: '/images/gaitame-swap-campaign-202605_60.png',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],

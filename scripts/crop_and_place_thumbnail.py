@@ -101,8 +101,9 @@ def get_article_details(article_id):
     if article_id not in content:
         return None
     # Extract thumbnail_text
+    # Improved regex to stay within the target article block by ensuring no 'id:' appears before 'thumbnail_text'
     pattern = re.search(
-        r"id:\s*'" + re.escape(article_id) + r"'.*?thumbnail_text:\s*'([^']*)'",
+        r"id:\s*'" + re.escape(article_id) + r"'(?:(?!id:).)*?thumbnail_text:\s*'([^']*)'",
         content, re.DOTALL
     )
     if pattern:
