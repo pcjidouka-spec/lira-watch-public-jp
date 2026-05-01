@@ -12,6 +12,63 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
 {
+  id: 'invast-tryauto-tryswap-campaign-202605',
+  title: '【2026年5月】インヴァスト証券：トルコリラ/円スワップ50%増額キャンペーンが再び開催！',
+  share_title: 'トルコリラ/円スワップ50%増額キャンペーンが5月も開催！（インヴァスト証券）',
+  thumbnail_text: 'インヴァスト証券\nトルコリラ/円\nスワップ50%増額',
+  date: '2026/05/01',
+  thumbnail: '/images/invast-tryauto-tryswap-campaign-202605_60.png',
+  tags: ['FX', 'トルコリラ', 'スワップ投資', 'インヴァスト証券', 'キャンペーン'],
+  content: `
+    <p class="intro">
+      2026年3月に好評だったスワップ増額キャンペーンが、5月もインヴァスト証券の「トライオートFX」で実施されます。トルコリラ/円（TRY/JPY）を運用中の方や、これから新規でポジションを持ちたい方にとって、収益を上乗せする絶好のチャンスです。
+    </p>
+
+    <h3>1. キャンペーン概要：トルコリラ/円スワップ50%増額</h3>
+    <p>
+      今回のキャンペーンでは、対象期間中のトルコリラ/円の新規買建玉の増加分に対し、スワップポイントが50%上乗せされます。
+    </p>
+
+    <div class="campaign-details">
+      <ul>
+        <li><strong>開催期間：</strong> 2026年5月1日（金）取引開始 ～ 2026年5月29日（金）取引終了</li>
+        <li><strong>特典内容：</strong> 1万通貨あたり、1日につき13.5円の上乗せ（キャッシュバック）</li>
+        <li><strong>対象取引：</strong> 裁量（マニュアル）取引、および自動売買のどちらも対象です</li>
+      </ul>
+      <p style="font-size: 0.9em; margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+        ※この金額は2026年4月前半の受取スワップ平均値の50%に基づき算出されています。
+      </p>
+    </div>
+
+    <h3>2. 主な適用条件と注意点</h3>
+    <p>キャンペーンの適用には、以下の条件を満たす必要があります。</p>
+    <ul>
+      <li><strong>専用フォームからの申し込み：</strong> キャンペーン期間中、応募フォームからのエントリーが必須です。</li>
+      <li><strong>新規買建玉の増加分が対象：</strong> <strong>基準日（2026年4月30日（木）クローズ時点）</strong>の建玉数量と比較して、増加した買いポジションが対象となります。</li>
+      <li><strong>建玉上限：</strong> 対象となる建玉数量の上限は、最大50万通貨までです。</li>
+      <li><strong>対象外：</strong> 売建玉（マイナススワップ）は対象外となります。また、新規口座開設キャンペーンとの併用はできません。</li>
+    </ul>
+
+    <h3>3. 付与時期</h3>
+    <p>
+      <strong>入金時期：</strong> キャンペーン終了後の2026年6月末までに、トライオートFXの取引口座へまとめて入金されます。
+    </p>
+
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+    <p>
+      3月のキャンペーン時と同様、今回も<strong>「期間中の新規ポジション増加分」</strong>がキャッシュバックの対象となります。5月はインヴァスト証券のキャンペーンを賢く利用して、スワップ投資の最大化を狙ってみてはいかがでしょうか。
+    </p>
+
+    <div class="campaign-link" style="margin-top: 30px;">
+      <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
+      <a href="https://www.invast.jp/triauto/campaign/fx/tryswap/202605/" target="_blank" rel="noopener noreferrer">
+        https://www.invast.jp/triauto/campaign/fx/tryswap/202605/
+      </a>
+    </div>
+  `,
+},
+{
   id: 'hormuz-supply-shock-xday-20260413',
   title: 'ホルムズ封鎖で供給ショックが訪れる「Xデイ」── 備蓄は7月上旬に枯渇か？',
   share_title: '備蓄は7月上旬に枯渇か？ ── ホルムズ封鎖「Xデイ」',
