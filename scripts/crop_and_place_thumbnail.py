@@ -100,10 +100,20 @@ def get_article_details(article_id):
         content = f.read()
     if article_id not in content:
         return None
-    # Extract thumbnail_text
-    pattern = re.search(
-        r"id:\s*'" + re.escape(article_id) + r"'.*?thumbnail_text:\s*'([^']*)'",
+    # Extract the block for this specific article first
+    article_block_match = re.search(
+        r"\{\s*id:\s*'" + re.escape(article_id) + r"'.*?\}",
         content, re.DOTALL
+    )
+    if not article_block_match:
+        return None
+        
+    article_block = article_block_match.group(0)
+    
+    # Now look for thumbnail_text strictly inside this block
+    pattern = re.search(
+        r"thumbnail_text:\s*'([^']*)'",
+        article_block, re.DOTALL
     )
     if pattern:
         raw = pattern.group(1)
