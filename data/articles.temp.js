@@ -1,15 +1,6 @@
-export interface Article {
-  id: string;
-  title: string;
-  share_title?: string; // OGP/Twitter用の短縮タイトル（30文字以内推奨）
-  date: string;
-  content: string; // HTML content
-  thumbnail?: string;
-  thumbnail_text?: string;
-  tags?: string[];
-}
 
-// 楽天記事�{
+
+// 楽天記事�{
   id: 'gaitame-swap-campaign-202605',
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が5月も開催！10万円からでも30％上乗せのチャンス',
   share_title: 'スワップ最大60％増額キャンペーンが5月も開催！（外為どっとコム）',
@@ -78,7 +69,7 @@ export interface Article {
     </div>
   `,
 },
-�当</td>
+�当</td>
           <td>約400円相当</td>
         </tr>
         <tr>
