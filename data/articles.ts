@@ -15,7 +15,6 @@ export const articles: Article[] = [
   id: 'invast-tryauto-tryswap-campaign-202605',
   title: '【2026年5月】インヴァスト証券：トルコリラ/円スワップ50%増額キャンペーンが再び開催！',
   share_title: 'トルコリラ/円スワップ50%増額キャンペーンが5月も開催！（インヴァスト証券）',
-  thumbnail_text: 'インヴァスト証券\nトルコリラ/円\nスワップ50%増額',
   date: '2026/05/01',
   thumbnail: '/images/invast-tryauto-tryswap-campaign-202605_60.png',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'インヴァスト証券', 'キャンペーン'],
