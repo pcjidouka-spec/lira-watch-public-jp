@@ -37,7 +37,7 @@ def process_thumbnail(input_path, output_path, text_lines=None):
         img = new_img
 
     # Overlay text if provided
-    if text_lines:
+    if text_lines and len(text_lines) > 0:
         img = overlay_text(img, text_lines)
 
     img.save(output_path, quality=95)
