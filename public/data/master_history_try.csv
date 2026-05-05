@@ -1040,3 +1040,18 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-04,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,None,None,None,error,None
 2026-05-04,traders_min,TRY/JPY,みんなのFX,1.0,None,None,None,error,None
 2026-05-04,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,None,None,None,error,None
+2026-05-05,central_tanshi,TRY/JPY,セントラル短資FX,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,click365_okasan,TRY/JPY,クリック365,1.0,0.0,0.0,None,error,2026/05/04
+2026-05-05,dmm,TRY/JPY,DMM FX,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,gaitame,TRY/JPY,外為どっとコム,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,gmo,TRY/JPY,GMO外貨,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,gmo_click,TRY/JPY,GMOクリック証券,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,hirose,TRY/JPY,ヒロセ通商,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,invast,TRY/JPY,トライオートFX,1.0,None,None,None,success,2026/05/05
+2026-05-05,jfx,TRY/JPY,JFX,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,error,2026/05/05
+2026-05-05,sbi,TRY/JPY,SBI FXトレード,1.0,0.0,0.0,05月08日,error,2026/05/05
+2026-05-05,traders_light,TRY/JPY,LIGHT FX,1.0,None,None,05/05,success,2026/05/05
+2026-05-05,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,None,None,05/05,success,2026/05/05
+2026-05-05,traders_min,TRY/JPY,みんなのFX,1.0,None,None,None,error,None
+2026-05-05,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,None,None,None,error,None
