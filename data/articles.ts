@@ -9,7 +9,9 @@ export interface Article {
   tags?: string[];
 }
 
-// 楽天記事�{
+// 楽天記事削除
+export const articles: Article[] = [
+{
   id: 'gaitame-swap-campaign-202605',
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が5月も開催！10万円からでも30％上乗せのチャンス',
   share_title: 'スワップ最大60％増額キャンペーンが5月も開催！（外為どっとコム）',
@@ -68,44 +70,6 @@ export interface Article {
     <p>
       トルコリラなどの新興国通貨は相場の急変動リスクがありますが、このような増額キャンペーンを賢く併用することで、より効率的なスワップ運用が検討可能です。
       まずは詳細をチェックして、エントリーを済ませておきましょう！
-    </p>
-
-    <div class="campaign-link" style="margin-top: 30px;">
-      <p style="font-weight: bold; color: #2563eb;">▼キャンペーンの詳細とエントリーはこちら</p>
-      <a href="https://www.gaitame.com/campaign/increase-swap-2605/" target="_blank" rel="noopener noreferrer">
-        https://www.gaitame.com/campaign/increase-swap-2605/
-      </a>
-    </div>
-  `,
-},
-�当</td>
-          <td>約400円相当</td>
-        </tr>
-        <tr>
-          <td>米ドル/トルコリラ</td>
-          <td style="color: #ef4444; font-weight: bold;">+5,260円相当</td>
-          <td>約14,010円相当</td>
-        </tr>
-        <tr>
-          <td>ユーロ/トルコリラ</td>
-          <td style="color: #ef4444; font-weight: bold;">+7,020円相当</td>
-          <td>約18,710円相当</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>4. 参加のための必須条件と注意点</h3>
-    <ul>
-      <li><strong>エントリーが必須：</strong> 所定のフォームからのエントリーが必要です。</li>
-      <li><strong>『らくらくFX積立』口座が必要：</strong> 特典のFXポイントは同口座に付与されるため、口座開設を完了させておく必要があります。</li>
-      <li><strong>数量上限：</strong> 各営業日クローズ時点の数量には上限があります（トルコリラ/円：100万通貨、他2ペア：20万通貨まで）。</li>
-      <li><strong>新規ポジションが対象：</strong> 期間中に新しく建てたポジションのみが対象です。</li>
-    </ul>
-
-    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
-
-    <p>
-      トルコリラなどの新興国通貨は相場急変動のリスクがありますが、このような増額キャンペーンを併用することで、より効率的なスワップ運用の検討が可能です。特典の付与は2026年6月末までを予定しています。
     </p>
 
     <div class="campaign-link" style="margin-top: 30px;">
