@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-05-06T04:00:31.027685",
+  "updated_at": "2026-05-07T05:19:58.873202",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-04-21T04:00:02.146591"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:03.224729"
     },
     "central_tanshi": {
@@ -14,11 +14,11 @@
       "updated_at": "2026-04-28T04:00:03.971135"
     },
     "jfx": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:04.072603"
     },
     "invast": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:19.705669"
     },
     "traders_min": {
@@ -30,11 +30,11 @@
       "updated_at": "2026-04-02T16:01:44.489902"
     },
     "sbi": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:26.654054"
     },
     "matsui": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:28.039328"
     },
     "gaitame": {
@@ -62,7 +62,7 @@
       "updated_at": "2026-04-02T16:01:45.211279"
     },
     "hirose": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-05-02T04:00:32.482957"
     },
     "saxo": {
