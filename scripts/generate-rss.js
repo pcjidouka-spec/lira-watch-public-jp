@@ -63,24 +63,52 @@ function getArticles() {
 }
 
 // Helper to format date for RSS (RFC 822)
+// Use JST 07:00 to keep pubDate firmly in the past from any timezone perspective.
+// Past JST 0:00 was being interpreted as "future" by Blogmura because the previous
+// day's record was published at GMT 15:00 (= JST next-day 0:00), causing the article
+// to be flagged as a future post and skipped during crawl.
 function formatDate(dateStr) {
     // Input format: YYYY/MM/DD
     const parts = dateStr.split('/');
     if (parts.length !== 3) return new Date().toUTCString();
 
-    // Assume 00:00:00 JST
-    const date = new Date(`${parts[0]}-${parts[1]}-${parts[2]}T00:00:00+09:00`);
+    // Assume 07:00:00 JST (= 22:00:00 UTC previous day) -- guaranteed past
+    const date = new Date(`${parts[0]}-${parts[1]}-${parts[2]}T07:00:00+09:00`);
     return date.toUTCString();
 }
 
+// Limit content for RSS to keep feed size small and avoid Blogmura crawler timeouts.
+// Strip tags + truncate to ~500 chars + append "...続きを読む" link.
+function truncateContent(html, articleId, maxChars = 500) {
+    if (!html) return '';
+    // Keep the leading <img> tag if present (for description thumbnail compatibility)
+    const stripped = html.replace(/\s+/g, ' ').trim();
+    if (stripped.length <= maxChars) return stripped;
+    // Cut at maxChars, prefer to break at a tag boundary
+    let cut = stripped.substring(0, maxChars);
+    const lastTagClose = cut.lastIndexOf('>');
+    if (lastTagClose > maxChars * 0.7) cut = cut.substring(0, lastTagClose + 1);
+    return `${cut}... <a href="https://www.lira-watch.sbs/articles/${articleId}">続きを読む</a>`;
+}
+
+// Limit number of items in feed to reduce payload size for Blogmura crawler.
+const MAX_RSS_ITEMS = 15;
+
 function generateRSS() {
-    const articles = getArticles();
+    const allArticles = getArticles();
+    // Sort by date desc (defensive: articles.ts is mostly sorted but not guaranteed)
+    const sorted = allArticles.slice().sort((a, b) => {
+        const da = new Date(a.date.replace(/\//g, '-')).getTime();
+        const db = new Date(b.date.replace(/\//g, '-')).getTime();
+        return db - da;
+    });
+    const articles = sorted.slice(0, MAX_RSS_ITEMS);
     let rssContent = RSS_HEADER;
 
     articles.forEach(article => {
         let encodedTags = article.tags && article.tags.length > 0 ? ' ' + article.tags.map(t => '#' + t).join(' ') : '';
         let descriptionHTML = article.description + encodedTags;
-        let contentHTML = article.fullContent;
+        let contentHTML = truncateContent(article.fullContent, article.id);
 
         if (article.thumbnail) {
             const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
@@ -126,7 +154,7 @@ function generateRSS() {
     const outputPath = path.join(__dirname, '../public/rss.xml');
     fs.writeFileSync(outputPath, rssContent);
     console.log(`Checking articles file at: ${path.join(__dirname, '../data/articles.ts')}`);
-    console.log(`Extracted ${articles.length} articles.`);
+    console.log(`Extracted ${allArticles.length} articles total, emitted top ${articles.length} into feed.`);
     console.log(`Generated RSS feed at: ${outputPath}`);
 }
 

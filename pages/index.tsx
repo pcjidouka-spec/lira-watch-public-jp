@@ -89,54 +89,88 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="loading-container">
-        <div className="loading-spinner" />
-        <p>データを読み込み中...</p>
-        <style jsx>{`
-          .loading-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: #f3f4f6;
-          }
-          .loading-spinner {
-            border: 4px solid #e5e7eb;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            animation: spin 1s linear infinite;
-          }
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}</style>
-      </div>
+      <>
+        <Head>
+          <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
+          <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://www.lira-watch.sbs/" />
+          {/* OGP Tags (kept in loading branch so non-JS crawlers like Blogmura can pick them up from initial HTML) */}
+          <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
+          <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.lira-watch.sbs/" />
+          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+          <meta property="og:site_name" content="トルコリラ・ウォッチ" />
+          <meta property="og:locale" content="ja_JP" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={latestArticle ? latestArticle.title : "トルコリラ・ウォッチ"} />
+          <meta name="twitter:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+        </Head>
+        <div className="loading-container">
+          <div className="loading-spinner" />
+          <p>データを読み込み中...</p>
+          <style jsx>{`
+            .loading-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              background: #f3f4f6;
+            }
+            .loading-spinner {
+              border: 4px solid #e5e7eb;
+              border-top: 4px solid #3b82f6;
+              border-radius: 50%;
+              width: 48px;
+              height: 48px;
+              animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          `}</style>
+        </div>
+      </>
     );
   }
 
   if (error) {
     return (
-      <div className="error-container">
-        <p className="error-message">エラー: {error}</p>
-        <style jsx>{`
-          .error-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: #f3f4f6;
-          }
-          .error-message {
-            color: #ef4444;
-            font-size: 18px;
-            font-weight: 600;
-          }
-        `}</style>
-      </div>
+      <>
+        <Head>
+          <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
+          <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。" />
+          <link rel="canonical" href="https://www.lira-watch.sbs/" />
+          <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ"} />
+          <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.lira-watch.sbs/" />
+          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+          <meta property="og:site_name" content="トルコリラ・ウォッチ" />
+          <meta property="og:locale" content="ja_JP" />
+        </Head>
+        <div className="error-container">
+          <p className="error-message">エラー: {error}</p>
+          <style jsx>{`
+            .error-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              background: #f3f4f6;
+            }
+            .error-message {
+              color: #ef4444;
+              font-size: 18px;
+              font-weight: 600;
+            }
+          `}</style>
+        </div>
+      </>
     );
   }
 
