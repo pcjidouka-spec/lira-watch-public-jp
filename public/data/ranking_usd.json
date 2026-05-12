@@ -1,73 +1,73 @@
 {
   "currency_pair": "USD/JPY",
-  "target_date": "2026-05-11",
+  "target_date": "2026-05-12",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-11T20:31:36.553Z",
+  "generated_at": "2026-05-12T20:22:21.888Z",
   "buy_ranking": [
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 150.11111111111111,
+      "avg": 150.33333333333334,
       "sample_days": 9
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 149.66666666666666,
-      "sample_days": 9
-    },
-    {
-      "provider_id": "gmo",
-      "name": "GMO外貨",
-      "avg": 144.22222222222223,
+      "avg": 149,
       "sample_days": 9
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 143.88888888888889,
+      "avg": 143.33333333333334,
+      "sample_days": 9
+    },
+    {
+      "provider_id": "gmo",
+      "name": "GMO外貨",
+      "avg": 142.44444444444446,
       "sample_days": 9
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": 142.77777777777777,
+      "avg": 141,
       "sample_days": 9
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 139.28571428571428,
+      "avg": 138.57142857142858,
       "sample_days": 7
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": 138.33333333333334,
+      "avg": 138.44444444444446,
       "sample_days": 9
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 137.77777777777777,
+      "avg": 137.11111111111111,
       "sample_days": 9
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": 136.33333333333334,
+      "avg": 135.66666666666666,
       "sample_days": 9
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": 134.22222222222223,
+      "avg": 133.33333333333334,
       "sample_days": 9
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 132.11111111111111,
+      "avg": 131.66666666666666,
       "sample_days": 9
     }
   ],
@@ -75,67 +75,67 @@
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -139.28571428571428,
+      "avg": -138.57142857142858,
       "sample_days": 7
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -140.11111111111111,
+      "avg": -139.66666666666666,
       "sample_days": 9
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -140.77777777777777,
+      "avg": -140.11111111111111,
       "sample_days": 9
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -142.77777777777777,
-      "sample_days": 9
-    },
-    {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": -143.88888888888889,
+      "avg": -141,
       "sample_days": 9
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -144.22222222222223,
+      "avg": -142.44444444444446,
+      "sample_days": 9
+    },
+    {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": -143.33333333333334,
       "sample_days": 9
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -166.33333333333334,
+      "avg": -165.66666666666666,
       "sample_days": 9
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": -167.55555555555554,
+      "avg": -166.11111111111111,
       "sample_days": 9
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": -171.11111111111111,
+      "avg": -170.66666666666666,
       "sample_days": 9
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -224.66666666666666,
+      "avg": -224,
       "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -249.11111111111111,
+      "avg": -249.33333333333334,
       "sample_days": 9
     }
   ]
