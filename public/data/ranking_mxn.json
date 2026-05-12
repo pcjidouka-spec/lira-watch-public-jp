@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-05-12",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-12T20:22:21.884Z",
+  "generated_at": "2026-05-12T20:31:14.770Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -29,16 +29,16 @@
       "sample_days": 11
     },
     {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": 14.549999999999999,
+      "sample_days": 6
+    },
+    {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
       "avg": 14.5,
       "sample_days": 11
-    },
-    {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": 14.450000000000001,
-      "sample_days": 6
     },
     {
       "provider_id": "traders_light",
@@ -117,7 +117,7 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -14.450000000000001,
+      "avg": -14.549999999999999,
       "sample_days": 6
     },
     {
