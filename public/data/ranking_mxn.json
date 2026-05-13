@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-05-13",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-13T21:59:10.845Z",
+  "generated_at": "2026-05-13T22:07:39.809Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -35,12 +35,6 @@
       "sample_days": 14
     },
     {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": 14.233333333333333,
-      "sample_days": 9
-    },
-    {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
       "avg": 14.199999999999998,
@@ -51,6 +45,12 @@
       "name": "LIGHT FX（LIGHT）",
       "avg": 14.199999999999998,
       "sample_days": 13
+    },
+    {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": 14.166666666666666,
+      "sample_days": 9
     },
     {
       "provider_id": "dmm",
@@ -103,6 +103,12 @@
       "sample_days": 14
     },
     {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": -14.166666666666666,
+      "sample_days": 9
+    },
+    {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
       "avg": -14.199999999999998,
@@ -113,12 +119,6 @@
       "name": "LIGHT FX（LIGHT）",
       "avg": -14.199999999999998,
       "sample_days": 13
-    },
-    {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": -14.233333333333333,
-      "sample_days": 9
     },
     {
       "provider_id": "gmo",
