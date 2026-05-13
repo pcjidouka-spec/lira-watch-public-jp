@@ -1109,7 +1109,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,gmo,TRY/JPY,GMO外貨,3.0,25.099999999999998,-25.099999999999998,None,success,2026/05/13
 2026-05-13,gmo_click,TRY/JPY,GMOクリック証券,3.0,27.0,-27.0,None,success,2026/05/13
 2026-05-13,hirose,TRY/JPY,ヒロセ通商,3.0,25.0,-30.0,None,success,2026/05/13
-2026-05-13,invast,TRY/JPY,トライオートFX,3.0,None,None,None,error,None
+2026-05-13,invast,TRY/JPY,トライオートFX,1.0,25.4,-38.4,None,success,2026/05/12
 2026-05-13,jfx,TRY/JPY,JFX,3.0,25.0,-32.0,None,success,2026/05/13
 2026-05-13,matsui,TRY/JPY,MATSUI FX,3.0,25.0,-25.0,None,success,2026/05/13
 2026-05-13,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月15日,success,2026/05/13
