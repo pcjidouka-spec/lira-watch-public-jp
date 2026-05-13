@@ -2,13 +2,13 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-05-13",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-13T20:32:48.126Z",
+  "generated_at": "2026-05-13T21:59:10.835Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 27.142857142857142,
-      "sample_days": 7
+      "avg": 27.22222222222222,
+      "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
@@ -153,8 +153,8 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -27.142857142857142,
-      "sample_days": 7
+      "avg": -27.22222222222222,
+      "sample_days": 9
     },
     {
       "provider_id": "hirose",
