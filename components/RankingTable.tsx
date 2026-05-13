@@ -15,6 +15,24 @@ const getProviderId = (p: any): string => {
   if (!p) return '';
   return String(p.provider_id || '').toLowerCase();
 };
+
+// Format actual_date / latest_date into short "M/D" notation.
+// 入力例: "2026/05/12", "2026-05-12" → "5/12"
+const formatShortDate = (raw?: string): string => {
+  if (!raw) return '';
+  const parts = raw.replace(/-/g, '/').split('/');
+  if (parts.length === 3) {
+    const m = parseInt(parts[1], 10);
+    const d = parseInt(parts[2], 10);
+    if (!isNaN(m) && !isNaN(d)) return `${m}/${d}`;
+  } else if (parts.length === 2) {
+    // 既に "5/12" 形式
+    const m = parseInt(parts[0], 10);
+    const d = parseInt(parts[1], 10);
+    if (!isNaN(m) && !isNaN(d)) return `${m}/${d}`;
+  }
+  return raw;
+};
 export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel, noteText }) => {
   const valueSuffix = unitLabel ? '' : '円';
   const valueColumnLabel = unitLabel ? `金額（${unitLabel}）` : '金額';
@@ -151,6 +169,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {row.buy.latest_buy != null && (
                         <span className="latest-value">最新 {row.buy.latest_buy.toFixed(1)}{valueSuffix}</span>
                       )}
+                      {row.buy.latest_buy != null && (row.buy.actual_date || row.buy.latest_date) && (
+                        <span className="latest-date-note">({formatShortDate(row.buy.actual_date || row.buy.latest_date)} 時点)</span>
+                      )}
                     </div>
                   )}
                 </td>
@@ -234,6 +255,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       <span className="avg-value">{row.sell.swap_sell.toFixed(1)}{valueSuffix}</span>
                       {row.sell.latest_sell != null && (
                         <span className="latest-value">最新 {row.sell.latest_sell.toFixed(1)}{valueSuffix}</span>
+                      )}
+                      {row.sell.latest_sell != null && (row.sell.actual_date || row.sell.latest_date) && (
+                        <span className="latest-date-note">({formatShortDate(row.sell.actual_date || row.sell.latest_date)} 時点)</span>
                       )}
                     </div>
                   )}
@@ -563,6 +587,12 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           font-size: 11px;
           font-weight: 500;
           color: #6b7280;
+        }
+        .latest-date-note {
+          font-size: 10px;
+          font-weight: 400;
+          color: #9ca3af;
+          line-height: 1.2;
         }
 
         @media (max-width: 768px) {
