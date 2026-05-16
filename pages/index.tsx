@@ -22,7 +22,8 @@ export default function Home() {
   const usdData = useSwapData('USD/JPY');
   const eurusdData = useSwapData('EUR/USD');
   const gbpusdData = useSwapData('GBP/USD');
-  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD';
+  const hufData = useSwapData('HUF/JPY');
+  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY';
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
@@ -32,6 +33,7 @@ export default function Home() {
     'USD/JPY': usdData,
     'EUR/USD': eurusdData,
     'GBP/USD': gbpusdData,
+    'HUF/JPY': hufData,
   };
   const activeSwapData = dataMap[currencyTab];
   const {
@@ -44,7 +46,7 @@ export default function Home() {
     error,
   } = activeSwapData;
 
-  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY';
+  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY';
   const isCrossPair = currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD';
   const activeNoteText = isCrossPair
     ? '※ クロスペアは各社が円換算した 1万通貨単位あたりの値です。GBP/USDなど金利差が小さい通貨ペアでは、各社のスワップポリシーやマージンにより値や符号が異なる場合があります。'
@@ -55,6 +57,7 @@ export default function Home() {
     'USD/JPY': '米ドル円',
     'EUR/USD': 'EUR/USD',
     'GBP/USD': 'GBP/USD',
+    'HUF/JPY': 'ハンガリーフォリント',
   };
 
   const [showCharts, setShowCharts] = useState(false);
@@ -431,7 +434,7 @@ export default function Home() {
                 color: isJpyGroup ? 'white' : '#4b5563',
                 cursor: 'pointer', fontWeight: 700,
               }}
-            >TRY/JPY、MXN/JPY</button>
+            >TRY/JPY、MXN/JPY、HUF/JPY</button>
             <button
               onClick={() => setCurrencyTab('USD/JPY')}
               style={{
@@ -466,6 +469,15 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >MXN/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('HUF/JPY')}
+                    style={{
+                      padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'HUF/JPY' ? '#ec4899' : '#f3f4f6',
+                      color: currencyTab === 'HUF/JPY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >HUF/JPY</button>
                 </>
               ) : (
                 <>
@@ -560,6 +572,15 @@ export default function Home() {
                           cursor: 'pointer', fontWeight: 700,
                         }}
                       >MXN/JPY</button>
+                      <button
+                        onClick={() => setCurrencyTab('HUF/JPY')}
+                        style={{
+                          padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                          background: currencyTab === 'HUF/JPY' ? '#ec4899' : '#f3f4f6',
+                          color: currencyTab === 'HUF/JPY' ? 'white' : '#4b5563',
+                          cursor: 'pointer', fontWeight: 700,
+                        }}
+                      >HUF/JPY</button>
                     </>
                   ) : (
                     <>
