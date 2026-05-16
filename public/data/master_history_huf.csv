@@ -5,7 +5,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-10,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-10,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.5,-13.5,None,success,2026/04/10
 2026-04-10,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/10
-2026-04-10,traders_light_light,HUF/JPY,LIGHT FX,1.0,21.0,-21.0,None,success,2026/04/10
+2026-04-10,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,21.0,-21.0,None,success,2026/04/10
 2026-04-10,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/10
 2026-04-13,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,None,success,2026/04/13
 2026-04-13,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
@@ -22,19 +22,19 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-16,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-16,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.5,-13.5,None,success,2026/04/16
 2026-04-16,hirose,HUF/JPY,ヒロセ通商,1.0,0.6,-1.5,None,success,2026/04/16
-2026-04-16,traders_light_light,HUF/JPY,LIGHT FX,1.0,24.0,-24.0,None,success,2026/04/16
+2026-04-16,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,24.0,-24.0,None,success,2026/04/16
 2026-04-16,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/16
 2026-04-17,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,None,success,2026/04/17
 2026-04-17,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-17,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.5,-13.5,None,success,2026/04/17
 2026-04-17,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/17
-2026-04-17,traders_light_light,HUF/JPY,LIGHT FX,1.0,22.0,-22.0,None,success,2026/04/17
+2026-04-17,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,22.0,-22.0,None,success,2026/04/17
 2026-04-17,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/17
 2026-04-20,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,None,success,2026/04/20
 2026-04-20,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-20,gmo_click,HUF/JPY,GMOクリック証券,1.0,54.0,-54.0,None,error,2026/04/20
 2026-04-20,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/20
-2026-04-20,traders_light_light,HUF/JPY,LIGHT FX,1.0,22.0,-22.0,None,success,2026/04/20
+2026-04-20,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,22.0,-22.0,None,success,2026/04/20
 2026-04-20,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/20
 2026-04-21,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-21,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/21
@@ -44,18 +44,18 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-23,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-23,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.5,-13.5,None,success,2026/04/23
 2026-04-23,hirose,HUF/JPY,ヒロセ通商,1.0,0.6,-1.5,None,success,2026/04/23
-2026-04-23,traders_light_light,HUF/JPY,LIGHT FX,1.0,18.0,-18.0,None,success,2026/04/23
+2026-04-23,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,18.0,-18.0,None,success,2026/04/23
 2026-04-23,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/23
 2026-04-24,central_tanshi,HUF/JPY,セントラル短資FX,1.0,None,None,None,error,None
 2026-04-24,gaitame,HUF/JPY,外為どっとコム,1.0,None,None,None,error,None
 2026-04-24,gmo_click,HUF/JPY,GMOクリック証券,1.0,54.0,-54.0,None,error,2026/04/24
 2026-04-24,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/24
-2026-04-24,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/04/24
+2026-04-24,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/04/24
 2026-04-24,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,14.0,-14.0,None,success,2026/04/24
 2026-04-27,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.7999999999999999,-0.7999999999999999,4/28,success,2026/04/27
 2026-04-27,gmo_click,HUF/JPY,GMOクリック証券,1.0,189.0,-189.0,None,error,2026/04/27
 2026-04-27,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/04/27
-2026-04-27,traders_light_light,HUF/JPY,LIGHT FX,1.0,12.0,-12.0,None,success,2026/04/27
+2026-04-27,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,12.0,-12.0,None,success,2026/04/27
 2026-04-27,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/27
 2026-04-28,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/04/28
 2026-04-28,hirose,HUF/JPY,ヒロセ通商,1.0,0.6,-1.5,None,success,2026/04/28
@@ -63,64 +63,64 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-29,gaitame,HUF/JPY,外為どっとコム,1.0,0.0,0.0,None,error,2026/04/29
 2026-04-29,gmo_click,HUF/JPY,GMOクリック証券,1.0,0.0,0.0,None,error,2026/04/29
 2026-04-29,hirose,HUF/JPY,ヒロセ通商,1.0,0.0,0.0,None,error,2026/04/29
-2026-04-29,traders_light_light,HUF/JPY,LIGHT FX,1.0,None,None,04/29,success,2026/04/29
+2026-04-29,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,None,None,04/29,success,2026/04/29
 2026-04-29,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,None,None,04/29,success,2026/04/29
 2026-04-30,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/1,success,2026/04/30
 2026-04-30,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.0,-13.0,None,success,2026/04/30
-2026-04-30,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/04/30
+2026-04-30,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/04/30
 2026-04-30,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/30
 2026-05-01,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.0,0.0,None,error,2026/05/01
 2026-05-01,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/01
 2026-05-01,gmo_click,HUF/JPY,GMOクリック証券,1.0,0.0,0.0,None,error,2026/05/01
 2026-05-01,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/01
-2026-05-01,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/04/30
+2026-05-01,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/04/30
 2026-05-01,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/04/30
-2026-05-05,traders_light_light,HUF/JPY,LIGHT FX,1.0,None,None,05/05,success,2026/05/05
+2026-05-05,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,None,None,05/05,success,2026/05/05
 2026-05-06,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.7999999999999999,-0.7999999999999999,5/7,success,2026/05/06
 2026-05-06,gmo_click,HUF/JPY,GMOクリック証券,1.0,78.0,-78.0,None,error,2026/05/06
-2026-05-06,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/06
+2026-05-06,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/06
 2026-05-06,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/06
 2026-05-07,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/8,success,2026/05/07
 2026-05-07,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/07
 2026-05-07,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.0,-13.0,None,success,2026/05/07
 2026-05-07,hirose,HUF/JPY,ヒロセ通商,1.0,0.6,-1.5,None,success,2026/05/07
-2026-05-07,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/07
+2026-05-07,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/07
 2026-05-07,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/07
 2026-05-08,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/11,success,2026/05/08
 2026-05-08,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/08
 2026-05-08,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.0,-13.0,None,success,2026/05/08
 2026-05-08,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/08
-2026-05-08,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/08
+2026-05-08,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/08
 2026-05-08,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/08
 2026-05-11,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/12,success,2026/05/11
 2026-05-11,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/11
 2026-05-11,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.0,-13.0,None,success,2026/05/11
 2026-05-11,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/11
-2026-05-11,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/11
+2026-05-11,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/11
 2026-05-11,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/11
 2026-05-12,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/13,success,2026/05/12
 2026-05-12,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/12
 2026-05-12,gmo_click,HUF/JPY,GMOクリック証券,1.0,13.5,-13.5,None,success,2026/05/12
 2026-05-12,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/12
-2026-05-12,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/12
+2026-05-12,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/12
 2026-05-12,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/12
 2026-05-13,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.7999999999999999,-0.7999999999999999,5/14,success,2026/05/13
 2026-05-13,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/13
 2026-05-13,gmo_click,HUF/JPY,GMOクリック証券,1.0,81.0,-81.0,None,error,2026/05/13
 2026-05-13,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/13
-2026-05-13,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/13
+2026-05-13,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/13
 2026-05-13,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/13
 2026-05-14,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/15,success,2026/05/14
 2026-05-14,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/14
 2026-05-14,gmo_click,HUF/JPY,GMOクリック証券,1.0,54.0,-54.0,None,error,2026/05/14
 2026-05-14,hirose,HUF/JPY,ヒロセ通商,1.0,0.6,-1.5,None,success,2026/05/14
-2026-05-14,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/14
+2026-05-14,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/14
 2026-05-14,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/14
 2026-05-15,central_tanshi,HUF/JPY,セントラル短資FX,1.0,0.8,-0.8,5/18,success,2026/05/15
 2026-05-15,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/05/15
 2026-05-15,gmo_click,HUF/JPY,GMOクリック証券,1.0,0.0,0.0,None,error,2026/05/15
 2026-05-15,hirose,HUF/JPY,ヒロセ通商,1.0,0.6000000000000001,-1.5,None,success,2026/05/15
-2026-05-15,traders_light_light,HUF/JPY,LIGHT FX,1.0,15.0,-15.0,None,success,2026/05/15
+2026-05-15,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,15.0,-15.0,None,success,2026/05/15
 2026-05-15,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/05/15
 2026-05-15,traders_light,HUF/JPY,LIGHT FX,1.0,None,None,None,error,2026-05-15
 2026-05-15,traders_min,HUF/JPY,みんなのFX,1.0,None,None,None,error,2026-05-15
