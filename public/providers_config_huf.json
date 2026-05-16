@@ -1,0 +1,83 @@
+{
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?year=2025&month=08&pare=HUFJPY",
+      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず最後までスクロールして確認してください。",
+        "table_extraction": "対象日の行を抽出してください。表の列構造: | 取引日 | 売Swap | 買Swap | 付与日数 |"
+      }
+    },
+    {
+      "id": "traders_light_huf",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "ハンガリーフォリント/円LIGHT（HUF/JPY LIGHT）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：商品・表の選択】ページ上部の通貨グループはタブまたはリンク列です。必ず「(L)」付きのグループ（USDJPY(L)/EURJPY(L)/…/HUFJPY(L) など）を選び、そのグループの表だけを対象にしてください。HUFJPY だけで (L) のない通常グループの表は使わないでください。【重要：スクロール】表が長いので、対象日が見つかるまで下までスクロールしてください。",
+        "product_selection": "【重要：商品選択】このページには「HUFJPY」と「HUFJPY LIGHT」の2つの商品があります。必ずHUFJPY LIGHTの行からデータを抽出してください。通常のHUFJPYのデータは抽出しないでください。",
+        "table_extraction": "抽出するのは対象日の1行だけでよいが、列ヘッダーに HUFJPY(L) または HUFJPY LIGHT が分かるように、その行の前後（付与日数・買・売の行）を含めて Markdown 表形式で出力してください。数値はサイト表記のまま（負数はマイナス）で。"
+      }
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨選択】ページ上部の通貨グループ選択で HUF/JPY を含むグループを選択してください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨タブ選択】「直近のスワップ」タブを選択してください。HUF/JPY の列または行のデータを抽出してください。",
+        "table_extraction": "対象日の行（または列）を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール】表が長いので、対象日が見つかるまで下までスクロールしてください。",
+        "swap_point_adjustment": "【重要：単位変換】ヒロセ通商のHUF/JPYスワップポイントは「100,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、抽出する際は表に記載されているスワップポイント（買・売ともに）を10分の1した数値として抽出・報告してください。例：表に「60」とあれば「6」として抽出してください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "ハンガリーフォリント/円LIGHT（HUF/JPY LIGHT）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール】表が長いので、対象日が見つかるまで下までスクロールしてください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    }
+  ],
+  "common_instructions": {},
+  "agent_settings": {
+    "max_steps": 5,
+    "timeout_seconds": 300
+  }
+}
