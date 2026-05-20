@@ -3,8 +3,13 @@ import { SwapData, ProviderConfig } from '@/types';
 /**
  * 各事業者ごとの日次データを取得
  */
-export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', providerConfigs?: Map<string, ProviderConfig>) {
+export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', providerConfigs?: Map<string, ProviderConfig>, currencyPair?: string) {
   const providerMap = new Map<string, { name: string; data: { date: string; value: number }[] }>();
+
+  // クロスペア（EUR/USD, GBP/USD）では 0 が正常値のためグラフに描画する。
+  // JPY ペアでは 0 = 取得失敗の可能性が高いため従来通りスキップ。
+  // ランキング側（dataProcessor.getBuyRanking）の isCrossPair 分岐と挙動を揃える。
+  const isCrossPair = currencyPair === 'EUR/USD' || currencyPair === 'GBP/USD';
 
   // 実際に取得できた成功データのみを使用
   const successData = data.filter(d => d.status === 'success');
@@ -15,8 +20,9 @@ export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', pro
   for (const record of successData) {
     const value = type === 'buy' ? record.swap_buy : record.swap_sell;
 
-    // 値がない場合、または0の場合はスキップ（外れ値や取得エラー等による0をグラフに描画しない）
-    if (value === null || value === 0) continue;
+    // 値がない場合はスキップ。0 は JPY ペアのみスキップ（クロスペアでは 0 が正常値）。
+    if (value === null) continue;
+    if (!isCrossPair && value === 0) continue;
 
     // 日付文字列 (YYYY-MM-DD or YYYY/MM/DD)
     // actual_dateがある場合はそちらを優先（データの実際の日付を使用）

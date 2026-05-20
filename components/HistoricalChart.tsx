@@ -47,7 +47,7 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
   }, []);
 
   const { chartData, providers } = useMemo(() => {
-    const providerMap = getProviderChartData(data, type, providerConfigs);
+    const providerMap = getProviderChartData(data, type, providerConfigs, currencyPair);
     const prepared = prepareChartData(providerMap);
 
     // ランキングの順番に合わせてプロバイダーを並び替え
@@ -65,7 +65,7 @@ export const HistoricalChart: React.FC<HistoricalChartProps> = ({ data, type, ra
       chartData: prepared.chartData,
       providers: [...sortedProviders, ...remainingProviders],
     };
-  }, [data, type, ranking, providerConfigs]);
+  }, [data, type, ranking, providerConfigs, currencyPair]);
 
   // プロバイダーIDと名前のマッピングを作成
   const providerIdMap = useMemo(() => {
