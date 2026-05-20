@@ -47,9 +47,9 @@
     {
       "id": "jfx",
       "name": "JFX",
-      "url": "https://www.jfx.co.jp/category/swap/",
+      "url": "https://www.jfx.co.jp/trading_rule/swap/",
       "currency_pair_selector": "メキシコペソ/円（MXN/JPY）",
-      "campaign_url": "https://www.jfx.co.jp/category/campaign/index.html",
+      "campaign_url": "https://www.jfx.co.jp/campaign/index.html",
       "instructions": {
         "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
         "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
