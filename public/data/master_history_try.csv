@@ -1188,3 +1188,18 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-20,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,25.2,-25.2,None,success,2026/05/20
 2026-05-20,traders_min,TRY/JPY,みんなのFX,4.0,25.3,-25.3,None,success,2026/05/20
 2026-05-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,25.3,-25.3,None,success,2026/05/20
+2026-05-21,central_tanshi,TRY/JPY,セントラル短資FX,4.0,0.0,0.0,None,error,2026/05/21
+2026-05-21,click365_okasan,TRY/JPY,クリック365,4.0,29.75,-29.75,None,success,2026/05/20
+2026-05-21,dmm,TRY/JPY,DMM FX,4.0,25.0,-28.0,None,success,2026/05/21
+2026-05-21,gaitame,TRY/JPY,外為どっとコム,4.0,25.0,-35.0,None,success,2026/05/21
+2026-05-21,gmo,TRY/JPY,GMO外貨,4.0,0.0,0.0,None,error,2026/05/21
+2026-05-21,gmo_click,TRY/JPY,GMOクリック証券,4.0,0.0,0.0,None,error,2026/05/21
+2026-05-21,hirose,TRY/JPY,ヒロセ通商,4.0,25.0,-30.0,None,success,2026/05/21
+2026-05-21,invast,TRY/JPY,トライオートFX,4.0,25.3,-38.3,None,success,2026/05/20
+2026-05-21,jfx,TRY/JPY,JFX,4.0,25.0,-32.0,None,success,2026/05/21
+2026-05-21,matsui,TRY/JPY,MATSUI FX,4.0,25.0,-25.0,None,success,2026/05/20
+2026-05-21,sbi,TRY/JPY,SBI FXトレード,4.0,24.0,-32.0,05月26日,success,2026/05/21
+2026-05-21,traders_light,TRY/JPY,LIGHT FX,4.0,25.2,-25.2,None,success,2026/05/20
+2026-05-21,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,25.2,-25.2,None,success,2026/05/20
+2026-05-21,traders_min,TRY/JPY,みんなのFX,4.0,25.3,-25.3,None,success,2026/05/20
+2026-05-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,25.3,-25.3,None,success,2026/05/20
