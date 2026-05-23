@@ -2,13 +2,13 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-05-22",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-22T20:23:33.816Z",
+  "generated_at": "2026-05-23T20:11:57.396Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 28.944444444444443,
-      "sample_days": 24
+      "avg": 29.17948717948718,
+      "sample_days": 26
     },
     {
       "provider_id": "central_tanshi",
@@ -25,8 +25,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 25.536363636363635,
-      "sample_days": 22
+      "avg": 25.516666666666666,
+      "sample_days": 24
     },
     {
       "provider_id": "traders_min",
@@ -59,18 +59,6 @@
       "sample_days": 23
     },
     {
-      "provider_id": "gaitame",
-      "name": "外為どっとコム",
-      "avg": 25,
-      "sample_days": 24
-    },
-    {
-      "provider_id": "hirose",
-      "name": "ヒロセ通商",
-      "avg": 25,
-      "sample_days": 24
-    },
-    {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": 25,
@@ -81,6 +69,18 @@
       "name": "MATSUI FX",
       "avg": 25,
       "sample_days": 23
+    },
+    {
+      "provider_id": "gaitame",
+      "name": "外為どっとコム",
+      "avg": 25,
+      "sample_days": 26
+    },
+    {
+      "provider_id": "hirose",
+      "name": "ヒロセ通商",
+      "avg": 25,
+      "sample_days": 26
     },
     {
       "provider_id": "dmm",
@@ -153,14 +153,14 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -28.944444444444443,
-      "sample_days": 24
+      "avg": -29.17948717948718,
+      "sample_days": 26
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
       "avg": -30,
-      "sample_days": 24
+      "sample_days": 26
     },
     {
       "provider_id": "jfx",
@@ -178,13 +178,13 @@
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": -35,
-      "sample_days": 24
+      "sample_days": 26
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -38.53636363636363,
-      "sample_days": 22
+      "avg": -38.516666666666666,
+      "sample_days": 24
     }
   ]
 }
