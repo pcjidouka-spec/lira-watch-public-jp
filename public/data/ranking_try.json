@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-05-28",
   "period_label": "直近約2週間",
-  "generated_at": "2026-05-29T03:28:11.390Z",
+  "generated_at": "2026-05-29T03:35:34.899Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
@@ -91,8 +91,8 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 24,
-      "sample_days": 14
+      "avg": 23.333333333333332,
+      "sample_days": 15
     }
   ],
   "sell_ranking": [
@@ -163,16 +163,16 @@
       "sample_days": 26
     },
     {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": -31,
+      "sample_days": 15
+    },
+    {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": -32,
       "sample_days": 23
-    },
-    {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": -32,
-      "sample_days": 14
     },
     {
       "provider_id": "gaitame",
