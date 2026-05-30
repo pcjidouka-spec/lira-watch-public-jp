@@ -95,6 +95,41 @@ export const articles: Article[] = [
       </tbody>
     </table>
 
+    <h3>【上限Lotまで建てたら？1日あたりの最大上乗せ】</h3>
+    <p>上乗せ対象の上限数量（TRY/JPY 1,000Lot、USD/TRY・EUR/TRY 各200Lot）まで建てた場合、1日あたりの上乗せは最大で次の通りです（上記単価からの当サイト試算）。</p>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>対象通貨ペア・ポジション</th>
+          <th>上限数量</th>
+          <th>1日あたりの最大上乗せ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>米ドル/トルコリラ（売）</td>
+          <td>200Lot（20万通貨）</td>
+          <td>約9,960円相当</td>
+        </tr>
+        <tr>
+          <td>ユーロ/トルコリラ（売）</td>
+          <td>200Lot（20万通貨）</td>
+          <td>約13,400円相当</td>
+        </tr>
+        <tr>
+          <td>トルコリラ/円（買）</td>
+          <td>1,000Lot（100万通貨）</td>
+          <td>約1,500円相当</td>
+        </tr>
+        <tr>
+          <td><strong>3ペア合計</strong></td>
+          <td>—</td>
+          <td><strong style="color: #ef4444;">約24,860円相当／日</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.9em; color: #666;">※上限Lotを全ペア同時に建てると、付与日数1日につき最大約24,860円相当（30％増額時は約12,430円相当）が上乗せされる計算です。保有日数が増えればその日数分だけ積み上がります（例：6日保有なら約149,160円相当）。スワップは日々変動するため、あくまで現時点の単価に基づく目安です。</p>
+
     <h3>【キャンペーン概要】</h3>
     <div class="campaign-details">
       <ul>
