@@ -16,7 +16,7 @@ export const articles: Article[] = [
   title: 'SBI FXトレードの高金利3通貨「初夏のスワップ増額キャンペーン」が開催！トルコリラ・南アランドは最大20％、メキシコペソは10％をキャッシュバック',
   share_title: 'SBI FXトレード 高金利3通貨スワップ増額キャンペーン開催！（最大20％CB）',
   date: '2026/05/30',
-  thumbnail: '/images/sbi-fxtrade-swap-campaign-202606_60.png',
+  thumbnail: '/images/sbi-fxtrade-swap-campaign-202606_card.jpg',
   tags: ['FX', 'トルコリラ', 'メキシコペソ', '南アフリカランド', 'スワップ投資', 'SBI FXトレード', 'キャンペーン'],
   content: `
     <p class="intro">
