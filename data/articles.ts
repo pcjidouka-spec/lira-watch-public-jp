@@ -12,6 +12,102 @@ export interface Article {
 // 楽天記事削除
 export const articles: Article[] = [
 {
+  id: 'sbi-fxtrade-swap-campaign-202606',
+  title: 'SBI FXトレードの高金利3通貨「初夏のスワップ増額キャンペーン」が開催！トルコリラ・南アランドは最大20％、メキシコペソは10％をキャッシュバック',
+  share_title: 'SBI FXトレード 高金利3通貨スワップ増額キャンペーン開催！（最大20％CB）',
+  date: '2026/05/30',
+  thumbnail: '/images/sbi-fxtrade-swap-campaign-202606_60.png',
+  tags: ['FX', 'トルコリラ', 'メキシコペソ', '南アフリカランド', 'スワップ投資', 'SBI FXトレード', 'キャンペーン'],
+  content: `
+    <p class="intro">
+      SBI FXトレードにて、高金利通貨3ペアを対象とした<strong>「初夏のスワップ増額キャンペーン」</strong>が同時開催されます。<br>
+      期間中に新規建てしたポジションの<strong>受取スワップポイントの一定割合がキャッシュバック</strong>される内容です。
+    </p>
+
+    <h3>【まずは結論：3通貨でいくら増額？】</h3>
+    <p>対象は高金利通貨の3ペア。受取スワップポイントに対するキャッシュバック率は以下の通りです。</p>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>対象通貨ペア</th>
+          <th>キャッシュバック率</th>
+          <th>対象建玉の上限</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>トルコリラ/円（TRY/JPY）</td>
+          <td><strong style="color: #ef4444;">20％</strong></td>
+          <td>300万通貨まで</td>
+        </tr>
+        <tr>
+          <td>南アフリカランド/円（ZAR/JPY）</td>
+          <td><strong style="color: #ef4444;">20％</strong></td>
+          <td>700万通貨まで</td>
+        </tr>
+        <tr>
+          <td>メキシコペソ/円（MXN/JPY）</td>
+          <td><strong style="color: #ef4444;">10％</strong></td>
+          <td>1,400万通貨まで</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.9em; color: #666;">※受取スワップポイントの「●％相当額」が後日キャッシュバックされる仕組みです。取引画面上のスワップポイント自体が増額されるわけではありません。</p>
+
+    <h3>【仕組み：日次で受取スワップの一定割合を還元】</h3>
+    <ul>
+      <li>各営業日の終了時点で保有する対象建玉に対し、受取スワップポイントを<strong>日次で計算</strong>。</li>
+      <li>その合計額に対し、通貨ごとのキャッシュバック率（20％または10％）を乗じた金額を還元。</li>
+      <li>キャッシュバックは<strong>2026年8月末を目途に</strong>FX口座へ入金されます。</li>
+      <li>1円未満は切り捨て。</li>
+    </ul>
+
+    <h3>【キャンペーン概要】</h3>
+    <div class="campaign-details">
+      <ul>
+        <li><strong>対象期間：</strong> 2026年6月1日(月)午前7時00分 ～ 2026年8月1日(土)午前5時30分</li>
+        <li><strong>エントリー締切：</strong> 2026年8月1日(土)午前5時30分</li>
+        <li><strong>対象サービス：</strong> FX取引「SBI FXTRADE」（つみたて外貨・SBIビットコインFXは対象外）</li>
+        <li><strong>対象建玉：</strong> 期間中に新規建てした対象通貨ペアのポジション（買建玉から売建玉を差し引いた数量が対象）</li>
+        <li>
+          <strong>キャッシュバック対象数量の上限：</strong><br>
+          ・トルコリラ/円：300万通貨まで<br>
+          ・南アフリカランド/円：700万通貨まで<br>
+          ・メキシコペソ/円：1,400万通貨まで
+        </li>
+      </ul>
+    </div>
+
+    <h3>【参加するための必須条件・注意点】</h3>
+    <ul>
+      <li>専用フォームからの<strong>「エントリー」</strong>が必須です（申込制）。SBI FXTRADEの<strong>口座開設</strong>も必要です。</li>
+      <li>キャンペーン<strong>開始前から保有している建玉は対象外</strong>。期間中の新規建てのみが対象です。</li>
+      <li>金利情勢によってはスワップポイント自体が逆転（支払い）する可能性があります。</li>
+      <li>不正な手段が使われたと判断された場合は対象外となります。</li>
+    </ul>
+
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+    <p>
+      トルコリラ・南アフリカランド・メキシコペソはいずれも高金利通貨で、スワップ狙いの長期保有と相性の良い通貨です。新興国通貨ゆえの価格変動リスクはありますが、こうした増額キャンペーンを併用すれば受取スワップの上乗せを狙えます。<br>
+      まずは詳細をチェックし、エントリーを済ませておきましょう。
+    </p>
+
+    <div class="campaign-link" style="margin-top: 30px;">
+      <p style="font-weight: bold; color: #2563eb;">▼各キャンペーンの詳細とエントリーはこちら</p>
+      <a href="https://www.sbifxt.co.jp/campaign/tryjpy_swappoint_202606.html" target="_blank" rel="noopener noreferrer">
+        トルコリラ/円：https://www.sbifxt.co.jp/campaign/tryjpy_swappoint_202606.html
+      </a><br>
+      <a href="https://www.sbifxt.co.jp/campaign/zarjpy_swappoint_202606.html" target="_blank" rel="noopener noreferrer">
+        南アフリカランド/円：https://www.sbifxt.co.jp/campaign/zarjpy_swappoint_202606.html
+      </a><br>
+      <a href="https://www.sbifxt.co.jp/campaign/mxnjpy_swappoint_202606.html" target="_blank" rel="noopener noreferrer">
+        メキシコペソ/円：https://www.sbifxt.co.jp/campaign/mxnjpy_swappoint_202606.html
+      </a>
+    </div>
+  `,
+},
+{
   id: 'gaitame-swap-campaign-202606',
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が6月も開催！10万円からでも30％上乗せのチャンス',
   share_title: 'スワップ最大60％増額キャンペーンが6月も開催！（外為どっとコム）',
