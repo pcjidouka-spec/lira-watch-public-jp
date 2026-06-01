@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T10:00:31.422103",
+  "updated_at": "2026-06-01T13:00:31.531103",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -22,8 +22,8 @@
       "updated_at": "2026-05-02T04:00:19.705669"
     },
     "traders_min": {
-      "has_new": false,
-      "updated_at": "2026-05-08T04:00:19.850765"
+      "has_new": true,
+      "updated_at": "2026-06-01T13:00:28.605914"
     },
     "traders_light": {
       "has_new": false,
@@ -54,8 +54,8 @@
       "updated_at": "2026-01-26T04:00:02.904188"
     },
     "traders_min_light": {
-      "has_new": false,
-      "updated_at": "2026-05-08T04:00:22.866069"
+      "has_new": true,
+      "updated_at": "2026-06-01T13:00:29.306023"
     },
     "traders_light_light": {
       "has_new": false,
