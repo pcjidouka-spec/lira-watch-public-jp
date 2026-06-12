@@ -1,13 +1,13 @@
 {
   "currency_pair": "MXN/JPY",
-  "target_date": "2026-06-11",
+  "target_date": "2026-06-12",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-11T20:17:27.099Z",
+  "generated_at": "2026-06-12T20:16:28.031Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 14.742857142857142,
+      "avg": 14.749999999999998,
       "sample_days": 14
     },
     {
@@ -31,7 +31,7 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 14.357142857142858,
+      "avg": 14.428571428571429,
       "sample_days": 14
     },
     {
@@ -55,7 +55,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 14.099999999999996,
+      "avg": 14.099999999999998,
       "sample_days": 14
     },
     {
@@ -91,7 +91,7 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": 13.083333333333334,
+      "avg": 13.166666666666666,
       "sample_days": 12
     }
   ],
@@ -105,7 +105,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -14.099999999999996,
+      "avg": -14.099999999999998,
       "sample_days": 14
     },
     {
@@ -153,7 +153,7 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -17.357142857142858,
+      "avg": -17.428571428571427,
       "sample_days": 14
     },
     {
@@ -177,13 +177,13 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -23.083333333333332,
+      "avg": -23.166666666666668,
       "sample_days": 12
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -29.94285714285714,
+      "avg": -29.949999999999996,
       "sample_days": 14
     }
   ]

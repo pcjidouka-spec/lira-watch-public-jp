@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T04:00:37.998398",
+  "updated_at": "2026-06-13T04:00:35.910611",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -10,8 +10,8 @@
       "updated_at": "2026-05-02T04:00:03.224729"
     },
     "central_tanshi": {
-      "has_new": false,
-      "updated_at": "2026-05-16T04:00:03.731847"
+      "has_new": true,
+      "updated_at": "2026-06-13T04:00:03.994266"
     },
     "jfx": {
       "has_new": false,
