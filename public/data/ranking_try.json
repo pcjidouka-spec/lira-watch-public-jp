@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-06-16",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-16T20:16:41.555Z",
+  "generated_at": "2026-06-16T20:24:17.297Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
@@ -86,7 +86,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 25,
-      "sample_days": 16
+      "sample_days": 15
     },
     {
       "provider_id": "sbi",
@@ -100,7 +100,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -25,
-      "sample_days": 16
+      "sample_days": 15
     },
     {
       "provider_id": "traders_light",

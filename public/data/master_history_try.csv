@@ -1428,7 +1428,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-15,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/15
 2026-06-15,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/15
 2026-06-15,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/15
-2026-06-15,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,error,2026/06/14
 2026-06-16,central_tanshi,TRY/JPY,セントラル短資FX,4.0,26.0,-26.0,6/17,success,2026/06/16
 2026-06-16,click365_okasan,TRY/JPY,クリック365,4.0,26.0,-26.0,None,success,2026/06/15
 2026-06-16,dmm,TRY/JPY,DMM FX,1.0,25.0,-28.0,None,success,2026/06/16
