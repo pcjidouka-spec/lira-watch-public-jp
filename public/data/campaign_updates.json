@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17T04:00:33.957123",
+  "updated_at": "2026-06-18T04:00:32.628168",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -34,12 +34,12 @@
       "updated_at": "2026-06-16T04:00:30.422174"
     },
     "matsui": {
-      "has_new": false,
-      "updated_at": "2026-06-03T04:00:29.070791"
+      "has_new": true,
+      "updated_at": "2026-06-18T04:00:27.049768"
     },
     "gaitame": {
-      "has_new": false,
-      "updated_at": "2026-06-03T11:00:33.435536"
+      "has_new": true,
+      "updated_at": "2026-06-18T04:00:28.306644"
     },
     "click365_okasan": {
       "has_new": false,
