@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-06-18",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-18T20:17:36.890Z",
+  "generated_at": "2026-06-18T20:26:03.948Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
@@ -13,8 +13,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 26.023529411764706,
-      "sample_days": 17
+      "avg": 26.038095238095234,
+      "sample_days": 21
     },
     {
       "provider_id": "central_tanshi",
@@ -59,6 +59,12 @@
       "sample_days": 18
     },
     {
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": 25,
+      "sample_days": 19
+    },
+    {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": 25,
@@ -83,16 +89,10 @@
       "sample_days": 17
     },
     {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": 25,
-      "sample_days": 15
-    },
-    {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 24,
-      "sample_days": 14
+      "avg": 22,
+      "sample_days": 18
     }
   ],
   "sell_ranking": [
@@ -100,7 +100,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -25,
-      "sample_days": 15
+      "sample_days": 19
     },
     {
       "provider_id": "traders_light",
@@ -157,6 +157,12 @@
       "sample_days": 14
     },
     {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": -28.88888888888889,
+      "sample_days": 18
+    },
+    {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
       "avg": -30,
@@ -169,12 +175,6 @@
       "sample_days": 17
     },
     {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": -32,
-      "sample_days": 14
-    },
-    {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": -35,
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -39.023529411764706,
-      "sample_days": 17
+      "avg": -39.03809523809524,
+      "sample_days": 21
     }
   ]
 }
