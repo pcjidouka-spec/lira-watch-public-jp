@@ -2,25 +2,19 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-06-19",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-19T20:17:36.128Z",
+  "generated_at": "2026-06-19T20:25:48.004Z",
   "buy_ranking": [
-    {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": 14.928571428571429,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "invast",
-      "name": "トライオートFX",
-      "avg": 14.800000000000002,
-      "sample_days": 14
-    },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
       "avg": 14.749999999999998,
       "sample_days": 14
+    },
+    {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": 14.733333333333333,
+      "sample_days": 15
     },
     {
       "provider_id": "traders_min",
@@ -32,6 +26,12 @@
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
       "avg": 14.699999999999996,
+      "sample_days": 15
+    },
+    {
+      "provider_id": "invast",
+      "name": "トライオートFX",
+      "avg": 14.683333333333337,
       "sample_days": 15
     },
     {
@@ -153,8 +153,8 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -17.928571428571427,
-      "sample_days": 14
+      "avg": -17.8,
+      "sample_days": 15
     },
     {
       "provider_id": "gaitame",
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -30,
-      "sample_days": 14
+      "avg": -29.303333333333335,
+      "sample_days": 15
     }
   ]
 }
