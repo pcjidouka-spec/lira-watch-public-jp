@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-28T04:00:33.014874",
+  "updated_at": "2026-06-29T04:00:35.824487",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-06-01T10:00:19.074417"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-06-23T04:00:03.567395"
     },
     "central_tanshi": {
@@ -62,7 +62,7 @@
       "updated_at": "2026-06-01T14:00:31.309276"
     },
     "hirose": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-06-23T04:00:37.154602"
     },
     "saxo": {
