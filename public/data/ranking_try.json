@@ -1,13 +1,13 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-06-26",
+  "target_date": "2026-06-29",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-29T02:00:57.560Z",
+  "generated_at": "2026-06-29T20:21:01.926Z",
   "buy_ranking": [
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 26.875,
+      "avg": 26.8125,
       "sample_days": 16
     },
     {
@@ -25,13 +25,13 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 25.935000000000002,
+      "avg": 25.9,
       "sample_days": 20
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 25.35882352941176,
+      "avg": 25.341176470588234,
       "sample_days": 17
     },
     {
@@ -86,7 +86,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 25,
-      "sample_days": 18
+      "sample_days": 19
     },
     {
       "provider_id": "sbi",
@@ -100,7 +100,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -25,
-      "sample_days": 18
+      "sample_days": 19
     },
     {
       "provider_id": "traders_light",
@@ -129,7 +129,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -25.35882352941176,
+      "avg": -25.341176470588234,
       "sample_days": 17
     },
     {
@@ -147,7 +147,7 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -26.875,
+      "avg": -26.8125,
       "sample_days": 16
     },
     {
@@ -183,7 +183,7 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -38.935,
+      "avg": -38.9,
       "sample_days": 20
     }
   ]
