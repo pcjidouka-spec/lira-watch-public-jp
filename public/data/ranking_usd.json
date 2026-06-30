@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-06-29",
   "period_label": "直近約2週間",
-  "generated_at": "2026-06-29T20:28:53.752Z",
+  "generated_at": "2026-06-30T04:23:09.599Z",
   "buy_ranking": [
     {
       "provider_id": "traders_light",
@@ -53,41 +53,41 @@
       "sample_days": 8
     },
     {
+      "provider_id": "dmm",
+      "name": "DMM FX",
+      "avg": 151.125,
+      "sample_days": 8
+    },
+    {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
       "avg": 147.875,
       "sample_days": 8
     },
     {
-      "provider_id": "dmm",
-      "name": "DMM FX",
-      "avg": 138.125,
-      "sample_days": 8
-    },
-    {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 136.25,
-      "sample_days": 8
+      "avg": 135.57142857142858,
+      "sample_days": 7
     }
   ],
   "sell_ranking": [
     {
-      "provider_id": "dmm",
-      "name": "DMM FX",
-      "avg": -140.9375,
-      "sample_days": 8
-    },
-    {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -144.25,
-      "sample_days": 8
+      "avg": -143.57142857142858,
+      "sample_days": 7
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
       "avg": -147.875,
+      "sample_days": 8
+    },
+    {
+      "provider_id": "dmm",
+      "name": "DMM FX",
+      "avg": -154.125,
       "sample_days": 8
     },
     {
