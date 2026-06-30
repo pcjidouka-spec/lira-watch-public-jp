@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T04:00:34.821068",
+  "updated_at": "2026-06-30T15:00:32.245103",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -18,8 +18,8 @@
       "updated_at": "2026-06-01T10:00:20.464476"
     },
     "invast": {
-      "has_new": false,
-      "updated_at": "2026-05-02T04:00:19.705669"
+      "has_new": true,
+      "updated_at": "2026-06-30T15:00:28.823737"
     },
     "traders_min": {
       "has_new": false,
@@ -30,8 +30,8 @@
       "updated_at": "2026-06-01T14:00:30.494031"
     },
     "sbi": {
-      "has_new": false,
-      "updated_at": "2026-06-20T04:00:27.514858"
+      "has_new": true,
+      "updated_at": "2026-06-30T15:00:30.752681"
     },
     "matsui": {
       "has_new": false,
@@ -39,7 +39,7 @@
     },
     "gaitame": {
       "has_new": true,
-      "updated_at": "2026-06-29T11:00:55.818420"
+      "updated_at": "2026-06-30T15:00:31.208382"
     },
     "click365_okasan": {
       "has_new": false,
