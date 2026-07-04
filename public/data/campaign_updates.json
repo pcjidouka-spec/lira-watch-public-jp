@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-04T04:00:35.689308",
+  "updated_at": "2026-07-05T04:00:57.074149",
   "providers": {
     "gmo_click": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-06-29T11:00:44.843886"
     },
     "gmo": {
