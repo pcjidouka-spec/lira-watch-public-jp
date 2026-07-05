@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T04:00:57.074149",
+  "updated_at": "2026-07-06T04:00:37.819317",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -18,7 +18,7 @@
       "updated_at": "2026-07-01T13:00:35.664365"
     },
     "invast": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-06-30T15:00:28.823737"
     },
     "traders_min": {
