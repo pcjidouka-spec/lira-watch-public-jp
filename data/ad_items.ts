@@ -99,5 +99,10 @@ export const AD_ITEMS: AdItem[] = [
         url: "https://hb.afl.rakuten.co.jp/ichiba/50cda82c.59ad1b6e.50cda82d.a8b4cca9/?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2F950ed61c670fcdcdb71302d60d62d813%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjEsImFtcCI6ZmFsc2V9",
         title: "RENPHO 体組成計",
         image: "https://hbb.afl.rakuten.co.jp/hgb/520212c5.f08971a7.520212c6.a713260c/?me_id=1416242&item_id=10000105&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frenpho%2Fcabinet%2Fall_page%2Fmain_picture%2F14.jpg%3F_ex%3D240x240&s=240x240&t=pict"
+    },
+    {
+        url: "https://www.amazon.co.jp/dp/B0GX8RBX57?tag=lirawatch-22&linkCode=ll1&linkId=51bfb9fa59f2ac027c170b6ca33f5118&ref_=as_li_ss_tl",
+        title: "耐火ボックス 1200℃耐熱 強力耐火金庫 収納ボックス A4対応 鍵付き",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GX8RBX57&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
     }
 ];
