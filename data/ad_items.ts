@@ -27,11 +27,6 @@ export const AD_ITEMS: AdItem[] = [
         image: "https://hbb.afl.rakuten.co.jp/hgb/50cda82a.411ce472.50cda82b.360f1622/?me_id=1243088&item_id=10975178&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fa-price%2Fcabinet%2Fdesign%2F20%2F0-4571495434251.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
     },
     {
-        url: "https://hb.afl.rakuten.co.jp/ichiba/50cdc9eb.ebe26f21.50cdc9ec.83ea9686/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffordear-nizimusubi%2Fb0dsj82zvx%2F&link_type=picttext",
-        title: "プロテイン",
-        image: "https://hbb.afl.rakuten.co.jp/hgb/50cdc9eb.ebe26f21.50cdc9ec.83ea9686/?me_id=1437967&item_id=10087846&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ffordear-nizimusubi%2Fcabinet%2Frakub220_0017%2Fb0dsj82zvx00.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
-    },
-    {
         url: "https://hb.afl.rakuten.co.jp/ichiba/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmayumi-store%2Fnt-st2-p%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D",
         title: "日本通信 SIM スターターパック",
         image: "https://hbb.afl.rakuten.co.jp/hgb/50e6a3c0.cc7b86e7.50e6a3c1.b56469f6/?me_id=1366101&item_id=10000763&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmayumi-store%2Fcabinet%2F06861712%2Fnt-st2-p%2F1.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
