@@ -110,5 +110,10 @@ export const AD_ITEMS: AdItem[] = [
         url: "https://www.amazon.co.jp/dp/B0D1K8H4F5?tag=lirawatch-22&linkCode=ll1&linkId=1162ece296b23ed997136adb8e119163&ref_=as_li_ss_tl",
         title: "KEEPTIME モバイルモニター モバイルディスプレイ ポータブルモニター マグネット保護カバー付き",
         image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D1K8H4F5&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
+    },
+    {
+        url: "https://www.amazon.co.jp/dp/B0H2XPXVH7?tag=lirawatch-22&linkCode=ll1&linkId=64433c548205af96f115622bab2608b3&ref_=as_li_ss_tl",
+        title: "Bmax mini PC 小型超軽量ミニパソコン 4K静音 高速熱放散 SSD増設可能 HDMI BT5.0",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0H2XPXVH7&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
     }
 ];
