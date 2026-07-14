@@ -105,5 +105,10 @@ export const AD_ITEMS: AdItem[] = [
         title: "A8広告8",
         image: "https://www23.a8.net/svt/bgt?aid=260713046223&wid=001&eno=01&mid=s00000000018030079000&mc=1",
         trackingPixel: "https://www10.a8.net/0.gif?a8mat=4B7ZH2+3OROOI+50+4Z2Z1T"
+    },
+    {
+        url: "https://www.amazon.co.jp/dp/B0D1K8H4F5?tag=lirawatch-22&linkCode=ll1&linkId=1162ece296b23ed997136adb8e119163&ref_=as_li_ss_tl",
+        title: "KEEPTIME モバイルモニター モバイルディスプレイ ポータブルモニター マグネット保護カバー付き",
+        image: "https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D1K8H4F5&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=lirawatch-22"
     }
 ];
