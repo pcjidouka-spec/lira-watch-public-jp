@@ -1,97 +1,97 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-07-14",
+  "target_date": "2026-07-15",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-14T20:31:58.855Z",
+  "generated_at": "2026-07-15T20:22:27.724Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": 25.4375,
-      "sample_days": 16
+      "avg": 25.235294117647058,
+      "sample_days": 17
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": 25,
-      "sample_days": 15
+      "sample_days": 16
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.80666666666667,
+      "avg": 24.68888888888889,
+      "sample_days": 18
+    },
+    {
+      "provider_id": "traders_min",
+      "name": "みんなのFX",
+      "avg": 24.326666666666668,
+      "sample_days": 15
+    },
+    {
+      "provider_id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "avg": 24.326666666666668,
       "sample_days": 15
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 24.7875,
-      "sample_days": 16
-    },
-    {
-      "provider_id": "traders_min",
-      "name": "みんなのFX",
-      "avg": 24.542857142857144,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_min_light",
-      "name": "みんなのFX（LIGHT）",
-      "avg": 24.542857142857144,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "hirose",
-      "name": "ヒロセ通商",
-      "avg": 24.333333333333332,
-      "sample_days": 15
+      "avg": 24.27058823529412,
+      "sample_days": 17
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 24.168750000000003,
+      "avg": 24.16470588235294,
+      "sample_days": 17
+    },
+    {
+      "provider_id": "hirose",
+      "name": "ヒロセ通商",
+      "avg": 24.125,
       "sample_days": 16
-    },
-    {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": 24.057142857142853,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_light_light",
-      "name": "LIGHT FX（LIGHT）",
-      "avg": 24.057142857142853,
-      "sample_days": 14
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 24,
+      "avg": 23.923076923076923,
       "sample_days": 13
+    },
+    {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": 23.866666666666664,
+      "sample_days": 15
+    },
+    {
+      "provider_id": "traders_light_light",
+      "name": "LIGHT FX（LIGHT）",
+      "avg": 23.866666666666664,
+      "sample_days": 15
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": 23.875,
-      "sample_days": 16
+      "avg": 23.705882352941178,
+      "sample_days": 17
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": 23.866666666666667,
-      "sample_days": 15
+      "avg": 23.6875,
+      "sample_days": 16
     },
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 23.527777777777782,
-      "sample_days": 12
+      "avg": 23.395833333333332,
+      "sample_days": 16
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 22.2,
+      "avg": 22.133333333333333,
       "sample_days": 15
     }
   ],
@@ -99,92 +99,92 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -23.527777777777782,
-      "sample_days": 12
+      "avg": -23.395833333333332,
+      "sample_days": 16
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -23.875,
-      "sample_days": 16
+      "avg": -23.705882352941178,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -24.057142857142853,
-      "sample_days": 14
+      "avg": -23.866666666666664,
+      "sample_days": 15
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": -24.057142857142853,
-      "sample_days": 14
+      "avg": -23.866666666666664,
+      "sample_days": 15
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -24.168750000000003,
-      "sample_days": 16
-    },
-    {
-      "provider_id": "traders_min",
-      "name": "みんなのFX",
-      "avg": -24.542857142857144,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_min_light",
-      "name": "みんなのFX（LIGHT）",
-      "avg": -24.542857142857144,
-      "sample_days": 14
+      "avg": -24.16470588235294,
+      "sample_days": 17
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -24.7875,
-      "sample_days": 16
+      "avg": -24.27058823529412,
+      "sample_days": 17
+    },
+    {
+      "provider_id": "traders_min",
+      "name": "みんなのFX",
+      "avg": -24.326666666666668,
+      "sample_days": 15
+    },
+    {
+      "provider_id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "avg": -24.326666666666668,
+      "sample_days": 15
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -25.4375,
-      "sample_days": 16
+      "avg": -25.235294117647058,
+      "sample_days": 17
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -27,
+      "avg": -26.923076923076923,
       "sample_days": 13
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": -29.333333333333332,
-      "sample_days": 15
+      "avg": -29.125,
+      "sample_days": 16
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -29.533333333333335,
+      "avg": -29.466666666666665,
       "sample_days": 15
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": -32,
-      "sample_days": 15
+      "sample_days": 16
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -33.86666666666667,
-      "sample_days": 15
+      "avg": -33.6875,
+      "sample_days": 16
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -37.80666666666666,
-      "sample_days": 15
+      "avg": -37.68888888888888,
+      "sample_days": 18
     }
   ]
 }
