@@ -2,13 +2,13 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-07-17",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-19T12:16:29.680Z",
+  "generated_at": "2026-07-19T20:09:57.865Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": 25.11764705882353,
-      "sample_days": 17
+      "avg": 25.125,
+      "sample_days": 16
     },
     {
       "provider_id": "jfx",
@@ -147,8 +147,8 @@
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -25.11764705882353,
-      "sample_days": 17
+      "avg": -25.125,
+      "sample_days": 16
     },
     {
       "provider_id": "dmm",

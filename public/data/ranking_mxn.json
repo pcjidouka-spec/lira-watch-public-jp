@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-07-17",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-19T12:16:29.696Z",
+  "generated_at": "2026-07-19T20:09:57.874Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -43,8 +43,8 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 14.099999999999996,
-      "sample_days": 15
+      "avg": 14.099999999999998,
+      "sample_days": 14
     },
     {
       "provider_id": "hirose",
@@ -111,8 +111,8 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -14.099999999999996,
-      "sample_days": 15
+      "avg": -14.099999999999998,
+      "sample_days": 14
     },
     {
       "provider_id": "traders_light",
