@@ -1,0 +1,23 @@
+{
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?pare=ZARJPY",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/"
+    },
+    {
+      "id": "sony",
+      "name": "ソニーバンクFX",
+      "url": "https://sonybank.jp/tool/fx/swap/zarjpy.html",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://moneykit.net/visitor/sbfx/"
+    }
+  ],
+  "common_instructions": {},
+  "agent_settings": {
+    "max_steps": 5,
+    "timeout_seconds": 300
+  }
+}

@@ -23,7 +23,8 @@ export default function Home() {
   const eurusdData = useSwapData('EUR/USD');
   const gbpusdData = useSwapData('GBP/USD');
   const hufData = useSwapData('HUF/JPY');
-  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY';
+  const zarData = useSwapData('ZAR/JPY');
+  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY';
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
@@ -34,6 +35,7 @@ export default function Home() {
     'EUR/USD': eurusdData,
     'GBP/USD': gbpusdData,
     'HUF/JPY': hufData,
+    'ZAR/JPY': zarData,
   };
   const activeSwapData = dataMap[currencyTab];
   const {
@@ -46,7 +48,7 @@ export default function Home() {
     error,
   } = activeSwapData;
 
-  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY';
+  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY' || currencyTab === 'ZAR/JPY';
   const isCrossPair = currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD';
   const activeNoteText = isCrossPair
     ? '※ クロスペアは各社が円換算した 1万通貨単位あたりの値です。GBP/USDなど金利差が小さい通貨ペアでは、各社のスワップポリシーやマージンにより値や符号が異なる場合があります。'
@@ -58,6 +60,7 @@ export default function Home() {
     'EUR/USD': 'EUR/USD',
     'GBP/USD': 'GBP/USD',
     'HUF/JPY': 'ハンガリーフォリント',
+    'ZAR/JPY': '南アフリカランド',
   };
 
   const [showCharts, setShowCharts] = useState(false);
@@ -434,7 +437,7 @@ export default function Home() {
                 color: isJpyGroup ? 'white' : '#4b5563',
                 cursor: 'pointer', fontWeight: 700,
               }}
-            >TRY/JPY、MXN/JPY、HUF/JPY</button>
+            >TRY/JPY、MXN/JPY、HUF/JPY、ZAR/JPY</button>
             <button
               onClick={() => setCurrencyTab('USD/JPY')}
               style={{
@@ -478,6 +481,15 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >HUF/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('ZAR/JPY')}
+                    style={{
+                      padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'ZAR/JPY' ? '#f59e0b' : '#f3f4f6',
+                      color: currencyTab === 'ZAR/JPY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >ZAR/JPY</button>
                 </>
               ) : (
                 <>
@@ -581,6 +593,15 @@ export default function Home() {
                           cursor: 'pointer', fontWeight: 700,
                         }}
                       >HUF/JPY</button>
+                      <button
+                        onClick={() => setCurrencyTab('ZAR/JPY')}
+                        style={{
+                          padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                          background: currencyTab === 'ZAR/JPY' ? '#f59e0b' : '#f3f4f6',
+                          color: currencyTab === 'ZAR/JPY' ? 'white' : '#4b5563',
+                          cursor: 'pointer', fontWeight: 700,
+                        }}
+                      >ZAR/JPY</button>
                     </>
                   ) : (
                     <>

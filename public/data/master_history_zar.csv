@@ -1,0 +1,5 @@
+target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_date,status,actual_date
+2026-07-16,gmo_click,ZAR/JPY,GMOクリック証券,1.0,13.0,-13.0,None,success,2026/07/16
+2026-07-16,sony,ZAR/JPY,ソニーバンクFX,1.0,8.0,-10.0,None,success,2026/07/16
+2026-07-17,gmo_click,ZAR/JPY,GMOクリック証券,1.0,None,None,None,success,2026/07/17
+2026-07-17,sony,ZAR/JPY,ソニーバンクFX,1.0,None,None,None,success,2026/07/17
