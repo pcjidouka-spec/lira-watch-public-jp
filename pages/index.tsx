@@ -97,14 +97,14 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
-          <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
+          <title>【毎日更新】トルコリラ・メキシコペソ・南アランド スワップ比較ランキング | トルコリラ・ウォッチ</title>
+          <meta name="description" content="トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）・米ドル円（USD/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="robots" content="index, follow" />
           <link rel="canonical" href="https://www.lira-watch.sbs/" />
           {/* OGP Tags (kept in loading branch so non-JS crawlers like Blogmura can pick them up from initial HTML) */}
           <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
-          <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
+          <meta property="og:description" content="トルコリラ・メキシコペソ・南アフリカランド・ハンガリーフォリントなど高金利通貨のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.lira-watch.sbs/" />
           <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
@@ -148,11 +148,11 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
-          <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。" />
+          <title>【毎日更新】トルコリラ・メキシコペソ・南アランド スワップ比較ランキング | トルコリラ・ウォッチ</title>
+          <meta name="description" content="トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。" />
           <link rel="canonical" href="https://www.lira-watch.sbs/" />
           <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ"} />
-          <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。" />
+          <meta property="og:description" content="トルコリラ・メキシコペソ・南アフリカランドなど高金利通貨のスワップポイントを毎日更新で徹底比較。" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.lira-watch.sbs/" />
           <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
@@ -339,7 +339,7 @@ export default function Home() {
           <h3>リスク管理について</h3>
         </div>
         <div className="widget-content risk-block">
-          <p>トルコリラとメキシコペソは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
+          <p>トルコリラ・メキシコペソ・南アフリカランド・ハンガリーフォリントは高金利通貨として知られていますが、為替変動リスクも高い通貨です。急激な変動によりスワップポイントの利益を上回る損失が発生する可能性があります。</p>
         </div>
       </div>
 
@@ -357,9 +357,9 @@ export default function Home() {
   return (
     <BlogLayout sidebar={sidebarContent} lastUpdated={siteUpdatedAt || lastUpdated || undefined}>
       <Head>
-        <title>【毎日更新】トルコリラ・メキシコペソ スワップ比較ランキング | トルコリラ・ウォッチ</title>
-        <meta name="description" content="トルコリラ円（TRY/JPY）やメキシコペソ円（MXN/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
-        <meta name="keywords" content="トルコリラ, メキシコペソ, TRY/JPY, MXN/JPY, スワップポイント, 比較, FX, トルコリラ円, スワップ投資, 高金利通貨, ランキング, 不労所得, スワップ生活, 確定申告, ブログ" />
+        <title>【毎日更新】トルコリラ・メキシコペソ・南アランド スワップ比較ランキング | トルコリラ・ウォッチ</title>
+        <meta name="description" content="トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）・米ドル円（USD/JPY）など、FX各社のスワップポイントを毎日比較・アーカイブ。高金利通貨のスワップ投資、不労所得、積立運用のための最新ランキングとキャンペーン情報を網羅。" />
+        <meta name="keywords" content="トルコリラ, メキシコペソ, 南アフリカランド, ハンガリーフォリント, 米ドル, TRY/JPY, MXN/JPY, ZAR/JPY, HUF/JPY, USD/JPY, スワップポイント, 比較, FX, トルコリラ円, スワップ投資, 高金利通貨, ランキング, 不労所得, スワップ生活, 確定申告, ブログ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -367,7 +367,7 @@ export default function Home() {
 
         {/* OGP Tags */}
         <meta property="og:title" content={latestArticle ? `${latestArticle.title} | トルコリラ・ウォッチ` : "トルコリラ・ウォッチ | TRY/JPYスワップポイント比較・推移"} />
-        <meta property="og:description" content="トルコリラ円（TRY/JPY）のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
+        <meta property="og:description" content="トルコリラ・メキシコペソ・南アフリカランド・ハンガリーフォリントなど高金利通貨のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.lira-watch.sbs/" />
         {latestArticle?.thumbnail ? (
@@ -400,7 +400,7 @@ export default function Home() {
               "@type": "WebSite",
               "name": "トルコリラ・ウォッチ",
               "url": "https://www.lira-watch.sbs/",
-              "description": "トルコリラ円（TRY/JPY）のスワップポイント比較ブログ",
+              "description": "トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）など高金利通貨のスワップポイント比較ブログ",
               "image": latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
             })
           }}
@@ -425,7 +425,7 @@ export default function Home() {
 
         <div className="post-content">
           <p className="lead-text">
-            {siteUpdatedAt || lastUpdated} 時点のデータに基づき、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>（順位は直近約2週間の付与日数加重平均）とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
+            {siteUpdatedAt || lastUpdated} 時点のデータに基づき、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>（順位は直近約2週間の付与日数加重平均）とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
           <div className="currency-group-toggle" style={{ display: 'flex', gap: '8px', margin: '12px 0 16px 0', flexWrap: 'wrap' }}>

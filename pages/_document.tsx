@@ -6,7 +6,7 @@ export default function Document() {
             <Head>
                 {/* Default Title for SEO */}
                 <title>トルコリラ・ウォッチ | lira-watch.sbs - TRY/JPYスワップポイント比較ブログ</title>
-                <meta name="description" content="トルコリラ円（TRY/JPY）の各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨トルコリラの最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
+                <meta name="description" content="トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）など各FX会社のスワップポイントを毎日比較・アーカイブ。高金利通貨の最新スワップポイントランキング、推移チャート、キャンペーン情報を網羅。" />
 
                 {/* Allow all crawlers including AI */}
                 <meta name="robots" content="index, follow, max-image-preview:large" />
