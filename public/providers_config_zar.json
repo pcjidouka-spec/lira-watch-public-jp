@@ -13,6 +13,78 @@
       "url": "https://sonybank.jp/tool/fx/swap/zarjpy.html",
       "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
       "campaign_url": "https://moneykit.net/visitor/sbfx/"
+    },
+    {
+      "id": "gmo",
+      "name": "GMO外貨",
+      "url": "https://www.gaikaex.com/gaikaex/mark/swap/calendar.php?pair=10",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.gaikaex.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が長いため、対象日が見つかるまで下までスクロールしてください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨選択】ページ上部の通貨グループ選択で ZAR/JPY を含むグループ（ZAR/HUF/MXN/TRY）を選択してください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨タブ選択】「直近のスワップ」タブを選択してください。ZAR/JPY の列または行のデータを抽出してください。",
+        "table_extraction": "対象日の行（または列）を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が長いため、対象日が見つかるまで下までスクロールしてください。",
+        "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
+        "product_selection": "【重要：商品選択】このページには「ZARJPY」と「ZARJPY LIGHT」の2つの商品があります。必ず通常の『ZARJPY』の行からデータを抽出してください。『ZARJPY LIGHT』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
+        "product_selection": "【重要：商品選択】このページには「ZARJPY」と「ZARJPY LIGHT」の2つの商品があります。必ず通常の『ZARJPY』の行からデータを抽出してください。『ZARJPY LIGHT』のデータは抽出しないでください。"
+      }
     }
   ],
   "common_instructions": {},
