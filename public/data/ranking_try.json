@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-07-20",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-20T20:28:53.107Z",
+  "generated_at": "2026-07-20T20:40:10.160Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -19,8 +19,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.522222222222226,
-      "sample_days": 18
+      "avg": 24.53529411764706,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_min",
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -37.52222222222222,
-      "sample_days": 18
+      "avg": -37.535294117647055,
+      "sample_days": 17
     }
   ]
 }
