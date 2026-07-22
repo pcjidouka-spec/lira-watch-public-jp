@@ -31,3 +31,11 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,sony,ZAR/JPY,ソニーバンクFX,1.0,None,None,None,error,None
 2026-07-21,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/07/21
 2026-07-21,traders_min,ZAR/JPY,みんなのFX,1.0,15.3,-15.3,None,success,2026/07/21
+2026-07-22,central_tanshi,ZAR/JPY,セントラル短資FX,3.0,15.299999999999999,-15.299999999999999,7/23,success,2026/07/22
+2026-07-22,gaitame,ZAR/JPY,外為どっとコム,3.0,14.0,-19.0,None,success,2026/07/22
+2026-07-22,gmo,ZAR/JPY,GMO外貨,3.0,15.1,-15.1,None,success,2026/07/22
+2026-07-22,gmo_click,ZAR/JPY,GMOクリック証券,3.0,13.0,-13.0,None,success,2026/07/22
+2026-07-22,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,None,error,None
+2026-07-22,sony,ZAR/JPY,ソニーバンクFX,3.0,None,None,None,error,None
+2026-07-22,traders_light,ZAR/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/07/22
+2026-07-22,traders_min,ZAR/JPY,みんなのFX,3.0,15.299999999999999,-15.299999999999999,None,success,2026/07/22
