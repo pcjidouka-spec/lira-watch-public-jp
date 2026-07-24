@@ -1,8 +1,8 @@
 {
   "currency_pair": "MXN/JPY",
-  "target_date": "2026-07-23",
+  "target_date": "2026-07-24",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-23T20:32:01.309Z",
+  "generated_at": "2026-07-24T20:29:29.114Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -13,31 +13,31 @@
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 14.333333333333336,
+      "avg": 14.340000000000002,
       "sample_days": 15
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": 14.333333333333336,
+      "avg": 14.340000000000002,
       "sample_days": 15
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 14.300000000000002,
+      "avg": 14.3,
       "sample_days": 15
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 14.23333333333333,
+      "avg": 14.239999999999998,
       "sample_days": 15
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": 14.23333333333333,
+      "avg": 14.239999999999998,
       "sample_days": 15
     },
     {
@@ -77,15 +77,15 @@
       "sample_days": 14
     },
     {
-      "provider_id": "gaitame",
-      "name": "外為どっとコム",
-      "avg": 13.142857142857142,
+      "provider_id": "dmm",
+      "name": "DMM FX",
+      "avg": 13.071428571428571,
       "sample_days": 14
     },
     {
-      "provider_id": "dmm",
-      "name": "DMM FX",
-      "avg": 13,
+      "provider_id": "gaitame",
+      "name": "外為どっとコム",
+      "avg": 13.071428571428571,
       "sample_days": 14
     },
     {
@@ -117,31 +117,31 @@
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -14.23333333333333,
+      "avg": -14.239999999999998,
       "sample_days": 15
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": -14.23333333333333,
+      "avg": -14.239999999999998,
       "sample_days": 15
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -14.333333333333336,
+      "avg": -14.340000000000002,
       "sample_days": 15
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -14.333333333333336,
+      "avg": -14.340000000000002,
       "sample_days": 15
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -16,
+      "avg": -16.071428571428573,
       "sample_days": 14
     },
     {
@@ -159,7 +159,7 @@
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -18.142857142857142,
+      "avg": -18.071428571428573,
       "sample_days": 14
     },
     {
