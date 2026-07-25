@@ -1837,9 +1837,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-24,hirose,TRY/JPY,ヒロセ通商,1.0,24.0,-29.0,None,success,2026/07/24
 2026-07-24,invast,TRY/JPY,トライオートFX,1.0,None,None,None,error,None
 2026-07-24,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/07/24
-2026-07-24,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-07-24,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,07月28日,success,2026/07/24
 2026-07-24,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/07/24
 2026-07-24,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/07/24
 2026-07-24,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/07/24
 2026-07-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/07/24
+2026-07-24,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/07/23
