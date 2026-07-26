@@ -2,8 +2,14 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-07-24",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-26T20:16:13.287Z",
+  "generated_at": "2026-07-26T22:53:52.903Z",
   "buy_ranking": [
+    {
+      "provider_id": "invast",
+      "name": "トライオートFX",
+      "avg": 161.6,
+      "sample_days": 10
+    },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
@@ -15,12 +21,6 @@
       "name": "GMO外貨",
       "avg": 160.33333333333334,
       "sample_days": 9
-    },
-    {
-      "provider_id": "invast",
-      "name": "トライオートFX",
-      "avg": 158,
-      "sample_days": 10
     },
     {
       "provider_id": "gaitame",
@@ -135,7 +135,7 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -233,
+      "avg": -236.6,
       "sample_days": 10
     }
   ]

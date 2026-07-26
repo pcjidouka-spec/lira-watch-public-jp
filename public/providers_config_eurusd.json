@@ -62,7 +62,7 @@
     {
       "id": "invast",
       "name": "トライオートFX",
-      "url": "https://www.invast.jp/triauto/market/swap-calendar/",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
       "campaign_url": "https://www.invast.jp/triauto/campaign/",
       "use_browser": true,
       "instructions": {

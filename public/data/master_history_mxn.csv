@@ -1569,7 +1569,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-20,gmo,MXN/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/07/20
 2026-07-20,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/07/20
 2026-07-20,hirose,MXN/JPY,ヒロセ通商,1.0,None,None,None,success,2026/07/20
-2026-07-20,invast,MXN/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-07-20,invast,MXN/JPY,トライオートFX,1.0,14.4,-29.6,,success,2026/07/20
 2026-07-20,jfx,MXN/JPY,JFX,1.0,None,None,None,success,2026/07/20
 2026-07-20,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/07/16
 2026-07-20,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,07月22日,error,2026/07/20
@@ -1584,7 +1584,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,gmo,MXN/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/07/21
 2026-07-21,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/07/21
 2026-07-21,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/07/21
-2026-07-21,invast,MXN/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-07-21,invast,MXN/JPY,トライオートFX,1.0,14.4,-29.6,,success,2026/07/21
 2026-07-21,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/07/21
 2026-07-21,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-07-21,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,07月23日,success,2026/07/21
@@ -1599,7 +1599,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-22,gmo,MXN/JPY,GMO外貨,3.0,14.1,-14.1,None,success,2026/07/22
 2026-07-22,gmo_click,MXN/JPY,GMOクリック証券,3.0,14.0,-14.0,None,success,2026/07/22
 2026-07-22,hirose,MXN/JPY,ヒロセ通商,3.0,14.0,-19.0,None,success,2026/07/22
-2026-07-22,invast,MXN/JPY,トライオートFX,3.0,None,None,None,error,None
+2026-07-22,invast,MXN/JPY,トライオートFX,3.0,14.5,-29.7,,success,2026/07/22
 2026-07-22,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/07/22
 2026-07-22,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/07/21
 2026-07-22,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,07月24日,success,2026/07/22
@@ -1614,7 +1614,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-23,gmo,MXN/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/07/23
 2026-07-23,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/07/23
 2026-07-23,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/07/23
-2026-07-23,invast,MXN/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-07-23,invast,MXN/JPY,トライオートFX,1.0,14.5,-29.7,,success,2026/07/23
 2026-07-23,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/07/23
 2026-07-23,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/07/22
 2026-07-23,sbi,MXN/JPY,SBI FXトレード,3.0,14.0,-17.0,07月27日,success,2026/07/23
@@ -1629,7 +1629,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-24,gmo,MXN/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/07/24
 2026-07-24,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/07/24
 2026-07-24,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/07/24
-2026-07-24,invast,MXN/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-07-24,invast,MXN/JPY,トライオートFX,1.0,14.5,-29.7,,success,2026/07/24
 2026-07-24,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/07/24
 2026-07-24,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/07/23
 2026-07-24,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,07月28日,success,2026/07/24

@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-07-24",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-26T20:16:13.269Z",
+  "generated_at": "2026-07-26T22:53:52.881Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -19,8 +19,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.357142857142858,
-      "sample_days": 14
+      "avg": 24.2764705882353,
+      "sample_days": 17
     },
     {
       "provider_id": "gaitame",
@@ -67,8 +67,8 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": 23.75,
-      "sample_days": 16
+      "avg": 23.764705882352942,
+      "sample_days": 17
     },
     {
       "provider_id": "gmo",
@@ -111,8 +111,8 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -23.75,
-      "sample_days": 16
+      "avg": -23.764705882352942,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_light",
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -37.357142857142854,
-      "sample_days": 14
+      "avg": -37.27647058823529,
+      "sample_days": 17
     }
   ]
 }
