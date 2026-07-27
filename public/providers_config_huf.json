@@ -63,30 +63,6 @@
       }
     },
     {
-      "id": "traders_light",
-      "name": "LIGHT FX",
-      "url": "https://lightfx.jp/market/swap/",
-      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
-      "campaign_url": "https://lightfx.jp/campaign/",
-      "instructions": {
-        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
-        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
-        "product_selection": "【重要：商品選択】このページには「HUFJPY」と「HUFJPY LIGHT」の2つの商品があります。必ず通常の『HUFJPY』（LIGHT版ではない）の行からデータを抽出してください。『HUFJPY LIGHT』のデータは抽出しないでください。"
-      }
-    },
-    {
-      "id": "traders_min",
-      "name": "みんなのFX",
-      "url": "https://min-fx.jp/market/swap/",
-      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
-      "campaign_url": "https://min-fx.jp/campaign/",
-      "instructions": {
-        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
-        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。",
-        "product_selection": "【重要：商品選択】このページには「HUFJPY」と「HUFJPY LIGHT」の2つの商品があります。必ず通常の『HUFJPY』（LIGHT版ではない）の行からデータを抽出してください。『HUFJPY LIGHT』のデータは抽出しないでください。"
-      }
-    },
-    {
       "id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
       "url": "https://min-fx.jp/market/swap/",
