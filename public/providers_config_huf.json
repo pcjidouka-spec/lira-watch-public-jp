@@ -97,6 +97,13 @@
         "interaction_hint": "【重要：スクロール】表が長いので、対象日が見つかるまで下までスクロールしてください。",
         "table_extraction": "対象日の行を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
       }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "currency_pair_selector": "ハンガリーフォリント/円（HUF/JPY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/"
     }
   ],
   "common_instructions": {},

@@ -85,6 +85,13 @@
         "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
         "product_selection": "【重要：商品選択】このページには「ZARJPY」と「ZARJPY LIGHT」の2つの商品があります。必ず通常の『ZARJPY』の行からデータを抽出してください。『ZARJPY LIGHT』のデータは抽出しないでください。"
       }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "currency_pair_selector": "南アフリカランド/円（ZAR/JPY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/"
     }
   ],
   "common_instructions": {},
