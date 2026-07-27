@@ -52,6 +52,8 @@ export default function Home() {
   const isCrossPair = currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD';
   const activeNoteText = isCrossPair
     ? '※ クロスペアは各社が円換算した 1万通貨単位あたりの値です。GBP/USDなど金利差が小さい通貨ペアでは、各社のスワップポリシーやマージンにより値や符号が異なる場合があります。'
+    : currencyTab === 'HUF/JPY'
+    ? '※ HUF/JPY は 10万通貨単位あたりの値です。1万通貨単位で掲載している会社の値は 10万通貨単位に換算して比較しています。'
     : undefined;
   const currencyLabelMap: Record<CurrencyTab, string> = {
     'TRY/JPY': 'トルコリラ',
