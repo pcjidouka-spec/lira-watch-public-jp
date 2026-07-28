@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-07-28",
   "period_label": "直近約2週間",
-  "generated_at": "2026-07-28T20:26:12.936Z",
+  "generated_at": "2026-07-28T20:34:26.696Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -32,7 +32,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 24,
-      "sample_days": 14
+      "sample_days": 13
     },
     {
       "provider_id": "gaitame",
@@ -136,7 +136,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -24,
-      "sample_days": 14
+      "sample_days": 13
     },
     {
       "provider_id": "central_tanshi",
