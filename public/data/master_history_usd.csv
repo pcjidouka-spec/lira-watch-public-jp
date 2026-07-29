@@ -1143,3 +1143,14 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-28,sbi,USD/JPY,SBI FXトレード,1.0,145.0,-153.0,07月30日,success,2026/07/28
 2026-07-28,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/28
 2026-07-28,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/28
+2026-07-29,central_tanshi,USD/JPY,セントラル短資FX,1.0,165.0,-165.0,7/30,success,2026/07/29
+2026-07-29,dmm,USD/JPY,DMM FX,1.0,150.0,-153.0,None,success,2026/07/29
+2026-07-29,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/29
+2026-07-29,gmo,USD/JPY,GMO外貨,1.0,165.0,-165.0,None,success,2026/07/29
+2026-07-29,gmo_click,USD/JPY,GMOクリック証券,1.0,164.0,-164.0,None,success,2026/07/29
+2026-07-29,hirose,USD/JPY,ヒロセ通商,1.0,160.0,-190.0,None,success,2026/07/29
+2026-07-29,invast,USD/JPY,トライオートFX,1.0,164.0,-239.0,None,success,2026/07/28
+2026-07-29,jfx,USD/JPY,JFX,1.0,160.0,-190.0,None,success,2026/07/29
+2026-07-29,sbi,USD/JPY,SBI FXトレード,1.0,145.0,-153.0,07月31日,success,2026/07/29
+2026-07-29,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/29
+2026-07-29,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/29
