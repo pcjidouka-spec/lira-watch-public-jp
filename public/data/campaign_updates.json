@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T02:00:37.682893",
+  "updated_at": "2026-08-02T04:00:37.103901",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -68,6 +68,10 @@
     "saxo": {
       "has_new": false,
       "updated_at": "2026-05-29T21:00:36.071399"
+    },
+    "m2j": {
+      "has_new": false,
+      "updated_at": "2026-08-02T04:00:36.958666"
     }
   }
 }
