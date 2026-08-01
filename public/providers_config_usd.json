@@ -138,17 +138,6 @@
       "campaign_url": "https://www.home.saxo/ja-jp/campaigns/summary",
       "schedule_type": "weekly",
       "pdf_url": "https://cdn-storage.saxobank.com/jp/swappoint/swappoint-weekly.pdf"
-    },
-    {
-      "id": "m2j",
-      "name": "マネースクエア",
-      "url": "https://www.m2j.co.jp/m2jfx-guide/swap",
-      "currency_pair_selector": "USD/JPY",
-      "campaign_url": "https://www.m2j.co.jp/campaign",
-      "instructions": {
-        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
-        "interaction_hint": "【表形式】日付・曜日・付与日数・売・買の縦型カレンダー（売が先、買が後）。1万通貨単位で、金額は付与日数分の合計。当月分は未来日のため空欄なので、対象日が先月なら「先月分表示」ボタンで切り替えること。"
-      }
     }
   ],
   "common_instructions": {

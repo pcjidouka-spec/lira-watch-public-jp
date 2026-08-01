@@ -934,7 +934,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-01,sbi,USD/JPY,SBI FXトレード,1.0,154.0,-162.0,07月03日,success,2026/07/01
 2026-07-01,traders_light,USD/JPY,LIGHT FX,1.0,176.0,-176.0,None,success,2026/07/01
 2026-07-01,traders_min,USD/JPY,みんなのFX,1.0,175.0,-175.0,None,success,2026/07/01
-2026-07-01,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/01
 2026-07-02,central_tanshi,USD/JPY,セントラル短資FX,1.0,177.0,-177.0,7/3,success,2026/07/02
 2026-07-02,dmm,USD/JPY,DMM FX,1.0,146.0,-149.0,None,success,2026/07/02
 2026-07-02,gaitame,USD/JPY,外為どっとコム,1.0,170.0,-200.0,None,success,2026/07/02
@@ -946,7 +945,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-02,sbi,USD/JPY,SBI FXトレード,1.0,149.0,-157.0,07月06日,success,2026/07/02
 2026-07-02,traders_light,USD/JPY,LIGHT FX,1.0,176.0,-176.0,None,success,2026/07/02
 2026-07-02,traders_min,USD/JPY,みんなのFX,1.0,175.0,-175.0,None,success,2026/07/02
-2026-07-02,m2j,USD/JPY,マネースクエア,3.0,101.0,-185.0,,success,2026/07/02
 2026-07-03,central_tanshi,USD/JPY,セントラル短資FX,1.0,170.0,-170.0,7/6,success,2026/07/03
 2026-07-03,dmm,USD/JPY,DMM FX,1.0,146.0,-149.0,None,success,2026/07/03
 2026-07-03,gaitame,USD/JPY,外為どっとコム,1.0,170.0,-200.0,None,success,2026/07/03
@@ -958,7 +956,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-03,sbi,USD/JPY,SBI FXトレード,1.0,149.0,-157.0,07月07日,success,2026/07/03
 2026-07-03,traders_light,USD/JPY,LIGHT FX,1.0,171.0,-171.0,None,success,2026/07/03
 2026-07-03,traders_min,USD/JPY,みんなのFX,1.0,170.0,-170.0,None,success,2026/07/03
-2026-07-03,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/03
 2026-07-06,central_tanshi,USD/JPY,セントラル短資FX,1.0,165.0,-165.0,7/7,success,2026/07/06
 2026-07-06,dmm,USD/JPY,DMM FX,1.0,146.0,-149.0,None,success,2026/07/06
 2026-07-06,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/06
@@ -970,7 +967,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-06,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-07-06,traders_light,USD/JPY,LIGHT FX,1.0,166.0,-166.0,None,success,2026/07/06
 2026-07-06,traders_min,USD/JPY,みんなのFX,1.0,165.0,-165.0,None,success,2026/07/06
-2026-07-06,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/06
 2026-07-07,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/8,success,2026/07/07
 2026-07-07,dmm,USD/JPY,DMM FX,1.0,146.0,-149.0,None,success,2026/07/07
 2026-07-07,gaitame,USD/JPY,外為どっとコム,1.0,165.0,-195.0,None,success,2026/07/07
@@ -982,7 +978,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-07,sbi,USD/JPY,SBI FXトレード,1.0,141.0,-149.0,07月09日,success,2026/07/07
 2026-07-07,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/07
 2026-07-07,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/07
-2026-07-07,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/07
 2026-07-08,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/9,success,2026/07/08
 2026-07-08,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/08
 2026-07-08,gaitame,USD/JPY,外為どっとコム,1.0,165.0,-195.0,None,success,2026/07/08
@@ -994,7 +989,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-08,sbi,USD/JPY,SBI FXトレード,1.0,141.0,-149.0,07月10日,success,2026/07/08
 2026-07-08,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/08
 2026-07-08,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/08
-2026-07-08,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/08
 2026-07-09,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/10,success,2026/07/09
 2026-07-09,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/09
 2026-07-09,gaitame,USD/JPY,外為どっとコム,1.0,165.0,-195.0,None,success,2026/07/09
@@ -1006,7 +1000,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-09,sbi,USD/JPY,SBI FXトレード,1.0,141.0,-149.0,07月13日,success,2026/07/09
 2026-07-09,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/09
 2026-07-09,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/09
-2026-07-09,m2j,USD/JPY,マネースクエア,3.0,101.0,-185.0,,success,2026/07/09
 2026-07-10,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/13,success,2026/07/10
 2026-07-10,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/10
 2026-07-10,gaitame,USD/JPY,外為どっとコム,1.0,165.0,-195.0,None,success,2026/07/10
@@ -1018,7 +1011,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-10,sbi,USD/JPY,SBI FXトレード,1.0,141.0,-149.0,07月14日,success,2026/07/10
 2026-07-10,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/10
 2026-07-10,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/10
-2026-07-10,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/10
 2026-07-13,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/14,success,2026/07/13
 2026-07-13,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/13
 2026-07-13,gaitame,USD/JPY,外為どっとコム,1.0,150.0,-180.0,None,success,2026/07/13
@@ -1030,7 +1022,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-13,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-07-13,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/13
 2026-07-13,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/13
-2026-07-13,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/13
 2026-07-14,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/15,success,2026/07/14
 2026-07-14,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/14
 2026-07-14,gaitame,USD/JPY,外為どっとコム,1.0,150.0,-180.0,None,success,2026/07/14
@@ -1042,7 +1033,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-14,sbi,USD/JPY,SBI FXトレード,1.0,137.0,-145.0,07月16日,success,2026/07/14
 2026-07-14,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/14
 2026-07-14,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/14
-2026-07-14,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/14
 2026-07-15,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/16,success,2026/07/15
 2026-07-15,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/15
 2026-07-15,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/15
@@ -1054,7 +1044,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-15,sbi,USD/JPY,SBI FXトレード,1.0,139.0,-147.0,07月17日,success,2026/07/15
 2026-07-15,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/15
 2026-07-15,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/15
-2026-07-15,m2j,USD/JPY,マネースクエア,1.0,101.0,-185.0,,success,2026/07/15
 2026-07-16,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/17,success,2026/07/16
 2026-07-16,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/16
 2026-07-16,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/16
@@ -1066,7 +1055,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-16,sbi,USD/JPY,SBI FXトレード,1.0,139.0,-147.0,07月21日,success,2026/07/16
 2026-07-16,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/16
 2026-07-16,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/16
-2026-07-16,m2j,USD/JPY,マネースクエア,4.0,97.0,-185.0,,success,2026/07/16
 2026-07-17,central_tanshi,USD/JPY,セントラル短資FX,1.0,0.0,0.0,None,error,2026/07/17
 2026-07-17,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/17
 2026-07-17,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/17
@@ -1078,7 +1066,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-17,sbi,USD/JPY,SBI FXトレード,1.0,139.0,-147.0,07月22日,success,2026/07/17
 2026-07-17,traders_light,USD/JPY,LIGHT FX,1.0,151.0,-151.0,None,success,2026/07/16
 2026-07-17,traders_min,USD/JPY,みんなのFX,1.0,150.0,-150.0,None,success,2026/07/16
-2026-07-17,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/17
 2026-07-20,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/21,success,2026/07/20
 2026-07-20,dmm,USD/JPY,DMM FX,1.0,None,None,None,success,2026/07/20
 2026-07-20,gaitame,USD/JPY,外為どっとコム,1.0,None,None,None,success,2026/07/20
@@ -1101,7 +1088,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,sbi,USD/JPY,SBI FXトレード,1.0,139.0,-147.0,07月23日,success,2026/07/21
 2026-07-21,traders_light,USD/JPY,LIGHT FX,1.0,156.0,-156.0,None,success,2026/07/21
 2026-07-21,traders_min,USD/JPY,みんなのFX,1.0,155.0,-155.0,None,success,2026/07/21
-2026-07-21,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/21
 2026-07-22,central_tanshi,USD/JPY,セントラル短資FX,1.0,160.0,-160.0,7/23,success,2026/07/22
 2026-07-22,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/22
 2026-07-22,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/22
@@ -1113,7 +1099,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-22,sbi,USD/JPY,SBI FXトレード,1.0,141.0,-149.0,07月24日,success,2026/07/22
 2026-07-22,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/22
 2026-07-22,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/22
-2026-07-22,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/22
 2026-07-23,central_tanshi,USD/JPY,セントラル短資FX,1.0,162.0,-162.0,7/24,success,2026/07/23
 2026-07-23,dmm,USD/JPY,DMM FX,1.0,147.0,-150.0,None,success,2026/07/23
 2026-07-23,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/23
@@ -1125,7 +1110,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-23,sbi,USD/JPY,SBI FXトレード,1.0,143.0,-151.0,07月27日,success,2026/07/23
 2026-07-23,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/23
 2026-07-23,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/23
-2026-07-23,m2j,USD/JPY,マネースクエア,3.0,97.0,-185.0,,success,2026/07/23
 2026-07-24,central_tanshi,USD/JPY,セントラル短資FX,1.0,163.0,-163.0,7/27,success,2026/07/24
 2026-07-24,dmm,USD/JPY,DMM FX,1.0,149.0,-152.0,None,success,2026/07/24
 2026-07-24,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/24
@@ -1137,7 +1121,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-24,sbi,USD/JPY,SBI FXトレード,1.0,143.0,-151.0,07月28日,success,2026/07/24
 2026-07-24,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/24
 2026-07-24,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/24
-2026-07-24,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/24
 2026-07-27,central_tanshi,USD/JPY,セントラル短資FX,1.0,163.0,-163.0,7/28,success,2026/07/27
 2026-07-27,dmm,USD/JPY,DMM FX,1.0,149.0,-152.0,None,success,2026/07/27
 2026-07-27,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/27
@@ -1149,7 +1132,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-27,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-07-27,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/27
 2026-07-27,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/27
-2026-07-27,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/27
 2026-07-28,central_tanshi,USD/JPY,セントラル短資FX,1.0,165.0,-165.0,7/29,success,2026/07/28
 2026-07-28,dmm,USD/JPY,DMM FX,1.0,150.0,-153.0,None,success,2026/07/28
 2026-07-28,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/28
@@ -1161,7 +1143,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-28,sbi,USD/JPY,SBI FXトレード,1.0,145.0,-153.0,07月30日,success,2026/07/28
 2026-07-28,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/28
 2026-07-28,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/28
-2026-07-28,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/28
 2026-07-29,central_tanshi,USD/JPY,セントラル短資FX,1.0,165.0,-165.0,7/30,success,2026/07/29
 2026-07-29,dmm,USD/JPY,DMM FX,1.0,150.0,-153.0,None,success,2026/07/29
 2026-07-29,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/29
@@ -1173,7 +1154,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-29,sbi,USD/JPY,SBI FXトレード,1.0,145.0,-153.0,07月31日,success,2026/07/29
 2026-07-29,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/29
 2026-07-29,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/29
-2026-07-29,m2j,USD/JPY,マネースクエア,1.0,97.0,-185.0,,success,2026/07/29
 2026-07-30,central_tanshi,USD/JPY,セントラル短資FX,1.0,165.0,-165.0,7/31,success,2026/07/30
 2026-07-30,dmm,USD/JPY,DMM FX,1.0,150.0,-153.0,None,success,2026/07/30
 2026-07-30,gaitame,USD/JPY,外為どっとコム,1.0,160.0,-190.0,None,success,2026/07/30
@@ -1185,4 +1165,3 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-30,sbi,USD/JPY,SBI FXトレード,1.0,148.0,-156.0,08月03日,success,2026/07/30
 2026-07-30,traders_light,USD/JPY,LIGHT FX,1.0,161.0,-161.0,None,success,2026/07/30
 2026-07-30,traders_min,USD/JPY,みんなのFX,1.0,160.0,-160.0,None,success,2026/07/30
-2026-07-30,m2j,USD/JPY,マネースクエア,3.0,97.0,-185.0,,success,2026/07/30
