@@ -245,8 +245,16 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
 }
 
 /**
- * 売りスワップランキングを生成（絶対値が小さい順）- 直近約2週間の付与日数加重平均
+ * 売りスワップランキングを生成（受取りが多い順 = 値の大きい順）- 直近約2週間の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
+ *
+ * 並び順の注意 (2026-08-02 修正):
+ *   以前は「絶対値が小さい順」でソートしていた。JPY クロス (TRY/JPY 等) は売スワップが
+ *   全てマイナス（支払い）なので「絶対値が小さい＝支払いが少ない＝上位」で正しかったが、
+ *   EUR/USD・GBP/USD は売スワップがプラス（受取り）になるため、絶対値ソートだと
+ *   受取りが最も少ない業者が1位という逆順になっていた。
+ *   値の大きい順にすれば、マイナス（支払い小さい順）・プラス（受取り大きい順）の
+ *   どちらも正しく並ぶ。JPY クロスの並びは修正前後で変わらない。
  */
 export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
@@ -326,7 +334,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
 
   return ranking
     .filter(r => r.swap_sell !== 0) // 0円の業者を除外
-    .sort((a, b) => Math.abs(a.swap_sell) - Math.abs(b.swap_sell)); // 絶対値が小さい順
+    .sort((a, b) => b.swap_sell - a.swap_sell); // 値の大きい順（支払いが少ない/受取りが多い順）
 }
 
 

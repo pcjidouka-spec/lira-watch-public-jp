@@ -177,9 +177,12 @@ function buildRanking(data, providerConfigs, currencyPair, side) {
             .filter(r => isCrossPair ? true : r.avg !== 0)
             .sort((a, b) => b.avg - a.avg);
     }
+    // 値の大きい順（支払いが少ない/受取りが多い順）。
+    // 絶対値ソートだと、売スワップがプラスになるクロスペアで順位が逆転する
+    // (dataProcessor.getSellRanking と同じ修正。2026-08-02)
     return ranking
         .filter(r => r.avg !== 0)
-        .sort((a, b) => Math.abs(a.avg) - Math.abs(b.avg));
+        .sort((a, b) => b.avg - a.avg);
 }
 
 // ---------------------------------------------------------------------------
