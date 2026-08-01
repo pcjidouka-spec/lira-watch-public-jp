@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-07-30",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-01T17:00:38.980Z",
+  "generated_at": "2026-08-01T17:32:31.471Z",
   "buy_ranking": [
     {
       "provider_id": "central_tanshi",
@@ -69,6 +69,12 @@
       "name": "SBI FXトレード",
       "avg": 142.5,
       "sample_days": 10
+    },
+    {
+      "provider_id": "m2j",
+      "name": "マネースクエア",
+      "avg": 97,
+      "sample_days": 13
     }
   ],
   "sell_ranking": [
@@ -113,6 +119,12 @@
       "name": "セントラル短資FX",
       "avg": -162.3,
       "sample_days": 10
+    },
+    {
+      "provider_id": "m2j",
+      "name": "マネースクエア",
+      "avg": -185,
+      "sample_days": 13
     },
     {
       "provider_id": "gaitame",
