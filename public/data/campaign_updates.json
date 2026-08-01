@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-08-01T00:00:33.713076",
+  "updated_at": "2026-08-02T02:00:37.682893",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-06-29T11:00:44.843886"
     },
     "gmo": {
-      "has_new": false,
-      "updated_at": "2026-06-23T04:00:03.567395"
+      "has_new": true,
+      "updated_at": "2026-08-02T02:00:25.270496"
     },
     "central_tanshi": {
       "has_new": true,
       "updated_at": "2026-07-29T11:00:22.265970"
     },
     "jfx": {
-      "has_new": false,
-      "updated_at": "2026-07-01T13:00:35.664365"
+      "has_new": true,
+      "updated_at": "2026-08-02T02:00:26.152276"
     },
     "invast": {
       "has_new": false,
@@ -39,7 +39,7 @@
     },
     "gaitame": {
       "has_new": true,
-      "updated_at": "2026-07-31T15:00:58.045088"
+      "updated_at": "2026-08-02T02:00:36.280501"
     },
     "click365_okasan": {
       "has_new": false,
@@ -62,8 +62,8 @@
       "updated_at": "2026-06-01T14:00:31.309276"
     },
     "hirose": {
-      "has_new": false,
-      "updated_at": "2026-07-22T04:00:58.877020"
+      "has_new": true,
+      "updated_at": "2026-08-02T02:00:37.004045"
     },
     "saxo": {
       "has_new": false,
