@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-07-31",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-01T20:32:15.843Z",
+  "generated_at": "2026-08-02T20:17:12.641Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -41,16 +41,16 @@
       "sample_days": 14
     },
     {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": 14.179487179487182,
-      "sample_days": 13
-    },
-    {
       "provider_id": "gmo",
       "name": "GMO外貨",
       "avg": 14.099999999999998,
       "sample_days": 14
+    },
+    {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": 14.061538461538463,
+      "sample_days": 13
     },
     {
       "provider_id": "gmo_click",
@@ -74,7 +74,7 @@
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": 14,
-      "sample_days": 16
+      "sample_days": 14
     },
     {
       "provider_id": "dmm",
@@ -103,16 +103,16 @@
       "sample_days": 14
     },
     {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": -14.061538461538463,
+      "sample_days": 13
+    },
+    {
       "provider_id": "gmo",
       "name": "GMO外貨",
       "avg": -14.099999999999998,
       "sample_days": 14
-    },
-    {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": -14.179487179487182,
-      "sample_days": 13
     },
     {
       "provider_id": "traders_light",
@@ -154,7 +154,7 @@
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": -17,
-      "sample_days": 16
+      "sample_days": 14
     },
     {
       "provider_id": "gaitame",

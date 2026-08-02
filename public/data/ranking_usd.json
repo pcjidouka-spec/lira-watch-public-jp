@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-07-31",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-01T20:32:15.850Z",
+  "generated_at": "2026-08-02T20:17:12.650Z",
   "buy_ranking": [
     {
       "provider_id": "central_tanshi",
@@ -19,7 +19,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 161.4,
+      "avg": 160.9,
       "sample_days": 10
     },
     {
@@ -67,7 +67,7 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 143.4,
+      "avg": 143.1,
       "sample_days": 10
     }
   ],
@@ -75,7 +75,7 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -151.4,
+      "avg": -151.1,
       "sample_days": 10
     },
     {
@@ -105,7 +105,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -161.4,
+      "avg": -160.9,
       "sample_days": 10
     },
     {
