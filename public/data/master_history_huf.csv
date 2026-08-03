@@ -434,3 +434,10 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-31,invast,HUF/JPY,トライオートFX,1.0,15.0,-20.0,None,success,2026/07/31
 2026-07-31,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,9.0,-9.0,None,success,2026/07/31
 2026-07-31,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/07/31
+2026-08-03,central_tanshi,HUF/JPY,セントラル短資FX,1.0,8.0,-8.0,8/4,success,2026/08/03
+2026-08-03,gaitame,HUF/JPY,外為どっとコム,1.0,6.0,-11.0,None,success,2026/08/03
+2026-08-03,gmo_click,HUF/JPY,GMOクリック証券,1.0,12.0,-12.0,None,success,2026/08/03
+2026-08-03,hirose,HUF/JPY,ヒロセ通商,1.0,6.0,-15.0,None,success,2026/08/03
+2026-08-03,invast,HUF/JPY,トライオートFX,1.0,None,None,None,error,None
+2026-08-03,traders_light_light,HUF/JPY,LIGHT FX（LIGHT）,1.0,9.0,-9.0,None,success,2026/08/03
+2026-08-03,traders_min_light,HUF/JPY,みんなのFX（LIGHT）,1.0,7.0,-7.0,None,success,2026/08/03
