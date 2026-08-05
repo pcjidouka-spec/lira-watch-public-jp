@@ -1,8 +1,8 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-08-04",
+  "target_date": "2026-08-05",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-04T20:28:55.700Z",
+  "generated_at": "2026-08-05T20:25:11.220Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -13,13 +13,13 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 24.635714285714283,
+      "avg": 24.7,
       "sample_days": 14
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.1,
+      "avg": 24.100000000000005,
       "sample_days": 13
     },
     {
@@ -44,18 +44,18 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 24,
-      "sample_days": 12
+      "sample_days": 10
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 23.74285714285714,
+      "avg": 23.957142857142863,
       "sample_days": 14
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 23.642857142857142,
+      "avg": 23.714285714285715,
       "sample_days": 14
     },
     {
@@ -91,21 +91,21 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 21.333333333333332,
+      "avg": 22.190476190476193,
       "sample_days": 14
     },
     {
       "provider_id": "m2j",
       "name": "マネースクエア",
-      "avg": 19.571428571428573,
-      "sample_days": 14
+      "avg": 21.4375,
+      "sample_days": 16
     }
   ],
   "sell_ranking": [
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -21.333333333333332,
+      "avg": -22.190476190476193,
       "sample_days": 14
     },
     {
@@ -135,19 +135,19 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -23.74285714285714,
+      "avg": -23.957142857142863,
       "sample_days": 14
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -24,
-      "sample_days": 12
+      "sample_days": 10
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -24.635714285714283,
+      "avg": -24.7,
       "sample_days": 14
     },
     {
@@ -159,7 +159,7 @@
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -26.642857142857142,
+      "avg": -26.714285714285715,
       "sample_days": 14
     },
     {
@@ -195,8 +195,8 @@
     {
       "provider_id": "m2j",
       "name": "マネースクエア",
-      "avg": -41.42857142857143,
-      "sample_days": 14
+      "avg": -40.9375,
+      "sample_days": 16
     }
   ]
 }
