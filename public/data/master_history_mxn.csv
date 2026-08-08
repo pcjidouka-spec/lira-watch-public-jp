@@ -1780,9 +1780,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/08/07
 2026-08-07,invast,MXN/JPY,トライオートFX,1.0,14.6,-29.8,None,success,2026/08/06
 2026-08-07,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/07
-2026-08-07,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-08-07,sbi,MXN/JPY,SBI FXトレード,2.0,13.0,-16.0,08月12日,success,2026/08/07
 2026-08-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/07
 2026-08-07,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/07
 2026-08-07,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/07
 2026-08-07,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/07
+2026-08-07,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/06

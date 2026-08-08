@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-08-07",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-07T20:27:06.796Z",
+  "generated_at": "2026-08-08T20:10:43.924Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -92,7 +92,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 13,
-      "sample_days": 16
+      "sample_days": 15
     }
   ],
   "sell_ranking": [
@@ -178,7 +178,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -23,
-      "sample_days": 16
+      "sample_days": 15
     },
     {
       "provider_id": "invast",
