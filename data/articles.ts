@@ -2,6 +2,12 @@ export interface Article {
   id: string;
   title: string;
   share_title?: string; // OGP/Twitter用の短縮タイトル（30文字以内推奨）
+  // X(Twitter)投稿の本文。記事作成時に必ずセットで書く。
+  // scripts/generate-x-posts.js が public/data/x_posts.json に書き出し、
+  // bot/post_to_x.py がそれを読んでそのまま投稿する（改行は保持される）。
+  // 未設定なら従来どおり記事冒頭120文字の自動切り出しにフォールバック。
+  // 目安は全角93文字以内（半角1・全角2で187まで）。超えると末尾が切られる。
+  x_post?: string;
   date: string;
   content: string; // HTML content
   thumbnail?: string;
@@ -15,6 +21,12 @@ export const articles: Article[] = [
   id: 'triauto-campaign-20260810',
   title: 'トライオートFX：トルコリラ/円のスワップが50％増額（8/10〜8/31）1万通貨あたり12.2円/日を上乗せ。ただし建玉上限は10万通貨',
   share_title: 'トルコリラ/円スワップ50％増額（トライオートFX）',
+  x_post: `トライオートFXがトルコリラ/円スワップを50%増額（8/31まで）
+
+・1万通貨あたり12.2円/日を上乗せ
+・実質36.3円相当で他社を圧倒
+・建玉上限は10万通貨と前回の1/5
+・上限フル保有すると約2,684円`,
   date: '2026/08/11',
   thumbnail: '/images/triauto-campaign-20260810_60.png',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'トライオートFX', 'キャンペーン'],
