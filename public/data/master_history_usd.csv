@@ -1242,3 +1242,14 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-10,sbi,USD/JPY,SBI FXトレード,None,None,None,None,success,2026/08/10
 2026-08-10,traders_light,USD/JPY,LIGHT FX,1.0,None,None,None,error,None
 2026-08-10,traders_min,USD/JPY,みんなのFX,1.0,None,None,None,error,None
+2026-08-11,central_tanshi,USD/JPY,セントラル短資FX,1.0,115.0,-115.0,8/12,success,2026/08/11
+2026-08-11,dmm,USD/JPY,DMM FX,1.0,None,None,None,success,2026/08/11
+2026-08-11,gaitame,USD/JPY,外為どっとコム,1.0,None,None,None,success,2026/08/11
+2026-08-11,gmo,USD/JPY,GMO外貨,1.0,123.0,-123.0,None,success,2026/08/11
+2026-08-11,gmo_click,USD/JPY,GMOクリック証券,1.0,123.0,-123.0,None,success,2026/08/11
+2026-08-11,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/08/11
+2026-08-11,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/08/10
+2026-08-11,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/08/11
+2026-08-11,sbi,USD/JPY,SBI FXトレード,None,None,None,08月13日,success,2026/08/11
+2026-08-11,traders_light,USD/JPY,LIGHT FX,1.0,124.0,-124.0,None,success,2026/08/11
+2026-08-11,traders_min,USD/JPY,みんなのFX,1.0,123.0,-123.0,None,success,2026/08/11
