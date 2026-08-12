@@ -79,8 +79,26 @@ interface Props {
   data: StrengthData;
 }
 
+/**
+ * 狭い画面かどうか。recharts の軸幅・高さ・目盛り数は CSS では変えられず
+ * props で渡すしかないので、JS 側でも幅を知る必要がある。
+ * SSR では判定できないため初期値は広い画面扱いにし、マウント後に補正する。
+ */
+function useNarrowScreen(query = '(max-width: 600px)'): boolean {
+  const [narrow, setNarrow] = useState(false);
+  React.useEffect(() => {
+    const mq = window.matchMedia(query);
+    const update = () => setNarrow(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, [query]);
+  return narrow;
+}
+
 export const StrengthChart: React.FC<Props> = ({ data }) => {
   const [period, setPeriod] = useState<string>('1m');
+  const narrow = useNarrowScreen();
   const p = data.periods[period];
 
   const codes = useMemo(() => Object.keys(p?.series ?? {}), [p]);
@@ -153,8 +171,11 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
 
         <div className="strength-plot">
           <div className="strength-canvas">
-            <ResponsiveContainer width="100%" height={420} minHeight={280}>
-              <LineChart data={chartData} margin={{ top: 8, right: 8, left: 0, bottom: 4 }}>
+            <ResponsiveContainer width="100%" height={narrow ? 300 : 420} minHeight={260}>
+              <LineChart
+                data={chartData}
+                margin={{ top: 8, right: narrow ? 2 : 8, left: 0, bottom: 4 }}
+              >
                 {bands.map((b) => (
                   <ReferenceArea
                     key={b.x1}
@@ -168,20 +189,21 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                 <CartesianGrid stroke="#2a2a2a" vertical={false} />
                 <XAxis
                   dataKey="date"
-                  tick={{ fontSize: 10, fill: '#c9c9c9' }}
+                  tick={{ fontSize: narrow ? 9 : 10, fill: '#c9c9c9' }}
                   tickLine={{ stroke: '#3a3a3a' }}
                   axisLine={{ stroke: '#3a3a3a' }}
-                  minTickGap={28}
-                  height={26}
+                  minTickGap={narrow ? 44 : 28}
+                  height={narrow ? 22 : 26}
                 />
                 <YAxis
-                  tick={{ fontSize: 11, fill: '#c9c9c9' }}
+                  tick={{ fontSize: narrow ? 9 : 11, fill: '#c9c9c9' }}
                   tickLine={{ stroke: '#3a3a3a' }}
                   axisLine={{ stroke: '#3a3a3a' }}
                   domain={domain}
-                  tickFormatter={(v: number) => v.toFixed(4)}
-                  tickCount={8}
-                  width={62}
+                  // 狭い画面は 1.0173 の6桁が入らないので3桁に落とす
+                  tickFormatter={(v: number) => v.toFixed(narrow ? 3 : 4)}
+                  tickCount={narrow ? 5 : 8}
+                  width={narrow ? 40 : 62}
                 />
                 <Tooltip
                   contentStyle={{
@@ -219,10 +241,12 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           <ul className="strength-legend">
             {ranked.map(({ code, value }) => (
               <li key={code} className="strength-legend-item">
-                <CurrencyFlag code={code} size={26} />
+                <CurrencyFlag code={code} size={narrow ? 20 : 26} />
                 <span className="strength-legend-code" style={{ color: COLORS[code] }}>
                   {code}
                 </span>
+                {/* 凡例は幅が足りるので狭い画面でも4桁のまま。3桁だと
+                    USD と TRY がどちらも 0.991 になって区別できない */}
                 <span className="strength-legend-value">
                   {value === null ? '—' : value.toFixed(4)}
                 </span>
@@ -387,8 +411,43 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           color: #6b7280;
         }
         @media (max-width: 600px) {
+          /* 本文カードの左右余白ぶんだけ外にはみ出させて、狭い画面でも
+             チャートに幅を渡す。この打ち消しが無いと 375px 幅で実際の
+             プロット領域が 89px しか残らなかった (カード余白80px + Y軸62px)。 */
+          .strength-panel {
+            margin-left: -12px;
+            margin-right: -12px;
+            border-radius: 8px;
+            padding: 8px 6px 4px;
+          }
+          .strength-panel-head {
+            padding: 0 4px;
+            margin-bottom: 4px;
+          }
+          .strength-asof {
+            font-size: 12px;
+          }
+          .strength-range {
+            font-size: 10px;
+          }
+          .strength-plot {
+            gap: 4px;
+          }
           .strength-legend {
-            width: 62px;
+            width: 44px;
+          }
+          .strength-legend-code {
+            font-size: 11px;
+          }
+          .strength-legend-value {
+            font-size: 9px;
+          }
+          .strength-tabs {
+            gap: 5px;
+          }
+          .strength-tab {
+            padding: 5px 9px;
+            font-size: 13px;
           }
         }
       `}</style>

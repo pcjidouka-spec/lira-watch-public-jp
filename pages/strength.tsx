@@ -169,6 +169,30 @@ export default function StrengthPage({ data }: Props) {
         .back-link {
           margin-top: 28px;
         }
+        @media (max-width: 600px) {
+          /* 狭い画面ではカードの余白を削ってチャートに幅を回す。
+             40px のままだと左右で 80px が余白に消える。 */
+          .main-content {
+            padding: 20px 10px;
+          }
+          .content-wrapper {
+            padding: 20px 12px;
+          }
+          .content-wrapper h1 {
+            font-size: 22px;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+          }
+          .content-wrapper h2 {
+            font-size: 17px;
+          }
+          .lead {
+            font-size: 14px;
+          }
+          .strength-about li {
+            font-size: 14px;
+          }
+        }
       `}</style>
     </>
   );
