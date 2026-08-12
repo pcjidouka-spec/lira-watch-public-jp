@@ -430,6 +430,14 @@ export default function Home() {
             {siteUpdatedAt || lastUpdated} 時点のデータに基づき、各FX会社のトルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）・ハンガリーフォリント円（HUF/JPY）・米ドル円（USD/JPY）の<a href="#swap-ranking" className="internal-link">スワップポイント比較ランキング</a>（順位は直近約2週間の付与日数加重平均）とキャンペーン情報の更新（５日以内）、<a href="#new-articles" className="internal-link">関連する情報を纏めた記事</a>をお届けします。
           </p>
 
+          {/* /strength への導線。既存のカード配置とトグルには手を入れず、
+              lead-text の直後に1行だけ足している (レイアウト変更禁止のため) */}
+          <p style={{ margin: '12px 0 0 0', fontSize: '14px' }}>
+            <Link href="/strength" className="internal-link">
+              スワップ込みの通貨強弱グラフ（為替の値動きとスワップを合算した実質の成績を6通貨で比較）→
+            </Link>
+          </p>
+
           <div className="currency-group-toggle" style={{ display: 'flex', gap: '8px', margin: '12px 0 16px 0', flexWrap: 'wrap' }}>
             <button
               onClick={() => setCurrencyTab('TRY/JPY')}
