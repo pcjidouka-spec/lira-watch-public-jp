@@ -125,14 +125,17 @@ export default function StrengthPage({ data }: Props) {
           border-radius: 12px;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        /* 見出しの装飾は本文カードの中だけに効かせる。素の h1 に当てると
+           ヘッダーの .site-title にも border-bottom が乗り、グラデーション
+           ヘッダーの中に白い下線が出る。 */
+        .content-wrapper h1 {
           font-size: 28px;
           border-bottom: 2px solid #e5e7eb;
           padding-bottom: 16px;
           margin-bottom: 24px;
           color: #1f2937;
         }
-        h2 {
+        .content-wrapper h2 {
           font-size: 20px;
           color: #374151;
           margin-top: 32px;
@@ -140,7 +143,7 @@ export default function StrengthPage({ data }: Props) {
           border-left: 4px solid #764ba2;
           padding-left: 12px;
         }
-        p {
+        .content-wrapper p {
           line-height: 1.8;
           color: #4b5563;
           margin-bottom: 16px;
