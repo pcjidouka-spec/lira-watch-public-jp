@@ -86,6 +86,65 @@ export default function StrengthPage({ data }: Props) {
       </div>
 
       <style jsx>{`
+        /* ページシェルのクラスは globals.css に無く、各ページが自前で定義して
+           いる (privacy.tsx / contact.tsx と同じ構成)。ここを書かないと
+           中央寄せもヘッダーの装飾も効かず、素の左寄せで表示される。 */
+        .container {
+          min-height: 100vh;
+          background: #f9fafb;
+          display: flex;
+          flex-direction: column;
+        }
+        .header {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        .site-title {
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0;
+          color: white;
+          cursor: pointer;
+        }
+        .site-title-link {
+          text-decoration: none;
+        }
+        .main-content {
+          flex: 1;
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .content-wrapper {
+          background: white;
+          padding: 40px;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+          font-size: 28px;
+          border-bottom: 2px solid #e5e7eb;
+          padding-bottom: 16px;
+          margin-bottom: 24px;
+          color: #1f2937;
+        }
+        h2 {
+          font-size: 20px;
+          color: #374151;
+          margin-top: 32px;
+          margin-bottom: 16px;
+          border-left: 4px solid #764ba2;
+          padding-left: 12px;
+        }
+        p {
+          line-height: 1.8;
+          color: #4b5563;
+          margin-bottom: 16px;
+        }
         .lead {
           line-height: 1.9;
           margin-bottom: 20px;

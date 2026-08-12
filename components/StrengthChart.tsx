@@ -70,7 +70,9 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
 
   // 起点=1.0 からの乖離が小さいので、Y 軸は実データ幅に合わせて詰める
   const domain = useMemo<[number, number]>(() => {
-    const vals = codes.flatMap((c) => p.series[c].filter((v): v is number => v !== null));
+    // p が無いときは codes が空なのでコールバックは呼ばれないが、
+    // 期間が欠けた JSON を渡されても落ちないよう明示的に守る。
+    const vals = codes.flatMap((c) => (p?.series?.[c] ?? []).filter((v): v is number => v !== null));
     if (!vals.length) return [0.95, 1.05];
     const lo = Math.min(...vals);
     const hi = Math.max(...vals);
