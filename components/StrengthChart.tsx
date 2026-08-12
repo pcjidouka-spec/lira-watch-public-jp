@@ -9,6 +9,9 @@ export type StrengthPeriod = {
   providers: Record<string, string>;
   switch_history: Record<string, { provider: string; from: string }[]>;
   insufficient: string[];
+  requested_from: string;
+  /** 要求した窓がデータ開始より前まで遡っている (タブ名より実期間が短い) */
+  data_limited: boolean;
 };
 
 export type StrengthData = {
@@ -21,9 +24,11 @@ export type StrengthData = {
 };
 
 const PERIOD_LABELS: [string, string][] = [
+  ['1w', '1週間'],
   ['1m', '1ヶ月'],
   ['3m', '3ヶ月'],
   ['6m', '6ヶ月'],
+  ['1y', '1年'],
 ];
 
 // 通貨ごとに固定色。期間を切り替えても線の色が変わらないようにする。
@@ -151,6 +156,13 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         </ResponsiveContainer>
       </div>
 
+      {p.data_limited && (
+        <p className="strength-limited">
+          データの蓄積は {p.dates[0]} からです。このタブはその日以降
+          （{p.dates.length}日ぶん）を表示しています。
+        </p>
+      )}
+
       {p.insufficient.length > 0 && (
         <p className="strength-insufficient">
           この期間はデータ不足のため非表示:{' '}
@@ -206,6 +218,11 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         }
         .strength-wrapper {
           width: 100%;
+        }
+        .strength-limited {
+          margin: 8px 0 0;
+          font-size: 12px;
+          color: #b45309;
         }
         .strength-insufficient {
           margin: 8px 0 0;
