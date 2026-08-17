@@ -1,14 +1,14 @@
 {
   "currency_pair": "MXN/JPY",
-  "target_date": "2026-08-14",
+  "target_date": "2026-08-17",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-16T20:13:55.974Z",
+  "generated_at": "2026-08-17T20:31:27.041Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 14.599999999999998,
-      "sample_days": 13
+      "avg": 14.599999999999996,
+      "sample_days": 14
     },
     {
       "provider_id": "gmo",
@@ -43,7 +43,7 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 14.271428571428572,
+      "avg": 14.250000000000002,
       "sample_days": 14
     },
     {
@@ -67,13 +67,13 @@
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": 13.5,
+      "avg": 13.428571428571429,
       "sample_days": 14
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 13.428571428571429,
+      "avg": 13.357142857142858,
       "sample_days": 14
     },
     {
@@ -85,7 +85,7 @@
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": 13.142857142857142,
+      "avg": 13.071428571428571,
       "sample_days": 14
     },
     {
@@ -99,7 +99,7 @@
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -13.5,
+      "avg": -13.428571428571429,
       "sample_days": 14
     },
     {
@@ -147,19 +147,19 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -16.271428571428572,
+      "avg": -16.249999999999996,
       "sample_days": 14
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -16.428571428571427,
+      "avg": -16.357142857142858,
       "sample_days": 14
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -18.142857142857142,
+      "avg": -18.071428571428573,
       "sample_days": 14
     },
     {
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -29.800000000000004,
-      "sample_days": 13
+      "avg": -29.800000000000008,
+      "sample_days": 14
     }
   ]
 }
