@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T04:00:46.165863",
+  "updated_at": "2026-08-22T04:00:44.354155",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -38,7 +38,7 @@
       "updated_at": "2026-06-30T18:00:51.915052"
     },
     "gaitame": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-08-16T04:00:42.004792"
     },
     "click365_okasan": {
@@ -62,8 +62,8 @@
       "updated_at": "2026-08-03T14:00:34.172429"
     },
     "hirose": {
-      "has_new": false,
-      "updated_at": "2026-08-03T10:00:40.527181"
+      "has_new": true,
+      "updated_at": "2026-08-22T04:00:41.369694"
     },
     "saxo": {
       "has_new": false,
