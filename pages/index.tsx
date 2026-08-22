@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useSwapData } from '@/hooks/useSwapData';
+import { isCrossPairCode } from '@/lib/dataProcessor';
 import { RankingTable } from '@/components/RankingTable';
 import { HistoricalChart } from '@/components/HistoricalChart';
 import { AdSense, AdSection } from '@/components/AdSense';
@@ -24,7 +25,9 @@ export default function Home() {
   const gbpusdData = useSwapData('GBP/USD');
   const hufData = useSwapData('HUF/JPY');
   const zarData = useSwapData('ZAR/JPY');
-  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY';
+  const plnData = useSwapData('PLN/JPY');
+  const chftryData = useSwapData('CHF/TRY');
+  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY' | 'PLN/JPY' | 'CHF/TRY';
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
@@ -36,6 +39,8 @@ export default function Home() {
     'GBP/USD': gbpusdData,
     'HUF/JPY': hufData,
     'ZAR/JPY': zarData,
+    'PLN/JPY': plnData,
+    'CHF/TRY': chftryData,
   };
   const activeSwapData = dataMap[currencyTab];
   const {
@@ -48,9 +53,11 @@ export default function Home() {
     error,
   } = activeSwapData;
 
-  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY' || currencyTab === 'ZAR/JPY';
-  const isCrossPair = currencyTab === 'EUR/USD' || currencyTab === 'GBP/USD';
-  const activeNoteText = isCrossPair
+  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY' || currencyTab === 'ZAR/JPY' || currencyTab === 'PLN/JPY';
+  const isCrossPair = isCrossPairCode(currencyTab);
+  const activeNoteText = currencyTab === 'CHF/TRY'
+    ? '※ CHF/TRY は各社が円換算した 1万通貨単位あたりの値です。スイスとトルコの金利差が非常に大きいため、買い（フラン買い・リラ売り）は各社ともマイナス、売り（フラン売り・リラ買い）はプラスになります。'
+    : isCrossPair
     ? '※ クロスペアは各社が円換算した 1万通貨単位あたりの値です。GBP/USDなど金利差が小さい通貨ペアでは、各社のスワップポリシーやマージンにより値や符号が異なる場合があります。'
     : currencyTab === 'HUF/JPY'
     ? '※ HUF/JPY は 10万通貨単位あたりの値です。1万通貨単位で掲載している会社の値は 10万通貨単位に換算して比較しています。'
@@ -63,6 +70,8 @@ export default function Home() {
     'GBP/USD': 'GBP/USD',
     'HUF/JPY': 'ハンガリーフォリント',
     'ZAR/JPY': '南アフリカランド',
+    'PLN/JPY': 'ポーランドズロチ',
+    'CHF/TRY': 'スイスフラン/トルコリラ',
   };
 
   const [showCharts, setShowCharts] = useState(false);
@@ -447,7 +456,7 @@ export default function Home() {
                 color: isJpyGroup ? 'white' : '#4b5563',
                 cursor: 'pointer', fontWeight: 700,
               }}
-            >TRY/JPY、MXN/JPY、HUF/JPY、ZAR/JPY</button>
+            >TRY/JPY、MXN/JPY、HUF/JPY、ZAR/JPY、PLN/JPY</button>
             <button
               onClick={() => setCurrencyTab('USD/JPY')}
               style={{
@@ -456,7 +465,7 @@ export default function Home() {
                 color: !isJpyGroup ? 'white' : '#4b5563',
                 cursor: 'pointer', fontWeight: 700,
               }}
-            >USD/JPY、EUR/USD、GBP/USD</button>
+            >USD/JPY、EUR/USD、GBP/USD、CHF/TRY</button>
           </div>
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
@@ -500,6 +509,15 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >ZAR/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('PLN/JPY')}
+                    style={{
+                      padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'PLN/JPY' ? '#0ea5e9' : '#f3f4f6',
+                      color: currencyTab === 'PLN/JPY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >PLN/JPY</button>
                 </>
               ) : (
                 <>
@@ -530,6 +548,15 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >GBP/USD</button>
+                  <button
+                    onClick={() => setCurrencyTab('CHF/TRY')}
+                    style={{
+                      padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'CHF/TRY' ? '#0d9488' : '#f3f4f6',
+                      color: currencyTab === 'CHF/TRY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >CHF/TRY</button>
                 </>
               )}
             </span>
@@ -612,6 +639,15 @@ export default function Home() {
                           cursor: 'pointer', fontWeight: 700,
                         }}
                       >ZAR/JPY</button>
+                      <button
+                        onClick={() => setCurrencyTab('PLN/JPY')}
+                        style={{
+                          padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                          background: currencyTab === 'PLN/JPY' ? '#0ea5e9' : '#f3f4f6',
+                          color: currencyTab === 'PLN/JPY' ? 'white' : '#4b5563',
+                          cursor: 'pointer', fontWeight: 700,
+                        }}
+                      >PLN/JPY</button>
                     </>
                   ) : (
                     <>
@@ -642,6 +678,15 @@ export default function Home() {
                           cursor: 'pointer', fontWeight: 700,
                         }}
                       >GBP/USD</button>
+                      <button
+                        onClick={() => setCurrencyTab('CHF/TRY')}
+                        style={{
+                          padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                          background: currencyTab === 'CHF/TRY' ? '#0d9488' : '#f3f4f6',
+                          color: currencyTab === 'CHF/TRY' ? 'white' : '#4b5563',
+                          cursor: 'pointer', fontWeight: 700,
+                        }}
+                      >CHF/TRY</button>
                     </>
                   )}
                 </span>

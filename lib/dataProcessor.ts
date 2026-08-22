@@ -153,14 +153,31 @@ export function getPast30DaysData(data: SwapData[]): SwapData[] {
 }
 
 /**
+ * クロスペア（対円でない通貨ペア）判定。
+ *
+ * クロスペアは JPY クロスと次の点で挙動が違うため、ランキング/グラフの分岐に使う:
+ *   - 買スワップ 0 円が正常値（取得失敗ではない）
+ *   - 売スワップがプラス（受取り）になりうる
+ *
+ * CHF/TRY は買が常にマイナス・売がプラスで、この特性がそのまま当てはまる (2026-08-22 追加)。
+ * 判定が dataProcessor / providerChartData / index.tsx の3箇所に重複していたため、
+ * ここを唯一の定義とする。新しいクロスペアを足すときはこの配列だけ更新する。
+ */
+export const CROSS_PAIRS = ['EUR/USD', 'GBP/USD', 'CHF/TRY'] as const;
+
+export function isCrossPairCode(currencyPair: string): boolean {
+  return (CROSS_PAIRS as readonly string[]).includes(currencyPair);
+}
+
+/**
  * 買いスワップランキングを生成（降順）- 直近約2週間の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
-  // クロスペア（EUR/USD, GBP/USD）では買スワップ 0 円が正常値のため、
+  // クロスペア（EUR/USD, GBP/USD, CHF/TRY）では買スワップ 0 円が正常値のため、
   // ランキング除外フィルタを無効化する。JPY クロスでは 0 = 取得失敗/取扱なしの
   // 可能性が高いため従来通り除外。
-  const isCrossPair = currencyPair === 'EUR/USD' || currencyPair === 'GBP/USD';
+  const isCrossPair = isCrossPairCode(currencyPair);
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const windowData = getPast30DaysData(successData);

@@ -1,4 +1,5 @@
 import { SwapData, ProviderConfig } from '@/types';
+import { isCrossPairCode } from '@/lib/dataProcessor';
 
 /**
  * 各事業者ごとの日次データを取得
@@ -6,10 +7,10 @@ import { SwapData, ProviderConfig } from '@/types';
 export function getProviderChartData(data: SwapData[], type: 'buy' | 'sell', providerConfigs?: Map<string, ProviderConfig>, currencyPair?: string) {
   const providerMap = new Map<string, { name: string; data: { date: string; value: number }[] }>();
 
-  // クロスペア（EUR/USD, GBP/USD）では 0 が正常値のためグラフに描画する。
+  // クロスペア（EUR/USD, GBP/USD, CHF/TRY）では 0 が正常値のためグラフに描画する。
   // JPY ペアでは 0 = 取得失敗の可能性が高いため従来通りスキップ。
   // ランキング側（dataProcessor.getBuyRanking）の isCrossPair 分岐と挙動を揃える。
-  const isCrossPair = currencyPair === 'EUR/USD' || currencyPair === 'GBP/USD';
+  const isCrossPair = isCrossPairCode(currencyPair ?? '');
 
   // 実際に取得できた成功データのみを使用
   const successData = data.filter(d => d.status === 'success');

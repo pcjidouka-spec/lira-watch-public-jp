@@ -1,0 +1,68 @@
+{
+  "_note": "CHF/TRY (スイスフラン/トルコリラ) の取扱5社。取得は scrape_cross_pairs.py --currency chftry が担当し、本ファイルは業者名・キャンペーンリンク等の HP 表示メタデータとして使う。CHF/TRY は買がマイナス・売がプラスと符号が逆のペアで、値は全て1万通貨・1日あたり(円)に正規化済み。サクソバンク証券はユーザー指示で除外。GMOクリック/DMM/SBI/GMO外貨/くりっく365/松井は CHF/TRY 非対応。",
+  "providers": [
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHF/TRY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【全ペア一覧テーブル】このページの全ペア一覧テーブルに CHF/TRY 行が同居しています。ページの骨組みが先に表示され表の描画に数秒かかるため、到達後は必ず6〜7秒以上待機してください。ヘッダは日付ごとに『付与日数・買・売』の3列セットです。",
+        "swap_point_adjustment": "【単位】1万通貨単位。数値はカンマ区切り（例: -2,345）なのでカンマを除去してください。付与日数が2以上のときは合計値なので1日あたりに割り戻します。"
+      }
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHF/TRY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】このページは最新スナップショットのみを掲載しています（日付列なし）。",
+        "interaction_hint": "【静的HTML】JavaScript 不要で urllib のみで取得できます。行構造は [通貨ペア, 日数, 1Lotあたりの通貨数量, 売(ポイント), 買(ポイント), 売(円換算後), 買(円換算後)] です。",
+        "swap_point_adjustment": "【最重要：単位】必ず「円換算後」列を使ってください。1Lot=1,000通貨なので x10 して1万通貨換算します。ポイント列（1,000通貨あたりのポイント）をそのまま使ってはいけません。"
+      }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHF/TRY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/",
+      "use_browser": true,
+      "instructions": {
+        "date_search_strategy": "【日付探索】当月テーブルのみ表示。対象日の行が空欄なら直前の有効行（直近営業日）を採用し actual_date に記録します。",
+        "interaction_hint": "【値はJS注入】.triauto-market-swap-CHFTRY コンテナに当月テーブルが入っています。静的HTMLでは全て『-』なので networkidle 到達後さらに数秒待ってください。",
+        "swap_point_adjustment": "【列順注意】データ行は [日付, 付与日数, 売, 買] の順で、売が買より先に並びます。1万通貨単位・付与日数分の合計値なので days>=2 は1日あたりに割り戻します。"
+      }
+    },
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHFTRY）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】新しい日付が上に並びます。対象日の付与日数が『-』（土日等）なら、それより古い直近の有効な組を採用します。",
+        "interaction_hint": "【静的HTML】全通貨グループのテーブルが最初からHTMLに同梱されているため select#cpswap の操作は不要です。CHFTRY を含むテーブルのヘッダは ['取引日','','AUDCAD','CHFTRY','CHFMXN','CHFZAR','NOKSEK'] です。行は『日付行(付与日数) → 買行 → 売行』の3行1組で、買/売 行には日付セルが無いため1列ずれます。",
+        "swap_point_adjustment": "【単位】1Lot=1万通貨。付与日数が2以上のときは合計値なので1日あたりに割り戻します。★他4社の約半分の絶対値（買 -1,000 前後）になりますが異常値ではなく業者ポリシー差です。",
+        "product_selection": "【重要】『CHFTRY』列を使ってください。LIGHT 付きの列は対象外です。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHFTRY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】新しい日付が上に並びます。対象日の付与日数が『-』（土日等）なら、それより古い直近の有効な組を採用します。",
+        "interaction_hint": "【静的HTML】みんなのFXと同一構造。全通貨グループのテーブルが最初からHTMLに同梱されているため select#cpswap の操作は不要です。CHFTRY を含むテーブルのヘッダは ['取引日','','AUDCAD','CHFTRY','CHFMXN','CHFZAR','NOKSEK'] です。",
+        "swap_point_adjustment": "【単位】1Lot=1万通貨。付与日数が2以上のときは合計値なので1日あたりに割り戻します。★他4社の約半分の絶対値（買 -1,000 前後）になりますが異常値ではなく業者ポリシー差です。",
+        "product_selection": "【重要】『CHFTRY』列を使ってください。LIGHT 付きの列は対象外です。"
+      }
+    }
+  ]
+}

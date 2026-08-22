@@ -1,0 +1,6 @@
+target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_date,status,actual_date
+2026-08-21,gaitame,CHF/TRY,外為どっとコム,1,-2345.0,1850.0,,success,
+2026-08-21,hirose,CHF/TRY,ヒロセ通商,1,-2017.5,1786.4,,success,
+2026-08-21,invast,CHF/TRY,トライオートFX,1,-2150.0,1550.0,,success,
+2026-08-21,traders_min,CHF/TRY,みんなのFX,1,-1000.6,988.7,,success,
+2026-08-21,traders_light,CHF/TRY,LIGHT FX,1,-1000.4,988.5,,success,

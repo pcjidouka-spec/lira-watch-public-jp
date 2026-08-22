@@ -1,0 +1,83 @@
+{
+  "providers": [
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨グループ選択】PLNJPY は CHFJPY/RUBJPY/CNHJPY/HKDJPY/SGDJPY/PLNJPY/NOKJPY/SEKJPY のグループに含まれます。グループを選択してから表を抽出してください。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨グループ選択】PLNJPY は CHFJPY/RUBJPY/CNHJPY/HKDJPY/SGDJPY/PLNJPY/NOKJPY/SEKJPY のグループに含まれます。グループを選択してから表を抽出してください。"
+      }
+    },
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?pare=PLNJPY",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/"
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/"
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "instructions": {
+        "swap_point_adjustment": "【重要：単位変換】PLN/JPY は 1Lot=1,000通貨で表示されます。1万通貨換算にするため「円換算後」の数値を10倍してください。"
+      }
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：タブ選択】「直近のスワップ」タブを選択してから PLN/JPY の行を抽出してください。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。"
+      }
+    },
+    {
+      "id": "matsui",
+      "name": "MATSUI FX",
+      "url": "https://www.matsui.co.jp/fx/market/past-swap/",
+      "currency_pair_selector": "ポーランドズロチ/円（PLN/JPY）",
+      "campaign_url": "https://www.matsui.co.jp/campaign/?mnu=hd"
+    }
+  ],
+  "common_instructions": {},
+  "agent_settings": {
+    "max_steps": 5,
+    "timeout_seconds": 300
+  }
+}
