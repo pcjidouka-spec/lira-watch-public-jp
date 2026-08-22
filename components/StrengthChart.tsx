@@ -10,6 +10,8 @@ export type StrengthPeriod = {
   providers: Record<string, string>;
   switch_history: Record<string, { provider: string; from: string }[]>;
   insufficient: string[];
+  /** 通貨ではない参照系列のコード。バスケットの平均計算には入っていない */
+  references?: string[];
   requested_from: string;
   /** 要求した窓がデータ開始より前まで遡っている (タブ名より実期間が短い) */
   data_limited: boolean;
@@ -41,6 +43,7 @@ const COLORS: Record<string, string> = {
   ZAR: '#4ade80',
   HUF: '#a78bfa',
   PLN: '#fb923c',
+  CHFTRY_S: '#e879f9',
 };
 
 const CURRENCY_LABELS: Record<string, string> = {
@@ -51,6 +54,13 @@ const CURRENCY_LABELS: Record<string, string> = {
   ZAR: '南アフリカランド',
   HUF: 'ハンガリーフォリント',
   PLN: 'ポーランドズロチ',
+  CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
+};
+
+// 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は
+// 内部コード (CHFTRY_S) をそのまま出すと読めないので置き換える。
+const DISPLAY_CODES: Record<string, string> = {
+  CHFTRY_S: 'CHF/TRY売',
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
@@ -228,6 +238,8 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                     dataKey={c}
                     stroke={COLORS[c] ?? '#9ca3af'}
                     strokeWidth={c === data.base ? 2 : 1.5}
+                    // 参照系列は通貨ではないので破線にして区別する
+                    strokeDasharray={(p.references ?? []).includes(c) ? '5 3' : undefined}
                     name={c}
                     dot={false}
                     connectNulls={false}
@@ -245,7 +257,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
               <li key={code} className="strength-legend-item">
                 <CurrencyFlag code={code} size={narrow ? 20 : 26} />
                 <span className="strength-legend-code" style={{ color: COLORS[code] }}>
-                  {code}
+                  {DISPLAY_CODES[code] ?? code}
                 </span>
                 {/* 凡例は幅が足りるので狭い画面でも4桁のまま。3桁だと
                     USD と TRY がどちらも 0.991 になって区別できない */}
@@ -293,6 +305,15 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         表示している通貨の平均が1.0になるよう揃えているため、日本円も上下します。
         円はスワップを受け取れないので、円の線が下がるほど他通貨が優位という読み方になります。
       </p>
+      {(p.references ?? []).length > 0 && (
+        <p className="strength-note">
+          破線の「CHF/TRY売」は通貨ではなくポジションです。1万フランぶんを売って
+          同額のトルコリラを買い、レバレッジ1倍で持ち続けた場合を表しています。
+          円で調達するかわりにスイスフランで調達してリラを買うと、どれだけ違うかを
+          見るための線です。<strong>平均を1.0に揃える計算には入れていない</strong>ので、
+          この線を足しても他の通貨の線は動きません。
+        </p>
+      )}
       <p className="strength-generated">最終更新: {data.generated_at}</p>
 
       <style jsx>{`

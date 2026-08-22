@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-08-22 22:33:11",
+  "generated_at": "2026-08-22 23:32:05",
   "base": "JPY",
   "provider_names": {
     "central_tanshi": "セントラル短資FX",
+    "gaitame": "外為どっとコム",
     "gmo_click": "GMOクリック証券",
     "invast": "トライオートFX",
     "traders_light": "LIGHT FX"
@@ -82,6 +83,14 @@
           1.0022311869677472,
           1.0040169492255517,
           1.0053259702939978
+        ],
+        "CHFTRY_S": [
+          1.0,
+          0.9957891258979664,
+          0.999455152354939,
+          0.9837061958430043,
+          0.9825867826148265,
+          0.9811366570998227
         ]
       },
       "providers": {
@@ -90,7 +99,8 @@
         "MXN": "invast",
         "ZAR": "central_tanshi",
         "HUF": "invast",
-        "PLN": "traders_light"
+        "PLN": "traders_light",
+        "CHFTRY_S": "gaitame"
       },
       "switch_history": {
         "USD": [
@@ -128,9 +138,18 @@
             "provider": "traders_light",
             "from": "2026-08-14"
           }
+        ],
+        "CHFTRY_S": [
+          {
+            "provider": "gaitame",
+            "from": "2026-08-14"
+          }
         ]
       },
       "insufficient": [],
+      "references": [
+        "CHFTRY_S"
+      ],
       "requested_from": "2026-08-14",
       "data_limited": false
     },
@@ -335,6 +354,31 @@
           1.0077819690652288,
           1.0095842633686756,
           1.0108884309154373
+        ],
+        "CHFTRY_S": [
+          1.0,
+          1.0036803489336044,
+          1.0030988029581074,
+          1.0054510445496916,
+          1.0040737334808647,
+          0.9998720085175159,
+          1.0008639082427948,
+          1.0168797040755249,
+          1.0247516941273123,
+          1.0175169263447748,
+          1.0134937393492554,
+          1.0170811712393864,
+          1.010313976567969,
+          1.0075754416287068,
+          1.0088924144889464,
+          1.0106862087809023,
+          1.0080780497521882,
+          1.0090814788308198,
+          1.0048315737263798,
+          1.0085424797711977,
+          0.9926150196177916,
+          0.9914919912627327,
+          0.9900168612034813
         ]
       },
       "providers": {
@@ -343,7 +387,8 @@
         "MXN": "invast",
         "ZAR": "central_tanshi",
         "HUF": "invast",
-        "PLN": "traders_light"
+        "PLN": "traders_light",
+        "CHFTRY_S": "gaitame"
       },
       "switch_history": {
         "USD": [
@@ -381,9 +426,18 @@
             "provider": "traders_light",
             "from": "2026-07-22"
           }
+        ],
+        "CHFTRY_S": [
+          {
+            "provider": "gaitame",
+            "from": "2026-07-22"
+          }
         ]
       },
       "insufficient": [],
+      "references": [
+        "CHFTRY_S"
+      ],
       "requested_from": "2026-07-22",
       "data_limited": false
     },
@@ -830,8 +884,10 @@
       },
       "insufficient": [
         "ZAR",
-        "PLN"
+        "PLN",
+        "CHFTRY_S"
       ],
+      "references": [],
       "requested_from": "2026-05-22",
       "data_limited": false
     },
@@ -1392,8 +1448,10 @@
         "USD",
         "ZAR",
         "HUF",
-        "PLN"
+        "PLN",
+        "CHFTRY_S"
       ],
+      "references": [],
       "requested_from": "2026-02-19",
       "data_limited": false
     },
@@ -1965,8 +2023,10 @@
         "MXN",
         "ZAR",
         "HUF",
-        "PLN"
+        "PLN",
+        "CHFTRY_S"
       ],
+      "references": [],
       "requested_from": "2025-08-21",
       "data_limited": true
     }
