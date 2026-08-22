@@ -1,4 +1,140 @@
 target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_date,status,actual_date
+2026-07-22,gaitame,PLN/JPY,外為どっとコム,3,30.0,-40.0,None,success,2026/07/22
+2026-07-22,gmo_click,PLN/JPY,GMOクリック証券,3,70.0,-70.0,None,success,2026/07/22
+2026-07-22,hirose,PLN/JPY,ヒロセ通商,3,33.0,-40.0,None,success,2026/07/22
+2026-07-22,matsui,PLN/JPY,MATSUI FX,3,27.0,-37.0,None,success,2026/07/22
+2026-07-22,traders_light,PLN/JPY,LIGHT FX,3,75.0,-75.0,None,success,2026/07/22
+2026-07-22,traders_min,PLN/JPY,みんなのFX,3,75.0,-75.0,None,success,2026/07/22
+2026-07-23,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/23
+2026-07-23,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/23
+2026-07-23,hirose,PLN/JPY,ヒロセ通商,1,33.0,-40.0,None,success,2026/07/23
+2026-07-23,matsui,PLN/JPY,MATSUI FX,1,27.0,-37.0,None,success,2026/07/23
+2026-07-23,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/23
+2026-07-23,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/23
+2026-07-24,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/24
+2026-07-24,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/24
+2026-07-24,hirose,PLN/JPY,ヒロセ通商,1,33.0,-40.0,None,success,2026/07/24
+2026-07-24,matsui,PLN/JPY,MATSUI FX,1,27.0,-37.0,None,success,2026/07/24
+2026-07-24,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/24
+2026-07-24,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/24
+2026-07-27,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/27
+2026-07-27,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/27
+2026-07-27,hirose,PLN/JPY,ヒロセ通商,1,30.0,-37.0,None,success,2026/07/27
+2026-07-27,matsui,PLN/JPY,MATSUI FX,1,27.0,-37.0,None,success,2026/07/27
+2026-07-27,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/27
+2026-07-27,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/27
+2026-07-28,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/28
+2026-07-28,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/28
+2026-07-28,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/07/28
+2026-07-28,matsui,PLN/JPY,MATSUI FX,1,34.0,-44.0,None,success,2026/07/28
+2026-07-28,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/28
+2026-07-28,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/28
+2026-07-29,gaitame,PLN/JPY,外為どっとコム,3,30.0,-40.0,None,success,2026/07/29
+2026-07-29,gmo_click,PLN/JPY,GMOクリック証券,3,70.0,-70.0,None,success,2026/07/29
+2026-07-29,hirose,PLN/JPY,ヒロセ通商,3,33.0,-43.0,None,success,2026/07/29
+2026-07-29,matsui,PLN/JPY,MATSUI FX,3,34.0,-44.0,None,success,2026/07/29
+2026-07-29,traders_light,PLN/JPY,LIGHT FX,3,75.0,-75.0,None,success,2026/07/29
+2026-07-29,traders_min,PLN/JPY,みんなのFX,3,75.0,-75.0,None,success,2026/07/29
+2026-07-30,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/30
+2026-07-30,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/30
+2026-07-30,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/07/30
+2026-07-30,matsui,PLN/JPY,MATSUI FX,1,34.0,-44.0,None,success,2026/07/30
+2026-07-30,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/30
+2026-07-30,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/30
+2026-07-31,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/07/31
+2026-07-31,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/07/31
+2026-07-31,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/07/31
+2026-07-31,matsui,PLN/JPY,MATSUI FX,1,34.0,-44.0,None,success,2026/07/31
+2026-07-31,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/07/31
+2026-07-31,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/07/31
+2026-08-01,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/01
+2026-08-03,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/03
+2026-08-03,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/03
+2026-08-03,hirose,PLN/JPY,ヒロセ通商,1,30.0,-40.0,None,success,2026/08/03
+2026-08-03,matsui,PLN/JPY,MATSUI FX,1,34.0,-44.0,None,success,2026/08/03
+2026-08-03,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/03
+2026-08-03,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/03
+2026-08-04,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/04
+2026-08-04,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/04
+2026-08-04,hirose,PLN/JPY,ヒロセ通商,1,30.0,-40.0,None,success,2026/08/04
+2026-08-04,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/04
+2026-08-04,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/04
+2026-08-04,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/04
+2026-08-04,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/04
+2026-08-05,gaitame,PLN/JPY,外為どっとコム,3,30.0,-40.0,None,success,2026/08/05
+2026-08-05,gmo_click,PLN/JPY,GMOクリック証券,3,70.0,-70.0,None,success,2026/08/05
+2026-08-05,hirose,PLN/JPY,ヒロセ通商,3,30.0,-40.0,None,success,2026/08/05
+2026-08-05,matsui,PLN/JPY,MATSUI FX,3,29.0,-39.0,None,success,2026/08/05
+2026-08-05,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/05
+2026-08-05,traders_light,PLN/JPY,LIGHT FX,3,75.0,-75.0,None,success,2026/08/05
+2026-08-05,traders_min,PLN/JPY,みんなのFX,3,75.0,-75.0,None,success,2026/08/05
+2026-08-06,gaitame,PLN/JPY,外為どっとコム,2,30.0,-40.0,None,success,2026/08/06
+2026-08-06,gmo_click,PLN/JPY,GMOクリック証券,2,70.0,-70.0,None,success,2026/08/06
+2026-08-06,hirose,PLN/JPY,ヒロセ通商,2,30.0,-40.0,None,success,2026/08/06
+2026-08-06,matsui,PLN/JPY,MATSUI FX,2,29.0,-39.0,None,success,2026/08/06
+2026-08-06,sbi,PLN/JPY,SBI FXトレード,3,28.0,-38.0,None,success,2026/08/06
+2026-08-06,traders_light,PLN/JPY,LIGHT FX,2,75.0,-75.0,None,success,2026/08/06
+2026-08-06,traders_min,PLN/JPY,みんなのFX,2,75.0,-75.0,None,success,2026/08/06
+2026-08-07,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/07
+2026-08-07,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/07
+2026-08-07,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/07
+2026-08-07,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/07
+2026-08-07,sbi,PLN/JPY,SBI FXトレード,2,28.0,-38.0,None,success,2026/08/07
+2026-08-07,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/07
+2026-08-07,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/07
+2026-08-08,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/08
+2026-08-11,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/11
+2026-08-11,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/11
+2026-08-11,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/11
+2026-08-11,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/11
+2026-08-11,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/11
+2026-08-11,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/11
+2026-08-12,gaitame,PLN/JPY,外為どっとコム,3,30.0,-40.0,None,success,2026/08/12
+2026-08-12,gmo_click,PLN/JPY,GMOクリック証券,3,70.0,-70.0,None,success,2026/08/12
+2026-08-12,hirose,PLN/JPY,ヒロセ通商,3,33.0,-43.0,None,success,2026/08/12
+2026-08-12,matsui,PLN/JPY,MATSUI FX,3,29.0,-39.0,None,success,2026/08/12
+2026-08-12,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/12
+2026-08-12,traders_light,PLN/JPY,LIGHT FX,3,75.0,-75.0,None,success,2026/08/12
+2026-08-12,traders_min,PLN/JPY,みんなのFX,3,75.0,-75.0,None,success,2026/08/12
+2026-08-13,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/13
+2026-08-13,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/13
+2026-08-13,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/13
+2026-08-13,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/13
+2026-08-13,sbi,PLN/JPY,SBI FXトレード,3,28.0,-38.0,None,success,2026/08/13
+2026-08-13,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/13
+2026-08-13,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/13
+2026-08-14,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/14
+2026-08-14,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/14
+2026-08-14,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/14
+2026-08-14,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/14
+2026-08-14,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/14
+2026-08-14,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/14
+2026-08-14,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/14
+2026-08-15,sbi,PLN/JPY,SBI FXトレード,1,28.0,-38.0,None,success,2026/08/15
+2026-08-17,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/17
+2026-08-17,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/17
+2026-08-17,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/17
+2026-08-17,matsui,PLN/JPY,MATSUI FX,1,29.0,-39.0,None,success,2026/08/17
+2026-08-17,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/17
+2026-08-17,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/17
+2026-08-18,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/18
+2026-08-18,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/18
+2026-08-18,hirose,PLN/JPY,ヒロセ通商,1,33.0,-43.0,None,success,2026/08/18
+2026-08-18,matsui,PLN/JPY,MATSUI FX,1,28.0,-38.0,None,success,2026/08/18
+2026-08-18,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/18
+2026-08-18,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/18
+2026-08-19,gaitame,PLN/JPY,外為どっとコム,3,30.0,-40.0,None,success,2026/08/19
+2026-08-19,gmo_click,PLN/JPY,GMOクリック証券,3,70.0,-70.0,None,success,2026/08/19
+2026-08-19,hirose,PLN/JPY,ヒロセ通商,3,30.0,-40.0,None,success,2026/08/19
+2026-08-19,matsui,PLN/JPY,MATSUI FX,3,28.0,-38.0,None,success,2026/08/19
+2026-08-19,traders_light,PLN/JPY,LIGHT FX,3,75.0,-75.0,None,success,2026/08/19
+2026-08-19,traders_min,PLN/JPY,みんなのFX,3,75.0,-75.0,None,success,2026/08/19
+2026-08-20,gaitame,PLN/JPY,外為どっとコム,1,30.0,-40.0,None,success,2026/08/20
+2026-08-20,gmo_click,PLN/JPY,GMOクリック証券,1,70.0,-70.0,None,success,2026/08/20
+2026-08-20,hirose,PLN/JPY,ヒロセ通商,1,30.0,-40.0,None,success,2026/08/20
+2026-08-20,matsui,PLN/JPY,MATSUI FX,1,28.0,-38.0,None,success,2026/08/20
+2026-08-20,traders_light,PLN/JPY,LIGHT FX,1,75.0,-75.0,None,success,2026/08/20
+2026-08-20,traders_min,PLN/JPY,みんなのFX,1,75.0,-75.0,None,success,2026/08/20
 2026-08-21,gaitame,PLN/JPY,外為どっとコム,1.0,30.0,-40.0,None,success,2026/08/21
 2026-08-21,gmo_click,PLN/JPY,GMOクリック証券,1.0,70.0,-70.0,None,success,2026/08/21
 2026-08-21,hirose,PLN/JPY,ヒロセ通商,1.0,30.0,-40.0,None,success,2026/08/21
