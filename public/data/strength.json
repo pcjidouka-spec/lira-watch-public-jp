@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22 23:32:05",
+  "generated_at": "2026-08-22 23:45:24",
   "base": "JPY",
   "provider_names": {
     "central_tanshi": "セントラル短資FX",
@@ -91,6 +91,14 @@
           0.9837061958430043,
           0.9825867826148265,
           0.9811366570998227
+        ],
+        "CHFTRY_B": [
+          1.0,
+          1.0031792294236872,
+          1.0005794479627148,
+          1.021310170612074,
+          1.0142744851595769,
+          1.010913435784164
         ]
       },
       "providers": {
@@ -100,7 +108,8 @@
         "ZAR": "central_tanshi",
         "HUF": "invast",
         "PLN": "traders_light",
-        "CHFTRY_S": "gaitame"
+        "CHFTRY_S": "gaitame",
+        "CHFTRY_B": "traders_light"
       },
       "switch_history": {
         "USD": [
@@ -144,10 +153,17 @@
             "provider": "gaitame",
             "from": "2026-08-14"
           }
+        ],
+        "CHFTRY_B": [
+          {
+            "provider": "traders_light",
+            "from": "2026-08-14"
+          }
         ]
       },
       "insufficient": [],
       "references": [
+        "CHFTRY_B",
         "CHFTRY_S"
       ],
       "requested_from": "2026-08-14",
@@ -379,6 +395,31 @@
           0.9926150196177916,
           0.9914919912627327,
           0.9900168612034813
+        ],
+        "CHFTRY_B": [
+          1.0,
+          1.0002645338272875,
+          0.9965473350462374,
+          0.9926054824573419,
+          0.9917157790241018,
+          0.9999285126787308,
+          1.0245441783035378,
+          1.0348713082986452,
+          1.033853155189084,
+          1.0281173488677435,
+          1.0292748881292277,
+          1.0233198628461122,
+          1.0269365572383478,
+          1.0172387327483565,
+          1.01460164257304,
+          1.0105785986655391,
+          1.0122235346686772,
+          1.0114467691130777,
+          1.014661592674796,
+          1.012043683971577,
+          1.0329751854788163,
+          1.0258658899603446,
+          1.0224541789256913
         ]
       },
       "providers": {
@@ -388,7 +429,8 @@
         "ZAR": "central_tanshi",
         "HUF": "invast",
         "PLN": "traders_light",
-        "CHFTRY_S": "gaitame"
+        "CHFTRY_S": "gaitame",
+        "CHFTRY_B": "traders_light"
       },
       "switch_history": {
         "USD": [
@@ -432,10 +474,17 @@
             "provider": "gaitame",
             "from": "2026-07-22"
           }
+        ],
+        "CHFTRY_B": [
+          {
+            "provider": "traders_light",
+            "from": "2026-07-22"
+          }
         ]
       },
       "insufficient": [],
       "references": [
+        "CHFTRY_B",
         "CHFTRY_S"
       ],
       "requested_from": "2026-07-22",
@@ -885,7 +934,8 @@
       "insufficient": [
         "ZAR",
         "PLN",
-        "CHFTRY_S"
+        "CHFTRY_S",
+        "CHFTRY_B"
       ],
       "references": [],
       "requested_from": "2026-05-22",
@@ -1449,7 +1499,8 @@
         "ZAR",
         "HUF",
         "PLN",
-        "CHFTRY_S"
+        "CHFTRY_S",
+        "CHFTRY_B"
       ],
       "references": [],
       "requested_from": "2026-02-19",
@@ -2024,7 +2075,8 @@
         "ZAR",
         "HUF",
         "PLN",
-        "CHFTRY_S"
+        "CHFTRY_S",
+        "CHFTRY_B"
       ],
       "references": [],
       "requested_from": "2025-08-21",

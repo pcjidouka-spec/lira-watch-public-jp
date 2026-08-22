@@ -44,6 +44,7 @@ const COLORS: Record<string, string> = {
   HUF: '#a78bfa',
   PLN: '#fb923c',
   CHFTRY_S: '#e879f9',
+  CHFTRY_B: '#38bdf8',
 };
 
 const CURRENCY_LABELS: Record<string, string> = {
@@ -55,12 +56,14 @@ const CURRENCY_LABELS: Record<string, string> = {
   HUF: 'ハンガリーフォリント',
   PLN: 'ポーランドズロチ',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
+  CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
 };
 
 // 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は
 // 内部コード (CHFTRY_S) をそのまま出すと読めないので置き換える。
 const DISPLAY_CODES: Record<string, string> = {
   CHFTRY_S: 'CHF/TRY売',
+  CHFTRY_B: 'CHF/TRY買',
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
@@ -307,11 +310,16 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
       </p>
       {(p.references ?? []).length > 0 && (
         <p className="strength-note">
-          破線の「CHF/TRY売」は通貨ではなくポジションです。1万フランぶんを売って
-          同額のトルコリラを買い、レバレッジ1倍で持ち続けた場合を表しています。
-          円で調達するかわりにスイスフランで調達してリラを買うと、どれだけ違うかを
-          見るための線です。<strong>平均を1.0に揃える計算には入れていない</strong>ので、
-          この線を足しても他の通貨の線は動きません。
+          破線の「CHF/TRY売」「CHF/TRY買」は通貨ではなくポジションです。どちらも
+          1万フラン相当を、レバレッジ1倍で持ち続けた場合を表しています。
+          「売」はフランを売ってトルコリラを買う組み合わせで、円で調達するかわりに
+          スイスフランで調達してリラを買うとどうなるかを見る線です。「買」はその逆
+          （フランを買ってリラを売る）になります。
+          売と買は正反対の建玉ですが、線が上下対称にならないのは、それぞれ
+          スワップが最も有利な会社を選んでいるうえ、売買それぞれに会社の
+          スプレッドが乗るためです。
+          <strong>平均を1.0に揃える計算には入れていない</strong>ので、
+          これらの線を足しても他の通貨の線は動きません。
         </p>
       )}
       <p className="strength-generated">最終更新: {data.generated_at}</p>
