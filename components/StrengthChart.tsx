@@ -40,6 +40,7 @@ const COLORS: Record<string, string> = {
   MXN: '#ffd400',
   ZAR: '#4ade80',
   HUF: '#a78bfa',
+  PLN: '#fb923c',
 };
 
 const CURRENCY_LABELS: Record<string, string> = {
@@ -49,6 +50,7 @@ const CURRENCY_LABELS: Record<string, string> = {
   MXN: 'メキシコペソ',
   ZAR: '南アフリカランド',
   HUF: 'ハンガリーフォリント',
+  PLN: 'ポーランドズロチ',
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
