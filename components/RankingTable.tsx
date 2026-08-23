@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ProviderRanking } from '@/types';
 import { useCampaignUpdates } from '@/hooks/useCampaignUpdates';
+import { formatTradingSpread } from '@/lib/spreadDisplay';
 
 interface RankingTableProps {
   buyRankings: ProviderRanking[];
@@ -172,6 +173,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {row.buy.latest_buy != null && (row.buy.actual_date || row.buy.latest_date) && (
                         <span className="latest-date-note">({formatShortDate(row.buy.actual_date || row.buy.latest_date)} 時点)</span>
                       )}
+                      {formatTradingSpread(row.buy.trading_spread) && (
+                        <span className="spread-value">{formatTradingSpread(row.buy.trading_spread)}</span>
+                      )}
                     </div>
                   )}
                 </td>
@@ -259,6 +263,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {row.sell.latest_sell != null && (row.sell.actual_date || row.sell.latest_date) && (
                         <span className="latest-date-note">({formatShortDate(row.sell.actual_date || row.sell.latest_date)} 時点)</span>
                       )}
+                      {formatTradingSpread(row.sell.trading_spread) && (
+                        <span className="spread-value">{formatTradingSpread(row.sell.trading_spread)}</span>
+                      )}
                     </div>
                   )}
                 </td>
@@ -275,6 +282,10 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           {noteText}
         </p>
       )}
+
+      <p className="spread-note" style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px', padding: '0 12px' }}>
+        ※ スプレッドは各社が公表する原則固定スプレッドです（括弧内は適用条件）。市場急変時・重要指標発表時・流動性低下時には拡大します。出典は各社公式サイト。「変動」は変動スプレッド制、「—」は当サイトが値を取得できていないことを示します。
+      </p>
 
       {rows.length > 3 && (
         <div className="toggle-wrapper">
@@ -592,6 +603,13 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           font-size: 10px;
           font-weight: 400;
           color: #9ca3af;
+          line-height: 1.2;
+        }
+
+        .spread-value {
+          font-size: 11px;
+          font-weight: 500;
+          color: #6b7280;
           line-height: 1.2;
         }
 
