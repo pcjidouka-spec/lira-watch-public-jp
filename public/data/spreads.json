@@ -1,7 +1,149 @@
 {
   "generated_at": "2026-08-23",
   "pairs": {
+    "EUR/USD": {
+      "central_tanshi": {
+        "spread": 0.2,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "dmm": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+      },
+      "gaitame": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo": {
+        "spread": 0.1,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "〜1万通貨/8-3時",
+        "source": "https://www.gaikaex.com/gaikaex/spread/"
+      },
+      "gmo_click": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      },
+      "hirose": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
+      "invast": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "jfx": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+      },
+      "m2j": {
+        "mode": "undisclosed"
+      },
+      "sbi": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "1万通貨〜",
+        "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      }
+    },
+    "GBP/USD": {
+      "central_tanshi": {
+        "spread": 0.6,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "dmm": {
+        "spread": 1.0,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+      },
+      "gaitame": {
+        "spread": 1.0,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo_click": {
+        "spread": 1.0,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      },
+      "hirose": {
+        "spread": 0.6,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
+      "jfx": {
+        "spread": 0.6,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+      }
+    },
+    "HUF/JPY": {
+      "central_tanshi": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "gaitame": {
+        "spread": 0.6,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo_click": {
+        "spread": 0.6,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      }
+    },
     "MXN/JPY": {
+      "central_tanshi": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
       "click365_okasan": {
         "mode": "variable"
       },
@@ -33,12 +175,33 @@
         "condition": "9-3時",
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
+      "hirose": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
       "invast": {
         "spread": 0.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-5時",
         "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "jfx": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+      },
+      "matsui": {
+        "spread": 0.1,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "saxo": {
         "mode": "variable"
@@ -52,6 +215,135 @@
       },
       "traders_min": {
         "spread": 0.3,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://min-fx.jp/lineup/fx/service/spread/"
+      }
+    },
+    "USD/JPY": {
+      "central_tanshi": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "dmm": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+      },
+      "gaitame": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo": {
+        "spread": 0.1,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "〜1万通貨/8-3時",
+        "source": "https://www.gaikaex.com/gaikaex/spread/"
+      },
+      "gmo_click": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      },
+      "hirose": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
+      "invast": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "jfx": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+      },
+      "saxo": {
+        "mode": "variable"
+      },
+      "sbi": {
+        "spread": 0.18,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨〜",
+        "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      },
+      "traders_min": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://min-fx.jp/lineup/fx/service/spread/"
+      }
+    },
+    "ZAR/JPY": {
+      "central_tanshi": {
+        "spread": 0.3,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "gaitame": {
+        "spread": 0.3,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "〜1万通貨/8-3時",
+        "source": "https://www.gaikaex.com/gaikaex/spread/"
+      },
+      "gmo_click": {
+        "spread": 0.9,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      },
+      "invast": {
+        "spread": 1.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "sbi": {
+        "spread": 0.78,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨〜",
+        "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      },
+      "sony": {
+        "mode": "variable"
+      },
+      "traders_min": {
+        "spread": 0.9,
         "unit": "銭",
         "mode": "fixed",
         "condition": "8-5時",
@@ -90,12 +382,36 @@
         "condition": "9-3時",
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
+      "hirose": {
+        "spread": 1.4,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
       "invast": {
         "spread": 1.5,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-5時",
         "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "jfx": {
+        "spread": 1.4,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-18時",
+        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+      },
+      "m2j": {
+        "mode": "undisclosed"
+      },
+      "matsui": {
+        "spread": 1.3,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "saxo": {
         "mode": "variable"
@@ -115,58 +431,34 @@
         "source": "https://min-fx.jp/lineup/fx/service/spread/"
       }
     },
-    "USD/JPY": {
-      "dmm": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
-      },
+    "PLN/JPY": {
       "gaitame": {
-        "spread": 0.2,
+        "spread": 2.8,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-3時",
         "source": "https://www.gaitame.com/service/fx/spread.html"
       },
-      "gmo": {
-        "spread": 0.1,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "〜1万通貨/8-3時",
-        "source": "https://www.gaikaex.com/gaikaex/spread/"
-      },
       "gmo_click": {
-        "spread": 0.2,
+        "spread": 2.8,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-3時",
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
-      "invast": {
-        "spread": 0.2,
+      "matsui": {
+        "spread": 2.7,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://www.invast.jp/triauto/spread/"
-      },
-      "saxo": {
-        "mode": "variable"
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "sbi": {
-        "spread": 0.18,
+        "spread": 4.8,
         "unit": "銭",
         "mode": "fixed",
         "condition": "1万通貨〜",
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
-      },
-      "traders_min": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "8-5時",
-        "source": "https://min-fx.jp/lineup/fx/service/spread/"
       }
     }
   }

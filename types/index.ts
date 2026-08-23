@@ -38,7 +38,7 @@ export interface ProviderConfig {
 export interface TradingSpread {
   spread?: number;
   unit?: string;                                  // '銭' | 'pips'
-  mode: 'fixed' | 'variable' | 'unavailable';
+  mode: 'fixed' | 'variable' | 'unavailable' | 'undisclosed';
   condition?: string;                             // '9-3時' | '1万通貨〜'
   source?: string;
 }

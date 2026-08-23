@@ -34,18 +34,38 @@ describe('formatTradingSpread', () => {
     expect(formatTradingSpread({ mode: 'fixed', unit: '銭' })).toBe('スプレッド —');
   });
 
-  it('小数の末尾ゼロを勝手に足さない', () => {
+  it('整数値でも小数第1位まで出す（各社の公表表記に合わせる）', () => {
     expect(formatTradingSpread({ mode: 'fixed', spread: 2, unit: '銭' }))
-      .toBe('スプレッド 2銭');
+      .toBe('スプレッド 2.0銭');
+    expect(formatTradingSpread({ mode: 'fixed', spread: 1, unit: 'pips' }))
+      .toBe('スプレッド 1.0pips');
+  });
+
+  it('小数がある値は桁を落とさない', () => {
+    expect(formatTradingSpread({ mode: 'fixed', spread: 1.58, unit: '銭' }))
+      .toBe('スプレッド 1.58銭');
+    expect(formatTradingSpread({ mode: 'fixed', spread: 0.18, unit: '銭' }))
+      .toBe('スプレッド 0.18銭');
   });
 
   it('spread が 0 でも欠損扱いしない', () => {
     expect(formatTradingSpread({ mode: 'fixed', spread: 0, unit: '銭' }))
-      .toBe('スプレッド 0銭');
+      .toBe('スプレッド 0.0銭');
   });
 
   it('unit が無くても落ちない', () => {
     expect(formatTradingSpread({ mode: 'fixed', spread: 1.4 }))
       .toBe('スプレッド 1.4');
+  });
+});
+
+describe('undisclosed（公式が開示していない）', () => {
+  it('「非公開」と出す。変動とは区別する', () => {
+    expect(formatTradingSpread({ mode: 'undisclosed' })).toBe('スプレッド 非公開');
+    expect(formatTradingSpread({ mode: 'variable' })).toBe('スプレッド 変動');
+  });
+
+  it('取得失敗（—）とも区別する', () => {
+    expect(formatTradingSpread({ mode: 'unavailable' })).toBe('スプレッド —');
   });
 });
