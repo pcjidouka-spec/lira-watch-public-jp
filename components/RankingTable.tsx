@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProviderRanking } from '@/types';
 import { useCampaignUpdates } from '@/hooks/useCampaignUpdates';
-import { formatTradingSpread } from '@/lib/spreadDisplay';
+import { formatTradingSpreadParts } from '@/lib/spreadDisplay';
 
 interface RankingTableProps {
   buyRankings: ProviderRanking[];
@@ -34,6 +34,23 @@ const formatShortDate = (raw?: string): string => {
   }
   return raw;
 };
+// 条件ラベルは列幅を抑えるため折り返すが、日本語は既定でどこでも切れるので
+// 「〜1万通貨/8-3時」が「〜1万通」「貨/8-3時」のように割れてしまう。
+// 区切りの '/' の直後にだけ改行機会 (<wbr>) を置き、それ以外は切らせない。
+const renderCondition = (condition: string) => {
+  const segments = condition.split('/');
+  return segments.map((seg, i) => (
+    <React.Fragment key={i}>
+      {i > 0 && '/'}
+      {/* 各区切りは中で折らない。'8-3時' がハイフンで '8-' と '3時' に割れるのを防ぐ。
+          この関数はコンポーネント外にあり styled-jsx のスコープが効かないため、
+          クラスではなくインラインスタイルで指定する */}
+      <span style={{ whiteSpace: 'nowrap' }}>{seg}</span>
+      {i < segments.length - 1 && <wbr />}
+    </React.Fragment>
+  ));
+};
+
 export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel, noteText }) => {
   const valueSuffix = unitLabel ? '' : '円';
   const valueColumnLabel = unitLabel ? `金額（${unitLabel}）` : '金額';
@@ -180,11 +197,18 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                 </td>
                 <td className="td-spread buy">
                   {row.buy && (
-                    <span className="spread-value">
+                    <div className="spread-container">
                       {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
                           未対応 (null) も取得失敗も同じ — で埋める */}
-                      {formatTradingSpread(row.buy.trading_spread) ?? '—'}
-                    </span>
+                      <span className="spread-value">
+                        {formatTradingSpreadParts(row.buy.trading_spread)?.value ?? '—'}
+                      </span>
+                      {formatTradingSpreadParts(row.buy.trading_spread)?.condition && (
+                        <span className="spread-condition">
+                          {renderCondition(formatTradingSpreadParts(row.buy.trading_spread)!.condition!)}
+                        </span>
+                      )}
+                    </div>
                   )}
                 </td>
 
@@ -276,11 +300,18 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                 </td>
                 <td className="td-spread sell">
                   {row.sell && (
-                    <span className="spread-value">
+                    <div className="spread-container">
                       {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
                           未対応 (null) も取得失敗も同じ — で埋める */}
-                      {formatTradingSpread(row.sell.trading_spread) ?? '—'}
-                    </span>
+                      <span className="spread-value">
+                        {formatTradingSpreadParts(row.sell.trading_spread)?.value ?? '—'}
+                      </span>
+                      {formatTradingSpreadParts(row.sell.trading_spread)?.condition && (
+                        <span className="spread-condition">
+                          {renderCondition(formatTradingSpreadParts(row.sell.trading_spread)!.condition!)}
+                        </span>
+                      )}
+                    </div>
                   )}
                 </td>
               </tr>
@@ -391,7 +422,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         
         /* Outer padding adjustments (Left of Buy Rank / Right of Sell Value) */
         .sub-header th:first-child { padding-left: 8px; }
-        .sub-header th:last-child { padding-right: 40px; }
+        .sub-header th:last-child { padding-right: 20px; }
 
         /* Rows & Cells */
         .ranking-row td {
@@ -406,7 +437,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         
         /* Outer padding adjustments for rows */
         .ranking-row td:first-child { padding-left: 8px; }
-        .ranking-row td:last-child { padding-right: 40px; }
+        .ranking-row td:last-child { padding-right: 20px; }
 
         /* Column Widths */
         .th-rank, .td-rank { 
@@ -435,14 +466,16 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           padding-right: 12px; 
         }
 
-        /* Spread column (right of the amount column) */
+        /* Spread column (right of the amount column).
+           値と適用条件を2行に分けて列幅を詰める */
         .th-spread, .td-spread {
           width: 1%;
-          white-space: nowrap;
           text-align: center;
-          padding-left: 8px;
-          padding-right: 12px;
+          padding-left: 6px;
+          padding-right: 10px;
         }
+        .th-spread { white-space: nowrap; }
+        .td-spread { max-width: 110px; }
         .td-spread.buy {
             padding-right: 32px; /* Widen gap between Buy and Sell */
         }
@@ -629,12 +662,30 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           line-height: 1.2;
         }
 
+        .spread-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1px;
+        }
         .spread-value {
           font-size: 13px;
           font-weight: 600;
           color: #4b5563;
           line-height: 1.3;
+          white-space: nowrap;
           font-family: 'Roboto', sans-serif;
+        }
+        .spread-condition {
+          font-size: 10px;
+          font-weight: 400;
+          color: #9ca3af;
+          line-height: 1.25;
+          /* 「(〜1万通貨/8-3時)」のような長い条件は折り返して列幅を抑える。
+             ただし語中では切らせず、renderCondition が置く <wbr> の位置だけで折る */
+          white-space: normal;
+          word-break: keep-all;
+          overflow-wrap: normal;
         }
 
         @media (max-width: 768px) {

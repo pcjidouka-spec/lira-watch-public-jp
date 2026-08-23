@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatTradingSpread } from './spreadDisplay';
+import { formatTradingSpread, formatTradingSpreadParts } from './spreadDisplay';
 
 describe('formatTradingSpread', () => {
   // 専用のスプレッド列を設けたので、見出しが「スプレッド」を担う。
@@ -69,5 +69,40 @@ describe('undisclosed（公式が開示していない）', () => {
 
   it('取得失敗（—）とも区別する', () => {
     expect(formatTradingSpread({ mode: 'unavailable' })).toBe('—');
+  });
+});
+
+describe('formatTradingSpreadParts（列を2行に分ける）', () => {
+  it('値と条件を分けて返す', () => {
+    expect(formatTradingSpreadParts({
+      mode: 'fixed', spread: 1.4, unit: '銭', condition: '9-3時',
+    })).toEqual({ value: '1.4銭', condition: '(9-3時)' });
+  });
+
+  it('条件が無ければ condition は undefined', () => {
+    expect(formatTradingSpreadParts({ mode: 'fixed', spread: 1.6, unit: '銭' }))
+      .toEqual({ value: '1.6銭', condition: undefined });
+  });
+
+  it('変動・非公開・取得失敗は値のみ', () => {
+    expect(formatTradingSpreadParts({ mode: 'variable' })).toEqual({ value: '変動', condition: undefined });
+    expect(formatTradingSpreadParts({ mode: 'undisclosed' })).toEqual({ value: '非公開', condition: undefined });
+    expect(formatTradingSpreadParts({ mode: 'unavailable' })).toEqual({ value: '—', condition: undefined });
+  });
+
+  it('未設定は null', () => {
+    expect(formatTradingSpreadParts(undefined)).toBeNull();
+  });
+
+  it('長い条件もそのまま返す（折り返しは CSS 側で行う）', () => {
+    expect(formatTradingSpreadParts({
+      mode: 'fixed', spread: 0.6, unit: '銭', condition: '〜1万通貨/8-3時',
+    })).toEqual({ value: '0.6銭', condition: '(〜1万通貨/8-3時)' });
+  });
+
+  it('1行版は2行版を連結したものと一致する', () => {
+    const s = { mode: 'fixed' as const, spread: 1.58, unit: '銭', condition: '1万通貨〜' };
+    const p = formatTradingSpreadParts(s)!;
+    expect(formatTradingSpread(s)).toBe(p.value + p.condition);
   });
 });
