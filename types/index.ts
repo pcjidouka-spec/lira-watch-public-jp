@@ -22,6 +22,7 @@ export interface ProviderRanking {
   url?: string;
   campaign_url?: string;
   actual_date?: string; // Optional
+  trading_spread?: TradingSpread; // 取引スプレッド (Ask-Bid)。spreads.json から join
 }
 
 export interface ProviderConfig {
@@ -32,3 +33,12 @@ export interface ProviderConfig {
   campaign_url?: string;
 }
 
+
+/** 取引スプレッド（Ask-Bid）。スワップの買売差とは別物。 */
+export interface TradingSpread {
+  spread?: number;
+  unit?: string;                                  // '銭' | 'pips'
+  mode: 'fixed' | 'variable' | 'unavailable';
+  condition?: string;                             // '9-3時' | '1万通貨〜'
+  source?: string;
+}
