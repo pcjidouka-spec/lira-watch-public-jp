@@ -73,18 +73,20 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         <table className="merged-table">
           <thead>
             <tr className="header-row">
-              <th className="th-side-header buy" colSpan={3}>買いランキング</th>
-              <th className="th-side-header sell" colSpan={3}>売りランキング</th>
+              <th className="th-side-header buy" colSpan={4}>買いランキング</th>
+              <th className="th-side-header sell" colSpan={4}>売りランキング</th>
             </tr>
             <tr className="sub-header">
               {/* Buy Columns */}
               <th className="th-rank">順位</th>
               <th className="th-name">FX会社</th>
               <th className="th-value">{valueColumnLabel}</th>
+              <th className="th-spread">スプレッド</th>
               {/* Sell Columns */}
               <th className="th-rank border-left">順位</th>
               <th className="th-name">FX会社</th>
               <th className="th-value">{valueColumnLabel}</th>
+              <th className="th-spread">スプレッド</th>
             </tr>
           </thead>
           <tbody>
@@ -173,10 +175,12 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {row.buy.latest_buy != null && (row.buy.actual_date || row.buy.latest_date) && (
                         <span className="latest-date-note">({formatShortDate(row.buy.actual_date || row.buy.latest_date)} 時点)</span>
                       )}
-                      {formatTradingSpread(row.buy.trading_spread) && (
-                        <span className="spread-value">{formatTradingSpread(row.buy.trading_spread)}</span>
-                      )}
                     </div>
+                  )}
+                </td>
+                <td className="td-spread buy">
+                  {row.buy && formatTradingSpread(row.buy.trading_spread) && (
+                    <span className="spread-value">{formatTradingSpread(row.buy.trading_spread)}</span>
                   )}
                 </td>
 
@@ -263,16 +267,18 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                       {row.sell.latest_sell != null && (row.sell.actual_date || row.sell.latest_date) && (
                         <span className="latest-date-note">({formatShortDate(row.sell.actual_date || row.sell.latest_date)} 時点)</span>
                       )}
-                      {formatTradingSpread(row.sell.trading_spread) && (
-                        <span className="spread-value">{formatTradingSpread(row.sell.trading_spread)}</span>
-                      )}
                     </div>
+                  )}
+                </td>
+                <td className="td-spread sell">
+                  {row.sell && formatTradingSpread(row.sell.trading_spread) && (
+                    <span className="spread-value">{formatTradingSpread(row.sell.trading_spread)}</span>
                   )}
                 </td>
               </tr>
             ))}
             {rows.length === 0 && (
-              <tr><td colSpan={6} className="no-data">データがありません</td></tr>
+              <tr><td colSpan={8} className="no-data">データがありません</td></tr>
             )}
           </tbody>
         </table>
@@ -418,9 +424,18 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           white-space: nowrap; 
           text-align: center; 
           padding-left: 2px; /* Reduce gap from Name */
-          padding-right: 16px; 
+          padding-right: 12px; 
         }
-        .td-value.buy {
+
+        /* Spread column (right of the amount column) */
+        .th-spread, .td-spread {
+          width: 1%;
+          white-space: nowrap;
+          text-align: center;
+          padding-left: 8px;
+          padding-right: 12px;
+        }
+        .td-spread.buy {
             padding-right: 32px; /* Widen gap between Buy and Sell */
         }
 
@@ -607,15 +622,16 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         }
 
         .spread-value {
-          font-size: 11px;
-          font-weight: 500;
-          color: #6b7280;
-          line-height: 1.2;
+          font-size: 13px;
+          font-weight: 600;
+          color: #4b5563;
+          line-height: 1.3;
+          font-family: 'Roboto', sans-serif;
         }
 
         @media (max-width: 768px) {
            .merged-table {
-             min-width: 600px; /* Force scroll */
+             min-width: 780px; /* Force scroll (spread columns added) */
            }
            
            /* モバイル用フォントサイズ調整 */
