@@ -468,16 +468,23 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
 
         /* Spread column (right of the amount column).
            値と適用条件を2行に分けて列幅を詰める */
+        /* 列幅は見出し「スプレッド」の幅で決まる。
+           .sub-header th / .ranking-row td の方が詳細度が高いので、
+           font-size と padding はセレクタを合わせて上書きする */
         .th-spread, .td-spread {
           width: 1%;
           text-align: center;
-          padding-left: 6px;
-          padding-right: 10px;
         }
-        .th-spread { white-space: nowrap; }
-        .td-spread { max-width: 110px; }
-        .td-spread.buy {
-            padding-right: 32px; /* Widen gap between Buy and Sell */
+        .sub-header th.th-spread {
+          white-space: nowrap;
+          font-size: 11px;
+          letter-spacing: -0.03em;
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+        .ranking-row td.td-spread {
+          padding-left: 2px;
+          padding-right: 2px;
         }
 
         /* Rank */
@@ -669,7 +676,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           gap: 1px;
         }
         .spread-value {
-          font-size: 13px;
+          font-size: 11px;
           font-weight: 600;
           color: #4b5563;
           line-height: 1.3;
@@ -677,7 +684,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           font-family: 'Roboto', sans-serif;
         }
         .spread-condition {
-          font-size: 10px;
+          font-size: 9px;
           font-weight: 400;
           color: #9ca3af;
           line-height: 1.25;
