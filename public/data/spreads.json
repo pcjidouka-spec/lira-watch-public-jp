@@ -65,6 +65,13 @@
         "mode": "fixed",
         "condition": "1万通貨〜",
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      },
+      "traders_light": {
+        "spread": 0.3,
+        "unit": "pips",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://lightfx.jp/service/spread/"
       }
     },
     "GBP/USD": {
@@ -209,6 +216,13 @@
         "condition": "1万通貨〜",
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
       },
+      "traders_light_light": {
+        "spread": 0.18,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://lightfx.jp/service/spread/"
+      },
       "traders_min": {
         "spread": 0.3,
         "unit": "銭",
@@ -283,6 +297,13 @@
         "mode": "fixed",
         "condition": "1万通貨〜",
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      },
+      "traders_light": {
+        "spread": 0.2,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://lightfx.jp/service/spread/"
       },
       "traders_min": {
         "spread": 0.2,

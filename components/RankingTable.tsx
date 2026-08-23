@@ -73,20 +73,20 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
         <table className="merged-table">
           <thead>
             <tr className="header-row">
-              <th className="th-side-header buy" colSpan={4}>買いランキング</th>
-              <th className="th-side-header sell" colSpan={4}>売りランキング</th>
+              <th className="th-side-header buy" colSpan={4} scope="colgroup">買いランキング</th>
+              <th className="th-side-header sell" colSpan={4} scope="colgroup">売りランキング</th>
             </tr>
             <tr className="sub-header">
               {/* Buy Columns */}
-              <th className="th-rank">順位</th>
-              <th className="th-name">FX会社</th>
-              <th className="th-value">{valueColumnLabel}</th>
-              <th className="th-spread">スプレッド</th>
+              <th className="th-rank" scope="col">順位</th>
+              <th className="th-name" scope="col">FX会社</th>
+              <th className="th-value" scope="col">{valueColumnLabel}</th>
+              <th className="th-spread" scope="col">スプレッド</th>
               {/* Sell Columns */}
-              <th className="th-rank border-left">順位</th>
-              <th className="th-name">FX会社</th>
-              <th className="th-value">{valueColumnLabel}</th>
-              <th className="th-spread">スプレッド</th>
+              <th className="th-rank border-left" scope="col">順位</th>
+              <th className="th-name" scope="col">FX会社</th>
+              <th className="th-value" scope="col">{valueColumnLabel}</th>
+              <th className="th-spread" scope="col">スプレッド</th>
             </tr>
           </thead>
           <tbody>
@@ -179,8 +179,12 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                   )}
                 </td>
                 <td className="td-spread buy">
-                  {row.buy && formatTradingSpread(row.buy.trading_spread) && (
-                    <span className="spread-value">{formatTradingSpread(row.buy.trading_spread)}</span>
+                  {row.buy && (
+                    <span className="spread-value">
+                      {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
+                          未対応 (null) も取得失敗も同じ — で埋める */}
+                      {formatTradingSpread(row.buy.trading_spread) ?? '—'}
+                    </span>
                   )}
                 </td>
 
@@ -271,8 +275,12 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                   )}
                 </td>
                 <td className="td-spread sell">
-                  {row.sell && formatTradingSpread(row.sell.trading_spread) && (
-                    <span className="spread-value">{formatTradingSpread(row.sell.trading_spread)}</span>
+                  {row.sell && (
+                    <span className="spread-value">
+                      {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
+                          未対応 (null) も取得失敗も同じ — で埋める */}
+                      {formatTradingSpread(row.sell.trading_spread) ?? '—'}
+                    </span>
                   )}
                 </td>
               </tr>
@@ -290,7 +298,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
       )}
 
       <p className="spread-note" style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px', padding: '0 12px' }}>
-        ※ スプレッドは各社が公表する原則固定スプレッドです（括弧内は適用条件）。市場急変時・重要指標発表時・流動性低下時には拡大します。出典は各社公式サイト。「変動」は変動スプレッド制、「—」は当サイトが値を取得できていないことを示します。
+        ※ スプレッドは各社が公表する原則固定スプレッドです（括弧内は適用条件）。市場急変時・重要指標発表時・流動性低下時には拡大します。出典は各社公式サイト。「変動」は変動スプレッド制、「非公開」は各社がスプレッドを公表していないもの、「—」は当サイトが値を取得していない・取得できていないものです。
       </p>
 
       {rows.length > 3 && (
