@@ -70,7 +70,11 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
           console.error('Failed to load provider configs:', configErr);
         }
 
-        // 取引スプレッド (Ask-Bid)。取得できなくても致命的ではないので握りつぶす
+        // 取引スプレッド (Ask-Bid)。取得できなくても致命的ではないので握りつぶす。
+        // ただし必ず先に空へ戻す: 失敗時に前の通貨ペアのマップが残ると、
+        // attachSpreads は provider_id だけで join するため TRY の値が
+        // MXN/USD のランキングに表示されてしまう。
+        setSpreadMap(new Map());
         try {
           const spreadTimestamp = new Date().getTime();
           const spreadResponse = await fetch(`/data/spreads.json?t=${spreadTimestamp}`);

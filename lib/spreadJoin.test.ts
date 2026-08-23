@@ -78,3 +78,16 @@ describe('attachSpreads', () => {
     expect(result.map((r) => r.provider_id)).toEqual(['a', 'b', 'c']);
   });
 });
+
+describe('通貨ペア切替時の持ち越し防止', () => {
+  it('別ペアの payload から作ったマップは空になる（値が混ざらない）', () => {
+    const tryMap = buildSpreadMap(PAYLOAD, 'TRY/JPY');
+    const mxnMap = buildSpreadMap(PAYLOAD, 'MXN/JPY');
+    expect(tryMap.get('gmo_click')?.spread).toBe(1.4);
+    expect(mxnMap.size).toBe(0);
+  });
+
+  it('fetch 失敗を模した null では空マップになり、前ペアの値を返さない', () => {
+    expect(buildSpreadMap(null, 'MXN/JPY').size).toBe(0);
+  });
+});

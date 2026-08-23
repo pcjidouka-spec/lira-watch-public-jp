@@ -23,7 +23,7 @@
         "spread": 0.1,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "8-3時",
+        "condition": "〜1万通貨/8-3時",
         "source": "https://www.gaikaex.com/gaikaex/spread/"
       },
       "gmo_click": {
@@ -80,7 +80,7 @@
         "spread": 0.6,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "8-3時",
+        "condition": "〜1万通貨/8-3時",
         "source": "https://www.gaikaex.com/gaikaex/spread/"
       },
       "gmo_click": {
@@ -134,7 +134,7 @@
         "spread": 0.1,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "8-3時",
+        "condition": "〜1万通貨/8-3時",
         "source": "https://www.gaikaex.com/gaikaex/spread/"
       },
       "gmo_click": {
