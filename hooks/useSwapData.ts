@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { SwapData, ProviderRanking, ProviderConfig } from '@/types';
+import { SwapData, ProviderRanking, ProviderConfig, TradingSpread } from '@/types';
+import { attachSpreads, buildSpreadMap } from '@/lib/spreadJoin';
 import {
   parseCSVData,
   filterSuccessData,
@@ -14,6 +15,7 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [providerConfigs, setProviderConfigs] = useState<Map<string, ProviderConfig>>(new Map());
+  const [spreadMap, setSpreadMap] = useState<Map<string, TradingSpread>>(new Map());
 
   useEffect(() => {
     async function loadData() {
@@ -66,6 +68,17 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
           }
         } catch (configErr) {
           console.error('Failed to load provider configs:', configErr);
+        }
+
+        // 取引スプレッド (Ask-Bid)。取得できなくても致命的ではないので握りつぶす
+        try {
+          const spreadTimestamp = new Date().getTime();
+          const spreadResponse = await fetch(`/data/spreads.json?t=${spreadTimestamp}`);
+          if (spreadResponse.ok) {
+            setSpreadMap(buildSpreadMap(await spreadResponse.json(), currencyPair));
+          }
+        } catch (spreadErr) {
+          console.error('Failed to load trading spreads:', spreadErr);
         }
 
         // Fetch Master History (キャッシュバスティング付き)
@@ -136,8 +149,12 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
     loadData();
   }, [currencyPair]);
 
-  const buyRanking = data.length > 0 ? getBuyRanking(data, providerConfigs, currencyPair) : [];
-  const sellRanking = data.length > 0 ? getSellRanking(data, providerConfigs, currencyPair) : [];
+  const buyRanking = data.length > 0
+    ? attachSpreads(getBuyRanking(data, providerConfigs, currencyPair), spreadMap)
+    : [];
+  const sellRanking = data.length > 0
+    ? attachSpreads(getSellRanking(data, providerConfigs, currencyPair), spreadMap)
+    : [];
 
   // Add URL information to rankings
   const buyRankingWithUrls = buyRanking.map(rank => ({
