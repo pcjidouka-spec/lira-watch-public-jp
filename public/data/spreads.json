@@ -41,7 +41,6 @@
         "spread": 0.3,
         "unit": "pips",
         "mode": "fixed",
-        "condition": "9-18時",
         "source": "https://hirose-fx.co.jp/spread/"
       },
       "invast": {
@@ -55,7 +54,6 @@
         "spread": 0.3,
         "unit": "pips",
         "mode": "fixed",
-        "condition": "9-18時",
         "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
       },
       "m2j": {
@@ -102,14 +100,14 @@
         "spread": 0.6,
         "unit": "pips",
         "mode": "fixed",
-        "condition": "9-18時",
+        "condition": "9-3時",
         "source": "https://hirose-fx.co.jp/spread/"
       },
       "jfx": {
         "spread": 0.6,
         "unit": "pips",
         "mode": "fixed",
-        "condition": "9-18時",
+        "condition": "9-3時",
         "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
       }
     },
@@ -179,7 +177,6 @@
         "spread": 0.2,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "9-18時",
         "source": "https://hirose-fx.co.jp/spread/"
       },
       "invast": {
@@ -193,7 +190,6 @@
         "spread": 0.2,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "9-18時",
         "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
       },
       "matsui": {
@@ -261,7 +257,7 @@
         "spread": 0.2,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "9-18時",
+        "condition": "9-3時",
         "source": "https://hirose-fx.co.jp/spread/"
       },
       "invast": {
@@ -275,7 +271,7 @@
         "spread": 0.2,
         "unit": "銭",
         "mode": "fixed",
-        "condition": "9-18時",
+        "condition": "9-3時",
         "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
       },
       "saxo": {
