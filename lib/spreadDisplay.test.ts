@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { formatTradingSpread, formatTradingSpreadParts } from './spreadDisplay';
+import {
+  formatTradingSpread,
+  formatTradingSpreadParts,
+  tradingSpreadSourceUrl,
+} from './spreadDisplay';
 
 describe('formatTradingSpread', () => {
   // 専用のスプレッド列を設けたので、見出しが「スプレッド」を担う。
@@ -104,5 +108,35 @@ describe('formatTradingSpreadParts（列を2行に分ける）', () => {
     const s = { mode: 'fixed' as const, spread: 1.58, unit: '銭', condition: '1万通貨〜' };
     const p = formatTradingSpreadParts(s)!;
     expect(formatTradingSpread(s)).toBe(p.value + p.condition);
+  });
+});
+
+describe('tradingSpreadSourceUrl（数値の根拠リンク）', () => {
+  it('固定スプレッドは出典 URL を返す', () => {
+    expect(tradingSpreadSourceUrl({
+      mode: 'fixed', spread: 1.4, unit: '銭',
+      source: 'https://www.click-sec.com/corp/guide/fxneo/commission_list/',
+    })).toBe('https://www.click-sec.com/corp/guide/fxneo/commission_list/');
+  });
+
+  it('数値が無いものにはリンクを張らない', () => {
+    const src = 'https://example.com/spread';
+    expect(tradingSpreadSourceUrl({ mode: 'variable', source: src })).toBeNull();
+    expect(tradingSpreadSourceUrl({ mode: 'undisclosed', source: src })).toBeNull();
+    expect(tradingSpreadSourceUrl({ mode: 'unavailable', source: src })).toBeNull();
+    expect(tradingSpreadSourceUrl({ mode: 'fixed', unit: '銭', source: src })).toBeNull();
+  });
+
+  it('出典が無ければ null', () => {
+    expect(tradingSpreadSourceUrl({ mode: 'fixed', spread: 1.4, unit: '銭' })).toBeNull();
+    expect(tradingSpreadSourceUrl(undefined)).toBeNull();
+  });
+
+  it('http/https 以外は張らない（javascript: 等を弾く）', () => {
+    for (const bad of ['javascript:alert(1)', 'data:text/html,x', '/relative', 'ftp://x']) {
+      expect(tradingSpreadSourceUrl({
+        mode: 'fixed', spread: 1.4, unit: '銭', source: bad,
+      })).toBeNull();
+    }
   });
 });

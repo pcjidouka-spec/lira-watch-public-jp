@@ -40,3 +40,18 @@ export function formatTradingSpread(spread?: TradingSpread): string | null {
   if (!parts) return null;
   return parts.value + (parts.condition ?? '');
 }
+
+/**
+ * スプレッドの数値の根拠 (各社の公表ページ) の URL。
+ *
+ * 数値を出しているものだけリンクする。「変動」「非公開」「—」は
+ * こちらの表示であって各社が公表した数値ではないので張らない。
+ * URL は http/https のみ受け付ける (JSON は生成物だが、表示側でも弾く)。
+ */
+export function tradingSpreadSourceUrl(spread?: TradingSpread): string | null {
+  if (!spread || spread.mode !== 'fixed' || spread.spread == null) return null;
+
+  const source = spread.source;
+  if (!source) return null;
+  return /^https?:\/\//i.test(source) ? source : null;
+}

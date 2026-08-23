@@ -91,3 +91,19 @@ describe('通貨ペア切替時の持ち越し防止', () => {
     expect(buildSpreadMap(null, 'MXN/JPY').size).toBe(0);
   });
 });
+
+describe('出典 URL の受け渡し', () => {
+  it('source が join を通って ranking まで届く', () => {
+    const payload = {
+      generated_at: '2026-08-24',
+      pairs: { 'TRY/JPY': { gmo_click: {
+        spread: 1.4, unit: '銭', mode: 'fixed', condition: '9-3時',
+        source: 'https://www.click-sec.com/corp/guide/fxneo/commission_list/',
+      } } },
+    };
+    const result = attachSpreads([ranking('gmo_click')],
+                                 buildSpreadMap(payload, 'TRY/JPY'));
+    expect(result[0].trading_spread?.source)
+      .toBe('https://www.click-sec.com/corp/guide/fxneo/commission_list/');
+  });
+});

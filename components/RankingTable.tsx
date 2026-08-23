@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProviderRanking } from '@/types';
 import { useCampaignUpdates } from '@/hooks/useCampaignUpdates';
-import { formatTradingSpreadParts } from '@/lib/spreadDisplay';
+import { formatTradingSpreadParts, tradingSpreadSourceUrl } from '@/lib/spreadDisplay';
 
 interface RankingTableProps {
   buyRankings: ProviderRanking[];
@@ -37,24 +37,27 @@ const formatShortDate = (raw?: string): string => {
 // 条件ラベルは列幅を抑えるため折り返すが、日本語は既定でどこでも切れるので
 // 「〜1万通貨/8-3時」が「〜1万通」「貨/8-3時」のように割れてしまう。
 // 区切りの '/' の直後にだけ改行機会 (<wbr>) を置き、それ以外は切らせない。
-const renderCondition = (condition: string) => {
-  const segments = condition.split('/');
-  return segments.map((seg, i) => (
-    <React.Fragment key={i}>
-      {i > 0 && '/'}
-      {/* 各区切りは中で折らない。'8-3時' がハイフンで '8-' と '3時' に割れるのを防ぐ。
-          この関数はコンポーネント外にあり styled-jsx のスコープが効かないため、
-          クラスではなくインラインスタイルで指定する */}
-      <span style={{ whiteSpace: 'nowrap' }}>{seg}</span>
-      {i < segments.length - 1 && <wbr />}
-    </React.Fragment>
-  ));
-};
-
 export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRankings, currencyLabel = 'トルコリラ', unitLabel, noteText }) => {
   const valueSuffix = unitLabel ? '' : '円';
   const valueColumnLabel = unitLabel ? `金額（${unitLabel}）` : '金額';
   const { hasNewCampaign } = useCampaignUpdates();
+
+  // ★JSX を返すヘルパー関数を作らないこと。styled-jsx は「返却する JSX ツリー」の
+  //   中の要素にしかスコープ class を付けないため、別関数に切り出すと
+  //   <style jsx> のルールが一切当たらない。
+  //   (2026-08-24 に2回踏んだ: 条件の折り返しと出典リンク。map のコールバック内は効く)
+  const renderCondition = (condition: string) => {
+    const segments = condition.split('/');
+    return segments.map((seg, i) => (
+      <React.Fragment key={i}>
+        {i > 0 && '/'}
+        {/* 各区切りは中で折らない。'8-3時' がハイフンで '8-' と '3時' に割れるのを防ぐ */}
+        <span className="cond-seg">{seg}</span>
+        {i < segments.length - 1 && <wbr />}
+      </React.Fragment>
+    ));
+  };
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Combine data into rows for the unified table structure
@@ -200,9 +203,21 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                     <div className="spread-container">
                       {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
                           未対応 (null) も取得失敗も同じ — で埋める */}
-                      <span className="spread-value">
-                        {formatTradingSpreadParts(row.buy.trading_spread)?.value ?? '—'}
-                      </span>
+                      {tradingSpreadSourceUrl(row.buy.trading_spread) ? (
+                        <a
+                          className="spread-value spread-source-link"
+                          href={tradingSpreadSourceUrl(row.buy.trading_spread)!}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={`${row.buy.name} の公表ページでスプレッドの根拠を確認する`}
+                        >
+                          {formatTradingSpreadParts(row.buy.trading_spread)!.value}
+                        </a>
+                      ) : (
+                        <span className="spread-value">
+                          {formatTradingSpreadParts(row.buy.trading_spread)?.value ?? '—'}
+                        </span>
+                      )}
                       {formatTradingSpreadParts(row.buy.trading_spread)?.condition && (
                         <span className="spread-condition">
                           {renderCondition(formatTradingSpreadParts(row.buy.trading_spread)!.condition!)}
@@ -303,9 +318,21 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
                     <div className="spread-container">
                       {/* 専用列では空白が「スプレッドが無い/狭い」と読めてしまうため、
                           未対応 (null) も取得失敗も同じ — で埋める */}
-                      <span className="spread-value">
-                        {formatTradingSpreadParts(row.sell.trading_spread)?.value ?? '—'}
-                      </span>
+                      {tradingSpreadSourceUrl(row.sell.trading_spread) ? (
+                        <a
+                          className="spread-value spread-source-link"
+                          href={tradingSpreadSourceUrl(row.sell.trading_spread)!}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={`${row.sell.name} の公表ページでスプレッドの根拠を確認する`}
+                        >
+                          {formatTradingSpreadParts(row.sell.trading_spread)!.value}
+                        </a>
+                      ) : (
+                        <span className="spread-value">
+                          {formatTradingSpreadParts(row.sell.trading_spread)?.value ?? '—'}
+                        </span>
+                      )}
                       {formatTradingSpreadParts(row.sell.trading_spread)?.condition && (
                         <span className="spread-condition">
                           {renderCondition(formatTradingSpreadParts(row.sell.trading_spread)!.condition!)}
@@ -674,6 +701,20 @@ export const RankingTable: React.FC<RankingTableProps> = ({ buyRankings, sellRan
           flex-direction: column;
           align-items: center;
           gap: 1px;
+        }
+        .cond-seg { white-space: nowrap; }
+        /* .spread-value より後に来る指定に負けないよう詳細度を上げる */
+        .spread-value.spread-source-link {
+          color: #1d4ed8;
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          text-underline-offset: 2px;
+          cursor: pointer;
+        }
+        .spread-value.spread-source-link:hover {
+          color: #1e40af;
+          text-decoration-style: solid;
+          background-color: #eff6ff;
         }
         .spread-value {
           font-size: 11px;
