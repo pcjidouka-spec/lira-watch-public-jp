@@ -1346,9 +1346,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-24,gaitame,USD/JPY,外為どっとコム,1.0,117.0,-147.0,None,success,2026/08/24
 2026-08-24,gmo,USD/JPY,GMO外貨,1.0,117.0,-117.0,None,success,2026/08/24
 2026-08-24,gmo_click,USD/JPY,GMOクリック証券,1.0,120.0,-120.0,None,success,2026/08/24
-2026-08-24,hirose,USD/JPY,ヒロセ通商,1.0,117.0,-152.0,None,success,2026/08/21
+2026-08-24,hirose,USD/JPY,ヒロセ通商,1,117.0,-147.0,None,success,2026/08/24
 2026-08-24,invast,USD/JPY,トライオートFX,1.0,123.0,-198.0,None,success,2026/08/21
 2026-08-24,jfx,USD/JPY,JFX,1.0,117.0,-152.0,None,success,2026/08/24
 2026-08-24,sbi,USD/JPY,SBI FXトレード,None,None,None,None,success,2026/08/24
 2026-08-24,traders_light,USD/JPY,LIGHT FX,1.0,118.0,-118.0,None,success,2026/08/24
 2026-08-24,traders_min,USD/JPY,みんなのFX,1.0,117.0,-117.0,None,success,2026/08/24
+2026-08-25,central_tanshi,USD/JPY,セントラル短資FX,1.0,120.0,-120.0,8/26,success,2026/08/25
+2026-08-25,dmm,USD/JPY,DMM FX,1.0,117.0,-120.0,None,success,2026/08/25
+2026-08-25,gaitame,USD/JPY,外為どっとコム,1.0,117.0,-147.0,None,success,2026/08/25
+2026-08-25,gmo,USD/JPY,GMO外貨,1.0,117.0,-117.0,None,success,2026/08/25
+2026-08-25,gmo_click,USD/JPY,GMOクリック証券,1.0,120.0,-120.0,None,success,2026/08/25
+2026-08-25,hirose,USD/JPY,ヒロセ通商,1.0,117.0,-147.0,None,success,2026/08/24
+2026-08-25,invast,USD/JPY,トライオートFX,1.0,121.0,-196.0,None,success,2026/08/24
+2026-08-25,jfx,USD/JPY,JFX,1.0,117.0,-147.0,None,success,2026/08/25
+2026-08-25,sbi,USD/JPY,SBI FXトレード,1.0,117.0,-125.0,08月27日,success,2026/08/25
+2026-08-25,traders_light,USD/JPY,LIGHT FX,1.0,118.0,-118.0,None,success,2026/08/25
+2026-08-25,traders_min,USD/JPY,みんなのFX,1.0,117.0,-117.0,None,success,2026/08/25
