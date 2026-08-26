@@ -200,7 +200,11 @@
         "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
       },
       "matsui": {
-        "mode": "unavailable"
+        "spread": 0.1,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "saxo": {
         "mode": "variable"
@@ -420,7 +424,11 @@
         "mode": "undisclosed"
       },
       "matsui": {
-        "mode": "unavailable"
+        "spread": 1.3,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "saxo": {
         "mode": "variable"
@@ -456,7 +464,11 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "matsui": {
-        "mode": "unavailable"
+        "spread": 2.7,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨/成行",
+        "source": "https://www.matsui.co.jp/fx/spread/"
       },
       "sbi": {
         "spread": 4.8,
