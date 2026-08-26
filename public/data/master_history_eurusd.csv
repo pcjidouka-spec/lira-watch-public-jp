@@ -919,3 +919,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,jfx,EUR/USD,JFX,1,-89.0,70.0,,success,
 2026-08-25,gaitame,EUR/USD,外為どっとコム,1,-89.0,57.0,,success,
 2026-08-25,gmo,EUR/USD,GMO外貨,1,-70.0,70.0,,success,
+2026-08-26,dmm,EUR/USD,DMM FX,1,-69.0,66.0,,success,
+2026-08-26,traders_light,EUR/USD,LIGHT FX,3,-70.13,70.1,,success,
+2026-08-26,central_tanshi,EUR/USD,セントラル短資FX,3,-79.47,63.57,,success,
+2026-08-26,gmo_click,EUR/USD,GMOクリック証券,3,-61.0,61.0,,success,
+2026-08-26,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/08/25
+2026-08-26,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
+2026-08-26,hirose,EUR/USD,ヒロセ通商,1,-89.2,70.0,,success,
+2026-08-26,jfx,EUR/USD,JFX,1,-89.0,70.0,,success,
+2026-08-26,gaitame,EUR/USD,外為どっとコム,1,-92.0,60.0,,success,
+2026-08-26,gmo,EUR/USD,GMO外貨,3,-70.0,70.0,,success,

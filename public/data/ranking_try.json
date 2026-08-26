@@ -1,8 +1,8 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-08-25",
+  "target_date": "2026-08-26",
   "period_label": "直近約2週間",
-  "generated_at": "2026-08-26T09:13:50.569Z",
+  "generated_at": "2026-08-26T20:39:20.848Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -19,25 +19,25 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 24.450000000000006,
+      "avg": 24.300000000000004,
       "sample_days": 14
     },
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 24.428571428571427,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "invast",
-      "name": "トライオートFX",
-      "avg": 24.1,
+      "avg": 24.21428571428571,
       "sample_days": 14
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 24.099999999999998,
+      "avg": 24.100000000000005,
+      "sample_days": 14
+    },
+    {
+      "provider_id": "invast",
+      "name": "トライオートFX",
+      "avg": 24.100000000000005,
       "sample_days": 14
     },
     {
@@ -53,12 +53,6 @@
       "sample_days": 14
     },
     {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": 23.5,
-      "sample_days": 12
-    },
-    {
       "provider_id": "traders_min",
       "name": "みんなのFX",
       "avg": 23.300000000000004,
@@ -71,10 +65,10 @@
       "sample_days": 14
     },
     {
-      "provider_id": "gaitame",
-      "name": "外為どっとコム",
-      "avg": 23.214285714285715,
-      "sample_days": 14
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": 23.25,
+      "sample_days": 12
     },
     {
       "provider_id": "traders_light",
@@ -92,6 +86,12 @@
       "provider_id": "hirose",
       "name": "ヒロセ通商",
       "avg": 23.071428571428573,
+      "sample_days": 14
+    },
+    {
+      "provider_id": "gaitame",
+      "name": "外為どっとコム",
+      "avg": 23,
       "sample_days": 14
     },
     {
@@ -115,6 +115,12 @@
       "sample_days": 14
     },
     {
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": -23.25,
+      "sample_days": 12
+    },
+    {
       "provider_id": "traders_min",
       "name": "みんなのFX",
       "avg": -23.300000000000004,
@@ -127,27 +133,21 @@
       "sample_days": 14
     },
     {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": -23.5,
-      "sample_days": 12
-    },
-    {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -24.099999999999998,
+      "avg": -24.100000000000005,
       "sample_days": 14
     },
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -24.428571428571427,
+      "avg": -24.21428571428571,
       "sample_days": 14
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -24.450000000000006,
+      "avg": -24.300000000000004,
       "sample_days": 14
     },
     {
@@ -183,7 +183,7 @@
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -33.214285714285715,
+      "avg": -33,
       "sample_days": 14
     },
     {

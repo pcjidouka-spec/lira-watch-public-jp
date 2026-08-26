@@ -723,3 +723,11 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,
 2026-08-25,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,
 2026-08-25,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,
+2026-08-26,dmm,GBP/USD,DMM FX,1,4.0,-7.0,,success,
+2026-08-26,traders_light,GBP/USD,LIGHT FX,4,0.0,0.0,,success,
+2026-08-26,central_tanshi,GBP/USD,セントラル短資FX,4,0.0,-3.17,,success,
+2026-08-26,gmo_click,GBP/USD,GMOクリック証券,4,-1.0,1.0,,success,
+2026-08-26,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/08/25
+2026-08-26,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,
+2026-08-26,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,
+2026-08-26,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,
