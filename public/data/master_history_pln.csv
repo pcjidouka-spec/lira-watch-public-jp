@@ -163,3 +163,11 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-26,sbi,PLN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/26
 2026-08-26,traders_light,PLN/JPY,LIGHT FX,1.0,75.0,-75.0,None,success,2026/08/26
 2026-08-26,traders_min,PLN/JPY,みんなのFX,1.0,75.0,-75.0,None,success,2026/08/26
+2026-08-27,gaitame,PLN/JPY,外為どっとコム,3.0,28.0,-38.0,None,success,2026/08/27
+2026-08-27,gmo_click,PLN/JPY,GMOクリック証券,3.0,70.0,-70.0,None,success,2026/08/27
+2026-08-27,hirose,PLN/JPY,ヒロセ通商,3.0,30.0,-40.0,None,success,2026/08/25
+2026-08-27,invast,PLN/JPY,トライオートFX,3.0,35.0,-47.0,None,success,2026/08/26
+2026-08-27,matsui,PLN/JPY,MATSUI FX,3.0,31.0,-41.0,None,success,2026/08/26
+2026-08-27,sbi,PLN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/27
+2026-08-27,traders_light,PLN/JPY,LIGHT FX,3.0,75.0,-75.0,None,success,2026/08/27
+2026-08-27,traders_min,PLN/JPY,みんなのFX,3.0,75.0,-75.0,None,success,2026/08/27
