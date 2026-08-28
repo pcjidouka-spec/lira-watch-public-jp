@@ -470,7 +470,7 @@ export default function Home() {
 
           <h2 id="swap-ranking" className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
             スワップポイントランキング
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', flexWrap: 'wrap', rowGap: '6px' }}>
               {isJpyGroup ? (
                 <>
                   <button
@@ -600,7 +600,7 @@ export default function Home() {
             <div className="charts-wrapper top-margin-reduced">
               <h2 className="section-title chart-title" style={{ display: 'flex', alignItems: 'center', gap: '1em', flexWrap: 'wrap' }}>
                 スワップポイント推移チャート（各事業者別・日次）
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', flexWrap: 'wrap', rowGap: '6px' }}>
                   {isJpyGroup ? (
                     <>
                       <button
