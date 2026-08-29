@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29 12:59:27",
+  "generated_at": "2026-08-29 16:55:17",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -31,7 +31,13 @@
       "notional_2leg": 3958828,
       "capital": 395882.8,
       "annual_pct": 70.3,
-      "meets_threshold": true
+      "meets_threshold": true,
+      "history": {
+        "days": 28,
+        "min_pct": 22.6,
+        "max_pct": 78.6,
+        "avg_pct": 54.7
+      }
     },
     {
       "rank": 2,
@@ -54,7 +60,13 @@
       "notional_2leg": 10181,
       "capital": 1018.1,
       "annual_pct": 25.1,
-      "meets_threshold": true
+      "meets_threshold": true,
+      "history": {
+        "days": 87,
+        "min_pct": 10.8,
+        "max_pct": 57.4,
+        "avg_pct": 29.0
+      }
     },
     {
       "rank": 3,
@@ -77,7 +89,13 @@
       "notional_2leg": 855945,
       "capital": 85594.5,
       "annual_pct": 15.8,
-      "meets_threshold": false
+      "meets_threshold": false,
+      "history": {
+        "days": 27,
+        "min_pct": 14.9,
+        "max_pct": 16.2,
+        "avg_pct": 15.6
+      }
     }
   ]
 }

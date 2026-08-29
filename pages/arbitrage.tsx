@@ -23,6 +23,12 @@ interface TopEntry {
   capital: number;
   annual_pct: number;
   meets_threshold: boolean;
+  history: {
+    days: number;
+    min_pct: number;
+    max_pct: number;
+    avg_pct: number;
+  } | null;
 }
 
 interface ArbitrageData {
@@ -110,6 +116,7 @@ export default function ArbitragePage({ data }: Props) {
                           <th>裁定益/日</th>
                           <th>必要資本</th>
                           <th>年率</th>
+                          <th>推移</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -133,8 +140,19 @@ export default function ArbitragePage({ data }: Props) {
                               >
                                 {t.annual_pct.toFixed(1)}％
                               </strong>
-                              {!t.meets_threshold && (
-                                <span className="badge">基準未満</span>
+                            </td>
+                            <td className="num hist">
+                              {t.history ? (
+                                <>
+                                  {t.history.min_pct.toFixed(1)}〜
+                                  {t.history.max_pct.toFixed(1)}％
+                                  <span className="swap">
+                                    平均 {t.history.avg_pct.toFixed(1)}％ /{' '}
+                                    {t.history.days}営業日
+                                  </span>
+                                </>
+                              ) : (
+                                '—'
                               )}
                             </td>
                           </tr>
@@ -147,7 +165,13 @@ export default function ArbitragePage({ data }: Props) {
                 <p className="unit-note">
                   数量は1万通貨・1日あたりに揃えています（HUF/JPY は各社10万通貨単位で
                   公表されているため換算済み）。日付は各社の最新の付与日で、
-                  業者により前営業日の値が含まれます。
+                  業者により前営業日の値が含まれます。「年率」は最新日のスワップ提示を
+                  年率換算した値、「推移」は同じ計算を過去の各営業日に当てはめた実測の
+                  振れ幅です。
+                </p>
+                <p className="unit-note">
+                  ★<strong>年率は日によって大きく動きます。</strong>最新日の数字だけを
+                  期待値と考えないでください。判断には「推移」の幅と平均を見てください。
                 </p>
 
                 <section className="arb-about">
@@ -172,6 +196,12 @@ export default function ArbitragePage({ data }: Props) {
                     <li>
                       <strong>利回りの源泉が1社のスワップ設定である場合、いつ消えてもおかしくありません。</strong>
                       その業者が水準を他社並みに戻せば、裁定余地は即座に消えます。
+                    </li>
+                    <li>
+                      <strong>証拠金は業者間で相殺されません。</strong>
+                      為替が動くと片方の口座の評価損が先に膨らみ、もう片方の評価益を
+                      移すまでロスカットが起きうるため、値動きが完全に相殺されるのは
+                      あくまで理論上の話です。
                     </li>
                     <li>
                       証拠金が一方向に移動し続けるため、定期的に業者間で資金を移し替える
@@ -334,10 +364,9 @@ export default function ArbitragePage({ data }: Props) {
           color: #4b5563;
           font-size: 16px;
         }
-        .badge {
-          display: block;
-          font-size: 11px;
-          color: #b45309;
+        .hist {
+          font-size: 13px;
+          color: #4b5563;
         }
         .unit-note {
           font-size: 12px;
