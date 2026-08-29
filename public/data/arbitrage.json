@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29 21:48:30",
+  "generated_at": "2026-08-29 21:50:50",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -185,13 +185,12 @@
         "quiet_median_pct": 0.0
       },
       "spread": {
-        "available": false,
-        "missing": [
-          {
-            "side": "buy",
-            "provider_id": "invast"
-          }
-        ]
+        "available": true,
+        "cost_jpy": 120.0,
+        "days": 171.4,
+        "missing": [],
+        "has_manual": true,
+        "manual_as_of": "2026-08-29"
       }
     },
     {
