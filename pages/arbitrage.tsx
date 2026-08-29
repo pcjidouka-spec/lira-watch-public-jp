@@ -38,6 +38,12 @@ interface TopEntry {
     } | null;
     quiet_median_pct: number | null;
   } | null;
+  spread: {
+    available: boolean;
+    cost_jpy?: number;
+    days?: number;
+    missing: { side: string; provider_id: string }[];
+  } | null;
 }
 
 interface HistStats {
@@ -134,6 +140,7 @@ export default function ArbitragePage({ data }: Props) {
                           <th>必要資本</th>
                           <th>年率</th>
                           <th>推移</th>
+                          <th>スプレッド回収</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -170,6 +177,27 @@ export default function ArbitragePage({ data }: Props) {
                                 </>
                               ) : (
                                 '—'
+                              )}
+                            </td>
+                            <td className="num hist">
+                              {t.spread && t.spread.available ? (
+                                <>
+                                  約{t.spread.days}日
+                                  <span className="swap">
+                                    往復 {t.spread.cost_jpy?.toLocaleString('ja-JP')}円
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  —
+                                  <span className="swap">
+                                    {t.spread && t.spread.missing.length > 0
+                                      ? `${t.spread.missing
+                                          .map((m) => m.provider_id)
+                                          .join('・')} 未取得`
+                                      : 'スプレッド未取得'}
+                                  </span>
+                                </>
                               )}
                             </td>
                           </tr>
@@ -212,6 +240,15 @@ export default function ArbitragePage({ data }: Props) {
                     ) : null
                   )}
                 </div>
+
+                <p className="unit-note">
+                  「スプレッド回収」は、両建てを開いて閉じるまでに払う取引スプレッド
+                  （2社ぶんの合計）を、1日あたりの裁定益で割った日数です。
+                  <strong>回収に何十日もかかる組み合わせは、年率が高くても実用になりません。</strong>
+                  当サイトが取引スプレッドを取得できていない業者・通貨ペアは「—」と表示します。
+                  片方だけで概算すると、コストが半分に見えて回収が早いと誤解させるため、
+                  両方が揃わないときは出しません。
+                </p>
 
                 <section className="arb-about">
                   <h2>この数字の読み方</h2>
@@ -474,8 +511,10 @@ export default function ArbitragePage({ data }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  // public/data/arbitrage.json は週次タスクが生成する。
+  // public/data/arbitrage.json は日次パイプラインがデプロイ直前に生成する。
   // ビルド時に読むだけで、外部 API には触れない。
+  // ★段差は不定期に起きるので週次生成にしてはいけない。段差の通知が出たのに
+  //   ページの数字が最大6日間そのまま、という状態になる。
   const file = path.join(process.cwd(), 'public', 'data', 'arbitrage.json');
   let data: ArbitrageData | null = null;
   try {
