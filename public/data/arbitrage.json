@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29 19:43:29",
+  "generated_at": "2026-08-29 21:48:30",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -90,17 +90,12 @@
         "quiet_median_pct": 0.35
       },
       "spread": {
-        "available": false,
-        "missing": [
-          {
-            "side": "buy",
-            "provider_id": "traders_light"
-          },
-          {
-            "side": "sell",
-            "provider_id": "gaitame"
-          }
-        ]
+        "available": true,
+        "cost_jpy": 5967.3,
+        "days": 7.8,
+        "missing": [],
+        "has_manual": true,
+        "manual_as_of": "2026-08-29"
       }
     },
     {
@@ -195,10 +190,6 @@
           {
             "side": "buy",
             "provider_id": "invast"
-          },
-          {
-            "side": "sell",
-            "provider_id": "traders_min_light"
           }
         ]
       }
@@ -269,13 +260,12 @@
         "quiet_median_pct": 0.0
       },
       "spread": {
-        "available": false,
-        "missing": [
-          {
-            "side": "buy",
-            "provider_id": "traders_light"
-          }
-        ]
+        "available": true,
+        "cost_jpy": 700.0,
+        "days": 18.9,
+        "missing": [],
+        "has_manual": true,
+        "manual_as_of": "2026-08-29"
       }
     }
   ]

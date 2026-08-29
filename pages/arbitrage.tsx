@@ -42,6 +42,8 @@ interface TopEntry {
     available: boolean;
     cost_jpy?: number;
     days?: number;
+    has_manual?: boolean;
+    manual_as_of?: string | null;
     missing: { side: string; provider_id: string }[];
   } | null;
 }
@@ -185,6 +187,12 @@ export default function ArbitragePage({ data }: Props) {
                                   約{t.spread.days}日
                                   <span className="swap">
                                     往復 {t.spread.cost_jpy?.toLocaleString('ja-JP')}円
+                                    {t.spread.has_manual && (
+                                      <>
+                                        <br />
+                                        手動 {t.spread.manual_as_of} 時点
+                                      </>
+                                    )}
                                   </span>
                                 </>
                               ) : (
@@ -245,6 +253,9 @@ export default function ArbitragePage({ data }: Props) {
                   「スプレッド回収」は、両建てを開いて閉じるまでに払う取引スプレッド
                   （2社ぶんの合計）を、1日あたりの裁定益で割った日数です。
                   <strong>回収に何十日もかかる組み合わせは、年率が高くても実用になりません。</strong>
+                  「手動」と付いた行は、週次スクレイパーが未対応の業者のスプレッドを
+                  手で入力した値です。<strong>自動では更新されない</strong>ので、
+                  記載の日付時点の値としてご覧ください。
                   当サイトが取引スプレッドを取得できていない業者・通貨ペアは「—」と表示します。
                   片方だけで概算すると、コストが半分に見えて回収が早いと誤解させるため、
                   両方が揃わないときは出しません。
