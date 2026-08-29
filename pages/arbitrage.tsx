@@ -1,0 +1,333 @@
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+import Head from 'next/head';
+import Link from 'next/link';
+import type { GetStaticProps } from 'next';
+
+interface LegData {
+  provider_id: string;
+  name: string;
+  swap: number;
+  as_of: string;
+  actual_date: string | null;
+}
+
+interface TopEntry {
+  rank: number;
+  pair: string;
+  buy: LegData;
+  sell: LegData;
+  arb_per_day: number;
+  notional_2leg: number;
+  capital: number;
+  annual_pct: number;
+  meets_threshold: boolean;
+}
+
+interface ArbitrageData {
+  generated_at: string;
+  leverage: number;
+  threshold_pct: number;
+  rate_stale: boolean;
+  rate_as_of: string;
+  excluded_providers: string[];
+  excluded_pairs: { pair: string; reason: string }[];
+  top: TopEntry[];
+}
+
+interface Props {
+  data: ArbitrageData | null;
+}
+
+const yen = (v: number) =>
+  v.toLocaleString('ja-JP', { maximumFractionDigits: 2 });
+
+export default function ArbitragePage({ data }: Props) {
+  // top は常に描画する。全件が基準未満のときだけバナーを「追加で」出す。
+  const noneMeet =
+    !!data && data.top.length > 0 && data.top.every((t) => !t.meets_threshold);
+
+  return (
+    <>
+      <Head>
+        <title>スワップ裁定ランキング | トルコリラ・ウォッチ</title>
+        {/* 目立たせない方針のため検索には出さない */}
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <div className="container">
+        <header className="header">
+          <div className="header-content">
+            <Link href="/" className="site-title-link">
+              <h1 className="site-title">トルコリラ・ウォッチ</h1>
+            </Link>
+          </div>
+        </header>
+
+        <main className="main-content">
+          <div className="content-wrapper">
+            <h1>スワップ裁定ランキング</h1>
+            <p className="lead">
+              同じ通貨ペアを、買スワップが最も高い業者で買い、売スワップが最も有利な業者で売ると、
+              為替の値動きは相殺されてスワップの差額だけが残ります。
+              その差額が大きい組み合わせを、当サイトが毎日集計しているデータから算出したものです。
+            </p>
+
+            {!data ? (
+              <p className="empty">データを読み込めませんでした。</p>
+            ) : (
+              <>
+                <p className="meta">
+                  集計 {data.generated_at}
+                  {data.rate_stale && (
+                    <span className="stale">
+                      　※為替レートが最新ではありません（{data.rate_as_of} 時点）
+                    </span>
+                  )}
+                </p>
+
+                {noneMeet && (
+                  <p className="banner">
+                    今週は年率{data.threshold_pct}％を超える組み合わせがありませんでした。
+                  </p>
+                )}
+
+                {data.top.length === 0 ? (
+                  <p className="empty">
+                    今回は成立する組み合わせが見つかりませんでした。
+                  </p>
+                ) : (
+                  <div className="table-scroll">
+                    <table className="arb-table">
+                      <thead>
+                        <tr>
+                          <th>順位</th>
+                          <th>通貨ペア</th>
+                          <th>買う業者</th>
+                          <th>売る業者</th>
+                          <th>裁定益/日</th>
+                          <th>必要資本</th>
+                          <th>年率</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {data.top.map((t) => (
+                          <tr key={t.pair}>
+                            <td>{t.rank}</td>
+                            <td className="pair">{t.pair}</td>
+                            <td>
+                              {t.buy.name}
+                              <span className="swap">{yen(t.buy.swap)}</span>
+                            </td>
+                            <td>
+                              {t.sell.name}
+                              <span className="swap">{yen(t.sell.swap)}</span>
+                            </td>
+                            <td className="num">{yen(t.arb_per_day)}円</td>
+                            <td className="num">{yen(Math.round(t.capital))}円</td>
+                            <td className="num">
+                              <strong
+                                className={t.meets_threshold ? 'ok' : 'warn'}
+                              >
+                                {t.annual_pct.toFixed(1)}％
+                              </strong>
+                              {!t.meets_threshold && (
+                                <span className="badge">基準未満</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                <p className="unit-note">
+                  数量は1万通貨・1日あたりに揃えています（HUF/JPY は各社10万通貨単位で
+                  公表されているため換算済み）。日付は各社の最新の付与日で、
+                  業者により前営業日の値が含まれます。
+                </p>
+
+                <section className="arb-about">
+                  <h2>この数字の読み方</h2>
+                  <ul>
+                    <li>
+                      <strong>必要資本はレバレッジ{data.leverage}倍・証拠金のみで計算しています。</strong>
+                      値動きによる証拠金の変動は、その都度業者間で資金を移す前提で
+                      資本に含めていません。
+                    </li>
+                    <li>
+                      <strong>
+                        この資本額はペア間を比較するための共通のものさしです。
+                      </strong>
+                      各社の実際の必要証拠金とは異なります。エキゾチックな通貨ペアは
+                      レバレッジの上限が低く設定されている場合があります。
+                    </li>
+                    <li>
+                      <strong>異なる業者をまたぐ両建てについては、必ず各社の取引規約を確認してください。</strong>
+                      国内業者同士でも「不当な取引」に関する条項が置かれている場合があります。
+                    </li>
+                    <li>
+                      <strong>利回りの源泉が1社のスワップ設定である場合、いつ消えてもおかしくありません。</strong>
+                      その業者が水準を他社並みに戻せば、裁定余地は即座に消えます。
+                    </li>
+                    <li>
+                      証拠金が一方向に移動し続けるため、定期的に業者間で資金を移し替える
+                      手間が必要です。
+                    </li>
+                    <li>
+                      サクソバンク証券は集計の対象外にしています。
+                    </li>
+                  </ul>
+                </section>
+
+                <p className="disclaimer">
+                  本ページは当サイトが集計した公開データにもとづく試算であり、特定の取引を
+                  推奨するものではありません。スワップポイントは各社の判断で日々変動し、
+                  記載の水準が続く保証はありません。投資判断はご自身の責任でお願いします。
+                </p>
+              </>
+            )}
+
+            <p className="back-link">
+              <Link href="/">← トップページへ戻る</Link>
+            </p>
+          </div>
+        </main>
+      </div>
+
+      <style jsx>{`
+        .lead {
+          line-height: 1.9;
+          margin-bottom: 16px;
+        }
+        .meta {
+          font-size: 13px;
+          color: #6b7280;
+          margin-bottom: 12px;
+        }
+        .stale {
+          color: #b45309;
+          font-weight: 700;
+        }
+        .banner {
+          background: #fffbeb;
+          border: 1px solid #fcd34d;
+          border-radius: 8px;
+          padding: 10px 14px;
+          font-size: 14px;
+          margin-bottom: 14px;
+        }
+        .empty {
+          color: #6b7280;
+        }
+        .table-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .arb-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 14px;
+          min-width: 640px;
+        }
+        .arb-table th,
+        .arb-table td {
+          border: 1px solid #e5e7eb;
+          padding: 8px 10px;
+          text-align: left;
+          vertical-align: top;
+        }
+        .arb-table th {
+          background: #f3f4f6;
+          white-space: nowrap;
+        }
+        .pair {
+          font-weight: 700;
+          white-space: nowrap;
+        }
+        .num {
+          text-align: right;
+          white-space: nowrap;
+        }
+        .swap {
+          display: block;
+          font-size: 12px;
+          color: #6b7280;
+        }
+        .ok {
+          color: #dc2626;
+          font-size: 16px;
+        }
+        .warn {
+          color: #4b5563;
+          font-size: 16px;
+        }
+        .badge {
+          display: block;
+          font-size: 11px;
+          color: #b45309;
+        }
+        .unit-note {
+          font-size: 12px;
+          color: #6b7280;
+          margin-top: 10px;
+          line-height: 1.8;
+        }
+        .arb-about {
+          margin-top: 28px;
+        }
+        .arb-about h2 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        .arb-about ul {
+          padding-left: 1.2em;
+        }
+        .arb-about li {
+          line-height: 1.9;
+          margin-bottom: 8px;
+        }
+        .disclaimer {
+          margin-top: 20px;
+          font-size: 12px;
+          color: #6b7280;
+          line-height: 1.8;
+        }
+        .back-link {
+          margin-top: 28px;
+        }
+        @media (max-width: 600px) {
+          .main-content {
+            padding: 20px 10px;
+          }
+          .content-wrapper {
+            padding: 20px 12px;
+          }
+          .content-wrapper h1 {
+            font-size: 22px;
+          }
+          .lead,
+          .arb-about li {
+            font-size: 14px;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  // public/data/arbitrage.json は週次タスクが生成する。
+  // ビルド時に読むだけで、外部 API には触れない。
+  const file = path.join(process.cwd(), 'public', 'data', 'arbitrage.json');
+  let data: ArbitrageData | null = null;
+  try {
+    data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  } catch {
+    data = null;
+  }
+  return { props: { data } };
+};

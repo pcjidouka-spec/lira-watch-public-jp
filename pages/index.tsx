@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useSwapData } from '@/hooks/useSwapData';
@@ -29,6 +29,26 @@ export default function Home() {
   const chftryData = useSwapData('CHF/TRY');
   type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY' | 'PLN/JPY' | 'CHF/TRY';
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
+
+  // 裁定ランキングへの導線は控えめに扱う。いいねを押したことがある人にだけ見せる。
+  // いいねボタンの HTML (href / target / rel) には一切手を入れない。
+  // preventDefault もしないので、投票は従来どおり新しいタブで成立する。
+  const [arbLinkVisible, setArbLinkVisible] = useState(false);
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('arb_link_seen') === '1') setArbLinkVisible(true);
+    } catch {
+      // プライベートウィンドウ等で読めない場合は未表示のままにする
+    }
+  }, []);
+  const revealArbLink = () => {
+    setArbLinkVisible(true);
+    try {
+      localStorage.setItem('arb_link_seen', '1');
+    } catch {
+      // 書けなくても表示自体は行う
+    }
+  };
   const [sidebarChartTab, setSidebarChartTab] = useState<'TRY' | 'MXN'>('TRY');
 
   const dataMap: Record<CurrencyTab, ReturnType<typeof useSwapData>> = {
@@ -561,12 +581,22 @@ export default function Home() {
               )}
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0' }}>
-              <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+              <a href="https://fx.blogmura.com/turkey-lira/ranking/in?p_cid=11211368" target="_blank" rel="noopener noreferrer" onClick={revealArbLink} style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
                 <span className="iine-banner">いいね♪</span>
               </a>
               <span style={{ fontSize: '14px', fontWeight: 'normal', color: '#6b7280', marginLeft: '8px' }}>←応援お願いします。</span>
             </span>
           </h2>
+
+          {/* いいねの下の行。カード配置とトグルには触れず1行だけ足している
+              (レイアウト変更禁止のため。/strength リンクを足したときと同じやり方) */}
+          {arbLinkVisible && (
+            <p style={{ margin: '8px 0 0 0', fontSize: '14px' }}>
+              <Link href="/arbitrage" className="internal-link">
+                スワップ裁定ランキング（業者間の両建てでスワップ差を取る組み合わせ）→
+              </Link>
+            </p>
+          )}
 
           <div className="ranking-wrapper">
             <RankingTable

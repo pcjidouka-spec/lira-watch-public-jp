@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-08-29 12:59:27",
+  "leverage": 10,
+  "threshold_pct": 20.0,
+  "rate_stale": false,
+  "rate_as_of": "2026-08-29",
+  "baseline": false,
+  "excluded_providers": [
+    "saxo"
+  ],
+  "excluded_pairs": [],
+  "top": [
+    {
+      "rank": 1,
+      "pair": "CHF/TRY",
+      "buy": {
+        "provider_id": "traders_light",
+        "name": "LIGHT FX",
+        "swap": -953.6,
+        "as_of": "2026-08-28",
+        "actual_date": null
+      },
+      "sell": {
+        "provider_id": "gaitame",
+        "name": "外為どっとコム",
+        "swap": 1716.0,
+        "as_of": "2026-08-28",
+        "actual_date": "2026-08-27"
+      },
+      "arb_per_day": 762.4,
+      "notional_2leg": 3958828,
+      "capital": 395882.8,
+      "annual_pct": 70.3,
+      "meets_threshold": true
+    },
+    {
+      "rank": 2,
+      "pair": "HUF/JPY",
+      "buy": {
+        "provider_id": "invast",
+        "name": "トライオートFX",
+        "swap": 1.4,
+        "as_of": "2026-08-28",
+        "actual_date": "2026-08-27"
+      },
+      "sell": {
+        "provider_id": "traders_min_light",
+        "name": "みんなのFX（LIGHT）",
+        "swap": -0.7,
+        "as_of": "2026-08-28",
+        "actual_date": "2026-08-28"
+      },
+      "arb_per_day": 0.7,
+      "notional_2leg": 10181,
+      "capital": 1018.1,
+      "annual_pct": 25.1,
+      "meets_threshold": true
+    },
+    {
+      "rank": 3,
+      "pair": "PLN/JPY",
+      "buy": {
+        "provider_id": "traders_light",
+        "name": "LIGHT FX",
+        "swap": 75.0,
+        "as_of": "2026-08-28",
+        "actual_date": "2026-08-28"
+      },
+      "sell": {
+        "provider_id": "gaitame",
+        "name": "外為どっとコム",
+        "swap": -38.0,
+        "as_of": "2026-08-28",
+        "actual_date": "2026-08-28"
+      },
+      "arb_per_day": 37.0,
+      "notional_2leg": 855945,
+      "capital": 85594.5,
+      "annual_pct": 15.8,
+      "meets_threshold": false
+    }
+  ]
+}
