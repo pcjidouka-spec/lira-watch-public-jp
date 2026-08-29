@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29 16:55:17",
+  "generated_at": "2026-08-29 19:20:56",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -33,10 +33,61 @@
       "annual_pct": 70.3,
       "meets_threshold": true,
       "history": {
-        "days": 28,
-        "min_pct": 22.6,
-        "max_pct": 78.6,
-        "avg_pct": 54.7
+        "recent": {
+          "days": 20,
+          "min_pct": 36.7,
+          "max_pct": 78.6,
+          "avg_pct": 61.0,
+          "median_pct": 60.5
+        },
+        "all": {
+          "days": 28,
+          "min_pct": 22.6,
+          "max_pct": 78.6,
+          "avg_pct": 54.7,
+          "median_pct": 55.9
+        },
+        "first_date": "2026-07-22",
+        "last_date": "2026-08-28",
+        "step_count": 4,
+        "steps": [
+          {
+            "date": "2026-07-30",
+            "side": "buy",
+            "provider_id": "traders_light",
+            "name": "LIGHT FX",
+            "change_pct": -5.8
+          },
+          {
+            "date": "2026-08-06",
+            "side": "buy",
+            "provider_id": "traders_light",
+            "name": "LIGHT FX",
+            "change_pct": -16.4
+          },
+          {
+            "date": "2026-08-17",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 6.3
+          },
+          {
+            "date": "2026-08-21",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 5.5
+          }
+        ],
+        "last_step": {
+          "date": "2026-08-21",
+          "side": "sell",
+          "provider_id": "gaitame",
+          "name": "外為どっとコム",
+          "change_pct": 5.5
+        },
+        "quiet_median_pct": 0.35
       }
     },
     {
@@ -62,10 +113,68 @@
       "annual_pct": 25.1,
       "meets_threshold": true,
       "history": {
-        "days": 87,
-        "min_pct": 10.8,
-        "max_pct": 57.4,
-        "avg_pct": 29.0
+        "recent": {
+          "days": 20,
+          "min_pct": 10.8,
+          "max_pct": 28.7,
+          "avg_pct": 23.3,
+          "median_pct": 25.1
+        },
+        "all": {
+          "days": 87,
+          "min_pct": 10.8,
+          "max_pct": 57.4,
+          "avg_pct": 29.0,
+          "median_pct": 28.7
+        },
+        "first_date": "2026-04-10",
+        "last_date": "2026-08-28",
+        "step_count": 33,
+        "steps": [
+          {
+            "date": "2026-08-12",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": 16.7
+          },
+          {
+            "date": "2026-08-13",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": -7.1
+          },
+          {
+            "date": "2026-08-14",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": 7.7
+          },
+          {
+            "date": "2026-08-21",
+            "side": "buy",
+            "provider_id": "gmo_click",
+            "name": "GMOクリック証券",
+            "change_pct": -14.3
+          },
+          {
+            "date": "2026-08-24",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": 16.7
+          }
+        ],
+        "last_step": {
+          "date": "2026-08-24",
+          "side": "buy",
+          "provider_id": "invast",
+          "name": "トライオートFX",
+          "change_pct": 16.7
+        },
+        "quiet_median_pct": 0.0
       }
     },
     {
@@ -91,10 +200,47 @@
       "annual_pct": 15.8,
       "meets_threshold": false,
       "history": {
-        "days": 27,
-        "min_pct": 14.9,
-        "max_pct": 16.2,
-        "avg_pct": 15.6
+        "recent": {
+          "days": 20,
+          "min_pct": 14.9,
+          "max_pct": 15.8,
+          "avg_pct": 15.6,
+          "median_pct": 15.8
+        },
+        "all": {
+          "days": 27,
+          "min_pct": 14.9,
+          "max_pct": 16.2,
+          "avg_pct": 15.6,
+          "median_pct": 15.8
+        },
+        "first_date": "2026-07-22",
+        "last_date": "2026-08-28",
+        "step_count": 2,
+        "steps": [
+          {
+            "date": "2026-07-28",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 8.1
+          },
+          {
+            "date": "2026-08-24",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 5.3
+          }
+        ],
+        "last_step": {
+          "date": "2026-08-24",
+          "side": "sell",
+          "provider_id": "gaitame",
+          "name": "外為どっとコム",
+          "change_pct": 5.3
+        },
+        "quiet_median_pct": 0.0
       }
     }
   ]

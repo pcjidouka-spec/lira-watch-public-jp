@@ -24,11 +24,28 @@ interface TopEntry {
   annual_pct: number;
   meets_threshold: boolean;
   history: {
-    days: number;
-    min_pct: number;
-    max_pct: number;
-    avg_pct: number;
+    recent: HistStats | null;
+    all: HistStats | null;
+    first_date: string;
+    last_date: string;
+    step_count: number;
+    last_step: {
+      date: string;
+      side: string;
+      provider_id: string;
+      name: string;
+      change_pct: number;
+    } | null;
+    quiet_median_pct: number | null;
   } | null;
+}
+
+interface HistStats {
+  days: number;
+  min_pct: number;
+  max_pct: number;
+  avg_pct: number;
+  median_pct: number;
 }
 
 interface ArbitrageData {
@@ -142,13 +159,13 @@ export default function ArbitragePage({ data }: Props) {
                               </strong>
                             </td>
                             <td className="num hist">
-                              {t.history ? (
+                              {t.history && t.history.recent ? (
                                 <>
-                                  {t.history.min_pct.toFixed(1)}〜
-                                  {t.history.max_pct.toFixed(1)}％
+                                  {t.history.recent.min_pct.toFixed(1)}〜
+                                  {t.history.recent.max_pct.toFixed(1)}％
                                   <span className="swap">
-                                    平均 {t.history.avg_pct.toFixed(1)}％ /{' '}
-                                    {t.history.days}営業日
+                                    平均 {t.history.recent.avg_pct.toFixed(1)}％ /
+                                    直近{t.history.recent.days}営業日
                                   </span>
                                 </>
                               ) : (
@@ -170,9 +187,31 @@ export default function ArbitragePage({ data }: Props) {
                   振れ幅です。
                 </p>
                 <p className="unit-note">
-                  ★<strong>年率は日によって大きく動きます。</strong>最新日の数字だけを
-                  期待値と考えないでください。判断には「推移」の幅と平均を見てください。
+                  ★<strong>スワップ水準は毎日じわじわ動くのではなく、長い横ばいと
+                  不定期の「段差」でできています。</strong>
+                  段差が起きた日に利回りが一段変わり、その後はしばらく同じ水準が続きます。
+                  最新日の数字だけを期待値と考えず、「推移」の幅と直近の段差を見てください。
                 </p>
+                <div className="steps">
+                  {data.top.map((t) =>
+                    t.history && t.history.last_step ? (
+                      <p key={t.pair} className="step-line">
+                        <strong>{t.pair}</strong>：観測{t.history.all?.days}営業日で
+                        段差{t.history.step_count}回。直近は{' '}
+                        {t.history.last_step.date} に{t.history.last_step.name}の
+                        {t.history.last_step.side === 'buy' ? '買' : '売'}が{' '}
+                        {t.history.last_step.change_pct > 0 ? '+' : ''}
+                        {t.history.last_step.change_pct}％。
+                        {t.history.quiet_median_pct !== null && (
+                          <>
+                            {' '}
+                            段差以外の日の変化は中央値{t.history.quiet_median_pct}％。
+                          </>
+                        )}
+                      </p>
+                    ) : null
+                  )}
+                </div>
 
                 <section className="arb-about">
                   <h2>この数字の読み方</h2>
@@ -367,6 +406,15 @@ export default function ArbitragePage({ data }: Props) {
         .hist {
           font-size: 13px;
           color: #4b5563;
+        }
+        .steps {
+          margin-top: 4px;
+        }
+        .step-line {
+          font-size: 12px;
+          color: #6b7280;
+          line-height: 1.8;
+          margin: 0 0 2px 0;
         }
         .unit-note {
           font-size: 12px;
