@@ -192,16 +192,79 @@ export default function ArbitragePage({ data }: Props) {
             )}
 
             <p className="back-link">
-              <Link href="/">← トップページへ戻る</Link>
+              <Link href="/">← スワップポイント比較トップへ</Link>
             </p>
           </div>
         </main>
       </div>
 
       <style jsx>{`
+        /* ページシェルのクラスは globals.css に無く、各ページが自前で定義して
+           いる (strength.tsx / privacy.tsx / contact.tsx と同じ構成)。
+           ここを書かないと中央寄せもヘッダーの装飾も効かず、素の左寄せになる。
+           feedback_hp_verification_pitfalls の Anti-pattern そのもの。 */
+        .container {
+          min-height: 100vh;
+          background: #f9fafb;
+          display: flex;
+          flex-direction: column;
+        }
+        .header {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        .site-title {
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0;
+          color: white;
+          cursor: pointer;
+        }
+        .site-title-link {
+          text-decoration: none;
+        }
+        .main-content {
+          flex: 1;
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .content-wrapper {
+          background: white;
+          padding: 40px;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* 見出しの装飾は本文カードの中だけに効かせる。素の h1 に当てると
+           ヘッダーの .site-title にも border-bottom が乗り、グラデーション
+           ヘッダーの中に白い下線が出る。 */
+        .content-wrapper h1 {
+          font-size: 28px;
+          border-bottom: 2px solid #e5e7eb;
+          padding-bottom: 16px;
+          margin-bottom: 24px;
+          color: #1f2937;
+        }
+        .content-wrapper h2 {
+          font-size: 20px;
+          color: #374151;
+          margin-top: 32px;
+          margin-bottom: 16px;
+          border-left: 4px solid #764ba2;
+          padding-left: 12px;
+        }
+        .content-wrapper p {
+          line-height: 1.8;
+          color: #4b5563;
+          margin-bottom: 16px;
+        }
         .lead {
           line-height: 1.9;
-          margin-bottom: 16px;
+          margin-bottom: 20px;
         }
         .meta {
           font-size: 13px;
@@ -236,17 +299,23 @@ export default function ArbitragePage({ data }: Props) {
         .arb-table th,
         .arb-table td {
           border: 1px solid #e5e7eb;
-          padding: 8px 10px;
+          padding: 10px 12px;
           text-align: left;
           vertical-align: top;
         }
         .arb-table th {
           background: #f3f4f6;
+          color: #374151;
+          font-weight: 700;
           white-space: nowrap;
+        }
+        .arb-table tbody tr:nth-child(even) {
+          background: #fafafa;
         }
         .pair {
           font-weight: 700;
           white-space: nowrap;
+          color: #1f2937;
         }
         .num {
           text-align: right;
@@ -289,6 +358,7 @@ export default function ArbitragePage({ data }: Props) {
         .arb-about li {
           line-height: 1.9;
           margin-bottom: 8px;
+          color: #4b5563;
         }
         .disclaimer {
           margin-top: 20px;
@@ -300,6 +370,8 @@ export default function ArbitragePage({ data }: Props) {
           margin-top: 28px;
         }
         @media (max-width: 600px) {
+          /* 狭い画面ではカードの余白を削って表に幅を回す。
+             40px のままだと左右で 80px が余白に消える。 */
           .main-content {
             padding: 20px 10px;
           }
@@ -308,6 +380,11 @@ export default function ArbitragePage({ data }: Props) {
           }
           .content-wrapper h1 {
             font-size: 22px;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+          }
+          .content-wrapper h2 {
+            font-size: 17px;
           }
           .lead,
           .arb-about li {
