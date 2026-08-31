@@ -1,14 +1,19 @@
 {
-  "generated_at": "2026-08-31 05:13:53",
+  "generated_at": "2026-09-01 05:33:57",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-08-31",
+  "rate_as_of": "2026-09-01",
   "baseline": false,
   "excluded_providers": [
     "saxo"
   ],
-  "excluded_pairs": [],
+  "excluded_pairs": [
+    {
+      "pair": "TRY/JPY",
+      "reason": "G4: TRY/JPY click365_okasan のsellが前回比 1471% 変動 (-24.0 -> -377.0)。キャンペーンや金利改定なら翌日から自動的に通ります"
+    }
+  ],
   "top": [
     {
       "rank": 1,
@@ -16,39 +21,39 @@
       "buy": {
         "provider_id": "traders_light",
         "name": "LIGHT FX",
-        "swap": -953.6,
-        "as_of": "2026-08-28",
+        "swap": -951.5,
+        "as_of": "2026-08-31",
         "actual_date": null
       },
       "sell": {
         "provider_id": "gaitame",
         "name": "外為どっとコム",
-        "swap": 1716.0,
-        "as_of": "2026-08-28",
-        "actual_date": "2026-08-27"
+        "swap": 1690.0,
+        "as_of": "2026-08-31",
+        "actual_date": "2026-08-28"
       },
-      "arb_per_day": 762.4,
-      "notional_2leg": 3958045,
-      "capital": 395804.5,
-      "annual_pct": 70.3,
+      "arb_per_day": 738.5,
+      "notional_2leg": 3961180,
+      "capital": 396118.0,
+      "annual_pct": 68.0,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 36.7,
-          "max_pct": 78.6,
-          "avg_pct": 61.1,
-          "median_pct": 60.5
+          "max_pct": 78.5,
+          "avg_pct": 62.3,
+          "median_pct": 64.9
         },
         "all": {
-          "days": 28,
+          "days": 29,
           "min_pct": 22.6,
-          "max_pct": 78.6,
-          "avg_pct": 54.7,
+          "max_pct": 78.5,
+          "avg_pct": 55.2,
           "median_pct": 55.9
         },
         "first_date": "2026-07-22",
-        "last_date": "2026-08-28",
+        "last_date": "2026-08-31",
         "step_count": 4,
         "steps": [
           {
@@ -91,8 +96,8 @@
       },
       "spread": {
         "available": true,
-        "cost_jpy": 5966.8,
-        "days": 7.8,
+        "cost_jpy": 5971.2,
+        "days": 8.1,
         "missing": [],
         "has_manual": true,
         "manual_as_of": "2026-08-29"
@@ -105,38 +110,38 @@
         "provider_id": "invast",
         "name": "トライオートFX",
         "swap": 1.4,
-        "as_of": "2026-08-28",
-        "actual_date": "2026-08-27"
+        "as_of": "2026-08-31",
+        "actual_date": "2026-08-28"
       },
       "sell": {
         "provider_id": "traders_min_light",
         "name": "みんなのFX（LIGHT）",
         "swap": -0.7,
-        "as_of": "2026-08-28",
-        "actual_date": "2026-08-28"
+        "as_of": "2026-08-31",
+        "actual_date": "2026-08-31"
       },
       "arb_per_day": 0.7,
-      "notional_2leg": 10168,
-      "capital": 1016.8,
+      "notional_2leg": 10161,
+      "capital": 1016.1,
       "annual_pct": 25.1,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 10.8,
-          "max_pct": 28.7,
-          "avg_pct": 23.3,
+          "max_pct": 25.1,
+          "avg_pct": 23.2,
           "median_pct": 25.1
         },
         "all": {
-          "days": 87,
+          "days": 88,
           "min_pct": 10.8,
-          "max_pct": 57.4,
+          "max_pct": 57.5,
           "avg_pct": 29.0,
           "median_pct": 28.7
         },
         "first_date": "2026-04-10",
-        "last_date": "2026-08-28",
+        "last_date": "2026-08-31",
         "step_count": 33,
         "steps": [
           {
@@ -200,19 +205,19 @@
         "provider_id": "traders_light",
         "name": "LIGHT FX",
         "swap": 75.0,
-        "as_of": "2026-08-28",
-        "actual_date": "2026-08-28"
+        "as_of": "2026-08-31",
+        "actual_date": "2026-08-31"
       },
       "sell": {
         "provider_id": "gaitame",
         "name": "外為どっとコム",
         "swap": -38.0,
-        "as_of": "2026-08-28",
-        "actual_date": "2026-08-28"
+        "as_of": "2026-08-31",
+        "actual_date": "2026-08-31"
       },
       "arb_per_day": 37.0,
-      "notional_2leg": 855176,
-      "capital": 85517.6,
+      "notional_2leg": 855139,
+      "capital": 85513.9,
       "annual_pct": 15.8,
       "meets_threshold": false,
       "history": {
@@ -220,18 +225,18 @@
           "days": 20,
           "min_pct": 14.9,
           "max_pct": 15.8,
-          "avg_pct": 15.6,
+          "avg_pct": 15.7,
           "median_pct": 15.8
         },
         "all": {
-          "days": 27,
+          "days": 28,
           "min_pct": 14.9,
           "max_pct": 16.2,
           "avg_pct": 15.6,
           "median_pct": 15.8
         },
         "first_date": "2026-07-22",
-        "last_date": "2026-08-28",
+        "last_date": "2026-08-31",
         "step_count": 2,
         "steps": [
           {
