@@ -45,7 +45,6 @@ const COLORS: Record<string, string> = {
   PLN: '#fb923c',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
-  CHFHUF_S: '#bef264',
 };
 
 const CURRENCY_LABELS: Record<string, string> = {
@@ -58,7 +57,6 @@ const CURRENCY_LABELS: Record<string, string> = {
   PLN: 'ポーランドズロチ',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
-  CHFHUF_S: 'CHF/HUF 売り（フラン売り・フォリント買い）',
 };
 
 // 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は
@@ -66,7 +64,6 @@ const CURRENCY_LABELS: Record<string, string> = {
 const DISPLAY_CODES: Record<string, string> = {
   CHFTRY_S: 'CHF/TRY売',
   CHFTRY_B: 'CHF/TRY買',
-  CHFHUF_S: 'CHF/HUF売',
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
@@ -323,17 +320,6 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           スプレッドが乗るためです。
           <strong>平均を1.0に揃える計算には入れていない</strong>ので、
           これらの線を足しても他の通貨の線は動きません。
-        </p>
-      )}
-      {(p.references ?? []).includes('CHFHUF_S') && (
-        <p className="strength-note">
-          「CHF/HUF売」も同じくポジションの線で、1万フラン相当をレバレッジ1倍で
-          売り建てた（フランを売ってハンガリーフォリントを買った）場合を表しています。
-          CHF/HUF を直接扱っているのはトライオートFXだけなので、
-          <strong>「CHF/JPY 売」と「HUF/JPY 買」を組み合わせた合成ポジション</strong>
-          も候補に入れ、スワップが最も多くなる組み合わせを選んでいます。円どうしが
-          相殺されるため、この組み合わせは CHF/HUF の売り建てと同じ持ち高になります。
-          脚ごとに会社が違う場合があり、そのときは2社を「＋」でつないで表示します。
         </p>
       )}
       <p className="strength-generated">最終更新: {data.generated_at}</p>
