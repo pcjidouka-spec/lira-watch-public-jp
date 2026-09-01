@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T06:00:42.532098",
+  "updated_at": "2026-09-01T09:00:43.612339",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -15,7 +15,7 @@
     },
     "jfx": {
       "has_new": true,
-      "updated_at": "2026-08-28T04:00:03.950942"
+      "updated_at": "2026-09-01T09:00:32.873123"
     },
     "invast": {
       "has_new": true,
@@ -31,7 +31,7 @@
     },
     "sbi": {
       "has_new": true,
-      "updated_at": "2026-08-31T14:00:37.419793"
+      "updated_at": "2026-09-01T09:00:41.871715"
     },
     "matsui": {
       "has_new": true,
