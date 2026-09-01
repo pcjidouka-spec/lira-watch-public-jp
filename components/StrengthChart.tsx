@@ -45,7 +45,7 @@ const COLORS: Record<string, string> = {
   PLN: '#fb923c',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
-  CHFHUF_S: '#2dd4bf',
+  CHFHUF_S: '#bef264',
 };
 
 const CURRENCY_LABELS: Record<string, string> = {
