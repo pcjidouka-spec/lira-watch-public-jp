@@ -49,6 +49,7 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
             : currencyPair === 'HUF/JPY' ? '/providers_config_huf.json'
             : currencyPair === 'ZAR/JPY' ? '/providers_config_zar.json'
             : currencyPair === 'PLN/JPY' ? '/providers_config_pln.json'
+            : currencyPair === 'AUD/JPY' ? '/providers_config_aud.json'
             : currencyPair === 'CHF/TRY' ? '/providers_config_chftry.json'
             : '/providers_config.json';
           const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
@@ -95,6 +96,7 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
           : currencyPair === 'HUF/JPY' ? '/data/master_history_huf.csv'
           : currencyPair === 'ZAR/JPY' ? '/data/master_history_zar.csv'
           : currencyPair === 'PLN/JPY' ? '/data/master_history_pln.csv'
+          : currencyPair === 'AUD/JPY' ? '/data/master_history_aud.csv'
           : currencyPair === 'CHF/TRY' ? '/data/master_history_chftry.csv'
           : '/data/master_history_try.csv';
         const response = await fetch(`${historyFile}?t=${timestamp}`);

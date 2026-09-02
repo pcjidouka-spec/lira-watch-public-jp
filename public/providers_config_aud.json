@@ -1,0 +1,52 @@
+{
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?pare=AUDJPY",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/"
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨タブ選択】「直近のスワップ」タブを選択してください。AUD/JPY の列または行のデータを抽出してください。",
+        "table_extraction": "対象日の行（または列）を抽出してください。買スワップと売スワップ、付与日数を取得してください。"
+      }
+    },
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
+        "product_selection": "【重要：商品選択】このページには「AUDJPY」と「AUDJPY LIGHT」の2つの商品があります。必ず通常の『AUDJPY』の行からデータを抽出してください。『AUDJPY LIGHT』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "url": "https://min-fx.jp/market/swap/",
+      "currency_pair_selector": "豪ドル/円LIGHT（AUD/JPY LIGHT）",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
+        "product_selection": "【重要：商品選択】このページには「AUDJPY」と「AUDJPY LIGHT」の2つの商品があります。必ず『AUDJPY LIGHT』の列からデータを抽出してください。通常の『AUDJPY』のデータは抽出しないでください。"
+      }
+    }
+  ],
+  "common_instructions": {},
+  "agent_settings": {
+    "max_steps": 5,
+    "timeout_seconds": 300
+  }
+}

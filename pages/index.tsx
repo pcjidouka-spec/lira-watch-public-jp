@@ -26,8 +26,9 @@ export default function Home() {
   const hufData = useSwapData('HUF/JPY');
   const zarData = useSwapData('ZAR/JPY');
   const plnData = useSwapData('PLN/JPY');
+  const audData = useSwapData('AUD/JPY');
   const chftryData = useSwapData('CHF/TRY');
-  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY' | 'PLN/JPY' | 'CHF/TRY';
+  type CurrencyTab = 'TRY/JPY' | 'MXN/JPY' | 'USD/JPY' | 'EUR/USD' | 'GBP/USD' | 'HUF/JPY' | 'ZAR/JPY' | 'PLN/JPY' | 'AUD/JPY' | 'CHF/TRY';
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
 
   // 裁定ランキングへの導線は控えめに扱う。いいねを押したことがある人にだけ見せる。
@@ -60,6 +61,7 @@ export default function Home() {
     'HUF/JPY': hufData,
     'ZAR/JPY': zarData,
     'PLN/JPY': plnData,
+    'AUD/JPY': audData,
     'CHF/TRY': chftryData,
   };
   const activeSwapData = dataMap[currencyTab];
@@ -73,7 +75,7 @@ export default function Home() {
     error,
   } = activeSwapData;
 
-  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY' || currencyTab === 'ZAR/JPY' || currencyTab === 'PLN/JPY';
+  const isJpyGroup = currencyTab === 'TRY/JPY' || currencyTab === 'MXN/JPY' || currencyTab === 'HUF/JPY' || currencyTab === 'ZAR/JPY' || currencyTab === 'PLN/JPY' || currencyTab === 'AUD/JPY';
   const isCrossPair = isCrossPairCode(currencyTab);
   const activeNoteText = currencyTab === 'CHF/TRY'
     ? '※ CHF/TRY は各社が円換算した 1万通貨単位あたりの値です。スイスとトルコの金利差が非常に大きいため、買い（フラン買い・リラ売り）は各社ともマイナス、売り（フラン売り・リラ買い）はプラスになります。'
@@ -91,6 +93,7 @@ export default function Home() {
     'HUF/JPY': 'ハンガリーフォリント',
     'ZAR/JPY': '南アフリカランド',
     'PLN/JPY': 'ポーランドズロチ',
+    'AUD/JPY': '豪ドル',
     'CHF/TRY': 'スイスフラン/トルコリラ',
   };
 
@@ -468,7 +471,7 @@ export default function Home() {
                 color: isJpyGroup ? 'white' : '#4b5563',
                 cursor: 'pointer', fontWeight: 700,
               }}
-            >TRY/JPY、MXN/JPY、HUF/JPY、ZAR/JPY、PLN/JPY</button>
+            >TRY/JPY、MXN/JPY、HUF/JPY、ZAR/JPY、PLN/JPY、AUD/JPY</button>
             <button
               onClick={() => setCurrencyTab('USD/JPY')}
               style={{
@@ -530,6 +533,15 @@ export default function Home() {
                       cursor: 'pointer', fontWeight: 700,
                     }}
                   >PLN/JPY</button>
+                  <button
+                    onClick={() => setCurrencyTab('AUD/JPY')}
+                    style={{
+                      padding: '4px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #d1d5db',
+                      background: currencyTab === 'AUD/JPY' ? '#14b8a6' : '#f3f4f6',
+                      color: currencyTab === 'AUD/JPY' ? 'white' : '#4b5563',
+                      cursor: 'pointer', fontWeight: 700,
+                    }}
+                  >AUD/JPY</button>
                 </>
               ) : (
                 <>
@@ -677,6 +689,15 @@ export default function Home() {
                           cursor: 'pointer', fontWeight: 700,
                         }}
                       >PLN/JPY</button>
+                      <button
+                        onClick={() => setCurrencyTab('AUD/JPY')}
+                        style={{
+                          padding: '3px 10px', fontSize: '13px', borderRadius: '5px', border: '1px solid #d1d5db',
+                          background: currencyTab === 'AUD/JPY' ? '#14b8a6' : '#f3f4f6',
+                          color: currencyTab === 'AUD/JPY' ? 'white' : '#4b5563',
+                          cursor: 'pointer', fontWeight: 700,
+                        }}
+                      >AUD/JPY</button>
                     </>
                   ) : (
                     <>
