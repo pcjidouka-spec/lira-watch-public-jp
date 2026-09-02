@@ -606,6 +606,11 @@ export default function Home() {
                   スワップ裁定ランキング（業者間の両建てでスワップ差を取る組み合わせ）→
                 </Link>
               </p>
+              <p style={{ margin: '6px 0 0 0', fontSize: '14px' }}>
+                <Link href="/carry" className="internal-link">
+                  スワップ還元率ランキング（政策金利差から期待される額に対してスワップがどれだけ厚いか）→
+                </Link>
+              </p>
             </>
           )}
 
