@@ -71,6 +71,17 @@ export default function CarryPage({ data, built_on }: Props) {
   const generatedDay = data ? data.generated_at.slice(0, 10) : '';
   const stale = !!data && generatedDay !== built_on;
 
+  // ★スワップの最新取得日。load_legs() は業者ごとの最新行を 2 営業日以内で
+  //   返すので、1 位が古い値で決まりうる (実測 2026-09-03: HUF の最良は
+  //   2026-08-31 の値だった)。振る舞いは既存の裁定ランキングと同じなので
+  //   変えず、どの行が古いかを読み手に伝える。
+  const latestSwapDay = data
+    ? data.ranking.reduce(
+        (acc: string, r: Row) => (r.best.as_of && r.best.as_of > acc ? r.best.as_of : acc),
+        ''
+      )
+    : '';
+
   return (
     <>
       <Head>
@@ -146,7 +157,16 @@ export default function CarryPage({ data, built_on }: Props) {
                             <td>
                               {r.best.name}
                               {r.best.as_of && (
-                                <span className="swap">{r.best.as_of} 時点</span>
+                                <span
+                                  className={
+                                    r.best.as_of === latestSwapDay
+                                      ? 'swap'
+                                      : 'swap old-quote'
+                                  }
+                                >
+                                  {r.best.as_of} 時点
+                                  {r.best.as_of !== latestSwapDay && '（最新日ではありません）'}
+                                </span>
                               )}
                             </td>
                             <td className="num">{num(r.best.swap)}円</td>
@@ -360,6 +380,10 @@ export default function CarryPage({ data, built_on }: Props) {
           font-size: 13px;
           color: #6b7280;
           margin-bottom: 12px;
+        }
+        .old-quote {
+          color: #c2410c;
+          font-weight: 600;
         }
         .stale {
           color: #b45309;
