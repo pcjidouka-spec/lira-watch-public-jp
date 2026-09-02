@@ -43,6 +43,7 @@ const COLORS: Record<string, string> = {
   ZAR: '#4ade80',
   HUF: '#a78bfa',
   PLN: '#fb923c',
+  AUD: '#14b8a6',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
 };
@@ -55,6 +56,7 @@ const CURRENCY_LABELS: Record<string, string> = {
   ZAR: '南アフリカランド',
   HUF: 'ハンガリーフォリント',
   PLN: 'ポーランドズロチ',
+  AUD: '豪ドル',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
 };
