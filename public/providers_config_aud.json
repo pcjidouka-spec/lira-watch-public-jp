@@ -42,6 +42,64 @@
         "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで下までスクロールしてください。",
         "product_selection": "【重要：商品選択】このページには「AUDJPY」と「AUDJPY LIGHT」の2つの商品があります。必ず『AUDJPY LIGHT』の列からデータを抽出してください。通常の『AUDJPY』のデータは抽出しないでください。"
       }
+    },
+    {
+      "id": "dmm",
+      "name": "DMM FX",
+      "url": "https://fx.dmm.com/fx/service/swapcalendar/",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://fx.dmm.com/campaign/"
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/"
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/"
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "product_selection": "【重要：商品選択】このページには「AUDJPY」と「AUDJPY LIGHT」の2つの商品（列）があります。必ず通常の『AUDJPY』の列からデータを抽出してください。『AUDJPY LIGHT』のデータは抽出しないでください。見出しセルには商品名とは別に LIGHT のリボンが付くことがあるため、商品名そのものが AUDJPY であることを確認してください。"
+      }
+    },
+    {
+      "id": "traders_light_light",
+      "name": "LIGHT FX（LIGHT）",
+      "url": "https://lightfx.jp/market/swap/",
+      "currency_pair_selector": "豪ドル/円LIGHT（AUD/JPY LIGHT）",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "instructions": {
+        "product_selection": "【重要：商品選択】このページには「AUDJPY」と「AUDJPY LIGHT」の2つの商品（列）があります。必ず『AUDJPY LIGHT』の列からデータを抽出してください。通常の『AUDJPY』のデータは抽出しないでください。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/"
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "豪ドル/円（AUD/JPY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "instructions": {
+        "swap_point_adjustment": "【重要：単位変換】ヒロセ通商のスワップポイントは「1,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、抽出する際は表に記載されているスワップポイント（買・売ともに）を必ず『10倍した数値』として抽出・報告してください。例：表に「25」とあれば「250」として抽出してください。"
+      }
     }
   ],
   "common_instructions": {},
