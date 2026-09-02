@@ -2,18 +2,12 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-09-01",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-01T20:34:40.080Z",
+  "generated_at": "2026-09-02T04:51:56.027Z",
   "buy_ranking": [
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
       "avg": 14.89285714285714,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_min",
-      "name": "みんなのFX",
-      "avg": 14.82142857142857,
       "sample_days": 14
     },
     {
@@ -29,12 +23,6 @@
       "sample_days": 14
     },
     {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": 14.228571428571431,
-      "sample_days": 14
-    },
-    {
       "provider_id": "gmo",
       "name": "GMO外貨",
       "avg": 14.128571428571425,
@@ -43,6 +31,18 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
+      "avg": 14.099999999999998,
+      "sample_days": 14
+    },
+    {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": 14.099999999999998,
+      "sample_days": 14
+    },
+    {
+      "provider_id": "traders_min",
+      "name": "みんなのFX",
       "avg": 14.099999999999998,
       "sample_days": 14
     },
@@ -109,27 +109,27 @@
       "sample_days": 14
     },
     {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": -14.099999999999998,
+      "sample_days": 14
+    },
+    {
+      "provider_id": "traders_min",
+      "name": "みんなのFX",
+      "avg": -14.099999999999998,
+      "sample_days": 14
+    },
+    {
       "provider_id": "gmo",
       "name": "GMO外貨",
       "avg": -14.128571428571425,
       "sample_days": 14
     },
     {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": -14.228571428571431,
-      "sample_days": 14
-    },
-    {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
       "avg": -14.23571428571429,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_min",
-      "name": "みんなのFX",
-      "avg": -14.82142857142857,
       "sample_days": 14
     },
     {

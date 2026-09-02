@@ -113,8 +113,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-03,invast,ZAR/JPY,トライオートFX,1.0,None,None,None,error,None
 2026-08-03,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/03
 2026-08-03,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/07/31
-2026-08-03,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/03
-2026-08-03,traders_min,ZAR/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/03
+2026-08-03,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/03
+2026-08-03,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/03
 2026-08-04,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/5,success,2026/08/04
 2026-08-04,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/04
 2026-08-04,gmo,ZAR/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/08/04
@@ -122,8 +122,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-04,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/03
 2026-08-04,sbi,ZAR/JPY,SBI FXトレード,1.0,13.0,-13.0,08月06日,success,2026/08/04
 2026-08-04,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/03
-2026-08-04,traders_light,ZAR/JPY,LIGHT FX,1.0,12.2,-12.2,None,success,2026/08/04
-2026-08-04,traders_min,ZAR/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/04
+2026-08-04,traders_light,ZAR/JPY,LIGHT FX,1.0,12.1,-12.1,None,success,2026/08/04
+2026-08-04,traders_min,ZAR/JPY,みんなのFX,1.0,12.1,-12.1,None,success,2026/08/04
 2026-08-05,central_tanshi,ZAR/JPY,セントラル短資FX,5.0,15.3,-15.3,8/6,success,2026/08/05
 2026-08-05,gaitame,ZAR/JPY,外為どっとコム,5.0,10.0,-15.0,None,success,2026/08/05
 2026-08-05,gmo,ZAR/JPY,GMO外貨,5.0,13.1,-13.1,None,success,2026/08/05
@@ -131,8 +131,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-05,invast,ZAR/JPY,トライオートFX,5.0,15.1,-30.1,None,success,2026/08/04
 2026-08-05,sbi,ZAR/JPY,SBI FXトレード,1.0,11.0,-11.0,08月07日,success,2026/08/05
 2026-08-05,sony,ZAR/JPY,ソニーバンクFX,5.0,7.0,-9.0,None,success,2026/08/04
-2026-08-05,traders_light,ZAR/JPY,LIGHT FX,5.0,10.2,-10.2,None,success,2026/08/05
-2026-08-05,traders_min,ZAR/JPY,みんなのFX,5.0,13.1,-13.1,None,success,2026/08/05
+2026-08-05,traders_light,ZAR/JPY,LIGHT FX,5.0,10.1,-10.1,None,success,2026/08/05
+2026-08-05,traders_min,ZAR/JPY,みんなのFX,5.0,10.1,-10.1,None,success,2026/08/05
 2026-08-06,central_tanshi,ZAR/JPY,セントラル短資FX,5.0,None,None,None,success,2026/08/06
 2026-08-06,gaitame,ZAR/JPY,外為どっとコム,5.0,10.0,-15.0,None,success,2026/08/06
 2026-08-06,gmo,ZAR/JPY,GMO外貨,5.0,None,None,None,success,2026/08/06
@@ -149,8 +149,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,invast,ZAR/JPY,トライオートFX,1.0,None,None,None,success,2026/08/06
 2026-08-07,sbi,ZAR/JPY,SBI FXトレード,5.0,None,None,08月12日,success,2026/08/07
 2026-08-07,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/05
-2026-08-07,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/07
-2026-08-07,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/07
+2026-08-07,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/07
+2026-08-07,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/07
 2026-08-10,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,None,None,None,success,2026/08/10
 2026-08-10,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/10
 2026-08-10,gmo,ZAR/JPY,GMO外貨,1.0,None,None,None,success,2026/08/10
@@ -167,8 +167,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-11,invast,ZAR/JPY,トライオートFX,1.0,None,None,None,success,2026/08/10
 2026-08-11,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,08月13日,success,2026/08/11
 2026-08-11,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/07
-2026-08-11,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/11
-2026-08-11,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/11
+2026-08-11,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/11
+2026-08-11,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/11
 2026-08-12,central_tanshi,ZAR/JPY,セントラル短資FX,3.0,15.299999999999999,-15.299999999999999,8/13,success,2026/08/12
 2026-08-12,gaitame,ZAR/JPY,外為どっとコム,3.0,14.0,-19.0,None,success,2026/08/12
 2026-08-12,gmo,ZAR/JPY,GMO外貨,3.0,14.1,-14.1,None,success,2026/08/12
@@ -176,8 +176,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-12,invast,ZAR/JPY,トライオートFX,3.0,15.1,-30.1,None,success,2026/08/11
 2026-08-12,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月14日,success,2026/08/12
 2026-08-12,sony,ZAR/JPY,ソニーバンクFX,3.0,7.0,-10.0,None,success,2026/08/11
-2026-08-12,traders_light,ZAR/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/08/12
-2026-08-12,traders_min,ZAR/JPY,みんなのFX,3.0,15.4,-15.4,None,success,2026/08/12
+2026-08-12,traders_light,ZAR/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/12
+2026-08-12,traders_min,ZAR/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/12
 2026-08-13,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/14,success,2026/08/13
 2026-08-13,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/13
 2026-08-13,gmo,ZAR/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/08/13
@@ -185,8 +185,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-13,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.099999999999998,None,success,2026/08/12
 2026-08-13,sbi,ZAR/JPY,SBI FXトレード,3.0,12.0,-12.0,08月17日,success,2026/08/13
 2026-08-13,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/12
-2026-08-13,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/13
-2026-08-13,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/13
+2026-08-13,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/13
+2026-08-13,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/13
 2026-08-14,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/17,success,2026/08/14
 2026-08-14,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/14
 2026-08-14,gmo,ZAR/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/08/14
@@ -194,8 +194,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/13
 2026-08-14,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月18日,success,2026/08/14
 2026-08-14,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/13
-2026-08-14,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/14
-2026-08-14,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/14
+2026-08-14,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/14
+2026-08-14,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/14
 2026-08-17,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/18,success,2026/08/17
 2026-08-17,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/17
 2026-08-17,gmo,ZAR/JPY,GMO外貨,1.0,14.1,-14.1,None,success,2026/08/17
@@ -203,8 +203,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-17,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/14
 2026-08-17,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/17
 2026-08-17,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/14
-2026-08-17,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/17
-2026-08-17,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/17
+2026-08-17,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/17
+2026-08-17,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/17
 2026-08-18,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/19,success,2026/08/18
 2026-08-18,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/18
 2026-08-18,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/18
@@ -212,8 +212,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-18,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/17
 2026-08-18,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月20日,success,2026/08/18
 2026-08-18,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/17
-2026-08-18,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/18
-2026-08-18,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/18
+2026-08-18,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/18
+2026-08-18,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/18
 2026-08-19,central_tanshi,ZAR/JPY,セントラル短資FX,3.0,15.299999999999999,-15.299999999999999,8/20,success,2026/08/19
 2026-08-19,gaitame,ZAR/JPY,外為どっとコム,3.0,10.0,-15.0,None,success,2026/08/19
 2026-08-19,gmo,ZAR/JPY,GMO外貨,3.0,12.1,-12.1,None,success,2026/08/19
@@ -221,8 +221,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-19,invast,ZAR/JPY,トライオートFX,3.0,15.1,-30.1,None,success,2026/08/18
 2026-08-19,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月21日,success,2026/08/19
 2026-08-19,sony,ZAR/JPY,ソニーバンクFX,3.0,7.0,-10.0,None,success,2026/08/18
-2026-08-19,traders_light,ZAR/JPY,LIGHT FX,3.0,13.200000000000001,-13.200000000000001,None,success,2026/08/19
-2026-08-19,traders_min,ZAR/JPY,みんなのFX,3.0,14.4,-14.4,None,success,2026/08/19
+2026-08-19,traders_light,ZAR/JPY,LIGHT FX,3.0,13.1,-13.1,None,success,2026/08/19
+2026-08-19,traders_min,ZAR/JPY,みんなのFX,3.0,13.1,-13.1,None,success,2026/08/19
 2026-08-20,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/21,success,2026/08/20
 2026-08-20,gaitame,ZAR/JPY,外為どっとコム,1.0,10.0,-15.0,None,success,2026/08/20
 2026-08-20,gmo,ZAR/JPY,GMO外貨,1.0,12.1,-12.1,None,success,2026/08/20
@@ -230,8 +230,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-20,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.099999999999998,None,success,2026/08/19
 2026-08-20,sbi,ZAR/JPY,SBI FXトレード,3.0,12.0,-12.0,08月24日,success,2026/08/20
 2026-08-20,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/19
-2026-08-20,traders_light,ZAR/JPY,LIGHT FX,1.0,13.2,-13.2,None,success,2026/08/20
-2026-08-20,traders_min,ZAR/JPY,みんなのFX,1.0,14.4,-14.4,None,success,2026/08/20
+2026-08-20,traders_light,ZAR/JPY,LIGHT FX,1.0,13.1,-13.1,None,success,2026/08/20
+2026-08-20,traders_min,ZAR/JPY,みんなのFX,1.0,13.1,-13.1,None,success,2026/08/20
 2026-08-21,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/24,success,2026/08/21
 2026-08-21,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/21
 2026-08-21,gmo,ZAR/JPY,GMO外貨,1.0,12.1,-12.1,None,success,2026/08/21
@@ -239,8 +239,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/20
 2026-08-21,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月25日,success,2026/08/21
 2026-08-21,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/20
-2026-08-21,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/21
-2026-08-21,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/21
+2026-08-21,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/21
+2026-08-21,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/21
 2026-08-24,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/25,success,2026/08/24
 2026-08-24,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/24
 2026-08-24,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/24
@@ -248,8 +248,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-24,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/21
 2026-08-24,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/24
 2026-08-24,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-10.0,None,success,2026/08/21
-2026-08-24,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/24
-2026-08-24,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/24
+2026-08-24,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/24
+2026-08-24,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/24
 2026-08-25,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/26,success,2026/08/25
 2026-08-25,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/25
 2026-08-25,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/25
@@ -257,8 +257,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/24
 2026-08-25,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月27日,success,2026/08/25
 2026-08-25,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/24
-2026-08-25,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/25
-2026-08-25,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/25
+2026-08-25,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/25
+2026-08-25,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/25
 2026-08-26,central_tanshi,ZAR/JPY,セントラル短資FX,3.0,15.299999999999999,-15.299999999999999,8/27,success,2026/08/26
 2026-08-26,gaitame,ZAR/JPY,外為どっとコム,3.0,13.0,-18.0,None,success,2026/08/26
 2026-08-26,gmo,ZAR/JPY,GMO外貨,3.0,13.1,-13.1,None,success,2026/08/26
@@ -266,8 +266,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-26,invast,ZAR/JPY,トライオートFX,3.0,15.1,-30.1,None,success,2026/08/25
 2026-08-26,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,08月28日,success,2026/08/26
 2026-08-26,sony,ZAR/JPY,ソニーバンクFX,3.0,7.0,-9.0,None,success,2026/08/25
-2026-08-26,traders_light,ZAR/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/08/26
-2026-08-26,traders_min,ZAR/JPY,みんなのFX,3.0,15.4,-15.4,None,success,2026/08/26
+2026-08-26,traders_light,ZAR/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/26
+2026-08-26,traders_min,ZAR/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/26
 2026-08-27,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/28,success,2026/08/27
 2026-08-27,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/08/27
 2026-08-27,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/27
@@ -275,8 +275,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-27,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.099999999999998,None,success,2026/08/26
 2026-08-27,sbi,ZAR/JPY,SBI FXトレード,3.0,12.0,-12.0,08月31日,success,2026/08/27
 2026-08-27,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/26
-2026-08-27,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/27
-2026-08-27,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/27
+2026-08-27,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/27
+2026-08-27,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/27
 2026-08-28,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.3,-15.3,8/31,success,2026/08/28
 2026-08-28,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/28
 2026-08-28,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/28
@@ -284,8 +284,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-28,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/27
 2026-08-28,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,09月01日,success,2026/08/28
 2026-08-28,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/27
-2026-08-28,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/28
-2026-08-28,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/28
+2026-08-28,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/28
+2026-08-28,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/28
 2026-08-31,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.4,-15.4,9/1,success,2026/08/31
 2026-08-31,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/08/31
 2026-08-31,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/08/31
@@ -293,8 +293,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-31,invast,ZAR/JPY,トライオートFX,1.0,15.1,-30.1,None,success,2026/08/28
 2026-08-31,sbi,ZAR/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/31
 2026-08-31,sony,ZAR/JPY,ソニーバンクFX,1.0,7.0,-9.0,None,success,2026/08/28
-2026-08-31,traders_light,ZAR/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/31
-2026-08-31,traders_min,ZAR/JPY,みんなのFX,1.0,15.4,-15.4,None,success,2026/08/31
+2026-08-31,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/31
+2026-08-31,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/31
 2026-09-01,central_tanshi,ZAR/JPY,セントラル短資FX,1.0,15.4,-15.4,9/2,success,2026/09/01
 2026-09-01,gaitame,ZAR/JPY,外為どっとコム,1.0,12.0,-17.0,None,success,2026/09/01
 2026-09-01,gmo,ZAR/JPY,GMO外貨,1.0,13.1,-13.1,None,success,2026/09/01

@@ -649,7 +649,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-03-24,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/03/24
 2026-03-24,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/03/24
 2026-03-24,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-24.0,None,success,2026/03/24
-2026-03-24,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,2026-03-24,success,2026/03/24
+2026-03-24,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,2026-03-24,success,2026/03/24
 2026-03-24,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/03/24
 2026-03-24,traders_min,TRY/JPY,みんなのFX,1.0,25.1,-25.1,None,success,2026/03/24
 2026-03-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,26.1,-26.1,None,success,2026/03/24
@@ -686,7 +686,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-03-27,jfx,TRY/JPY,JFX,1.0,None,None,None,error,None
 2026-03-27,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,success,2026/03/27
 2026-03-27,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-24.0,03月31日,success,2026/03/27
-2026-03-27,traders_light,TRY/JPY,LIGHT FX,1.0,26.666666666666668,-26.666666666666668,None,success,2026/03/27
+2026-03-27,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/03/27
 2026-03-27,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/03/27
 2026-03-27,traders_min,TRY/JPY,みんなのFX,1.0,26.1,-26.1,None,success,2026/03/27
 2026-03-27,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,26.1,-26.1,None,success,2026/03/27
@@ -701,7 +701,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-03-31,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/03/31
 2026-03-31,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/03/31
 2026-03-31,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-24.0,04月02日,success,2026/03/31
-2026-03-31,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/03/31
+2026-03-31,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/03/31
 2026-03-31,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/03/31
 2026-03-31,traders_min,TRY/JPY,みんなのFX,1.0,None,None,None,error,None
 2026-03-31,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,26.1,-26.1,None,success,2026/03/31
@@ -861,7 +861,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-17,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/04/17
 2026-04-17,saxo,TRY/JPY,サクソバンク証券,1.0,None,None,None,error,None
 2026-04-17,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-29.0,04月21日,success,2026/04/17
-2026-04-17,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/04/17
+2026-04-17,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/04/17
 2026-04-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/04/17
 2026-04-17,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/04/17
 2026-04-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/04/17
@@ -878,7 +878,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-20,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-04-20,saxo,TRY/JPY,サクソバンク証券,1.0,None,None,None,error,None
 2026-04-20,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,04月22日,error,2026/04/20
-2026-04-20,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/04/20
+2026-04-20,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/04/20
 2026-04-20,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/04/20
 2026-04-20,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/04/20
 2026-04-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/04/20
@@ -1091,7 +1091,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-11,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/11
 2026-05-11,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-05-11,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-05-11,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/11
+2026-05-11,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/11
 2026-05-11,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/11
 2026-05-11,traders_min,TRY/JPY,みんなのFX,1.0,26.1,-26.1,None,success,2026/05/11
 2026-05-11,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,26.1,-26.1,None,success,2026/05/11
@@ -1106,7 +1106,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-12,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/12
 2026-05-12,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/05/12
 2026-05-12,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月14日,success,2026/05/12
-2026-05-12,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/12
+2026-05-12,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/12
 2026-05-12,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/12
 2026-05-12,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/05/12
 2026-05-12,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/12
@@ -1121,7 +1121,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,jfx,TRY/JPY,JFX,3.0,25.0,-32.0,None,success,2026/05/13
 2026-05-13,matsui,TRY/JPY,MATSUI FX,3.0,25.0,-25.0,None,success,2026/05/13
 2026-05-13,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月15日,success,2026/05/13
-2026-05-13,traders_light,TRY/JPY,LIGHT FX,3.0,25.2,-25.2,None,success,2026/05/13
+2026-05-13,traders_light,TRY/JPY,LIGHT FX,3.0,25.099999999999998,-25.099999999999998,None,success,2026/05/13
 2026-05-13,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/05/13
 2026-05-13,traders_min,TRY/JPY,みんなのFX,3.0,25.3,-25.3,None,success,2026/05/13
 2026-05-13,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/05/13
@@ -1136,7 +1136,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-14,jfx,TRY/JPY,JFX,2.0,25.0,-32.0,None,success,2026/05/14
 2026-05-14,matsui,TRY/JPY,MATSUI FX,3.0,25.0,-25.0,None,success,2026/05/13
 2026-05-14,sbi,TRY/JPY,SBI FXトレード,3.0,24.0,-32.0,05月18日,success,2026/05/14
-2026-05-14,traders_light,TRY/JPY,LIGHT FX,2.0,25.2,-25.2,None,success,2026/05/14
+2026-05-14,traders_light,TRY/JPY,LIGHT FX,2.0,25.1,-25.1,None,success,2026/05/14
 2026-05-14,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,25.2,-25.2,None,success,2026/05/14
 2026-05-14,traders_min,TRY/JPY,みんなのFX,2.0,25.3,-25.3,None,success,2026/05/14
 2026-05-14,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,25.3,-25.3,None,success,2026/05/14
@@ -1162,7 +1162,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-18,invast,TRY/JPY,トライオートFX,1.0,0.0,0.0,None,error,2026/05/15
 2026-05-18,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/18
 2026-05-18,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-05-18,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/18
+2026-05-18,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/18
 2026-05-18,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/18
 2026-05-18,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/05/18
 2026-05-18,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/18
@@ -1177,7 +1177,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-19,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/19
 2026-05-19,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/05/18
 2026-05-19,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月21日,success,2026/05/19
-2026-05-19,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/19
+2026-05-19,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/19
 2026-05-19,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/19
 2026-05-19,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/05/19
 2026-05-19,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/19
@@ -1192,7 +1192,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-20,jfx,TRY/JPY,JFX,4.0,25.0,-32.0,None,success,2026/05/20
 2026-05-20,matsui,TRY/JPY,MATSUI FX,4.0,25.0,-25.0,None,success,2026/05/19
 2026-05-20,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月22日,success,2026/05/20
-2026-05-20,traders_light,TRY/JPY,LIGHT FX,4.0,25.2,-25.2,None,success,2026/05/20
+2026-05-20,traders_light,TRY/JPY,LIGHT FX,4.0,25.1,-25.1,None,success,2026/05/20
 2026-05-20,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,25.2,-25.2,None,success,2026/05/20
 2026-05-20,traders_min,TRY/JPY,みんなのFX,4.0,25.3,-25.3,None,success,2026/05/20
 2026-05-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,25.3,-25.3,None,success,2026/05/20
@@ -1218,7 +1218,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-22,jfx,TRY/JPY,JFX,6.0,0.0,0.0,None,error,2026/05/22
 2026-05-22,matsui,TRY/JPY,MATSUI FX,6.0,0.0,0.0,None,error,2026/05/21
 2026-05-22,sbi,TRY/JPY,SBI FXトレード,4.0,0.0,0.0,05月26日,error,2026/05/22
-2026-05-22,traders_light,TRY/JPY,LIGHT FX,6.0,25.2,-25.2,None,success,2026/05/22
+2026-05-22,traders_light,TRY/JPY,LIGHT FX,6.0,25.099999999999998,-25.099999999999998,None,success,2026/05/22
 2026-05-22,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,6.0,25.2,-25.2,None,success,2026/05/22
 2026-05-22,traders_min,TRY/JPY,みんなのFX,6.0,25.3,-25.3,None,success,2026/05/22
 2026-05-22,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,6.0,25.3,-25.3,None,success,2026/05/22
@@ -1255,7 +1255,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-28,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/28
 2026-05-28,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/05/28
 2026-05-28,sbi,TRY/JPY,SBI FXトレード,1.0,14.0,-17.0,06月01日,success,2026/05/28
-2026-05-28,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/28
+2026-05-28,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/28
 2026-05-28,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/28
 2026-05-28,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/05/28
 2026-05-28,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/28
@@ -1270,7 +1270,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-29,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/29
 2026-05-29,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/05/28
 2026-05-29,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月02日,success,2026/05/29
-2026-05-29,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/05/29
+2026-05-29,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/05/29
 2026-05-29,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/29
 2026-05-29,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/05/29
 2026-05-29,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/29
@@ -1284,7 +1284,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-01,invast,TRY/JPY,トライオートFX,1.0,None,None,None,error,None
 2026-06-01,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/01
 2026-06-01,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-06-01,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/01
+2026-06-01,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/01
 2026-06-01,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/01
 2026-06-01,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/01
 2026-06-01,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/01
@@ -1299,7 +1299,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-02,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/02
 2026-06-02,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/06/01
 2026-06-02,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月04日,success,2026/06/02
-2026-06-02,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/02
+2026-06-02,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/02
 2026-06-02,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/02
 2026-06-02,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/02
 2026-06-02,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/02
@@ -1314,7 +1314,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-03,jfx,TRY/JPY,JFX,3.0,25.0,-32.0,None,success,2026/06/03
 2026-06-03,matsui,TRY/JPY,MATSUI FX,3.0,25.0,-25.0,None,success,2026/06/03
 2026-06-03,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月05日,success,2026/06/03
-2026-06-03,traders_light,TRY/JPY,LIGHT FX,3.0,25.2,-25.2,None,success,2026/06/03
+2026-06-03,traders_light,TRY/JPY,LIGHT FX,3.0,25.099999999999998,-25.099999999999998,None,success,2026/06/03
 2026-06-03,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/06/03
 2026-06-03,traders_min,TRY/JPY,みんなのFX,3.0,25.3,-25.3,None,success,2026/06/03
 2026-06-03,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/06/03
@@ -1329,7 +1329,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-04,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/04
 2026-06-04,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/06/03
 2026-06-04,sbi,TRY/JPY,SBI FXトレード,3.0,24.0,-32.0,06月08日,success,2026/06/04
-2026-06-04,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/04
+2026-06-04,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/04
 2026-06-04,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/04
 2026-06-04,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/04
 2026-06-04,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/04
@@ -1344,7 +1344,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-05,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/05
 2026-06-05,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/06/04
 2026-06-05,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月09日,success,2026/06/05
-2026-06-05,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/05
+2026-06-05,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/05
 2026-06-05,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/05
 2026-06-05,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/05
 2026-06-05,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/05
@@ -1358,7 +1358,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-08,invast,TRY/JPY,トライオートFX,1.0,26.0,-39.0,None,success,2026/06/05
 2026-06-08,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/08
 2026-06-08,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,06月10日,error,2026/06/08
-2026-06-08,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/08
+2026-06-08,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/08
 2026-06-08,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/08
 2026-06-08,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/08
 2026-06-08,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/08
@@ -1373,7 +1373,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-09,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/09
 2026-06-09,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-06-09,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月11日,success,2026/06/09
-2026-06-09,traders_light,TRY/JPY,LIGHT FX,1.0,25.2,-25.2,None,success,2026/06/09
+2026-06-09,traders_light,TRY/JPY,LIGHT FX,1.0,25.1,-25.1,None,success,2026/06/09
 2026-06-09,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/09
 2026-06-09,traders_min,TRY/JPY,みんなのFX,1.0,25.3,-25.3,None,success,2026/06/09
 2026-06-09,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/09
@@ -1388,7 +1388,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-10,jfx,TRY/JPY,JFX,3.0,25.0,-32.0,None,success,2026/06/10
 2026-06-10,matsui,TRY/JPY,MATSUI FX,3.0,25.0,-25.0,None,success,2026/06/09
 2026-06-10,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月12日,success,2026/06/10
-2026-06-10,traders_light,TRY/JPY,LIGHT FX,3.0,25.2,-25.2,None,success,2026/06/10
+2026-06-10,traders_light,TRY/JPY,LIGHT FX,3.0,25.099999999999998,-25.099999999999998,None,success,2026/06/10
 2026-06-10,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/06/10
 2026-06-10,traders_min,TRY/JPY,みんなのFX,3.0,25.3,-25.3,None,success,2026/06/10
 2026-06-10,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/06/10
@@ -1957,9 +1957,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-03,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/08/03
 2026-08-03,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/03
 2026-08-03,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/03
-2026-08-03,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/03
+2026-08-03,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/03
 2026-08-03,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/03
-2026-08-03,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/03
+2026-08-03,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/03
 2026-08-03,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/03
 2026-08-04,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/5,success,2026/08/04
 2026-08-04,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/08/03
@@ -1973,9 +1973,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-04,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/04
 2026-08-04,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/08/03
 2026-08-04,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月06日,success,2026/08/04
-2026-08-04,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/04
+2026-08-04,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/04
 2026-08-04,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/04
-2026-08-04,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/04
+2026-08-04,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/04
 2026-08-04,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/04
 2026-08-05,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.8,-24.8,8/6,success,2026/08/05
 2026-08-05,click365_okasan,TRY/JPY,クリック365,3.0,24.0,-24.0,None,success,2026/08/04
@@ -1989,9 +1989,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-05,m2j,TRY/JPY,マネースクエア,3.0,25.0,-40.0,None,success,2026/08/05
 2026-08-05,matsui,TRY/JPY,MATSUI FX,3.0,None,None,None,error,None
 2026-08-05,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月07日,success,2026/08/05
-2026-08-05,traders_light,TRY/JPY,LIGHT FX,3.0,23.2,-23.2,None,success,2026/08/05
+2026-08-05,traders_light,TRY/JPY,LIGHT FX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/05
 2026-08-05,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,23.2,-23.2,None,success,2026/08/05
-2026-08-05,traders_min,TRY/JPY,みんなのFX,3.0,23.3,-23.3,None,success,2026/08/05
+2026-08-05,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/05
 2026-08-05,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/05
 2026-08-06,central_tanshi,TRY/JPY,セントラル短資FX,2.0,24.8,-24.8,8/7,success,2026/08/06
 2026-08-06,click365_okasan,TRY/JPY,クリック365,2.0,23.333333333333332,-23.333333333333332,None,success,2026/08/05
@@ -2005,9 +2005,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-06,m2j,TRY/JPY,マネースクエア,2.0,25.0,-40.0,None,success,2026/08/06
 2026-08-06,matsui,TRY/JPY,MATSUI FX,2.0,24.0,-24.0,None,success,2026/08/05
 2026-08-06,sbi,TRY/JPY,SBI FXトレード,3.0,23.0,-31.0,08月10日,success,2026/08/06
-2026-08-06,traders_light,TRY/JPY,LIGHT FX,2.0,23.2,-23.2,None,success,2026/08/06
+2026-08-06,traders_light,TRY/JPY,LIGHT FX,2.0,23.1,-23.1,None,success,2026/08/06
 2026-08-06,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,23.2,-23.2,None,success,2026/08/06
-2026-08-06,traders_min,TRY/JPY,みんなのFX,2.0,23.3,-23.3,None,success,2026/08/06
+2026-08-06,traders_min,TRY/JPY,みんなのFX,2.0,23.1,-23.1,None,success,2026/08/06
 2026-08-06,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,23.3,-23.3,None,success,2026/08/06
 2026-08-07,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/10,success,2026/08/07
 2026-08-07,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/06
@@ -2021,9 +2021,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/07
 2026-08-07,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/08/06
 2026-08-07,sbi,TRY/JPY,SBI FXトレード,2.0,23.0,-31.0,08月12日,success,2026/08/07
-2026-08-07,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/07
+2026-08-07,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/07
 2026-08-07,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/07
-2026-08-07,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/07
+2026-08-07,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/07
 2026-08-07,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/07
 2026-08-10,central_tanshi,TRY/JPY,セントラル短資FX,1.0,None,None,None,success,2026/08/10
 2026-08-10,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/07
@@ -2051,9 +2051,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-11,jfx,TRY/JPY,JFX,1.0,None,None,None,success,2026/08/11
 2026-08-11,m2j,TRY/JPY,マネースクエア,1.0,None,None,None,success,2026/08/11
 2026-08-11,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,08月13日,success,2026/08/11
-2026-08-11,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/11
+2026-08-11,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/11
 2026-08-11,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/11
-2026-08-11,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/11
+2026-08-11,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/11
 2026-08-11,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/11
 2026-08-12,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.8,-24.8,8/13,success,2026/08/12
 2026-08-12,click365_okasan,TRY/JPY,クリック365,3.0,24.0,-24.0,None,success,2026/08/11
@@ -2067,9 +2067,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-12,m2j,TRY/JPY,マネースクエア,3.0,25.0,-40.0,None,success,2026/08/12
 2026-08-12,matsui,TRY/JPY,MATSUI FX,3.0,24.0,-24.0,None,success,2026/08/11
 2026-08-12,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月14日,success,2026/08/12
-2026-08-12,traders_light,TRY/JPY,LIGHT FX,3.0,23.2,-23.2,None,success,2026/08/12
+2026-08-12,traders_light,TRY/JPY,LIGHT FX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/12
 2026-08-12,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,23.2,-23.2,None,success,2026/08/12
-2026-08-12,traders_min,TRY/JPY,みんなのFX,3.0,23.3,-23.3,None,success,2026/08/12
+2026-08-12,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/12
 2026-08-12,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/12
 2026-08-13,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/14,success,2026/08/13
 2026-08-13,click365_okasan,TRY/JPY,クリック365,1.0,23.333333333333332,-23.333333333333332,None,success,2026/08/12
@@ -2083,9 +2083,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-13,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/13
 2026-08-13,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/08/12
 2026-08-13,sbi,TRY/JPY,SBI FXトレード,3.0,23.0,-31.0,08月17日,success,2026/08/13
-2026-08-13,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/13
+2026-08-13,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/13
 2026-08-13,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/13
-2026-08-13,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/13
+2026-08-13,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/13
 2026-08-13,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/13
 2026-08-14,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/17,success,2026/08/14
 2026-08-14,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/13
@@ -2099,9 +2099,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/14
 2026-08-14,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/08/13
 2026-08-14,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月18日,success,2026/08/14
-2026-08-14,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/14
+2026-08-14,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/14
 2026-08-14,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/14
-2026-08-14,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/14
+2026-08-14,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/14
 2026-08-14,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/14
 2026-08-17,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/18,success,2026/08/17
 2026-08-17,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/14
@@ -2114,9 +2114,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-17,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/08/17
 2026-08-17,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/17
 2026-08-17,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/17
-2026-08-17,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/17
+2026-08-17,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/17
 2026-08-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/17
-2026-08-17,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/17
+2026-08-17,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/17
 2026-08-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/17
 2026-08-18,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/19,success,2026/08/18
 2026-08-18,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/17
@@ -2130,9 +2130,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-18,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/18
 2026-08-18,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/08/17
 2026-08-18,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月20日,success,2026/08/18
-2026-08-18,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/18
+2026-08-18,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/18
 2026-08-18,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/18
-2026-08-18,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/18
+2026-08-18,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/18
 2026-08-18,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/18
 2026-08-19,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.099999999999998,-24.099999999999998,8/20,success,2026/08/19
 2026-08-19,click365_okasan,TRY/JPY,クリック365,3.0,25.0,-25.0,None,success,2026/08/18
@@ -2146,9 +2146,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-19,m2j,TRY/JPY,マネースクエア,3.0,25.0,-40.0,None,success,2026/08/19
 2026-08-19,matsui,TRY/JPY,MATSUI FX,3.0,23.0,-23.0,None,success,2026/08/18
 2026-08-19,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月21日,success,2026/08/19
-2026-08-19,traders_light,TRY/JPY,LIGHT FX,3.0,23.2,-23.2,None,success,2026/08/19
+2026-08-19,traders_light,TRY/JPY,LIGHT FX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/19
 2026-08-19,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,23.2,-23.2,None,success,2026/08/19
-2026-08-19,traders_min,TRY/JPY,みんなのFX,3.0,23.3,-23.3,None,success,2026/08/19
+2026-08-19,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/19
 2026-08-19,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/19
 2026-08-20,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/21,success,2026/08/20
 2026-08-20,click365_okasan,TRY/JPY,クリック365,1.0,24.666666666666668,-24.666666666666668,None,success,2026/08/19
@@ -2162,9 +2162,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-20,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/20
 2026-08-20,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/08/19
 2026-08-20,sbi,TRY/JPY,SBI FXトレード,3.0,23.0,-31.0,08月24日,success,2026/08/20
-2026-08-20,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/20
+2026-08-20,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/20
 2026-08-20,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/20
-2026-08-20,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/20
+2026-08-20,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/20
 2026-08-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/20
 2026-08-21,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/24,success,2026/08/21
 2026-08-21,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/20
@@ -2178,9 +2178,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/21
 2026-08-21,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/08/20
 2026-08-21,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月25日,success,2026/08/21
-2026-08-21,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/21
+2026-08-21,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/21
 2026-08-21,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/21
-2026-08-21,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/21
+2026-08-21,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/21
 2026-08-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/21
 2026-08-24,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/25,success,2026/08/24
 2026-08-24,click365_okasan,TRY/JPY,クリック365,1.0,26.0,-26.0,None,success,2026/08/21
@@ -2193,9 +2193,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-24,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/08/24
 2026-08-24,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/24
 2026-08-24,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/24
-2026-08-24,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/24
+2026-08-24,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/24
 2026-08-24,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/24
-2026-08-24,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/24
+2026-08-24,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/24
 2026-08-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/24
 2026-08-25,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/26,success,2026/08/25
 2026-08-25,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/24
@@ -2209,9 +2209,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/25
 2026-08-25,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/08/24
 2026-08-25,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月27日,success,2026/08/25
-2026-08-25,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/25
+2026-08-25,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/25
 2026-08-25,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/25
-2026-08-25,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/25
+2026-08-25,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/25
 2026-08-25,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/25
 2026-08-26,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.099999999999998,-24.099999999999998,8/27,success,2026/08/26
 2026-08-26,click365_okasan,TRY/JPY,クリック365,3.0,23.0,-23.0,None,success,2026/08/25
@@ -2225,9 +2225,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-26,m2j,TRY/JPY,マネースクエア,3.0,25.0,-40.0,None,success,2026/08/26
 2026-08-26,matsui,TRY/JPY,MATSUI FX,3.0,23.0,-23.0,None,success,2026/08/25
 2026-08-26,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,08月28日,success,2026/08/26
-2026-08-26,traders_light,TRY/JPY,LIGHT FX,3.0,23.2,-23.2,None,success,2026/08/26
+2026-08-26,traders_light,TRY/JPY,LIGHT FX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/26
 2026-08-26,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,23.2,-23.2,None,success,2026/08/26
-2026-08-26,traders_min,TRY/JPY,みんなのFX,3.0,23.3,-23.3,None,success,2026/08/26
+2026-08-26,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/26
 2026-08-26,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/26
 2026-08-27,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/28,success,2026/08/27
 2026-08-27,click365_okasan,TRY/JPY,クリック365,1.0,24.666666666666668,-24.666666666666668,None,success,2026/08/26
@@ -2241,9 +2241,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-27,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/27
 2026-08-27,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/08/26
 2026-08-27,sbi,TRY/JPY,SBI FXトレード,3.0,23.0,-31.0,08月31日,success,2026/08/27
-2026-08-27,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/27
+2026-08-27,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/27
 2026-08-27,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/27
-2026-08-27,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/27
+2026-08-27,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/27
 2026-08-27,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/27
 2026-08-28,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/31,success,2026/08/28
 2026-08-28,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/08/27
@@ -2256,9 +2256,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-28,jfx,TRY/JPY,JFX,1.0,23.0,-30.0,None,success,2026/08/28
 2026-08-28,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/28
 2026-08-28,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,09月01日,success,2026/08/28
-2026-08-28,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/28
+2026-08-28,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/28
 2026-08-28,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/28
-2026-08-28,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/28
+2026-08-28,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/28
 2026-08-28,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/28
 2026-08-28,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/08/27
 2026-08-31,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,9/1,success,2026/08/31
@@ -2272,9 +2272,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-31,jfx,TRY/JPY,JFX,1.0,23.0,-30.0,None,success,2026/08/31
 2026-08-31,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/08/31
 2026-08-31,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/31
-2026-08-31,traders_light,TRY/JPY,LIGHT FX,1.0,23.2,-23.2,None,success,2026/08/31
+2026-08-31,traders_light,TRY/JPY,LIGHT FX,1.0,23.1,-23.1,None,success,2026/08/31
 2026-08-31,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,23.2,-23.2,None,success,2026/08/31
-2026-08-31,traders_min,TRY/JPY,みんなのFX,1.0,23.3,-23.3,None,success,2026/08/31
+2026-08-31,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/31
 2026-08-31,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/31
 2026-09-01,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,9/2,success,2026/09/01
 2026-09-01,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/09/01

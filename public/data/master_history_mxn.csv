@@ -452,7 +452,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-03,matsui,MXN/JPY,MATSUI FX,None,None,None,None,error,2026/04/03
 2026-04-03,saxo,MXN/JPY,サクソバンク証券,None,None,None,None,error,None
 2026-04-03,sbi,MXN/JPY,SBI FXトレード,None,None,None,04月07日,error,2026/04/03
-2026-04-03,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/03
+2026-04-03,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/04/03
 2026-04-03,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/03
 2026-04-03,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/04/03
 2026-04-03,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/04/03
@@ -484,7 +484,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-07,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/04/07
 2026-04-07,saxo,MXN/JPY,サクソバンク証券,1,10.59,-19.21,,success,2026-04-07
 2026-04-07,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,04月09日,success,2026/04/07
-2026-04-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/07
+2026-04-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/04/07
 2026-04-07,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/07
 2026-04-07,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,04/07,success,2026/04/07
 2026-04-07,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/04/07
@@ -532,7 +532,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-10,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-04-10,saxo,MXN/JPY,サクソバンク証券,1,11.4,-19.94,None,success,2026-04-10
 2026-04-10,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,04月14日,success,2026/04/10
-2026-04-10,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/10
+2026-04-10,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/04/10
 2026-04-10,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/10
 2026-04-10,traders_min,MXN/JPY,みんなのFX,1.0,14.6,-14.6,None,success,2026/04/10
 2026-04-10,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/04/10
@@ -612,7 +612,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-17,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/04/17
 2026-04-17,saxo,MXN/JPY,サクソバンク証券,1.0,None,None,None,error,None
 2026-04-17,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,04月21日,success,2026/04/17
-2026-04-17,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/17
+2026-04-17,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/04/17
 2026-04-17,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/17
 2026-04-17,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/04/17
 2026-04-17,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/04/17
@@ -626,7 +626,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-20,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/04/20
 2026-04-20,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/04/20
 2026-04-20,saxo,MXN/JPY,サクソバンク証券,1.0,None,None,None,error,None
-2026-04-20,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/04/20
+2026-04-20,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/04/20
 2026-04-20,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/04/20
 2026-04-20,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/04/20
 2026-04-20,invast,MXN/JPY,トライオートFX,1.0,15.1,-30.3,None,success,2026/04/20
@@ -839,7 +839,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-11,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/11
 2026-05-11,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/11
 2026-05-11,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-05-11,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/11
+2026-05-11,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/11
 2026-05-11,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/11
 2026-05-11,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/05/11
 2026-05-11,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/05/11
@@ -854,7 +854,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-12,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/12
 2026-05-12,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/12
 2026-05-12,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月14日,success,2026/05/12
-2026-05-12,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/12
+2026-05-12,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/12
 2026-05-12,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/12
 2026-05-12,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/05/12
 2026-05-12,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/05/12
@@ -869,7 +869,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/05/13
 2026-05-13,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/05/13
 2026-05-13,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月15日,success,2026/05/13
-2026-05-13,traders_light,MXN/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/05/13
+2026-05-13,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/05/13
 2026-05-13,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/05/13
 2026-05-13,traders_min,MXN/JPY,みんなのFX,3.0,15.1,-15.1,None,success,2026/05/13
 2026-05-13,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,15.1,-15.1,None,success,2026/05/13
@@ -884,7 +884,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-14,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/14
 2026-05-14,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/13
 2026-05-14,sbi,MXN/JPY,SBI FXトレード,3.0,14.0,-17.0,05月18日,success,2026/05/14
-2026-05-14,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/14
+2026-05-14,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/14
 2026-05-14,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/14
 2026-05-14,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/05/14
 2026-05-14,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/05/14
@@ -899,7 +899,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-15,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/15
 2026-05-15,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/14
 2026-05-15,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月19日,success,2026/05/15
-2026-05-15,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/15
+2026-05-15,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/15
 2026-05-15,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/15
 2026-05-15,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/05/15
 2026-05-15,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/05/15
@@ -914,7 +914,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-18,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/18
 2026-05-18,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/15
 2026-05-18,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-05-18,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/18
+2026-05-18,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/18
 2026-05-18,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/18
 2026-05-18,traders_min,MXN/JPY,みんなのFX,1.0,14.6,-14.6,None,success,2026/05/18
 2026-05-18,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/05/18
@@ -929,7 +929,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-19,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/19
 2026-05-19,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/18
 2026-05-19,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月21日,success,2026/05/19
-2026-05-19,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/19
+2026-05-19,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/19
 2026-05-19,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/19
 2026-05-19,traders_min,MXN/JPY,みんなのFX,1.0,14.6,-14.6,None,success,2026/05/19
 2026-05-19,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/05/19
@@ -944,7 +944,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-20,jfx,MXN/JPY,JFX,4.0,14.0,-19.0,None,success,2026/05/20
 2026-05-20,matsui,MXN/JPY,MATSUI FX,4.0,13.0,-23.0,None,success,2026/05/19
 2026-05-20,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月22日,success,2026/05/20
-2026-05-20,traders_light,MXN/JPY,LIGHT FX,4.0,14.2,-14.2,None,success,2026/05/20
+2026-05-20,traders_light,MXN/JPY,LIGHT FX,4.0,14.1,-14.1,None,success,2026/05/20
 2026-05-20,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,4.0,14.2,-14.2,None,success,2026/05/20
 2026-05-20,traders_min,MXN/JPY,みんなのFX,4.0,14.6,-14.6,None,success,2026/05/20
 2026-05-20,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,4.0,14.6,-14.6,None,success,2026/05/20
@@ -959,7 +959,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-21,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/21
 2026-05-21,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/20
 2026-05-21,sbi,MXN/JPY,SBI FXトレード,4.0,14.0,-17.0,05月26日,success,2026/05/21
-2026-05-21,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/21
+2026-05-21,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/21
 2026-05-21,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/21
 2026-05-21,traders_min,MXN/JPY,みんなのFX,1.0,14.6,-14.6,None,success,2026/05/21
 2026-05-21,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/05/21
@@ -989,7 +989,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-25,jfx,MXN/JPY,JFX,1.0,0.0,0.0,None,error,2026/05/25
 2026-05-25,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/21
 2026-05-25,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-05-25,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/25
+2026-05-25,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/25
 2026-05-25,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/25
 2026-05-25,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/05/25
 2026-05-25,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/05/25
@@ -1004,7 +1004,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-26,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/26
 2026-05-26,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/25
 2026-05-26,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月28日,success,2026/05/26
-2026-05-26,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/26
+2026-05-26,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/26
 2026-05-26,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/26
 2026-05-26,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/05/26
 2026-05-26,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/05/26
@@ -1019,7 +1019,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-27,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/05/27
 2026-05-27,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/05/26
 2026-05-27,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,05月29日,success,2026/05/27
-2026-05-27,traders_light,MXN/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/05/27
+2026-05-27,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/05/27
 2026-05-27,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/05/27
 2026-05-27,traders_min,MXN/JPY,みんなのFX,3.0,14.700000000000001,-14.700000000000001,None,success,2026/05/27
 2026-05-27,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.700000000000001,-14.700000000000001,None,success,2026/05/27
@@ -1034,7 +1034,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-28,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/28
 2026-05-28,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/27
 2026-05-28,sbi,MXN/JPY,SBI FXトレード,3.0,14.0,-17.0,06月01日,success,2026/05/28
-2026-05-28,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/28
+2026-05-28,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/28
 2026-05-28,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/28
 2026-05-28,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/05/28
 2026-05-28,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/05/28
@@ -1049,7 +1049,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-29,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/05/29
 2026-05-29,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/28
 2026-05-29,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,06月02日,success,2026/05/29
-2026-05-29,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/05/29
+2026-05-29,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/05/29
 2026-05-29,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/05/29
 2026-05-29,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/05/29
 2026-05-29,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/05/29
@@ -1064,7 +1064,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-01,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/01
 2026-06-01,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/05/29
 2026-06-01,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,error,None
-2026-06-01,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/01
+2026-06-01,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/01
 2026-06-01,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/01
 2026-06-01,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/01
 2026-06-01,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/01
@@ -1079,7 +1079,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-02,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/02
 2026-06-02,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/06/01
 2026-06-02,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,06月04日,success,2026/06/02
-2026-06-02,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/02
+2026-06-02,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/02
 2026-06-02,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/02
 2026-06-02,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/02
 2026-06-02,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/02
@@ -1094,7 +1094,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-03,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/06/03
 2026-06-03,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/06/03
 2026-06-03,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,06月05日,success,2026/06/03
-2026-06-03,traders_light,MXN/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/06/03
+2026-06-03,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/06/03
 2026-06-03,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/06/03
 2026-06-03,traders_min,MXN/JPY,みんなのFX,3.0,14.700000000000001,-14.700000000000001,None,success,2026/06/03
 2026-06-03,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.700000000000001,-14.700000000000001,None,success,2026/06/03
@@ -1109,7 +1109,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-04,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/04
 2026-06-04,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/06/03
 2026-06-04,sbi,MXN/JPY,SBI FXトレード,3.0,14.0,-17.0,06月08日,success,2026/06/04
-2026-06-04,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/04
+2026-06-04,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/04
 2026-06-04,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/04
 2026-06-04,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/04
 2026-06-04,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/04
@@ -1124,7 +1124,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-05,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/05
 2026-06-05,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/06/04
 2026-06-05,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,06月09日,success,2026/06/05
-2026-06-05,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/05
+2026-06-05,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/05
 2026-06-05,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/05
 2026-06-05,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/05
 2026-06-05,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/05
@@ -1139,7 +1139,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-08,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/08
 2026-06-08,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/06/05
 2026-06-08,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,06月10日,error,2026/06/08
-2026-06-08,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/08
+2026-06-08,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/08
 2026-06-08,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/08
 2026-06-08,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/08
 2026-06-08,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/08
@@ -1154,7 +1154,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-09,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/06/09
 2026-06-09,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-06-09,sbi,MXN/JPY,SBI FXトレード,1.0,15.0,-18.0,06月11日,success,2026/06/09
-2026-06-09,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/06/09
+2026-06-09,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/06/09
 2026-06-09,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/06/09
 2026-06-09,traders_min,MXN/JPY,みんなのFX,1.0,14.7,-14.7,None,success,2026/06/09
 2026-06-09,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.7,-14.7,None,success,2026/06/09
@@ -1169,7 +1169,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-10,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/06/10
 2026-06-10,matsui,MXN/JPY,MATSUI FX,3.0,None,None,None,error,None
 2026-06-10,sbi,MXN/JPY,SBI FXトレード,1.0,15.0,-18.0,06月12日,success,2026/06/10
-2026-06-10,traders_light,MXN/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/06/10
+2026-06-10,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/06/10
 2026-06-10,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/06/10
 2026-06-10,traders_min,MXN/JPY,みんなのFX,3.0,14.700000000000001,-14.700000000000001,None,success,2026/06/10
 2026-06-10,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.700000000000001,-14.700000000000001,None,success,2026/06/10
@@ -1722,9 +1722,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-03,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/03
 2026-08-03,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/07/31
 2026-08-03,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/03
-2026-08-03,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/03
+2026-08-03,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/03
 2026-08-03,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/03
-2026-08-03,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/03
+2026-08-03,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/03
 2026-08-03,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/03
 2026-08-04,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.4,-16.4,8/5,success,2026/08/04
 2026-08-04,click365_okasan,MXN/JPY,クリック365,1.0,13.1,-13.1,None,success,2026/08/03
@@ -1737,9 +1737,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-04,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/04
 2026-08-04,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-08-04,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,08月06日,success,2026/08/04
-2026-08-04,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/04
+2026-08-04,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/04
 2026-08-04,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/04
-2026-08-04,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/04
+2026-08-04,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/04
 2026-08-04,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/04
 2026-08-05,central_tanshi,MXN/JPY,セントラル短資FX,3.0,14.4,-16.400000000000002,8/6,success,2026/08/05
 2026-08-05,click365_okasan,MXN/JPY,クリック365,3.0,13.4,-13.4,None,success,2026/08/04
@@ -1752,9 +1752,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-05,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/08/05
 2026-08-05,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/08/04
 2026-08-05,sbi,MXN/JPY,SBI FXトレード,1.0,14.0,-17.0,08月07日,success,2026/08/05
-2026-08-05,traders_light,MXN/JPY,LIGHT FX,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/05
+2026-08-05,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/05
 2026-08-05,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/05
-2026-08-05,traders_min,MXN/JPY,みんなのFX,3.0,14.5,-14.5,None,success,2026/08/05
+2026-08-05,traders_min,MXN/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/05
 2026-08-05,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.5,-14.5,None,success,2026/08/05
 2026-08-06,central_tanshi,MXN/JPY,セントラル短資FX,2.0,14.4,-16.4,8/7,success,2026/08/06
 2026-08-06,click365_okasan,MXN/JPY,クリック365,2.0,14.133333333333333,-14.133333333333333,None,success,2026/08/05
@@ -1767,9 +1767,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-06,jfx,MXN/JPY,JFX,2.0,14.0,-19.0,None,success,2026/08/06
 2026-08-06,matsui,MXN/JPY,MATSUI FX,2.0,13.0,-23.0,None,success,2026/08/05
 2026-08-06,sbi,MXN/JPY,SBI FXトレード,3.0,13.0,-16.0,08月10日,success,2026/08/06
-2026-08-06,traders_light,MXN/JPY,LIGHT FX,2.0,14.3,-14.3,None,success,2026/08/06
+2026-08-06,traders_light,MXN/JPY,LIGHT FX,2.0,14.1,-14.1,None,success,2026/08/06
 2026-08-06,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,2.0,14.3,-14.3,None,success,2026/08/06
-2026-08-06,traders_min,MXN/JPY,みんなのFX,2.0,14.5,-14.5,None,success,2026/08/06
+2026-08-06,traders_min,MXN/JPY,みんなのFX,2.0,14.1,-14.1,None,success,2026/08/06
 2026-08-06,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,2.0,14.5,-14.5,None,success,2026/08/06
 2026-08-07,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.4,-16.4,8/10,success,2026/08/07
 2026-08-07,click365_okasan,MXN/JPY,クリック365,1.0,12.9,-12.9,None,success,2026/08/06
@@ -1781,9 +1781,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,invast,MXN/JPY,トライオートFX,1.0,14.6,-29.8,None,success,2026/08/06
 2026-08-07,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/07
 2026-08-07,sbi,MXN/JPY,SBI FXトレード,2.0,13.0,-16.0,08月12日,success,2026/08/07
-2026-08-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/07
+2026-08-07,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/07
 2026-08-07,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/07
-2026-08-07,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/07
+2026-08-07,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/07
 2026-08-07,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/07
 2026-08-07,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/06
 2026-08-10,click365_okasan,MXN/JPY,クリック365,1.0,13.6,-13.6,None,success,2026/08/07
@@ -1809,9 +1809,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-11,jfx,MXN/JPY,JFX,1.0,None,None,None,success,2026/08/11
 2026-08-11,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/07
 2026-08-11,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,08月13日,success,2026/08/11
-2026-08-11,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/11
+2026-08-11,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/11
 2026-08-11,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/11
-2026-08-11,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/11
+2026-08-11,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/11
 2026-08-11,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/11
 2026-08-12,central_tanshi,MXN/JPY,セントラル短資FX,3.0,14.1,-16.099999999999998,8/13,success,2026/08/12
 2026-08-12,click365_okasan,MXN/JPY,クリック365,3.0,13.4,-13.4,None,success,2026/08/11
@@ -1824,9 +1824,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-12,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/08/12
 2026-08-12,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/08/11
 2026-08-12,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月14日,success,2026/08/12
-2026-08-12,traders_light,MXN/JPY,LIGHT FX,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/12
+2026-08-12,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/12
 2026-08-12,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/12
-2026-08-12,traders_min,MXN/JPY,みんなのFX,3.0,14.5,-14.5,None,success,2026/08/12
+2026-08-12,traders_min,MXN/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/12
 2026-08-12,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.5,-14.5,None,success,2026/08/12
 2026-08-13,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/14,success,2026/08/13
 2026-08-13,click365_okasan,MXN/JPY,クリック365,1.0,13.966666666666667,-13.966666666666667,None,success,2026/08/12
@@ -1839,9 +1839,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-13,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/13
 2026-08-13,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/12
 2026-08-13,sbi,MXN/JPY,SBI FXトレード,3.0,13.0,-16.0,08月17日,success,2026/08/13
-2026-08-13,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/13
+2026-08-13,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/13
 2026-08-13,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/13
-2026-08-13,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/13
+2026-08-13,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/13
 2026-08-13,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/13
 2026-08-14,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/17,success,2026/08/14
 2026-08-14,click365_okasan,MXN/JPY,クリック365,1.0,13.4,-13.4,None,success,2026/08/13
@@ -1854,9 +1854,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/14
 2026-08-14,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/13
 2026-08-14,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月18日,success,2026/08/14
-2026-08-14,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/14
+2026-08-14,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/14
 2026-08-14,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/14
-2026-08-14,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/14
+2026-08-14,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/14
 2026-08-14,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/14
 2026-08-17,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/18,success,2026/08/17
 2026-08-17,click365_okasan,MXN/JPY,クリック365,1.0,13.6,-13.6,None,success,2026/08/14
@@ -1869,9 +1869,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-17,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/17
 2026-08-17,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/14
 2026-08-17,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/17
-2026-08-17,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/17
+2026-08-17,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/17
 2026-08-17,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/17
-2026-08-17,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/17
+2026-08-17,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/17
 2026-08-17,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/17
 2026-08-18,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/19,success,2026/08/18
 2026-08-18,click365_okasan,MXN/JPY,クリック365,1.0,13.4,-13.4,None,success,2026/08/17
@@ -1884,9 +1884,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-18,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/18
 2026-08-18,matsui,MXN/JPY,MATSUI FX,1.0,13.0,-23.0,None,success,2026/08/17
 2026-08-18,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月20日,success,2026/08/18
-2026-08-18,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/18
+2026-08-18,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/18
 2026-08-18,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/18
-2026-08-18,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/18
+2026-08-18,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/18
 2026-08-18,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/18
 2026-08-19,central_tanshi,MXN/JPY,セントラル短資FX,3.0,14.1,-16.099999999999998,8/20,success,2026/08/19
 2026-08-19,click365_okasan,MXN/JPY,クリック365,3.0,13.8,-13.8,None,success,2026/08/18
@@ -1899,9 +1899,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-19,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/08/19
 2026-08-19,matsui,MXN/JPY,MATSUI FX,3.0,12.0,-22.0,None,success,2026/08/18
 2026-08-19,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月21日,success,2026/08/19
-2026-08-19,traders_light,MXN/JPY,LIGHT FX,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/19
+2026-08-19,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/19
 2026-08-19,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.299999999999999,-14.299999999999999,None,success,2026/08/19
-2026-08-19,traders_min,MXN/JPY,みんなのFX,3.0,14.5,-14.5,None,success,2026/08/19
+2026-08-19,traders_min,MXN/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/19
 2026-08-19,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,14.5,-14.5,None,success,2026/08/19
 2026-08-20,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/21,success,2026/08/20
 2026-08-20,click365_okasan,MXN/JPY,クリック365,1.0,14.0,-14.0,None,success,2026/08/19
@@ -1914,9 +1914,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-20,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/20
 2026-08-20,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,error,None
 2026-08-20,sbi,MXN/JPY,SBI FXトレード,3.0,13.0,-16.0,08月24日,success,2026/08/20
-2026-08-20,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/20
+2026-08-20,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/20
 2026-08-20,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/20
-2026-08-20,traders_min,MXN/JPY,みんなのFX,1.0,14.5,-14.5,None,success,2026/08/20
+2026-08-20,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/20
 2026-08-20,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.5,-14.5,None,success,2026/08/20
 2026-08-21,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/24,success,2026/08/21
 2026-08-21,click365_okasan,MXN/JPY,クリック365,1.0,13.9,-13.9,None,success,2026/08/20
@@ -1929,9 +1929,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/21
 2026-08-21,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/20
 2026-08-21,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月25日,success,2026/08/21
-2026-08-21,traders_light,MXN/JPY,LIGHT FX,1.0,14.3,-14.3,None,success,2026/08/21
+2026-08-21,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/21
 2026-08-21,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.3,-14.3,None,success,2026/08/21
-2026-08-21,traders_min,MXN/JPY,みんなのFX,1.0,14.6,-14.6,None,success,2026/08/21
+2026-08-21,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/21
 2026-08-21,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,14.6,-14.6,None,success,2026/08/21
 2026-08-24,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/25,success,2026/08/24
 2026-08-24,click365_okasan,MXN/JPY,クリック365,1.0,13.3,-13.3,None,success,2026/08/21
@@ -1944,9 +1944,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-24,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/24
 2026-08-24,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/21
 2026-08-24,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/24
-2026-08-24,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/24
+2026-08-24,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/24
 2026-08-24,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/08/24
-2026-08-24,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/24
+2026-08-24,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/24
 2026-08-24,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/08/24
 2026-08-25,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/26,success,2026/08/25
 2026-08-25,click365_okasan,MXN/JPY,クリック365,1.0,13.2,-13.2,None,success,2026/08/24
@@ -1959,9 +1959,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/25
 2026-08-25,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/24
 2026-08-25,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月27日,success,2026/08/25
-2026-08-25,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/25
+2026-08-25,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/25
 2026-08-25,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/08/25
-2026-08-25,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/25
+2026-08-25,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/25
 2026-08-25,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/08/25
 2026-08-26,central_tanshi,MXN/JPY,セントラル短資FX,3.0,14.1,-16.099999999999998,8/27,success,2026/08/26
 2026-08-26,click365_okasan,MXN/JPY,クリック365,3.0,13.1,-13.1,None,success,2026/08/25
@@ -1974,9 +1974,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-26,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/08/26
 2026-08-26,matsui,MXN/JPY,MATSUI FX,3.0,12.0,-22.0,None,success,2026/08/25
 2026-08-26,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,08月28日,success,2026/08/26
-2026-08-26,traders_light,MXN/JPY,LIGHT FX,3.0,14.200000000000001,-14.200000000000001,None,success,2026/08/26
+2026-08-26,traders_light,MXN/JPY,LIGHT FX,3.0,14.1,-14.1,None,success,2026/08/26
 2026-08-26,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,3.0,14.200000000000001,-14.200000000000001,None,success,2026/08/26
-2026-08-26,traders_min,MXN/JPY,みんなのFX,3.0,15.1,-15.1,None,success,2026/08/26
+2026-08-26,traders_min,MXN/JPY,みんなのFX,3.0,14.1,-14.1,None,success,2026/08/26
 2026-08-26,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,3.0,15.1,-15.1,None,success,2026/08/26
 2026-08-27,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/28,success,2026/08/27
 2026-08-27,click365_okasan,MXN/JPY,クリック365,1.0,14.133333333333333,-14.133333333333333,None,success,2026/08/26
@@ -1989,9 +1989,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-27,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/27
 2026-08-27,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/26
 2026-08-27,sbi,MXN/JPY,SBI FXトレード,3.0,13.0,-16.0,08月31日,success,2026/08/27
-2026-08-27,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/27
+2026-08-27,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/27
 2026-08-27,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/08/27
-2026-08-27,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/27
+2026-08-27,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/27
 2026-08-27,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/08/27
 2026-08-28,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,8/31,success,2026/08/28
 2026-08-28,click365_okasan,MXN/JPY,クリック365,1.0,13.5,-13.5,None,success,2026/08/27
@@ -2004,9 +2004,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-28,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/28
 2026-08-28,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/27
 2026-08-28,sbi,MXN/JPY,SBI FXトレード,1.0,13.0,-16.0,09月01日,success,2026/08/28
-2026-08-28,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/28
+2026-08-28,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/28
 2026-08-28,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/08/28
-2026-08-28,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/28
+2026-08-28,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/28
 2026-08-28,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/08/28
 2026-08-31,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,9/1,success,2026/08/31
 2026-08-31,click365_okasan,MXN/JPY,クリック365,1.0,13.6,-13.6,None,success,2026/07/31
@@ -2019,9 +2019,9 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-31,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/08/31
 2026-08-31,matsui,MXN/JPY,MATSUI FX,1.0,12.0,-22.0,None,success,2026/08/28
 2026-08-31,sbi,MXN/JPY,SBI FXトレード,1.0,None,None,None,success,2026/08/31
-2026-08-31,traders_light,MXN/JPY,LIGHT FX,1.0,14.2,-14.2,None,success,2026/08/31
+2026-08-31,traders_light,MXN/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/08/31
 2026-08-31,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,14.2,-14.2,None,success,2026/08/31
-2026-08-31,traders_min,MXN/JPY,みんなのFX,1.0,15.1,-15.1,None,success,2026/08/31
+2026-08-31,traders_min,MXN/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/08/31
 2026-08-31,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/08/31
 2026-09-01,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.1,-16.1,9/2,success,2026/09/01
 2026-09-01,click365_okasan,MXN/JPY,クリック365,1.0,None,None,None,success,2026/09/01
