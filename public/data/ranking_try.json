@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-09-04",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-04T20:41:28.549Z",
+  "generated_at": "2026-09-04T20:55:00.283Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -23,12 +23,6 @@
       "sample_days": 16
     },
     {
-      "provider_id": "invast",
-      "name": "トライオートFX",
-      "avg": 24.100000000000005,
-      "sample_days": 17
-    },
-    {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
       "avg": 24.1,
@@ -39,6 +33,12 @@
       "name": "GMO外貨",
       "avg": 23.892857142857146,
       "sample_days": 14
+    },
+    {
+      "provider_id": "invast",
+      "name": "トライオートFX",
+      "avg": 23.60555555555556,
+      "sample_days": 18
     },
     {
       "provider_id": "dmm",
@@ -77,6 +77,12 @@
       "sample_days": 18
     },
     {
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": 23,
+      "sample_days": 19
+    },
+    {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": 23,
@@ -87,12 +93,6 @@
       "name": "ヒロセ通商",
       "avg": 23,
       "sample_days": 17
-    },
-    {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": 23,
-      "sample_days": 15
     },
     {
       "provider_id": "sbi",
@@ -106,7 +106,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -23,
-      "sample_days": 15
+      "sample_days": 19
     },
     {
       "provider_id": "traders_light",
@@ -189,8 +189,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -37.10000000000001,
-      "sample_days": 17
+      "avg": -36.72777777777779,
+      "sample_days": 18
     },
     {
       "provider_id": "m2j",
