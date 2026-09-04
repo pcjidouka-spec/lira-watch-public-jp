@@ -53,6 +53,7 @@ interface CarryData {
   jpy_rate_as_of: string;
   rate_source: string;
   fx_as_of: string;
+  spread_manual_as_of?: string | null;
   excluded: { currency: string; reason: string }[];
   ranking: CarryEntry[];
 }
@@ -244,6 +245,14 @@ export default function CarryPage({ data, built_on }: Props) {
                   出所 {data.rate_source}）、為替レートは {data.fx_as_of} 時点の
                   ものを使っています。
                 </p>
+
+                {data.spread_manual_as_of && (
+                  <p className="unit-note">
+                    ★スプレッドの一部は週次の自動取得では拾えないため、
+                    {data.spread_manual_as_of} 時点で手作業で控えた値を使っています。
+                    各社が条件を変えている場合、実際の値と異なることがあります。
+                  </p>
+                )}
 
                 {data.excluded && data.excluded.length > 0 && (
                   <section className="arb-about">
