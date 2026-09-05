@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02",
+  "generated_at": "2026-09-06",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -476,6 +476,78 @@
         "mode": "fixed",
         "condition": "1万通貨〜",
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      }
+    },
+    "AUD/JPY": {
+      "central_tanshi": {
+        "spread": 0.4,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "17-24時",
+        "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
+      },
+      "dmm": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+      },
+      "gaitame": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.gaitame.com/service/fx/spread.html"
+      },
+      "gmo_click": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
+      },
+      "hirose": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-3時",
+        "source": "https://hirose-fx.co.jp/spread/"
+      },
+      "invast": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "9-5時",
+        "source": "https://www.invast.jp/triauto/spread/"
+      },
+      "sbi": {
+        "spread": 0.48,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "1万通貨〜",
+        "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
+      },
+      "traders_light": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://lightfx.jp/service/spread/"
+      },
+      "traders_light_light": {
+        "spread": 0.48,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://lightfx.jp/service/spread/"
+      },
+      "traders_min": {
+        "spread": 0.5,
+        "unit": "銭",
+        "mode": "fixed",
+        "condition": "8-5時",
+        "source": "https://min-fx.jp/lineup/fx/service/spread/"
       }
     }
   }

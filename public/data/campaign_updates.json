@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-05T04:00:46.859348",
+  "updated_at": "2026-09-06T04:00:50.928532",
   "providers": {
     "gmo_click": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-08-31T13:00:21.190067"
     },
     "gmo": {
@@ -34,7 +34,7 @@
       "updated_at": "2026-09-01T09:00:41.871715"
     },
     "matsui": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-09-01T00:00:32.519997"
     },
     "gaitame": {
@@ -42,7 +42,7 @@
       "updated_at": "2026-09-01T06:00:41.455453"
     },
     "click365_okasan": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-09-01T00:00:33.242051"
     },
     "moneysquare": {
@@ -70,8 +70,8 @@
       "updated_at": "2026-05-29T21:00:36.071399"
     },
     "m2j": {
-      "has_new": false,
-      "updated_at": "2026-08-03T12:00:40.328738"
+      "has_new": true,
+      "updated_at": "2026-09-06T04:00:50.805165"
     }
   }
 }
