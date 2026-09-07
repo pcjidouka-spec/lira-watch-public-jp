@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-09-07",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-07T20:43:14.504Z",
+  "generated_at": "2026-09-07T20:56:51.598Z",
   "buy_ranking": [
     {
       "provider_id": "traders_min_light",
@@ -13,8 +13,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 14.857142857142856,
-      "sample_days": 14
+      "avg": 14.879999999999997,
+      "sample_days": 15
     },
     {
       "provider_id": "traders_light_light",
@@ -183,8 +183,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -30.057142857142857,
-      "sample_days": 14
+      "avg": -30.08,
+      "sample_days": 15
     }
   ]
 }
