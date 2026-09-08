@@ -140,7 +140,12 @@ export default function ArbitragePage({ data }: Props) {
                           <th>売る業者</th>
                           <th>裁定益/日</th>
                           <th>必要資本</th>
-                          <th>年率</th>
+                          <th>
+                            年率
+                            <span className="th-note">
+                              レバレッジ{data.leverage}倍
+                            </span>
+                          </th>
                           <th>推移</th>
                           <th>スプレッド回収</th>
                         </tr>
@@ -425,6 +430,16 @@ export default function ArbitragePage({ data }: Props) {
           color: #374151;
           font-weight: 700;
           white-space: nowrap;
+        }
+        /* 見出しの副ラベル。全行に効く前提なので列見出しに置く。
+           ★.arb-table th が色と太さを指定しているので、同じ詳細度以上で
+           上書きする (th 側だけ変えると継承で潰れる)。 */
+        .arb-table th .th-note {
+          display: block;
+          margin-top: 2px;
+          font-size: 11px;
+          font-weight: 400;
+          color: #6b7280;
         }
         .arb-table tbody tr:nth-child(even) {
           background: #fafafa;
