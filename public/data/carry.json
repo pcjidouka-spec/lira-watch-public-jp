@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-08 05:39:41",
+  "generated_at": "2026-09-09 05:40:57",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.0,
   "jpy_rate_as_of": "2026-09-01",
   "rate_source": "bis",
-  "fx_as_of": "2026-09-08",
+  "fx_as_of": "2026-09-09",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [],
   "ranking": [
@@ -14,24 +14,24 @@
       "currency": "PLN",
       "policy_rate": 3.75,
       "policy_rate_as_of": "2026-09-01",
-      "fx_rate": 42.04860819106887,
-      "policy_implied_carry": 31.68,
+      "fx_rate": 41.652782405864706,
+      "policy_implied_carry": 31.38,
       "best": {
         "provider_id": "traders_light",
         "name": "LIGHT FX",
         "group": "traders",
         "swap": 75.0,
-        "as_of": "2026-09-07"
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 236.7,
-      "median_swap": 32.0,
+      "payout_ratio_pct": 239.0,
+      "median_swap": 31.0,
       "second": {
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
         "swap": 35.0
       },
-      "provider_count": 7,
+      "provider_count": 8,
       "outlier": true,
       "payback": {
         "days": 5.6,
@@ -39,10 +39,10 @@
         "condition": null
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 232.4,
         "max_pct": 237.8,
-        "avg_pct": 235.5,
+        "avg_pct": 235.7,
         "median_pct": 236.6
       },
       "rank": 1
@@ -51,16 +51,16 @@
       "currency": "HUF",
       "policy_rate": 5.5,
       "policy_rate_as_of": "2026-08-26",
-      "fx_rate": 0.5005576211900057,
-      "policy_implied_carry": 0.62,
+      "fx_rate": 0.49463078285214,
+      "policy_implied_carry": 0.61,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
         "swap": 1.4,
-        "as_of": "2026-09-07"
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 226.9,
+      "payout_ratio_pct": 229.6,
       "median_swap": 0.8,
       "second": {
         "provider_id": "gmo_click",
@@ -76,11 +76,11 @@
         "condition": null
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 178.3,
         "max_pct": 227.0,
-        "avg_pct": 204.8,
-        "median_pct": 212.9
+        "avg_pct": 208.5,
+        "median_pct": 219.8
       },
       "rank": 2
     },
@@ -88,17 +88,17 @@
       "currency": "USD",
       "policy_rate": 3.625,
       "policy_rate_as_of": "2026-09-01",
-      "fx_rate": 156.17679212868967,
-      "policy_implied_carry": 112.32,
+      "fx_rate": 154.41630636195183,
+      "policy_implied_carry": 111.05,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
         "swap": 124.0,
-        "as_of": "2026-09-07"
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 110.4,
-      "median_swap": 116.0,
+      "payout_ratio_pct": 111.7,
+      "median_swap": 112.0,
       "second": {
         "provider_id": "central_tanshi",
         "name": "セントラル短資FX",
@@ -113,11 +113,11 @@
         "condition": "9-5時"
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 106.9,
         "max_pct": 110.4,
-        "avg_pct": 108.1,
-        "median_pct": 107.7
+        "avg_pct": 108.5,
+        "median_pct": 108.1
       },
       "rank": 3
     },
@@ -125,21 +125,21 @@
       "currency": "MXN",
       "policy_rate": 6.5,
       "policy_rate_as_of": "2026-09-01",
-      "fx_rate": 9.248640449853871,
-      "policy_implied_carry": 13.94,
+      "fx_rate": 9.109625230018038,
+      "policy_implied_carry": 13.73,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
         "swap": 15.2,
-        "as_of": "2026-09-04"
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 109.1,
+      "payout_ratio_pct": 110.7,
       "median_swap": 14.1,
       "second": {
-        "provider_id": "traders_min_light",
-        "name": "みんなのFX（LIGHT）",
-        "group": "traders",
+        "provider_id": "gmo_click",
+        "name": "GMOクリック証券",
+        "group": "gmo_click",
         "swap": 15.1
       },
       "provider_count": 15,
@@ -150,7 +150,7 @@
         "condition": "9-5時"
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 107.0,
         "max_pct": 109.8,
         "avg_pct": 108.6,
@@ -162,17 +162,17 @@
       "currency": "AUD",
       "policy_rate": 4.35,
       "policy_rate_as_of": "2026-08-27",
-      "fx_rate": 112.54924029262801,
-      "policy_implied_carry": 103.3,
+      "fx_rate": 111.38338159946537,
+      "policy_implied_carry": 102.23,
       "best": {
         "provider_id": "central_tanshi",
         "name": "セントラル短資FX",
         "group": "central_tanshi",
-        "swap": 112.0,
-        "as_of": "2026-09-07"
+        "swap": 111.0,
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 108.4,
-      "median_swap": 100.5,
+      "payout_ratio_pct": 108.6,
+      "median_swap": 97.5,
       "second": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -187,10 +187,10 @@
         "condition": "17-24時"
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 105.2,
         "max_pct": 108.9,
-        "avg_pct": 107.6,
+        "avg_pct": 107.7,
         "median_pct": 108.5
       },
       "rank": 5
@@ -199,22 +199,22 @@
       "currency": "ZAR",
       "policy_rate": 7.0,
       "policy_rate_as_of": "2026-08-25",
-      "fx_rate": 9.787704685374234,
-      "policy_implied_carry": 16.09,
+      "fx_rate": 9.65129858222424,
+      "policy_implied_carry": 15.87,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
         "swap": 15.1,
-        "as_of": "2026-09-07"
+        "as_of": "2026-09-08"
       },
-      "payout_ratio_pct": 93.9,
+      "payout_ratio_pct": 95.2,
       "median_swap": 14.1,
       "second": {
-        "provider_id": "central_tanshi",
-        "name": "セントラル短資FX",
-        "group": "central_tanshi",
-        "swap": 14.3
+        "provider_id": "gmo_click",
+        "name": "GMOクリック証券",
+        "group": "gmo_click",
+        "swap": 14.5
       },
       "provider_count": 9,
       "outlier": false,
@@ -224,11 +224,11 @@
         "condition": "9-5時"
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 88.9,
         "max_pct": 94.5,
-        "avg_pct": 91.9,
-        "median_pct": 92.8
+        "avg_pct": 92.2,
+        "median_pct": 93.3
       },
       "rank": 6
     },
@@ -236,32 +236,32 @@
       "currency": "TRY",
       "policy_rate": 37.0,
       "policy_rate_as_of": "2026-08-28",
-      "fx_rate": 3.2231343692487195,
-      "policy_implied_carry": 31.79,
+      "fx_rate": 3.1841049480990895,
+      "policy_implied_carry": 31.4,
       "best": {
+        "provider_id": "gmo",
+        "name": "GMO外貨",
+        "group": "gmo",
+        "swap": 25.1,
+        "as_of": "2026-09-08"
+      },
+      "payout_ratio_pct": 79.9,
+      "median_swap": 23.1,
+      "second": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "group": "gmo_click",
-        "swap": 25.0,
-        "as_of": "2026-09-07"
-      },
-      "payout_ratio_pct": 78.6,
-      "median_swap": 23.15,
-      "second": {
-        "provider_id": "click365_okasan",
-        "name": "クリック365",
-        "group": "click365_okasan",
         "swap": 25.0
       },
       "provider_count": 16,
       "outlier": false,
       "payback": {
-        "days": 5.6,
+        "days": 2.4,
         "reason": null,
-        "condition": "9-3時"
+        "condition": "〜1万通貨/8-3時"
       },
       "history": {
-        "days": 5,
+        "days": 6,
         "min_pct": 76.4,
         "max_pct": 80.1,
         "avg_pct": 78.5,

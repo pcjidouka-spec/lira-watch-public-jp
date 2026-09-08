@@ -201,3 +201,14 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-07,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,101.0,-101.0,None,success,2026/09/07
 2026-09-07,traders_min,AUD/JPY,みんなのFX,1.0,100.0,-100.0,None,success,2026/09/07
 2026-09-07,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,100.0,-100.0,None,success,2026/09/07
+2026-09-08,central_tanshi,AUD/JPY,セントラル短資FX,1.0,111.0,-136.0,9/9,success,2026/09/08
+2026-09-08,dmm,AUD/JPY,DMM FX,1.0,95.0,-98.0,None,success,2026/09/08
+2026-09-08,gaitame,AUD/JPY,外為どっとコム,1.0,95.0,-110.0,None,success,2026/09/08
+2026-09-08,gmo_click,AUD/JPY,GMOクリック証券,1.0,97.0,-97.0,None,success,2026/09/08
+2026-09-08,hirose,AUD/JPY,ヒロセ通商,1.0,101.0,-113.0,None,success,2026/09/07
+2026-09-08,invast,AUD/JPY,トライオートFX,1.0,110.0,-165.0,None,success,2026/09/07
+2026-09-08,sbi,AUD/JPY,SBI FXトレード,1.0,None,None,None,success,2026/09/08
+2026-09-08,traders_light,AUD/JPY,LIGHT FX,1.0,98.0,-98.0,None,success,2026/09/08
+2026-09-08,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,98.0,-98.0,None,success,2026/09/08
+2026-09-08,traders_min,AUD/JPY,みんなのFX,1.0,97.0,-97.0,None,success,2026/09/08
+2026-09-08,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,97.0,-97.0,None,success,2026/09/08
