@@ -10,7 +10,7 @@ const RSS_HEADER = `<?xml version="1.0" encoding="UTF-8" ?>
   <description>トルコリラのスワップポイント比較と長期投資記録</description>
   <language>ja</language>
   <image>
-    <url>https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png</url>
+    <url>https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp</url>
     <title>トルコリラ・ウォッチ (lira-watch)</title>
     <link>https://www.lira-watch.sbs/</link>
   </image>
@@ -127,7 +127,7 @@ function generateRSS() {
         if (article.thumbnail) {
             const imageUrl = `https://www.lira-watch.sbs${article.thumbnail}`;
             itemXml += `
-    <enclosure url="${imageUrl}" length="0" type="image/png" />
+    <enclosure url="${imageUrl}" length="0" type="image/${(article.thumbnail.split('.').pop()||'webp').toLowerCase()=='jpg'?'jpeg':(article.thumbnail.split('.').pop()||'webp').toLowerCase()}" />
     <media:thumbnail url="${imageUrl}" />
     <media:content url="${imageUrl}" medium="image" />`;
         }

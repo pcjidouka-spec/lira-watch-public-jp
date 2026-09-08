@@ -27,7 +27,7 @@ export const articles: Article[] = [
 ・公式シミュレーション合計40,955円相当
 ・スプレッドを引くと他社との差はほぼ消えます`,
   date: '2026/08/28',
-  thumbnail: '/images/gaitame-swap-campaign-202609_60.png',
+  thumbnail: '/images/gaitame-swap-campaign-202609_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -294,7 +294,7 @@ export const articles: Article[] = [
 ・建玉上限は10万通貨と前回の1/5
 ・上限フル保有すると約2,684円`,
   date: '2026/08/11',
-  thumbnail: '/images/triauto-campaign-20260810_60.png',
+  thumbnail: '/images/triauto-campaign-20260810_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'トライオートFX', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -452,7 +452,7 @@ export const articles: Article[] = [
   title: 'マネースクエアの「トルコリラ/円スワップ20％増額キャンペーン」が開催中！実質スワップは1万通貨あたり30円で業界トップ級に',
   share_title: 'トルコリラ/円スワップ20％増額（マネースクエア）',
   date: '2026/08/02',
-  thumbnail: '/images/m2j-try-swap-campaign-202608_60.png',
+  thumbnail: '/images/m2j-try-swap-campaign-202608_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'マネースクエア', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -630,7 +630,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が8月も開催！米ドル/トルコリラ・ユーロ/トルコリラは最大60％上乗せ',
   share_title: 'スワップ最大60％増額キャンペーンが8月も開催！（外為どっとコム）',
   date: '2026/08/01',
-  thumbnail: '/images/gaitame-swap-campaign-202608_60.png',
+  thumbnail: '/images/gaitame-swap-campaign-202608_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -825,7 +825,7 @@ export const articles: Article[] = [
   title: 'SBI FXトレード「高金利3通貨！真夏のスワップ20％増額キャンペーン」が開催！トルコリラ・南アランド・メキシコペソの全3通貨が20％キャッシュバック',
   share_title: 'SBI FXトレード 高金利3通貨スワップ20％増額キャンペーン開催！',
   date: '2026/08/01',
-  thumbnail: '/images/sbi-fxtrade-swap-campaign-202608_card.jpg',
+  thumbnail: '/images/sbi-fxtrade-swap-campaign-202608_card.webp',
   tags: ['FX', 'トルコリラ', 'メキシコペソ', '南アフリカランド', 'スワップ投資', 'SBI FXトレード', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -962,7 +962,7 @@ export const articles: Article[] = [
   title: 'トライオートFX：トルコリラ/円のスワップが20％増額（7/15〜7/31）1万通貨あたり5.1円/日を上乗せ',
   share_title: 'トルコリラ/円スワップ20％増額（トライオートFX）',
   date: '2026/07/16',
-  thumbnail: '/images/triauto-campaign-20260715_60.png',
+  thumbnail: '/images/triauto-campaign-20260715_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'トライオートFX', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1078,7 +1078,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が7月も開催！米ドル/トルコリラ・ユーロ/トルコリラは最大60％上乗せ',
   share_title: 'スワップ最大60％増額キャンペーンが7月も開催！（外為どっとコム）',
   date: '2026/06/26',
-  thumbnail: '/images/gaitame-swap-campaign-202607_60.png',
+  thumbnail: '/images/gaitame-swap-campaign-202607_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1269,7 +1269,7 @@ export const articles: Article[] = [
   title: 'SBI FXトレードの高金利3通貨「初夏のスワップ増額キャンペーン」が開催！トルコリラ・南アランドは最大20％、メキシコペソは10％をキャッシュバック',
   share_title: 'SBI FXトレード 高金利3通貨スワップ増額キャンペーン開催！（最大20％CB）',
   date: '2026/05/30',
-  thumbnail: '/images/sbi-fxtrade-swap-campaign-202606_card.jpg',
+  thumbnail: '/images/sbi-fxtrade-swap-campaign-202606_card.webp',
   tags: ['FX', 'トルコリラ', 'メキシコペソ', '南アフリカランド', 'スワップ投資', 'SBI FXトレード', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1410,7 +1410,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が6月も開催！10万円からでも30％上乗せのチャンス',
   share_title: 'スワップ最大60％増額キャンペーンが6月も開催！（外為どっとコム）',
   date: '2026/05/30',
-  thumbnail: '/images/gaitame-swap-campaign-202606_60.png',
+  thumbnail: '/images/gaitame-swap-campaign-202606_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1572,7 +1572,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が5月も開催！10万円からでも30％上乗せのチャンス',
   share_title: 'スワップ最大60％増額キャンペーンが5月も開催！（外為どっとコム）',
   date: '2026/05/02',
-  thumbnail: '/images/gaitame-swap-campaign-202605_60.png',
+  thumbnail: '/images/gaitame-swap-campaign-202605_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '外為どっとコム', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1641,7 +1641,7 @@ export const articles: Article[] = [
   title: '【2026年5月】インヴァスト証券：トルコリラ/円スワップ50%増額キャンペーンが再び開催！',
   share_title: 'トルコリラ/円スワップ50%増額キャンペーンが5月も開催！（インヴァスト証券）',
   date: '2026/05/01',
-  thumbnail: '/images/invast-tryauto-tryswap-campaign-202605_60.png',
+  thumbnail: '/images/invast-tryauto-tryswap-campaign-202605_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'インヴァスト証券', 'キャンペーン'],
   content: `
     <p class="intro">
@@ -1698,7 +1698,7 @@ export const articles: Article[] = [
   share_title: '備蓄は7月上旬に枯渇か？ ── ホルムズ封鎖「Xデイ」',
   thumbnail_text: 'ホルムズ封鎖\n供給ショック\n備蓄は7月上旬に枯渇か？',
   date: '2026/04/13',
-  thumbnail: '/images/hormuz-supply-shock-xday-20260413_60.png',
+  thumbnail: '/images/hormuz-supply-shock-xday-20260413_60.webp',
   tags: ['原油価格', 'ホルムズ海峡', 'イラン戦争', '供給ショック', '備蓄', 'ガソリン価格'],
   content: `
     <p class="intro">
@@ -1979,7 +1979,7 @@ export const articles: Article[] = [
   share_title: 'トルコリラ暴落はいつ来るか？ 4つのトリガーを整理した',
   thumbnail_text: 'トルコリラ暴落\n4つのトリガーと時間軸',
   date: '2026/04/13',
-  thumbnail: '/images/turkey-oilshock-endurance-20260413_60.png',
+  thumbnail: '/images/turkey-oilshock-endurance-20260413_60.webp',
   tags: ['トルコリラ', 'オイルショック', 'USD/TRY', 'トルコ経済', '外貨準備', '中東情勢'],
   content: `
     <p class="intro">
@@ -2117,7 +2117,7 @@ export const articles: Article[] = [
   title: 'セントラル短資の異常スワップはいつまで続く？',
   thumbnail_text: 'セントラル短資\n異常スワップ\n年率33％超え',
   date: '2026/03/31',
-  thumbnail: '/images/central-tanshi-abnormal-swap-20260331_60.png',
+  thumbnail: '/images/central-tanshi-abnormal-swap-20260331_60.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', 'セントラル短資FX', '高金利通貨'],
   content: `
     <p class="intro">
@@ -2125,7 +2125,7 @@ export const articles: Article[] = [
     </p>
 
     <div class="article-image-container" style="text-align: center; margin: 20px 0;">
-      <img src="/images/central-tanshi-screenshot-20260331.png" alt="セントラル短資FX 2026年3月実績" style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <img src="/images/central-tanshi-screenshot-20260331.webp" alt="セントラル短資FX 2026年3月実績" style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
       <p style="font-size: 0.8em; color: #666; margin-top: 8px;">（セントラル短資FX 2026年3月の運用画面）</p>
     </div>
 
@@ -2158,7 +2158,7 @@ export const articles: Article[] = [
   title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」が今月も開催！10万円からでも30％上乗せのチャンス',
   thumbnail_text: '外為どっとコム\nスワップ最大60％増額\n10万円から30％上乗せ',
   date: '2026/03/28',
-  thumbnail: '/images/gaitame_campaign_2604_v2.png',
+  thumbnail: '/images/gaitame_campaign_2604_v2.webp',
   tags: ['FX', 'トルコリラ', 'スワップ投資', '高金利通貨', '外為どっとコム'],
   content: `
     <p class="intro">
@@ -2252,7 +2252,7 @@ export const articles: Article[] = [
   title: '【最大4万円のチャンス！】セントラル短資FXの高金利通貨スワップ増量キャンペーンがすごい！（最大68％増）',
   thumbnail_text: 'セントラル短資FX\n高金利通貨\n最大4万円キャッシュバック',
   date: '2026/03/13',
-  thumbnail: '/images/central-tanshi-high-yield-swap-20260313_60.png', // 画像用意後にパス調整
+  thumbnail: '/images/central-tanshi-high-yield-swap-20260313_60.webp', // 画像用意後にパス調整
   tags: ['FX', 'メキシコペソ/円', '南アフリカランド/円', 'スワップ投資', 'キャンペーン', 'セントラル短資FX'],
   content: `
     <p class="intro">
@@ -2331,7 +2331,7 @@ export const articles: Article[] = [
     title: 'オイルショックの足音と「動かせない原発」の正体：私たちは何を人質に取られているのか',
     thumbnail_text: 'エネルギー危機\n動かせない原発\n安全保障',
     date: '2026/03/09',
-    thumbnail: '/images/energy-crisis-nuclear-power-20260309_60.png',
+    thumbnail: '/images/energy-crisis-nuclear-power-20260309_60.webp',
     tags: ['エネルギー危機', '原発', 'オイルショック', 'エネルギー安全保障', '日本の課題'],
     content: `
       <p class="intro">
@@ -2433,7 +2433,7 @@ export const articles: Article[] = [
     title: '【先着20名】SBIハイパー預金で確実2,000円GET！特大キャンペーンも同時開催中💰',
     thumbnail_text: 'SBIハイパー預金\n確実2,000円\n年365％上乗せ',
     date: '2026/03/06',
-    thumbnail: '/images/sbi-hyper-deposit-campaign-20260306_60.png',
+    thumbnail: '/images/sbi-hyper-deposit-campaign-20260306_60.webp',
     tags: ['SBI新生銀行', 'SBIハイパー預金', 'キャンペーン', 'ポイ活', '貯金'],
     content: `
       <p class="intro">
@@ -2482,7 +2482,7 @@ export const articles: Article[] = [
     title: 'FX20業者・株13社・仮想通貨7社…複雑すぎる投資の確定申告をAIで整理した話',
     thumbnail_text: '確定申告\n複数口座の申告\nAI\n自動化の限界点',
     date: '2026/03/04',
-    thumbnail: '/images/complex-tax-return-automation-20260304_60.png',
+    thumbnail: '/images/complex-tax-return-automation-20260304_60.webp',
     tags: ['確定申告', 'FX', '仮想通貨', 'Python', 'e-Tax', '投資', '自動化', 'AI', 'NotebookLM'],
     content: `
       <p class="intro">
@@ -2658,7 +2658,7 @@ export const articles: Article[] = [
     title: '【2026年3月】トルコリラ・高金利通貨のスワップ増額キャンペーンおすすめ2選',
     thumbnail_text: '3月開始！\nスワップ増額\nおすすめ2選',
     date: '2026/03/02',
-    thumbnail: '/images/recommended-campaigns-20260302_60.png',
+    thumbnail: '/images/recommended-campaigns-20260302_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'キャンペーン', 'インヴァスト証券', 'LIGHT FX'],
     content: `
       <p class="intro">
@@ -2717,7 +2717,7 @@ export const articles: Article[] = [
     title: '【地政学的リスク急騰】\n週明けの不透明な相場予想に必見のYouTube動画4選',
     thumbnail_text: '地政学リスク・原油高\n週明け相場 注目動画4選',
     date: '2026/03/01',
-    thumbnail: '/images/youtube-market-outlook-20260301_60.png',
+    thumbnail: '/images/youtube-market-outlook-20260301_60.webp',
     tags: ['FX', '相場展望', 'YouTube', '地政学的リスク', '原油'],
     content: `
       <p class="intro">
@@ -2765,7 +2765,7 @@ export const articles: Article[] = [
     id: 'gaitame-swap-campaign-20260228',
     title: '外為どっとコムの「スワップポイント最大60％増額キャンペーン」がおすすめです！',
     date: '2026/02/28',
-    thumbnail: '/images/gaitame_campaign_60.png',
+    thumbnail: '/images/gaitame_campaign_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', '高金利通貨', '外為どっとコム'],
     content: `
       <p class="intro">
@@ -2844,7 +2844,7 @@ export const articles: Article[] = [
     id: 'dandanbank-campaign-20260215',
     title: '【最大24,000円】DanDanBANKのキャンペーンが超おトク！',
     date: '2026/02/15',
-    thumbnail: '/images/dandan_campaign_60.png',
+    thumbnail: '/images/dandan_campaign_60.webp',
     tags: ['DanDanBANK', 'キャンペーン', '銀行', 'ポイ活'],
     content: `
       <p class="intro">
@@ -2897,7 +2897,7 @@ export const articles: Article[] = [
     id: 'takaichi-yen-weakness-prediction-20260211',
     title: '【予測】高市政権の大勝で「円安」が再加速する理由と時期',
     date: '2026/02/11',
-    thumbnail: '/images/takaichi_yen_60.png',
+    thumbnail: '/images/takaichi_yen_60.webp',
     tags: ['FX', '円安', '高市政権', '経済予測'],
     content: `
       <p class="intro">
@@ -2948,7 +2948,7 @@ export const articles: Article[] = [
     id: 'min-fx-swap-campaign-20260203',
     title: 'みんなのFX：スワップNo.1チャレンジキャンペーンの凄さを徹底解説',
     date: '2026/02/03',
-    thumbnail: '/images/minfx_campaign_60.png',
+    thumbnail: '/images/minfx_campaign_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'みんなのFX'],
     content: `
       <p class="intro">
@@ -2980,7 +2980,7 @@ export const articles: Article[] = [
     id: 'triauto-campaign-20260202',
     title: 'トライオートFX：トルコリラ/円 キャンペーン概要',
     date: '2026/02/02',
-    thumbnail: '/images/triauto_campaign_60.png',
+    thumbnail: '/images/triauto_campaign_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'トライオートFX'],
     content: `
       <p class="intro">
@@ -3014,7 +3014,7 @@ export const articles: Article[] = [
     id: 'feb-swap-campaigns-20260130',
     title: '2月開始スワップポイント増額キャンペーンまとめ（外為、SBI、セントラル短資FX）',
     date: '2026/01/30',
-    thumbnail: '/images/feb_campaigns_60.png',
+    thumbnail: '/images/feb_campaigns_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'キャンペーンまとめ'],
     content: `
       <p class="intro">
@@ -3078,7 +3078,7 @@ export const articles: Article[] = [
     id: 'dollar-depreciation-20260129',
     title: '米国の為替政策と円高の陰で進むドル安',
     date: '2026/01/29',
-    thumbnail: '/images/dollar-depreciation-20260129_60.png',
+    thumbnail: '/images/dollar-depreciation-20260129_60.webp',
     tags: ['FX', 'ドル安', '為替政策', 'トランプ政権'],
     content: `
       <p class="intro">
@@ -3124,7 +3124,7 @@ export const articles: Article[] = [
     id: 'yen-appreciation-factors-20260128',
     title: '【速報】円高153円台突入！日米協調介入の予兆と構造的円高要因を徹底解説',
     date: '2026/01/28',
-    thumbnail: '/images/yen-appreciation-factors-20260128_60.png',
+    thumbnail: '/images/yen-appreciation-factors-20260128_60.webp',
     tags: ['FX', '円高', '為替介入', '経済速報'],
     content: `
       <div class="infographic-box">
@@ -3214,7 +3214,7 @@ export const articles: Article[] = [
     id: 'usdjpy-rate-check-20260124',
     title: 'ドル円（トルコリラ円）急落！為替介入か？今後の可能性は？',
     date: '2026/01/24',
-    thumbnail: '/images/usdjpy-rate-check-20260124_60.png',
+    thumbnail: '/images/usdjpy-rate-check-20260124_60.webp',
     tags: ['FX', 'ドル円', 'トルコリラ', '為替介入'],
     content: `
       <div class="infographic-box">
@@ -3302,7 +3302,7 @@ export const articles: Article[] = [
     id: 'central-tanshi-campaign-20260116',
     title: '【1/16〜1/30限定】セントラル短資FX「トルコリラ祭り」開催中！',
     date: '2026/01/16',
-    thumbnail: '/images/central-tanshi-campaign-20260116_60.png',
+    thumbnail: '/images/central-tanshi-campaign-20260116_60.webp',
     tags: ['FX', 'トルコリラ', 'スワップ投資', 'セントラル短資FX'],
     content: `
       <p class="intro">本日スタート！セントラル短資FXにて、トルコリラ/円の取引で最大3万円＋αのキャッシュバックが受け取れる激熱キャンペーン「トルコリラ祭り」が開催されています。</p>
@@ -3341,7 +3341,7 @@ export const articles: Article[] = [
     id: 'fx-account-points-20260111',
     title: '【2026年最新】ポイントサイト経由でFX口座を開設して賢く稼ぐ裏ワザ',
     date: '2026/01/11',
-    thumbnail: '/images/fx-account-points-20260111_60.png',
+    thumbnail: '/images/fx-account-points-20260111_60.webp',
     tags: ['FX', 'ポイントサイト', '口座開設', '裏ワザ'],
     content: `
       <p class="intro">FXを始める際、公式サイトから直接申し込むのは非常にもったいないことをご存知でしょうか？ポイントサイトを経由するだけで、数万円相当のポイントが還元されます。</p>
@@ -3396,7 +3396,7 @@ export const articles: Article[] = [
     id: 'campaign-20260110',
     title: 'トルコリラを対象としたおすすめ3社のスワップ増額キャンペーン',
     date: '2026/01/10',
-    thumbnail: '/images/campaign-20260110_60.png',
+    thumbnail: '/images/campaign-20260110_60.webp',
     tags: ['FX', 'トルコリラ', 'キャンペーン', 'スワップ投資'],
     content: `
       <div class="campaign-section">
@@ -3431,7 +3431,7 @@ export const articles: Article[] = [
     id: 'risk-management-20260109',
     title: 'トルコリラ投資の安全圏はどこ？最大変動率から逆算する「最低必要証拠金」の考え方',
     date: '2026/01/09',
-    thumbnail: '/images/risk-management-20260109_60.png',
+    thumbnail: '/images/risk-management-20260109_60.webp',
     tags: ['FX', 'トルコリラ', 'リスク管理', '長期投資'],
     content: `
       <p class="intro">高スワップポイントが魅力のトルコリラ/円（TRY/JPY）。しかし、その裏側にある「価格変動リスク」を正しく把握しなければ、一瞬でロスカットの憂き目に遭う可能性もあります。本記事では、過去のデータから導き出す「最大変動率」と、FX会社の「ロスカットルール」をもとに、破綻しないために最低限必要な証拠金（レバレッジ）の計算方法を解説します。</p>
@@ -3519,7 +3519,7 @@ export const articles: Article[] = [
     id: 'performance-review-20260108',
     title: '【2025年トルコリラ投資の実績】トルコリラ投資、スワップ込みで結局いくら儲かった？',
     date: '2026/01/08',
-    thumbnail: '/images/performance-review-20260108_60.png',
+    thumbnail: '/images/performance-review-20260108_60.webp',
     tags: ['FX', 'トルコリラ', '投資実績', 'スワップ投資'],
     content: `
       <p class="intro">高金利通貨として注目を集め続けるトルコリラ/円（TRY/JPY）。「為替で負けてもスワップで勝てる」と言われるこの通貨ペアで、2025年の1年間運用した場合の驚きの収益結果を検証します。</p>

@@ -35,7 +35,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
         <meta
           property="og:image"
-          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
+          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"}
         />
         <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
         <meta property="og:locale" content="ja_JP" />
@@ -46,7 +46,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta name="twitter:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
         <meta
           name="twitter:image"
-          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
+          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"}
         />
 
         {/* Legacy Image Recognition Support */}
@@ -63,7 +63,7 @@ export default function ArticlePage({ article }: ArticlePageProps) {
               "@type": "BlogPosting",
               "headline": article.title,
               "image": [
-                article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
+                article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"
               ],
               "datePublished": article.date.replace(/\//g, '-'),
               "author": {

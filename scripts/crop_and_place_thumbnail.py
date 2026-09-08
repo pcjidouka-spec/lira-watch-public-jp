@@ -40,7 +40,10 @@ def process_thumbnail(input_path, output_path, text_lines=None):
     if text_lines:
         img = overlay_text(img, text_lines)
 
-    img.save(output_path, quality=95)
+    # WebP + 長辺1200px。Vercel の Deployment Storage 節約のため (2026-09-08)
+    if img.width > 1200:
+        img = img.resize((1200, round(img.height * 1200 / img.width)), Image.LANCZOS)
+    img.convert("RGB").save(output_path, "WEBP", quality=82, method=6)
     print(f"Successfully processed thumbnail to {output_path}")
 
 
@@ -167,7 +170,7 @@ if __name__ == "__main__":
         print(f"Error: Could not find input image at {input_image}")
         sys.exit(1)
         
-    output_filename = f"{article_id}_60.png"
+    output_filename = f"{article_id}_60.webp"
     output_path = os.path.join(IMAGES_DIR, output_filename)
     rel_path = f"/images/{output_filename}"
     

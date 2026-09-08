@@ -5,7 +5,7 @@ m2j-try-swap-campaign-202608 で確立したフラット組版スタイル。
 AI 生成画像を使う旧スタイルと違い、毎月同じ見た目を決定論的に再現できる。
 
 使い方: 下の CONFIG を書き換えて `py scripts/make_campaign_thumbnail.py`
-出力先は public/images/<article_id>_60.png。
+出力先は public/images/<article_id>_60.webp。
 記事側では thumbnail_text を設定しないこと (文字が二重に乗る)。
 """
 import os
@@ -92,9 +92,12 @@ def main(cfg):
 
     out = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        "public", "images", cfg["article_id"] + "_60.png",
+        "public", "images", cfg["article_id"] + "_60.webp",
     )
-    img.save(out, optimize=True)
+    # WebP + 長辺1200px。Vercel の Deployment Storage 節約のため (2026-09-08)
+    if img.width > 1200:
+        img = img.resize((1200, round(img.height * 1200 / img.width)), Image.LANCZOS)
+    img.convert("RGB").save(out, "WEBP", quality=82, method=6)
     print("saved", out, os.path.getsize(out), img.size)
 
 

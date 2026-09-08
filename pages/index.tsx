@@ -141,12 +141,12 @@ export default function Home() {
           <meta property="og:description" content="トルコリラ・メキシコペソ・南アフリカランド・ハンガリーフォリントなど高金利通貨のスワップポイントを毎日更新で徹底比較。過去の推移データやランキング、最新の市場ニュースもチェックできます。" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.lira-watch.sbs/" />
-          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"} />
           <meta property="og:site_name" content="トルコリラ・ウォッチ" />
           <meta property="og:locale" content="ja_JP" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={latestArticle ? latestArticle.title : "トルコリラ・ウォッチ"} />
-          <meta name="twitter:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+          <meta name="twitter:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"} />
         </Head>
         <div className="loading-container">
           <div className="loading-spinner" />
@@ -189,7 +189,7 @@ export default function Home() {
           <meta property="og:description" content="トルコリラ・メキシコペソ・南アフリカランドなど高金利通貨のスワップポイントを毎日更新で徹底比較。" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.lira-watch.sbs/" />
-          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"} />
+          <meta property="og:image" content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"} />
           <meta property="og:site_name" content="トルコリラ・ウォッチ" />
           <meta property="og:locale" content="ja_JP" />
         </Head>
@@ -407,7 +407,7 @@ export default function Home() {
         {latestArticle?.thumbnail ? (
           <meta property="og:image" content={`https://www.lira-watch.sbs${latestArticle.thumbnail}`} />
         ) : (
-          <meta property="og:image" content="https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png" />
+          <meta property="og:image" content="https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp" />
         )}
         <meta property="og:site_name" content="トルコリラ・ウォッチ" />
         <meta property="og:locale" content="ja_JP" />
@@ -417,7 +417,7 @@ export default function Home() {
         <meta name="twitter:title" content={latestArticle ? latestArticle.title : "トルコリラ・ウォッチ"} />
         <meta
           name="twitter:image"
-          content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"}
+          content={latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"}
         />
 
         {/* Legacy Support */}
@@ -435,7 +435,7 @@ export default function Home() {
               "name": "トルコリラ・ウォッチ",
               "url": "https://www.lira-watch.sbs/",
               "description": "トルコリラ円（TRY/JPY）・メキシコペソ円（MXN/JPY）・南アフリカランド円（ZAR/JPY）など高金利通貨のスワップポイント比較ブログ",
-              "image": latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
+              "image": latestArticle?.thumbnail ? `https://www.lira-watch.sbs${latestArticle.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"
             })
           }}
         />

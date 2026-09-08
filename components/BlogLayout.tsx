@@ -42,7 +42,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({ children, sidebar, lastU
               <div className="logo-section" style={{ cursor: 'pointer' }}>
                 {mounted ? (
                   <img
-                    src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.png"
+                    src="/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"
                     alt="トルコリラ・ウォッチ ロゴ"
                     className="logo-image"
                   />
