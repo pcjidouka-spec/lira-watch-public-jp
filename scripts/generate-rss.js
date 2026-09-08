@@ -10,7 +10,8 @@ const RSS_HEADER = `<?xml version="1.0" encoding="UTF-8" ?>
   <description>トルコリラのスワップポイント比較と長期投資記録</description>
   <language>ja</language>
   <image>
-    <url>https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp</url>
+    <!-- RSS 2.0 の channel <image> は GIF/JPEG/PNG のみ許容 (幅144px まで)。ここだけ WebP にしない -->
+    <url>https://www.lira-watch.sbs/images/rss-channel-logo.png</url>
     <title>トルコリラ・ウォッチ (lira-watch)</title>
     <link>https://www.lira-watch.sbs/</link>
   </image>
