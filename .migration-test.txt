@@ -1,0 +1,6 @@
+npm test
+# 移行前ベースライン (2026-09-10): 3 files / 40 tests passed, exit 0 (vitest 1.4 秒 / 全体 約 10 秒)
+# 補助:
+#   npm run lint  -> 警告 34 / エラー 0, exit 0 (約 60 秒)
+#   npm run build -> exit 0 (約 35 秒)。★public/data/ranking_*.json の generated_at が書き換わるので
+#                    実行後は git checkout -- public/data で戻す
