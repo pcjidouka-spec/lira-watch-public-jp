@@ -26,6 +26,10 @@ npx tsc --noEmit  # ★型チェックは build に含まれないので別途�
 
 ## Skill routing
 
+★**この節は gstack などのスキルをユーザー環境に導入している場合の道案内**である。
+スキルはこのリポジトリに同梱されていない (`.claude/` も `SKILL.md` も無い)。
+★**利用できるスキルの一覧に無いものは呼ばない。**その場合はこの節を無視して通常どおり作業する。
+
 When the user's request matches an available skill, ALWAYS invoke it using the Skill
 tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
 The skill has specialized workflows that produce better results than ad-hoc answers.
