@@ -135,3 +135,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-09,invast,CHF/TRY,トライオートFX,1,-2200.0,1600.0,,success,2026/09/08
 2026-09-09,traders_min,CHF/TRY,みんなのFX,3,-1037.9,1033.3,,success,
 2026-09-09,traders_light,CHF/TRY,LIGHT FX,3,-1037.83,1033.23,,success,
+2026-09-10,gaitame,CHF/TRY,外為どっとコム,3,-2010.33,1614.33,,success,2026/09/09
+2026-09-10,hirose,CHF/TRY,ヒロセ通商,3,-1847.77,1626.3,,success,2026/09/09
+2026-09-10,invast,CHF/TRY,トライオートFX,3,-2180.0,1580.0,,success,2026/09/09
+2026-09-10,traders_min,CHF/TRY,みんなのFX,1,-1045.1,1032.3,,success,
+2026-09-10,traders_light,CHF/TRY,LIGHT FX,1,-1045.3,1032.5,,success,
