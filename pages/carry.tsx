@@ -78,7 +78,7 @@ export default function CarryPage({ data, built_on }: Props) {
   //   変えず、どの行が古いかを読み手に伝える。
   const latestSwapDay = data
     ? data.ranking.reduce(
-        (acc: string, r: Row) => (r.best.as_of && r.best.as_of > acc ? r.best.as_of : acc),
+        (acc: string, r: CarryEntry) => (r.best.as_of && r.best.as_of > acc ? r.best.as_of : acc),
         ''
       )
     : '';

@@ -44,6 +44,12 @@ const COLORS: Record<string, string> = {
   HUF: '#a78bfa',
   PLN: '#fb923c',
   AUD: '#14b8a6',
+  // EUR/CHF (2026-09-11 追加)。色相環の空きに置いた。既存 10 系列の色相は
+  // 27/50/142/173/187/199/258/291/359 (+ 白) で、50-142 と 291-359 が空く。
+  // EUR = ライム (色相 82)・CHF = ピンク (色相 330)。どちらも最近傍まで
+  // 29 度以上あり、既存で最も近い USD-AUD の 14 度より余裕がある。
+  EUR: '#a3e635',
+  CHF: '#f472b6',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
 };
@@ -57,6 +63,8 @@ const CURRENCY_LABELS: Record<string, string> = {
   HUF: 'ハンガリーフォリント',
   PLN: 'ポーランドズロチ',
   AUD: '豪ドル',
+  EUR: 'ユーロ',
+  CHF: 'スイスフラン',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
 };

@@ -62,6 +62,33 @@ const FLAGS: Record<string, React.ReactNode> = {
       <rect y="10.66" width="24" height="5.34" fill="#477050" />
     </>
   ),
+  // EU (ユーロ)。青地に12個の金の星を円環に並べる。24x16 では星形は潰れるので
+  // 半径 0.75 の円で代用する。星の数 (12) が読み取れれば旗として伝わる。
+  EUR: (
+    <>
+      <rect width="24" height="16" fill="#003399" />
+      {Array.from({ length: 12 }, (_, i) => {
+        const a = (Math.PI / 6) * i;
+        return (
+          <circle
+            key={i}
+            cx={12 + 4.8 * Math.sin(a)}
+            cy={8 - 4.8 * Math.cos(a)}
+            r="0.75"
+            fill="#ffcc00"
+          />
+        );
+      })}
+    </>
+  ),
+  // スイス。実物は正方形だが他と揃えて 24x16 に収め、白十字を中央に置く。
+  CHF: (
+    <>
+      <rect width="24" height="16" fill="#d52b1e" />
+      <rect x="10.7" y="3.2" width="2.6" height="9.6" fill="#fff" />
+      <rect x="7.4" y="6.5" width="9.2" height="3" fill="#fff" />
+    </>
+  ),
 };
 
 interface Props {
