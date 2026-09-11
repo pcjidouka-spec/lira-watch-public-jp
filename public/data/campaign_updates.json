@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T04:00:40.001586",
+  "updated_at": "2026-09-12T04:00:47.042767",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -30,8 +30,8 @@
       "updated_at": "2026-08-03T14:00:33.405661"
     },
     "sbi": {
-      "has_new": false,
-      "updated_at": "2026-09-01T09:00:41.871715"
+      "has_new": true,
+      "updated_at": "2026-09-12T04:00:39.785050"
     },
     "matsui": {
       "has_new": false,

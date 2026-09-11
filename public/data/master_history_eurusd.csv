@@ -1035,3 +1035,12 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-10,jfx,EUR/USD,JFX,3,-85.67,67.33,,success,
 2026-09-10,gaitame,EUR/USD,外為どっとコム,3,-85.67,55.0,,success,
 2026-09-10,gmo,EUR/USD,GMO外貨,1,-68.0,68.0,,success,
+2026-09-11,dmm,EUR/USD,DMM FX,1,-64.0,61.0,,success,
+2026-09-11,traders_light,EUR/USD,LIGHT FX,1,-67.7,67.6,,success,
+2026-09-11,gmo_click,EUR/USD,GMOクリック証券,1,-60.0,60.0,,success,
+2026-09-11,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/10
+2026-09-11,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
+2026-09-11,hirose,EUR/USD,ヒロセ通商,1,-84.9,66.4,,success,
+2026-09-11,jfx,EUR/USD,JFX,1,-84.0,66.0,,success,
+2026-09-11,gaitame,EUR/USD,外為どっとコム,1,-86.0,55.0,,success,
+2026-09-11,gmo,EUR/USD,GMO外貨,1,-68.0,68.0,,success,

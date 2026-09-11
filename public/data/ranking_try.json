@@ -1,8 +1,8 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-09-10",
+  "target_date": "2026-09-11",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-11T12:54:45.997Z",
+  "generated_at": "2026-09-11T21:05:55.637Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -19,25 +19,25 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 24.645833333333332,
+      "avg": 24.708333333333332,
       "sample_days": 16
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 24.32857142857143,
+      "avg": 24.47142857142857,
       "sample_days": 14
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 24.171428571428578,
+      "avg": 24.200000000000006,
       "sample_days": 14
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 23.600000000000005,
+      "avg": 23.59444444444445,
       "sample_days": 18
     },
     {
@@ -67,13 +67,13 @@
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 23,
+      "avg": 23.071428571428573,
       "sample_days": 14
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": 23,
+      "avg": 23.058823529411764,
       "sample_days": 17
     },
     {
@@ -135,19 +135,19 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -24.171428571428578,
+      "avg": -24.200000000000006,
       "sample_days": 14
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -24.32857142857143,
+      "avg": -24.47142857142857,
       "sample_days": 14
     },
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -24.645833333333332,
+      "avg": -24.708333333333332,
       "sample_days": 16
     },
     {
@@ -159,7 +159,7 @@
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -26,
+      "avg": -26.071428571428573,
       "sample_days": 14
     },
     {
@@ -183,13 +183,13 @@
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -33,
+      "avg": -33.05882352941177,
       "sample_days": 17
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -36.72222222222223,
+      "avg": -36.71666666666667,
       "sample_days": 18
     },
     {

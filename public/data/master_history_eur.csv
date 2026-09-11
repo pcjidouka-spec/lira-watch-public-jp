@@ -188,9 +188,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-10,gaitame,EUR/JPY,外為どっとコム,1.0,61.0,-81.0,None,success,2026/09/10
 2026-09-10,gmo,EUR/JPY,GMO外貨,1.0,71.0,-71.0,None,success,2026/09/10
 2026-09-10,gmo_click,EUR/JPY,GMOクリック証券,1.0,70.0,-70.0,None,success,2026/09/10
-2026-09-10,hirose,EUR/JPY,ヒロセ通商,1.0,75.0,-95.0,None,success,2026/09/09
+2026-09-10,hirose,EUR/JPY,ヒロセ通商,1,71.0,-91.0,None,success,2026/09/10
 2026-09-10,invast,EUR/JPY,トライオートFX,1.0,75.0,-130.0,None,success,2026/09/09
 2026-09-10,jfx,EUR/JPY,JFX,1.0,75.0,-95.0,None,success,2026/09/10
 2026-09-10,sbi,EUR/JPY,SBI FXトレード,3.0,61.0,-71.0,09月14日,success,2026/09/10
 2026-09-10,traders_light,EUR/JPY,LIGHT FX,1.0,71.0,-71.0,None,success,2026/09/10
 2026-09-10,traders_min,EUR/JPY,みんなのFX,1.0,70.0,-70.0,None,success,2026/09/10
+2026-09-11,central_tanshi,EUR/JPY,セントラル短資FX,1.0,70.0,-75.0,9/14,success,2026/09/11
+2026-09-11,dmm,EUR/JPY,DMM FX,1.0,67.0,-70.0,None,success,2026/09/11
+2026-09-11,gaitame,EUR/JPY,外為どっとコム,1.0,61.0,-81.0,None,success,2026/09/11
+2026-09-11,gmo,EUR/JPY,GMO外貨,1.0,71.0,-71.0,None,success,2026/09/11
+2026-09-11,gmo_click,EUR/JPY,GMOクリック証券,1.0,70.0,-70.0,None,success,2026/09/11
+2026-09-11,hirose,EUR/JPY,ヒロセ通商,1.0,71.0,-91.0,None,success,2026/09/10
+2026-09-11,invast,EUR/JPY,トライオートFX,1.0,75.0,-130.0,None,success,2026/09/10
+2026-09-11,jfx,EUR/JPY,JFX,1.0,71.0,-91.0,None,success,2026/09/11
+2026-09-11,sbi,EUR/JPY,SBI FXトレード,1.0,None,None,None,error,None
+2026-09-11,traders_light,EUR/JPY,LIGHT FX,1.0,71.0,-71.0,None,success,2026/09/11
+2026-09-11,traders_min,EUR/JPY,みんなのFX,1.0,70.0,-70.0,None,success,2026/09/11
