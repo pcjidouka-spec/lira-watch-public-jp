@@ -1,4 +1,5 @@
 import { SwapData, ProviderRanking, ProviderConfig } from '@/types';
+import { CROSS_PAIR_CODES } from '@/lib/currencies';
 
 /**
  * CSVデータをパースしてSwapData配列に変換
@@ -161,12 +162,17 @@ export function getPast30DaysData(data: SwapData[]): SwapData[] {
  *
  * CHF/TRY は買が常にマイナス・売がプラスで、この特性がそのまま当てはまる (2026-08-22 追加)。
  * 判定が dataProcessor / providerChartData / index.tsx の3箇所に重複していたため、
- * ここを唯一の定義とする。新しいクロスペアを足すときはこの配列だけ更新する。
+ * ここを唯一の定義とする。新しいクロスペアを足すときは lib/currencies.ts に group: 'cross' で足す。
  */
-export const CROSS_PAIRS = ['EUR/USD', 'GBP/USD', 'CHF/TRY'] as const;
+/**
+ * ★2026-09-11: 実体は lib/currencies.ts の group === 'cross' から導出する。
+ *   通貨定義が 2 箇所にあると、片方だけ直したときに join が静かに外れる。
+ *   published は見ない (表示の有無とペアの性質は別)。
+ */
+export const CROSS_PAIRS: readonly string[] = CROSS_PAIR_CODES;
 
 export function isCrossPairCode(currencyPair: string): boolean {
-  return (CROSS_PAIRS as readonly string[]).includes(currencyPair);
+  return CROSS_PAIRS.includes(currencyPair);
 }
 
 /** スワップの売買方向。0 の意味が方向ごとに違うため、判定の引数に取る。 */
