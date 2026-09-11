@@ -169,15 +169,49 @@ export function isCrossPairCode(currencyPair: string): boolean {
   return (CROSS_PAIRS as readonly string[]).includes(currencyPair);
 }
 
+/** スワップの売買方向。0 の意味が方向ごとに違うため、判定の引数に取る。 */
+export type SwapSide = 'buy' | 'sell';
+
+/**
+ * 「0 を実値として扱う」通貨ペア x 売買方向の表。★0 の扱いの唯一の定義。
+ *
+ * 既定では 0 = 取得失敗/取扱なしとみなして除外する。ここに載っているペアと方向だけ、
+ * 0 を業者が実際に提示している値として平均の母数に入れ、ランキング/グラフに残す。
+ *
+ *   - クロスペア (EUR/USD, GBP/USD, CHF/TRY) の買: 買スワップ 0 円が正常値
+ *   - CHF/JPY の売: invast (トライオートFX) が売 0.0 を実際に提示している
+ *
+ * ★既知の限界 (2026-09-11 時点で許容):
+ *   実際の事実は**業者単位** (invast の方針) なのに、この表は**通貨ペア単位**で効く。
+ *   したがって CHF/JPY の別の業者が取得失敗で 0 を出した場合、それも実値として
+ *   表示してしまう。今これを許容できるのは、片側だけ 0 の取得失敗が master まで
+ *   到達する経路が現状ないため (上流の parse_raw_data_core.py:759 が 0/0 行を
+ *   error に落とす)。★4 社目が正当に 0 を提示するようになったら、その時点で
+ *   「通貨ペア x 方向」ではなく「業者 x 通貨ペア x 方向」の表に格上げすること。
+ */
+const ZERO_IS_REAL_VALUE: Record<string, readonly SwapSide[]> = {
+  ...Object.fromEntries(CROSS_PAIRS.map((pair) => [pair, ['buy'] as SwapSide[]])),
+  'CHF/JPY': ['sell'],
+};
+
+/**
+ * 指定の通貨ペア・売買方向で 0 を実値として扱うか。
+ * ★ランキングとグラフの 0 除外はすべてこの関数を通すこと (リテラル判定を増やさない)。
+ */
+export function isZeroRealValue(currencyPair: string, side: SwapSide): boolean {
+  return (ZERO_IS_REAL_VALUE[currencyPair] ?? []).includes(side);
+}
+
 /**
  * 買いスワップランキングを生成（降順）- 直近約2週間の付与日数加重平均
  * エラーや欠損データがあった日は平均値を出す際の母数から除外する
  */
 export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
-  // クロスペア（EUR/USD, GBP/USD, CHF/TRY）では買スワップ 0 円が正常値のため、
-  // ランキング除外フィルタを無効化する。JPY クロスでは 0 = 取得失敗/取扱なしの
-  // 可能性が高いため従来通り除外。
-  const isCrossPair = isCrossPairCode(currencyPair);
+  // 0 を実値として扱うかは通貨ペア x 売買方向で決まる (isZeroRealValue が唯一の定義)。
+  // 例: クロスペアの買 0 円は正常値、CHF/JPY の売 0.0 は invast の提示値。
+  // それ以外は 0 = 取得失敗/取扱なしの可能性が高いため従来通り除外。
+  const allowZeroBuy = isZeroRealValue(currencyPair, 'buy');
+  const allowZeroSell = isZeroRealValue(currencyPair, 'sell');
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const windowData = getPast30DaysData(successData);
@@ -188,7 +222,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
   for (const record of windowData) {
     // 0のデータは平均計算から除外（クロスペアでは 0 も有効値として扱う）
     if (record.swap_buy !== null && !isNaN(record.swap_buy)) {
-      const isValidForAverage = isCrossPair || record.swap_buy !== 0;
+      const isValidForAverage = allowZeroBuy || record.swap_buy !== 0;
       if (isValidForAverage) {
         // daysがnullまたは0の場合は1として扱う
         const days = record.days && record.days > 0 ? record.days : 1;
@@ -220,11 +254,12 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
       ? info.weightedSum / info.totalDays
       : 0;
 
-    // 売りスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
+    // 売りスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外。
+    // ただし 0 を実値として扱うペア/方向では母数に含める）
     let sellWeightedSum = 0;
     let sellTotalDays = 0;
     for (const record of windowData) {
-      if (record.provider_id === providerId && record.swap_sell !== null && record.swap_sell !== 0) {
+      if (record.provider_id === providerId && record.swap_sell !== null && (allowZeroSell || record.swap_sell !== 0)) {
         const days = record.days && record.days > 0 ? record.days : 1;
         sellWeightedSum += record.swap_sell * days;
         sellTotalDays += days;
@@ -257,7 +292,7 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
   }
 
   return ranking
-    .filter(r => isCrossPair ? true : r.swap_buy !== 0) // 0円の業者を除外（クロスペアでは残す）
+    .filter(r => allowZeroBuy || r.swap_buy !== 0) // 0円の業者を除外（0 が実値のペアでは残す）
     .sort((a, b) => b.swap_buy - a.swap_buy);
 }
 
@@ -274,6 +309,10 @@ export function getBuyRanking(data: SwapData[], providerConfigs?: Map<string, Pr
  *   どちらも正しく並ぶ。JPY クロスの並びは修正前後で変わらない。
  */
 export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, ProviderConfig>, currencyPair: string = 'TRY/JPY'): ProviderRanking[] {
+  // 0 の扱いは getBuyRanking と同じく isZeroRealValue に集約する。
+  // CHF/JPY の売 0.0 (invast) をここで落とすと、売ランキングから業者ごと消える。
+  const allowZeroBuy = isZeroRealValue(currencyPair, 'buy');
+  const allowZeroSell = isZeroRealValue(currencyPair, 'sell');
   // 指定通貨ペアの成功データのみを使用（エラーや欠損データは除外）
   const successData = data.filter(d => d.status === 'success' && (d.currency_pair || 'TRY/JPY') === currencyPair);
   const windowData = getPast30DaysData(successData);
@@ -282,8 +321,8 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
   const providerMap = new Map<string, { name: string; weightedSum: number; totalDays: number; dates: string[] }>();
 
   for (const record of windowData) {
-    // 0のデータは平均計算から除外
-    if (record.swap_sell !== null && record.swap_sell !== 0 && !isNaN(record.swap_sell)) {
+    // 0のデータは平均計算から除外（0 が実値のペア/方向では母数に含める）
+    if (record.swap_sell !== null && (allowZeroSell || record.swap_sell !== 0) && !isNaN(record.swap_sell)) {
       // daysがnullまたは0の場合は1として扱う
       const days = record.days && record.days > 0 ? record.days : 1;
 
@@ -313,11 +352,12 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
       ? info.weightedSum / info.totalDays
       : 0;
 
-    // 買いスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外）
+    // 買いスワップも計算（付与日数加重平均、成功データのみを使用、0のデータは除外。
+    // ただし 0 を実値として扱うペア/方向では母数に含める）
     let buyWeightedSum = 0;
     let buyTotalDays = 0;
     for (const record of windowData) {
-      if (record.provider_id === providerId && record.swap_buy !== null && record.swap_buy !== 0) {
+      if (record.provider_id === providerId && record.swap_buy !== null && (allowZeroBuy || record.swap_buy !== 0)) {
         const days = record.days && record.days > 0 ? record.days : 1;
         buyWeightedSum += record.swap_buy * days;
         buyTotalDays += days;
@@ -350,7 +390,7 @@ export function getSellRanking(data: SwapData[], providerConfigs?: Map<string, P
   }
 
   return ranking
-    .filter(r => r.swap_sell !== 0) // 0円の業者を除外
+    .filter(r => allowZeroSell || r.swap_sell !== 0) // 0円の業者を除外（0 が実値のペアでは残す）
     .sort((a, b) => b.swap_sell - a.swap_sell); // 値の大きい順（支払いが少ない/受取りが多い順）
 }
 
