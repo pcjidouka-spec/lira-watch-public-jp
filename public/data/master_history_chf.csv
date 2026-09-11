@@ -1,34 +1,41 @@
 target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_date,status,actual_date
+2026-08-03,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/03
 2026-08-03,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/03
 2026-08-03,gmo_click,CHF/JPY,GMOクリック証券,1,-33.0,33.0,None,success,2026/08/03
 2026-08-03,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/03
 2026-08-03,matsui,CHF/JPY,MATSUI FX,1,-72.0,42.0,None,success,2026/08/03
+2026-08-04,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/04
 2026-08-04,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/04
 2026-08-04,gmo_click,CHF/JPY,GMOクリック証券,1,-36.0,36.0,None,success,2026/08/04
 2026-08-04,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/04
 2026-08-04,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/04
 2026-08-04,sbi,CHF/JPY,SBI FXトレード,1,-61.0,51.0,None,success,2026/08/04
+2026-08-05,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/05
 2026-08-05,gaitame,CHF/JPY,外為どっとコム,3,-40.0,20.0,None,success,2026/08/05
 2026-08-05,gmo_click,CHF/JPY,GMOクリック証券,3,-36.0,36.0,None,success,2026/08/05
 2026-08-05,hirose,CHF/JPY,ヒロセ通商,3,-65.0,45.0,None,success,2026/08/05
 2026-08-05,matsui,CHF/JPY,MATSUI FX,3,-78.0,48.0,None,success,2026/08/05
 2026-08-05,sbi,CHF/JPY,SBI FXトレード,1,-61.0,51.0,None,success,2026/08/05
+2026-08-06,dmm,CHF/JPY,DMM FX,3.0,-29.0,26.0,None,success,2026/08/06
 2026-08-06,gaitame,CHF/JPY,外為どっとコム,2,-40.0,20.0,None,success,2026/08/06
 2026-08-06,gmo_click,CHF/JPY,GMOクリック証券,2,-34.0,34.0,None,success,2026/08/06
 2026-08-06,hirose,CHF/JPY,ヒロセ通商,2,-65.0,45.0,None,success,2026/08/06
 2026-08-06,matsui,CHF/JPY,MATSUI FX,2,-78.0,48.0,None,success,2026/08/06
 2026-08-06,sbi,CHF/JPY,SBI FXトレード,3,-63.0,53.0,None,success,2026/08/06
+2026-08-07,dmm,CHF/JPY,DMM FX,2.0,-29.0,26.0,None,success,2026/08/07
 2026-08-07,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/07
 2026-08-07,gmo_click,CHF/JPY,GMOクリック証券,1,-31.0,31.0,None,success,2026/08/07
 2026-08-07,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/07
 2026-08-07,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/07
 2026-08-07,sbi,CHF/JPY,SBI FXトレード,2,-63.0,53.0,None,success,2026/08/07
+2026-08-10,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/10
 2026-08-11,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/11
 2026-08-11,gmo_click,CHF/JPY,GMOクリック証券,1,-31.0,31.0,None,success,2026/08/11
 2026-08-11,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/11
 2026-08-11,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/11
 2026-08-11,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/11
 2026-08-11,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/11
+2026-08-12,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/12
 2026-08-12,gaitame,CHF/JPY,外為どっとコム,3,-40.0,20.0,None,success,2026/08/12
 2026-08-12,gmo_click,CHF/JPY,GMOクリック証券,3,-29.0,29.0,None,success,2026/08/12
 2026-08-12,hirose,CHF/JPY,ヒロセ通商,3,-65.0,45.0,None,success,2026/08/12
@@ -36,6 +43,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-12,sbi,CHF/JPY,SBI FXトレード,1,-58.0,48.0,None,success,2026/08/12
 2026-08-12,traders_light,CHF/JPY,LIGHT FX,3,-5.0,5.0,None,success,2026/08/12
 2026-08-12,traders_min,CHF/JPY,みんなのFX,3,-5.0,5.0,None,success,2026/08/12
+2026-08-13,dmm,CHF/JPY,DMM FX,3.0,-29.0,26.0,None,success,2026/08/13
 2026-08-13,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/13
 2026-08-13,gmo_click,CHF/JPY,GMOクリック証券,1,-32.0,32.0,None,success,2026/08/13
 2026-08-13,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/13
@@ -43,6 +51,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-13,sbi,CHF/JPY,SBI FXトレード,3,-62.0,52.0,None,success,2026/08/13
 2026-08-13,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/13
 2026-08-13,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/13
+2026-08-14,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/14
 2026-08-14,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/14
 2026-08-14,gmo_click,CHF/JPY,GMOクリック証券,1,-32.0,32.0,None,success,2026/08/14
 2026-08-14,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/14
@@ -50,109 +59,132 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,sbi,CHF/JPY,SBI FXトレード,1,-62.0,52.0,None,success,2026/08/14
 2026-08-14,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/14
 2026-08-14,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/14
+2026-08-17,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/17
 2026-08-17,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/17
 2026-08-17,gmo_click,CHF/JPY,GMOクリック証券,1,-33.0,33.0,None,success,2026/08/17
 2026-08-17,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/17
 2026-08-17,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/17
 2026-08-17,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/17
 2026-08-17,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/17
+2026-08-18,dmm,CHF/JPY,DMM FX,1.0,-29.0,26.0,None,success,2026/08/18
 2026-08-18,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/18
 2026-08-18,gmo_click,CHF/JPY,GMOクリック証券,1,-39.0,39.0,None,success,2026/08/18
 2026-08-18,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/18
 2026-08-18,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/18
 2026-08-18,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/18
 2026-08-18,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/18
+2026-08-19,dmm,CHF/JPY,DMM FX,1.0,-32.0,29.0,None,success,2026/08/19
 2026-08-19,gaitame,CHF/JPY,外為どっとコム,3,-40.0,20.0,None,success,2026/08/19
 2026-08-19,gmo_click,CHF/JPY,GMOクリック証券,3,-36.0,36.0,None,success,2026/08/19
 2026-08-19,hirose,CHF/JPY,ヒロセ通商,3,-65.0,45.0,None,success,2026/08/19
 2026-08-19,matsui,CHF/JPY,MATSUI FX,3,-78.0,48.0,None,success,2026/08/19
 2026-08-19,traders_light,CHF/JPY,LIGHT FX,3,-5.0,5.0,None,success,2026/08/19
 2026-08-19,traders_min,CHF/JPY,みんなのFX,3,-5.0,5.0,None,success,2026/08/19
+2026-08-20,dmm,CHF/JPY,DMM FX,3.0,-32.0,29.0,None,success,2026/08/20
 2026-08-20,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/20
 2026-08-20,gmo_click,CHF/JPY,GMOクリック証券,1,-35.0,35.0,None,success,2026/08/20
 2026-08-20,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/20
 2026-08-20,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/20
 2026-08-20,traders_light,CHF/JPY,LIGHT FX,1,-1.0,1.0,None,success,2026/08/20
 2026-08-20,traders_min,CHF/JPY,みんなのFX,1,-1.0,1.0,None,success,2026/08/20
+2026-08-21,dmm,CHF/JPY,DMM FX,1.0,-32.0,29.0,None,success,2026/08/21
 2026-08-21,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/21
 2026-08-21,gmo_click,CHF/JPY,GMOクリック証券,1,-38.0,38.0,None,success,2026/08/21
 2026-08-21,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/21
 2026-08-21,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/21
 2026-08-21,traders_light,CHF/JPY,LIGHT FX,1,-1.0,1.0,None,success,2026/08/21
 2026-08-21,traders_min,CHF/JPY,みんなのFX,1,-1.0,1.0,None,success,2026/08/21
+2026-08-24,dmm,CHF/JPY,DMM FX,1.0,-32.0,29.0,None,success,2026/08/24
 2026-08-24,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/24
 2026-08-24,gmo_click,CHF/JPY,GMOクリック証券,1,-35.0,35.0,None,success,2026/08/24
 2026-08-24,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/24
 2026-08-24,matsui,CHF/JPY,MATSUI FX,1,-78.0,48.0,None,success,2026/08/24
 2026-08-24,traders_light,CHF/JPY,LIGHT FX,1,-1.0,1.0,None,success,2026/08/24
 2026-08-24,traders_min,CHF/JPY,みんなのFX,1,-1.0,1.0,None,success,2026/08/24
+2026-08-25,dmm,CHF/JPY,DMM FX,1.0,-32.0,29.0,None,success,2026/08/25
 2026-08-25,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/25
 2026-08-25,gmo_click,CHF/JPY,GMOクリック証券,1,-30.0,30.0,None,success,2026/08/25
 2026-08-25,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/25
 2026-08-25,matsui,CHF/JPY,MATSUI FX,1,-74.0,44.0,None,success,2026/08/25
 2026-08-25,traders_light,CHF/JPY,LIGHT FX,1,-1.0,1.0,None,success,2026/08/25
 2026-08-25,traders_min,CHF/JPY,みんなのFX,1,-1.0,1.0,None,success,2026/08/25
+2026-08-26,dmm,CHF/JPY,DMM FX,1.0,-32.0,29.0,None,success,2026/08/26
 2026-08-26,gaitame,CHF/JPY,外為どっとコム,3,-40.0,20.0,None,success,2026/08/26
 2026-08-26,gmo_click,CHF/JPY,GMOクリック証券,3,-30.0,30.0,None,success,2026/08/26
 2026-08-26,hirose,CHF/JPY,ヒロセ通商,3,-65.0,45.0,None,success,2026/08/26
 2026-08-26,matsui,CHF/JPY,MATSUI FX,3,-74.0,44.0,None,success,2026/08/26
 2026-08-26,traders_light,CHF/JPY,LIGHT FX,3,-1.0,1.0,None,success,2026/08/26
 2026-08-26,traders_min,CHF/JPY,みんなのFX,3,-1.0,1.0,None,success,2026/08/26
+2026-08-27,dmm,CHF/JPY,DMM FX,3.0,-32.0,29.0,None,success,2026/08/27
 2026-08-27,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/27
 2026-08-27,gmo_click,CHF/JPY,GMOクリック証券,1,-33.0,33.0,None,success,2026/08/27
 2026-08-27,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/27
 2026-08-27,matsui,CHF/JPY,MATSUI FX,1,-74.0,44.0,None,success,2026/08/27
 2026-08-27,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/27
 2026-08-27,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/27
+2026-08-28,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/08/28
 2026-08-28,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/28
 2026-08-28,gmo_click,CHF/JPY,GMOクリック証券,1,-35.0,35.0,None,success,2026/08/28
 2026-08-28,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/28
 2026-08-28,matsui,CHF/JPY,MATSUI FX,1,-74.0,44.0,None,success,2026/08/28
 2026-08-28,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/28
 2026-08-28,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/28
+2026-08-31,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/08/31
 2026-08-31,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/08/31
 2026-08-31,gmo_click,CHF/JPY,GMOクリック証券,1,-36.0,36.0,None,success,2026/08/31
 2026-08-31,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/08/31
 2026-08-31,matsui,CHF/JPY,MATSUI FX,1,-74.0,44.0,None,success,2026/08/31
 2026-08-31,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/08/31
 2026-08-31,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/08/31
+2026-09-01,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/09/01
 2026-09-01,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/09/01
 2026-09-01,gmo_click,CHF/JPY,GMOクリック証券,1,-34.0,34.0,None,success,2026/09/01
 2026-09-01,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/09/01
+2026-09-01,invast,CHF/JPY,トライオートFX,1.0,-30.0,0.0,None,success,2026/09/01
 2026-09-01,matsui,CHF/JPY,MATSUI FX,1,-79.0,49.0,None,success,2026/09/01
 2026-09-01,sbi,CHF/JPY,SBI FXトレード,1,-65.0,55.0,None,success,2026/09/01
 2026-09-01,traders_light,CHF/JPY,LIGHT FX,1,-5.0,5.0,None,success,2026/09/01
 2026-09-01,traders_min,CHF/JPY,みんなのFX,1,-5.0,5.0,None,success,2026/09/01
+2026-09-02,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/09/02
 2026-09-02,gaitame,CHF/JPY,外為どっとコム,4,-40.0,20.0,None,success,2026/09/02
 2026-09-02,gmo_click,CHF/JPY,GMOクリック証券,4,-35.0,35.0,None,success,2026/09/02
 2026-09-02,hirose,CHF/JPY,ヒロセ通商,4,-65.0,45.0,None,success,2026/09/02
+2026-09-02,invast,CHF/JPY,トライオートFX,4.0,-30.0,0.0,None,success,2026/09/02
 2026-09-02,matsui,CHF/JPY,MATSUI FX,4,-79.0,49.0,None,success,2026/09/02
 2026-09-02,sbi,CHF/JPY,SBI FXトレード,1,-65.0,55.0,None,success,2026/09/02
 2026-09-02,traders_light,CHF/JPY,LIGHT FX,4,-20.0,20.0,None,success,2026/09/02
 2026-09-02,traders_min,CHF/JPY,みんなのFX,4,-20.0,20.0,None,success,2026/09/02
+2026-09-03,dmm,CHF/JPY,DMM FX,4.0,-33.0,30.0,None,success,2026/09/03
 2026-09-03,sbi,CHF/JPY,SBI FXトレード,4,-65.0,55.0,None,success,2026/09/03
 2026-09-04,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/09/04
 2026-09-04,gmo_click,CHF/JPY,GMOクリック証券,1,-34.0,34.0,None,success,2026/09/04
 2026-09-04,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/09/04
+2026-09-04,invast,CHF/JPY,トライオートFX,1.0,-30.0,0.0,None,success,2026/09/04
 2026-09-04,matsui,CHF/JPY,MATSUI FX,1,-79.0,49.0,None,success,2026/09/04
 2026-09-04,traders_light,CHF/JPY,LIGHT FX,1,-25.0,25.0,None,success,2026/09/04
 2026-09-04,traders_min,CHF/JPY,みんなのFX,1,-25.0,25.0,None,success,2026/09/04
+2026-09-07,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/09/07
 2026-09-07,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/09/07
 2026-09-07,gmo_click,CHF/JPY,GMOクリック証券,1,-29.0,29.0,None,success,2026/09/07
 2026-09-07,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/09/07
+2026-09-07,invast,CHF/JPY,トライオートFX,1.0,-30.0,0.0,None,success,2026/09/07
 2026-09-07,matsui,CHF/JPY,MATSUI FX,1,-79.0,49.0,None,success,2026/09/07
 2026-09-07,traders_light,CHF/JPY,LIGHT FX,1,-25.0,25.0,None,success,2026/09/07
 2026-09-07,traders_min,CHF/JPY,みんなのFX,1,-25.0,25.0,None,success,2026/09/07
+2026-09-08,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/09/08
 2026-09-08,gaitame,CHF/JPY,外為どっとコム,1,-40.0,20.0,None,success,2026/09/08
 2026-09-08,gmo_click,CHF/JPY,GMOクリック証券,1,-32.0,32.0,None,success,2026/09/08
 2026-09-08,hirose,CHF/JPY,ヒロセ通商,1,-65.0,45.0,None,success,2026/09/08
+2026-09-08,invast,CHF/JPY,トライオートFX,1.0,-30.0,0.0,None,success,2026/09/08
 2026-09-08,matsui,CHF/JPY,MATSUI FX,1,-75.0,45.0,None,success,2026/09/08
 2026-09-08,sbi,CHF/JPY,SBI FXトレード,1,-60.0,50.0,None,success,2026/09/08
 2026-09-08,traders_light,CHF/JPY,LIGHT FX,1,-25.0,25.0,None,success,2026/09/08
 2026-09-08,traders_min,CHF/JPY,みんなのFX,1,-25.0,25.0,None,success,2026/09/08
+2026-09-09,dmm,CHF/JPY,DMM FX,1.0,-33.0,30.0,None,success,2026/09/09
 2026-09-09,gaitame,CHF/JPY,外為どっとコム,3,-40.0,20.0,None,success,2026/09/09
 2026-09-09,gmo_click,CHF/JPY,GMOクリック証券,3,-33.0,33.0,None,success,2026/09/09
 2026-09-09,hirose,CHF/JPY,ヒロセ通商,3,-65.0,45.0,None,success,2026/09/09
+2026-09-09,invast,CHF/JPY,トライオートFX,3.0,-30.0,0.0,None,success,2026/09/09
 2026-09-09,matsui,CHF/JPY,MATSUI FX,3,-75.0,45.0,None,success,2026/09/09
 2026-09-09,sbi,CHF/JPY,SBI FXトレード,1,-60.0,50.0,None,success,2026/09/09
 2026-09-09,traders_light,CHF/JPY,LIGHT FX,3,-25.0,25.0,None,success,2026/09/09
