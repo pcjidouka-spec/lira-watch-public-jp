@@ -7,12 +7,11 @@
  * ボタンブロック 4 箇所に散っており、通貨を 1 つ足すたびに 10 箇所直していた。
  *
  * ★published は「ランキング表のタブに出すか」。データ取得や集計とは無関係。
- *   公開ゲート (docs/superpowers/specs/2026-09-11-eurjpy-chfjpy-phase2-design.md §5-2):
- *     その通貨で取得に成功している業者のうち 2/3 以上が 14 日窓に 7 日以上の
- *     データを持つこと。かつ該当業者が 6 社以上あること。
+ *   出す条件は「その通貨で取得に成功している業者のうち 2/3 以上が、直近 14 日の
+ *   窓に 7 日以上のデータを持つこと。かつ該当業者が 6 社以上あること」。
+ *   業者が数社しかない表を出すと、順位が 1 社の増減で入れ替わってしまう。
  *   ★EUR/JPY と CHF/JPY は 2026-09-11 時点で未達 (EUR 5 社 / CHF 4 社)。
- *     日次で全社が 14 日窓に 7 日たまる 2026-09-19 頃に true にする。
- *     ★true にする前に必ずゲートを実測し直すこと。日付で決め打ちしない。
+ *   ★true にする前に必ず上の条件を実測し直すこと。日付で決め打ちしない。
  */
 
 export type CurrencyGroup = 'emerging' | 'developed' | 'cross';
@@ -34,6 +33,13 @@ export interface CurrencyDef {
    *   (components/StrengthChart.tsx の COLORS) と同じ色を使う。
    */
   color: string;
+  /**
+   * public/ 配下のファイル名を決めるスラッグ。
+   * ★これが無いと useSwapData 側に通貨ごとの三項演算子の梯子が残り、
+   *   通貨を足したときに「タブには出るがデータは TRY のまま」という
+   *   静かな取り違えが起きる (2026-09-11 のレビューで実際に指摘された)。
+   */
+  slug: string;
 }
 
 export const GROUP_LABELS: Record<CurrencyGroup, string> = {
@@ -55,28 +61,27 @@ const CHFTRY_NOTE =
   '※ CHF/TRY は各社が円換算した 1万通貨単位あたりの値です。スイスとトルコの金利差が非常に大きいため、買い（フラン買い・リラ売り）は各社ともマイナス、売り（フラン売り・リラ買い）はプラスになります。';
 
 // ★CHF/JPY は買がマイナス・売がプラス。他の対円通貨と符号が逆なので注記する。
-// 並び順は降順のまま (-5 が -94 より上) で、表示は生値。
-// 決定の経緯: 上記 spec §5-3。
+// 並び順は降順のまま (-5 が -94 より上)。表示も生値をそのまま出す。
 const CHFJPY_NOTE =
   '※ CHF/JPY はスイスの金利が日本より低いため、買い（フラン買い・円売り）は各社ともマイナス、売り（フラン売り・円買い）はプラスになります。数値は各社の公表値をそのまま表示しています。';
 
 export const CURRENCIES: readonly CurrencyDef[] = [
   // --- 新興国通貨 ---
-  { code: 'TRY/JPY', label: 'トルコリラ', group: 'emerging', published: true, color: '#3b82f6' },
-  { code: 'MXN/JPY', label: 'メキシコペソ', group: 'emerging', published: true, color: '#10b981' },
-  { code: 'HUF/JPY', label: 'ハンガリーフォリント', group: 'emerging', published: true, note: HUF_NOTE, color: '#ec4899' },
-  { code: 'ZAR/JPY', label: '南アフリカランド', group: 'emerging', published: true, color: '#f59e0b' },
-  { code: 'PLN/JPY', label: 'ポーランドズロチ', group: 'emerging', published: true, color: '#0ea5e9' },
+  { code: 'TRY/JPY', label: 'トルコリラ', group: 'emerging', published: true, color: '#3b82f6', slug: 'try' },
+  { code: 'MXN/JPY', label: 'メキシコペソ', group: 'emerging', published: true, color: '#10b981', slug: 'mxn' },
+  { code: 'HUF/JPY', label: 'ハンガリーフォリント', group: 'emerging', published: true, note: HUF_NOTE, color: '#ec4899', slug: 'huf' },
+  { code: 'ZAR/JPY', label: '南アフリカランド', group: 'emerging', published: true, color: '#f59e0b', slug: 'zar' },
+  { code: 'PLN/JPY', label: 'ポーランドズロチ', group: 'emerging', published: true, color: '#0ea5e9', slug: 'pln' },
   // --- 先進国通貨 ---
   // ★AUD/JPY は新興国通貨から先進国通貨へ移した (ユーザー承認済み)。
-  { code: 'USD/JPY', label: '米ドル円', group: 'developed', published: true, color: '#f59e0b' },
-  { code: 'AUD/JPY', label: '豪ドル', group: 'developed', published: true, color: '#14b8a6' },
-  { code: 'EUR/JPY', label: 'ユーロ', group: 'developed', published: false, color: '#a3e635' },
-  { code: 'CHF/JPY', label: 'スイスフラン', group: 'developed', published: false, note: CHFJPY_NOTE, color: '#f472b6' },
+  { code: 'USD/JPY', label: '米ドル円', group: 'developed', published: true, color: '#f59e0b', slug: 'usd' },
+  { code: 'AUD/JPY', label: '豪ドル', group: 'developed', published: true, color: '#14b8a6', slug: 'aud' },
+  { code: 'EUR/JPY', label: 'ユーロ', group: 'developed', published: false, color: '#a3e635', slug: 'eur' },
+  { code: 'CHF/JPY', label: 'スイスフラン', group: 'developed', published: false, note: CHFJPY_NOTE, color: '#f472b6', slug: 'chf' },
   // --- クロス通貨 ---
-  { code: 'EUR/USD', label: 'EUR/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#8b5cf6' },
-  { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444' },
-  { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488' },
+  { code: 'EUR/USD', label: 'EUR/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#8b5cf6', slug: 'eurusd' },
+  { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444', slug: 'gbpusd' },
+  { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488', slug: 'chftry' },
 ];
 
 const BY_CODE = new Map(CURRENCIES.map((c) => [c.code, c]));
@@ -110,3 +115,18 @@ export function groupOf(code: string): CurrencyGroup | undefined {
 export const CROSS_PAIR_CODES: readonly string[] = CURRENCIES.filter(
   (c) => c.group === 'cross'
 ).map((c) => c.code);
+
+/**
+ * その通貨の業者設定ファイルのパス。
+ * ★TRY だけ接尾辞が無い (最初に作った通貨だったときの名残)。
+ */
+export function providersConfigPath(code: string): string {
+  const slug = BY_CODE.get(code)?.slug ?? 'try';
+  return slug === 'try' ? '/providers_config.json' : `/providers_config_${slug}.json`;
+}
+
+/** その通貨の履歴 CSV のパス。 */
+export function masterHistoryPath(code: string): string {
+  const slug = BY_CODE.get(code)?.slug ?? 'try';
+  return `/data/master_history_${slug}.csv`;
+}

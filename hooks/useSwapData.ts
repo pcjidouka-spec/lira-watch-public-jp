@@ -7,6 +7,7 @@ import {
   getBuyRanking,
   getSellRanking,
 } from '@/lib/dataProcessor';
+import { masterHistoryPath, providersConfigPath } from '@/lib/currencies';
 
 export function useSwapData(currencyPair: string = 'TRY/JPY') {
   const [data, setData] = useState<SwapData[]>([]);
@@ -41,17 +42,10 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
         // Load provider configs (キャッシュバスティング付き)
         try {
           const configTimestamp = new Date().getTime();
-          const configFile =
-            currencyPair === 'MXN/JPY' ? '/providers_config_mxn.json'
-            : currencyPair === 'USD/JPY' ? '/providers_config_usd.json'
-            : currencyPair === 'EUR/USD' ? '/providers_config_eurusd.json'
-            : currencyPair === 'GBP/USD' ? '/providers_config_gbpusd.json'
-            : currencyPair === 'HUF/JPY' ? '/providers_config_huf.json'
-            : currencyPair === 'ZAR/JPY' ? '/providers_config_zar.json'
-            : currencyPair === 'PLN/JPY' ? '/providers_config_pln.json'
-            : currencyPair === 'AUD/JPY' ? '/providers_config_aud.json'
-            : currencyPair === 'CHF/TRY' ? '/providers_config_chftry.json'
-            : '/providers_config.json';
+          // ★三項演算子の梯子をやめて lib/currencies.ts から引く。
+          //   梯子だと通貨を足したときに書き忘れても型では落ちず、
+          //   既定の TRY 設定に静かにフォールバックする。
+          const configFile = providersConfigPath(currencyPair);
           const configResponse = await fetch(`${configFile}?t=${configTimestamp}`);
           if (configResponse.ok) {
             const configData = await configResponse.json();
@@ -88,17 +82,9 @@ export function useSwapData(currencyPair: string = 'TRY/JPY') {
 
         // Fetch Master History (キャッシュバスティング付き)
         const timestamp = new Date().getTime();
-        const historyFile =
-          currencyPair === 'MXN/JPY' ? '/data/master_history_mxn.csv'
-          : currencyPair === 'USD/JPY' ? '/data/master_history_usd.csv'
-          : currencyPair === 'EUR/USD' ? '/data/master_history_eurusd.csv'
-          : currencyPair === 'GBP/USD' ? '/data/master_history_gbpusd.csv'
-          : currencyPair === 'HUF/JPY' ? '/data/master_history_huf.csv'
-          : currencyPair === 'ZAR/JPY' ? '/data/master_history_zar.csv'
-          : currencyPair === 'PLN/JPY' ? '/data/master_history_pln.csv'
-          : currencyPair === 'AUD/JPY' ? '/data/master_history_aud.csv'
-          : currencyPair === 'CHF/TRY' ? '/data/master_history_chftry.csv'
-          : '/data/master_history_try.csv';
+        // ★同上。ここが TRY にフォールバックすると、タブのラベルは EUR なのに
+        //   中身は TRY という取り違えになる (画面上は正常に見えるので気づけない)。
+        const historyFile = masterHistoryPath(currencyPair);
         const response = await fetch(`${historyFile}?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('データの読み込みに失敗しました');

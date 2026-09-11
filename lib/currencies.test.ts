@@ -5,13 +5,16 @@
  *   1. 定義が 1 箇所に集まったことで、片方だけ直して join が静かに外れる事故を防ぐ
  *      (以前は index.tsx の 6 箇所 + dataProcessor に同じ通貨名が散っていた)
  *   2. ★EUR/JPY・CHF/JPY を「定義はするが公開しない」状態のまま固定する。
- *      公開ゲート (spec §5-2) 未達で published: true にすると、
- *      業者 5 社ぶんしかない表を本番に出すことになる。
+ *      掲載条件 (成功業者の 2/3 以上かつ 6 社以上が 14 日窓に 7 日以上) を
+ *      満たす前に published: true にすると、業者 5 社ぶんしかない表を本番に出す
+ *      ことになり、1 社の増減で順位が入れ替わる。
  */
 import { describe, expect, it } from 'vitest';
 
 import {
   CURRENCIES,
+  masterHistoryPath,
+  providersConfigPath,
   CROSS_PAIR_CODES,
   GROUP_ORDER,
   GROUP_LABELS,
@@ -119,5 +122,54 @@ describe('ラベルと注記', () => {
     expect(noteOf('CHF/TRY')).toContain('円換算');
     // 単位も符号も普通の通貨は注記なし
     expect(noteOf('TRY/JPY')).toBeUndefined();
+  });
+});
+
+describe('★public 配下のファイルパス', () => {
+  // ★以前は useSwapData.ts に通貨ごとの三項演算子の梯子があり、
+  //   書き忘れると既定の TRY にフォールバックしていた。
+  //   「タブのラベルは EUR なのに中身は TRY」という、画面上は
+  //   正常に見える取り違えになる (2026-09-11 のレビューで指摘された)。
+  //   下の表は梯子が出していた値そのもの。1 つでもずれたら鳴る。
+  const OLD_LADDER: Array<[string, string, string]> = [
+    ['TRY/JPY', '/providers_config.json', '/data/master_history_try.csv'],
+    ['MXN/JPY', '/providers_config_mxn.json', '/data/master_history_mxn.csv'],
+    ['USD/JPY', '/providers_config_usd.json', '/data/master_history_usd.csv'],
+    ['EUR/USD', '/providers_config_eurusd.json', '/data/master_history_eurusd.csv'],
+    ['GBP/USD', '/providers_config_gbpusd.json', '/data/master_history_gbpusd.csv'],
+    ['HUF/JPY', '/providers_config_huf.json', '/data/master_history_huf.csv'],
+    ['ZAR/JPY', '/providers_config_zar.json', '/data/master_history_zar.csv'],
+    ['PLN/JPY', '/providers_config_pln.json', '/data/master_history_pln.csv'],
+    ['AUD/JPY', '/providers_config_aud.json', '/data/master_history_aud.csv'],
+    ['CHF/TRY', '/providers_config_chftry.json', '/data/master_history_chftry.csv'],
+  ];
+
+  it.each(OLD_LADDER)('%s は従来と同じパスを指す', (code, cfg, hist) => {
+    expect(providersConfigPath(code)).toBe(cfg);
+    expect(masterHistoryPath(code)).toBe(hist);
+  });
+
+  it('★EUR/JPY と CHF/JPY は自分のファイルを指す (TRY に落ちない)', () => {
+    expect(masterHistoryPath('EUR/JPY')).toBe('/data/master_history_eur.csv');
+    expect(masterHistoryPath('CHF/JPY')).toBe('/data/master_history_chf.csv');
+    expect(providersConfigPath('EUR/JPY')).toBe('/providers_config_eur.json');
+    expect(providersConfigPath('CHF/JPY')).toBe('/providers_config_chf.json');
+  });
+
+  it('全通貨が互いに違うファイルを指す', () => {
+    const hist = CURRENCIES.map((c) => masterHistoryPath(c.code));
+    expect(new Set(hist).size).toBe(hist.length);
+    const cfg = CURRENCIES.map((c) => providersConfigPath(c.code));
+    expect(new Set(cfg).size).toBe(cfg.length);
+  });
+
+  it('slug が重複していない', () => {
+    const slugs = CURRENCIES.map((c) => c.slug);
+    expect(new Set(slugs).size).toBe(slugs.length);
+  });
+
+  it('未知のコードは従来どおり TRY に落ちる（挙動を変えない）', () => {
+    expect(masterHistoryPath('XXX/YYY')).toBe('/data/master_history_try.csv');
+    expect(providersConfigPath('XXX/YYY')).toBe('/providers_config.json');
   });
 });
