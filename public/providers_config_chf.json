@@ -1,0 +1,236 @@
+{
+  "_schema_version": "2.0",
+  "_migration_notes": [
+    "3ファイル(providers_config.json / _mxn.json / _usd.json)を統合したファイル。",
+    "session_strategy: navigate_per_currency = 通貨ごとに異なるURLへ遷移 (gmo_click, gmo)",
+    "session_strategy: select_per_currency = 同一URLでUI操作で通貨切り替え (invast等)",
+    "multi_currency_in_session: false の業者は従来通り通貨ごとに別セッションで処理する",
+    "共通 shared_instructions は currencies.X.instructions で上書き可能",
+    "common_instructions.table_extraction: 旧TRY版より詳細なUSD版を採用（LLMトークン削減）",
+    "agent_settings.max_steps: 旧MXN版(15)を採用（最も制限緩い値）",
+    "【既知バグ・原本から引き継ぎ】traders_min MXN/traders_light MXN のproduct_selectionにTRYJPYと誤記",
+    "【既知バグ・原本から引き継ぎ】traders_min_light/traders_light_light MXN のproduct_selectionにTRYJPYと誤記",
+    "【既知バグ・原本から引き継ぎ】jfx MXN のcurrency_checkに「MXN/JPY、MXN/JPY」と重複誤記（TRY/JPYが抜けている）"
+  ],
+  "common_instructions": {
+    "popup_handling": "もしCookie同意ボタン、ポップアップ、モーダルウィンドウ、通知バナーが表示された場合は、それらを閉じるか、同意ボタンをクリックしてから操作を続けてください。ページの読み込みが完了するまで十分に待機してください（5〜10秒）。",
+    "table_extraction": "【重要：raw サイズ】表全体は出力しないでください。ヘッダー行1行と、対象日付（一昨日）に対応するデータ行のみを Markdown 表で出力してください。他の日付の行は含めないでください（LLM パース負荷・タイムアウト防止）。付与日数判定にその前後が必要な事業者のみ、対象日の行＋前後最大3行までに限定してください。",
+    "data_accuracy": "【最重要】データ抽出の正確性を最優先してください。特に日付（月/日）は、ページ上の表記を1文字も変えずに正確に抽出してください。日付の転記ミス（例：1/9を9/1と誤記）は絶対に避けてください。",
+    "column_mapping": "表の列を識別する際は、列番号（第1列、第2列など）で判断せず、必ずヘッダーのテキスト（例：「付与日数」「買スワップ」「売スワップ」「受渡日」など）を確認して、どの列がどの項目に対応するかを正確に照合してください。サイトの表示形式が変わっても、ヘッダー名に基づいて正しくデータを紐付けてください。",
+    "human_behavior": "ボットだと疑われないよう、各操作（クリックや入力）の前後には、内容を確認しているかのように 2〜5秒のランダムな待機時間を挟んでください。また、マウスを動かす際は、迷っているかのように少し余計な動きを加えても構いません。"
+  },
+  "agent_settings": {
+    "max_steps": 15,
+    "timeout_seconds": 180,
+    "retry_on_failure": true,
+    "retry_max_attempts": 2,
+    "retry_delay_seconds": 5
+  },
+  "providers": [
+    {
+      "id": "gmo_click",
+      "name": "GMOクリック証券",
+      "campaign_url": "https://www.click-sec.com/corp/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "navigate_per_currency",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?pare=CHFJPY",
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "dmm",
+      "name": "DMM FX",
+      "campaign_url": "https://fx.dmm.com/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://fx.dmm.com/fx/service/swapcalendar/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：通貨ペア選択方法】DMMのスワップカレンダーページでは、通貨ペアの切替にネイティブの<select>ドロップダウンではなく、タブ・ボタン・カスタムUIを使用している場合があります。select_dropdownアクションが失敗した場合は、ページ上に表示されている通貨ペア名のテキストやタブを直接クリックして選択してください。また、表が非常に長いため、データが見つかるまで何度もスクロールを行ってください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "gmo",
+      "name": "GMO外貨",
+      "campaign_url": "https://www.gaikaex.com/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "navigate_per_currency",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "url": "https://www.gaikaex.com/gaikaex/mark/swap/calendar.php?pair=8&date=202609",
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "central_tanshi",
+      "name": "セントラル短資FX",
+      "campaign_url": "https://www.central-tanshifx.com/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.central-tanshifx.com/market/swapcalendar/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：マルチ通貨テーブルへの対応】セントラル短資FXの表は複数通貨ペアが横に並ぶ形式です。ドロップダウンに個別通貨の選択肢がない場合は、対象通貨を含むグループを選択してそのまま進んでください。extractで全通貨ペアのデータが含まれても問題ありません。後処理で対象通貨だけを抽出します。完璧に1通貨だけを抽出しようとせず、対象日の行が取れたら即座にdoneしてください。データの抽出に際しては、対象日の行だけでなく、その後の3行分も含めて抽出してください（付与日数の判定のため）。表が長いため、データが見つかるまでスクロールしてください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "jfx",
+      "name": "JFX",
+      "campaign_url": "https://www.jfx.co.jp/campaign/index.html",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.jfx.co.jp/trading_rule/swap/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "swap_point_adjustment": "【重要：単位変換（1,000→10,000通貨）】JFXのスイスフラン/円は「1,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、抽出する際は表に記載されているスワップポイント（買・売ともに）を必ず「10倍した数値」として抽出・報告してください。例：表に「-6.5」とあれば「-65」として報告。",
+        "currency_check": "【最重要：通貨ペア厳重確認】JFXの表にはCHF/JPY、USD/JPY、EUR/JPY等複数の通貨が並んでいます。★絶対にUSD/JPYやCAD/JPYの行を読み取らないでください★。★CHF/JPYは買がマイナス・売がプラスという符号になる数少ないペアです（2026-09 実測: 1,000通貨・3日分で 買 -19.5 / 売 13.5）。買がプラスになっていたら別の通貨ペアの行を読んでいます。必ず行のラベルが「スイスフラン/円」「CHF/JPY」であることを目視で確認してください。"
+      }
+    },
+    {
+      "id": "invast",
+      "name": "トライオートFX",
+      "campaign_url": "https://www.invast.jp/triauto/campaign/",
+      "use_browser": true,
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.invast.jp/triauto/swap-calendar/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "table_extraction": "【インヴァスト必須】出力する Markdown 表には、必ずスイスフラン/円（CHF/JPY）のスワップ表を含めてください。日本225・米国指数など他商品の表だけを書き出すのは不可です。通貨で『スイスフラン/円（CHF/JPY）』を選択した状態の表を抽出してください。★CHF/JPY の売スワップは 0.0 が正常値です（2026-09-11 実測。全営業日 0.0）。0 だからといって取得失敗と判断しないでください。"
+      }
+    },
+    {
+      "id": "traders_min",
+      "name": "みんなのFX",
+      "campaign_url": "https://min-fx.jp/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://min-fx.jp/market/swap/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：ドロップダウン選択の注意】みんなのFXのドロップダウンには個別通貨ペアの選択肢がなく、全通貨ペアをまとめたグループオプションしかない場合があります。select_dropdownで個別通貨が見つからなかった場合は、全通貨を含むグループオプションを選択してそのまま次に進んでください。ドロップダウン操作を繰り返さないでください。選択後はすぐにスクロールしてテーブルから対象通貨の行を探し、対象日のデータを抽出してください。表が長いため、データが見つかるまでスクロールしてください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "product_selection": "【重要】CHFJPY の行から抽出。★CHFJPY には LIGHT 版の商品が存在しません（2026-09-11 実測）。LIGHT 列を探さないでください。CHFJPY は symbol2 グループ（CHFJPY/RUBJPY/CNHJPY/HKDJPY/SGDJPY/PLNJPY/NOKJPY/SEKJPY）にあります。"
+      }
+    },
+    {
+      "id": "traders_light",
+      "name": "LIGHT FX",
+      "campaign_url": "https://lightfx.jp/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://lightfx.jp/market/swap/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "product_selection": "【重要】CHFJPY の行から抽出。★CHFJPY には LIGHT 版の商品が存在しません（2026-09-11 実測）。LIGHT 列を探さないでください。CHFJPY は symbol2 グループ（CHFJPY/RUBJPY/CNHJPY/HKDJPY/SGDJPY/PLNJPY/NOKJPY/SEKJPY）にあります。"
+      }
+    },
+    {
+      "id": "sbi",
+      "name": "SBI FXトレード",
+      "campaign_url": "https://www.sbifxt.co.jp/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.sbifxt.co.jp/market/swap_calendar.html",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "month_select": ".years_month select",
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "swap_point_adjustment": "【最重要】SBIの表は1万通貨単位です。買・売は表の数値をそのまま swap_buy / swap_sell に入れてください。÷10しないでください。★CHF/JPYは買がマイナス・売がプラスです。2026-09 実測（1日あたり）で買が -70〜-55、売が +45〜+60 前後が妥当です。"
+      }
+    },
+    {
+      "id": "matsui",
+      "name": "MATSUI FX",
+      "campaign_url": "https://www.matsui.co.jp/campaign/?mnu=hd",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.matsui.co.jp/fx/market/past-swap/",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "campaign_url": "https://www.gaitame.com/campaign/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【外為どっとコム専用：読み込み待ち＋タブ操作】このサイトはトップの骨組みが先に表示され、スワップの表が表示されるまで数十秒かかることがあります。URL到達後は必ず最低20〜40秒以上待機してください。ロード中に表が無いと判断したり、すぐに再読み込みしたりしないでください。【最重要：タブ切替】ページ上部にある「直近のスワップ」と「月毎のスワップ」のタブを確認してください。スクロールを始める前に、まず「直近のスワップ」タブをクリックして表を表示させてください。タブをクリックせずにスクロールし続けると、データ領域を通り過ぎてフッターに到達してしまいます。タブクリック後、表が表示されたらデータを探してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "click365_okasan",
+      "name": "クリック365",
+      "campaign_url": "https://www.okasan-online.co.jp/campaign/?adprm1=yahoo&adprm2=cpc&adprm3=bfx#program",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://www.okasan-online.co.jp/fx/swap_calender/?adprm1=yahoo&adprm2=cpc&adprm3=bfx",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【重要：スクロール指示】表が非常に長いため、データが見つかるまで、あるいは『ページの一番下』まで何度もスクロールを行ってください。単純な検索で見つからない場合は、必ず下までスクロールして確認してください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/",
+      "multi_currency_in_session": true,
+      "session_strategy": "select_per_currency",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【最重要：通貨ペア選択を必ず行うこと】ヒロセ通商のスワップページは、デフォルトで特定の通貨ペア（USD/JPYなど）が表示されています。データを抽出する前に、必ず通貨ペアのドロップダウンまたはセレクタから指定された通貨ペアを選択してください。選択せずにデフォルト表示のデータを抽出すると、間違った通貨ペアのデータになります。select_dropdownが失敗した場合は、通貨ペア名のテキストやリンクを直接クリックして切り替えてください。また表が長いため、データが見つかるまでスクロールしてください。"
+      },
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）",
+      "instructions": {
+        "swap_point_adjustment": "【重要：単位変換】ヒロセ通商の CHF/JPY スワップポイントは「1Lot=1,000通貨単位」で表示されています。他の事業者（10,000通貨単位）と合わせるため、表の「円換算後」の数値を10倍した数値として抽出・報告してください。例：買い(円換算後)に「-19.5」とあれば「-195」（3日分）として抽出してください。"
+      }
+    },
+    {
+      "id": "sony",
+      "name": "ソニーバンクFX",
+      "campaign_url": "https://sonybank.jp/campaign/fx5000/",
+      "multi_currency_in_session": true,
+      "session_strategy": "navigate_per_currency",
+      "shared_instructions": {
+        "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
+        "interaction_hint": "【表形式】日付・付与日数・売・買の縦型カレンダー。1万通貨単位。対象日と続く3行を抽出。"
+      },
+      "url": "https://sonybank.jp/tool/fx/swap/chfjpy.html",
+      "data_url": "https://sonybank.jp/data/023.json",
+      "data_key": "chfjpy",
+      "currency_pair_selector": "スイスフラン/円（CHF/JPY）"
+    }
+  ]
+}
