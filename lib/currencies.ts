@@ -10,8 +10,12 @@
  *   出す条件は「その通貨で取得に成功している業者のうち 2/3 以上が、直近 14 日の
  *   窓に 7 日以上のデータを持つこと。かつ該当業者が 6 社以上あること」。
  *   業者が数社しかない表を出すと、順位が 1 社の増減で入れ替わってしまう。
- *   ★EUR/JPY と CHF/JPY は 2026-09-11 時点で未達 (EUR 5 社 / CHF 4 社)。
- *   ★true にする前に必ず上の条件を実測し直すこと。日付で決め打ちしない。
+ *   EUR/JPY と CHF/JPY は 2026-09-11 に条件を満たして公開した:
+ *     EUR 11 社中 9 社 (必要 8) / CHF 7 社中 6 社 (必要 6) が 14 日窓に 7 日以上。
+ *   ★条件を満たせたのは、各社のスワップ表が元々 1 か月ぶんを返しており、
+ *     日次で保存した raw_data からその履歴を取り出せたため
+ *     (guicatch/backfill_from_saved_raw.py)。新しい通貨を足すときも、
+ *     「履歴が無い」と判断する前にまず保存済みの raw_data を見ること。
  */
 
 export type CurrencyGroup = 'emerging' | 'developed' | 'cross';
@@ -76,8 +80,8 @@ export const CURRENCIES: readonly CurrencyDef[] = [
   // ★AUD/JPY は新興国通貨から先進国通貨へ移した (ユーザー承認済み)。
   { code: 'USD/JPY', label: '米ドル円', group: 'developed', published: true, color: '#f59e0b', slug: 'usd' },
   { code: 'AUD/JPY', label: '豪ドル', group: 'developed', published: true, color: '#14b8a6', slug: 'aud' },
-  { code: 'EUR/JPY', label: 'ユーロ', group: 'developed', published: false, color: '#a3e635', slug: 'eur' },
-  { code: 'CHF/JPY', label: 'スイスフラン', group: 'developed', published: false, note: CHFJPY_NOTE, color: '#f472b6', slug: 'chf' },
+  { code: 'EUR/JPY', label: 'ユーロ', group: 'developed', published: true, color: '#a3e635', slug: 'eur' },
+  { code: 'CHF/JPY', label: 'スイスフラン', group: 'developed', published: true, note: CHFJPY_NOTE, color: '#f472b6', slug: 'chf' },
   // --- クロス通貨 ---
   { code: 'EUR/USD', label: 'EUR/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#8b5cf6', slug: 'eurusd' },
   { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444', slug: 'gbpusd' },

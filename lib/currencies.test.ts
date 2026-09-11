@@ -4,10 +4,9 @@
  * ★狙いは 2 つ。
  *   1. 定義が 1 箇所に集まったことで、片方だけ直して join が静かに外れる事故を防ぐ
  *      (以前は index.tsx の 6 箇所 + dataProcessor に同じ通貨名が散っていた)
- *   2. ★EUR/JPY・CHF/JPY を「定義はするが公開しない」状態のまま固定する。
- *      掲載条件 (成功業者の 2/3 以上かつ 6 社以上が 14 日窓に 7 日以上) を
- *      満たす前に published: true にすると、業者 5 社ぶんしかない表を本番に出す
- *      ことになり、1 社の増減で順位が入れ替わる。
+ *   2. ★12 通貨すべてが公開状態であることを固定する。
+ *      EUR/JPY・CHF/JPY は 2026-09-11 に掲載条件を満たして公開した
+ *      (EUR 11 社中 9 社 / CHF 7 社中 6 社 が 14 日窓に 7 日以上)。
  */
 import { describe, expect, it } from 'vitest';
 
@@ -50,20 +49,26 @@ describe('定義そのもの', () => {
   });
 });
 
-describe('公開ゲート待ちの 2 通貨', () => {
-  // ★ここを true にするのは、公開ゲートを実測し直してからにすること。
-  //   2026-09-11 時点の実測は EUR 5 社 / CHF 4 社 (必要: 6 社以上かつ 2/3 以上)。
-  it.each(['EUR/JPY', 'CHF/JPY'])('%s は定義済みだが published: false', (code) => {
+describe('公開状態', () => {
+  it.each(['EUR/JPY', 'CHF/JPY'])('%s は公開されている', (code) => {
     const def = currencyDef(code);
     expect(def).toBeDefined();
-    expect(def!.published).toBe(false);
+    expect(def!.published).toBe(true);
   });
 
-  it.each(['EUR/JPY', 'CHF/JPY'])('%s は publishedCurrencies に出てこない', (code) => {
-    expect(publishedCurrencies().map((c) => c.code)).not.toContain(code);
+  it('12 通貨すべてがタブに出る', () => {
+    expect(publishedCurrencies().length).toBe(CURRENCIES.length);
+  });
+
+  it('先進国群は 4 通貨', () => {
+    expect(publishedCurrencies('developed').map((c) => c.code)).toEqual([
+      'USD/JPY', 'AUD/JPY', 'EUR/JPY', 'CHF/JPY',
+    ]);
   });
 
   it('CHF/JPY は符号が逆であることを注記で伝える', () => {
+    // ★買が全社マイナスの通貨はこれだけ。注記を落とすと
+    //   「マイナスだから取得失敗」と読まれる。
     expect(noteOf('CHF/JPY')).toContain('マイナス');
   });
 });
