@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11 05:44:43",
+  "generated_at": "2026-09-11 17:29:58",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -28,23 +28,23 @@
         "actual_date": "2026-09-09"
       },
       "arb_per_day": 581.2,
-      "notional_2leg": 3794346,
-      "capital": 379434.6,
+      "notional_2leg": 3797949,
+      "capital": 379794.9,
       "annual_pct": 55.9,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 55.9,
-          "max_pct": 82.0,
-          "avg_pct": 70.0,
-          "median_pct": 69.0
+          "max_pct": 81.9,
+          "avg_pct": 69.9,
+          "median_pct": 68.9
         },
         "all": {
           "days": 37,
           "min_pct": 23.5,
-          "max_pct": 82.0,
-          "avg_pct": 59.4,
+          "max_pct": 81.9,
+          "avg_pct": 59.3,
           "median_pct": 58.5
         },
         "first_date": "2026-07-22",
@@ -124,8 +124,8 @@
         "actual_date": "2026-09-10"
       },
       "arb_per_day": 0.7,
-      "notional_2leg": 9827,
-      "capital": 982.7,
+      "notional_2leg": 9831,
+      "capital": 983.1,
       "annual_pct": 26.0,
       "meets_threshold": true,
       "history": {
@@ -219,8 +219,8 @@
         "actual_date": "2026-09-10"
       },
       "arb_per_day": 45.0,
-      "notional_2leg": 828432,
-      "capital": 82843.2,
+      "notional_2leg": 828844,
+      "capital": 82884.4,
       "annual_pct": 19.8,
       "meets_threshold": false,
       "history": {
@@ -228,20 +228,27 @@
           "days": 20,
           "min_pct": 2.2,
           "max_pct": 19.8,
-          "avg_pct": 15.8,
+          "avg_pct": 16.2,
           "median_pct": 16.3
         },
         "all": {
           "days": 36,
           "min_pct": 2.2,
           "max_pct": 19.8,
-          "avg_pct": 15.9,
+          "avg_pct": 16.2,
           "median_pct": 16.3
         },
         "first_date": "2026-07-22",
         "last_date": "2026-09-10",
-        "step_count": 6,
+        "step_count": 4,
         "steps": [
+          {
+            "date": "2026-07-28",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 8.1
+          },
           {
             "date": "2026-08-24",
             "side": "sell",
@@ -259,31 +266,17 @@
           {
             "date": "2026-09-07",
             "side": "sell",
-            "provider_id": "gaitame",
-            "name": "外為どっとコム",
-            "change_pct": -45.7
-          },
-          {
-            "date": "2026-09-09",
-            "side": "sell",
-            "provider_id": "matsui",
-            "name": "MATSUI FX",
-            "change_pct": -10.5
-          },
-          {
-            "date": "2026-09-10",
-            "side": "sell",
             "provider_id": "gmo_click",
             "name": "GMOクリック証券",
-            "change_pct": -11.8
+            "change_pct": -57.1
           }
         ],
         "last_step": {
-          "date": "2026-09-10",
+          "date": "2026-09-07",
           "side": "sell",
           "provider_id": "gmo_click",
           "name": "GMOクリック証券",
-          "change_pct": -11.8
+          "change_pct": -57.1
         },
         "quiet_median_pct": 0.0
       },
@@ -314,24 +307,24 @@
         "actual_date": "2026-09-09"
       },
       "arb_per_day": 3.33,
-      "notional_2leg": 63304,
-      "capital": 6330.4,
-      "annual_pct": 19.2,
+      "notional_2leg": 63567,
+      "capital": 6356.7,
+      "annual_pct": 19.1,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 11.0,
-          "max_pct": 23.6,
+          "min_pct": 10.9,
+          "max_pct": 23.5,
           "avg_pct": 12.8,
           "median_pct": 11.5
         },
         "all": {
           "days": 167,
           "min_pct": 1.7,
-          "max_pct": 184.5,
+          "max_pct": 183.7,
           "avg_pct": 22.0,
-          "median_pct": 17.3
+          "median_pct": 17.2
         },
         "first_date": "2025-12-01",
         "last_date": "2026-09-10",
@@ -410,23 +403,23 @@
         "actual_date": "2026-09-09"
       },
       "arb_per_day": 6.5,
-      "notional_2leg": 191454,
-      "capital": 19145.4,
+      "notional_2leg": 190749,
+      "capital": 19074.9,
       "annual_pct": 12.4,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 1.5,
-          "max_pct": 13.5,
+          "max_pct": 13.6,
           "avg_pct": 9.6,
           "median_pct": 10.1
         },
         "all": {
           "days": 41,
           "min_pct": 1.5,
-          "max_pct": 13.5,
-          "avg_pct": 8.8,
+          "max_pct": 13.6,
+          "avg_pct": 8.9,
           "median_pct": 10.1
         },
         "first_date": "2026-07-16",
