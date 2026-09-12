@@ -38,7 +38,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-02-18,gmo,MXN/JPY,GMO外貨,4.0,14.5,-14.5,None,success,2026/02/18
 2026-02-18,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.5,-14.5,None,success,2026/02/18
 2026-02-18,hirose,MXN/JPY,ヒロセ通商,1.0,14.0,-19.0,None,success,2026/02/18
-2026-02-18,invast,MXN/JPY,トライオートFX,4.0,9.799999999999999,-19.933333333333334,None,success,2026/02/18
+2026-02-18,invast,MXN/JPY,トライオートFX,4.0,14.7,-29.9,None,success,2026/02/18
 2026-02-18,jfx,MXN/JPY,JFX,4.0,0.0,-10.0,None,error,2013-02-18
 2026-02-18,matsui,MXN/JPY,MATSUI FX,4.0,12.0,-22.0,None,success,2026/02/18
 2026-02-18,saxo,MXN/JPY,サクソバンク証券,4.0,None,None,None,error,None
@@ -90,7 +90,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-02-25,gmo,MXN/JPY,GMO外貨,3.0,None,None,None,error,None
 2026-02-25,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.5,-14.5,None,success,2026/02/25
 2026-02-25,hirose,MXN/JPY,ヒロセ通商,3.0,14.0,-19.0,None,success,2026/02/25
-2026-02-25,invast,MXN/JPY,トライオートFX,3.0,10.95,-22.35,None,success,2026/02/25
+2026-02-25,invast,MXN/JPY,トライオートFX,3.0,14.6,-29.8,None,success,2026/02/25
 2026-02-25,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/02/25
 2026-02-25,matsui,MXN/JPY,MATSUI FX,3.0,None,None,None,error,None
 2026-02-25,saxo,MXN/JPY,サクソバンク証券,3.0,10.89,-20.33,None,success,2026/02/25
@@ -168,7 +168,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-03-04,gmo,MXN/JPY,GMO外貨,3.0,15.1,-15.1,None,success,2026/03/04
 2026-03-04,gmo_click,MXN/JPY,GMOクリック証券,3.0,None,None,None,error,None
 2026-03-04,hirose,MXN/JPY,ヒロセ通商,3.0,14.1,-19.1,None,success,2026/03/04
-2026-03-04,invast,MXN/JPY,トライオートFX,3.0,10.95,-22.35,None,success,2026/03/04
+2026-03-04,invast,MXN/JPY,トライオートFX,3.0,14.6,-29.8,None,success,2026/03/04
 2026-03-04,jfx,MXN/JPY,JFX,3.0,14.0,-19.0,None,success,2026/03/04
 2026-03-04,matsui,MXN/JPY,MATSUI FX,3.0,13.0,-23.0,None,success,2026/03/04
 2026-03-04,saxo,MXN/JPY,サクソバンク証券,1.0,10.72,-20.05,None,success,2026-03-04

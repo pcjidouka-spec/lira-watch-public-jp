@@ -209,7 +209,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-11,gaitame,CHF/JPY,外為どっとコム,1.0,-40.0,20.0,None,success,2026/09/11
 2026-09-11,gmo,CHF/JPY,GMO外貨,1.0,None,None,None,error,2026/09/11
 2026-09-11,gmo_click,CHF/JPY,GMOクリック証券,1.0,-35.0,35.0,None,success,2026/09/11
-2026-09-11,hirose,CHF/JPY,ヒロセ通商,1.0,-32.5,22.5,None,success,2026/09/10
+2026-09-11,hirose,CHF/JPY,ヒロセ通商,1.0,-65.0,45.0,None,success,2026/09/10
 2026-09-11,invast,CHF/JPY,トライオートFX,1.0,-30.0,0.0,None,success,2026/09/10
 2026-09-11,jfx,CHF/JPY,JFX,1.0,None,None,None,error,2026/09/11
 2026-09-11,matsui,CHF/JPY,MATSUI FX,1.0,None,None,None,error,2026/09/10
