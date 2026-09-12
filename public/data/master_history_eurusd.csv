@@ -1044,3 +1044,4 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-11,jfx,EUR/USD,JFX,1,-84.0,66.0,,success,
 2026-09-11,gaitame,EUR/USD,外為どっとコム,1,-86.0,55.0,,success,
 2026-09-11,gmo,EUR/USD,GMO外貨,1,-68.0,68.0,,success,
+2026-09-11,sbi,EUR/USD,SBI FXトレード,1,-71.0,66.0,,success,

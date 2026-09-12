@@ -202,6 +202,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-11,hirose,EUR/JPY,ヒロセ通商,1.0,71.0,-91.0,None,success,2026/09/10
 2026-09-11,invast,EUR/JPY,トライオートFX,1.0,75.0,-130.0,None,success,2026/09/10
 2026-09-11,jfx,EUR/JPY,JFX,1.0,71.0,-91.0,None,success,2026/09/11
-2026-09-11,sbi,EUR/JPY,SBI FXトレード,1.0,None,None,None,error,None
 2026-09-11,traders_light,EUR/JPY,LIGHT FX,1.0,71.0,-71.0,None,success,2026/09/11
 2026-09-11,traders_min,EUR/JPY,みんなのFX,1.0,70.0,-70.0,None,success,2026/09/11
+2026-09-11,sbi,EUR/JPY,SBI FXトレード,1.0,61.0,-71.0,09月15日,success,2026/09/11

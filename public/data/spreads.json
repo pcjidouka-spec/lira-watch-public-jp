@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06",
+  "generated_at": "2026-09-13",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -360,7 +360,7 @@
         "mode": "variable"
       },
       "traders_min": {
-        "spread": 0.9,
+        "spread": 0.8,
         "unit": "銭",
         "mode": "fixed",
         "condition": "8-5時",
