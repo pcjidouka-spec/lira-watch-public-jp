@@ -1,19 +1,14 @@
 {
-  "generated_at": "2026-09-13 07:30:35",
+  "generated_at": "2026-09-14 07:24:56",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-09-13",
+  "rate_as_of": "2026-09-14",
   "baseline": false,
   "excluded_providers": [
     "saxo"
   ],
-  "excluded_pairs": [
-    {
-      "pair": "CHF/JPY",
-      "reason": "G4: CHF/JPY hirose のbuyが前回比 100% 変動 (-32.5 -> -65.0)。キャンペーンや金利改定なら翌日から自動的に通ります"
-    }
-  ],
+  "excluded_pairs": [],
   "top": [
     {
       "rank": 1,
@@ -33,24 +28,24 @@
         "actual_date": "2026-09-10"
       },
       "arb_per_day": 544.0,
-      "notional_2leg": 3771450,
-      "capital": 377145.0,
+      "notional_2leg": 3774297,
+      "capital": 377429.7,
       "annual_pct": 52.6,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 52.6,
-          "max_pct": 82.5,
+          "max_pct": 82.4,
           "avg_pct": 70.1,
-          "median_pct": 69.4
+          "median_pct": 69.3
         },
         "all": {
           "days": 38,
           "min_pct": 23.7,
-          "max_pct": 82.5,
-          "avg_pct": 59.6,
-          "median_pct": 58.9
+          "max_pct": 82.4,
+          "avg_pct": 59.5,
+          "median_pct": 58.8
         },
         "first_date": "2026-07-22",
         "last_date": "2026-09-11",
@@ -129,8 +124,8 @@
         "actual_date": "2026-09-11"
       },
       "arb_per_day": 0.7,
-      "notional_2leg": 9811,
-      "capital": 981.1,
+      "notional_2leg": 9820,
+      "capital": 982.0,
       "annual_pct": 26.0,
       "meets_threshold": true,
       "history": {
@@ -224,8 +219,8 @@
         "actual_date": "2026-09-11"
       },
       "arb_per_day": 45.0,
-      "notional_2leg": 825662,
-      "capital": 82566.2,
+      "notional_2leg": 825968,
+      "capital": 82596.8,
       "annual_pct": 19.9,
       "meets_threshold": false,
       "history": {
@@ -312,8 +307,8 @@
         "actual_date": "2026-09-10"
       },
       "arb_per_day": 6.5,
-      "notional_2leg": 190349,
-      "capital": 19034.9,
+      "notional_2leg": 190386,
+      "capital": 19038.6,
       "annual_pct": 12.5,
       "meets_threshold": false,
       "history": {
@@ -408,8 +403,8 @@
         "actual_date": "2026-09-10"
       },
       "arb_per_day": 2.1,
-      "notional_2leg": 63236,
-      "capital": 6323.6,
+      "notional_2leg": 63234,
+      "capital": 6323.4,
       "annual_pct": 12.1,
       "meets_threshold": false,
       "history": {
