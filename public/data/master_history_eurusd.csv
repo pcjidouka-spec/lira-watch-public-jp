@@ -1045,3 +1045,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-11,gaitame,EUR/USD,外為どっとコム,1,-86.0,55.0,,success,2026/09/10
 2026-09-11,gmo,EUR/USD,GMO外貨,1,-68.0,68.0,,success,2026/09/11
 2026-09-11,sbi,EUR/USD,SBI FXトレード,1,-71.0,66.0,,success,
+2026-09-14,dmm,EUR/USD,DMM FX,1,-64.0,61.0,,success,
+2026-09-14,traders_light,EUR/USD,LIGHT FX,1,-68.0,67.9,,success,
+2026-09-14,central_tanshi,EUR/USD,セントラル短資FX,1,-76.9,61.5,,success,
+2026-09-14,gmo_click,EUR/USD,GMOクリック証券,1,-57.0,57.0,,success,
+2026-09-14,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/11
+2026-09-14,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
+2026-09-14,hirose,EUR/USD,ヒロセ通商,1,-84.5,66.1,,success,2026/09/14
+2026-09-14,jfx,EUR/USD,JFX,1,-84.0,66.0,,success,2026/09/14
+2026-09-14,gaitame,EUR/USD,外為どっとコム,1,-87.0,57.0,,success,2026/09/14
+2026-09-14,gmo,EUR/USD,GMO外貨,1,-67.0,67.0,,success,2026/09/14

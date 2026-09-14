@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T04:00:54.806104",
+  "updated_at": "2026-09-15T04:00:57.601325",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -70,7 +70,7 @@
       "updated_at": "2026-05-29T21:00:36.071399"
     },
     "m2j": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-09-06T04:00:50.805165"
     }
   }
