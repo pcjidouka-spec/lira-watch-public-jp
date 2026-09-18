@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-18 18:59:17",
+  "generated_at": "2026-09-19 07:53:39",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.0,
   "jpy_rate_as_of": "2026-09-15",
   "rate_source": "bis",
-  "fx_as_of": "2026-09-18",
+  "fx_as_of": "2026-09-19",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [
     {
@@ -26,7 +26,7 @@
         "name": "LIGHT FX",
         "group": "traders",
         "swap": 75.0,
-        "as_of": "2026-09-17"
+        "as_of": "2026-09-18"
       },
       "payout_ratio_pct": 242.7,
       "median_swap": 30.0,
@@ -44,10 +44,10 @@
         "condition": null
       },
       "history": {
-        "days": 15,
+        "days": 16,
         "min_pct": 232.4,
-        "max_pct": 242.3,
-        "avg_pct": 238.7,
+        "max_pct": 242.7,
+        "avg_pct": 239.0,
         "median_pct": 240.1
       },
       "rank": 1
@@ -63,7 +63,7 @@
         "name": "トライオートFX",
         "group": "invast",
         "swap": 1.4,
-        "as_of": "2026-09-17"
+        "as_of": "2026-09-18"
       },
       "payout_ratio_pct": 230.3,
       "median_swap": 0.8,
@@ -81,11 +81,11 @@
         "condition": null
       },
       "history": {
-        "days": 15,
+        "days": 16,
         "min_pct": 178.3,
         "max_pct": 232.8,
-        "avg_pct": 222.2,
-        "median_pct": 230.9
+        "avg_pct": 222.7,
+        "median_pct": 230.6
       },
       "rank": 2
     },
@@ -100,7 +100,7 @@
         "name": "DMM FX",
         "group": "dmm",
         "swap": 76.0,
-        "as_of": "2026-09-17"
+        "as_of": "2026-09-18"
       },
       "payout_ratio_pct": 124.0,
       "median_swap": 70.0,
@@ -118,10 +118,10 @@
         "condition": null
       },
       "history": {
-        "days": 7,
+        "days": 8,
         "min_pct": 122.2,
-        "max_pct": 122.9,
-        "avg_pct": 122.5,
+        "max_pct": 124.0,
+        "avg_pct": 122.7,
         "median_pct": 122.7
       },
       "rank": 3
@@ -137,7 +137,7 @@
         "name": "トライオートFX",
         "group": "invast",
         "swap": 15.4,
-        "as_of": "2026-09-17"
+        "as_of": "2026-09-18"
       },
       "payout_ratio_pct": 112.6,
       "median_swap": 14.1,
@@ -155,10 +155,10 @@
         "condition": "9-5時"
       },
       "history": {
-        "days": 15,
+        "days": 16,
         "min_pct": 107.0,
         "max_pct": 113.3,
-        "avg_pct": 110.4,
+        "avg_pct": 110.6,
         "median_pct": 110.9
       },
       "rank": 4
@@ -192,11 +192,11 @@
         "condition": "〜1万通貨/8-3時"
       },
       "history": {
-        "days": 15,
+        "days": 16,
         "min_pct": 102.8,
         "max_pct": 111.7,
-        "avg_pct": 106.8,
-        "median_pct": 107.6
+        "avg_pct": 106.9,
+        "median_pct": 107.3
       },
       "rank": 5
     },
@@ -229,11 +229,11 @@
         "condition": "17-24時"
       },
       "history": {
-        "days": 15,
-        "min_pct": 103.4,
+        "days": 16,
+        "min_pct": 103.2,
         "max_pct": 108.9,
-        "avg_pct": 105.7,
-        "median_pct": 105.0
+        "avg_pct": 105.5,
+        "median_pct": 104.5
       },
       "rank": 6
     },
@@ -266,11 +266,11 @@
         "condition": "9-3時"
       },
       "history": {
-        "days": 14,
+        "days": 15,
         "min_pct": 88.9,
         "max_pct": 95.2,
         "avg_pct": 92.6,
-        "median_pct": 92.8
+        "median_pct": 92.7
       },
       "rank": 7
     },
@@ -303,11 +303,11 @@
         "condition": "〜1万通貨/8-3時"
       },
       "history": {
-        "days": 15,
+        "days": 16,
         "min_pct": 76.4,
         "max_pct": 84.0,
         "avg_pct": 79.8,
-        "median_pct": 80.1
+        "median_pct": 80.0
       },
       "rank": 8
     }
