@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-09-18",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-18T22:56:51.393Z",
+  "generated_at": "2026-09-19T22:39:04.812Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -29,16 +29,16 @@
       "sample_days": 10
     },
     {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": 112.75,
+      "sample_days": 8
+    },
+    {
       "provider_id": "traders_min",
       "name": "みんなのFX",
       "avg": 112.4,
       "sample_days": 10
-    },
-    {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": 112.125,
-      "sample_days": 8
     },
     {
       "provider_id": "dmm",
@@ -111,7 +111,7 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -120.125,
+      "avg": -120.75,
       "sample_days": 8
     },
     {

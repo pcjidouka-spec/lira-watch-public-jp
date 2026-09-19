@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-09-18",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-18T22:56:51.375Z",
+  "generated_at": "2026-09-19T22:39:04.792Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -98,7 +98,7 @@
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": 23,
-      "sample_days": 20
+      "sample_days": 15
     }
   ],
   "sell_ranking": [
@@ -178,7 +178,7 @@
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": -31,
-      "sample_days": 20
+      "sample_days": 15
     },
     {
       "provider_id": "gaitame",

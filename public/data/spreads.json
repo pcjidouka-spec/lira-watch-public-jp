@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13",
+  "generated_at": "2026-09-20",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -97,7 +97,7 @@
         "source": "https://www.gaitame.com/service/fx/spread.html"
       },
       "gmo_click": {
-        "spread": 1.0,
+        "spread": 0.6,
         "unit": "pips",
         "mode": "fixed",
         "condition": "9-3時",
@@ -336,7 +336,7 @@
         "source": "https://www.gaikaex.com/gaikaex/spread/"
       },
       "gmo_click": {
-        "spread": 0.9,
+        "spread": 0.8,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-3時",
@@ -393,7 +393,7 @@
         "source": "https://www.gaikaex.com/gaikaex/spread/"
       },
       "gmo_click": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-3時",
