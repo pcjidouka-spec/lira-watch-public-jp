@@ -19,6 +19,8 @@ export interface SDPoint {
   z: number | null;
   s: Stage;
   dir: number;
+  /** 対米ドル換算の価格。無い週は null (0006 §5)。 */
+  p?: number | null;
 }
 
 export interface SDEpisode {
@@ -81,6 +83,18 @@ export interface SupplyDemandData {
   };
   currencies: SDCurrency[];
   unavailable: { code: string; name: string; reason: string }[];
+  /** ★対米ドル価格の重ね描きに関するメタ (0006 §7)。 */
+  price: {
+    source: string;
+    source_url: string;
+    start: string;
+    basis: string;
+    note: string;
+  };
+  /** 構造的に価格を出さない通貨 (USD/TRY 等)。0006 §3-1。 */
+  price_unavailable: { code: string; name: string; reason: string }[];
+  /** ★実行時に価格の取得が部分的に欠けた場合の申告 (0006 §6-1)。 */
+  price_warnings: string[];
 }
 
 const PERIODS: { key: string; label: string; weeks: number }[] = [
@@ -425,11 +439,47 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
           <h2>通貨ごとの需給の推移</h2>
           <span className="sd-asof">背景色は「需給の変化が急だった区間」です</span>
         </div>
+        {/* ★価格の重ね描きに関する注意書き (0006 §7)。6 項目すべてをここで出す。 */}
+        <p className="sd-price-note">
+          {data.price.basis}
+          {' '}
+          {data.price.note}
+          {' '}
+          価格は {data.price.start} からのデータです（それ以前は線がありません）。
+          {' '}
+          出典: {data.price.source}
+        </p>
+        {data.price_unavailable.length > 0 && (
+          <ul className="sd-price-missing">
+            {data.price_unavailable.map((e) => (
+              <li key={e.code}>
+                <strong>{e.name}</strong>: {e.reason}
+              </li>
+            ))}
+          </ul>
+        )}
+        {/* ★価格の取得が実行時に部分的に欠けた場合の申告 (0006 §6-1・§7-7)。 */}
+        {data.price_warnings.length > 0 && (
+          <ul className="sd-price-missing">
+            {data.price_warnings.map((w, i) => (
+              <li key={`price-warning-${i}`}>{w}</li>
+            ))}
+          </ul>
+        )}
         <div className="sd-grid">
           {data.currencies.map((c) => {
             const rows = c.points
               .filter((p) => axisIndex.has(p.d))
-              .map((p) => ({ date: p.d, value: p.v }));
+              .map((p) => ({ date: p.d, value: p.v, price: p.p ?? null }));
+            // ★価格の軸は表示している窓の最小・最大から決める (0006 §4)。
+            //   ★2 本の線を視覚的に揃える目的で軸をずらさない。
+            const priceValues = rows
+              .map((r) => r.price)
+              .filter((v): v is number => typeof v === 'number' && Number.isFinite(v));
+            const hasPrice = priceValues.length > 0;
+            const priceDomain: [number, number] | undefined = hasPrice
+              ? [Math.min(...priceValues) * 0.95, Math.max(...priceValues) * 1.05]
+              : undefined;
             const lastIndex = rows.length - 1;
             // ★背景は bands を使う。episodes (警戒以上をひとまとめ) では
             //   要件 §5 の 3 段階 (注意/警戒/急変) が表現できない。
@@ -459,6 +509,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                       {visible.map(({ band, span }) => (
                         <ReferenceArea
                           key={`${band.start}-${band.end}-${band.stage}`}
+                          yAxisId="sd"
                           x1={span![0]}
                           x2={span![1]}
                           fill={bandColor(band.dir, band.stage)}
@@ -469,10 +520,11 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                       <CartesianGrid stroke="#263043" vertical={false} />
                       {/* ★y=0 はグリッドではなく「買い越し / 売り越しの境目」という閾値。
                           破線なのはそのため (グリッドを破線にするのは別の話)。 */}
-                      <ReferenceLine y={0} stroke="#4b5563" strokeDasharray="3 3" />
+                      <ReferenceLine yAxisId="sd" y={0} stroke="#4b5563" strokeDasharray="3 3" />
                       {onsets.map((e) => (
                         <ReferenceLine
                           key={`onset-${e.detected}`}
+                          yAxisId="sd"
                           x={e.detected}
                           stroke={edgeColor(e.dir)}
                           strokeWidth={1.4}
@@ -488,12 +540,27 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                         height={20}
                       />
                       <YAxis
+                        yAxisId="sd"
                         tick={{ fontSize: 9, fill: '#c9c9c9' }}
                         tickLine={{ stroke: '#3a3a3a' }}
                         axisLine={{ stroke: '#3a3a3a' }}
                         width={44}
                         tickFormatter={(v: number) => `${Math.round(v * 100)}%`}
                       />
+                      {hasPrice && (
+                        <YAxis
+                          yAxisId="price"
+                          orientation="right"
+                          domain={priceDomain}
+                          tick={{ fontSize: 9, fill: '#93a4bd' }}
+                          tickLine={{ stroke: '#3a3a3a' }}
+                          axisLine={{ stroke: '#3a3a3a' }}
+                          width={52}
+                          tickFormatter={(v: number) =>
+                            v < 0.01 ? v.toFixed(5) : v < 1 ? v.toFixed(4) : v.toFixed(3)
+                          }
+                        />
+                      )}
                       <Tooltip
                         contentStyle={{
                           background: '#111827',
@@ -502,12 +569,35 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                           fontSize: 12,
                         }}
                         labelStyle={{ color: '#e5e7eb' }}
-                        formatter={(value) => [
-                          typeof value === 'number' ? `${(value * 100).toFixed(1)}%` : 'データなし',
-                          '需給（ネット÷建玉）',
-                        ]}
+                        formatter={(value, name) => {
+                          if (name === 'price') {
+                            return [
+                              typeof value === 'number' ? value.toFixed(5) : 'データなし',
+                              '価格（対米ドル）',
+                            ];
+                          }
+                          return [
+                            typeof value === 'number' ? `${(value * 100).toFixed(1)}%` : 'データなし',
+                            '需給（ネット÷建玉）',
+                          ];
+                        }}
                       />
+                      {/* ★需給の線より先に置いて背面にする。主役は需給 (0006 §4)。 */}
+                      {hasPrice && (
+                        <Line
+                          yAxisId="price"
+                          type="monotone"
+                          dataKey="price"
+                          stroke="#7dd3fc"
+                          strokeWidth={1.1}
+                          strokeDasharray="4 3"
+                          dot={false}
+                          connectNulls={false}
+                          isAnimationActive={false}
+                        />
+                      )}
                       <Line
+                        yAxisId="sd"
                         type="monotone"
                         dataKey="value"
                         stroke="#e5e7eb"
@@ -784,6 +874,19 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         }
         .sd-charts {
           margin-top: 26px;
+        }
+        .sd-price-note {
+          font-size: 12px;
+          line-height: 1.8;
+          color: #6b7280;
+          margin: 4px 0 0;
+        }
+        .sd-price-missing {
+          font-size: 12px;
+          line-height: 1.8;
+          color: #6b7280;
+          margin: 6px 0 0;
+          padding-left: 1.2em;
         }
         .sd-grid {
           display: grid;

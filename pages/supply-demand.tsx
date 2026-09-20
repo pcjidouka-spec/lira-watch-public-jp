@@ -290,6 +290,10 @@ function normalize(raw: any): SupplyDemandData | null {
     lag_note: raw.lag_note ?? '',
     nature_note: raw.nature_note ?? '',
     basis_note: raw.basis_note ?? '',
+    // ★価格の重ね描き関連 (0006)。欠けていても画面は出す。
+    price: raw.price ?? { source: '', source_url: '', start: '', basis: '', note: '' },
+    price_unavailable: Array.isArray(raw.price_unavailable) ? raw.price_unavailable : [],
+    price_warnings: Array.isArray(raw.price_warnings) ? raw.price_warnings : [],
     currencies: raw.currencies.map((c: any) => ({
       ...c,
       points: Array.isArray(c.points) ? c.points : [],
