@@ -83,12 +83,14 @@ export interface SupplyDemandData {
   };
   currencies: SDCurrency[];
   unavailable: { code: string; name: string; reason: string }[];
-  /** ★対米ドル価格の重ね描きに関するメタ (0006 §7)。 */
+  /** ★対米ドル価格の重ね描きに関するメタ (0006 §7)。価格源は FRED。 */
   price: {
     source: string;
     source_url: string;
-    start: string;
-    basis: string;
+    /** USD は FRB の広義ドル指数で、CFTC の建玉が乗る ICE の DXY とは構成が違う旨 (0006 §3-1・§7-2)。 */
+    usd_note: string;
+    /** 価格は需給より 1 週間ほど遅れる旨 (0006 §2-4・§7-6)。 */
+    lag_note: string;
     note: string;
   };
   /** 構造的に価格を出さない通貨 (USD/TRY 等)。0006 §3-1。 */
@@ -439,15 +441,20 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
           <h2>通貨ごとの需給の推移</h2>
           <span className="sd-asof">背景色は「需給の変化が急だった区間」です</span>
         </div>
-        {/* ★価格の重ね描きに関する注意書き (0006 §7)。6 項目すべてをここで出す。 */}
+        {/* ★価格の重ね描きに関する注意書き (0006 §7)。7 項目すべてをここで出す。 */}
         <p className="sd-price-note">
-          {data.price.basis}
+          価格の線は各通貨の<strong>対米ドル</strong>の値です。
+          {' '}
+          {data.price.usd_note}
           {' '}
           {data.price.note}
           {' '}
-          価格は {data.price.start} からのデータです（それ以前は線がありません）。
+          {data.price.lag_note}
           {' '}
-          出典: {data.price.source}
+          出典:{' '}
+          <a href={data.price.source_url} target="_blank" rel="noopener noreferrer">
+            {data.price.source}
+          </a>
         </p>
         {data.price_unavailable.length > 0 && (
           <ul className="sd-price-missing">
