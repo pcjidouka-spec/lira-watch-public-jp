@@ -28,6 +28,8 @@ export interface SDEpisode {
   z: number | null;
   dir: number;
   weeks: number;
+  /** 直前の警戒以上の区間と逆向きだったか (0003 §2)。 */
+  reversal: boolean;
 }
 
 /** グラフの背景に塗る区間。★episodes と違い「注意」も含み、段階ごとに分かれている。 */
@@ -53,12 +55,19 @@ export interface SDCurrency {
 export interface SupplyDemandData {
   generated_at: string;
   as_of: string | null;
-  stale_dates: string[];
+  stale_currencies: { code: string; name: string; date: string }[];
+  stale_after_days: number;
+  gaps: { code: string; from: string; to: string; days: number }[];
   cadence: string;
   source: string;
   source_url: string;
   lag_note: string;
   nature_note: string;
+  basis_note: string;
+  /** ページ側がビルド時刻から計算して差し込む。JSON には無い (0003 §4-5)。 */
+  as_of_age_days: number | null;
+  /** ページを組んだ日 (YYYY-MM-DD)。JSON には無い。 */
+  built_at: string;
   method: {
     value: string;
     slope: string;
@@ -152,7 +161,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
     return map;
   }, [axis]);
 
-  // 現在の状態は、急変中を先に並べる。通常の通貨を探させない。
+  // 現在の状態は、変化が大きい通貨を先に並べる。通常の通貨を探させない。
   const ranked = React.useMemo(() => {
     const order = { surge: 0, warning: 1, caution: 2, none: 3 } as Record<string, number>;
     return [...data.currencies].sort((a, b) => {
@@ -164,16 +173,47 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
   }, [data]);
 
   const activeCount = data.currencies.filter((c) => c.current.active).length;
+  const surgeCount = data.currencies.filter((c) => c.current.stage === 'surge').length;
+  const isStale =
+    data.as_of_age_days !== null && data.as_of_age_days > data.stale_after_days;
 
   return (
     <div className="sd-root">
+      {/* ---- データが古いときの申告 (0003 §4-3)。通知は作らない。画面が自分で語る ---- */}
+      {isStale && (
+        <p className="sd-stale-banner">
+          <strong>このデータは古くなっています。</strong>
+          最新の集計は {data.as_of} 時点で、ビルド時点から {data.as_of_age_days} 日前です
+          （通常は最大 {data.stale_after_days} 日）。
+          取得が止まっている可能性があります。下の「現在の状態」は現在を表していません。
+        </p>
+      )}
+      {data.gaps.length > 0 && (
+        <p className="sd-stale-banner">
+          <strong>週が抜けている箇所があります。</strong>
+          {data.gaps
+            .map((g) => `${g.code}: ${g.from}→${g.to}（${g.days}日）`)
+            .join('、')}
+          。この区間をまたぐ傾きは正しくありません。
+        </p>
+      )}
+      {data.stale_currencies.length > 0 && (
+        <p className="sd-stale-banner">
+          <strong>最新週が届いていない通貨があります。</strong>
+          {data.stale_currencies.map((c) => `${c.code}（${c.date} 時点）`).join('、')}
+        </p>
+      )}
+
       {/* ---- 現在の状態 ---- */}
-      <section className="sd-now">
+      <section className={isStale ? 'sd-now sd-now-stale' : 'sd-now'}>
         <div className="sd-now-head">
           <h2>現在の状態</h2>
           <span className="sd-asof">
             {data.as_of} 時点（週次）
-            {activeCount > 0 ? ` ・ ${activeCount}通貨が急変中` : ' ・ 急変中の通貨なし'}
+            {/* ★「急変」は |z|>=3.0 だけに使う語 (0003 §1)。
+                ここは警戒以上 (|z|>=2.0) の集計なので「変化中」と書く。 */}
+            {activeCount > 0 ? ` ・ ${activeCount}通貨が変化中` : ' ・ 変化中の通貨なし'}
+            {surgeCount > 0 ? `（うち急変 ${surgeCount}）` : ''}
           </span>
         </div>
         <ul className="sd-now-list">
@@ -256,9 +296,12 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                         width: `${width}%`,
                         background: bandColor(e.dir, e.stage),
                       }}
+                      data-reversal={e.reversal ? '1' : undefined}
                       title={`${e.start}〜${e.end}（${e.weeks}週） ${
                         e.dir > 0 ? '買い方向' : '売り方向'
-                      } ${e.stage === 'surge' ? '急変' : '警戒'} z=${e.z ?? '—'}`}
+                      } ${e.stage === 'surge' ? '急変' : '変化中'}${
+                        e.reversal ? '・反転' : ''
+                      } z=${e.z ?? '—'}`}
                     />
                   );
                 })}
@@ -266,6 +309,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
             </div>
           ))}
         </div>
+        <p className="sd-basis">{data.basis_note}</p>
         <div className="sd-legend">
           <span className="sd-legend-group">
             <span className="sd-legend-dir">買い方向</span>
@@ -284,6 +328,9 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                 {STAGE_LABEL[st]}
               </span>
             ))}
+          </span>
+          <span className="sd-legend-item">
+            <i className="sd-legend-reversal" />反転（直前の区間と逆向き）
           </span>
           <span className="sd-legend-note">
             上の帯は警戒以上のみ。注意は各通貨のグラフ背景にだけ出ます
@@ -563,6 +610,34 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         .sd-legend-note {
           color: #9ca3af;
           font-size: 11.5px;
+        }
+        .sd-legend-reversal {
+          background: transparent;
+          border-top: 3px solid #fbbf24;
+          outline: none !important;
+          height: 3px !important;
+        }
+        .sd-basis {
+          font-size: 12px;
+          line-height: 1.8;
+          color: #6b7280;
+          margin: 10px 0 0;
+        }
+        .sd-stale-banner {
+          background: #fef2f2;
+          border: 1px solid #fecaca;
+          border-radius: 10px;
+          padding: 12px 14px;
+          font-size: 13px;
+          line-height: 1.8;
+          color: #7f1d1d;
+          margin: 0 0 14px;
+        }
+        .sd-now-stale .sd-now-list {
+          opacity: 0.55;
+        }
+        .sd-tl-band[data-reversal='1'] {
+          border-top: 3px solid #fbbf24;
         }
         .sd-legend-item i {
           width: 22px;

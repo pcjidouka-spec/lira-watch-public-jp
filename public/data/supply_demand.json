@@ -1,12 +1,15 @@
 {
- "generated_at": "2026-09-20 09:16:36",
+ "generated_at": "2026-09-20 09:43:53",
  "as_of": "2026-09-15",
- "stale_dates": [],
+ "stale_currencies": [],
+ "stale_after_days": 12,
+ "gaps": [],
  "cadence": "weekly",
  "source": "CFTC Commitments of Traders (Legacy, futures only)",
  "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
  "lag_note": "CFTC の建玉は毎週火曜時点のスナップショットで、金曜 15:30 (米東部時間) に公表されます。したがって最新の値は 3〜10 日前の状態です。",
  "nature_note": "この画面は「需給の変化が起きた区間に印をつける」ものです。検証では、印が付いた時点で直前 4 週が既に通常の約 2 倍動いており、印の後の動きは通常とほぼ同じでした。これから動く方向を当てるものではありません。",
+ "basis_note": "各通貨の需給は「対米ドル」のポジションです（CME の通貨先物）。米ドルだけは通貨バスケット対比のドル指数（ICE）で、他とは別の商品です。したがって同時に動いて見えるときは、共通の米ドル側が動いている可能性があります。",
  "method": {
   "value": "非商業ネットポジション ÷ 総建玉",
   "slope": "直近 6 点 (6 週) の最小二乗回帰の傾き",
@@ -299,43 +302,43 @@
     {
      "d": "2022-11-08",
      "v": 0.5359,
-     "z": null,
-     "s": null,
+     "z": -0.92,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-11-15",
      "v": 0.555,
-     "z": null,
-     "s": null,
+     "z": -0.61,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-11-22",
      "v": 0.5043,
-     "z": null,
-     "s": null,
+     "z": -0.45,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-11-29",
      "v": 0.5315,
-     "z": null,
-     "s": null,
+     "z": 0.28,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-12-06",
      "v": 0.5516,
-     "z": null,
-     "s": null,
+     "z": 0.25,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-12-13",
      "v": 0.5363,
-     "z": null,
-     "s": null,
+     "z": 0.22,
+     "s": "none",
      "dir": 0
     },
     {
@@ -1718,7 +1721,8 @@
      "stage": "warning",
      "z": -2.11,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2023-04-04",
@@ -1726,7 +1730,8 @@
      "stage": "warning",
      "z": 2.02,
      "dir": 1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": true
     },
     {
      "start": "2023-06-20",
@@ -1734,7 +1739,8 @@
      "stage": "warning",
      "z": 2.86,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2023-07-25",
@@ -1742,7 +1748,8 @@
      "stage": "surge",
      "z": -4.93,
      "dir": -1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2023-09-26",
@@ -1750,7 +1757,8 @@
      "stage": "surge",
      "z": 3.57,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2023-12-26",
@@ -1758,7 +1766,8 @@
      "stage": "surge",
      "z": -3.02,
      "dir": -1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2024-06-25",
@@ -1766,7 +1775,8 @@
      "stage": "warning",
      "z": 2.42,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     },
     {
      "start": "2024-10-01",
@@ -1774,7 +1784,8 @@
      "stage": "warning",
      "z": -2.74,
      "dir": -1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     }
    ],
    "bands": [
@@ -2296,43 +2307,43 @@
     {
      "d": "2021-10-05",
      "v": -0.2814,
-     "z": null,
-     "s": null,
+     "z": 0.67,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-12",
      "v": -0.3146,
-     "z": null,
-     "s": null,
+     "z": 0.48,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-19",
      "v": -0.3851,
-     "z": null,
-     "s": null,
+     "z": 0.1,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-26",
      "v": -0.4035,
-     "z": null,
-     "s": null,
+     "z": -0.27,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-02",
      "v": -0.4287,
-     "z": null,
-     "s": null,
+     "z": -0.47,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-09",
      "v": -0.4334,
-     "z": null,
-     "s": null,
+     "z": -0.48,
+     "s": "none",
      "dir": 0
     },
     {
@@ -4114,7 +4125,8 @@
      "stage": "surge",
      "z": 5.83,
      "dir": 1,
-     "weeks": 6
+     "weeks": 6,
+     "reversal": false
     },
     {
      "start": "2024-10-29",
@@ -4122,7 +4134,8 @@
      "stage": "surge",
      "z": -3.26,
      "dir": -1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     }
    ],
    "bands": [
@@ -4532,44 +4545,44 @@
     {
      "d": "2021-10-05",
      "v": -0.0322,
-     "z": null,
-     "s": null,
+     "z": -0.63,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-12",
      "v": -0.0265,
-     "z": null,
-     "s": null,
+     "z": -1.39,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-19",
      "v": -0.0178,
-     "z": null,
-     "s": null,
+     "z": -0.97,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-26",
      "v": -0.0165,
-     "z": null,
-     "s": null,
+     "z": 0.02,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-02",
      "v": -0.0091,
-     "z": null,
-     "s": null,
+     "z": 0.94,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-09",
      "v": 0.0056,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": 1.87,
+     "s": "caution",
+     "dir": 1
     },
     {
      "d": "2021-11-16",
@@ -6350,7 +6363,8 @@
      "stage": "warning",
      "z": 2.33,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2022-06-07",
@@ -6358,7 +6372,8 @@
      "stage": "warning",
      "z": 2.27,
      "dir": 1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": false
     },
     {
      "start": "2022-06-28",
@@ -6366,7 +6381,8 @@
      "stage": "warning",
      "z": -2.15,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     },
     {
      "start": "2022-09-20",
@@ -6374,7 +6390,8 @@
      "stage": "surge",
      "z": 3.41,
      "dir": 1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     },
     {
      "start": "2022-11-01",
@@ -6382,7 +6399,8 @@
      "stage": "warning",
      "z": 2.3,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2024-06-04",
@@ -6390,7 +6408,8 @@
      "stage": "warning",
      "z": 2.15,
      "dir": 1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": false
     },
     {
      "start": "2024-07-02",
@@ -6398,7 +6417,8 @@
      "stage": "warning",
      "z": -2.33,
      "dir": -1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": true
     },
     {
      "start": "2024-10-22",
@@ -6406,7 +6426,8 @@
      "stage": "surge",
      "z": -3.32,
      "dir": -1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2025-03-11",
@@ -6414,7 +6435,8 @@
      "stage": "surge",
      "z": 3.27,
      "dir": 1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     },
     {
      "start": "2026-03-17",
@@ -6422,17 +6444,18 @@
      "stage": "warning",
      "z": -2.94,
      "dir": -1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     }
    ],
    "bands": [
     {
-     "start": "2021-11-16",
+     "start": "2021-11-09",
      "end": "2021-11-16",
      "stage": "caution",
      "dir": 1,
-     "z": 1.54,
-     "weeks": 1
+     "z": 1.87,
+     "weeks": 2
     },
     {
      "start": "2022-01-18",
@@ -6976,43 +6999,43 @@
     {
      "d": "2021-10-05",
      "v": -0.2801,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": -1.83,
+     "s": "caution",
+     "dir": -1
     },
     {
      "d": "2021-10-12",
      "v": -0.2262,
-     "z": null,
-     "s": null,
+     "z": -1.03,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-19",
      "v": -0.3163,
-     "z": null,
-     "s": null,
+     "z": -0.65,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-26",
      "v": -0.3569,
-     "z": null,
-     "s": null,
+     "z": -0.69,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-02",
      "v": -0.4001,
-     "z": null,
-     "s": null,
+     "z": -0.72,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-09",
      "v": -0.3306,
-     "z": null,
-     "s": null,
+     "z": -0.28,
+     "s": "none",
      "dir": 0
     },
     {
@@ -8794,7 +8817,8 @@
      "stage": "warning",
      "z": 2.37,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2026-09-01",
@@ -8802,10 +8826,19 @@
      "stage": "warning",
      "z": 2.18,
      "dir": 1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": false
     }
    ],
    "bands": [
+    {
+     "start": "2021-10-05",
+     "end": "2021-10-05",
+     "stage": "caution",
+     "dir": -1,
+     "z": -1.83,
+     "weeks": 1
+    },
     {
      "start": "2022-06-21",
      "end": "2022-06-28",
@@ -9196,44 +9229,44 @@
     {
      "d": "2021-10-05",
      "v": -0.4769,
-     "z": null,
-     "s": null,
+     "z": -0.74,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-12",
      "v": -0.4924,
-     "z": null,
-     "s": null,
+     "z": 0.21,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-19",
      "v": -0.4798,
-     "z": null,
-     "s": null,
+     "z": 0.91,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-26",
      "v": -0.4703,
-     "z": null,
-     "s": null,
+     "z": 0.7,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-02",
      "v": -0.4635,
-     "z": null,
-     "s": null,
+     "z": 0.98,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-09",
      "v": -0.4033,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": 1.6,
+     "s": "caution",
+     "dir": 1
     },
     {
      "d": "2021-11-16",
@@ -11014,7 +11047,8 @@
      "stage": "warning",
      "z": 2.44,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2022-04-12",
@@ -11022,7 +11056,8 @@
      "stage": "warning",
      "z": 2.6,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2024-02-06",
@@ -11030,7 +11065,8 @@
      "stage": "warning",
      "z": -2.51,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     },
     {
      "start": "2024-05-07",
@@ -11038,7 +11074,8 @@
      "stage": "warning",
      "z": 2.22,
      "dir": 1,
-     "weeks": 1
+     "weeks": 1,
+     "reversal": true
     },
     {
      "start": "2024-07-02",
@@ -11046,7 +11083,8 @@
      "stage": "surge",
      "z": 4.47,
      "dir": 1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": false
     },
     {
      "start": "2024-08-06",
@@ -11054,7 +11092,8 @@
      "stage": "surge",
      "z": -3.36,
      "dir": -1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2024-10-08",
@@ -11062,7 +11101,8 @@
      "stage": "surge",
      "z": 3.27,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2024-12-17",
@@ -11070,7 +11110,8 @@
      "stage": "surge",
      "z": -5.4,
      "dir": -1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     },
     {
      "start": "2025-12-16",
@@ -11078,10 +11119,19 @@
      "stage": "warning",
      "z": 2.34,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     }
    ],
    "bands": [
+    {
+     "start": "2021-11-09",
+     "end": "2021-11-09",
+     "stage": "caution",
+     "dir": 1,
+     "z": 1.6,
+     "weeks": 1
+    },
     {
      "start": "2021-11-16",
      "end": "2021-11-23",
@@ -11584,43 +11634,43 @@
     {
      "d": "2022-11-08",
      "v": -0.0427,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": -1.75,
+     "s": "caution",
+     "dir": -1
     },
     {
      "d": "2022-11-15",
      "v": -0.0405,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": -1.71,
+     "s": "caution",
+     "dir": -1
     },
     {
      "d": "2022-11-22",
      "v": -0.0524,
-     "z": null,
-     "s": null,
+     "z": -1.25,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-11-29",
      "v": -0.0512,
-     "z": null,
-     "s": null,
+     "z": -0.51,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-12-06",
      "v": -0.0331,
-     "z": null,
-     "s": null,
+     "z": -0.02,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2022-12-13",
      "v": 0.0721,
-     "z": null,
-     "s": null,
+     "z": 0.35,
+     "s": "none",
      "dir": 0
     },
     {
@@ -13003,7 +13053,8 @@
      "stage": "warning",
      "z": -2.17,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2023-09-26",
@@ -13011,7 +13062,8 @@
      "stage": "warning",
      "z": 2.77,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2024-09-24",
@@ -13019,7 +13071,8 @@
      "stage": "warning",
      "z": 2.66,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2024-12-17",
@@ -13027,7 +13080,8 @@
      "stage": "surge",
      "z": -3.27,
      "dir": -1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     },
     {
      "start": "2025-03-25",
@@ -13035,10 +13089,19 @@
      "stage": "warning",
      "z": 2.42,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     }
    ],
    "bands": [
+    {
+     "start": "2022-11-08",
+     "end": "2022-11-15",
+     "stage": "caution",
+     "dir": -1,
+     "z": -1.75,
+     "weeks": 2
+    },
     {
      "start": "2023-03-14",
      "end": "2023-03-21",
@@ -13437,43 +13500,43 @@
     {
      "d": "2021-10-05",
      "v": -0.2116,
-     "z": null,
-     "s": null,
+     "z": -0.52,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-12",
      "v": -0.2308,
-     "z": null,
-     "s": null,
+     "z": -1.37,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-10-19",
      "v": -0.2348,
-     "z": null,
-     "s": null,
-     "dir": 0
+     "z": -1.52,
+     "s": "caution",
+     "dir": -1
     },
     {
      "d": "2021-10-26",
      "v": -0.2663,
-     "z": null,
-     "s": null,
+     "z": -1.42,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-02",
      "v": -0.3043,
-     "z": null,
-     "s": null,
+     "z": -1.32,
+     "s": "none",
      "dir": 0
     },
     {
      "d": "2021-11-09",
      "v": -0.2949,
-     "z": null,
-     "s": null,
+     "z": -0.65,
+     "s": "none",
      "dir": 0
     },
     {
@@ -15255,7 +15318,8 @@
      "stage": "warning",
      "z": 2.75,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     },
     {
      "start": "2022-03-01",
@@ -15263,7 +15327,8 @@
      "stage": "warning",
      "z": 2.75,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2022-03-29",
@@ -15271,7 +15336,8 @@
      "stage": "warning",
      "z": -2.74,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     },
     {
      "start": "2022-06-21",
@@ -15279,7 +15345,8 @@
      "stage": "warning",
      "z": -2.52,
      "dir": -1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2022-11-01",
@@ -15287,7 +15354,8 @@
      "stage": "warning",
      "z": 2.95,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": true
     },
     {
      "start": "2022-12-20",
@@ -15295,7 +15363,8 @@
      "stage": "surge",
      "z": -3.16,
      "dir": -1,
-     "weeks": 4
+     "weeks": 4,
+     "reversal": true
     },
     {
      "start": "2023-03-21",
@@ -15303,7 +15372,8 @@
      "stage": "warning",
      "z": 2.39,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": true
     },
     {
      "start": "2025-03-25",
@@ -15311,7 +15381,8 @@
      "stage": "warning",
      "z": 2.83,
      "dir": 1,
-     "weeks": 2
+     "weeks": 2,
+     "reversal": false
     },
     {
      "start": "2025-05-06",
@@ -15319,10 +15390,19 @@
      "stage": "warning",
      "z": 2.82,
      "dir": 1,
-     "weeks": 3
+     "weeks": 3,
+     "reversal": false
     }
    ],
    "bands": [
+    {
+     "start": "2021-10-19",
+     "end": "2021-10-19",
+     "stage": "caution",
+     "dir": -1,
+     "z": -1.52,
+     "weeks": 1
+    },
     {
      "start": "2021-12-21",
      "end": "2022-01-04",

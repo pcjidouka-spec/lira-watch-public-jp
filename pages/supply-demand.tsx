@@ -48,12 +48,7 @@ export default function SupplyDemandPage({ data }: Props) {
                     {data.nature_note}
                   </p>
                   <p>{data.lag_note}</p>
-                  {data.stale_dates.length > 0 && (
-                    <p>
-                      一部の通貨は最新週のデータが届いていません（
-                      {data.stale_dates.join('、')} 時点）。
-                    </p>
-                  )}
+                  <p>{data.basis_note}</p>
                 </div>
 
                 <SupplyDemandDashboard data={data} />
@@ -82,6 +77,20 @@ export default function SupplyDemandPage({ data }: Props) {
                       {' '}で引いた傾きを、{data.method.score} と比べて行っています。
                       注意 = z {data.method.stages.caution} 以上、警戒 ={' '}
                       {data.method.stages.warning} 以上、急変 = {data.method.stages.surge} 以上です。
+                    </li>
+                    <li>
+                      <strong>需給は「対米ドル」のポジションです。</strong>
+                      日本円・ユーロ・スイスフラン・豪ドル・南アフリカランド・メキシコペソは
+                      いずれも米ドルに対する先物のポジションで、
+                      <strong>米ドルだけは通貨バスケット対比のドル指数</strong>という
+                      別の商品です。複数の通貨が同時に動いて見えるときは、
+                      共通の米ドル側が動いている可能性があります。
+                    </li>
+                    <li>
+                      <strong>反転</strong>は、警戒以上の区間の向きが
+                      <strong>直前の警戒以上の区間と逆</strong>になったことを指します。
+                      間に通常の週が何週挟まっていてもかまいません。
+                      上の帯では黄色い上線で示しています。
                     </li>
                     <li>
                       <strong>判定に未来の値は使っていません。</strong>
@@ -118,7 +127,8 @@ export default function SupplyDemandPage({ data }: Props) {
                       {data.source}
                     </a>
                     （米商品先物取引委員会）。毎週火曜時点のポジションを金曜に公表しています。
-                    最終更新 {data.generated_at}。
+                    データが最後に変わったのは {data.generated_at}、
+                    このページを組んだのは {data.built_at} です。
                   </p>
                 </section>
               </>
@@ -263,7 +273,16 @@ export default function SupplyDemandPage({ data }: Props) {
  */
 const DISPLAY_WEEKS = 157;
 
-function trim(data: SupplyDemandData): SupplyDemandData {
+/** as_of から数えた日数。★ビルド時刻から計算するので、JSON を書き直さなくても新しくなる。 */
+function ageInDays(asOf: string | null, now: Date): number | null {
+  if (!asOf) return null;
+  const parsed = Date.parse(`${asOf}T00:00:00Z`);
+  if (!Number.isFinite(parsed)) return null;
+  const days = Math.floor((now.getTime() - parsed) / 86400000);
+  return Number.isFinite(days) ? days : null;
+}
+
+function trim(data: SupplyDemandData, now: Date): SupplyDemandData {
   const currencies = data.currencies.map((c) => {
     const points = c.points.slice(-DISPLAY_WEEKS);
     const from = points.length > 0 ? points[0].d : '';
@@ -275,7 +294,12 @@ function trim(data: SupplyDemandData): SupplyDemandData {
       bands: c.bands.filter((b) => b.end >= from),
     };
   });
-  return { ...data, currencies };
+  return {
+    ...data,
+    currencies,
+    as_of_age_days: ageInDays(data.as_of, now),
+    built_at: now.toISOString().slice(0, 10),
+  };
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -284,7 +308,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const file = path.join(process.cwd(), 'public', 'data', 'supply_demand.json');
   let data: SupplyDemandData | null = null;
   try {
-    data = trim(JSON.parse(fs.readFileSync(file, 'utf-8')));
+    data = trim(JSON.parse(fs.readFileSync(file, 'utf-8')), new Date());
   } catch {
     data = null;
   }
