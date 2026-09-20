@@ -101,8 +101,19 @@ const BAND: Record<string, Record<string, string>> = {
   },
 };
 
+/** 方向の判定はここ 1 箇所に集める。
+ *  ★以前は配色が `dir >= 0`（0 を買い＝赤）、ツールチップが `dir > 0`（0 を売り）で
+ *    食い違っていた。`direction_of` は傾きがちょうど 0 のとき 0 を返すので到達しうる。 */
+function isBuy(dir: number): boolean {
+  return dir > 0;
+}
+
+function directionLabel(dir: number): string {
+  return isBuy(dir) ? '買い方向' : '売り方向';
+}
+
 function bandColor(dir: number, stage: 'caution' | 'warning' | 'surge'): string {
-  return BAND[dir >= 0 ? 'buy' : 'sell'][stage];
+  return BAND[isBuy(dir) ? 'buy' : 'sell'][stage];
 }
 
 const STAGE_LABEL: Record<string, string> = {
@@ -115,7 +126,7 @@ function statusLabel(current: SDCurrency['current']): { icon: string; text: stri
   const { stage, dir } = current;
   if (stage === 'surge' || stage === 'warning') {
     const strong = stage === 'surge';
-    if (dir > 0) {
+    if (isBuy(dir)) {
       return {
         icon: '🔴',
         text: strong ? '急激な買い変化' : '買い方向へ変化中',
@@ -298,7 +309,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                       }}
                       data-reversal={e.reversal ? '1' : undefined}
                       title={`${e.start}〜${e.end}（${e.weeks}週） ${
-                        e.dir > 0 ? '買い方向' : '売り方向'
+                        directionLabel(e.dir)
                       } ${e.stage === 'surge' ? '急変' : '変化中'}${
                         e.reversal ? '・反転' : ''
                       } z=${e.z ?? '—'}`}

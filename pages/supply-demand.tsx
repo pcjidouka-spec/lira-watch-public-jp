@@ -282,6 +282,36 @@ function ageInDays(asOf: string | null, now: Date): number | null {
   return Number.isFinite(days) ? days : null;
 }
 
+/**
+ * ★JSON の形を信用しない。
+ *  `getStaticProps` の try/catch は `JSON.parse` の失敗しか拾わない。
+ *  `gaps` や `stale_currencies` だけ欠けた JSON は素通りし、
+ *  描画中の例外 -> `next build` 失敗 -> 日次の `[10/10] update site` は -Fatal なので
+ *  ★日次全体が落ちる。欠けていたら空で埋めて、画面は出す。
+ */
+function normalize(raw: any): SupplyDemandData | null {
+  if (!raw || typeof raw !== 'object') return null;
+  if (!Array.isArray(raw.currencies) || raw.currencies.length === 0) return null;
+  return {
+    ...raw,
+    stale_currencies: Array.isArray(raw.stale_currencies) ? raw.stale_currencies : [],
+    gaps: Array.isArray(raw.gaps) ? raw.gaps : [],
+    unavailable: Array.isArray(raw.unavailable) ? raw.unavailable : [],
+    stale_after_days: typeof raw.stale_after_days === 'number' ? raw.stale_after_days : 12,
+    lag_note: raw.lag_note ?? '',
+    nature_note: raw.nature_note ?? '',
+    basis_note: raw.basis_note ?? '',
+    currencies: raw.currencies.map((c: any) => ({
+      ...c,
+      points: Array.isArray(c.points) ? c.points : [],
+      episodes: Array.isArray(c.episodes) ? c.episodes : [],
+      bands: Array.isArray(c.bands) ? c.bands : [],
+      current: c.current ?? { stage: null, dir: 0, z: null, date: null, active: false },
+      stats: c.stats ?? { weeks: 0, first: '', mean_open_interest: null },
+    })),
+  } as SupplyDemandData;
+}
+
 function trim(data: SupplyDemandData, now: Date): SupplyDemandData {
   const currencies = data.currencies.map((c) => {
     const points = c.points.slice(-DISPLAY_WEEKS);
@@ -308,7 +338,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const file = path.join(process.cwd(), 'public', 'data', 'supply_demand.json');
   let data: SupplyDemandData | null = null;
   try {
-    data = trim(JSON.parse(fs.readFileSync(file, 'utf-8')), new Date());
+    const parsed = normalize(JSON.parse(fs.readFileSync(file, 'utf-8')));
+    data = parsed ? trim(parsed, new Date()) : null;
   } catch {
     data = null;
   }
