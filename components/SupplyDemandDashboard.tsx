@@ -30,6 +30,8 @@ export interface SDEpisode {
   weeks: number;
   /** 直前の警戒以上の区間と逆向きだったか (0003 §2)。 */
   reversal: boolean;
+  /** ★検出できた週。start/end は表示用に左へずらしてあるが、これはずらさない。 */
+  detected: string;
 }
 
 /** グラフの背景に塗る区間。★episodes と違い「注意」も含み、段階ごとに分かれている。 */
@@ -74,6 +76,8 @@ export interface SupplyDemandData {
     score: string;
     stages: { caution: number; warning: number; surge: number };
     now_active_threshold: number;
+    /** 帯を左へずらした週数。0 なら従来どおり。 */
+    band_shift_weeks: number;
   };
   currencies: SDCurrency[];
   unavailable: { code: string; name: string; reason: string }[];
@@ -354,7 +358,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                         background: bandColor(e.dir, e.stage),
                       }}
                       data-reversal={e.reversal ? '1' : undefined}
-                      title={`${e.start}〜${e.end}（${e.weeks}週） ${
+                      title={`${e.start}〜${e.end}（検出 ${e.detected}・${e.weeks}週） ${
                         directionLabel(e.dir)
                       } ${e.stage === 'surge' ? '急変' : '変化中'}${
                         e.reversal ? '・反転' : ''
@@ -434,8 +438,10 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
               .filter((e) => axisIndex.has(e.start) || axisIndex.has(e.end))
               .map((e) => ({ band: e, span: bandSpan(e.start, e.end, axis, axisIndex) }))
               .filter((x) => x.span !== null);
-            // ★要件 §12「急変開始地点」。区間 (警戒以上) の始まりに縦線を引く。
-            const onsets = c.episodes.filter((e) => axisIndex.has(e.start));
+            // ★要件 §12「急変開始地点」。
+            //   縦線は detected (＝検出できた週) に引く。帯は表示用に左へずらしてあるが、
+            //   ★この線はずらさない。「いつ分かったか」を正確に指すため。
+            const onsets = c.episodes.filter((e) => axisIndex.has(e.detected));
             const s = statusLabel(c.current);
             return (
               <div key={c.code} className="sd-card">
@@ -466,8 +472,8 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                       <ReferenceLine y={0} stroke="#4b5563" strokeDasharray="3 3" />
                       {onsets.map((e) => (
                         <ReferenceLine
-                          key={`onset-${e.start}`}
-                          x={e.start}
+                          key={`onset-${e.detected}`}
+                          x={e.detected}
                           stroke={edgeColor(e.dir)}
                           strokeWidth={1.4}
                           ifOverflow="extendDomain"

@@ -42,15 +42,6 @@ export default function SupplyDemandPage({ data }: Props) {
 
             {data ? (
               <>
-                <div className="sd-caveat">
-                  <p>
-                    <strong>先に読んでください。</strong>
-                    {data.nature_note}
-                  </p>
-                  <p>{data.lag_note}</p>
-                  <p>{data.basis_note}</p>
-                </div>
-
                 <SupplyDemandDashboard data={data} />
 
                 <section className="sd-about">
@@ -79,12 +70,18 @@ export default function SupplyDemandPage({ data }: Props) {
                       {data.method.stages.warning} 以上、急変 = {data.method.stages.surge} 以上です。
                     </li>
                     <li>
-                      <strong>需給は「対米ドル」のポジションです。</strong>
-                      日本円・ユーロ・スイスフラン・豪ドル・南アフリカランド・メキシコペソは
-                      いずれも米ドルに対する先物のポジションで、
-                      <strong>米ドルだけは通貨バスケット対比のドル指数</strong>という
-                      別の商品です。複数の通貨が同時に動いて見えるときは、
-                      共通の米ドル側が動いている可能性があります。
+                      <strong>何に対する需給か。</strong>
+                      {data.basis_note}
+                    </li>
+                    <li>
+                      ★<strong>背景色の帯は、傾きが測っている期間に合わせて
+                      {data.method.band_shift_weeks}週ぶん左に寄せています。</strong>
+                      傾きは「直近6週の変化」なので、ずらさないと
+                      <strong>変化が起きた期間ではなく、その直後</strong>に色が付きます。
+                      縦線（区間の始まり）は<strong>ずらしていません</strong>。
+                      そこが「変化を検出できた週」です。
+                      なお、この寄せのぶん<strong>直近{data.method.band_shift_weeks}週には帯が付きません</strong>。
+                      いまの状態は右端の丸い点で見てください。
                     </li>
                     <li>
                       <strong>現在地点</strong>は、各通貨のグラフの
@@ -114,11 +111,7 @@ export default function SupplyDemandPage({ data }: Props) {
                   <ul>
                     <li>
                       <strong>値動きの予測はできません。</strong>
-                      過去データで確かめたところ、背景色が付いた時点では直前4週が
-                      すでに通常の約2倍動いており、色が付いた<em>後</em>の動きは
-                      通常とほとんど変わりませんでした。
-                      これは「変化が起きた区間に印をつける」装置であって、
-                      「これから動く方向を当てる」装置ではありません。
+                      {data.nature_note}
                     </li>
                     <li>
                       <strong>誤検知の少なさは保証できません。</strong>
@@ -128,7 +121,7 @@ export default function SupplyDemandPage({ data }: Props) {
                     </li>
                     <li>
                       <strong>リアルタイムではありません。</strong>
-                      元データが週1回の公表なので、最新の値でも3〜10日前の状態です。
+                      {data.lag_note}
                     </li>
                   </ul>
 
@@ -212,22 +205,6 @@ export default function SupplyDemandPage({ data }: Props) {
         .lead {
           line-height: 1.9;
           margin-bottom: 20px;
-        }
-        .sd-caveat {
-          background: #fffbeb;
-          border: 1px solid #fde68a;
-          border-radius: 10px;
-          padding: 14px 16px;
-          margin-bottom: 20px;
-        }
-        .sd-caveat p {
-          margin: 0 0 8px;
-          font-size: 13.5px;
-          line-height: 1.8;
-          color: #78350f;
-        }
-        .sd-caveat p:last-child {
-          margin-bottom: 0;
         }
         .sd-about {
           margin-top: 30px;
