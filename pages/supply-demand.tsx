@@ -87,6 +87,18 @@ export default function SupplyDemandPage({ data }: Props) {
                       共通の米ドル側が動いている可能性があります。
                     </li>
                     <li>
+                      <strong>現在地点</strong>は、各通貨のグラフの
+                      <strong>右端の丸い点</strong>と、上の帯の
+                      <strong>右端の細い印</strong>です。いまの段階の色が付きます。
+                      <strong>区間の始まり</strong>には縦線を引いています。
+                    </li>
+                    <li>
+                      帯（上の「どの通貨で同時に起きたか」）は<strong>警戒以上だけ</strong>を並べています。
+                      注意（変化拡大）は数が多いため、各行の右端と、下のグラフの背景にだけ出します。
+                      また<strong>1 週だけの区間は 1 区間ぶんの幅</strong>で描いています
+                      （幅ゼロだと何も見えないため）。
+                    </li>
+                    <li>
                       <strong>反転</strong>は、警戒以上の区間の向きが
                       <strong>直前の警戒以上の区間と逆</strong>になったことを指します。
                       間に通常の週が何週挟まっていてもかまいません。

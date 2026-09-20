@@ -88,18 +88,30 @@ const PERIODS: { key: string; label: string; weeks: number }[] = [
 
 // 買い方向は赤、売り方向は青。段階が上がるほど濃くする。
 // 注意(caution)は年7.5回出るので、区間だらけに見えないよう最も薄くする。
+// ★濃度は 2026-09-20 に上げた。注意 0.10 は暗い背景 (#0f1a26) に対してほぼ判別できず、
+//   「現在の状態＝変化拡大」なのにグラフに何も見えない、という報告を受けた。
+//   ★上げすぎない: 帯は大きな面なので、濃い飽和色の塊にすると目立ちすぎて線が読めなくなる。
 const BAND: Record<string, Record<string, string>> = {
   buy: {
-    caution: 'rgba(239, 68, 68, 0.10)',
-    warning: 'rgba(239, 68, 68, 0.26)',
-    surge: 'rgba(239, 68, 68, 0.50)',
+    caution: 'rgba(239, 68, 68, 0.18)',
+    warning: 'rgba(239, 68, 68, 0.30)',
+    surge: 'rgba(239, 68, 68, 0.45)',
   },
   sell: {
-    caution: 'rgba(59, 130, 246, 0.10)',
-    warning: 'rgba(59, 130, 246, 0.26)',
-    surge: 'rgba(59, 130, 246, 0.50)',
+    caution: 'rgba(59, 130, 246, 0.18)',
+    warning: 'rgba(59, 130, 246, 0.30)',
+    surge: 'rgba(59, 130, 246, 0.45)',
   },
 };
+
+/** 区間の線の色 (開始地点の縦線用)。帯より濃く、面ではなく線なので飽和させてよい。 */
+const EDGE: Record<string, string> = {
+  buy: 'rgba(248, 113, 113, 0.9)',
+  sell: 'rgba(96, 165, 250, 0.9)',
+};
+
+/** カードの背景色。マーカーのリングに使う (marks: 重なる印には 2px の surface リング)。 */
+const CARD_SURFACE = '#0f1a26';
 
 /** 方向の判定はここ 1 箇所に集める。
  *  ★以前は配色が `dir >= 0`（0 を買い＝赤）、ツールチップが `dir > 0`（0 を売り）で
@@ -114,6 +126,40 @@ function directionLabel(dir: number): string {
 
 function bandColor(dir: number, stage: 'caution' | 'warning' | 'surge'): string {
   return BAND[isBuy(dir) ? 'buy' : 'sell'][stage];
+}
+
+function edgeColor(dir: number): string {
+  return EDGE[isBuy(dir) ? 'buy' : 'sell'];
+}
+
+/**
+ * 帯の描画範囲を、軸のカテゴリ値で返す。
+ *
+ * ★ReferenceArea は x1 と x2 が同じだと【幅ゼロになり何も描かれない】。
+ *   1 週だけの区間がすべてこれに当たり、実測で 2 年窓の帯 51 本のうち
+ *   ★29 本 (57%) が消えていた (2026-09-20 に利用者の指摘で発覚)。
+ *   -> 1 週の区間は次の週まで伸ばす。最終週なら前の週へ伸ばす。
+ *   ★「1 週の帯は 1 区間ぶんの幅で描く」と読み替えていることになるので、
+ *     読み方の説明にもそう書く。
+ */
+function bandSpan(
+  startDate: string,
+  endDate: string,
+  axis: string[],
+  axisIndex: Map<string, number>,
+): [string, string] | null {
+  if (axis.length === 0) return null;
+  const rawStart = axisIndex.get(startDate);
+  const rawEnd = axisIndex.get(endDate);
+  // 期間の外で始まった区間は左端に丸める。
+  const from = rawStart ?? 0;
+  const to = rawEnd ?? axis.length - 1;
+  if (from > to) return null;
+  if (from !== to) return [axis[from], axis[to]];
+  // 幅ゼロ。隣へ 1 区間ぶん伸ばす。
+  if (to + 1 < axis.length) return [axis[from], axis[to + 1]];
+  if (from - 1 >= 0) return [axis[from - 1], axis[to]];
+  return null;
 }
 
 const STAGE_LABEL: Record<string, string> = {
@@ -316,6 +362,22 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                     />
                   );
                 })}
+                {/* ★各行の右端に現在の段階を出す。帯は警戒以上しか描かないので、
+                    注意 (変化拡大) だと行が空に見え、上の「現在の状態」と食い違う
+                    (2026-09-20 に利用者の指摘で判明)。ここには注意も出す。 */}
+                {c.current.stage && c.current.stage !== 'none' && (
+                  <span
+                    className="sd-tl-now"
+                    style={{
+                      background: bandColor(
+                        c.current.dir,
+                        c.current.stage as 'caution' | 'warning' | 'surge',
+                      ),
+                      borderColor: edgeColor(c.current.dir),
+                    }}
+                    title={`現在: ${statusLabel(c.current).text} (z=${c.current.z ?? '—'})`}
+                  />
+                )}
               </span>
             </div>
           ))}
@@ -343,8 +405,12 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
           <span className="sd-legend-item">
             <i className="sd-legend-reversal" />反転（直前の区間と逆向き）
           </span>
+          <span className="sd-legend-item">
+            <i className="sd-legend-now" />現在地点（各行の右端・下のグラフの最新点）
+          </span>
           <span className="sd-legend-note">
-            上の帯は警戒以上のみ。注意は各通貨のグラフ背景にだけ出ます
+            帯は警戒以上のみ。注意（変化拡大）は各行の右端と、下のグラフの背景に出ます。
+            1 週だけの区間は 1 区間ぶんの幅で描いています
           </span>
         </div>
       </section>
@@ -360,11 +426,16 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
             const rows = c.points
               .filter((p) => axisIndex.has(p.d))
               .map((p) => ({ date: p.d, value: p.v }));
+            const lastIndex = rows.length - 1;
             // ★背景は bands を使う。episodes (警戒以上をひとまとめ) では
             //   要件 §5 の 3 段階 (注意/警戒/急変) が表現できない。
-            const visible = c.bands.filter(
-              (e) => axisIndex.has(e.start) || axisIndex.has(e.end),
-            );
+            //   ★bandSpan を通すこと。通さないと 1 週の区間が幅ゼロで消える。
+            const visible = c.bands
+              .filter((e) => axisIndex.has(e.start) || axisIndex.has(e.end))
+              .map((e) => ({ band: e, span: bandSpan(e.start, e.end, axis, axisIndex) }))
+              .filter((x) => x.span !== null);
+            // ★要件 §12「急変開始地点」。区間 (警戒以上) の始まりに縦線を引く。
+            const onsets = c.episodes.filter((e) => axisIndex.has(e.start));
             const s = statusLabel(c.current);
             return (
               <div key={c.code} className="sd-card">
@@ -379,18 +450,29 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                 <div className="sd-card-plot">
                   <ResponsiveContainer width="100%" height={narrow ? 170 : 200}>
                     <LineChart data={rows} margin={{ top: 6, right: 6, left: 0, bottom: 2 }}>
-                      {visible.map((e) => (
+                      {visible.map(({ band, span }) => (
                         <ReferenceArea
-                          key={`${e.start}-${e.end}`}
-                          x1={axisIndex.has(e.start) ? e.start : firstDate}
-                          x2={e.end}
-                          fill={bandColor(e.dir, e.stage)}
+                          key={`${band.start}-${band.end}-${band.stage}`}
+                          x1={span![0]}
+                          x2={span![1]}
+                          fill={bandColor(band.dir, band.stage)}
                           fillOpacity={1}
                           ifOverflow="extendDomain"
                         />
                       ))}
                       <CartesianGrid stroke="#263043" vertical={false} />
+                      {/* ★y=0 はグリッドではなく「買い越し / 売り越しの境目」という閾値。
+                          破線なのはそのため (グリッドを破線にするのは別の話)。 */}
                       <ReferenceLine y={0} stroke="#4b5563" strokeDasharray="3 3" />
+                      {onsets.map((e) => (
+                        <ReferenceLine
+                          key={`onset-${e.start}`}
+                          x={e.start}
+                          stroke={edgeColor(e.dir)}
+                          strokeWidth={1.4}
+                          ifOverflow="extendDomain"
+                        />
+                      ))}
                       <XAxis
                         dataKey="date"
                         tick={{ fontSize: 9, fill: '#c9c9c9' }}
@@ -424,9 +506,30 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                         dataKey="value"
                         stroke="#e5e7eb"
                         strokeWidth={1.6}
-                        dot={false}
                         connectNulls={false}
                         isAnimationActive={false}
+                        // ★要件 §12「現在地点」。最新の 1 点だけに段階色の印を置く。
+                        //   これが無いと「現在の状態＝変化拡大」と画面が結びつかない
+                        //   (2026-09-20 に利用者の指摘で判明)。
+                        //   surface 色の 2px リングで、線や帯に重なっても輪郭が残る。
+                        dot={(props: any) => {
+                          if (props.index !== lastIndex) {
+                            return <g key={`d${props.index}`} />;
+                          }
+                          const staged = s.tone !== 'normal' && s.tone !== 'unknown';
+                          const fill = staged ? edgeColor(c.current.dir) : '#e5e7eb';
+                          return (
+                            <circle
+                              key="now"
+                              cx={props.cx}
+                              cy={props.cy}
+                              r={4.5}
+                              fill={fill}
+                              stroke={CARD_SURFACE}
+                              strokeWidth={2}
+                            />
+                          );
+                        }}
                       />
                     </LineChart>
                   </ResponsiveContainer>
@@ -649,6 +752,22 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         }
         .sd-tl-band[data-reversal='1'] {
           border-top: 3px solid #fbbf24;
+        }
+        .sd-tl-now {
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 7px;
+          border-left: 2px solid;
+          border-radius: 0 3px 3px 0;
+        }
+        .sd-legend-now {
+          background: #e5e7eb;
+          border-radius: 50%;
+          width: 11px !important;
+          height: 11px !important;
+          outline: 2px solid #0f1a26 !important;
         }
         .sd-legend-item i {
           width: 22px;
