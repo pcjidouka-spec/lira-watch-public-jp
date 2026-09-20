@@ -92,8 +92,10 @@ export interface SupplyDemandData {
     /** 価格は需給より 1 週間ほど遅れる旨 (0006 §2-4・§7-6)。 */
     lag_note: string;
     note: string;
+    /** ★二重軸はどちらも表示窓いっぱいに引き伸ばしてある旨 (0006 §4-1)。 */
+    scale_note?: string;
   };
-  /** 構造的に価格を出さない通貨 (USD/TRY 等)。0006 §3-1。 */
+  /** 構造的に価格を出さない通貨 (TRY。0006 §3-1。USD は FRB の広義ドル指数で出る)。 */
   price_unavailable: { code: string; name: string; reason: string }[];
   /** ★実行時に価格の取得が部分的に欠けた場合の申告 (0006 §6-1)。 */
   price_warnings: string[];
@@ -449,6 +451,8 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
           {' '}
           {data.price.note}
           {' '}
+          {data.price.scale_note}
+          {' '}
           {data.price.lag_note}
           {' '}
           出典:{' '}
@@ -456,6 +460,8 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
             {data.price.source}
           </a>
         </p>
+        {/* ★恒常的な説明 (構造的に出せない) と、実行時の異常 (F6-4) は見た目で区別する。
+            混ぜると「いつもこうなのか」「今回だけ欠けたのか」が読み手に伝わらない。 */}
         {data.price_unavailable.length > 0 && (
           <ul className="sd-price-missing">
             {data.price_unavailable.map((e) => (
@@ -467,11 +473,14 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         )}
         {/* ★価格の取得が実行時に部分的に欠けた場合の申告 (0006 §6-1・§7-7)。 */}
         {data.price_warnings.length > 0 && (
-          <ul className="sd-price-missing">
-            {data.price_warnings.map((w, i) => (
-              <li key={`price-warning-${i}`}>{w}</li>
-            ))}
-          </ul>
+          <div className="sd-price-warning-block">
+            <strong className="sd-price-warning-heading">価格取得の警告</strong>
+            <ul className="sd-price-warning">
+              {data.price_warnings.map((w, i) => (
+                <li key={`price-warning-${i}`}>{w}</li>
+              ))}
+            </ul>
+          </div>
         )}
         <div className="sd-grid">
           {data.currencies.map((c) => {
@@ -500,6 +509,10 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
             //   ★この線はずらさない。「いつ分かったか」を正確に指すため。
             const onsets = c.episodes.filter((e) => axisIndex.has(e.detected));
             const s = statusLabel(c.current);
+            // ★F3 (0006 §3-1): USD だけツールチップ・右軸のラベルを出し分ける。
+            //   USD の線は対米ドルではなく FRB の広義ドル指数 (ICE の DXY ではない)。
+            //   ★全体の注意書き 1 回だけでは足りない。カード自身で区別が付くようにする。
+            const priceLabel = c.code === 'USD' ? 'ドル指数（FRB 広義・ICE の DXY ではない）' : '価格（対米ドル）';
             return (
               <div key={c.code} className="sd-card">
                 <div className="sd-card-head">
@@ -566,6 +579,13 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                           tickFormatter={(v: number) =>
                             v < 0.01 ? v.toFixed(5) : v < 1 ? v.toFixed(4) : v.toFixed(3)
                           }
+                          label={{
+                            value: priceLabel,
+                            angle: -90,
+                            position: 'insideRight',
+                            fontSize: 8,
+                            fill: '#93a4bd',
+                          }}
                         />
                       )}
                       <Tooltip
@@ -580,7 +600,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                           if (name === 'price') {
                             return [
                               typeof value === 'number' ? value.toFixed(5) : 'データなし',
-                              '価格（対米ドル）',
+                              priceLabel,
                             ];
                           }
                           return [
@@ -893,6 +913,26 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
           line-height: 1.8;
           color: #6b7280;
           margin: 6px 0 0;
+          padding-left: 1.2em;
+        }
+        .sd-price-warning-block {
+          margin: 8px 0 0;
+          padding: 8px 10px;
+          background: #fffbeb;
+          border: 1px solid #fde68a;
+          border-radius: 8px;
+        }
+        .sd-price-warning-heading {
+          display: block;
+          font-size: 11.5px;
+          color: #92400e;
+          margin-bottom: 2px;
+        }
+        .sd-price-warning {
+          font-size: 12px;
+          line-height: 1.8;
+          color: #92400e;
+          margin: 0;
           padding-left: 1.2em;
         }
         .sd-grid {

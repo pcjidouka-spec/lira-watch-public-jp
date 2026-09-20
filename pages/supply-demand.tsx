@@ -105,6 +105,12 @@ export default function SupplyDemandPage({ data }: Props) {
                       <strong>判定に未来の値は使っていません。</strong>
                       各週の判定には、その週より前のデータだけを使っています。
                     </li>
+                    <li>
+                      グラフには各通貨の<strong>価格（対米ドル）</strong>も重ねています。
+                      <strong>米ドルだけは例外</strong>で、線は FRB の広義ドル指数（26通貨）です。
+                      CFTC の建玉が乗っているのは ICE のドル指数（DXY・6通貨）先物で、
+                      指数の構成が違います。カードの右軸にもそう表示しています。
+                    </li>
                   </ul>
 
                   <h2>この画面にできないこと</h2>
@@ -112,6 +118,14 @@ export default function SupplyDemandPage({ data }: Props) {
                     <li>
                       <strong>値動きの予測はできません。</strong>
                       {data.nature_note}
+                    </li>
+                    <li>
+                      <strong>「需給が急変したから価格が動いた」とは読めません。</strong>
+                      検証では、変化を検出できた時点で価格は既に動いた後でした
+                      （直前4週が通常の約2倍、検出後は通常とほぼ同じ）。
+                      背景の帯と価格の軸は無関係で、2本の線はそれぞれ別の物差しで
+                      表示窓いっぱいに引き伸ばしてあるため、形が似て見えても
+                      それは目盛りの取り方によるものです。
                     </li>
                     <li>
                       <strong>誤検知の少なさは保証できません。</strong>
@@ -258,6 +272,9 @@ export default function SupplyDemandPage({ data }: Props) {
  * ★ディスクの supply_demand.json は全履歴 (約 5.7 年) を持つ。これはデータの正本なので削らない。
  *   一方ページの props は __NEXT_DATA__ に丸ごと埋まるため、全履歴を渡すと 136kB になり
  *   Next.js の閾値 (128kB) を超える。画面のタブは最長 3 年なので、そこまでに絞る。
+ *   ★価格を重ねたことで実測サイズが動いた (0006): 157 週に絞った props で
+ *   93.5kB -> 109.3kB (2026-09-21 実測)。閾値 128kB にはまだ余裕があるが、
+ *   今後さらに列を足すときはここを測り直す。
  * ★z-score の基準期間 (104 週) はビルド前に Python 側で計算済み。ここで削っても判定は変わらない。
  */
 const DISPLAY_WEEKS = 157;
