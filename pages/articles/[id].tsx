@@ -1,3 +1,11 @@
+/*
+ * ★このページのレイアウト構造は変更禁止（変更が必要ならユーザーに確認する）。
+ *   - サムネイルは 1/3 幅の横並び（.article-top-section）を維持する
+ *   - ★フル幅ヒーロー画像への変更は禁止
+ *   - .article-thumbnail-container は width: 33.33% / aspect-ratio: 4 / 3、
+ *     画像は object-fit: contain を維持する
+ * ★この規則の正本はこのコメント。AGENTS.md からはここを参照している。
+ */
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
@@ -183,6 +191,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
            margin-bottom: 16px;
         }
         
+        /* ★変更禁止: width 33.33% / aspect-ratio 4 / 3、画像は object-fit: contain。
+           フル幅ヒーロー画像にしない。変更が必要ならユーザーに確認する。 */
         .article-thumbnail-container {
           width: 33.33%;
           aspect-ratio: 4 / 3;

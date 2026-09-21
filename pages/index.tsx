@@ -1,3 +1,8 @@
+/*
+ * ★このページのレイアウト構造は変更禁止（変更が必要ならユーザーに確認する）。
+ *   - トップページのカード配置・全体レイアウトを勝手に変えない
+ * ★この規則の正本はこのコメント。AGENTS.md からはここを参照している。
+ */
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';

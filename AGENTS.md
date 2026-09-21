@@ -17,7 +17,7 @@
 
 | | 場所 | 誰が書くか |
 |---|---|---|
-| ★**生成物** | `public/data/**` (`*.json` / `*.csv` 23 件) | ★**上流のデータ収集パイプラインが毎日自動でコミットする** (`Update data YYYY-MM-DD`) |
+| ★**生成物** | `public/data/**` (`*.json` / `*.csv`) | ★**上流のデータ収集パイプラインが毎日自動でコミットする** (`Update data YYYY-MM-DD`) |
 | 手書き | `components/` `pages/` `lib/` `hooks/` `types/` `data/` `styles/` `scripts/` | 人間 / エージェント |
 
 ★**`public/data/` の中身を手で編集しない。**翌日の自動更新で**上書きされて消える**。
@@ -30,12 +30,12 @@
 ## ディレクトリ構造
 
 ```
-pages/          Next.js のページ (Pages Router, 10 ファイル)
+pages/          Next.js のページ (Pages Router)
                 index / carry / arbitrage / strength / operator / privacy / contact
                 + articles/[id].tsx (記事は data/articles.ts から SSG)
-components/     UI コンポーネント (19。うち TradingView/ に 4 つのウィジェット)
+components/     UI コンポーネント (TradingView/ にウィジェット類)
 lib/            データ整形・共通ロジック (dataProcessor / spreadJoin / spreadDisplay ほか)
-                ★テストはここにしか無い (*.test.ts が 3 本)
+                ★テストはここにしか無い (*.test.ts)
 hooks/          カスタムフック (useSwapData / useCampaignUpdates)
 data/           手書きのコンテンツ定義 (articles.ts = 記事本文, ad_items.ts = 広告枠)
 types/          型定義
@@ -59,7 +59,7 @@ image/          画像素材 (元データ。配信されるのは public/images
 - **ページはほぼ全部 SSG**。`getStaticProps` がビルド時に `public/data/**` を読む。
   ★つまり**データが新しくなっても再ビルドされるまでサイトには出ない** (上流の push が Vercel のビルドを起こす)
 - チャートは `recharts`、CSV の解析は `papaparse`
-- `pages/articles/[id].tsx` は `data/articles.ts` の定義から静的生成する (2026-09 時点で 35 記事)
+- `pages/articles/[id].tsx` は `data/articles.ts` の定義から静的生成する
 
 ## ビルド・テスト
 
@@ -72,13 +72,8 @@ npm run build   # generate-rss -> generate-sitemap -> generate-x-posts
                 #   -> generate-ranking -> next build -> copy-public の順
 ```
 
-移行前ベースライン (2026-09-10 実測。`.migration-test.txt` にも記載):
-
-| コマンド | 結果 | 所要 |
-|---|---|---|
-| `npm test` | 3 ファイル / **40 tests passed**, exit 0 | 約 10 秒 (vitest 内部は 1.4 秒) |
-| `npm run lint` | **警告 34 / エラー 0**, exit 0 (ほぼ `@next/next/no-img-element`) | 約 60 秒 |
-| `npm run build` | exit 0 | 約 35 秒 |
+★3 つとも exit 0 が正常。`lint` は警告が出るがエラー 0 なら通る。
+実測のベースラインは `.migration-test.txt` (2026-09-10 の移行時)。
 
 ★**`npm run build` は `scripts/` の生成スクリプトを 4 本走らせてから** `next build` する。
 ビルドが落ちたときは、Next.js ではなく生成スクリプト側が原因のことがある。
@@ -103,12 +98,8 @@ npm run build   # generate-rss -> generate-sitemap -> generate-x-posts
 
 ## 既知の残骸 (直す前に人間に確認する)
 
-- `scripts/copy-public.js` は `scripts/public/` を `out/` へコピーする想定だが、
-  **そのディレクトリは存在せず毎回 skip している** (実質 no-op)。GitHub Pages で
-  静的エクスポートしていた頃の名残。★`README.md` の「Hosting: GitHub Pages」も同じ名残で、
-  **現在の公開先は Vercel**
-- `scripts/` には Python (`*.py`) と PowerShell / bat の運用補助スクリプトも同居している。
-  ビルドが呼ぶのは `generate-*.js` と `copy-public.js` だけ
+★一見バグに見えるが意図的に放置しているものがある。**見つけても勝手に直さない。**
+詳細は `KNOWN_ISSUES.md`。
 
 ## Codex 固有
 
