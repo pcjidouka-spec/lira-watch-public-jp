@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-09-21",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-21T23:02:39.179Z",
+  "generated_at": "2026-09-21T23:12:17.623Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -37,20 +37,20 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 14.1,
-      "sample_days": 18
+      "avg": 14.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 14.1,
-      "sample_days": 18
+      "avg": 14.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 14.1,
-      "sample_days": 18
+      "avg": 14.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "jfx",
@@ -105,14 +105,14 @@
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -14.1,
-      "sample_days": 18
+      "avg": -14.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -14.1,
-      "sample_days": 18
+      "avg": -14.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "traders_light_light",
@@ -153,8 +153,8 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -16.1,
-      "sample_days": 18
+      "avg": -16.099999999999998,
+      "sample_days": 17
     },
     {
       "provider_id": "gaitame",
