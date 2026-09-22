@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-09-22",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-22T23:07:22.570Z",
+  "generated_at": "2026-09-22T23:18:42.950Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -13,20 +13,20 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 114.7,
-      "sample_days": 10
-    },
-    {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": 113.8,
-      "sample_days": 10
+      "avg": 114.66666666666667,
+      "sample_days": 9
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
       "avg": 113.75,
       "sample_days": 8
+    },
+    {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": 113.55555555555556,
+      "sample_days": 9
     },
     {
       "provider_id": "sbi",
@@ -93,14 +93,14 @@
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -113.8,
-      "sample_days": 10
+      "avg": -113.55555555555556,
+      "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -114.7,
-      "sample_days": 10
+      "avg": -114.66666666666667,
+      "sample_days": 9
     },
     {
       "provider_id": "gmo",

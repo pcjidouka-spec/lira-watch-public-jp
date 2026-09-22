@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-09-22",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-22T23:07:22.558Z",
+  "generated_at": "2026-09-22T23:18:42.941Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -13,8 +13,8 @@
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": 15.241176470588236,
-      "sample_days": 17
+      "avg": 15.244444444444447,
+      "sample_days": 18
     },
     {
       "provider_id": "gmo_click",
@@ -37,8 +37,8 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 14.1,
-      "sample_days": 17
+      "avg": 14.099999999999998,
+      "sample_days": 16
     },
     {
       "provider_id": "traders_light",
@@ -135,8 +135,8 @@
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -15.241176470588236,
-      "sample_days": 17
+      "avg": -15.244444444444447,
+      "sample_days": 18
     },
     {
       "provider_id": "dmm",
@@ -154,7 +154,7 @@
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
       "avg": -16.099999999999998,
-      "sample_days": 17
+      "sample_days": 16
     },
     {
       "provider_id": "gaitame",

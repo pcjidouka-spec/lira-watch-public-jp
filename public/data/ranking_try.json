@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-09-22",
   "period_label": "直近約2週間",
-  "generated_at": "2026-09-22T23:07:22.545Z",
+  "generated_at": "2026-09-22T23:18:42.928Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -59,6 +59,12 @@
       "sample_days": 9
     },
     {
+      "provider_id": "traders_light_light",
+      "name": "LIGHT FX（LIGHT）",
+      "avg": 23.435294117647057,
+      "sample_days": 17
+    },
+    {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
       "avg": 23.433333333333334,
@@ -69,12 +75,6 @@
       "name": "MATSUI FX",
       "avg": 23.416666666666668,
       "sample_days": 12
-    },
-    {
-      "provider_id": "traders_light_light",
-      "name": "LIGHT FX（LIGHT）",
-      "avg": 23.387499999999996,
-      "sample_days": 16
     },
     {
       "provider_id": "traders_min",
@@ -115,12 +115,6 @@
       "sample_days": 16
     },
     {
-      "provider_id": "traders_light_light",
-      "name": "LIGHT FX（LIGHT）",
-      "avg": -23.387499999999996,
-      "sample_days": 16
-    },
-    {
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -23.416666666666668,
@@ -131,6 +125,12 @@
       "name": "みんなのFX（LIGHT）",
       "avg": -23.433333333333334,
       "sample_days": 15
+    },
+    {
+      "provider_id": "traders_light_light",
+      "name": "LIGHT FX（LIGHT）",
+      "avg": -23.435294117647057,
+      "sample_days": 17
     },
     {
       "provider_id": "click365_okasan",
