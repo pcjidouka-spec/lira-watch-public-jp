@@ -350,3 +350,14 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-21,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,None,None,09/21,success,2026/09/21
 2026-09-21,traders_min,AUD/JPY,みんなのFX,1.0,None,None,None,error,None
 2026-09-21,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,None,None,None,success,2026/09/21
+2026-09-22,central_tanshi,AUD/JPY,セントラル短資FX,1.0,None,None,None,success,2026/09/22
+2026-09-22,dmm,AUD/JPY,DMM FX,1.0,None,None,None,success,2026/09/22
+2026-09-22,gaitame,AUD/JPY,外為どっとコム,1.0,None,None,None,success,2026/09/22
+2026-09-22,gmo_click,AUD/JPY,GMOクリック証券,1.0,None,None,None,success,2026/09/22
+2026-09-22,hirose,AUD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/22
+2026-09-22,invast,AUD/JPY,トライオートFX,1.0,None,None,None,success,2026/09/21
+2026-09-22,sbi,AUD/JPY,SBI FXトレード,1.0,None,None,09月25日,success,2026/09/22
+2026-09-22,traders_light,AUD/JPY,LIGHT FX,1.0,None,None,None,success,2026/09/22
+2026-09-22,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,None,None,09/22,success,2026/09/22
+2026-09-22,traders_min,AUD/JPY,みんなのFX,1.0,None,None,None,error,None
+2026-09-22,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,None,None,09/22,success,2026/09/22
