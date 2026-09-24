@@ -881,3 +881,11 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-23,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/09/23
 2026-09-23,gaitame,GBP/USD,外為どっとコム,3,-15.67,0.0,,success,2026/09/23
 2026-09-23,traders_light,GBP/USD,LIGHT FX,3.0,,,,error,
+2026-09-24,dmm,GBP/USD,DMM FX,3,-15.0,12.0,,success,
+2026-09-24,traders_light,GBP/USD,LIGHT FX,1.0,,,,error,
+2026-09-24,central_tanshi,GBP/USD,セントラル短資FX,1,-15.8,12.6,,success,
+2026-09-24,gmo_click,GBP/USD,GMOクリック証券,1,-18.0,18.0,,success,
+2026-09-24,invast,GBP/USD,トライオートFX,3,-26.5,0.5,,success,2026/09/23
+2026-09-24,hirose,GBP/USD,ヒロセ通商,3,1.6,-7.93,,success,2026/09/24
+2026-09-24,jfx,GBP/USD,JFX,3,1.33,-7.67,,success,2026/09/24
+2026-09-24,gaitame,GBP/USD,外為どっとコム,1,-15.0,0.0,,success,2026/09/24

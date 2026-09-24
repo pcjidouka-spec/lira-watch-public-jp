@@ -1579,9 +1579,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-23,gaitame,USD/JPY,外為どっとコム,1.0,115.0,-140.0,None,success,2026/09/23
 2026-09-23,gmo,USD/JPY,GMO外貨,1.0,120.0,-120.0,None,success,2026/09/23
 2026-09-23,gmo_click,USD/JPY,GMOクリック証券,1.0,118.0,-118.0,None,success,2026/09/23
-2026-09-23,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/23
+2026-09-23,hirose,USD/JPY,ヒロセ通商,3,118.0,-148.0,None,success,2026/09/23
 2026-09-23,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/09/22
 2026-09-23,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/09/23
 2026-09-23,sbi,USD/JPY,SBI FXトレード,None,None,None,09月25日,success,2026/09/23
 2026-09-23,traders_light,USD/JPY,LIGHT FX,1.0,116.0,-116.0,None,success,2026/09/23
 2026-09-23,traders_min,USD/JPY,みんなのFX,1.0,115.0,-115.0,None,success,2026/09/23
+2026-09-24,central_tanshi,USD/JPY,セントラル短資FX,1.0,120.0,-120.0,9/25,success,2026/09/24
+2026-09-24,dmm,USD/JPY,DMM FX,1.0,115.0,-118.0,None,success,2026/09/24
+2026-09-24,gaitame,USD/JPY,外為どっとコム,1.0,115.0,-140.0,None,success,2026/09/24
+2026-09-24,gmo,USD/JPY,GMO外貨,1.0,120.0,-120.0,None,success,2026/09/24
+2026-09-24,gmo_click,USD/JPY,GMOクリック証券,1.0,118.0,-118.0,None,success,2026/09/24
+2026-09-24,hirose,USD/JPY,ヒロセ通商,1.0,118.0,-148.0,None,success,2026/09/23
+2026-09-24,invast,USD/JPY,トライオートFX,1.0,115.0,-191.0,None,success,2026/09/23
+2026-09-24,jfx,USD/JPY,JFX,1.0,118.0,-148.0,None,success,2026/09/24
+2026-09-24,sbi,USD/JPY,SBI FXトレード,1.0,115.0,-123.0,09月28日,success,2026/09/24
+2026-09-24,traders_light,USD/JPY,LIGHT FX,1.0,119.0,-119.0,None,success,2026/09/24
+2026-09-24,traders_min,USD/JPY,みんなのFX,1.0,118.0,-118.0,None,success,2026/09/24
