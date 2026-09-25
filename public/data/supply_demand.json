@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-22 07:58:15",
- "as_of": "2026-09-15",
+ "generated_at": "2026-09-26 07:52:33",
+ "as_of": "2026-09-22",
  "stale_currencies": [],
  "stale_after_days": 12,
  "gaps": [],
@@ -2426,6 +2426,14 @@
      "s": "none",
      "dir": 0,
      "p": 118.8822
+    },
+    {
+     "d": "2026-09-22",
+     "v": 0.223,
+     "z": -1.06,
+     "s": "none",
+     "dir": 0,
+     "p": 119.5133
     }
    ],
    "episodes": [
@@ -2645,14 +2653,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -1.0,
-    "date": "2026-09-15",
+    "z": -1.06,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 41395
+    "mean_open_interest": 41411
    }
   },
   {
@@ -5042,6 +5050,14 @@
      "s": "caution",
      "dir": 1,
      "p": 0.006447
+    },
+    {
+     "d": "2026-09-22",
+     "v": 0.1901,
+     "z": 2.56,
+     "s": "warning",
+     "dir": 1,
+     "p": 0.006375
     }
    ],
    "episodes": [
@@ -5063,6 +5079,16 @@
      "z": -3.26,
      "dir": -1,
      "weeks": 4,
+     "reversal": true
+    },
+    {
+     "start": "2026-09-08",
+     "end": "2026-09-08",
+     "detected": "2026-09-22",
+     "stage": "warning",
+     "z": 2.56,
+     "dir": 1,
+     "weeks": 1,
      "reversal": true
     }
    ],
@@ -5178,19 +5204,27 @@
      "dir": 1,
      "z": 1.78,
      "weeks": 1
+    },
+    {
+     "start": "2026-09-08",
+     "end": "2026-09-08",
+     "stage": "warning",
+     "dir": 1,
+     "z": 2.56,
+     "weeks": 1
     }
    ],
    "current": {
-    "stage": "caution",
+    "stage": "warning",
     "dir": 1,
-    "z": 1.78,
-    "date": "2026-09-15",
-    "active": false
+    "z": 2.56,
+    "date": "2026-09-22",
+    "active": true
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 268568
+    "mean_open_interest": 268936
    }
   },
   {
@@ -7580,6 +7614,14 @@
      "s": "none",
      "dir": 0,
      "p": 1.1542
+    },
+    {
+     "d": "2026-09-22",
+     "v": -0.0637,
+     "z": 0.27,
+     "s": "none",
+     "dir": 0,
+     "p": 1.1464
     }
    ],
    "episodes": [
@@ -7945,14 +7987,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.79,
-    "date": "2026-09-15",
+    "z": 0.27,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 731063
+    "mean_open_interest": 731366
    }
   },
   {
@@ -10342,6 +10384,14 @@
      "s": "caution",
      "dir": 1,
      "p": 1.221001
+    },
+    {
+     "d": "2026-09-22",
+     "v": -0.2004,
+     "z": 0.33,
+     "s": "none",
+     "dir": 0,
+     "p": 1.213298
     }
    ],
    "episodes": [
@@ -10473,16 +10523,16 @@
     }
    ],
    "current": {
-    "stage": "caution",
-    "dir": 1,
-    "z": 1.5,
-    "date": "2026-09-15",
+    "stage": "none",
+    "dir": 0,
+    "z": 0.33,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 65029
+    "mean_open_interest": 65258
    }
   },
   {
@@ -12872,6 +12922,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.7128
+    },
+    {
+     "d": "2026-09-22",
+     "v": -0.1527,
+     "z": 0.14,
+     "s": "none",
+     "dir": 0,
+     "p": 0.7111
     }
    ],
    "episodes": [
@@ -13187,14 +13245,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.45,
-    "date": "2026-09-15",
+    "z": 0.14,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 188317
+    "mean_open_interest": 188712
    }
   },
   {
@@ -15584,6 +15642,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.061536
+    },
+    {
+     "d": "2026-09-22",
+     "v": 0.4148,
+     "z": 0.37,
+     "s": "none",
+     "dir": 0,
+     "p": 0.061346
     }
    ],
    "episodes": [
@@ -15899,14 +15965,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.38,
-    "date": "2026-09-15",
+    "z": 0.37,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 24521
+    "mean_open_interest": 24566
    }
   },
   {
@@ -18296,6 +18362,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.058345
+    },
+    {
+     "d": "2026-09-22",
+     "v": 0.2825,
+     "z": -0.1,
+     "s": "none",
+     "dir": 0,
+     "p": 0.057986
     }
    ],
    "episodes": [
@@ -18603,14 +18677,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -0.3,
-    "date": "2026-09-15",
+    "z": -0.1,
+    "date": "2026-09-22",
     "active": false
    },
    "stats": {
-    "weeks": 298,
+    "weeks": 299,
     "first": "2021-01-05",
-    "mean_open_interest": 199632
+    "mean_open_interest": 199854
    }
   }
  ],
