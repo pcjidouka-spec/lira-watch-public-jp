@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20",
+  "generated_at": "2026-09-27",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -379,7 +379,7 @@
         "source": "https://fx.dmm.com/fx/aboutfx/spread/"
       },
       "gaitame": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-3時",
@@ -441,7 +441,7 @@
         "source": "https://www.sbifxt.co.jp/service/detailedspread.html"
       },
       "traders_min": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "8-5時",

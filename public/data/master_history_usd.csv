@@ -1604,6 +1604,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-25,hirose,USD/JPY,ヒロセ通商,1.0,117.0,-147.0,None,success,2026/09/25
 2026-09-25,invast,USD/JPY,トライオートFX,1.0,118.0,-194.0,None,success,2026/09/24
 2026-09-25,jfx,USD/JPY,JFX,1.0,119.0,-149.0,None,success,2026/09/25
-2026-09-25,sbi,USD/JPY,SBI FXトレード,None,None,None,None,error,None
 2026-09-25,traders_light,USD/JPY,LIGHT FX,1.0,119.0,-119.0,None,success,2026/09/25
 2026-09-25,traders_min,USD/JPY,みんなのFX,1.0,118.0,-118.0,None,success,2026/09/25
+2026-09-25,sbi,USD/JPY,SBI FXトレード,1.0,115.0,-123.0,09月29日,success,2026/09/25
