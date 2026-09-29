@@ -145,9 +145,9 @@ export default function SupplyDemandPage({ data }: Props) {
                     <a href={data.source_url} target="_blank" rel="noopener noreferrer">
                       {data.source}
                     </a>
-                    （米商品先物取引委員会）。毎週火曜時点のポジションを金曜 15:30（米東部時間）に公表しています。
+                    （米商品先物取引委員会）。毎週火曜時点のポジションを金曜に公表しています。
                     このページには日本時間の土曜 朝8時ごろに反映されます（米国の祝日がある週は遅れます）。
-                    データが最後に変わったのは {data.generated_at}、
+                    ページのデータを最後に更新したのは {data.generated_at}、
                     このページを組んだのは {data.built_at} です。
                   </p>
                 </section>
