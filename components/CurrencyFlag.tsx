@@ -89,6 +89,19 @@ const FLAGS: Record<string, React.ReactNode> = {
       <rect x="7.4" y="6.5" width="9.2" height="3" fill="#fff" />
     </>
   ),
+  // イギリス (ユニオンジャック)。24x16 では聖パトリック十字の斜めずらしは
+  // 潰れるので、白の斜め十字に細い赤を重ねた簡略形にする。
+  GBP: (
+    <>
+      <rect width="24" height="16" fill="#012169" />
+      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#fff" strokeWidth="3.2" />
+      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#c8102e" strokeWidth="1.1" />
+      <rect x="9.6" width="4.8" height="16" fill="#fff" />
+      <rect y="5.6" width="24" height="4.8" fill="#fff" />
+      <rect x="10.6" width="2.8" height="16" fill="#c8102e" />
+      <rect y="6.6" width="24" height="2.8" fill="#c8102e" />
+    </>
+  ),
 };
 
 interface Props {

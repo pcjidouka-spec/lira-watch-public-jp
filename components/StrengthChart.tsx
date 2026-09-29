@@ -50,6 +50,8 @@ const COLORS: Record<string, string> = {
   // 29 度以上あり、既存で最も近い USD-AUD の 14 度より余裕がある。
   EUR: '#a3e635',
   CHF: '#f472b6',
+  // GBP (2026-09-29 追加)。色相 約 225。最近傍 (199 / 258) からどちらも 25 度以上離れる。
+  GBP: '#4f7cff',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
 };
@@ -65,6 +67,7 @@ const CURRENCY_LABELS: Record<string, string> = {
   AUD: '豪ドル',
   EUR: 'ユーロ',
   CHF: 'スイスフラン',
+  GBP: '英ポンド',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
 };
@@ -305,6 +308,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           return (
             <span key={c} className="strength-provider">
               {CURRENCY_LABELS[c] ?? c}: {providerName(p.providers[c])}
+              {c === 'GBP' && '（GBP/USD＋USD/JPY の合成）'}
               {from && <span className="strength-from">（{from}〜）</span>}
             </span>
           );
@@ -318,6 +322,12 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         表示している通貨の平均が1.0になるよう揃えているため、日本円も上下します。
         円はスワップを受け取れないので、円の線が下がるほど他通貨が優位という読み方になります。
       </p>
+      {'GBP' in p.series && (
+        <p className="strength-note">
+          英ポンドは GBP/JPY のスワップを集めていないため、同じ会社の GBP/USD 買いと
+          USD/JPY 買いを組み合わせた値で計算しています。
+        </p>
+      )}
       {(p.references ?? []).length > 0 && (
         <p className="strength-note">
           破線の「CHF/TRY売」「CHF/TRY買」は通貨ではなくポジションです。どちらも
