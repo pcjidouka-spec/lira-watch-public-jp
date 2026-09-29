@@ -3,6 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ResponsiveContainer,
 } from 'recharts';
 import { CurrencyFlag } from '@/components/CurrencyFlag';
+import { CURRENCY_LABELS } from '@/lib/strengthCurrencies';
 
 export type StrengthPeriod = {
   dates: string[];
@@ -54,22 +55,6 @@ const COLORS: Record<string, string> = {
   GBP: '#4f7cff',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
-};
-
-const CURRENCY_LABELS: Record<string, string> = {
-  JPY: '日本円',
-  USD: '米ドル',
-  TRY: 'トルコリラ',
-  MXN: 'メキシコペソ',
-  ZAR: '南アフリカランド',
-  HUF: 'ハンガリーフォリント',
-  PLN: 'ポーランドズロチ',
-  AUD: '豪ドル',
-  EUR: 'ユーロ',
-  CHF: 'スイスフラン',
-  GBP: '英ポンド',
-  CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
-  CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
 };
 
 // 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は

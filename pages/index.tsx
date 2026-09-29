@@ -532,7 +532,7 @@ export default function Home() {
             <>
               <p style={{ margin: '8px 0 0 0', fontSize: '14px' }}>
                 <Link href="/strength" className="internal-link">
-                  スワップ込みの通貨強弱グラフ（為替の値動きとスワップを合算した実質の成績を11通貨で比較）→
+                  スワップ込みの通貨強弱グラフ（為替の値動きとスワップを合算した実質の成績を通貨ごとに比較）→
                 </Link>
               </p>
               <p style={{ margin: '6px 0 0 0', fontSize: '14px' }}>

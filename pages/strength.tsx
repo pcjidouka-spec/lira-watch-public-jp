@@ -5,19 +5,26 @@ import Head from 'next/head';
 import Link from 'next/link';
 import type { GetStaticProps } from 'next';
 import { StrengthChart, StrengthData } from '@/components/StrengthChart';
+import { strengthCurrencies, strengthCurrencyNames } from '@/lib/strengthCurrencies';
 
 interface Props {
   data: StrengthData | null;
 }
 
 export default function StrengthPage({ data }: Props) {
+  // 通貨の数と名前は strength.json から作る (手で書くと通貨を足すたびに直し漏れる)。
+  const codes = data ? strengthCurrencies(data) : [];
+  const names = strengthCurrencyNames(codes);
+  const description = codes.length
+    ? `${names.join('・')}の最大${codes.length}通貨を、為替の値動きとスワップポイントの両方を含めたトータルリターンで比較したグラフです。日次更新。`
+    : '為替の値動きとスワップポイントの両方を含めたトータルリターンで通貨を比較したグラフです。日次更新。';
   return (
     <>
       <Head>
         <title>スワップ込み通貨強弱グラフ | トルコリラ・ウォッチ</title>
         <meta
           name="description"
-          content="トルコリラ・メキシコペソ・米ドル・南アフリカランド・ハンガリーフォリント・豪ドル・ポーランドズロチ・ユーロ・スイスフラン・英ポンド・日本円の11通貨を、為替の値動きとスワップポイントの両方を含めたトータルリターンで比較したグラフです。日次更新。"
+          content={description}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -37,7 +44,7 @@ export default function StrengthPage({ data }: Props) {
             <p className="lead">
               高スワップ通貨は「スワップで増えても為替で減っていないか」が肝心です。
               このグラフは為替の値動きとスワップの受け取りを合算した実質の成績を、
-              11通貨まとめて比較できるようにしたものです。
+              {codes.length ? `最大${codes.length}通貨を` : '複数の通貨を'}まとめて比較できるようにしたものです。
             </p>
 
             {data ? (
