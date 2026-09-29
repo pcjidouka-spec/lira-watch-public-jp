@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 07:51:48",
+ "generated_at": "2026-09-29 10:35:11",
  "as_of": "2026-09-22",
  "stale_currencies": [],
  "stale_after_days": 12,
@@ -7,7 +7,7 @@
  "cadence": "weekly",
  "source": "CFTC Commitments of Traders (Legacy, futures only)",
  "source_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
- "lag_note": "CFTC の建玉は毎週火曜時点のスナップショットで、金曜 15:30 (米東部時間) に公表されます。したがって最新の値は 3〜10 日前の状態です。",
+ "lag_note": "CFTC の建玉は毎週火曜時点のスナップショットで、金曜 15:30 (米東部時間) に公表されます。このページへの反映は日本時間の土曜 朝8時ごろなので、最新の値は 4〜11 日前の状態です。",
  "nature_note": "この画面は「需給の変化が起きた区間に印をつける」ものです。検証では、印が付いた時点で直前 4 週が既に通常の約 2 倍動いており、印の後の動きは通常とほぼ同じでした。これから動く方向を当てるものではありません。",
  "basis_note": "各通貨の需給は「対米ドル」のポジションです（CME の通貨先物）。米ドルだけは通貨バスケット対比のドル指数（ICE）で、他とは別の商品です。したがって同時に動いて見えるときは、共通の米ドル側が動いている可能性があります。",
  "method": {
