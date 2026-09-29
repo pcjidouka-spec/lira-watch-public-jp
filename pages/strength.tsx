@@ -16,7 +16,7 @@ export default function StrengthPage({ data }: Props) {
   const codes = data ? strengthCurrencies(data) : [];
   const names = strengthCurrencyNames(codes);
   const description = codes.length
-    ? `${names.join('・')}の最大${codes.length}通貨を、為替の値動きとスワップポイントの両方を含めたトータルリターンで比較したグラフです。日次更新。`
+    ? `${names.join('・')}の${codes.length}通貨を、為替の値動きとスワップポイントの両方を含めたトータルリターンで比較したグラフです（期間によっては表示されない通貨があります）。日次更新。`
     : '為替の値動きとスワップポイントの両方を含めたトータルリターンで通貨を比較したグラフです。日次更新。';
   return (
     <>
@@ -44,7 +44,8 @@ export default function StrengthPage({ data }: Props) {
             <p className="lead">
               高スワップ通貨は「スワップで増えても為替で減っていないか」が肝心です。
               このグラフは為替の値動きとスワップの受け取りを合算した実質の成績を、
-              {codes.length ? `最大${codes.length}通貨を` : '複数の通貨を'}まとめて比較できるようにしたものです。
+              {codes.length ? `${codes.length}通貨を` : '複数の通貨を'}まとめて比較できるようにしたものです。
+              {codes.length > 0 && 'データが足りない通貨は、その期間のタブには表示されません。'}
             </p>
 
             {data ? (
