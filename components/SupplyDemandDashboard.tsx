@@ -288,7 +288,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         <div className="sd-now-head">
           <h2>現在の状態</h2>
           <span className="sd-asof">
-            {data.as_of} 時点（週次・毎週土曜 朝8時ごろ更新）
+            {data.as_of} 時点（週次。新しい週の値は毎週土曜 朝8時ごろ反映）
             {/* ★「急変」は |z|>=3.0 だけに使う語 (0003 §1)。
                 ここは警戒以上 (|z|>=2.0) の集計なので「変化中」と書く。 */}
             {activeCount > 0 ? ` ・ ${activeCount}通貨が変化中` : ' ・ 変化中の通貨なし'}
