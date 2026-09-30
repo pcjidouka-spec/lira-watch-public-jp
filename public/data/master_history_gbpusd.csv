@@ -909,3 +909,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-29,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/09/28
 2026-09-29,jfx,GBP/USD,JFX,1,-7.0,1.0,,success,2026/09/29
 2026-09-29,gaitame,GBP/USD,外為どっとコム,1,-15.0,0.0,,success,2026/09/29
+2026-09-30,gmo_click,GBP/USD,GMOクリック証券,1.0,,,,error,
+2026-09-30,invast,GBP/USD,トライオートFX,1.0,,,,error,
+2026-09-30,hirose,GBP/USD,ヒロセ通商,1,-7.9,1.6,,success,2026/09/30
+2026-09-30,jfx,GBP/USD,JFX,1,-7.0,1.0,,success,2026/09/30
+2026-09-30,gaitame,GBP/USD,外為どっとコム,3,-15.67,0.0,,success,2026/09/30
