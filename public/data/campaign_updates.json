@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T15:01:29.285435",
+  "updated_at": "2026-10-01T18:00:48.662921",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -19,7 +19,7 @@
     },
     "invast": {
       "has_new": true,
-      "updated_at": "2026-10-01T12:01:33.778489"
+      "updated_at": "2026-10-01T18:00:44.238540"
     },
     "traders_min": {
       "has_new": true,
