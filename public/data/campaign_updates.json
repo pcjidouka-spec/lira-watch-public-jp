@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T12:01:38.801464",
+  "updated_at": "2026-10-01T15:01:29.285435",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -22,16 +22,16 @@
       "updated_at": "2026-10-01T12:01:33.778489"
     },
     "traders_min": {
-      "has_new": false,
-      "updated_at": "2026-08-03T13:00:33.250890"
+      "has_new": true,
+      "updated_at": "2026-10-01T15:01:25.907215"
     },
     "traders_light": {
-      "has_new": false,
-      "updated_at": "2026-08-03T14:00:33.405661"
+      "has_new": true,
+      "updated_at": "2026-10-01T15:01:26.315272"
     },
     "sbi": {
       "has_new": true,
-      "updated_at": "2026-09-30T15:01:18.062808"
+      "updated_at": "2026-10-01T15:01:27.352028"
     },
     "matsui": {
       "has_new": false,
@@ -54,12 +54,12 @@
       "updated_at": "2026-01-26T04:00:02.904188"
     },
     "traders_min_light": {
-      "has_new": false,
-      "updated_at": "2026-08-03T13:00:34.008450"
+      "has_new": true,
+      "updated_at": "2026-10-01T15:01:26.724335"
     },
     "traders_light_light": {
-      "has_new": false,
-      "updated_at": "2026-08-03T14:00:34.172429"
+      "has_new": true,
+      "updated_at": "2026-10-01T15:01:27.069794"
     },
     "hirose": {
       "has_new": true,
