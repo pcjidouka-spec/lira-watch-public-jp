@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T04:00:49.077435",
+  "updated_at": "2026-10-01T12:01:38.801464",
   "providers": {
     "gmo_click": {
       "has_new": true,
@@ -14,12 +14,12 @@
       "updated_at": "2026-09-16T04:00:05.434612"
     },
     "jfx": {
-      "has_new": false,
-      "updated_at": "2026-09-01T09:00:32.873123"
+      "has_new": true,
+      "updated_at": "2026-10-01T12:01:26.370978"
     },
     "invast": {
-      "has_new": false,
-      "updated_at": "2026-09-01T13:00:33.813160"
+      "has_new": true,
+      "updated_at": "2026-10-01T12:01:33.778489"
     },
     "traders_min": {
       "has_new": false,
@@ -39,7 +39,7 @@
     },
     "gaitame": {
       "has_new": true,
-      "updated_at": "2026-09-30T15:01:18.541847"
+      "updated_at": "2026-10-01T12:01:36.741624"
     },
     "click365_okasan": {
       "has_new": false,
@@ -62,8 +62,8 @@
       "updated_at": "2026-08-03T14:00:34.172429"
     },
     "hirose": {
-      "has_new": false,
-      "updated_at": "2026-09-22T04:00:45.916256"
+      "has_new": true,
+      "updated_at": "2026-10-01T12:01:37.906165"
     },
     "saxo": {
       "has_new": false,
