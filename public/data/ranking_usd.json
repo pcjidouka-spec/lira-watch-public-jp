@@ -1,8 +1,8 @@
 {
   "currency_pair": "USD/JPY",
-  "target_date": "2026-09-30",
+  "target_date": "2026-10-01",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-01T09:00:49.714Z",
+  "generated_at": "2026-10-01T23:09:05.275Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -11,95 +11,95 @@
       "sample_days": 7
     },
     {
-      "provider_id": "gmo_click",
-      "name": "GMOクリック証券",
-      "avg": 119,
+      "provider_id": "invast",
+      "name": "トライオートFX",
+      "avg": 119.28571428571429,
       "sample_days": 7
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 118.88888888888889,
+      "avg": 119.22222222222223,
       "sample_days": 9
     },
     {
-      "provider_id": "invast",
-      "name": "トライオートFX",
-      "avg": 118.14285714285714,
+      "provider_id": "gmo_click",
+      "name": "GMOクリック証券",
+      "avg": 119.14285714285714,
       "sample_days": 7
+    },
+    {
+      "provider_id": "hirose",
+      "name": "ヒロセ通商",
+      "avg": 118.6923076923077,
+      "sample_days": 13
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 117.77777777777777,
+      "avg": 118.33333333333333,
       "sample_days": 9
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 117.66666666666667,
-      "sample_days": 9
-    },
-    {
-      "provider_id": "hirose",
-      "name": "ヒロセ通商",
-      "avg": 117.33333333333333,
+      "avg": 118,
       "sample_days": 9
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 116.28571428571429,
+      "avg": 117.57142857142857,
       "sample_days": 7
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": 116.28571428571429,
-      "sample_days": 7
-    },
-    {
-      "provider_id": "gaitame",
-      "name": "外為どっとコム",
-      "avg": 114.57142857142857,
+      "avg": 117.42857142857143,
       "sample_days": 7
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": 114.5,
+      "avg": 115.33333333333333,
       "sample_days": 6
+    },
+    {
+      "provider_id": "gaitame",
+      "name": "外為どっとコム",
+      "avg": 115.28571428571429,
+      "sample_days": 7
     }
   ],
   "sell_ranking": [
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -117.66666666666667,
+      "avg": -118,
       "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -117.77777777777777,
-      "sample_days": 9
-    },
-    {
-      "provider_id": "traders_light",
-      "name": "LIGHT FX",
-      "avg": -118.88888888888889,
+      "avg": -118.33333333333333,
       "sample_days": 9
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -119,
+      "avg": -119.14285714285714,
       "sample_days": 7
+    },
+    {
+      "provider_id": "traders_light",
+      "name": "LIGHT FX",
+      "avg": -119.22222222222223,
+      "sample_days": 9
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -119.28571428571429,
+      "avg": -120.57142857142857,
       "sample_days": 7
     },
     {
@@ -111,31 +111,31 @@
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
-      "avg": -122.5,
+      "avg": -123.33333333333333,
       "sample_days": 6
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -139.57142857142858,
+      "avg": -140.28571428571428,
       "sample_days": 7
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": -146.28571428571428,
+      "avg": -147.42857142857142,
       "sample_days": 7
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": -147.33333333333334,
-      "sample_days": 9
+      "avg": -148.69230769230768,
+      "sample_days": 13
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -194.42857142857142,
+      "avg": -195.71428571428572,
       "sample_days": 7
     }
   ]
