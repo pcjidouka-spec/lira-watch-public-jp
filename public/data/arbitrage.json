@@ -1,21 +1,17 @@
 {
-  "generated_at": "2026-10-02 08:03:02",
+  "generated_at": "2026-10-03 07:57:41",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-10-02",
+  "rate_as_of": "2026-10-03",
   "baseline": false,
   "excluded_providers": [
     "saxo"
   ],
   "excluded_pairs": [
     {
-      "pair": "HUF/JPY",
-      "reason": "G4: HUF/JPY traders_min_light のbuyが前回比 71% 変動 (0.7 -> 1.2)。キャンペーンや金利改定なら翌日から自動的に通ります"
-    },
-    {
       "pair": "PLN/JPY",
-      "reason": "G4: PLN/JPY traders_light のbuyが前回比 60% 変動 (75.0 -> 30.0)。キャンペーンや金利改定なら翌日から自動的に通ります"
+      "reason": "正の裁定益なし、または2グループ未満"
     }
   ],
   "top": [
@@ -26,42 +22,42 @@
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "swap": 25.0,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
       "sell": {
         "provider_id": "click365_okasan",
         "name": "クリック365",
         "swap": -21.0,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 64129,
-      "capital": 6412.9,
-      "annual_pct": 22.8,
+      "notional_2leg": 64306,
+      "capital": 6430.6,
+      "annual_pct": 22.7,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 5.7,
           "max_pct": 23.3,
-          "avg_pct": 13.1,
-          "median_pct": 12.0
+          "avg_pct": 13.6,
+          "median_pct": 11.9
         },
         "all": {
-          "days": 180,
+          "days": 181,
           "min_pct": 1.7,
-          "max_pct": 182.1,
-          "avg_pct": 21.1,
-          "median_pct": 17.1
+          "max_pct": 181.6,
+          "avg_pct": 21.0,
+          "median_pct": 17.0
         },
         "first_date": "2025-12-01",
-        "last_date": "2026-10-01",
+        "last_date": "2026-10-02",
         "step_count": 65,
         "steps": [
           {
-            "date": "2026-09-09",
+            "date": "2026-09-08",
             "side": "sell",
             "provider_id": "matsui",
             "name": "MATSUI FX",
@@ -117,43 +113,138 @@
     },
     {
       "rank": 2,
+      "pair": "HUF/JPY",
+      "buy": {
+        "provider_id": "invast",
+        "name": "トライオートFX",
+        "swap": 1.3,
+        "as_of": "2026-09-30",
+        "actual_date": "2026-09-29"
+      },
+      "sell": {
+        "provider_id": "traders_light_light",
+        "name": "LIGHT FX（LIGHT）",
+        "swap": -0.7,
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
+      },
+      "arb_per_day": 0.6,
+      "notional_2leg": 9669,
+      "capital": 966.9,
+      "annual_pct": 22.6,
+      "meets_threshold": true,
+      "history": {
+        "recent": {
+          "days": 20,
+          "min_pct": 15.1,
+          "max_pct": 26.4,
+          "avg_pct": 23.6,
+          "median_pct": 26.4
+        },
+        "all": {
+          "days": 110,
+          "min_pct": 11.3,
+          "max_pct": 60.4,
+          "avg_pct": 29.1,
+          "median_pct": 26.4
+        },
+        "first_date": "2026-04-10",
+        "last_date": "2026-10-02",
+        "step_count": 39,
+        "steps": [
+          {
+            "date": "2026-09-04",
+            "side": "buy",
+            "provider_id": "gmo_click",
+            "name": "GMOクリック証券",
+            "change_pct": -21.4
+          },
+          {
+            "date": "2026-09-07",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": 27.3
+          },
+          {
+            "date": "2026-09-23",
+            "side": "buy",
+            "provider_id": "gmo_click",
+            "name": "GMOクリック証券",
+            "change_pct": -21.4
+          },
+          {
+            "date": "2026-09-24",
+            "side": "buy",
+            "provider_id": "invast",
+            "name": "トライオートFX",
+            "change_pct": 18.2
+          },
+          {
+            "date": "2026-10-01",
+            "side": "buy",
+            "provider_id": "gmo_click",
+            "name": "GMOクリック証券",
+            "change_pct": -7.7
+          }
+        ],
+        "last_step": {
+          "date": "2026-10-01",
+          "side": "buy",
+          "provider_id": "gmo_click",
+          "name": "GMOクリック証券",
+          "change_pct": -7.7
+        },
+        "quiet_median_pct": 0.0
+      },
+      "spread": {
+        "available": true,
+        "cost_jpy": 120.0,
+        "days": 200.0,
+        "missing": [],
+        "has_manual": true,
+        "manual_as_of": "2026-08-29"
+      }
+    },
+    {
+      "rank": 3,
       "pair": "CHF/TRY",
       "buy": {
-        "provider_id": "traders_light",
-        "name": "LIGHT FX",
-        "swap": -1407.2,
-        "as_of": "2026-10-01",
+        "provider_id": "traders_min",
+        "name": "みんなのFX",
+        "swap": -1401.2,
+        "as_of": "2026-10-02",
         "actual_date": null
       },
       "sell": {
         "provider_id": "hirose",
         "name": "ヒロセ通商",
-        "swap": 1610.4,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-09-30"
+        "swap": 1612.9,
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
-      "arb_per_day": 203.2,
-      "notional_2leg": 3765769,
-      "capital": 376576.9,
-      "annual_pct": 19.7,
-      "meets_threshold": false,
+      "arb_per_day": 211.7,
+      "notional_2leg": 3794346,
+      "capital": 379434.6,
+      "annual_pct": 20.4,
+      "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 19.1,
-          "max_pct": 70.5,
-          "avg_pct": 41.1,
-          "median_pct": 36.9
+          "min_pct": 19.0,
+          "max_pct": 69.6,
+          "avg_pct": 38.3,
+          "median_pct": 31.6
         },
         "all": {
-          "days": 51,
-          "min_pct": 19.1,
-          "max_pct": 82.6,
-          "avg_pct": 51.8,
-          "median_pct": 56.3
+          "days": 52,
+          "min_pct": 19.0,
+          "max_pct": 82.0,
+          "avg_pct": 50.8,
+          "median_pct": 54.1
         },
         "first_date": "2026-07-22",
-        "last_date": "2026-10-01",
+        "last_date": "2026-10-02",
         "step_count": 12,
         "steps": [
           {
@@ -199,7 +290,7 @@
           "name": "ヒロセ通商",
           "change_pct": -7.1
         },
-        "quiet_median_pct": 0.73
+        "quiet_median_pct": 0.83
       },
       "spread": {
         "available": false,
@@ -212,7 +303,7 @@
       }
     },
     {
-      "rank": 3,
+      "rank": 4,
       "pair": "MXN/JPY",
       "buy": {
         "provider_id": "invast",
@@ -224,33 +315,33 @@
       "sell": {
         "provider_id": "click365_okasan",
         "name": "クリック365",
-        "swap": -12.3,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
+        "swap": -11.7,
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
-      "arb_per_day": 3.1,
-      "notional_2leg": 174034,
-      "capital": 17403.4,
-      "annual_pct": 6.5,
+      "arb_per_day": 3.7,
+      "notional_2leg": 173027,
+      "capital": 17302.7,
+      "annual_pct": 7.8,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 1.9,
-          "max_pct": 8.8,
-          "avg_pct": 5.0,
-          "median_pct": 5.0
+          "max_pct": 8.9,
+          "avg_pct": 5.2,
+          "median_pct": 5.1
         },
         "all": {
-          "days": 147,
+          "days": 148,
           "min_pct": 0.8,
-          "max_pct": 8.8,
+          "max_pct": 8.9,
           "avg_pct": 2.7,
           "median_pct": 2.3
         },
         "first_date": "2026-02-16",
-        "last_date": "2026-10-01",
-        "step_count": 33,
+        "last_date": "2026-10-02",
+        "step_count": 31,
         "steps": [
           {
             "date": "2026-09-24",
@@ -308,14 +399,14 @@
       }
     },
     {
-      "rank": 4,
+      "rank": 5,
       "pair": "ZAR/JPY",
       "buy": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "swap": 14.5,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
       "sell": {
         "provider_id": "sbi",
@@ -325,36 +416,29 @@
         "actual_date": "2026-10-01"
       },
       "arb_per_day": 2.5,
-      "notional_2leg": 191734,
-      "capital": 19173.4,
+      "notional_2leg": 189633,
+      "capital": 18963.3,
       "annual_pct": 4.8,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 1.5,
-          "max_pct": 13.5,
-          "avg_pct": 7.9,
-          "median_pct": 6.2
+          "min_pct": 1.0,
+          "max_pct": 13.7,
+          "avg_pct": 8.1,
+          "median_pct": 9.1
         },
         "all": {
-          "days": 54,
-          "min_pct": 1.5,
-          "max_pct": 13.5,
+          "days": 55,
+          "min_pct": 1.0,
+          "max_pct": 13.7,
           "avg_pct": 8.7,
-          "median_pct": 10.1
+          "median_pct": 10.2
         },
         "first_date": "2026-07-16",
-        "last_date": "2026-10-01",
-        "step_count": 19,
+        "last_date": "2026-10-02",
+        "step_count": 21,
         "steps": [
-          {
-            "date": "2026-09-22",
-            "side": "sell",
-            "provider_id": "sony",
-            "name": "ソニーバンクFX",
-            "change_pct": -33.3
-          },
           {
             "date": "2026-09-24",
             "side": "sell",
@@ -374,22 +458,29 @@
             "side": "sell",
             "provider_id": "sony",
             "name": "ソニーバンクFX",
-            "change_pct": 8.3
+            "change_pct": 16.7
           },
           {
             "date": "2026-09-29",
             "side": "sell",
             "provider_id": "sbi",
             "name": "SBI FXトレード",
-            "change_pct": -7.7
+            "change_pct": -14.3
+          },
+          {
+            "date": "2026-10-02",
+            "side": "sell",
+            "provider_id": "gmo",
+            "name": "GMO外貨",
+            "change_pct": 12.5
           }
         ],
         "last_step": {
-          "date": "2026-09-29",
+          "date": "2026-10-02",
           "side": "sell",
-          "provider_id": "sbi",
-          "name": "SBI FXトレード",
-          "change_pct": -7.7
+          "provider_id": "gmo",
+          "name": "GMO外貨",
+          "change_pct": 12.5
         },
         "quiet_median_pct": 0.0
       },
@@ -400,106 +491,6 @@
         "missing": [],
         "has_manual": false,
         "manual_as_of": null
-      }
-    },
-    {
-      "rank": 5,
-      "pair": "CHF/JPY",
-      "buy": {
-        "provider_id": "traders_light",
-        "name": "LIGHT FX",
-        "swap": -15.0,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
-      },
-      "sell": {
-        "provider_id": "click365_okasan",
-        "name": "クリック365",
-        "swap": 62.0,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
-      },
-      "arb_per_day": 47.0,
-      "notional_2leg": 3765769,
-      "capital": 376576.9,
-      "annual_pct": 4.6,
-      "meets_threshold": false,
-      "history": {
-        "recent": {
-          "days": 20,
-          "min_pct": 2.1,
-          "max_pct": 4.7,
-          "avg_pct": 3.3,
-          "median_pct": 3.1
-        },
-        "all": {
-          "days": 41,
-          "min_pct": 1.6,
-          "max_pct": 4.8,
-          "avg_pct": 3.5,
-          "median_pct": 3.9
-        },
-        "first_date": "2026-08-03",
-        "last_date": "2026-10-01",
-        "step_count": 24,
-        "steps": [
-          {
-            "date": "2026-09-25",
-            "side": "buy",
-            "provider_id": "traders_light",
-            "name": "LIGHT FX",
-            "change_pct": -33.3
-          },
-          {
-            "date": "2026-09-28",
-            "side": "buy",
-            "provider_id": "traders_light",
-            "name": "LIGHT FX",
-            "change_pct": 50.0
-          },
-          {
-            "date": "2026-09-28",
-            "side": "sell",
-            "provider_id": "click365_okasan",
-            "name": "クリック365",
-            "change_pct": -5.1
-          },
-          {
-            "date": "2026-09-29",
-            "side": "sell",
-            "provider_id": "sbi",
-            "name": "SBI FXトレード",
-            "change_pct": 8.9
-          },
-          {
-            "date": "2026-10-01",
-            "side": "sell",
-            "provider_id": "click365_okasan",
-            "name": "クリック365",
-            "change_pct": 5.1
-          }
-        ],
-        "last_step": {
-          "date": "2026-10-01",
-          "side": "sell",
-          "provider_id": "click365_okasan",
-          "name": "クリック365",
-          "change_pct": 5.1
-        },
-        "quiet_median_pct": 0.0
-      },
-      "spread": {
-        "available": false,
-        "missing": [
-          {
-            "side": "buy",
-            "provider_id": "traders_light"
-          },
-          {
-            "side": "sell",
-            "provider_id": "click365_okasan"
-          }
-        ]
       }
     }
   ]
