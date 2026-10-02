@@ -2,13 +2,13 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-10-01",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-02T03:00:52.466Z",
+  "generated_at": "2026-10-02T04:20:33.137Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 15.399999999999999,
-      "sample_days": 9
+      "avg": 15.400000000000002,
+      "sample_days": 7
     },
     {
       "provider_id": "gmo_click",
@@ -77,12 +77,6 @@
       "sample_days": 11
     },
     {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": 12.5,
-      "sample_days": 12
-    },
-    {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": 12.454545454545455,
@@ -93,6 +87,12 @@
       "name": "クリック365",
       "avg": 12.344444444444443,
       "sample_days": 9
+    },
+    {
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": 12.3,
+      "sample_days": 10
     }
   ],
   "sell_ranking": [
@@ -177,14 +177,14 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -22.5,
-      "sample_days": 12
+      "avg": -22.3,
+      "sample_days": 10
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -30.600000000000005,
-      "sample_days": 9
+      "avg": -30.599999999999998,
+      "sample_days": 7
     }
   ]
 }

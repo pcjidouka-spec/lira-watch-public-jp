@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-10-01",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-02T03:00:52.449Z",
+  "generated_at": "2026-10-02T04:20:33.120Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -31,8 +31,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.4,
-      "sample_days": 9
+      "avg": 24.400000000000002,
+      "sample_days": 7
     },
     {
       "provider_id": "traders_min_light",
@@ -68,7 +68,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 24,
-      "sample_days": 12
+      "sample_days": 14
     },
     {
       "provider_id": "dmm",
@@ -112,7 +112,7 @@
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -24,
-      "sample_days": 12
+      "sample_days": 14
     },
     {
       "provider_id": "traders_light",
@@ -190,7 +190,7 @@
       "provider_id": "invast",
       "name": "トライオートFX",
       "avg": -37.4,
-      "sample_days": 9
+      "sample_days": 7
     },
     {
       "provider_id": "m2j",

@@ -2,7 +2,7 @@
   "currency_pair": "USD/JPY",
   "target_date": "2026-10-01",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-02T03:00:52.478Z",
+  "generated_at": "2026-10-02T04:20:33.149Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -13,7 +13,7 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 119.28571428571429,
+      "avg": 120.42857142857143,
       "sample_days": 7
     },
     {
@@ -135,7 +135,7 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -195.71428571428572,
+      "avg": -197,
       "sample_days": 7
     }
   ]
