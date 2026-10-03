@@ -149,7 +149,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-12,gmo_click,GBP/USD,GMOクリック証券,1,2.0,-2.0,,success,
 2026-05-12,hirose,GBP/USD,ヒロセ通商,1,1.6,-7.8,,success,2026/05/12
 2026-05-12,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/05/12
-2026-05-12,gaitame,GBP/USD,外為どっとコム,3.0,0.0,-15.0,,success,2026/05/12
+2026-05-12,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/05/12
 2026-05-12,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-05-13,dmm,GBP/USD,DMM FX,1,2.0,-5.0,,success,
 2026-05-13,traders_light,GBP/USD,LIGHT FX,3,4.73,-4.77,,success,
@@ -157,7 +157,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,gmo_click,GBP/USD,GMOクリック証券,3,-2.0,2.0,,success,
 2026-05-13,hirose,GBP/USD,ヒロセ通商,3.0,1.6,-7.9,,success,2026/05/13
 2026-05-13,jfx,GBP/USD,JFX,3.0,1.0,-7.0,,success,2026/05/13
-2026-05-13,gaitame,GBP/USD,外為どっとコム,1.0,0.0,-15.67,,success,2026/05/13
+2026-05-13,gaitame,GBP/USD,外為どっとコム,3,0.0,-15.67,,success,2026/05/13
 2026-05-13,invast,GBP/USD,トライオートFX,3,-26.5,0.5,,success,
 2026-05-14,dmm,GBP/USD,DMM FX,3,2.0,-5.0,,success,
 2026-05-14,traders_light,GBP/USD,LIGHT FX,1,4.7,-4.8,,success,
@@ -188,7 +188,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-19,gmo_click,GBP/USD,GMOクリック証券,1,-1.0,1.0,,success,
 2026-05-19,hirose,GBP/USD,ヒロセ通商,1,1.6,-7.9,,success,2026/05/19
 2026-05-19,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/05/19
-2026-05-19,gaitame,GBP/USD,外為どっとコム,4.0,0.0,-15.0,,success,2026/05/19
+2026-05-19,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/05/19
 2026-05-19,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-05-20,dmm,GBP/USD,DMM FX,1,1.0,-4.0,,success,
 2026-05-20,traders_light,GBP/USD,LIGHT FX,4,0.0,0.0,,success,
@@ -239,7 +239,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-28,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-05-28,central_tanshi,GBP/USD,セントラル短資FX,1,0.0,-3.1,,success,
 2026-05-28,gmo_click,GBP/USD,GMOクリック証券,1,2.0,-2.0,,success,
-2026-05-28,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/05/28
+2026-05-28,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-05-28,hirose,GBP/USD,ヒロセ通商,3,1.6,-7.97,,success,2026/05/28
 2026-05-28,jfx,GBP/USD,JFX,3,1.33,-7.67,,success,2026/05/28
 2026-05-28,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/05/28
@@ -285,7 +285,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-05,dmm,GBP/USD,DMM FX,1,5.0,-8.0,,success,
 2026-06-05,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-06-05,gmo_click,GBP/USD,GMOクリック証券,1,-1.0,1.0,,success,
-2026-06-05,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/06/05
+2026-06-05,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-06-05,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,2026/06/05
 2026-06-05,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/06/05
 2026-06-05,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/06/05
@@ -324,7 +324,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-12,dmm,GBP/USD,DMM FX,1,1.0,-4.0,,success,
 2026-06-12,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-06-12,gmo_click,GBP/USD,GMOクリック証券,1,-1.0,1.0,,success,
-2026-06-12,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/06/12
+2026-06-12,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-06-12,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,2026/06/12
 2026-06-12,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/06/12
 2026-06-12,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/06/12
@@ -360,7 +360,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-19,dmm,GBP/USD,DMM FX,1,1.0,-4.0,,success,
 2026-06-19,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-06-19,gmo_click,GBP/USD,GMOクリック証券,1,-1.0,1.0,,success,
-2026-06-19,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/06/19
+2026-06-19,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-06-19,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,2026/06/19
 2026-06-19,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/06/19
 2026-06-19,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/06/19
@@ -391,7 +391,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-26,dmm,GBP/USD,DMM FX,1,-4.0,1.0,,success,
 2026-06-26,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-06-26,gmo_click,GBP/USD,GMOクリック証券,1,-5.0,5.0,,success,
-2026-06-26,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/06/26
+2026-06-26,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-06-26,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.1,,success,2026/06/26
 2026-06-26,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/06/26
 2026-06-26,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/06/26
@@ -409,7 +409,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-30,gmo_click,GBP/USD,GMOクリック証券,1,-4.0,4.0,,success,
 2026-06-30,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.1,,success,2026/06/30
 2026-06-30,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/06/30
-2026-06-30,gaitame,GBP/USD,外為どっとコム,3.0,0.0,-16.0,,success,2026/06/30
+2026-06-30,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/06/30
 2026-06-30,invast,GBP/USD,トライオートFX,1.0,,,,error,
 2026-07-01,dmm,GBP/USD,DMM FX,1,-4.0,1.0,,success,
 2026-07-01,traders_light,GBP/USD,LIGHT FX,3,0.0,0.0,,success,
@@ -430,7 +430,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-03,dmm,GBP/USD,DMM FX,1,-4.0,1.0,,success,
 2026-07-03,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-07-03,gmo_click,GBP/USD,GMOクリック証券,1,2.0,-2.0,,success,
-2026-07-03,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/07/03
+2026-07-03,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-07-03,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.1,,success,2026/07/03
 2026-07-03,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/07/03
 2026-07-03,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/07/03
@@ -469,7 +469,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-10,dmm,GBP/USD,DMM FX,1,1.0,-4.0,,success,
 2026-07-10,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-07-10,gmo_click,GBP/USD,GMOクリック証券,1,-1.0,1.0,,success,
-2026-07-10,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/07/10
+2026-07-10,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-07-10,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.1,,success,2026/07/10
 2026-07-10,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/07/10
 2026-07-10,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/07/10
@@ -526,7 +526,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,gmo_click,GBP/USD,GMOクリック証券,1,-2.0,2.0,,success,
 2026-07-21,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.1,,success,2026/07/21
 2026-07-21,jfx,GBP/USD,JFX,1,1.0,-8.0,,success,2026/07/21
-2026-07-21,gaitame,GBP/USD,外為どっとコム,3.0,0.0,-16.0,,success,2026/07/21
+2026-07-21,gaitame,GBP/USD,外為どっとコム,1,0.0,-16.0,,success,2026/07/21
 2026-07-21,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-07-22,dmm,GBP/USD,DMM FX,1,1.0,-4.0,,success,
 2026-07-22,traders_light,GBP/USD,LIGHT FX,3,0.0,0.0,,success,
@@ -534,7 +534,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-22,gmo_click,GBP/USD,GMOクリック証券,3,2.0,-2.0,,success,
 2026-07-22,hirose,GBP/USD,ヒロセ通商,3.0,1.6,-8.2,,success,2026/07/22
 2026-07-22,jfx,GBP/USD,JFX,3.0,1.0,-8.0,,success,2026/07/22
-2026-07-22,gaitame,GBP/USD,外為どっとコム,1.0,0.0,-16.0,,success,2026/07/22
+2026-07-22,gaitame,GBP/USD,外為どっとコム,3,0.0,-16.0,,success,2026/07/22
 2026-07-22,invast,GBP/USD,トライオートFX,3,-26.5,0.5,,success,
 2026-07-23,dmm,GBP/USD,DMM FX,3,1.0,-4.0,,success,
 2026-07-23,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
@@ -625,7 +625,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,dmm,GBP/USD,DMM FX,1,2.0,-5.0,,success,
 2026-08-07,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-08-07,gmo_click,GBP/USD,GMOクリック証券,1,2.0,-2.0,,success,
-2026-08-07,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/08/07
+2026-08-07,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-08-07,hirose,GBP/USD,ヒロセ通商,1,1.6,-7.9,,success,2026/08/07
 2026-08-07,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/08/07
 2026-08-07,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/08/07
@@ -664,7 +664,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,dmm,GBP/USD,DMM FX,1,4.0,-7.0,,success,
 2026-08-14,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-08-14,gmo_click,GBP/USD,GMOクリック証券,1,2.0,-2.0,,success,
-2026-08-14,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/08/14
+2026-08-14,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-08-14,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,2026/08/14
 2026-08-14,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/08/14
 2026-08-14,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/08/14
@@ -703,7 +703,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,dmm,GBP/USD,DMM FX,1,4.0,-7.0,,success,
 2026-08-21,traders_light,GBP/USD,LIGHT FX,1,0.0,0.0,,success,
 2026-08-21,gmo_click,GBP/USD,GMOクリック証券,1,3.0,-3.0,,success,
-2026-08-21,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,2026/08/21
+2026-08-21,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-08-21,hirose,GBP/USD,ヒロセ通商,1,1.6,-8.0,,success,2026/08/21
 2026-08-21,jfx,GBP/USD,JFX,1,1.0,-7.0,,success,2026/08/21
 2026-08-21,gaitame,GBP/USD,外為どっとコム,1,0.0,-15.0,,success,2026/08/21

@@ -183,7 +183,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-12,gmo_click,EUR/USD,GMOクリック証券,1,-72.0,72.0,,success,
 2026-05-12,hirose,EUR/USD,ヒロセ通商,1,-100.3,79.9,,success,2026/05/12
 2026-05-12,jfx,EUR/USD,JFX,1,-102.0,81.0,,success,2026/05/12
-2026-05-12,gaitame,EUR/USD,外為どっとコム,3.0,-104.0,72.0,,success,2026/05/12
+2026-05-12,gaitame,EUR/USD,外為どっとコム,1,-104.0,72.0,,success,2026/05/12
 2026-05-12,gmo,EUR/USD,GMO外貨,1,-77.0,77.0,,success,2026/05/12
 2026-05-12,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-05-13,dmm,EUR/USD,DMM FX,1,-77.0,74.0,,success,
@@ -193,7 +193,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,gmo_click,EUR/USD,GMOクリック証券,3,-72.0,72.0,,success,
 2026-05-13,hirose,EUR/USD,ヒロセ通商,3.0,-100.6,80.2,,success,2026/05/13
 2026-05-13,jfx,EUR/USD,JFX,3.0,-102.0,81.0,,success,2026/05/13
-2026-05-13,gaitame,EUR/USD,外為どっとコム,1.0,-104.0,72.33,,success,2026/05/13
+2026-05-13,gaitame,EUR/USD,外為どっとコム,3,-104.0,72.33,,success,2026/05/13
 2026-05-13,gmo,EUR/USD,GMO外貨,3,-77.0,77.0,,success,2026/05/13
 2026-05-13,invast,EUR/USD,トライオートFX,3,-100.0,40.0,,success,
 2026-05-14,dmm,EUR/USD,DMM FX,3,-77.0,74.0,,success,
@@ -231,7 +231,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-19,gmo_click,EUR/USD,GMOクリック証券,1,-76.0,76.0,,success,
 2026-05-19,hirose,EUR/USD,ヒロセ通商,1,-101.6,81.0,,success,2026/05/19
 2026-05-19,jfx,EUR/USD,JFX,1,-102.0,81.0,,success,2026/05/19
-2026-05-19,gaitame,EUR/USD,外為どっとコム,4.0,-108.0,76.0,,success,2026/05/19
+2026-05-19,gaitame,EUR/USD,外為どっとコム,1,-108.0,76.0,,success,2026/05/19
 2026-05-19,gmo,EUR/USD,GMO外貨,1,-77.0,77.0,,success,2026/05/19
 2026-05-19,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-05-20,dmm,EUR/USD,DMM FX,1,-77.0,74.0,,success,
@@ -254,7 +254,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-21,gmo,EUR/USD,GMO外貨,,,,,success,
 2026-05-22,traders_light,EUR/USD,LIGHT FX,1,-81.2,81.1,,success,
 2026-05-22,gmo_click,EUR/USD,GMOクリック証券,1,-74.0,74.0,,success,
-2026-05-22,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/05/22
+2026-05-22,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-05-22,hirose,EUR/USD,ヒロセ通商,1,-101.8,81.1,,success,2026/05/22
 2026-05-22,jfx,EUR/USD,JFX,,,,,success,
 2026-05-22,gaitame,EUR/USD,外為どっとコム,1,-108.0,76.0,,success,2026/05/22
@@ -293,7 +293,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-28,traders_light,EUR/USD,LIGHT FX,1,-81.3,81.2,,success,
 2026-05-28,central_tanshi,EUR/USD,セントラル短資FX,1,-92.5,76.6,,success,
 2026-05-28,gmo_click,EUR/USD,GMOクリック証券,1,-69.0,69.0,,success,
-2026-05-28,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/05/28
+2026-05-28,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-05-28,hirose,EUR/USD,ヒロセ通商,3,-101.97,81.23,,success,2026/05/28
 2026-05-28,jfx,EUR/USD,JFX,3,-102.0,81.33,,success,2026/05/28
 2026-05-28,gaitame,EUR/USD,外為どっとコム,1,-108.0,76.0,,success,2026/05/28
@@ -350,7 +350,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-05,sbi,EUR/USD,SBI FXトレード,1,-87.0,82.0,,success,
 2026-06-05,traders_light,EUR/USD,LIGHT FX,1,-81.8,81.7,,success,
 2026-06-05,gmo_click,EUR/USD,GMOクリック証券,1,-80.0,80.0,,success,
-2026-06-05,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/06/05
+2026-06-05,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-06-05,hirose,EUR/USD,ヒロセ通商,1,-100.9,80.0,,success,2026/06/05
 2026-06-05,jfx,EUR/USD,JFX,1,-100.0,80.0,,success,2026/06/05
 2026-06-05,gaitame,EUR/USD,外為どっとコム,1,-108.0,76.0,,success,2026/06/05
@@ -397,7 +397,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-12,sbi,EUR/USD,SBI FXトレード,1,-87.0,82.0,,success,
 2026-06-12,traders_light,EUR/USD,LIGHT FX,1,-81.8,81.7,,success,
 2026-06-12,gmo_click,EUR/USD,GMOクリック証券,1,-77.0,77.0,,success,
-2026-06-12,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/06/12
+2026-06-12,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-06-12,hirose,EUR/USD,ヒロセ通商,1,-102.8,81.9,,success,2026/06/12
 2026-06-12,jfx,EUR/USD,JFX,1,-102.0,81.0,,success,2026/06/12
 2026-06-12,gaitame,EUR/USD,外為どっとコム,1,-108.0,76.0,,success,2026/06/12
@@ -441,7 +441,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-19,sbi,EUR/USD,SBI FXトレード,1,-77.0,72.0,,success,
 2026-06-19,traders_light,EUR/USD,LIGHT FX,1,-82.3,82.2,,success,
 2026-06-19,gmo_click,EUR/USD,GMOクリック証券,1,-74.0,74.0,,success,
-2026-06-19,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/06/19
+2026-06-19,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-06-19,hirose,EUR/USD,ヒロセ通商,1,-102.8,81.9,,success,2026/06/19
 2026-06-19,jfx,EUR/USD,JFX,1,-103.0,82.0,,success,2026/06/19
 2026-06-19,gaitame,EUR/USD,外為どっとコム,1,-104.0,72.0,,success,2026/06/19
@@ -479,7 +479,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-26,sbi,EUR/USD,SBI FXトレード,1,-75.0,70.0,,success,
 2026-06-26,traders_light,EUR/USD,LIGHT FX,1,-82.5,82.4,,success,
 2026-06-26,gmo_click,EUR/USD,GMOクリック証券,1,-79.0,79.0,,success,
-2026-06-26,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/06/26
+2026-06-26,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-06-26,hirose,EUR/USD,ヒロセ通商,1,-98.7,77.7,,success,2026/06/26
 2026-06-26,jfx,EUR/USD,JFX,1,-98.0,77.0,,success,2026/06/26
 2026-06-26,gaitame,EUR/USD,外為どっとコム,1,-105.0,72.0,,success,2026/06/26
@@ -499,7 +499,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-30,gmo_click,EUR/USD,GMOクリック証券,1,-74.0,74.0,,success,
 2026-06-30,hirose,EUR/USD,ヒロセ通商,1,-100.3,79.3,,success,2026/06/30
 2026-06-30,jfx,EUR/USD,JFX,1,-100.0,79.0,,success,2026/06/30
-2026-06-30,gaitame,EUR/USD,外為どっとコム,3.0,-105.0,73.0,,success,2026/06/30
+2026-06-30,gaitame,EUR/USD,外為どっとコム,1,-105.0,73.0,,success,2026/06/30
 2026-06-30,gmo,EUR/USD,GMO外貨,1,-73.0,73.0,,success,2026/06/30
 2026-06-30,invast,EUR/USD,トライオートFX,1.0,,,,error,
 2026-07-01,dmm,EUR/USD,DMM FX,1,-76.0,73.0,,success,
@@ -528,7 +528,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-03,sbi,EUR/USD,SBI FXトレード,1,-75.0,70.0,,success,
 2026-07-03,traders_light,EUR/USD,LIGHT FX,1,-71.1,71.0,,success,
 2026-07-03,gmo_click,EUR/USD,GMOクリック証券,1,-63.0,63.0,,success,
-2026-07-03,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/07/03
+2026-07-03,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-07-03,hirose,EUR/USD,ヒロセ通商,1,-94.3,73.2,,success,2026/07/03
 2026-07-03,jfx,EUR/USD,JFX,1,-93.0,72.0,,success,2026/07/03
 2026-07-03,gaitame,EUR/USD,外為どっとコム,1,-104.0,72.0,,success,2026/07/03
@@ -581,7 +581,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-10,sbi,EUR/USD,SBI FXトレード,1,-75.0,70.0,,success,
 2026-07-10,traders_light,EUR/USD,LIGHT FX,1,-71.2,71.1,,success,
 2026-07-10,gmo_click,EUR/USD,GMOクリック証券,1,-58.0,58.0,,success,
-2026-07-10,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/07/10
+2026-07-10,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-07-10,hirose,EUR/USD,ヒロセ通商,1,-92.7,71.6,,success,2026/07/10
 2026-07-10,jfx,EUR/USD,JFX,1,-92.0,71.0,,success,2026/07/10
 2026-07-10,gaitame,EUR/USD,外為どっとコム,1,-90.0,58.0,,success,2026/07/10
@@ -654,7 +654,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,gmo_click,EUR/USD,GMOクリック証券,1,-62.0,62.0,,success,
 2026-07-21,hirose,EUR/USD,ヒロセ通商,1,-91.0,69.9,,success,2026/07/21
 2026-07-21,jfx,EUR/USD,JFX,1,-91.0,69.0,,success,2026/07/21
-2026-07-21,gaitame,EUR/USD,外為どっとコム,3.0,-94.0,62.0,,success,2026/07/21
+2026-07-21,gaitame,EUR/USD,外為どっとコム,1,-94.0,62.0,,success,2026/07/21
 2026-07-21,gmo,EUR/USD,GMO外貨,1,-70.0,70.0,,success,2026/07/21
 2026-07-21,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-07-21,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,2026/07/21
@@ -664,7 +664,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-22,gmo_click,EUR/USD,GMOクリック証券,3,-68.0,68.0,,success,
 2026-07-22,hirose,EUR/USD,ヒロセ通商,3.0,-91.4,70.2,,success,2026/07/22
 2026-07-22,jfx,EUR/USD,JFX,3.0,-91.0,70.0,,success,2026/07/22
-2026-07-22,gaitame,EUR/USD,外為どっとコム,1.0,-101.0,68.33,,success,2026/07/22
+2026-07-22,gaitame,EUR/USD,外為どっとコム,3,-101.0,68.33,,success,2026/07/22
 2026-07-22,gmo,EUR/USD,GMO外貨,3,-70.0,70.0,,success,2026/07/22
 2026-07-22,invast,EUR/USD,トライオートFX,3,-100.0,40.0,,success,
 2026-07-22,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,2026/07/22
@@ -787,7 +787,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-07,sbi,EUR/USD,SBI FXトレード,1,-74.0,69.0,,success,
 2026-08-07,traders_light,EUR/USD,LIGHT FX,1,-69.5,69.4,,success,
 2026-08-07,gmo_click,EUR/USD,GMOクリック証券,1,-58.0,58.0,,success,
-2026-08-07,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/08/07
+2026-08-07,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-08-07,m2j,EUR/USD,マネースクエア,2.0,-90.0,56.0,,success,
 2026-08-07,hirose,EUR/USD,ヒロセ通商,1,-91.9,69.7,,success,2026/08/07
 2026-08-07,jfx,EUR/USD,JFX,1,-91.0,69.0,,success,2026/08/07
@@ -840,7 +840,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-14,sbi,EUR/USD,SBI FXトレード,1,-74.0,69.0,,success,
 2026-08-14,traders_light,EUR/USD,LIGHT FX,1,-70.2,70.1,,success,
 2026-08-14,gmo_click,EUR/USD,GMOクリック証券,1,-58.0,58.0,,success,
-2026-08-14,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/08/14
+2026-08-14,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-08-14,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
 2026-08-14,hirose,EUR/USD,ヒロセ通商,1,-89.3,70.2,,success,2026/08/14
 2026-08-14,jfx,EUR/USD,JFX,1,-89.0,70.0,,success,2026/08/14
@@ -893,7 +893,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,sbi,EUR/USD,SBI FXトレード,1,-75.0,70.0,,success,
 2026-08-21,traders_light,EUR/USD,LIGHT FX,1,-70.0,69.9,,success,
 2026-08-21,gmo_click,EUR/USD,GMOクリック証券,1,-58.0,58.0,,success,
-2026-08-21,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/08/21
+2026-08-21,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-08-21,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
 2026-08-21,hirose,EUR/USD,ヒロセ通商,1,-89.1,70.0,,success,2026/08/21
 2026-08-21,jfx,EUR/USD,JFX,1,-89.0,69.0,,success,2026/08/21
@@ -942,7 +942,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-28,dmm,EUR/USD,DMM FX,1,-68.0,65.0,,success,
 2026-08-28,traders_light,EUR/USD,LIGHT FX,1,-70.5,70.4,,success,
 2026-08-28,gmo_click,EUR/USD,GMOクリック証券,1,-60.0,60.0,,success,
-2026-08-28,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/08/28
+2026-08-28,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-08-28,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
 2026-08-28,hirose,EUR/USD,ヒロセ通商,1,-89.3,70.1,,success,2026/08/28
 2026-08-28,jfx,EUR/USD,JFX,1,-89.0,70.0,,success,2026/08/28
@@ -973,7 +973,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-02,traders_light,EUR/USD,LIGHT FX,4,-69.85,69.83,,success,
 2026-09-02,central_tanshi,EUR/USD,セントラル短資FX,4,-80.08,64.05,,success,
 2026-09-02,gmo_click,EUR/USD,GMOクリック証券,4,-60.0,60.0,,success,
-2026-09-02,invast,EUR/USD,トライオートFX,1.0,-100.0,40.0,,success,2026/09/02
+2026-09-02,invast,EUR/USD,トライオートFX,4,-100.0,40.0,,success,2026/09/02
 2026-09-02,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
 2026-09-02,hirose,EUR/USD,ヒロセ通商,1,-89.7,70.5,,success,2026/09/02
 2026-09-02,jfx,EUR/USD,JFX,1,-89.0,70.0,,success,2026/09/02
@@ -989,7 +989,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-03,gmo,EUR/USD,GMO外貨,,,,,success,
 2026-09-04,traders_light,EUR/USD,LIGHT FX,1,-68.8,68.7,,success,
 2026-09-04,gmo_click,EUR/USD,GMOクリック証券,1,-58.0,58.0,,success,
-2026-09-04,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/04
+2026-09-04,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-09-04,hirose,EUR/USD,ヒロセ通商,1,-87.5,68.7,,success,
 2026-09-04,jfx,EUR/USD,JFX,,,,,success,
 2026-09-04,gaitame,EUR/USD,外為どっとコム,1,-89.0,57.0,,success,
@@ -1038,7 +1038,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-11,dmm,EUR/USD,DMM FX,1,-64.0,61.0,,success,
 2026-09-11,traders_light,EUR/USD,LIGHT FX,1,-67.7,67.6,,success,
 2026-09-11,gmo_click,EUR/USD,GMOクリック証券,1,-60.0,60.0,,success,
-2026-09-11,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/11
+2026-09-11,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-09-11,m2j,EUR/USD,マネースクエア,1.0,-90.0,56.0,,success,
 2026-09-11,hirose,EUR/USD,ヒロセ通商,1,-84.9,66.4,,success,2026/09/11
 2026-09-11,jfx,EUR/USD,JFX,1,-84.0,66.0,,success,2026/09/11
@@ -1091,7 +1091,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-18,sbi,EUR/USD,SBI FXトレード,1,-69.0,64.0,,success,
 2026-09-18,traders_light,EUR/USD,LIGHT FX,1,-69.1,69.0,,success,
 2026-09-18,gmo_click,EUR/USD,GMOクリック証券,1,-62.0,62.0,,success,
-2026-09-18,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/18
+2026-09-18,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-09-18,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-09-18,hirose,EUR/USD,ヒロセ通商,1,-81.5,62.7,,success,2026/09/18
 2026-09-18,jfx,EUR/USD,JFX,1,-81.0,62.0,,success,2026/09/18
@@ -1143,7 +1143,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-25,dmm,EUR/USD,DMM FX,1,-73.0,70.0,,success,
 2026-09-25,traders_light,EUR/USD,LIGHT FX,1,-69.3,69.2,,success,
 2026-09-25,gmo_click,EUR/USD,GMOクリック証券,1,-70.0,70.0,,success,
-2026-09-25,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,2026/09/25
+2026-09-25,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-09-25,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-09-25,hirose,EUR/USD,ヒロセ通商,1,-81.8,62.9,,success,2026/09/25
 2026-09-25,jfx,EUR/USD,JFX,1,-82.0,63.0,,success,2026/09/25
