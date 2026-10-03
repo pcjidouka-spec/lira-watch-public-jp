@@ -280,7 +280,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-18,gmo_click,CHF/JPY,GMOクリック証券,1.0,None,None,None,success,2026/09/18
 2026-09-18,hirose,CHF/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/18
 2026-09-18,jfx,CHF/JPY,JFX,1.0,-65.0,45.0,None,success,2026/09/18
-2026-09-18,matsui,CHF/JPY,MATSUI FX,1.0,-74.0,44.0,None,success,2026/09/17
+2026-09-18,matsui,CHF/JPY,MATSUI FX,None,None,None,None,success,2026/09/18
 2026-09-18,sbi,CHF/JPY,SBI FXトレード,1.0,-63.0,53.0,09月25日,success,2026/09/18
 2026-09-18,sony,CHF/JPY,ソニーバンクFX,1.0,None,None,None,success,2026/09/18
 2026-09-18,traders_light,CHF/JPY,LIGHT FX,None,None,None,None,success,2026/09/18
@@ -389,7 +389,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-30,hirose,CHF/JPY,ヒロセ通商,3.0,None,None,None,error,None
 2026-09-30,invast,CHF/JPY,トライオートFX,3.0,-30.0,0.0,None,success,2026/09/30
 2026-09-30,jfx,CHF/JPY,JFX,1.0,-60.0,40.0,None,success,2026/09/30
-2026-09-30,matsui,CHF/JPY,MATSUI FX,1.0,-85.0,55.0,None,success,2026/09/29
+2026-09-30,matsui,CHF/JPY,MATSUI FX,3.0,-85.0,55.0,None,success,2026/09/30
 2026-09-30,sbi,CHF/JPY,SBI FXトレード,1.0,-69.0,59.0,10月02日,success,2026/09/30
 2026-09-30,sony,CHF/JPY,ソニーバンクFX,3.0,-104.0,52.0,None,success,2026/09/30
 2026-09-30,traders_light,CHF/JPY,LIGHT FX,3.0,-15.0,15.0,None,success,2026/09/30
