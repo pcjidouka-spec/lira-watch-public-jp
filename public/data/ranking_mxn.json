@@ -2,13 +2,13 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-10-02",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-02T23:09:44.143Z",
+  "generated_at": "2026-10-03T17:16:03.393Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 15.400000000000002,
-      "sample_days": 7
+      "avg": 15.4,
+      "sample_days": 10
     },
     {
       "provider_id": "gmo_click",
@@ -25,8 +25,8 @@
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": 14.442857142857145,
-      "sample_days": 14
+      "avg": 14.299999999999999,
+      "sample_days": 12
     },
     {
       "provider_id": "traders_light_light",
@@ -83,16 +83,16 @@
       "sample_days": 10
     },
     {
-      "provider_id": "matsui",
-      "name": "MATSUI FX",
-      "avg": 12.3,
-      "sample_days": 10
-    },
-    {
       "provider_id": "click365_okasan",
       "name": "クリック365",
       "avg": 12.280000000000001,
       "sample_days": 10
+    },
+    {
+      "provider_id": "matsui",
+      "name": "MATSUI FX",
+      "avg": 12.1875,
+      "sample_days": 16
     }
   ],
   "sell_ranking": [
@@ -123,8 +123,8 @@
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -14.442857142857145,
-      "sample_days": 14
+      "avg": -14.299999999999999,
+      "sample_days": 12
     },
     {
       "provider_id": "gmo",
@@ -177,14 +177,14 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -22.3,
-      "sample_days": 10
+      "avg": -22.1875,
+      "sample_days": 16
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -30.599999999999998,
-      "sample_days": 7
+      "avg": -30.6,
+      "sample_days": 10
     }
   ]
 }

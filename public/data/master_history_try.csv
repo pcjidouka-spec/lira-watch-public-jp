@@ -982,8 +982,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-01,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/05/01
 2026-05-01,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/05/01
 2026-05-01,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,05月08日,success,2026/05/01
-2026-05-01,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/04/30
-2026-05-01,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/04/30
+2026-05-01,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/05/01
+2026-05-01,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/05/01
 2026-05-04,central_tanshi,TRY/JPY,セントラル短資FX,1.0,0.0,0.0,None,error,2026/05/04
 2026-05-04,click365_okasan,TRY/JPY,クリック365,1.0,0.0,0.0,None,error,2026/05/01
 2026-05-04,dmm,TRY/JPY,DMM FX,1.0,0.0,0.0,None,error,2026/05/04
@@ -1078,7 +1078,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-12,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/12
 2026-05-12,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/12
 2026-05-13,central_tanshi,TRY/JPY,セントラル短資FX,3.0,27.0,-27.0,5/14,success,2026/05/13
-2026-05-13,click365_okasan,TRY/JPY,クリック365,3.0,28.0,-28.0,None,success,2026/05/12
+2026-05-13,click365_okasan,TRY/JPY,クリック365,3.0,30.333333333333332,-30.333333333333332,None,success,2026/05/13
 2026-05-13,dmm,TRY/JPY,DMM FX,1.0,25.0,-28.0,None,success,2026/05/13
 2026-05-13,gaitame,TRY/JPY,外為どっとコム,3.0,25.0,-35.0,None,success,2026/05/13
 2026-05-13,gmo,TRY/JPY,GMO外貨,3.0,25.099999999999998,-25.099999999999998,None,success,2026/05/13
@@ -1092,7 +1092,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-13,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/05/13
 2026-05-13,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/05/13
 2026-05-14,central_tanshi,TRY/JPY,セントラル短資FX,2.0,27.0,-27.0,5/15,success,2026/05/14
-2026-05-14,click365_okasan,TRY/JPY,クリック365,2.0,30.333333333333332,-30.333333333333332,None,success,2026/05/13
+2026-05-14,click365_okasan,TRY/JPY,クリック365,2.0,28.5,-28.5,None,success,2026/05/14
 2026-05-14,dmm,TRY/JPY,DMM FX,3.0,25.0,-28.0,None,success,2026/05/14
 2026-05-14,gaitame,TRY/JPY,外為どっとコム,2.0,25.0,-35.0,None,success,2026/05/14
 2026-05-14,gmo,TRY/JPY,GMO外貨,2.0,25.1,-25.1,None,success,2026/05/14
@@ -1114,8 +1114,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-15,matsui,TRY/JPY,MATSUI FX,2.0,25.0,-25.0,None,success,2026/05/14
 2026-05-15,sbi,TRY/JPY,SBI FXトレード,2.0,24.0,-32.0,05月20日,success,2026/05/15
 2026-05-15,traders_light,TRY/JPY,LIGHT FX,2.0,25.2,-25.2,None,success,2026/05/14
-2026-05-15,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,25.2,-25.2,None,success,2026/05/14
-2026-05-15,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,25.3,-25.3,None,success,2026/05/14
+2026-05-15,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/05/15
+2026-05-15,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/05/15
 2026-05-18,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,5/19,success,2026/05/18
 2026-05-18,click365_okasan,TRY/JPY,クリック365,1.0,0.0,0.0,None,error,2026/05/15
 2026-05-18,dmm,TRY/JPY,DMM FX,1.0,0.0,0.0,None,error,2026/05/18
@@ -1144,7 +1144,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-19,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/05/19
 2026-05-19,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/05/19
 2026-05-20,central_tanshi,TRY/JPY,セントラル短資FX,4.0,26.0,-26.0,5/21,success,2026/05/20
-2026-05-20,click365_okasan,TRY/JPY,クリック365,4.0,28.0,-28.0,None,success,2026/05/19
+2026-05-20,click365_okasan,TRY/JPY,クリック365,4.0,29.75,-29.75,None,success,2026/05/20
 2026-05-20,dmm,TRY/JPY,DMM FX,1.0,25.0,-28.0,None,success,2026/05/20
 2026-05-20,gaitame,TRY/JPY,外為どっとコム,4.0,25.0,-35.0,None,success,2026/05/20
 2026-05-20,gmo,TRY/JPY,GMO外貨,4.0,25.1,-25.1,None,success,2026/05/20
@@ -1169,8 +1169,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-05-21,matsui,TRY/JPY,MATSUI FX,4.0,25.0,-25.0,None,success,2026/05/20
 2026-05-21,sbi,TRY/JPY,SBI FXトレード,4.0,24.0,-32.0,05月26日,success,2026/05/21
 2026-05-21,traders_light,TRY/JPY,LIGHT FX,4.0,25.2,-25.2,None,success,2026/05/20
-2026-05-21,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,25.2,-25.2,None,success,2026/05/20
-2026-05-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,25.3,-25.3,None,success,2026/05/20
+2026-05-21,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/05/21
+2026-05-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/05/21
 2026-05-22,central_tanshi,TRY/JPY,セントラル短資FX,6.0,26.0,-26.0,5/25,success,2026/05/22
 2026-05-22,dmm,TRY/JPY,DMM FX,4.0,0.0,0.0,None,error,2026/05/22
 2026-05-22,gmo,TRY/JPY,GMO外貨,6.0,25.099999999999998,-25.099999999999998,None,success,2026/05/22
@@ -1270,7 +1270,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-03,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/06/03
 2026-06-03,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/06/03
 2026-06-04,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,6/5,success,2026/06/04
-2026-06-04,click365_okasan,TRY/JPY,クリック365,1.0,28.666666666666668,-28.666666666666668,None,success,2026/06/03
+2026-06-04,click365_okasan,TRY/JPY,クリック365,1.0,27.0,-27.0,None,success,2026/06/04
 2026-06-04,dmm,TRY/JPY,DMM FX,3.0,25.0,-28.0,None,success,2026/06/04
 2026-06-04,gaitame,TRY/JPY,外為どっとコム,1.0,25.0,-35.0,None,success,2026/06/04
 2026-06-04,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/06/04
@@ -1325,7 +1325,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-09,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/09
 2026-06-09,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/09
 2026-06-10,central_tanshi,TRY/JPY,セントラル短資FX,3.0,26.0,-26.0,6/11,success,2026/06/10
-2026-06-10,click365_okasan,TRY/JPY,クリック365,3.0,28.0,-28.0,None,success,2026/06/09
+2026-06-10,click365_okasan,TRY/JPY,クリック365,3.0,28.666666666666668,-28.666666666666668,None,success,2026/06/10
 2026-06-10,dmm,TRY/JPY,DMM FX,1.0,25.0,-28.0,None,success,2026/06/10
 2026-06-10,gaitame,TRY/JPY,外為どっとコム,3.0,25.0,-35.0,None,success,2026/06/10
 2026-06-10,gmo,TRY/JPY,GMO外貨,3.0,25.5,-25.5,None,success,2026/06/10
@@ -1339,7 +1339,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-10,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/06/10
 2026-06-10,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/06/10
 2026-06-11,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,6/12,success,2026/06/11
-2026-06-11,click365_okasan,TRY/JPY,クリック365,1.0,28.666666666666668,-28.666666666666668,None,success,2026/06/10
+2026-06-11,click365_okasan,TRY/JPY,クリック365,1.0,28.0,-28.0,None,success,2026/06/11
 2026-06-11,dmm,TRY/JPY,DMM FX,3.0,25.0,-28.0,None,success,2026/06/11
 2026-06-11,gaitame,TRY/JPY,外為どっとコム,1.0,25.0,-35.0,None,success,2026/06/11
 2026-06-11,gmo,TRY/JPY,GMO外貨,1.0,25.5,-25.5,None,success,2026/06/11
@@ -1377,13 +1377,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-15,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,25.2,-25.2,None,success,2026/06/15
 2026-06-15,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.3,-25.3,None,success,2026/06/15
 2026-06-16,central_tanshi,TRY/JPY,セントラル短資FX,4.0,26.0,-26.0,6/17,success,2026/06/16
-2026-06-16,click365_okasan,TRY/JPY,クリック365,4.0,26.0,-26.0,None,success,2026/06/15
+2026-06-16,click365_okasan,TRY/JPY,クリック365,4.0,28.75,-28.75,None,success,2026/06/16
 2026-06-16,dmm,TRY/JPY,DMM FX,1.0,25.0,-28.0,None,success,2026/06/16
 2026-06-16,gaitame,TRY/JPY,外為どっとコム,4.0,25.0,-35.0,None,success,2026/06/16
 2026-06-16,gmo,TRY/JPY,GMO外貨,4.0,25.5,-25.5,None,success,2026/06/16
 2026-06-16,gmo_click,TRY/JPY,GMOクリック証券,4.0,26.0,-26.0,None,success,2026/06/16
 2026-06-16,hirose,TRY/JPY,ヒロセ通商,4.0,25.0,-30.0,None,success,2026/06/16
-2026-06-16,invast,TRY/JPY,トライオートFX,4.0,26.0,-39.0,None,success,2026/06/15
+2026-06-16,invast,TRY/JPY,トライオートFX,4.0,26.1,-39.1,None,success,2026/06/16
 2026-06-16,jfx,TRY/JPY,JFX,4.0,25.0,-32.0,None,success,2026/06/16
 2026-06-16,matsui,TRY/JPY,MATSUI FX,4.0,25.0,-25.0,None,success,2026/06/15
 2026-06-16,sbi,TRY/JPY,SBI FXトレード,1.0,24.0,-32.0,06月18日,success,2026/06/16
@@ -1400,10 +1400,10 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-17,jfx,TRY/JPY,JFX,4.0,25.0,-32.0,None,success,2026/06/17
 2026-06-17,matsui,TRY/JPY,MATSUI FX,4.0,25.0,-25.0,None,success,2026/06/16
 2026-06-17,sbi,TRY/JPY,SBI FXトレード,4.0,24.0,-32.0,06月22日,success,2026/06/17
-2026-06-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,25.2,-25.2,None,success,2026/06/16
-2026-06-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,25.3,-25.3,None,success,2026/06/16
+2026-06-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/06/17
+2026-06-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/06/17
 2026-06-18,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,6/19,success,2026/06/18
-2026-06-18,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/06/17
+2026-06-18,click365_okasan,TRY/JPY,クリック365,1.0,27.0,-27.0,None,success,2026/06/18
 2026-06-18,dmm,TRY/JPY,DMM FX,4.0,None,None,None,success,2026/06/18
 2026-06-18,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,success,2026/06/18
 2026-06-18,gmo,TRY/JPY,GMO外貨,1.0,25.2,-25.2,None,success,2026/06/18
@@ -1454,13 +1454,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-24,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,25.2,-25.2,None,success,2026/06/24
 2026-06-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/06/24
 2026-06-25,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,6/26,success,2026/06/25
-2026-06-25,click365_okasan,TRY/JPY,クリック365,1.0,26.0,-26.0,None,success,2026/06/24
+2026-06-25,click365_okasan,TRY/JPY,クリック365,1.0,27.0,-27.0,None,success,2026/06/25
 2026-06-25,dmm,TRY/JPY,DMM FX,3.0,25.0,-28.0,None,success,2026/06/25
 2026-06-25,gaitame,TRY/JPY,外為どっとコム,1.0,25.0,-35.0,None,success,2026/06/25
 2026-06-25,gmo,TRY/JPY,GMO外貨,1.0,25.2,-25.2,None,success,2026/06/25
 2026-06-25,gmo_click,TRY/JPY,GMOクリック証券,1.0,26.0,-26.0,None,success,2026/06/25
 2026-06-25,hirose,TRY/JPY,ヒロセ通商,1.0,25.0,-30.0,None,success,2026/06/25
-2026-06-25,invast,TRY/JPY,トライオートFX,1.0,25.599999999999998,-38.6,None,success,2026/06/24
+2026-06-25,invast,TRY/JPY,トライオートFX,1.0,25.3,-38.3,None,success,2026/06/25
 2026-06-25,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/06/25
 2026-06-25,matsui,TRY/JPY,MATSUI FX,1.0,25.0,-25.0,None,success,2026/06/24
 2026-06-25,sbi,TRY/JPY,SBI FXトレード,3.0,24.0,-32.0,06月29日,success,2026/06/25
@@ -1519,7 +1519,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-01,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,25.3,-25.3,None,success,2026/07/01
 2026-07-01,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/01
 2026-07-02,central_tanshi,TRY/JPY,セントラル短資FX,1.0,26.0,-26.0,7/3,success,2026/07/02
-2026-07-02,click365_okasan,TRY/JPY,クリック365,1.0,24.666666666666668,-24.666666666666668,None,success,2026/07/01
+2026-07-02,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/07/02
 2026-07-02,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/07/02
 2026-07-02,gaitame,TRY/JPY,外為どっとコム,1.0,25.0,-35.0,None,success,2026/07/02
 2026-07-02,gmo,TRY/JPY,GMO外貨,1.0,25.2,-25.2,None,success,2026/07/02
@@ -1574,35 +1574,35 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-07,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,22.3,-22.3,None,success,2026/07/07
 2026-07-07,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/07
 2026-07-08,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.0,-24.0,7/9,success,2026/07/08
-2026-07-08,click365_okasan,TRY/JPY,クリック365,3.0,21.0,-21.0,None,success,2026/07/07
+2026-07-08,click365_okasan,TRY/JPY,クリック365,3.0,23.666666666666668,-23.666666666666668,None,success,2026/07/08
 2026-07-08,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/07/08
 2026-07-08,gaitame,TRY/JPY,外為どっとコム,3.0,22.0,-32.0,None,success,2026/07/08
 2026-07-08,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/07/08
 2026-07-08,gmo_click,TRY/JPY,GMOクリック証券,3.0,25.0,-25.0,None,success,2026/07/08
 2026-07-08,hirose,TRY/JPY,ヒロセ通商,3.0,24.0,-29.0,None,success,2026/07/08
-2026-07-08,invast,TRY/JPY,トライオートFX,3.0,25.0,-38.0,None,success,2026/07/07
+2026-07-08,invast,TRY/JPY,トライオートFX,3.0,24.2,-37.199999999999996,None,success,2026/07/08
 2026-07-08,jfx,TRY/JPY,JFX,3.0,25.0,-32.0,None,success,2026/07/08
-2026-07-08,matsui,TRY/JPY,MATSUI FX,3.0,24.0,-24.0,None,success,2026/07/07
+2026-07-08,matsui,TRY/JPY,MATSUI FX,3.0,22.0,-22.0,None,success,2026/07/08
 2026-07-08,sbi,TRY/JPY,SBI FXトレード,1.0,22.0,-30.0,07月10日,success,2026/07/08
 2026-07-08,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,3.0,22.2,-22.2,None,success,2026/07/08
 2026-07-08,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,24.099999999999998,-24.099999999999998,None,success,2026/07/08
 2026-07-08,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/08
 2026-07-09,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,7/10,success,2026/07/09
-2026-07-09,click365_okasan,TRY/JPY,クリック365,1.0,23.666666666666668,-23.666666666666668,None,success,2026/07/08
+2026-07-09,click365_okasan,TRY/JPY,クリック365,1.0,26.0,-26.0,None,success,2026/07/09
 2026-07-09,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/07/09
 2026-07-09,gaitame,TRY/JPY,外為どっとコム,1.0,22.0,-32.0,None,success,2026/07/09
 2026-07-09,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/07/09
 2026-07-09,gmo_click,TRY/JPY,GMOクリック証券,1.0,25.0,-25.0,None,success,2026/07/09
 2026-07-09,hirose,TRY/JPY,ヒロセ通商,1.0,22.0,-27.0,None,success,2026/07/09
-2026-07-09,invast,TRY/JPY,トライオートFX,1.0,24.2,-37.199999999999996,None,success,2026/07/08
+2026-07-09,invast,TRY/JPY,トライオートFX,1.0,24.4,-37.4,None,success,2026/07/09
 2026-07-09,jfx,TRY/JPY,JFX,1.0,25.0,-32.0,None,success,2026/07/09
-2026-07-09,matsui,TRY/JPY,MATSUI FX,1.0,22.0,-22.0,None,success,2026/07/08
+2026-07-09,matsui,TRY/JPY,MATSUI FX,1.0,23.0,-23.0,None,success,2026/07/09
 2026-07-09,sbi,TRY/JPY,SBI FXトレード,3.0,23.0,-31.0,07月13日,success,2026/07/09
 2026-07-09,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/07/09
 2026-07-09,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,24.3,-24.3,None,success,2026/07/09
 2026-07-09,m2j,TRY/JPY,マネースクエア,3.0,6.0,-45.0,,success,2026/07/09
 2026-07-10,central_tanshi,TRY/JPY,セントラル短資FX,2.0,24.1,-24.1,7/13,success,2026/07/10
-2026-07-10,click365_okasan,TRY/JPY,クリック365,2.0,26.0,-26.0,None,success,2026/07/09
+2026-07-10,click365_okasan,TRY/JPY,クリック365,2.0,24.0,-24.0,None,success,2026/07/10
 2026-07-10,dmm,TRY/JPY,DMM FX,1.0,23.0,-26.0,None,success,2026/07/10
 2026-07-10,gaitame,TRY/JPY,外為どっとコム,2.0,24.0,-34.0,None,success,2026/07/10
 2026-07-10,gmo,TRY/JPY,GMO外貨,2.0,24.1,-24.1,None,success,2026/07/10
@@ -1610,7 +1610,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-10,hirose,TRY/JPY,ヒロセ通商,2.0,24.0,-29.0,None,success,2026/07/10
 2026-07-10,invast,TRY/JPY,トライオートFX,2.0,24.4,-37.4,None,success,2026/07/09
 2026-07-10,jfx,TRY/JPY,JFX,2.0,25.0,-32.0,None,success,2026/07/10
-2026-07-10,matsui,TRY/JPY,MATSUI FX,2.0,23.0,-23.0,None,success,2026/07/09
+2026-07-10,matsui,TRY/JPY,MATSUI FX,2.0,24.0,-24.0,None,success,2026/07/10
 2026-07-10,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,07月14日,success,2026/07/10
 2026-07-10,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,24.2,-24.2,None,success,2026/07/10
 2026-07-10,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,24.3,-24.3,None,success,2026/07/10
@@ -1630,7 +1630,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-13,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,None,None,None,success,2026/07/13
 2026-07-13,m2j,TRY/JPY,マネースクエア,2.0,6.0,-45.0,,success,2026/07/13
 2026-07-14,central_tanshi,TRY/JPY,セントラル短資FX,1.0,23.5,-23.5,7/15,success,2026/07/14
-2026-07-14,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/07/13
+2026-07-14,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/07/14
 2026-07-14,dmm,TRY/JPY,DMM FX,2.0,None,None,None,success,2026/07/14
 2026-07-14,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,success,2026/07/14
 2026-07-14,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/07/14
@@ -1643,13 +1643,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-14,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/07/14
 2026-07-14,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,24.3,-24.3,None,success,2026/07/14
 2026-07-15,central_tanshi,TRY/JPY,セントラル短資FX,4.0,23.5,-23.5,7/16,success,2026/07/15
-2026-07-15,click365_okasan,TRY/JPY,クリック365,4.0,23.0,-23.0,None,success,2026/07/14
+2026-07-15,click365_okasan,TRY/JPY,クリック365,4.0,24.5,-24.5,None,success,2026/07/15
 2026-07-15,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/07/15
 2026-07-15,gaitame,TRY/JPY,外為どっとコム,4.0,24.0,-34.0,None,success,2026/07/15
 2026-07-15,gmo,TRY/JPY,GMO外貨,4.0,24.1,-24.1,None,success,2026/07/15
 2026-07-15,gmo_click,TRY/JPY,GMOクリック証券,4.0,25.0,-25.0,None,success,2026/07/15
 2026-07-15,hirose,TRY/JPY,ヒロセ通商,4.0,24.0,-29.0,None,success,2026/07/15
-2026-07-15,invast,TRY/JPY,トライオートFX,4.0,24.4,-37.4,None,success,2026/07/14
+2026-07-15,invast,TRY/JPY,トライオートFX,4.0,24.3,-37.3,None,success,2026/07/15
 2026-07-15,jfx,TRY/JPY,JFX,4.0,25.0,-32.0,None,success,2026/07/15
 2026-07-15,matsui,TRY/JPY,MATSUI FX,4.0,24.0,-24.0,None,success,2026/07/14
 2026-07-15,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,07月17日,success,2026/07/15
@@ -1657,7 +1657,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-15,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,24.3,-24.3,None,success,2026/07/15
 2026-07-15,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/15
 2026-07-16,central_tanshi,TRY/JPY,セントラル短資FX,1.0,23.1,-23.1,7/17,success,2026/07/16
-2026-07-16,click365_okasan,TRY/JPY,クリック365,1.0,24.5,-24.5,None,success,2026/07/15
+2026-07-16,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/07/16
 2026-07-16,dmm,TRY/JPY,DMM FX,4.0,24.0,-27.0,None,success,2026/07/16
 2026-07-16,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/07/16
 2026-07-16,gmo,TRY/JPY,GMO外貨,1.0,23.1,-23.1,None,success,2026/07/16
@@ -1680,12 +1680,12 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-17,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/07/17
 2026-07-17,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/07/16
 2026-07-17,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,07月22日,success,2026/07/17
-2026-07-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/07/16
-2026-07-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,24.3,-24.3,None,success,2026/07/16
+2026-07-17,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/07/17
+2026-07-17,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/07/17
 2026-07-17,gmo_click,TRY/JPY,GMOクリック証券,1.0,None,None,None,success,2026/07/17
 2026-07-17,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/17
 2026-07-20,central_tanshi,TRY/JPY,セントラル短資FX,1.0,23.1,-23.1,7/21,success,2026/07/20
-2026-07-20,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/07/17
+2026-07-20,click365_okasan,TRY/JPY,クリック365,1.0,20.0,-20.0,None,success,2026/07/20
 2026-07-20,dmm,TRY/JPY,DMM FX,1.0,None,None,None,success,2026/07/20
 2026-07-20,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,success,2026/07/20
 2026-07-20,gmo,TRY/JPY,GMO外貨,1.0,23.1,-23.1,None,success,2026/07/20
@@ -1711,7 +1711,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/07/21
 2026-07-21,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/21
 2026-07-22,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.5,-24.5,7/23,success,2026/07/22
-2026-07-22,click365_okasan,TRY/JPY,クリック365,3.0,20.0,-20.0,None,success,2026/07/21
+2026-07-22,click365_okasan,TRY/JPY,クリック365,3.0,22.333333333333332,-22.333333333333332,None,success,2026/07/22
 2026-07-22,dmm,TRY/JPY,DMM FX,1.0,23.0,-26.0,None,success,2026/07/22
 2026-07-22,gaitame,TRY/JPY,外為どっとコム,3.0,24.0,-34.0,None,success,2026/07/22
 2026-07-22,gmo,TRY/JPY,GMO外貨,3.0,23.099999999999998,-23.099999999999998,None,success,2026/07/22
@@ -1725,7 +1725,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-22,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/07/22
 2026-07-22,m2j,TRY/JPY,マネースクエア,1.0,6.0,-45.0,,success,2026/07/22
 2026-07-23,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.5,-24.5,7/24,success,2026/07/23
-2026-07-23,click365_okasan,TRY/JPY,クリック365,1.0,22.333333333333332,-22.333333333333332,None,success,2026/07/22
+2026-07-23,click365_okasan,TRY/JPY,クリック365,1.0,21.0,-21.0,None,success,2026/07/23
 2026-07-23,dmm,TRY/JPY,DMM FX,3.0,23.0,-26.0,None,success,2026/07/23
 2026-07-23,gaitame,TRY/JPY,外為どっとコム,1.0,24.0,-34.0,None,success,2026/07/23
 2026-07-23,gmo,TRY/JPY,GMO外貨,1.0,23.1,-23.1,None,success,2026/07/23
@@ -1780,7 +1780,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-28,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/07/28
 2026-07-28,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,,success,2026/07/28
 2026-07-29,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.7,-24.7,7/30,success,2026/07/29
-2026-07-29,click365_okasan,TRY/JPY,クリック365,3.0,21.0,-21.0,None,success,2026/07/28
+2026-07-29,click365_okasan,TRY/JPY,クリック365,3.0,21.333333333333332,-21.333333333333332,None,success,2026/07/29
 2026-07-29,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/07/29
 2026-07-29,gaitame,TRY/JPY,外為どっとコム,3.0,24.0,-34.0,None,success,2026/07/29
 2026-07-29,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/07/29
@@ -1794,7 +1794,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-07-29,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/07/29
 2026-07-29,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,,success,2026/07/29
 2026-07-30,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,7/31,success,2026/07/30
-2026-07-30,click365_okasan,TRY/JPY,クリック365,1.0,21.333333333333332,-21.333333333333332,None,success,2026/07/29
+2026-07-30,click365_okasan,TRY/JPY,クリック365,1.0,21.0,-21.0,None,success,2026/07/30
 2026-07-30,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/07/30
 2026-07-30,gaitame,TRY/JPY,外為どっとコム,1.0,24.0,-34.0,None,success,2026/07/30
 2026-07-30,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/07/30
@@ -1852,7 +1852,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-04,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/04
 2026-08-04,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/04
 2026-08-05,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.8,-24.8,8/6,success,2026/08/05
-2026-08-05,click365_okasan,TRY/JPY,クリック365,3.0,24.0,-24.0,None,success,2026/08/04
+2026-08-05,click365_okasan,TRY/JPY,クリック365,3.0,23.333333333333332,-23.333333333333332,None,success,2026/08/05
 2026-08-05,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/05
 2026-08-05,gaitame,TRY/JPY,外為どっとコム,3.0,24.0,-34.0,None,success,2026/08/05
 2026-08-05,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/08/05
@@ -1868,7 +1868,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-05,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/05
 2026-08-05,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/05
 2026-08-06,central_tanshi,TRY/JPY,セントラル短資FX,2.0,24.8,-24.8,8/7,success,2026/08/06
-2026-08-06,click365_okasan,TRY/JPY,クリック365,2.0,23.333333333333332,-23.333333333333332,None,success,2026/08/05
+2026-08-06,click365_okasan,TRY/JPY,クリック365,2.0,23.0,-23.0,None,success,2026/08/06
 2026-08-06,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/08/06
 2026-08-06,gaitame,TRY/JPY,外為どっとコム,2.0,24.0,-34.0,None,success,2026/08/06
 2026-08-06,gmo,TRY/JPY,GMO外貨,2.0,24.1,-24.1,None,success,2026/08/06
@@ -1915,13 +1915,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-10,traders_min,TRY/JPY,みんなのFX,1.0,None,None,08/10,success,2026/08/10
 2026-08-10,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,None,None,08/10,success,2026/08/10
 2026-08-11,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/12,success,2026/08/11
-2026-08-11,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/08/10
+2026-08-11,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/08/11
 2026-08-11,dmm,TRY/JPY,DMM FX,1.0,None,None,None,success,2026/08/11
 2026-08-11,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,success,2026/08/11
 2026-08-11,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/11
 2026-08-11,gmo_click,TRY/JPY,GMOクリック証券,1.0,25.0,-25.0,None,success,2026/08/11
 2026-08-11,hirose,TRY/JPY,ヒロセ通商,1.0,None,None,None,success,2026/08/11
-2026-08-11,invast,TRY/JPY,トライオートFX,1.0,None,None,None,success,2026/08/10
+2026-08-11,invast,TRY/JPY,トライオートFX,1.0,24.1,-37.1,None,success,2026/08/11
 2026-08-11,jfx,TRY/JPY,JFX,1.0,None,None,None,success,2026/08/11
 2026-08-11,m2j,TRY/JPY,マネースクエア,1.0,None,None,None,success,2026/08/11
 2026-08-11,sbi,TRY/JPY,SBI FXトレード,1.0,None,None,08月13日,success,2026/08/11
@@ -1930,7 +1930,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-11,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/11
 2026-08-11,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/11
 2026-08-12,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.8,-24.8,8/13,success,2026/08/12
-2026-08-12,click365_okasan,TRY/JPY,クリック365,3.0,24.0,-24.0,None,success,2026/08/11
+2026-08-12,click365_okasan,TRY/JPY,クリック365,3.0,23.333333333333332,-23.333333333333332,None,success,2026/08/12
 2026-08-12,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/12
 2026-08-12,gaitame,TRY/JPY,外為どっとコム,3.0,24.0,-34.0,None,success,2026/08/12
 2026-08-12,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/08/12
@@ -1946,7 +1946,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-12,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/12
 2026-08-12,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/12
 2026-08-13,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.8,-24.8,8/14,success,2026/08/13
-2026-08-13,click365_okasan,TRY/JPY,クリック365,1.0,23.333333333333332,-23.333333333333332,None,success,2026/08/12
+2026-08-13,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/13
 2026-08-13,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/08/13
 2026-08-13,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/13
 2026-08-13,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/13
@@ -2009,7 +2009,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-18,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/18
 2026-08-18,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/18
 2026-08-19,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.099999999999998,-24.099999999999998,8/20,success,2026/08/19
-2026-08-19,click365_okasan,TRY/JPY,クリック365,3.0,25.0,-25.0,None,success,2026/08/18
+2026-08-19,click365_okasan,TRY/JPY,クリック365,3.0,24.666666666666668,-24.666666666666668,None,success,2026/08/19
 2026-08-19,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/19
 2026-08-19,gaitame,TRY/JPY,外為どっとコム,3.0,23.0,-33.0,None,success,2026/08/19
 2026-08-19,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/08/19
@@ -2025,7 +2025,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-19,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/19
 2026-08-19,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/19
 2026-08-20,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/21,success,2026/08/20
-2026-08-20,click365_okasan,TRY/JPY,クリック365,1.0,24.666666666666668,-24.666666666666668,None,success,2026/08/19
+2026-08-20,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/20
 2026-08-20,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/08/20
 2026-08-20,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/20
 2026-08-20,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/20
@@ -2041,7 +2041,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-20,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/20
 2026-08-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/20
 2026-08-21,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/24,success,2026/08/21
-2026-08-21,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/20
+2026-08-21,click365_okasan,TRY/JPY,クリック365,1.0,26.0,-26.0,None,success,2026/08/21
 2026-08-21,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/21
 2026-08-21,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/21
 2026-08-21,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/21
@@ -2057,7 +2057,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-21,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/21
 2026-08-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/21
 2026-08-24,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/25,success,2026/08/24
-2026-08-24,click365_okasan,TRY/JPY,クリック365,1.0,26.0,-26.0,None,success,2026/08/21
+2026-08-24,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/24
 2026-08-24,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/24
 2026-08-24,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/24
 2026-08-24,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/24
@@ -2072,7 +2072,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-24,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/24
 2026-08-24,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/24
 2026-08-25,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/26,success,2026/08/25
-2026-08-25,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/08/24
+2026-08-25,click365_okasan,TRY/JPY,クリック365,1.0,23.0,-23.0,None,success,2026/08/25
 2026-08-25,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/25
 2026-08-25,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/25
 2026-08-25,gmo,TRY/JPY,GMO外貨,1.0,24.1,-24.1,None,success,2026/08/25
@@ -2088,7 +2088,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-25,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/08/25
 2026-08-25,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/08/25
 2026-08-26,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.099999999999998,-24.099999999999998,8/27,success,2026/08/26
-2026-08-26,click365_okasan,TRY/JPY,クリック365,3.0,23.0,-23.0,None,success,2026/08/25
+2026-08-26,click365_okasan,TRY/JPY,クリック365,3.0,24.666666666666668,-24.666666666666668,None,success,2026/08/26
 2026-08-26,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/08/26
 2026-08-26,gaitame,TRY/JPY,外為どっとコム,3.0,23.0,-33.0,None,success,2026/08/26
 2026-08-26,gmo,TRY/JPY,GMO外貨,3.0,24.099999999999998,-24.099999999999998,None,success,2026/08/26
@@ -2104,7 +2104,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-26,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/08/26
 2026-08-26,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/08/26
 2026-08-27,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,8/28,success,2026/08/27
-2026-08-27,click365_okasan,TRY/JPY,クリック365,1.0,24.666666666666668,-24.666666666666668,None,success,2026/08/26
+2026-08-27,click365_okasan,TRY/JPY,クリック365,1.0,24.0,-24.0,None,success,2026/08/27
 2026-08-27,dmm,TRY/JPY,DMM FX,3.0,24.0,-27.0,None,success,2026/08/27
 2026-08-27,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/08/27
 2026-08-27,gmo,TRY/JPY,GMO外貨,1.0,23.1,-23.1,None,success,2026/08/27
@@ -2167,7 +2167,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-01,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/09/01
 2026-09-01,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/09/01
 2026-09-02,central_tanshi,TRY/JPY,セントラル短資FX,4.0,24.1,-24.1,9/3,success,2026/09/02
-2026-09-02,click365_okasan,TRY/JPY,クリック365,4.0,25.0,-25.0,None,success,2026/09/01
+2026-09-02,click365_okasan,TRY/JPY,クリック365,4.0,25.5,-25.5,None,success,2026/09/02
 2026-09-02,dmm,TRY/JPY,DMM FX,1.0,23.0,-26.0,None,success,2026/09/02
 2026-09-02,gaitame,TRY/JPY,外為どっとコム,4.0,23.0,-33.0,None,success,2026/09/02
 2026-09-02,gmo,TRY/JPY,GMO外貨,4.0,24.1,-24.1,None,success,2026/09/02
@@ -2194,12 +2194,12 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-03,m2j,TRY/JPY,マネースクエア,4.0,25.0,-40.0,None,success,2026/09/03
 2026-09-03,matsui,TRY/JPY,MATSUI FX,4.0,23.0,-23.0,None,success,2026/09/02
 2026-09-03,sbi,TRY/JPY,SBI FXトレード,4.0,23.0,-31.0,09月08日,success,2026/09/03
-2026-09-03,traders_light,TRY/JPY,LIGHT FX,4.0,23.1,-23.1,None,success,2026/09/02
-2026-09-03,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,4.0,23.2,-23.2,None,success,2026/09/02
-2026-09-03,traders_min,TRY/JPY,みんなのFX,4.0,23.1,-23.1,None,success,2026/09/02
-2026-09-03,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,4.0,23.3,-23.3,None,success,2026/09/02
+2026-09-03,traders_light,TRY/JPY,LIGHT FX,None,None,None,None,success,2026/09/03
+2026-09-03,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/09/03
+2026-09-03,traders_min,TRY/JPY,みんなのFX,None,None,None,None,success,2026/09/03
+2026-09-03,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/09/03
 2026-09-04,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.1,-24.1,9/7,success,2026/09/04
-2026-09-04,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/09/03
+2026-09-04,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/09/04
 2026-09-04,dmm,TRY/JPY,DMM FX,4.0,None,None,None,success,2026/09/04
 2026-09-04,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,success,2026/09/04
 2026-09-04,gmo,TRY/JPY,GMO外貨,1.0,24.2,-24.2,None,success,2026/09/04
@@ -2247,13 +2247,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-08,traders_min,TRY/JPY,みんなのFX,1.0,23.1,-23.1,None,success,2026/09/08
 2026-09-08,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,23.3,-23.3,None,success,2026/09/08
 2026-09-09,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.3,-24.3,9/10,success,2026/09/09
-2026-09-09,click365_okasan,TRY/JPY,クリック365,3.0,24.0,-24.0,None,success,2026/09/08
+2026-09-09,click365_okasan,TRY/JPY,クリック365,3.0,26.333333333333332,-26.333333333333332,None,success,2026/09/09
 2026-09-09,dmm,TRY/JPY,DMM FX,1.0,23.0,-26.0,None,success,2026/09/09
 2026-09-09,gaitame,TRY/JPY,外為どっとコム,3.0,23.0,-33.0,None,success,2026/09/09
 2026-09-09,gmo,TRY/JPY,GMO外貨,3.0,25.099999999999998,-25.099999999999998,None,success,2026/09/09
 2026-09-09,gmo_click,TRY/JPY,GMOクリック証券,3.0,25.0,-25.0,None,success,2026/09/09
 2026-09-09,hirose,TRY/JPY,ヒロセ通商,3,23.0,-28.0,None,success,2026/09/09
-2026-09-09,invast,TRY/JPY,トライオートFX,3.0,24.1,-37.1,None,success,2026/09/08
+2026-09-09,invast,TRY/JPY,トライオートFX,3.0,24.0,-37.0,None,success,2026/09/09
 2026-09-09,jfx,TRY/JPY,JFX,3.0,23.0,-30.0,None,success,2026/09/09
 2026-09-09,m2j,TRY/JPY,マネースクエア,3.0,25.0,-40.0,None,success,2026/09/09
 2026-09-09,matsui,TRY/JPY,MATSUI FX,3.0,23.0,-23.0,None,success,2026/09/08
@@ -2263,7 +2263,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-09,traders_min,TRY/JPY,みんなのFX,3.0,23.099999999999998,-23.099999999999998,None,success,2026/09/09
 2026-09-09,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,3.0,23.3,-23.3,None,success,2026/09/09
 2026-09-10,central_tanshi,TRY/JPY,セントラル短資FX,1.0,24.4,-24.4,9/11,success,2026/09/10
-2026-09-10,click365_okasan,TRY/JPY,クリック365,1.0,26.333333333333332,-26.333333333333332,None,success,2026/09/09
+2026-09-10,click365_okasan,TRY/JPY,クリック365,1.0,25.0,-25.0,None,success,2026/09/10
 2026-09-10,dmm,TRY/JPY,DMM FX,3.0,23.0,-26.0,None,success,2026/09/10
 2026-09-10,gaitame,TRY/JPY,外為どっとコム,1.0,23.0,-33.0,None,success,2026/09/10
 2026-09-10,gmo,TRY/JPY,GMO外貨,1.0,25.1,-25.1,None,success,2026/09/10
@@ -2369,10 +2369,10 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-18,jfx,TRY/JPY,JFX,1.0,23.0,-30.0,None,success,2026/09/18
 2026-09-18,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/09/18
 2026-09-18,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/09/17
-2026-09-18,traders_light,TRY/JPY,LIGHT FX,1.0,24.1,-24.1,None,success,2026/09/17
-2026-09-18,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.2,-24.2,None,success,2026/09/17
-2026-09-18,traders_min,TRY/JPY,みんなのFX,1.0,24.1,-24.1,None,success,2026/09/17
-2026-09-18,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,24.3,-24.3,None,success,2026/09/17
+2026-09-18,traders_light,TRY/JPY,LIGHT FX,None,None,None,None,success,2026/09/18
+2026-09-18,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/09/18
+2026-09-18,traders_min,TRY/JPY,みんなのFX,None,None,None,None,success,2026/09/18
+2026-09-18,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/09/18
 2026-09-18,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,09月25日,success,2026/09/18
 2026-09-21,central_tanshi,TRY/JPY,セントラル短資FX,1.0,None,None,None,success,2026/09/21
 2026-09-21,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,success,2026/09/21
@@ -2381,7 +2381,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-21,gmo,TRY/JPY,GMO外貨,1.0,None,None,None,success,2026/09/21
 2026-09-21,gmo_click,TRY/JPY,GMOクリック証券,1.0,None,None,None,success,2026/09/21
 2026-09-21,hirose,TRY/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/21
-2026-09-21,invast,TRY/JPY,トライオートFX,1.0,None,None,None,success,2026/09/18
+2026-09-21,invast,TRY/JPY,トライオートFX,None,None,None,None,success,2026/09/21
 2026-09-21,jfx,TRY/JPY,JFX,1.0,None,None,None,success,2026/09/21
 2026-09-21,m2j,TRY/JPY,マネースクエア,1.0,None,None,None,success,2026/09/21
 2026-09-21,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,error,2026/09/20
@@ -2397,7 +2397,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-22,gmo,TRY/JPY,GMO外貨,1.0,None,None,None,success,2026/09/22
 2026-09-22,gmo_click,TRY/JPY,GMOクリック証券,1.0,None,None,None,success,2026/09/22
 2026-09-22,hirose,TRY/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/22
-2026-09-22,invast,TRY/JPY,トライオートFX,1.0,None,None,None,success,2026/09/21
+2026-09-22,invast,TRY/JPY,トライオートFX,None,None,None,None,success,2026/09/22
 2026-09-22,jfx,TRY/JPY,JFX,1.0,None,None,None,success,2026/09/22
 2026-09-22,m2j,TRY/JPY,マネースクエア,1.0,None,None,None,success,2026/09/22
 2026-09-22,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,error,2026/09/20
@@ -2413,7 +2413,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-23,gmo,TRY/JPY,GMO外貨,3.0,25.099999999999998,-25.099999999999998,None,success,2026/09/23
 2026-09-23,gmo_click,TRY/JPY,GMOクリック証券,3.0,25.0,-25.0,None,success,2026/09/23
 2026-09-23,hirose,TRY/JPY,ヒロセ通商,3,24.0,-29.0,None,success,2026/09/23
-2026-09-23,invast,TRY/JPY,トライオートFX,3.0,None,None,None,success,2026/09/22
+2026-09-23,invast,TRY/JPY,トライオートFX,3.0,24.400000000000002,-37.4,None,success,2026/09/23
 2026-09-23,jfx,TRY/JPY,JFX,3.0,None,None,None,success,2026/09/23
 2026-09-23,m2j,TRY/JPY,マネースクエア,3.0,None,None,None,success,2026/09/23
 2026-09-23,matsui,TRY/JPY,MATSUI FX,1.0,0.0,0.0,None,error,2026/09/20

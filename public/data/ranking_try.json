@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-10-02",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-02T23:09:44.125Z",
+  "generated_at": "2026-10-03T17:16:03.376Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -31,8 +31,8 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.400000000000002,
-      "sample_days": 7
+      "avg": 24.4,
+      "sample_days": 10
     },
     {
       "provider_id": "traders_min_light",
@@ -43,18 +43,18 @@
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": 24.199999999999996,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "traders_min",
-      "name": "みんなのFX",
-      "avg": 24.1,
-      "sample_days": 13
+      "avg": 24.2,
+      "sample_days": 12
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
+      "avg": 24.099999999999998,
+      "sample_days": 12
+    },
+    {
+      "provider_id": "traders_min",
+      "name": "みんなのFX",
       "avg": 24.099999999999998,
       "sample_days": 12
     },
@@ -123,14 +123,14 @@
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -24.1,
-      "sample_days": 13
+      "avg": -24.099999999999998,
+      "sample_days": 12
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": -24.199999999999996,
-      "sample_days": 14
+      "avg": -24.2,
+      "sample_days": 12
     },
     {
       "provider_id": "traders_min_light",
@@ -190,7 +190,7 @@
       "provider_id": "invast",
       "name": "トライオートFX",
       "avg": -37.4,
-      "sample_days": 7
+      "sample_days": 10
     },
     {
       "provider_id": "m2j",

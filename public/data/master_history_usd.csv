@@ -407,7 +407,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-04-22,traders_light,USD/JPY,LIGHT FX,1.0,None,None,None,error,2026/04/21
 2026-04-22,traders_min,USD/JPY,みんなのFX,1.0,None,None,None,error,2026/04/21
 2026-04-23,central_tanshi,USD/JPY,セントラル短資FX,1.0,155,-254,4/24,success,2026/04/23
-2026-04-23,dmm,USD/JPY,DMM FX,1.0,136.0,None,None,success,2026/04/22
+2026-04-23,dmm,USD/JPY,DMM FX,1.0,136.0,-139.0,None,success,2026/04/23
 2026-04-23,gaitame,USD/JPY,外為どっとコム,1.0,130.0,-160.0,None,success,2026/04/23
 2026-04-23,gmo,USD/JPY,GMO外貨,1.0,145.0,-145.0,None,success,2026/04/23
 2026-04-23,gmo_click,USD/JPY,GMOクリック証券,1.0,144.0,-144.0,None,success,2026/04/23
@@ -842,7 +842,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-06-18,gmo,USD/JPY,GMO外貨,1.0,158.0,-158.0,None,success,2026/06/18
 2026-06-18,gmo_click,USD/JPY,GMOクリック証券,1.0,145.0,-145.0,None,success,2026/06/18
 2026-06-18,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/06/18
-2026-06-18,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/06/17
+2026-06-18,invast,USD/JPY,トライオートFX,1.0,157.0,-232.0,None,success,2026/06/18
 2026-06-18,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/06/18
 2026-06-18,sbi,USD/JPY,SBI FXトレード,None,None,None,06月22日,success,2026/06/18
 2026-06-18,traders_light,USD/JPY,LIGHT FX,1.0,158.0,-158.0,None,success,2026/06/18
@@ -1248,7 +1248,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-08-11,gmo,USD/JPY,GMO外貨,1.0,123.0,-123.0,None,success,2026/08/11
 2026-08-11,gmo_click,USD/JPY,GMOクリック証券,1.0,123.0,-123.0,None,success,2026/08/11
 2026-08-11,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/08/11
-2026-08-11,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/08/10
+2026-08-11,invast,USD/JPY,トライオートFX,1.0,130.0,-205.0,None,success,2026/08/11
 2026-08-11,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/08/11
 2026-08-11,sbi,USD/JPY,SBI FXトレード,None,None,None,08月13日,success,2026/08/11
 2026-08-11,traders_light,USD/JPY,LIGHT FX,1.0,124.0,-124.0,None,success,2026/08/11
@@ -1438,15 +1438,15 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-03,invast,USD/JPY,トライオートFX,1.0,124.0,-200.0,None,success,2026/09/02
 2026-09-03,jfx,USD/JPY,JFX,1.0,117.0,-147.0,None,success,2026/09/03
 2026-09-03,sbi,USD/JPY,SBI FXトレード,1.0,117.0,-125.0,09月08日,success,2026/09/03
-2026-09-03,traders_light,USD/JPY,LIGHT FX,1.0,121.0,-121.0,None,success,2026/09/02
-2026-09-03,traders_min,USD/JPY,みんなのFX,1.0,120.0,-120.0,None,success,2026/09/02
+2026-09-03,traders_light,USD/JPY,LIGHT FX,None,None,None,None,success,2026/09/03
+2026-09-03,traders_min,USD/JPY,みんなのFX,None,None,None,None,success,2026/09/03
 2026-09-04,central_tanshi,USD/JPY,セントラル短資FX,1.0,120.0,-120.0,9/7,success,2026/09/04
 2026-09-04,dmm,USD/JPY,DMM FX,1.0,None,None,None,success,2026/09/04
 2026-09-04,gaitame,USD/JPY,外為どっとコム,1.0,None,None,None,success,2026/09/04
 2026-09-04,gmo,USD/JPY,GMO外貨,1.0,118.0,-118.0,None,success,2026/09/04
 2026-09-04,gmo_click,USD/JPY,GMOクリック証券,1.0,116.0,-116.0,None,success,2026/09/04
 2026-09-04,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/04
-2026-09-04,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/09/03
+2026-09-04,invast,USD/JPY,トライオートFX,1.0,124.0,-200.0,None,success,2026/09/04
 2026-09-04,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/09/04
 2026-09-04,sbi,USD/JPY,SBI FXトレード,None,None,None,09月08日,success,2026/09/04
 2026-09-04,traders_light,USD/JPY,LIGHT FX,1.0,116.0,-116.0,None,success,2026/09/04
@@ -1558,8 +1558,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-18,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/18
 2026-09-18,invast,USD/JPY,トライオートFX,1.0,115.0,-191.0,None,success,2026/09/17
 2026-09-18,jfx,USD/JPY,JFX,1.0,112.0,-142.0,None,success,2026/09/18
-2026-09-18,traders_light,USD/JPY,LIGHT FX,1.0,116.0,-116.0,None,success,2026/09/17
-2026-09-18,traders_min,USD/JPY,みんなのFX,1.0,115.0,-115.0,None,success,2026/09/17
+2026-09-18,traders_light,USD/JPY,LIGHT FX,None,None,None,None,success,2026/09/18
+2026-09-18,traders_min,USD/JPY,みんなのFX,None,None,None,None,success,2026/09/18
 2026-09-18,sbi,USD/JPY,SBI FXトレード,1.0,115.0,-123.0,09月25日,success,2026/09/18
 2026-09-21,central_tanshi,USD/JPY,セントラル短資FX,1.0,0.0,0.0,None,error,2026/09/21
 2026-09-21,dmm,USD/JPY,DMM FX,1.0,None,None,None,success,2026/09/21
@@ -1567,7 +1567,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-21,gmo,USD/JPY,GMO外貨,1.0,None,None,None,success,2026/09/21
 2026-09-21,gmo_click,USD/JPY,GMOクリック証券,1.0,None,None,None,success,2026/09/21
 2026-09-21,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/09/21
-2026-09-21,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/09/18
+2026-09-21,invast,USD/JPY,トライオートFX,None,None,None,None,success,2026/09/21
 2026-09-21,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/09/21
 2026-09-21,sbi,USD/JPY,SBI FXトレード,None,None,None,None,success,2026/09/21
 2026-09-21,traders_light,USD/JPY,LIGHT FX,1.0,None,None,None,error,None
@@ -1580,7 +1580,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-23,gmo,USD/JPY,GMO外貨,1.0,120.0,-120.0,None,success,2026/09/23
 2026-09-23,gmo_click,USD/JPY,GMOクリック証券,1.0,118.0,-118.0,None,success,2026/09/23
 2026-09-23,hirose,USD/JPY,ヒロセ通商,3,118.0,-148.0,None,success,2026/09/23
-2026-09-23,invast,USD/JPY,トライオートFX,1.0,None,None,None,success,2026/09/22
+2026-09-23,invast,USD/JPY,トライオートFX,1.0,115.0,-191.0,None,success,2026/09/23
 2026-09-23,jfx,USD/JPY,JFX,1.0,None,None,None,success,2026/09/23
 2026-09-23,sbi,USD/JPY,SBI FXトレード,None,None,None,09月25日,success,2026/09/23
 2026-09-23,traders_light,USD/JPY,LIGHT FX,1.0,116.0,-116.0,None,success,2026/09/23
