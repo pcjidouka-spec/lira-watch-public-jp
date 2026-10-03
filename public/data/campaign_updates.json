@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-03T04:00:47.464704",
+  "updated_at": "2026-10-04T04:00:46.904926",
   "providers": {
     "gmo_click": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-09-28T12:00:33.723257"
     },
     "gmo": {
@@ -71,7 +71,7 @@
     },
     "m2j": {
       "has_new": true,
-      "updated_at": "2026-09-30T04:00:51.828026"
+      "updated_at": "2026-10-04T04:00:46.804145"
     }
   }
 }

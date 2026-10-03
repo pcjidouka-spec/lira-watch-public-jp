@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-10-02",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-03T18:31:18.054Z",
+  "generated_at": "2026-10-03T22:52:33.507Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -65,6 +65,12 @@
       "sample_days": 11
     },
     {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": 12.5,
+      "sample_days": 8
+    },
+    {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": 12.454545454545455,
@@ -75,12 +81,6 @@
       "name": "外為どっとコム",
       "avg": 12.416666666666666,
       "sample_days": 12
-    },
-    {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": 12.4,
-      "sample_days": 10
     },
     {
       "provider_id": "click365_okasan",
@@ -139,16 +139,16 @@
       "sample_days": 12
     },
     {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": -15.4,
-      "sample_days": 10
-    },
-    {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": -15.454545454545455,
       "sample_days": 11
+    },
+    {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": -15.5,
+      "sample_days": 8
     },
     {
       "provider_id": "central_tanshi",

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-03 07:57:41",
+  "generated_at": "2026-10-04 07:43:50",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-10-03",
+  "rate_as_of": "2026-10-04",
   "baseline": false,
   "excluded_providers": [
     "saxo"
@@ -33,8 +33,8 @@
         "actual_date": "2026-10-02"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 64306,
-      "capital": 6430.6,
+      "notional_2leg": 64236,
+      "capital": 6423.6,
       "annual_pct": 22.7,
       "meets_threshold": true,
       "history": {
@@ -42,19 +42,19 @@
           "days": 20,
           "min_pct": 5.7,
           "max_pct": 23.3,
-          "avg_pct": 13.6,
+          "avg_pct": 13.7,
           "median_pct": 11.9
         },
         "all": {
-          "days": 181,
-          "min_pct": 1.7,
-          "max_pct": 181.6,
-          "avg_pct": 21.0,
+          "days": 180,
+          "min_pct": 1.9,
+          "max_pct": 181.8,
+          "avg_pct": 21.3,
           "median_pct": 17.0
         },
         "first_date": "2025-12-01",
         "last_date": "2026-10-02",
-        "step_count": 65,
+        "step_count": 63,
         "steps": [
           {
             "date": "2026-09-08",
@@ -129,56 +129,56 @@
         "actual_date": "2026-10-02"
       },
       "arb_per_day": 0.6,
-      "notional_2leg": 9669,
-      "capital": 966.9,
-      "annual_pct": 22.6,
+      "notional_2leg": 9646,
+      "capital": 964.6,
+      "annual_pct": 22.7,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 15.1,
-          "max_pct": 26.4,
-          "avg_pct": 23.6,
-          "median_pct": 26.4
+          "max_pct": 26.5,
+          "avg_pct": 24.2,
+          "median_pct": 26.5
         },
         "all": {
-          "days": 110,
-          "min_pct": 11.3,
-          "max_pct": 60.4,
-          "avg_pct": 29.1,
-          "median_pct": 26.4
+          "days": 107,
+          "min_pct": 11.4,
+          "max_pct": 60.5,
+          "avg_pct": 29.6,
+          "median_pct": 26.5
         },
         "first_date": "2026-04-10",
         "last_date": "2026-10-02",
-        "step_count": 39,
+        "step_count": 31,
         "steps": [
           {
-            "date": "2026-09-04",
-            "side": "buy",
-            "provider_id": "gmo_click",
-            "name": "GMOクリック証券",
-            "change_pct": -21.4
-          },
-          {
-            "date": "2026-09-07",
+            "date": "2026-09-02",
             "side": "buy",
             "provider_id": "invast",
             "name": "トライオートFX",
-            "change_pct": 27.3
+            "change_pct": 16.7
           },
           {
-            "date": "2026-09-23",
-            "side": "buy",
-            "provider_id": "gmo_click",
-            "name": "GMOクリック証券",
-            "change_pct": -21.4
+            "date": "2026-09-03",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 42.9
+          },
+          {
+            "date": "2026-09-04",
+            "side": "sell",
+            "provider_id": "traders_min_light",
+            "name": "みんなのFX（LIGHT）",
+            "change_pct": -30.0
           },
           {
             "date": "2026-09-24",
             "side": "buy",
             "provider_id": "invast",
             "name": "トライオートFX",
-            "change_pct": 18.2
+            "change_pct": -7.1
           },
           {
             "date": "2026-10-01",
@@ -224,24 +224,24 @@
         "actual_date": "2026-10-02"
       },
       "arb_per_day": 211.7,
-      "notional_2leg": 3794346,
-      "capital": 379434.6,
-      "annual_pct": 20.4,
+      "notional_2leg": 3808073,
+      "capital": 380807.3,
+      "annual_pct": 20.3,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 19.0,
-          "max_pct": 69.6,
-          "avg_pct": 38.3,
-          "median_pct": 31.6
+          "min_pct": 18.9,
+          "max_pct": 69.3,
+          "avg_pct": 38.2,
+          "median_pct": 31.5
         },
         "all": {
           "days": 52,
-          "min_pct": 19.0,
-          "max_pct": 82.0,
-          "avg_pct": 50.8,
-          "median_pct": 54.1
+          "min_pct": 18.9,
+          "max_pct": 81.7,
+          "avg_pct": 50.6,
+          "median_pct": 53.9
         },
         "first_date": "2026-07-22",
         "last_date": "2026-10-02",
@@ -320,28 +320,28 @@
         "actual_date": "2026-10-02"
       },
       "arb_per_day": 3.7,
-      "notional_2leg": 173027,
-      "capital": 17302.7,
+      "notional_2leg": 173301,
+      "capital": 17330.1,
       "annual_pct": 7.8,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 1.9,
-          "max_pct": 8.9,
-          "avg_pct": 5.2,
+          "min_pct": 2.3,
+          "max_pct": 8.8,
+          "avg_pct": 5.3,
           "median_pct": 5.1
         },
         "all": {
-          "days": 148,
+          "days": 146,
           "min_pct": 0.8,
-          "max_pct": 8.9,
-          "avg_pct": 2.7,
+          "max_pct": 8.8,
+          "avg_pct": 2.8,
           "median_pct": 2.3
         },
         "first_date": "2026-02-16",
         "last_date": "2026-10-02",
-        "step_count": 31,
+        "step_count": 25,
         "steps": [
           {
             "date": "2026-09-24",
@@ -412,12 +412,12 @@
         "provider_id": "sbi",
         "name": "SBI FXトレード",
         "swap": -12.0,
-        "as_of": "2026-10-01",
-        "actual_date": "2026-10-01"
+        "as_of": "2026-10-02",
+        "actual_date": "2026-10-02"
       },
       "arb_per_day": 2.5,
-      "notional_2leg": 189633,
-      "capital": 18963.3,
+      "notional_2leg": 189453,
+      "capital": 18945.3,
       "annual_pct": 4.8,
       "meets_threshold": false,
       "history": {
@@ -425,20 +425,27 @@
           "days": 20,
           "min_pct": 1.0,
           "max_pct": 13.7,
-          "avg_pct": 8.1,
-          "median_pct": 9.1
+          "avg_pct": 8.5,
+          "median_pct": 9.4
         },
         "all": {
-          "days": 55,
+          "days": 54,
           "min_pct": 1.0,
           "max_pct": 13.7,
-          "avg_pct": 8.7,
+          "avg_pct": 8.9,
           "median_pct": 10.2
         },
         "first_date": "2026-07-16",
         "last_date": "2026-10-02",
-        "step_count": 21,
+        "step_count": 16,
         "steps": [
+          {
+            "date": "2026-09-07",
+            "side": "sell",
+            "provider_id": "sony",
+            "name": "ソニーバンクFX",
+            "change_pct": -40.7
+          },
           {
             "date": "2026-09-24",
             "side": "sell",
@@ -466,21 +473,14 @@
             "provider_id": "sbi",
             "name": "SBI FXトレード",
             "change_pct": -14.3
-          },
-          {
-            "date": "2026-10-02",
-            "side": "sell",
-            "provider_id": "gmo",
-            "name": "GMO外貨",
-            "change_pct": 12.5
           }
         ],
         "last_step": {
-          "date": "2026-10-02",
+          "date": "2026-09-29",
           "side": "sell",
-          "provider_id": "gmo",
-          "name": "GMO外貨",
-          "change_pct": 12.5
+          "provider_id": "sbi",
+          "name": "SBI FXトレード",
+          "change_pct": -14.3
         },
         "quiet_median_pct": 0.0
       },
