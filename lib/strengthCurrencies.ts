@@ -20,6 +20,7 @@ export const CURRENCY_LABELS: Record<string, string> = {
   GBP: '英ポンド',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
+  USDTRY_S: 'USD/TRY 売り（ドル売り・リラ買い）',
 };
 
 type StrengthCurrencySource = {
