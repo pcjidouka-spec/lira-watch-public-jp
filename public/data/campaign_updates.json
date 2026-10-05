@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T04:00:54.851221",
+  "updated_at": "2026-10-06T04:00:50.538755",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -35,7 +35,7 @@
     },
     "matsui": {
       "has_new": true,
-      "updated_at": "2026-10-02T04:00:39.047653"
+      "updated_at": "2026-10-06T04:00:44.346577"
     },
     "gaitame": {
       "has_new": true,
