@@ -23,6 +23,41 @@ export const CURRENCY_LABELS: Record<string, string> = {
   USDTRY_S: 'USD/TRY 売り（ドル売り・リラ買い）',
 };
 
+// 参照系列 (破線) の説明。表示中の系列だけから組み立てる (2026-10-06)。
+// ★以前は CHF/TRY 専用の文が固定で、USD/TRY 売りが加わると「1万フラン」と
+//   書いたまま別の線が出ていた。
+const CHFTRY_REFERENCE_NOTE =
+  '破線の「CHF/TRY売」「CHF/TRY買」は通貨ではなくポジションです。どちらも' +
+  '1万フラン相当を、レバレッジ1倍で持ち続けた場合を表しています。' +
+  '「売」はフランを売ってトルコリラを買う組み合わせで、円で調達するかわりに' +
+  'スイスフランで調達してリラを買うとどうなるかを見る線です。「買」はその逆' +
+  '（フランを買ってリラを売る）になります。' +
+  '売と買は正反対の建玉ですが、線が上下対称にならないのは、それぞれ' +
+  'スワップが最も有利な会社を選んでいるうえ、売買それぞれに会社の' +
+  'スプレッドが乗るためです。';
+
+const USDTRY_REFERENCE_NOTE =
+  '破線の「USD/TRY売」も通貨ではなくポジションです。1万ドル相当を、レバレッジ1倍で' +
+  '持ち続けた場合を表しています。ドルを売ってトルコリラを買う組み合わせで、' +
+  '円で調達するかわりに米ドルで調達してリラを買うとどうなるかを見る線です。';
+
+/** どの参照系列にも共通する説明。strong は太字で出す部分 */
+export const REFERENCE_NOTE_COMMON = {
+  strong: '平均を1.0に揃える計算には入れておらず、平均で割ってもいません',
+  rest:
+    '。これらの線は円の動きで損益が変わらない建玉なので、起点を1.0にしたそのままの' +
+    '損益を出しています。通貨の線どうしではなく、1.0の水平線（＝円で持った場合）' +
+    'と比べて読んでください。',
+} as const;
+
+/** 表示中の参照系列に対応する説明の段落 (共通部分は REFERENCE_NOTE_COMMON)。参照系列が無ければ空 */
+export function referenceNotes(refs: readonly string[]): string[] {
+  const notes: string[] = [];
+  if (refs.includes('CHFTRY_S') || refs.includes('CHFTRY_B')) notes.push(CHFTRY_REFERENCE_NOTE);
+  if (refs.includes('USDTRY_S')) notes.push(USDTRY_REFERENCE_NOTE);
+  return notes;
+}
+
 type StrengthCurrencySource = {
   base: string;
   periods: Record<string, { series: Record<string, unknown>; references?: string[] }>;
