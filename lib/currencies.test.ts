@@ -56,7 +56,7 @@ describe('公開状態', () => {
     expect(def!.published).toBe(true);
   });
 
-  it('12 通貨すべてがタブに出る', () => {
+  it('13 通貨すべてがタブに出る', () => {
     expect(publishedCurrencies().length).toBe(CURRENCIES.length);
   });
 
@@ -70,6 +70,13 @@ describe('公開状態', () => {
     // ★買が全社マイナスの通貨はこれだけ。注記を落とすと
     //   「マイナスだから取得失敗」と読まれる。
     expect(noteOf('CHF/JPY')).toContain('マイナス');
+  });
+
+  it('USD/TRY はリラを持つ側が売りであることを注記で伝える', () => {
+    // ★買が全社マイナス。注記を落とすと「マイナスだから取得失敗」と読まれる。
+    const note = noteOf('USD/TRY') ?? '';
+    expect(note).toContain('マイナス');
+    expect(note).toContain('売り（ドル売り・リラ買い）');
   });
 });
 
@@ -85,8 +92,8 @@ describe('群の割り当て', () => {
     expect(isCrossPairCode('CHF/JPY')).toBe(false);
   });
 
-  it('クロス群は 3 ペア', () => {
-    expect([...CROSS_PAIR_CODES].sort()).toEqual(['CHF/TRY', 'EUR/USD', 'GBP/USD']);
+  it('クロス群は 4 ペア', () => {
+    expect([...CROSS_PAIR_CODES].sort()).toEqual(['CHF/TRY', 'EUR/USD', 'GBP/USD', 'USD/TRY']);
   });
 });
 
@@ -147,6 +154,7 @@ describe('★public 配下のファイルパス', () => {
     ['PLN/JPY', '/providers_config_pln.json', '/data/master_history_pln.csv'],
     ['AUD/JPY', '/providers_config_aud.json', '/data/master_history_aud.csv'],
     ['CHF/TRY', '/providers_config_chftry.json', '/data/master_history_chftry.csv'],
+    ['USD/TRY', '/providers_config_usdtry.json', '/data/master_history_usdtry.csv'],
   ];
 
   it.each(OLD_LADDER)('%s は従来と同じパスを指す', (code, cfg, hist) => {

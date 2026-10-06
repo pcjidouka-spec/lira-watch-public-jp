@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { strengthCurrencies, strengthCurrencyNames } from './strengthCurrencies';
+import {
+  strengthCurrencies,
+  strengthCurrencyNames,
+  referenceNotes,
+  REFERENCE_NOTE_COMMON,
+} from './strengthCurrencies';
 
 // 期間ごとに描かれる通貨が違う形をそのまま作る (2026-09-29 の実データは 1w=11 / 3m=6 / 1y=2)。
 const period = (codes: string[], references: string[] = []) => ({
@@ -48,5 +53,37 @@ describe('strengthCurrencyNames', () => {
     expect(strengthCurrencyNames(['USD', 'GBP', 'XYZ', 'JPY'])).toEqual(
       ['米ドル', '英ポンド', 'XYZ', '日本円'],
     );
+  });
+});
+
+describe('referenceNotes (参照系列の説明)', () => {
+  it('CHF/TRY だけなら CHF の説明だけで、USD の説明は出ない', () => {
+    const n = referenceNotes(['CHFTRY_S', 'CHFTRY_B']).join('');
+    expect(n).toContain('1万フラン');
+    expect(n).not.toContain('1万ドル');
+  });
+
+  it('USDTRY_S だけなら USD の説明で、フランに触れない', () => {
+    const n = referenceNotes(['USDTRY_S']).join('');
+    expect(n).toContain('1万ドル');
+    expect(n).not.toContain('フラン');
+    expect(n).not.toContain('正反対');
+  });
+
+  it('両方あれば両方の説明が出る', () => {
+    const n = referenceNotes(['CHFTRY_S', 'CHFTRY_B', 'USDTRY_S']);
+    expect(n).toHaveLength(2);
+    expect(n.join('')).toContain('1万フラン');
+    expect(n.join('')).toContain('1万ドル');
+  });
+
+  it('参照系列が無ければ何も出ない', () => {
+    expect(referenceNotes([])).toEqual([]);
+  });
+
+  it('共通部分は系列の本数を決め打ちしない', () => {
+    const all = REFERENCE_NOTE_COMMON.strong + REFERENCE_NOTE_COMMON.rest;
+    expect(all).not.toContain('この2本');
+    expect(all).toContain('平均で割ってもいません');
   });
 });

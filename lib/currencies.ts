@@ -16,6 +16,8 @@
  *     日次で保存した raw_data からその履歴を取り出せたため
  *     (guicatch/backfill_from_saved_raw.py)。新しい通貨を足すときも、
  *     「履歴が無い」と判断する前にまず保存済みの raw_data を見ること。
+ *   ★USD/TRY は扱う業者が 3 社しか無いため、この条件の例外として 2026-10-06 に公開した
+ *     (オーナー決定)。
  */
 
 export type CurrencyGroup = 'emerging' | 'developed' | 'cross';
@@ -64,6 +66,9 @@ const CROSS_NOTE =
 const CHFTRY_NOTE =
   '※ CHF/TRY は各社が円換算した 1万通貨単位あたりの値です。スイスとトルコの金利差が非常に大きいため、買い（フラン買い・リラ売り）は各社ともマイナス、売り（フラン売り・リラ買い）はプラスになります。';
 
+const USDTRY_NOTE =
+  '※ USD/TRY は各社が円換算した 1万通貨単位あたりの値です。トルコの金利が米国より高いため、買い（ドル買い・リラ売り）は各社ともマイナス、リラを持つ側の売り（ドル売り・リラ買い）はプラスになります。';
+
 // ★CHF/JPY は買がマイナス・売がプラス。他の対円通貨と符号が逆なので注記する。
 // 並び順は降順のまま (-5 が -94 より上)。表示も生値をそのまま出す。
 const CHFJPY_NOTE =
@@ -86,6 +91,7 @@ export const CURRENCIES: readonly CurrencyDef[] = [
   { code: 'EUR/USD', label: 'EUR/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#8b5cf6', slug: 'eurusd' },
   { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444', slug: 'gbpusd' },
   { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488', slug: 'chftry' },
+  { code: 'USD/TRY', label: '米ドル/トルコリラ', group: 'cross', published: true, note: USDTRY_NOTE, color: '#c2410c', slug: 'usdtry' },
 ];
 
 const BY_CODE = new Map(CURRENCIES.map((c) => [c.code, c]));

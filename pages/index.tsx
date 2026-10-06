@@ -42,6 +42,7 @@ export default function Home() {
   const plnData = useSwapData('PLN/JPY');
   const audData = useSwapData('AUD/JPY');
   const chftryData = useSwapData('CHF/TRY');
+  const usdtryData = useSwapData('USD/TRY');
   // ★EUR/JPY と CHF/JPY は lib/currencies.ts で published: false のためタブには
   //   出ないが、フックはここで呼んでおく。React のフックは呼ぶ数が毎回同じで
   //   ないといけないので、published を true にするときに
@@ -84,6 +85,7 @@ export default function Home() {
     'PLN/JPY': plnData,
     'AUD/JPY': audData,
     'CHF/TRY': chftryData,
+    'USD/TRY': usdtryData,
     'EUR/JPY': eurData,
     'CHF/JPY': chfData,
   };

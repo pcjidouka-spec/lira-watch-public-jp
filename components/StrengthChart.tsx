@@ -3,7 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ResponsiveContainer,
 } from 'recharts';
 import { CurrencyFlag } from '@/components/CurrencyFlag';
-import { CURRENCY_LABELS } from '@/lib/strengthCurrencies';
+import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes } from '@/lib/strengthCurrencies';
 
 export type StrengthPeriod = {
   dates: string[];
@@ -55,6 +55,8 @@ const COLORS: Record<string, string> = {
   GBP: '#4f7cff',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
+  // USD/TRY 売り (2026-10-06 追加)。色相 120。最近傍 (EUR 82 / 142) から 20 度以上離れる。
+  USDTRY_S: '#5fd35f',
 };
 
 // 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は
@@ -62,6 +64,7 @@ const COLORS: Record<string, string> = {
 const DISPLAY_CODES: Record<string, string> = {
   CHFTRY_S: 'CHF/TRY売',
   CHFTRY_B: 'CHF/TRY買',
+  USDTRY_S: 'USD/TRY売',
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
@@ -313,20 +316,11 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           USD/JPY 買いを組み合わせた値で計算しています。
         </p>
       )}
-      {(p.references ?? []).length > 0 && (
+      {referenceNotes(p.references ?? []).length > 0 && (
         <p className="strength-note">
-          破線の「CHF/TRY売」「CHF/TRY買」は通貨ではなくポジションです。どちらも
-          1万フラン相当を、レバレッジ1倍で持ち続けた場合を表しています。
-          「売」はフランを売ってトルコリラを買う組み合わせで、円で調達するかわりに
-          スイスフランで調達してリラを買うとどうなるかを見る線です。「買」はその逆
-          （フランを買ってリラを売る）になります。
-          売と買は正反対の建玉ですが、線が上下対称にならないのは、それぞれ
-          スワップが最も有利な会社を選んでいるうえ、売買それぞれに会社の
-          スプレッドが乗るためです。
-          <strong>平均を1.0に揃える計算には入れておらず、平均で割ってもいません</strong>。
-          この2本は円の動きで損益が変わらない建玉なので、起点を1.0にしたそのままの
-          損益を出しています。通貨の線どうしではなく、1.0の水平線（＝円で持った場合）
-          と比べて読んでください。
+          {referenceNotes(p.references ?? []).join('')}
+          <strong>{REFERENCE_NOTE_COMMON.strong}</strong>
+          {REFERENCE_NOTE_COMMON.rest}
         </p>
       )}
       <p className="strength-generated">最終更新: {data.generated_at}</p>
