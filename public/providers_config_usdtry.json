@@ -1,0 +1,26 @@
+{
+  "_note": "USD/TRY (米ドル/トルコリラ) の取扱3社。取得は scrape_cross_pairs.py --currency usdtry が担当し、本ファイルは業者名・キャンペーンリンク等の HP 表示メタデータとして使う。USD/TRY は買がマイナス・売がプラス (リラを持つ側は売) で、値は全て1万通貨・1日あたり(円)に正規化済み。サクソバンク証券は週次PDFのため別タスク、トライオートFX・みんなのFX・LIGHT FX は USD/TRY 非対応 (2026-10-06 確認)。spec: docs/superpowers/specs/2026-10-06-usdtry-cross-pair-design.md",
+  "providers": [
+    {
+      "id": "gaitame",
+      "name": "外為どっとコム",
+      "url": "https://www.gaitame.com/service/fx/swap-cal.html",
+      "currency_pair_selector": "米ドル/トルコリラ（USD/TRY）",
+      "campaign_url": "https://www.gaitame.com/campaign/"
+    },
+    {
+      "id": "hirose",
+      "name": "ヒロセ通商",
+      "url": "https://hirose-fx.co.jp/contents/news/Swap",
+      "currency_pair_selector": "米ドル/トルコリラ（USD/TRY）",
+      "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/"
+    },
+    {
+      "id": "jfx",
+      "name": "JFX",
+      "url": "https://www.jfx.co.jp/trading_rule/swap/",
+      "currency_pair_selector": "米ドル/トルコリラ（USD/TRY）",
+      "campaign_url": "https://www.jfx.co.jp/campaign/index.html"
+    }
+  ]
+}
