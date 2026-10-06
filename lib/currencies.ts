@@ -17,7 +17,7 @@
  *     (guicatch/backfill_from_saved_raw.py)。新しい通貨を足すときも、
  *     「履歴が無い」と判断する前にまず保存済みの raw_data を見ること。
  *   ★USD/TRY は扱う業者が 3 社しか無いため、この条件の例外として 2026-10-06 に公開した
- *     (オーナー決定。tryrogger/docs/decisions/usdtry-published-below-provider-gate.md)。
+ *     (オーナー決定)。
  */
 
 export type CurrencyGroup = 'emerging' | 'developed' | 'cross';
