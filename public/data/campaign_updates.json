@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T04:00:50.538755",
+  "updated_at": "2026-10-07T04:00:45.712216",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -14,19 +14,19 @@
       "updated_at": "2026-09-16T04:00:05.434612"
     },
     "jfx": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T12:01:26.370978"
     },
     "invast": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T18:00:44.238540"
     },
     "traders_min": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T15:01:25.907215"
     },
     "traders_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T15:01:26.315272"
     },
     "sbi": {
@@ -39,7 +39,7 @@
     },
     "gaitame": {
       "has_new": true,
-      "updated_at": "2026-10-01T12:01:36.741624"
+      "updated_at": "2026-10-07T04:00:40.978654"
     },
     "click365_okasan": {
       "has_new": true,
@@ -54,15 +54,15 @@
       "updated_at": "2026-01-26T04:00:02.904188"
     },
     "traders_min_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T15:01:26.724335"
     },
     "traders_light_light": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T15:01:27.069794"
     },
     "hirose": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-01T12:01:37.906165"
     },
     "saxo": {
