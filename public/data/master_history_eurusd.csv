@@ -1221,9 +1221,18 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-07,traders_light,EUR/USD,LIGHT FX,4,-69.58,69.55,,success,
 2026-10-07,central_tanshi,EUR/USD,セントラル短資FX,4,-87.1,71.25,,success,
 2026-10-07,gmo_click,EUR/USD,GMOクリック証券,4,-65.0,65.0,,success,
-2026-10-07,invast,EUR/USD,トライオートFX,1,,,,pending,2026/10/06
+2026-10-07,invast,EUR/USD,トライオートFX,4,-100.0,40.0,,success,2026/10/07
 2026-10-07,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-10-07,hirose,EUR/USD,ヒロセ通商,1,-90.1,71.1,,success,2026/10/07
 2026-10-07,jfx,EUR/USD,JFX,1,-90.0,71.0,,success,2026/10/07
 2026-10-07,gaitame,EUR/USD,外為どっとコム,4,-83.75,60.0,,success,2026/10/07
 2026-10-07,gmo,EUR/USD,GMO外貨,4,-60.0,60.0,,success,2026/10/07
+2026-10-08,dmm,EUR/USD,DMM FX,4,-75.0,72.0,,success,
+2026-10-08,sbi,EUR/USD,SBI FXトレード,4,-72.0,67.0,,success,
+2026-10-08,gmo_click,EUR/USD,GMOクリック証券,1.0,,,,success,
+2026-10-08,invast,EUR/USD,トライオートFX,4,,,,pending,2026/10/07
+2026-10-08,m2j,EUR/USD,マネースクエア,4.0,-85.0,51.0,,success,
+2026-10-08,hirose,EUR/USD,ヒロセ通商,4,-90.1,71.15,,success,2026/10/08
+2026-10-08,jfx,EUR/USD,JFX,4,-90.0,71.0,,success,2026/10/08
+2026-10-08,gaitame,EUR/USD,外為どっとコム,1.0,,,,success,2026/10/08
+2026-10-08,gmo,EUR/USD,GMO外貨,1.0,,,,success,2026/10/08
