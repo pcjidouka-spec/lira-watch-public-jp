@@ -13,9 +13,9 @@ AGENTS.md に書いてあることはここで繰り返さない。Claude Code �
 テストランナーは **vitest**。対象は `lib/**/*.test.ts` だけ (`vitest.config.ts` の `include`)。
 
 ```bash
-npm test        # vitest run
+npm test        # tsc --noEmit -> vitest run
 npm run lint    # next lint (警告のみ。exit 0)
-npx tsc --noEmit  # ★型チェックは build に含まれないので別途走らせる
+npx tsc --noEmit  # ★型チェックだけ。build には含まれない (npm test には含まれる)
 ```
 
 - ベースラインは `.migration-test.txt` にある

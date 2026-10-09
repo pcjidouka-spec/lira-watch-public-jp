@@ -74,7 +74,7 @@ const USDTRY_NOTE =
 const CHFJPY_NOTE =
   '※ CHF/JPY はスイスの金利が日本より低いため、買い（フラン買い・円売り）は各社ともマイナス、売り（フラン売り・円買い）はプラスになります。数値は各社の公表値をそのまま表示しています。';
 
-export const CURRENCIES: readonly CurrencyDef[] = [
+const CURRENCY_LIST = [
   // --- 新興国通貨 ---
   { code: 'TRY/JPY', label: 'トルコリラ', group: 'emerging', published: true, color: '#3b82f6', slug: 'try' },
   { code: 'MXN/JPY', label: 'メキシコペソ', group: 'emerging', published: true, color: '#10b981', slug: 'mxn' },
@@ -92,7 +92,15 @@ export const CURRENCIES: readonly CurrencyDef[] = [
   { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444', slug: 'gbpusd' },
   { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488', slug: 'chftry' },
   { code: 'USD/TRY', label: '米ドル/トルコリラ', group: 'cross', published: true, note: USDTRY_NOTE, color: '#c2410c', slug: 'usdtry' },
-];
+] as const satisfies readonly CurrencyDef[];
+
+export const CURRENCIES: readonly CurrencyDef[] = CURRENCY_LIST;
+
+/**
+ * 通貨コードの型。CURRENCY_LIST から導くので、通貨を足しても消しても自動で追随する。
+ * ★index.tsx の dataMap はこの型をキーにするので、登録が漏れると型検査 (npm test) が赤になる。
+ */
+export type CurrencyCode = (typeof CURRENCY_LIST)[number]['code'];
 
 const BY_CODE = new Map(CURRENCIES.map((c) => [c.code, c]));
 

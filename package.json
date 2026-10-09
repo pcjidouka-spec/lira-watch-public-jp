@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "ping:blogmura": "node scripts/ping_blogmura.js",
-    "test": "vitest run"
+    "test": "tsc --noEmit -p . && vitest run"
   },
   "dependencies": {
     "next": "^14.0.0",

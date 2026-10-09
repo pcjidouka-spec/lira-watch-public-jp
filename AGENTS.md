@@ -86,7 +86,9 @@ npm run build   # generate-rss -> generate-sitemap -> generate-x-posts
 ★**`next.config.js` で TypeScript と ESLint のビルド時チェックを無効化している**
 (`typescript.ignoreBuildErrors` / `eslint.ignoreDuringBuilds` がどちらも `true`)。
 ★**`npm run build` が通っても型エラーは検出されていない。**型を確かめるなら
-`npx tsc --noEmit` を別に走らせる。
+`npm test` を走らせる (先頭で `tsc --noEmit` を実行する。型が通らないと vitest まで進まない)。
+★日次のデプロイは build だけを走らせるので、型エラーがあってもデータの公開は止まらない (意図した形)。
+★`pages/index.tsx` の `dataMap` は通貨コードの型 (`lib/currencies.ts` の `CurrencyCode`) をキーにしているので、通貨の登録が漏れると `npm test` が赤になる。
 
 ## AI エージェントが変更してはいけないもの
 

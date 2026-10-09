@@ -16,6 +16,7 @@ import {
   noteOf,
   groupOf,
   type CurrencyGroup,
+  type CurrencyCode,
 } from '@/lib/currencies';
 import { RankingTable } from '@/components/RankingTable';
 import { HistoricalChart } from '@/components/HistoricalChart';
@@ -49,8 +50,8 @@ export default function Home() {
   //   「フックの追加」まで要求すると 1 行の切り替えにならない。
   const eurData = useSwapData('EUR/JPY');
   const chfData = useSwapData('CHF/JPY');
-  // 通貨コードは lib/currencies.ts が正本。ここで union を持たない。
-  type CurrencyTab = string;
+  // 通貨コードは lib/currencies.ts が正本。ここで union を持たない (CurrencyCode を導いて使う)。
+  type CurrencyTab = CurrencyCode;
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
 
   // 裁定ランキングへの導線は控えめに扱う。いいねを押したことがある人にだけ見せる。
@@ -115,7 +116,7 @@ export default function Home() {
     return publishedCurrencies(activeGroup).map((c) => (
       <button
         key={c.code}
-        onClick={() => setCurrencyTab(c.code)}
+        onClick={() => setCurrencyTab(c.code as CurrencyTab)}
         style={{
           ...box, border: '1px solid #d1d5db',
           background: currencyTab === c.code ? c.color : '#f3f4f6',
@@ -502,7 +503,7 @@ export default function Home() {
               return (
                 <button
                   key={g}
-                  onClick={() => setCurrencyTab(members[0].code)}
+                  onClick={() => setCurrencyTab(members[0].code as CurrencyTab)}
                   title={GROUP_LABELS[g]}
                   style={{
                     padding: '8px 16px', fontSize: '14px', borderRadius: '8px', border: '1px solid #d1d5db',
