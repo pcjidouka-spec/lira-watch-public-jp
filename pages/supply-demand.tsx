@@ -17,7 +17,7 @@ export default function SupplyDemandPage({ data }: Props) {
         <title>通貨の需給変化ダッシュボード | トルコリラ・ウォッチ</title>
         <meta
           name="description"
-          content="米ドル・日本円・ユーロ・スイスフラン・豪ドル・南アフリカランド・メキシコペソの需給（投機筋のポジション）が、いつ急に変化したかを時系列で示すダッシュボードです。急変した区間を背景色で示し、現在進行中かどうかも表示します。出典は CFTC の Commitments of Traders（週次）。"
+          content="米ドル・日本円・ユーロ・英ポンド・スイスフラン・豪ドル・南アフリカランド・メキシコペソの需給（投機筋のポジション）が、いつ急に変化したかを時系列で示すダッシュボードです。急変した区間を背景色で示し、現在進行中かどうかも表示します。出典は CFTC の Commitments of Traders（週次）。"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
