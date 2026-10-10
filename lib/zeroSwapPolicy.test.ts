@@ -58,6 +58,11 @@ describe('isZeroRealValue (0 の扱いの唯一の定義)', () => {
     expect(isZeroRealValue('TRY/JPY', 'buy')).toBe(false);
     expect(isZeroRealValue('TRY/JPY', 'sell')).toBe(false);
   });
+
+  it('CNH/JPY の買 0 は実値 (traders の 2026-09-28〜29。オーナー判断 Q2)', () => {
+    expect(isZeroRealValue('CNH/JPY', 'buy')).toBe(true);
+    expect(isZeroRealValue('CNH/JPY', 'sell')).toBe(false);
+  });
 });
 
 describe('CHF/JPY: 売 0.0 の業者が消えない', () => {

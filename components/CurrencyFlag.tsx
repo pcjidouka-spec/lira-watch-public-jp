@@ -89,6 +89,17 @@ const FLAGS: Record<string, React.ReactNode> = {
       <rect x="7.4" y="6.5" width="9.2" height="3" fill="#fff" />
     </>
   ),
+  // 中国 (五星紅旗)。24x16 では小さい星 4 つは点で近似する。
+  CNH: (
+    <>
+      <rect width="24" height="16" fill="#de2910" />
+      <polygon points="4.8,1.6 5.5,3.7 7.7,3.7 5.9,5 6.6,7.1 4.8,5.8 3,7.1 3.7,5 1.9,3.7 4.1,3.7" fill="#ffde00" />
+      <circle cx="9.6" cy="1.6" r="0.6" fill="#ffde00" />
+      <circle cx="11.2" cy="3.2" r="0.6" fill="#ffde00" />
+      <circle cx="11.2" cy="5.6" r="0.6" fill="#ffde00" />
+      <circle cx="9.6" cy="7.2" r="0.6" fill="#ffde00" />
+    </>
+  ),
   // イギリス (ユニオンジャック)。24x16 では聖パトリック十字の斜めずらしは
   // 潰れるので、白の斜め十字に細い赤を重ねた簡略形にする。
   GBP: (

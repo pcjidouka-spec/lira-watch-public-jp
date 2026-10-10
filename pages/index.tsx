@@ -50,6 +50,7 @@ export default function Home() {
   //   「フックの追加」まで要求すると 1 行の切り替えにならない。
   const eurData = useSwapData('EUR/JPY');
   const chfData = useSwapData('CHF/JPY');
+  const cnhData = useSwapData('CNH/JPY');
   // 通貨コードは lib/currencies.ts が正本。ここで union を持たない (CurrencyCode を導いて使う)。
   type CurrencyTab = CurrencyCode;
   const [currencyTab, setCurrencyTab] = useState<CurrencyTab>('TRY/JPY');
@@ -89,6 +90,7 @@ export default function Home() {
     'USD/TRY': usdtryData,
     'EUR/JPY': eurData,
     'CHF/JPY': chfData,
+    'CNH/JPY': cnhData,
   };
   const activeSwapData = dataMap[currencyTab];
   const {

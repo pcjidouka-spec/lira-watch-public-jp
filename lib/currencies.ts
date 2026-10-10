@@ -18,6 +18,8 @@
  *     「履歴が無い」と判断する前にまず保存済みの raw_data を見ること。
  *   ★USD/TRY は扱う業者が 3 社しか無いため、この条件の例外として 2026-10-06 に公開した
  *     (オーナー決定)。
+ *   ★CNH/JPY (人民元) は例外にせず、この条件を満たしてから公開する (オーナー決定)。
+ *     公開した日と、条件を満たした業者数はそのときにここへ書き足す。
  */
 
 export type CurrencyGroup = 'emerging' | 'developed' | 'cross';
@@ -81,6 +83,7 @@ const CURRENCY_LIST = [
   { code: 'HUF/JPY', label: 'ハンガリーフォリント', group: 'emerging', published: true, note: HUF_NOTE, color: '#ec4899', slug: 'huf' },
   { code: 'ZAR/JPY', label: '南アフリカランド', group: 'emerging', published: true, color: '#f59e0b', slug: 'zar' },
   { code: 'PLN/JPY', label: 'ポーランドズロチ', group: 'emerging', published: true, color: '#0ea5e9', slug: 'pln' },
+  { code: 'CNH/JPY', label: '人民元', group: 'emerging', published: true, color: '#a242f0', slug: 'cnh' },
   // --- 先進国通貨 ---
   // ★AUD/JPY は新興国通貨から先進国通貨へ移した (ユーザー承認済み)。
   { code: 'USD/JPY', label: '米ドル円', group: 'developed', published: true, color: '#f59e0b', slug: 'usd' },

@@ -56,7 +56,7 @@ describe('公開状態', () => {
     expect(def!.published).toBe(true);
   });
 
-  it('13 通貨すべてがタブに出る', () => {
+  it('14 通貨すべてがタブに出る', () => {
     expect(publishedCurrencies().length).toBe(CURRENCIES.length);
   });
 
@@ -184,5 +184,12 @@ describe('★public 配下のファイルパス', () => {
   it('未知のコードは従来どおり TRY に落ちる（挙動を変えない）', () => {
     expect(masterHistoryPath('XXX/YYY')).toBe('/data/master_history_try.csv');
     expect(providersConfigPath('XXX/YYY')).toBe('/providers_config.json');
+  });
+
+  it('CNH/JPY は公開され、master と config のパスが cnh になる', () => {
+    expect(currencyDef('CNH/JPY')?.published).toBe(true);
+    expect(masterHistoryPath('CNH/JPY')).toBe('/data/master_history_cnh.csv');
+    expect(providersConfigPath('CNH/JPY')).toBe('/providers_config_cnh.json');
+    expect(isCrossPairCode('CNH/JPY')).toBe(false);
   });
 });

@@ -186,6 +186,7 @@ export type SwapSide = 'buy' | 'sell';
  *
  *   - クロスペア (EUR/USD, GBP/USD, CHF/TRY) の買: 買スワップ 0 円が正常値
  *   - CHF/JPY の売: invast (トライオートFX) が売 0.0 を実際に提示している
+ *   - CNH/JPY の買: traders_min / traders_light が 0 を提示した (2026-09-28〜29)。オーナー判断 Q2
  *
  * ★既知の限界 (2026-09-11 時点で許容):
  *   実際の事実は**業者単位** (invast の方針) なのに、この表は**通貨ペア単位**で効く。
@@ -198,6 +199,7 @@ export type SwapSide = 'buy' | 'sell';
 const ZERO_IS_REAL_VALUE: Record<string, readonly SwapSide[]> = {
   ...Object.fromEntries(CROSS_PAIRS.map((pair) => [pair, ['buy'] as SwapSide[]])),
   'CHF/JPY': ['sell'],
+  'CNH/JPY': ['buy'],
 };
 
 /**

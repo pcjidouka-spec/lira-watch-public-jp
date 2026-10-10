@@ -17,6 +17,7 @@ export const CURRENCY_LABELS: Record<string, string> = {
   AUD: '豪ドル',
   EUR: 'ユーロ',
   CHF: 'スイスフラン',
+  CNH: '人民元',
   GBP: '英ポンド',
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
@@ -56,6 +57,19 @@ export function referenceNotes(refs: readonly string[]): string[] {
   if (refs.includes('CHFTRY_S') || refs.includes('CHFTRY_B')) notes.push(CHFTRY_REFERENCE_NOTE);
   if (refs.includes('USDTRY_S')) notes.push(USDTRY_REFERENCE_NOTE);
   return notes;
+}
+
+/**
+ * 価格を別の系列で代用している通貨の注記 (referenceNotes と同じく、表示中の系列だけを返す)。
+ * ★CNH は GMO コインに CNH_JPY が無いため、欧州中央銀行の CNY/JPY 参照レートで代用している
+ *   (上流 guicatch/build_strength_data.py の CURRENCIES。仕様 2026-10-09-cnh-jpy-design §4)。
+ */
+const PRICE_PROXY_NOTES: Record<string, string> = {
+  CNH: '人民元（CNH）の値動きは、本土の人民元（CNY）の欧州中央銀行の参照レートで代用しています。',
+};
+
+export function priceProxyNotes(codes: readonly string[]): string[] {
+  return codes.filter((c) => c in PRICE_PROXY_NOTES).map((c) => PRICE_PROXY_NOTES[c]);
 }
 
 type StrengthCurrencySource = {

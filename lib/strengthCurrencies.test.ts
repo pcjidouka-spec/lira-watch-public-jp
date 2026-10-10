@@ -4,6 +4,8 @@ import {
   strengthCurrencyNames,
   referenceNotes,
   REFERENCE_NOTE_COMMON,
+  priceProxyNotes,
+  CURRENCY_LABELS,
 } from './strengthCurrencies';
 
 // 期間ごとに描かれる通貨が違う形をそのまま作る (2026-09-29 の実データは 1w=11 / 3m=6 / 1y=2)。
@@ -85,5 +87,15 @@ describe('referenceNotes (参照系列の説明)', () => {
     const all = REFERENCE_NOTE_COMMON.strong + REFERENCE_NOTE_COMMON.rest;
     expect(all).not.toContain('この2本');
     expect(all).toContain('平均で割ってもいません');
+  });
+});
+
+describe('priceProxyNotes', () => {
+  it('CNH が載っているときだけ CNY で代用している注記を出す', () => {
+    expect(priceProxyNotes(['USD', 'CNH']).join('')).toContain('CNY');
+    expect(priceProxyNotes(['USD', 'TRY'])).toEqual([]);
+  });
+  it('CNH は日本語名で凡例に出る', () => {
+    expect(CURRENCY_LABELS.CNH).toBe('人民元');
   });
 });
