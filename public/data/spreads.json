@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04",
+  "generated_at": "2026-10-11",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -83,7 +83,7 @@
         "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
       },
       "dmm": {
-        "spread": 1.0,
+        "spread": 0.6,
         "unit": "pips",
         "mode": "fixed",
         "condition": "9-5時",
@@ -372,7 +372,7 @@
         "mode": "variable"
       },
       "dmm": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-5時",

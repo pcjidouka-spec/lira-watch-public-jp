@@ -1238,7 +1238,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-08,gmo_click,EUR/USD,GMOクリック証券,4.0,,,,success,
 2026-10-09,traders_light,EUR/USD,LIGHT FX,1,-68.1,68.0,,success,
 2026-10-09,gmo_click,EUR/USD,GMOクリック証券,1,-68.0,68.0,,success,
-2026-10-09,invast,EUR/USD,トライオートFX,4,,,,pending,2026/10/07
+2026-10-09,invast,EUR/USD,トライオートFX,1,-100.0,40.0,,success,
 2026-10-09,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-10-09,hirose,EUR/USD,ヒロセ通商,1,-90.2,71.2,,success,2026/10/09
 2026-10-09,jfx,EUR/USD,JFX,1.0,,,,success,2026/10/09
