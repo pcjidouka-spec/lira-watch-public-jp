@@ -135,7 +135,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-09-30,gaitame,USD/TRY,外為どっとコム,1,-1011.0,818.0,,success,
 2026-09-30,hirose,USD/TRY,ヒロセ通商,1,-1154.9,962.4,,success,2026/09/30
 2026-10-01,gaitame,USD/TRY,外為どっとコム,3,-1012.0,819.0,,success,
-2026-10-01,hirose,USD/TRY,ヒロセ通商,1,,,,pending,2026/09/30
+2026-10-01,hirose,USD/TRY,ヒロセ通商,1,,,,error,2026/09/30
 2026-10-02,gaitame,USD/TRY,外為どっとコム,1,-1028.0,835.0,,success,
 2026-10-02,hirose,USD/TRY,ヒロセ通商,1,-1253.1,1060.3,,success,2026/10/02
 2026-10-05,gaitame,USD/TRY,外為どっとコム,1,-1044.0,851.0,,success,

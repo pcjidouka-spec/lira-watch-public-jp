@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-11 23:16:44",
+  "generated_at": "2026-10-12 07:27:47",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.25,
   "jpy_rate_as_of": "2026-10-06",
   "rate_source": "bis",
-  "fx_as_of": "2026-10-11",
+  "fx_as_of": "2026-10-12",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "currency": "PLN",
-      "reason": "PLN: 還元率が前日 242.8% から 108.3% へ 55% 動きました"
+      "reason": "PLN: 還元率 108.3% が直近 5 回の公開値の中央値 242.8% から 55% 離れています"
     }
   ],
   "ranking": [
@@ -53,7 +53,7 @@
         "min_pct": 180.2,
         "max_pct": 231.8,
         "avg_pct": 223.2,
-        "median_pct": 229.2
+        "median_pct": 229.4
       },
       "rank": 1
     },
@@ -90,8 +90,8 @@
         "days": 20,
         "min_pct": 111.3,
         "max_pct": 123.8,
-        "avg_pct": 117.5,
-        "median_pct": 116.7
+        "avg_pct": 118.0,
+        "median_pct": 118.3
       },
       "rank": 2
     },
@@ -128,7 +128,7 @@
         "days": 20,
         "min_pct": 97.7,
         "max_pct": 123.1,
-        "avg_pct": 111.3,
+        "avg_pct": 110.9,
         "median_pct": 115.2
       },
       "rank": 3
@@ -166,8 +166,8 @@
         "days": 20,
         "min_pct": 100.7,
         "max_pct": 114.6,
-        "avg_pct": 106.9,
-        "median_pct": 104.4
+        "avg_pct": 107.5,
+        "median_pct": 107.5
       },
       "rank": 4
     },
@@ -204,8 +204,8 @@
         "days": 20,
         "min_pct": 96.3,
         "max_pct": 110.0,
-        "avg_pct": 105.0,
-        "median_pct": 106.3
+        "avg_pct": 105.2,
+        "median_pct": 107.3
       },
       "rank": 5
     },
@@ -238,7 +238,13 @@
         "reason": "スプレッド未取得",
         "condition": null
       },
-      "history": null,
+      "history": {
+        "days": 1,
+        "min_pct": 97.0,
+        "max_pct": 97.0,
+        "avg_pct": 97.0,
+        "median_pct": 97.0
+      },
       "rank": 6
     },
     {
@@ -274,7 +280,7 @@
         "days": 20,
         "min_pct": 88.7,
         "max_pct": 93.2,
-        "avg_pct": 91.9,
+        "avg_pct": 92.0,
         "median_pct": 92.0
       },
       "rank": 7
@@ -313,7 +319,7 @@
         "min_pct": 78.4,
         "max_pct": 79.6,
         "avg_pct": 79.2,
-        "median_pct": 79.2
+        "median_pct": 79.3
       },
       "rank": 8
     }
