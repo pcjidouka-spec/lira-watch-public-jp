@@ -193,7 +193,9 @@ export type SwapSide = 'buy' | 'sell';
  *   したがって CHF/JPY の別の業者が取得失敗で 0 を出した場合、それも実値として
  *   表示してしまう。今これを許容できるのは、片側だけ 0 の取得失敗が master まで
  *   到達する経路が現状ないため (上流の parse_raw_data_core.py:759 が 0/0 行を
- *   error に落とす)。★4 社目が正当に 0 を提示するようになったら、その時点で
+ *   error に落とす)。CNH/JPY の買も同じ前提に立つ: 上流の Stage5 は買 0 を traders 2 社にだけ
+ *   通し、ほかの業者の買 0 は error に落とす (仕様 改訂 4・REQ-CNH-014、2026-10-12)。
+ *   ★4 社目が正当に 0 を提示するようになったら、その時点で
  *   「通貨ペア x 方向」ではなく「業者 x 通貨ペア x 方向」の表に格上げすること。
  */
 const ZERO_IS_REAL_VALUE: Record<string, readonly SwapSide[]> = {
