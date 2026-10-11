@@ -3,7 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ResponsiveContainer,
 } from 'recharts';
 import { CurrencyFlag } from '@/components/CurrencyFlag';
-import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes } from '@/lib/strengthCurrencies';
+import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes, priceProxyNotes } from '@/lib/strengthCurrencies';
 
 export type StrengthPeriod = {
   dates: string[];
@@ -53,6 +53,8 @@ const COLORS: Record<string, string> = {
   CHF: '#f472b6',
   // GBP (2026-09-29 追加)。色相 約 225。最近傍 (199 / 258) からどちらも 25 度以上離れる。
   GBP: '#4f7cff',
+  // CNH (2026-10-09 追加)。色相 273。最近傍 (HUF 255 / CHFTRY_S 292) から 18 度以上離れる。
+  CNH: '#a242f0',
   CHFTRY_S: '#e879f9',
   CHFTRY_B: '#38bdf8',
   // USD/TRY 売り (2026-10-06 追加)。色相 120。最近傍 (EUR 82 / 142) から 20 度以上離れる。
@@ -316,6 +318,9 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           USD/JPY 買いを組み合わせた値で計算しています。
         </p>
       )}
+      {priceProxyNotes(Object.keys(p.series)).map((n) => (
+        <p key={n} className="strength-note">{n}</p>
+      ))}
       {referenceNotes(p.references ?? []).length > 0 && (
         <p className="strength-note">
           {referenceNotes(p.references ?? []).join('')}

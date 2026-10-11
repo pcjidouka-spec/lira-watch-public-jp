@@ -42,6 +42,7 @@ interface CarryEntry {
   outlier: boolean;
   payback: Payback | null;
   history: HistStats | null;
+  policy_rate_note?: string | null;
 }
 
 interface CarryData {
@@ -245,6 +246,13 @@ export default function CarryPage({ data, built_on }: Props) {
                   出所 {data.rate_source}）、為替レートは {data.fx_as_of} 時点の
                   ものを使っています。
                 </p>
+                {data.ranking
+                  .filter((r) => r.policy_rate_note)
+                  .map((r) => (
+                    <p key={'rate-note-' + r.currency} className="unit-note">
+                      ※ {r.policy_rate_note}
+                    </p>
+                  ))}
 
                 {data.spread_manual_as_of && (
                   <p className="unit-note">
