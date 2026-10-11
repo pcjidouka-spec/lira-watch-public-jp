@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11 07:31:21",
+  "generated_at": "2026-10-11 23:16:17",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -33,8 +33,8 @@
         "actual_date": "2026-10-08"
       },
       "arb_per_day": 5.0,
-      "notional_2leg": 64160,
-      "capital": 6416.0,
+      "notional_2leg": 64166,
+      "capital": 6416.6,
       "annual_pct": 28.4,
       "meets_threshold": true,
       "history": {
@@ -133,8 +133,8 @@
         "actual_date": "2026-10-08"
       },
       "arb_per_day": 0.7,
-      "notional_2leg": 9706,
-      "capital": 970.6,
+      "notional_2leg": 9707,
+      "capital": 970.7,
       "annual_pct": 26.3,
       "meets_threshold": true,
       "history": {
@@ -228,8 +228,8 @@
         "actual_date": null
       },
       "arb_per_day": 126.8,
-      "notional_2leg": 3810250,
-      "capital": 381025.0,
+      "notional_2leg": 3809524,
+      "capital": 380952.4,
       "annual_pct": 12.1,
       "meets_threshold": false,
       "history": {
@@ -298,7 +298,7 @@
       },
       "spread": {
         "available": true,
-        "cost_jpy": 5774.4,
+        "cost_jpy": 5774.9,
         "days": 45.5,
         "missing": [],
         "has_manual": true,
@@ -323,8 +323,8 @@
         "actual_date": "2026-10-08"
       },
       "arb_per_day": 3.7,
-      "notional_2leg": 172588,
-      "capital": 17258.8,
+      "notional_2leg": 172798,
+      "capital": 17279.8,
       "annual_pct": 7.8,
       "meets_threshold": false,
       "history": {
@@ -419,8 +419,8 @@
         "actual_date": "2026-10-09"
       },
       "arb_per_day": 2.5,
-      "notional_2leg": 191443,
-      "capital": 19144.3,
+      "notional_2leg": 191448,
+      "capital": 19144.8,
       "annual_pct": 4.8,
       "meets_threshold": false,
       "history": {

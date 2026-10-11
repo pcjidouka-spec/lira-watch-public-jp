@@ -1,0 +1,92 @@
+target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_date,status,actual_date
+2026-09-08,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/08
+2026-09-08,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/08
+2026-09-08,gmo,CNH/JPY,GMO外貨,1.0,1.0,-1.0,None,success,2026/09/08
+2026-09-08,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/08
+2026-09-08,traders_light,CNH/JPY,LIGHT FX,1.0,1.0,-1.0,None,success,2026/09/08
+2026-09-08,traders_min,CNH/JPY,みんなのFX,1.0,1.0,-1.0,None,success,2026/09/08
+2026-09-09,central_tanshi,CNH/JPY,セントラル短資FX,3.0,11.0,-11.0,None,success,2026/09/09
+2026-09-09,gaitame,CNH/JPY,外為どっとコム,3,1.0,-11.0,None,success,2026/09/09
+2026-09-09,gmo,CNH/JPY,GMO外貨,3.0,1.0,-1.0,None,success,2026/09/09
+2026-09-09,hirose,CNH/JPY,ヒロセ通商,3,1.0,-9.0,None,success,2026/09/09
+2026-09-09,traders_light,CNH/JPY,LIGHT FX,3.0,1.0,-1.0,None,success,2026/09/09
+2026-09-09,traders_min,CNH/JPY,みんなのFX,3.0,1.0,-1.0,None,success,2026/09/09
+2026-09-10,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/10
+2026-09-10,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/10
+2026-09-10,gmo,CNH/JPY,GMO外貨,1.0,1.0,-1.0,None,success,2026/09/10
+2026-09-10,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/10
+2026-09-10,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/10
+2026-09-10,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/10
+2026-09-11,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/11
+2026-09-11,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/11
+2026-09-11,gmo,CNH/JPY,GMO外貨,1.0,1.0,-1.0,None,success,2026/09/11
+2026-09-11,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/11
+2026-09-11,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/11
+2026-09-11,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/11
+2026-09-14,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/14
+2026-09-14,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/14
+2026-09-14,gmo,CNH/JPY,GMO外貨,1.0,1.0,-1.0,None,success,2026/09/14
+2026-09-14,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/14
+2026-09-14,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/14
+2026-09-14,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/14
+2026-09-15,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/15
+2026-09-15,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/15
+2026-09-15,gmo,CNH/JPY,GMO外貨,1.0,1.0,-1.0,None,success,2026/09/15
+2026-09-15,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/15
+2026-09-15,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/15
+2026-09-15,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/15
+2026-09-16,central_tanshi,CNH/JPY,セントラル短資FX,6.0,11.0,-11.0,None,success,2026/09/16
+2026-09-16,gaitame,CNH/JPY,外為どっとコム,6,1.0,-11.0,None,success,2026/09/16
+2026-09-16,gmo,CNH/JPY,GMO外貨,6.0,1.0,-1.0,None,success,2026/09/16
+2026-09-16,hirose,CNH/JPY,ヒロセ通商,6,1.0,-9.0,None,success,2026/09/16
+2026-09-16,traders_light,CNH/JPY,LIGHT FX,6,1.0,-1.0,None,success,2026/09/16
+2026-09-16,traders_min,CNH/JPY,みんなのFX,6,1.0,-1.0,None,success,2026/09/16
+2026-09-17,central_tanshi,CNH/JPY,セントラル短資FX,4.0,11.0,-11.0,None,success,2026/09/17
+2026-09-17,gaitame,CNH/JPY,外為どっとコム,4,1.0,-11.0,None,success,2026/09/17
+2026-09-17,gmo,CNH/JPY,GMO外貨,4.0,1.0,-1.0,None,success,2026/09/17
+2026-09-17,hirose,CNH/JPY,ヒロセ通商,4,1.0,-9.0,None,success,2026/09/17
+2026-09-17,traders_light,CNH/JPY,LIGHT FX,4,1.0,-1.0,None,success,2026/09/17
+2026-09-17,traders_min,CNH/JPY,みんなのFX,4,1.0,-1.0,None,success,2026/09/17
+2026-09-23,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/23
+2026-09-23,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/23
+2026-09-23,gmo,CNH/JPY,GMO外貨,1.0,2.0,-2.0,None,success,2026/09/23
+2026-09-23,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/23
+2026-09-23,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/23
+2026-09-23,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/23
+2026-09-25,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/25
+2026-09-25,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/25
+2026-09-25,gmo,CNH/JPY,GMO外貨,1.0,3.0,-3.0,None,success,2026/09/25
+2026-09-25,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/25
+2026-09-25,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/09/25
+2026-09-25,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/09/25
+2026-09-28,central_tanshi,CNH/JPY,セントラル短資FX,8.0,11.0,-11.0,None,success,2026/09/28
+2026-09-28,gaitame,CNH/JPY,外為どっとコム,8.0,1.0,-11.0,None,success,2026/09/28
+2026-09-28,gmo,CNH/JPY,GMO外貨,8.0,5.0,-5.0,None,success,2026/09/28
+2026-09-28,hirose,CNH/JPY,ヒロセ通商,8.0,1.0,-9.0,None,success,2026/09/28
+2026-09-28,traders_light,CNH/JPY,LIGHT FX,8.0,0.0,-5.0,None,success,2026/09/28
+2026-09-28,traders_min,CNH/JPY,みんなのFX,8.0,0.0,-5.0,None,success,2026/09/28
+2026-09-29,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/09/29
+2026-09-29,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/09/29
+2026-09-29,gmo,CNH/JPY,GMO外貨,1.0,4.0,-4.0,None,success,2026/09/29
+2026-09-29,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/09/29
+2026-09-29,traders_light,CNH/JPY,LIGHT FX,1,0.0,-5.0,None,success,2026/09/29
+2026-09-29,traders_min,CNH/JPY,みんなのFX,1,0.0,-5.0,None,success,2026/09/29
+2026-10-07,central_tanshi,CNH/JPY,セントラル短資FX,4.0,11.0,-11.0,None,success,2026/10/07
+2026-10-07,gaitame,CNH/JPY,外為どっとコム,4,1.0,-11.0,None,success,2026/10/07
+2026-10-07,gmo,CNH/JPY,GMO外貨,4.0,5.0,-5.0,None,success,2026/10/07
+2026-10-07,hirose,CNH/JPY,ヒロセ通商,4,1.0,-9.0,None,success,2026/10/07
+2026-10-07,traders_light,CNH/JPY,LIGHT FX,4,1.0,-1.0,None,success,2026/10/07
+2026-10-07,traders_min,CNH/JPY,みんなのFX,4,1.0,-1.0,None,success,2026/10/07
+2026-10-08,central_tanshi,CNH/JPY,セントラル短資FX,1.0,11.0,-11.0,None,success,2026/10/08
+2026-10-08,gaitame,CNH/JPY,外為どっとコム,1,1.0,-11.0,None,success,2026/10/08
+2026-10-08,gmo,CNH/JPY,GMO外貨,1.0,5.0,-5.0,None,success,2026/10/08
+2026-10-08,hirose,CNH/JPY,ヒロセ通商,1,1.0,-9.0,None,success,2026/10/08
+2026-10-08,traders_light,CNH/JPY,LIGHT FX,1,1.0,-1.0,None,success,2026/10/08
+2026-10-08,traders_min,CNH/JPY,みんなのFX,1,1.0,-1.0,None,success,2026/10/08
+2026-10-09,central_tanshi,CNH/JPY,セントラル短資FX,1.0,None,None,None,success,2026/10/09
+2026-10-09,gaitame,CNH/JPY,外為どっとコム,1.0,None,None,None,success,2026/10/09
+2026-10-09,gmo,CNH/JPY,GMO外貨,1.0,None,None,None,success,2026/10/09
+2026-10-09,hirose,CNH/JPY,ヒロセ通商,1.0,None,None,None,success,2026/10/09
+2026-10-09,jfx,CNH/JPY,JFX,1.0,10.0,-10.0,None,success,2026/10/09
+2026-10-09,traders_light,CNH/JPY,LIGHT FX,1.0,None,None,None,success,2026/10/09
+2026-10-09,traders_min,CNH/JPY,みんなのFX,1.0,None,None,None,success,2026/10/09
