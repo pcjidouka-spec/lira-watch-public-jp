@@ -1,15 +1,9 @@
 {
   "currency_pair": "TRY/JPY",
-  "target_date": "2026-10-09",
+  "target_date": "2026-10-12",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-12T09:21:12.856Z",
+  "generated_at": "2026-10-12T23:00:52.712Z",
   "buy_ranking": [
-    {
-      "provider_id": "m2j",
-      "name": "マネースクエア",
-      "avg": 25,
-      "sample_days": 15
-    },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
@@ -17,9 +11,15 @@
       "sample_days": 14
     },
     {
+      "provider_id": "m2j",
+      "name": "マネースクエア",
+      "avg": 25,
+      "sample_days": 14
+    },
+    {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 24.55714285714286,
+      "avg": 24.514285714285716,
       "sample_days": 14
     },
     {
@@ -31,19 +31,19 @@
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 24.44615384615384,
-      "sample_days": 13
+      "avg": 24.44545454545455,
+      "sample_days": 11
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": 24.414285714285718,
+      "avg": 24.428571428571434,
       "sample_days": 14
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": 24.199999999999996,
+      "avg": 24.199999999999992,
       "sample_days": 14
     },
     {
@@ -65,28 +65,28 @@
       "sample_days": 15
     },
     {
+      "provider_id": "jfx",
+      "name": "JFX",
+      "avg": 24,
+      "sample_days": 14
+    },
+    {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
       "avg": 24,
-      "sample_days": 19
-    },
-    {
-      "provider_id": "jfx",
-      "name": "JFX",
-      "avg": 23.933333333333334,
-      "sample_days": 15
+      "sample_days": 18
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": 23.428571428571427,
+      "avg": 23.357142857142858,
       "sample_days": 14
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": 23.2,
-      "sample_days": 15
+      "avg": 23.142857142857142,
+      "sample_days": 14
     },
     {
       "provider_id": "sbi",
@@ -97,7 +97,7 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 22.416666666666668,
+      "avg": 22.083333333333332,
       "sample_days": 12
     }
   ],
@@ -105,7 +105,7 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -22.416666666666668,
+      "avg": -22.083333333333332,
       "sample_days": 12
     },
     {
@@ -129,13 +129,13 @@
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": -24.199999999999996,
+      "avg": -24.199999999999992,
       "sample_days": 14
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -24.414285714285718,
+      "avg": -24.428571428571434,
       "sample_days": 14
     },
     {
@@ -147,7 +147,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -24.55714285714286,
+      "avg": -24.514285714285716,
       "sample_days": 14
     },
     {
@@ -159,20 +159,20 @@
     {
       "provider_id": "dmm",
       "name": "DMM FX",
-      "avg": -26.2,
-      "sample_days": 15
+      "avg": -26.142857142857142,
+      "sample_days": 14
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
       "avg": -29,
-      "sample_days": 19
+      "sample_days": 18
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": -30.933333333333334,
-      "sample_days": 15
+      "avg": -31,
+      "sample_days": 14
     },
     {
       "provider_id": "sbi",
@@ -183,20 +183,20 @@
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
-      "avg": -33.42857142857143,
+      "avg": -33.357142857142854,
       "sample_days": 14
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -37.446153846153834,
-      "sample_days": 13
+      "avg": -37.44545454545454,
+      "sample_days": 11
     },
     {
       "provider_id": "m2j",
       "name": "マネースクエア",
       "avg": -40,
-      "sample_days": 15
+      "sample_days": 14
     }
   ]
 }

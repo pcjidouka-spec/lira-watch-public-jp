@@ -431,7 +431,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-01,dmm,AUD/JPY,DMM FX,4.0,92.0,-95.0,None,success,2026/10/01
 2026-10-01,gaitame,AUD/JPY,外為どっとコム,1.0,92.0,-107.0,None,success,2026/10/01
 2026-10-01,gmo_click,AUD/JPY,GMOクリック証券,1.0,98.0,-98.0,None,success,2026/10/01
-2026-10-01,hirose,AUD/JPY,ヒロセ通商,4.0,None,None,None,pending,2026/09/30
+2026-10-01,hirose,AUD/JPY,ヒロセ通商,4.0,None,None,None,error,2026/09/30
 2026-10-01,invast,AUD/JPY,トライオートFX,1.0,None,None,None,error,None
 2026-10-01,sbi,AUD/JPY,SBI FXトレード,4.0,92.0,-102.0,10月06日,success,2026/10/01
 2026-10-01,traders_light,AUD/JPY,LIGHT FX,1.0,96.0,-96.0,None,success,2026/10/01
@@ -498,9 +498,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-09,gaitame,AUD/JPY,外為どっとコム,1.0,None,None,None,success,2026/10/09
 2026-10-09,gmo_click,AUD/JPY,GMOクリック証券,1.0,None,None,None,success,2026/10/09
 2026-10-09,hirose,AUD/JPY,ヒロセ通商,1.0,None,None,None,success,2026/10/09
-2026-10-09,invast,AUD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/08
+2026-10-09,invast,AUD/JPY,トライオートFX,None,None,None,None,success,2026/10/09
 2026-10-09,sbi,AUD/JPY,SBI FXトレード,1.0,95.0,-105.0,10月14日,success,2026/10/09
 2026-10-09,traders_light,AUD/JPY,LIGHT FX,1.0,None,None,None,success,2026/10/09
 2026-10-09,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,None,None,None,success,2026/10/09
 2026-10-09,traders_min,AUD/JPY,みんなのFX,1.0,None,None,None,success,2026/10/09
 2026-10-09,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,None,None,None,success,2026/10/09
+2026-10-12,central_tanshi,AUD/JPY,セントラル短資FX,1.0,107.0,-132.0,10/13,success,2026/10/12
+2026-10-12,dmm,AUD/JPY,DMM FX,None,None,None,None,success,2026/10/12
+2026-10-12,gaitame,AUD/JPY,外為どっとコム,1.0,95.0,-110.0,None,success,2026/10/12
+2026-10-12,gmo_click,AUD/JPY,GMOクリック証券,1.0,100.0,-100.0,None,success,2026/10/12
+2026-10-12,hirose,AUD/JPY,ヒロセ通商,None,None,None,None,success,2026/10/12
+2026-10-12,invast,AUD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/09
+2026-10-12,sbi,AUD/JPY,SBI FXトレード,None,None,None,None,success,2026/10/12
+2026-10-12,traders_light,AUD/JPY,LIGHT FX,1.0,101.0,-101.0,None,success,2026/10/12
+2026-10-12,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,101.0,-101.0,None,success,2026/10/12
+2026-10-12,traders_min,AUD/JPY,みんなのFX,1.0,100.0,-100.0,None,success,2026/10/12
+2026-10-12,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,100.0,-100.0,None,success,2026/10/12
