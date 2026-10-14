@@ -1733,9 +1733,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-13,gaitame,USD/JPY,外為どっとコム,1.0,117.0,-142.0,None,success,2026/10/13
 2026-10-13,gmo,USD/JPY,GMO外貨,1.0,128.0,-128.0,None,success,2026/10/13
 2026-10-13,gmo_click,USD/JPY,GMOクリック証券,1.0,121.0,-121.0,None,success,2026/10/13
-2026-10-13,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,pending,2026/10/12
-2026-10-13,invast,USD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/12
-2026-10-13,jfx,USD/JPY,JFX,1.0,None,None,None,pending,2026/10/12
+2026-10-13,hirose,USD/JPY,ヒロセ通商,1,121.0,-151.0,None,success,2026/10/13
+2026-10-13,invast,USD/JPY,トライオートFX,1.0,125.0,-201.0,None,success,2026/10/13
+2026-10-13,jfx,USD/JPY,JFX,1.0,121.0,-151.0,None,success,2026/10/13
 2026-10-13,sbi,USD/JPY,SBI FXトレード,1.0,117.0,-125.0,10月15日,success,2026/10/13
 2026-10-13,traders_light,USD/JPY,LIGHT FX,1.0,121.0,-121.0,None,success,2026/10/13
 2026-10-13,traders_min,USD/JPY,みんなのFX,1.0,120.0,-120.0,None,success,2026/10/13
+2026-10-14,central_tanshi,USD/JPY,セントラル短資FX,1.0,122.0,-122.0,10/15,success,2026/10/14
+2026-10-14,dmm,USD/JPY,DMM FX,1.0,121.0,-124.0,None,success,2026/10/14
+2026-10-14,gaitame,USD/JPY,外為どっとコム,1.0,117.0,-142.0,None,success,2026/10/14
+2026-10-14,gmo,USD/JPY,GMO外貨,1.0,128.0,-128.0,None,success,2026/10/14
+2026-10-14,gmo_click,USD/JPY,GMOクリック証券,1.0,119.0,-119.0,None,success,2026/10/14
+2026-10-14,hirose,USD/JPY,ヒロセ通商,1.0,None,None,None,pending,2026/10/13
+2026-10-14,invast,USD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/13
+2026-10-14,jfx,USD/JPY,JFX,1.0,None,None,None,pending,2026/10/13
+2026-10-14,sbi,USD/JPY,SBI FXトレード,1.0,117.0,-125.0,10月16日,success,2026/10/14
+2026-10-14,traders_light,USD/JPY,LIGHT FX,1.0,121.0,-121.0,None,success,2026/10/14
+2026-10-14,traders_min,USD/JPY,みんなのFX,1.0,120.0,-120.0,None,success,2026/10/14
