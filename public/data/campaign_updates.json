@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T04:00:49.853922",
+  "updated_at": "2026-10-16T04:00:52.605706",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -42,7 +42,7 @@
       "updated_at": "2026-10-07T04:00:40.978654"
     },
     "click365_okasan": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-11T04:00:42.946774"
     },
     "moneysquare": {
