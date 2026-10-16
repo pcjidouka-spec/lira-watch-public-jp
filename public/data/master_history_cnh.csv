@@ -128,6 +128,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-15,gaitame,CNH/JPY,外為どっとコム,1.0,1.0,-11.0,None,success,2026/10/15
 2026-10-15,gmo,CNH/JPY,GMO外貨,1.0,5.0,-5.0,None,success,2026/10/15
 2026-10-15,hirose,CNH/JPY,ヒロセ通商,4.0,None,None,None,pending,2026/10/14
-2026-10-15,jfx,CNH/JPY,JFX,4.0,None,None,None,pending,2026/10/14
+2026-10-15,jfx,CNH/JPY,JFX,1.0,10.0,-10.0,None,success,2026/10/15
 2026-10-15,traders_light,CNH/JPY,LIGHT FX,1.0,1.0,-1.0,None,success,2026/10/15
 2026-10-15,traders_min,CNH/JPY,みんなのFX,1.0,1.0,-1.0,None,success,2026/10/15
+2026-10-16,central_tanshi,CNH/JPY,セントラル短資FX,None,None,None,None,success,2026/10/16
+2026-10-16,gaitame,CNH/JPY,外為どっとコム,None,None,None,None,success,2026/10/16
+2026-10-16,gmo,CNH/JPY,GMO外貨,None,None,None,None,success,2026/10/16
+2026-10-16,hirose,CNH/JPY,ヒロセ通商,None,None,None,None,success,2026/10/16
+2026-10-16,jfx,CNH/JPY,JFX,1.0,None,None,None,pending,2026/10/15
+2026-10-16,traders_light,CNH/JPY,LIGHT FX,None,None,None,None,success,2026/10/16
+2026-10-16,traders_min,CNH/JPY,みんなのFX,None,None,None,None,success,2026/10/16
