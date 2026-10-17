@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-10-16",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-16T23:08:38.639Z",
+  "generated_at": "2026-10-17T22:41:06.899Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -71,16 +71,16 @@
       "sample_days": 14
     },
     {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": 11.153846153846153,
+      "sample_days": 13
+    },
+    {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": 11.142857142857142,
       "sample_days": 14
-    },
-    {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": 11.133333333333333,
-      "sample_days": 15
     },
     {
       "provider_id": "gaitame",
@@ -127,16 +127,16 @@
       "sample_days": 14
     },
     {
-      "provider_id": "sbi",
-      "name": "SBI FXトレード",
-      "avg": -14.133333333333333,
-      "sample_days": 15
-    },
-    {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": -14.142857142857142,
       "sample_days": 14
+    },
+    {
+      "provider_id": "sbi",
+      "name": "SBI FXトレード",
+      "avg": -14.153846153846153,
+      "sample_days": 13
     },
     {
       "provider_id": "traders_min_light",
