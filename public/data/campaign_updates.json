@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-19T04:00:28.576264",
+  "updated_at": "2026-10-20T04:00:51.739363",
   "providers": {
     "gmo_click": {
-      "has_new": false,
-      "updated_at": "2026-09-28T12:00:33.723257"
+      "has_new": true,
+      "updated_at": "2026-10-20T04:00:02.997177"
     },
     "gmo": {
       "has_new": false,
@@ -14,8 +14,8 @@
       "updated_at": "2026-09-16T04:00:05.434612"
     },
     "jfx": {
-      "has_new": false,
-      "updated_at": "2026-10-01T12:01:26.370978"
+      "has_new": true,
+      "updated_at": "2026-10-20T04:00:04.506940"
     },
     "invast": {
       "has_new": false,
@@ -34,8 +34,8 @@
       "updated_at": "2026-10-10T04:00:35.744981"
     },
     "matsui": {
-      "has_new": false,
-      "updated_at": "2026-10-06T04:00:44.346577"
+      "has_new": true,
+      "updated_at": "2026-10-20T04:00:44.365341"
     },
     "gaitame": {
       "has_new": false,
@@ -66,7 +66,7 @@
       "updated_at": "2026-10-01T12:01:37.906165"
     },
     "saxo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-10-15T04:00:48.865590"
     },
     "m2j": {

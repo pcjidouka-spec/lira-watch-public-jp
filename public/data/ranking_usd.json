@@ -1,43 +1,43 @@
 {
   "currency_pair": "USD/JPY",
-  "target_date": "2026-10-16",
+  "target_date": "2026-10-19",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-18T22:37:28.789Z",
+  "generated_at": "2026-10-19T23:08:09.516Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 125.22222222222223,
+      "avg": 125.55555555555556,
       "sample_days": 9
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 124.66666666666667,
+      "avg": 125.33333333333333,
       "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 121.6,
+      "avg": 121.8,
       "sample_days": 10
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 121.55555555555556,
+      "avg": 121.44444444444444,
       "sample_days": 9
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": 121,
+      "avg": 120.88888888888889,
       "sample_days": 9
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 120.55555555555556,
+      "avg": 120.44444444444444,
       "sample_days": 9
     },
     {
@@ -49,7 +49,7 @@
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": 119.11111111111111,
+      "avg": 118.33333333333333,
       "sample_days": 9
     },
     {
@@ -75,25 +75,25 @@
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -120.55555555555556,
+      "avg": -120.44444444444444,
       "sample_days": 9
     },
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -121,
+      "avg": -120.88888888888889,
       "sample_days": 9
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -121.55555555555556,
+      "avg": -121.44444444444444,
       "sample_days": 9
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -121.6,
+      "avg": -121.8,
       "sample_days": 10
     },
     {
@@ -111,7 +111,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -125.22222222222223,
+      "avg": -125.55555555555556,
       "sample_days": 9
     },
     {
@@ -129,13 +129,13 @@
     {
       "provider_id": "jfx",
       "name": "JFX",
-      "avg": -149.11111111111111,
+      "avg": -148.33333333333334,
       "sample_days": 9
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -200.66666666666666,
+      "avg": -201.33333333333334,
       "sample_days": 9
     }
   ]
