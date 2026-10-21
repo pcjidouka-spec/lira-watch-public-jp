@@ -614,8 +614,17 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-20,gaitame,ZAR/JPY,外為どっとコム,1.0,13.0,-18.0,None,success,2026/10/20
 2026-10-20,gmo,ZAR/JPY,GMO外貨,1.0,14.5,-14.5,None,success,2026/10/20
 2026-10-20,gmo_click,ZAR/JPY,GMOクリック証券,1.0,14.5,-14.5,None,success,2026/10/20
-2026-10-20,invast,ZAR/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/19
+2026-10-20,invast,ZAR/JPY,トライオートFX,1.0,14.5,-29.5,None,success,2026/10/20
 2026-10-20,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,10月22日,success,2026/10/20
 2026-10-20,sony,ZAR/JPY,ソニーバンクFX,1.0,9.0,-14.0,None,success,2026/10/20
 2026-10-20,traders_light,ZAR/JPY,LIGHT FX,1.0,14.1,-14.1,None,success,2026/10/20
 2026-10-20,traders_min,ZAR/JPY,みんなのFX,1.0,14.1,-14.1,None,success,2026/10/20
+2026-10-21,central_tanshi,ZAR/JPY,セントラル短資FX,3.0,15.1,-15.1,10/22,success,2026/10/21
+2026-10-21,gaitame,ZAR/JPY,外為どっとコム,3.0,13.0,-18.0,None,success,2026/10/21
+2026-10-21,gmo,ZAR/JPY,GMO外貨,3.0,15.1,-15.1,None,success,2026/10/21
+2026-10-21,gmo_click,ZAR/JPY,GMOクリック証券,3.0,14.5,-14.5,None,success,2026/10/21
+2026-10-21,invast,ZAR/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/20
+2026-10-21,sbi,ZAR/JPY,SBI FXトレード,1.0,12.0,-12.0,10月23日,success,2026/10/21
+2026-10-21,sony,ZAR/JPY,ソニーバンクFX,3.0,9.0,-14.0,None,success,2026/10/21
+2026-10-21,traders_light,ZAR/JPY,LIGHT FX,3.0,None,None,None,error,None
+2026-10-21,traders_min,ZAR/JPY,みんなのFX,3.0,None,None,None,error,None

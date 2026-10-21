@@ -2717,12 +2717,28 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-20,gmo,TRY/JPY,GMO外貨,1.0,24.6,-24.6,None,success,2026/10/20
 2026-10-20,gmo_click,TRY/JPY,GMOクリック証券,1.0,26.0,-26.0,None,success,2026/10/20
 2026-10-20,hirose,TRY/JPY,ヒロセ通商,1.0,24.0,-29.0,None,success,2026/10/20
-2026-10-20,invast,TRY/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/19
+2026-10-20,invast,TRY/JPY,トライオートFX,1.0,24.6,-37.6,None,success,2026/10/20
 2026-10-20,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/10/20
 2026-10-20,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/10/20
-2026-10-20,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,pending,2026/10/19
+2026-10-20,matsui,TRY/JPY,MATSUI FX,1.0,24.0,-24.0,None,success,2026/10/20
 2026-10-20,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,10月22日,success,2026/10/20
 2026-10-20,traders_light,TRY/JPY,LIGHT FX,1.0,24.0,-24.0,None,success,2026/10/20
 2026-10-20,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,24.1,-24.1,None,success,2026/10/20
 2026-10-20,traders_min,TRY/JPY,みんなのFX,1.0,24.0,-24.0,None,success,2026/10/20
 2026-10-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.1,-25.1,None,success,2026/10/20
+2026-10-21,central_tanshi,TRY/JPY,セントラル短資FX,3.0,24.599999999999998,-24.599999999999998,10/22,success,2026/10/21
+2026-10-21,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,error,None
+2026-10-21,dmm,TRY/JPY,DMM FX,1.0,24.0,-27.0,None,success,2026/10/21
+2026-10-21,gaitame,TRY/JPY,外為どっとコム,3.0,24.0,-34.0,None,success,2026/10/21
+2026-10-21,gmo,TRY/JPY,GMO外貨,3.0,24.599999999999998,-24.599999999999998,None,success,2026/10/21
+2026-10-21,gmo_click,TRY/JPY,GMOクリック証券,3.0,26.0,-26.0,None,success,2026/10/21
+2026-10-21,hirose,TRY/JPY,ヒロセ通商,1.0,24.0,-29.0,None,success,2026/10/21
+2026-10-21,invast,TRY/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/20
+2026-10-21,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/10/21
+2026-10-21,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/10/21
+2026-10-21,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,pending,2026/10/20
+2026-10-21,sbi,TRY/JPY,SBI FXトレード,1.0,23.0,-31.0,10月23日,success,2026/10/21
+2026-10-21,traders_light,TRY/JPY,LIGHT FX,1.0,None,None,None,error,None
+2026-10-21,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,1.0,None,None,None,error,None
+2026-10-21,traders_min,TRY/JPY,みんなのFX,1.0,None,None,None,error,None
+2026-10-21,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,None,None,None,error,None
