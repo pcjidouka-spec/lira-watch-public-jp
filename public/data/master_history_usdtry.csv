@@ -177,3 +177,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-21,gaitame,USD/TRY,外為どっとコム,1,-1049.0,858.0,,success,
 2026-10-21,hirose,USD/TRY,ヒロセ通商,1,-1285.2,1093.8,,success,
 2026-10-21,jfx,USD/TRY,JFX,1,-1285.0,1093.0,,success,2026/10/21
+2026-10-22,gaitame,USD/TRY,外為どっとコム,3,-1039.0,850.0,,success,
+2026-10-22,hirose,USD/TRY,ヒロセ通商,1,-1290.7,1099.5,,success,
+2026-10-22,jfx,USD/TRY,JFX,1,-1290.0,1099.0,,success,2026/10/22
