@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24 20:09:41",
+  "generated_at": "2026-10-25 07:25:46",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.25,
   "jpy_rate_as_of": "2026-10-20",
   "rate_source": "bis",
-  "fx_as_of": "2026-10-24",
+  "fx_as_of": "2026-10-25",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [
     {
@@ -48,8 +48,8 @@
         "days": 20,
         "min_pct": 210.5,
         "max_pct": 231.8,
-        "avg_pct": 222.8,
-        "median_pct": 229.8
+        "avg_pct": 222.0,
+        "median_pct": 229.3
       },
       "rank": 1
     },
@@ -85,8 +85,8 @@
       "history": {
         "days": 20,
         "min_pct": 119.6,
-        "max_pct": 124.5,
-        "avg_pct": 122.4,
+        "max_pct": 125.9,
+        "avg_pct": 122.5,
         "median_pct": 123.1
       },
       "rank": 2
@@ -123,8 +123,8 @@
       "history": {
         "days": 20,
         "min_pct": 114.8,
-        "max_pct": 118.3,
-        "avg_pct": 115.5,
+        "max_pct": 118.0,
+        "avg_pct": 115.4,
         "median_pct": 115.3
       },
       "rank": 3
@@ -162,8 +162,8 @@
         "days": 20,
         "min_pct": 108.1,
         "max_pct": 243.7,
-        "avg_pct": 182.9,
-        "median_pct": 240.6
+        "avg_pct": 176.5,
+        "median_pct": 176.9
       },
       "rank": 4
     },
@@ -200,8 +200,8 @@
         "days": 20,
         "min_pct": 108.3,
         "max_pct": 112.6,
-        "avg_pct": 110.7,
-        "median_pct": 110.3
+        "avg_pct": 110.8,
+        "median_pct": 111.1
       },
       "rank": 5
     },
@@ -238,7 +238,7 @@
         "days": 20,
         "min_pct": 104.9,
         "max_pct": 114.6,
-        "avg_pct": 110.3,
+        "avg_pct": 110.0,
         "median_pct": 111.2
       },
       "rank": 6
@@ -275,8 +275,8 @@
       "history": {
         "days": 20,
         "min_pct": 91.9,
-        "max_pct": 95.7,
-        "avg_pct": 93.0,
+        "max_pct": 97.7,
+        "avg_pct": 93.2,
         "median_pct": 92.6
       },
       "rank": 7
@@ -311,9 +311,9 @@
         "condition": null
       },
       "history": {
-        "days": 13,
+        "days": 14,
         "min_pct": 96.8,
-        "max_pct": 97.1,
+        "max_pct": 97.6,
         "avg_pct": 97.0,
         "median_pct": 97.0
       },
@@ -351,9 +351,9 @@
       "history": {
         "days": 20,
         "min_pct": 79.4,
-        "max_pct": 83.9,
-        "avg_pct": 81.1,
-        "median_pct": 79.6
+        "max_pct": 84.2,
+        "avg_pct": 81.3,
+        "median_pct": 79.8
       },
       "rank": 9
     }
