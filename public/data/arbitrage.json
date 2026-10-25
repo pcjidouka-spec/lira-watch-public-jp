@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-25 07:25:15",
+  "generated_at": "2026-10-26 07:21:26",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-10-25",
+  "rate_as_of": "2026-10-26",
   "baseline": false,
   "excluded_providers": [
     "saxo"
@@ -28,8 +28,8 @@
         "actual_date": "2026-10-23"
       },
       "arb_per_day": 0.6,
-      "notional_2leg": 9593,
-      "capital": 959.3,
+      "notional_2leg": 9590,
+      "capital": 959.0,
       "annual_pct": 22.8,
       "meets_threshold": true,
       "history": {
@@ -123,8 +123,8 @@
         "actual_date": "2026-10-23"
       },
       "arb_per_day": 3.0,
-      "notional_2leg": 63072,
-      "capital": 6307.2,
+      "notional_2leg": 63066,
+      "capital": 6306.6,
       "annual_pct": 17.4,
       "meets_threshold": false,
       "history": {
@@ -315,8 +315,8 @@
         "actual_date": "2026-10-23"
       },
       "arb_per_day": 3.6,
-      "notional_2leg": 167833,
-      "capital": 16783.3,
+      "notional_2leg": 167932,
+      "capital": 16793.2,
       "annual_pct": 7.8,
       "meets_threshold": false,
       "history": {
@@ -411,8 +411,8 @@
         "actual_date": "2026-10-23"
       },
       "arb_per_day": 3.2,
-      "notional_2leg": 189285,
-      "capital": 18928.5,
+      "notional_2leg": 189204,
+      "capital": 18920.4,
       "annual_pct": 6.2,
       "meets_threshold": false,
       "history": {

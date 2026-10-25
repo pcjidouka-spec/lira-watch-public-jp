@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-25 07:25:46",
+  "generated_at": "2026-10-26 07:21:49",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.25,
   "jpy_rate_as_of": "2026-10-20",
   "rate_source": "bis",
-  "fx_as_of": "2026-10-25",
+  "fx_as_of": "2026-10-26",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [
     {
@@ -20,7 +20,7 @@
       "policy_rate": 5.5,
       "policy_rate_as_of": "2026-10-14",
       "policy_rate_note": null,
-      "fx_rate": 0.4796351703040599,
+      "fx_rate": 0.47949304159698036,
       "policy_implied_carry": 0.56,
       "best": {
         "provider_id": "invast",
@@ -48,8 +48,8 @@
         "days": 20,
         "min_pct": 210.5,
         "max_pct": 231.8,
-        "avg_pct": 222.0,
-        "median_pct": 229.3
+        "avg_pct": 221.2,
+        "median_pct": 221.9
       },
       "rank": 1
     },
@@ -58,8 +58,8 @@
       "policy_rate": 6.5,
       "policy_rate_as_of": "2026-10-20",
       "policy_rate_note": null,
-      "fx_rate": 8.391655337931962,
-      "policy_implied_carry": 12.07,
+      "fx_rate": 8.396587626788474,
+      "policy_implied_carry": 12.08,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -86,7 +86,7 @@
         "days": 20,
         "min_pct": 119.6,
         "max_pct": 125.9,
-        "avg_pct": 122.5,
+        "avg_pct": 122.6,
         "median_pct": 123.1
       },
       "rank": 2
@@ -96,8 +96,8 @@
       "policy_rate": 2.5,
       "policy_rate_as_of": "2026-10-20",
       "policy_rate_note": null,
-      "fx_rate": 175.68517217146874,
-      "policy_implied_carry": 60.17,
+      "fx_rate": 175.71604287471447,
+      "policy_implied_carry": 60.18,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -123,8 +123,8 @@
       "history": {
         "days": 20,
         "min_pct": 114.8,
-        "max_pct": 118.0,
-        "avg_pct": 115.4,
+        "max_pct": 116.3,
+        "avg_pct": 115.3,
         "median_pct": 115.3
       },
       "rank": 3
@@ -134,7 +134,7 @@
       "policy_rate": 3.75,
       "policy_rate_as_of": "2026-10-20",
       "policy_rate_note": null,
-      "fx_rate": 39.95046142782949,
+      "fx_rate": 39.94567388351842,
       "policy_implied_carry": 27.36,
       "best": {
         "provider_id": "traders_light",
@@ -162,8 +162,8 @@
         "days": 20,
         "min_pct": 108.1,
         "max_pct": 243.7,
-        "avg_pct": 176.5,
-        "median_pct": 176.9
+        "avg_pct": 170.1,
+        "median_pct": 113.3
       },
       "rank": 4
     },
@@ -200,8 +200,8 @@
         "days": 20,
         "min_pct": 108.3,
         "max_pct": 112.6,
-        "avg_pct": 110.8,
-        "median_pct": 111.1
+        "avg_pct": 110.9,
+        "median_pct": 111.6
       },
       "rank": 5
     },
@@ -210,8 +210,8 @@
       "policy_rate": 4.6,
       "policy_rate_as_of": "2026-10-15",
       "policy_rate_note": null,
-      "fx_rate": 110.24142872891633,
-      "policy_implied_carry": 101.18,
+      "fx_rate": 110.16855789357717,
+      "policy_implied_carry": 101.11,
       "best": {
         "provider_id": "central_tanshi",
         "name": "セントラル短資FX",
@@ -238,8 +238,8 @@
         "days": 20,
         "min_pct": 104.9,
         "max_pct": 114.6,
-        "avg_pct": 110.0,
-        "median_pct": 111.2
+        "avg_pct": 109.8,
+        "median_pct": 109.2
       },
       "rank": 6
     },
@@ -248,8 +248,8 @@
       "policy_rate": 7.25,
       "policy_rate_as_of": "2026-10-19",
       "policy_rate_note": null,
-      "fx_rate": 9.464229942930693,
-      "policy_implied_carry": 15.56,
+      "fx_rate": 9.460200934667853,
+      "policy_implied_carry": 15.55,
       "best": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
@@ -276,7 +276,7 @@
         "days": 20,
         "min_pct": 91.9,
         "max_pct": 97.7,
-        "avg_pct": 93.2,
+        "avg_pct": 93.5,
         "median_pct": 92.6
       },
       "rank": 7
@@ -286,7 +286,7 @@
       "policy_rate": 3.0,
       "policy_rate_as_of": "2026-10-19",
       "policy_rate_note": "中国の金利は貸出の基準金利（LPR 1年物）を使っています。CNH の短期金利とは違うため、政策金利ベースの目安は大きめに、還元率は低めに出ます。",
-      "fx_rate": 23.517238135553363,
+      "fx_rate": 23.517791209049644,
       "policy_implied_carry": 11.28,
       "best": {
         "provider_id": "central_tanshi",
@@ -311,10 +311,10 @@
         "condition": null
       },
       "history": {
-        "days": 14,
+        "days": 15,
         "min_pct": 96.8,
         "max_pct": 97.6,
-        "avg_pct": 97.0,
+        "avg_pct": 97.1,
         "median_pct": 97.0
       },
       "rank": 8
@@ -324,7 +324,7 @@
       "policy_rate": 37.0,
       "policy_rate_as_of": "2026-10-16",
       "policy_rate_note": null,
-      "fx_rate": 3.153609147989416,
+      "fx_rate": 3.1533207620945616,
       "policy_implied_carry": 30.89,
       "best": {
         "provider_id": "gmo_click",
@@ -352,8 +352,8 @@
         "days": 20,
         "min_pct": 79.4,
         "max_pct": 84.2,
-        "avg_pct": 81.3,
-        "median_pct": 79.8
+        "avg_pct": 81.5,
+        "median_pct": 81.5
       },
       "rank": 9
     }
