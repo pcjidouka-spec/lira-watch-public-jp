@@ -1,61 +1,61 @@
 {
   "currency_pair": "MXN/JPY",
-  "target_date": "2026-10-26",
+  "target_date": "2026-10-27",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-26T23:05:40.339Z",
+  "generated_at": "2026-10-27T23:08:22.883Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 15.19285714285714,
-      "sample_days": 14
-    },
-    {
-      "provider_id": "gmo_click",
-      "name": "GMOクリック証券",
-      "avg": 15.099999999999996,
+      "avg": 15.2,
       "sample_days": 14
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": 15.099999999999996,
+      "avg": 15.1,
       "sample_days": 12
+    },
+    {
+      "provider_id": "gmo_click",
+      "name": "GMOクリック証券",
+      "avg": 15.099999999999998,
+      "sample_days": 14
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 14.15,
+      "avg": 14.157142857142857,
       "sample_days": 14
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 14.107142857142856,
+      "avg": 14.114285714285712,
       "sample_days": 14
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": 14,
-      "sample_days": 16
+      "sample_days": 17
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": 12.866666666666667,
+      "avg": 12.700000000000001,
       "sample_days": 12
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": 12.099999999999996,
+      "avg": 12.1,
       "sample_days": 12
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": 12.099999999999996,
+      "avg": 12.1,
       "sample_days": 12
     },
     {
@@ -67,7 +67,7 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 11.875,
+      "avg": 11.883333333333333,
       "sample_days": 12
     },
     {
@@ -91,7 +91,7 @@
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": 10.5,
+      "avg": 10.428571428571429,
       "sample_days": 14
     }
   ],
@@ -99,25 +99,25 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -11.875,
+      "avg": -11.883333333333333,
       "sample_days": 12
     },
     {
       "provider_id": "traders_light",
       "name": "LIGHT FX",
-      "avg": -12.099999999999996,
+      "avg": -12.1,
       "sample_days": 12
     },
     {
       "provider_id": "traders_min",
       "name": "みんなのFX",
-      "avg": -12.099999999999996,
+      "avg": -12.1,
       "sample_days": 12
     },
     {
       "provider_id": "traders_light_light",
       "name": "LIGHT FX（LIGHT）",
-      "avg": -12.866666666666667,
+      "avg": -12.700000000000001,
       "sample_days": 12
     },
     {
@@ -129,7 +129,7 @@
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -14.15,
+      "avg": -14.157142857142857,
       "sample_days": 14
     },
     {
@@ -141,13 +141,13 @@
     {
       "provider_id": "gmo_click",
       "name": "GMOクリック証券",
-      "avg": -15.099999999999996,
+      "avg": -15.099999999999998,
       "sample_days": 14
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -15.099999999999996,
+      "avg": -15.1,
       "sample_days": 12
     },
     {
@@ -159,7 +159,7 @@
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -16.107142857142854,
+      "avg": -16.11428571428571,
       "sample_days": 14
     },
     {
@@ -172,18 +172,18 @@
       "provider_id": "jfx",
       "name": "JFX",
       "avg": -19,
-      "sample_days": 16
+      "sample_days": 17
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
-      "avg": -20.5,
+      "avg": -20.428571428571427,
       "sample_days": 14
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -30.292857142857148,
+      "avg": -30.300000000000004,
       "sample_days": 14
     }
   ]

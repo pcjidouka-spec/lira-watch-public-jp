@@ -1833,8 +1833,19 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-26,gmo,USD/JPY,GMO外貨,1.0,124.0,-124.0,None,success,2026/10/26
 2026-10-26,gmo_click,USD/JPY,GMOクリック証券,1.0,114.0,-114.0,None,success,2026/10/26
 2026-10-26,hirose,USD/JPY,ヒロセ通商,1.0,116.0,-146.0,None,success,2026/10/26
-2026-10-26,invast,USD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/23
+2026-10-26,invast,USD/JPY,トライオートFX,1.0,126.0,-202.0,None,success,2026/10/26
 2026-10-26,jfx,USD/JPY,JFX,1.0,116.0,-146.0,None,success,2026/10/26
 2026-10-26,sbi,USD/JPY,SBI FXトレード,None,None,None,None,success,2026/10/26
 2026-10-26,traders_light,USD/JPY,LIGHT FX,1.0,117.0,-117.0,None,success,2026/10/26
 2026-10-26,traders_min,USD/JPY,みんなのFX,1.0,116.0,-116.0,None,success,2026/10/26
+2026-10-27,central_tanshi,USD/JPY,セントラル短資FX,1.0,122.0,-122.0,10/28,success,2026/10/27
+2026-10-27,dmm,USD/JPY,DMM FX,1.0,116.0,-119.0,None,success,2026/10/27
+2026-10-27,gaitame,USD/JPY,外為どっとコム,1.0,115.0,-140.0,None,success,2026/10/27
+2026-10-27,gmo,USD/JPY,GMO外貨,1.0,123.0,-123.0,None,success,2026/10/27
+2026-10-27,gmo_click,USD/JPY,GMOクリック証券,1.0,115.0,-115.0,None,success,2026/10/27
+2026-10-27,hirose,USD/JPY,ヒロセ通商,1.0,116.0,-146.0,None,success,2026/10/27
+2026-10-27,invast,USD/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/26
+2026-10-27,jfx,USD/JPY,JFX,1.0,116.0,-146.0,None,success,2026/10/27
+2026-10-27,sbi,USD/JPY,SBI FXトレード,1.0,116.0,-124.0,10月29日,success,2026/10/27
+2026-10-27,traders_light,USD/JPY,LIGHT FX,1.0,117.0,-117.0,None,success,2026/10/27
+2026-10-27,traders_min,USD/JPY,みんなのFX,1.0,116.0,-116.0,None,success,2026/10/27
