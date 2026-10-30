@@ -2400,7 +2400,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-19,gmo_click,MXN/JPY,GMOクリック証券,1.0,15.1,-15.1,None,success,2026/10/19
 2026-10-19,hirose,MXN/JPY,ヒロセ通商,1.0,12.0,-17.0,None,success,2026/10/19
 2026-10-19,invast,MXN/JPY,トライオートFX,1.0,15.2,-30.3,None,success,2026/10/19
-2026-10-19,jfx,MXN/JPY,JFX,1.0,None,None,None,pending,2026/10/06
+2026-10-19,jfx,MXN/JPY,JFX,1.0,None,None,None,error,2026/10/06
 2026-10-19,matsui,MXN/JPY,MATSUI FX,1.0,11.0,-21.0,None,success,2026/10/19
 2026-10-19,sbi,MXN/JPY,SBI FXトレード,None,None,None,None,success,2026/10/19
 2026-10-19,traders_light,MXN/JPY,LIGHT FX,1.0,12.1,-12.1,None,success,2026/10/19
@@ -2512,3 +2512,18 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-29,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/10/29
 2026-10-29,traders_min,MXN/JPY,みんなのFX,None,None,None,None,success,2026/10/29
 2026-10-29,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/10/29
+2026-10-30,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.2,-16.2,11/2,success,2026/10/30
+2026-10-30,click365_okasan,MXN/JPY,クリック365,1.0,None,None,None,error,None
+2026-10-30,dmm,MXN/JPY,DMM FX,None,None,None,None,success,2026/10/30
+2026-10-30,gaitame,MXN/JPY,外為どっとコム,1.0,None,None,None,error,None
+2026-10-30,gmo,MXN/JPY,GMO外貨,1.0,14.2,-14.2,None,success,2026/10/30
+2026-10-30,gmo_click,MXN/JPY,GMOクリック証券,1.0,15.1,-15.1,None,success,2026/10/30
+2026-10-30,hirose,MXN/JPY,ヒロセ通商,None,None,None,None,success,2026/10/30
+2026-10-30,invast,MXN/JPY,トライオートFX,1.0,None,None,None,pending,2026/10/29
+2026-10-30,jfx,MXN/JPY,JFX,None,None,None,None,success,2026/10/30
+2026-10-30,matsui,MXN/JPY,MATSUI FX,5.0,None,None,None,pending,2026/10/28
+2026-10-30,sbi,MXN/JPY,SBI FXトレード,None,None,None,11月04日,success,2026/10/30
+2026-10-30,traders_light,MXN/JPY,LIGHT FX,1.0,11.1,-11.1,None,success,2026/10/30
+2026-10-30,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,11.2,-11.2,None,success,2026/10/30
+2026-10-30,traders_min,MXN/JPY,みんなのFX,1.0,11.1,-11.1,None,success,2026/10/30
+2026-10-30,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/10/30

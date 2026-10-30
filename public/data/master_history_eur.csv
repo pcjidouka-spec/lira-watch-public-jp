@@ -568,3 +568,14 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-29,sbi,EUR/JPY,SBI FXトレード,3.0,61.0,-71.0,11月02日,success,2026/10/29
 2026-10-29,traders_light,EUR/JPY,LIGHT FX,2.0,63.0,-63.0,None,success,2026/10/29
 2026-10-29,traders_min,EUR/JPY,みんなのFX,2.0,62.0,-62.0,None,success,2026/10/29
+2026-10-30,central_tanshi,EUR/JPY,セントラル短資FX,1.0,67.0,-72.0,11/2,success,2026/10/30
+2026-10-30,dmm,EUR/JPY,DMM FX,2.0,65.0,-68.0,None,success,2026/10/30
+2026-10-30,gaitame,EUR/JPY,外為どっとコム,2.0,None,None,None,pending,2026/10/29
+2026-10-30,gmo,EUR/JPY,GMO外貨,1.0,65.0,-65.0,None,success,2026/10/30
+2026-10-30,gmo_click,EUR/JPY,GMOクリック証券,1.0,65.0,-65.0,None,success,2026/10/30
+2026-10-30,hirose,EUR/JPY,ヒロセ通商,1.0,64.0,-84.0,None,success,2026/10/30
+2026-10-30,invast,EUR/JPY,トライオートFX,2.0,None,None,None,pending,2026/10/29
+2026-10-30,jfx,EUR/JPY,JFX,2.0,64.0,-84.0,None,success,2026/10/30
+2026-10-30,sbi,EUR/JPY,SBI FXトレード,2.0,None,None,None,error,None
+2026-10-30,traders_light,EUR/JPY,LIGHT FX,1.0,63.0,-63.0,None,success,2026/10/30
+2026-10-30,traders_min,EUR/JPY,みんなのFX,1.0,62.0,-62.0,None,success,2026/10/30
