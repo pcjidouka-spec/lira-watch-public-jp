@@ -135,6 +135,12 @@ const EDGE: Record<string, string> = {
 /** カードの背景色。マーカーのリングに使う (marks: 重なる印には 2px の surface リング)。 */
 const CARD_SURFACE = '#0f1a26';
 
+// ★カードの線の見た目。凡例の見本と <Line> / <ReferenceLine> の両方がここを使う。
+//   2 か所に書くと片方だけ直したときに凡例が黙って食い違う。
+const SD_STROKE = { stroke: '#e5e7eb', strokeWidth: 1.6 };
+const PRICE_STROKE = { stroke: '#7dd3fc', strokeWidth: 1.1, strokeDasharray: '4 3' };
+const ZERO_STROKE = { stroke: '#4b5563', strokeDasharray: '3 3' };
+
 /** 方向の判定はここ 1 箇所に集める。
  *  ★以前は配色が `dir >= 0`（0 を買い＝赤）、ツールチップが `dir > 0`（0 を売り）で
  *    食い違っていた。`direction_of` は傾きがちょうど 0 のとき 0 を返すので到達しうる。 */
@@ -525,30 +531,28 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                 </div>
                 {/* ★どの線がどちらの軸か (0006 §4「両方の軸に単位を書く」)。
                     左軸は目盛りが % だけで、単位が画面のどこにも無かった。
-                    見本の線は下の <Line> と同じ色・太さ・破線にする。 */}
+                    ★破線は価格と y=0 の 2 種類あるので、文字にも色の名前を入れる。 */}
                 <div className="sd-card-key">
                   <span className="sd-card-key-item">
                     <svg width="22" height="8" aria-hidden="true">
-                      <line x1="0" y1="4" x2="22" y2="4" stroke="#e5e7eb" strokeWidth={1.6} />
+                      <line x1="0" y1="4" x2="22" y2="4" {...SD_STROKE} />
                     </svg>
-                    実線＝需給（<strong>左軸</strong>・非商業ネット÷総建玉）
+                    白の実線（<strong>左軸</strong>）＝需給（非商業ネット÷総建玉）
                   </span>
                   {hasPrice && (
                     <span className="sd-card-key-item">
                       <svg width="22" height="8" aria-hidden="true">
-                        <line
-                          x1="0"
-                          y1="4"
-                          x2="22"
-                          y2="4"
-                          stroke="#7dd3fc"
-                          strokeWidth={1.1}
-                          strokeDasharray="4 3"
-                        />
+                        <line x1="0" y1="4" x2="22" y2="4" {...PRICE_STROKE} />
                       </svg>
-                      破線＝{priceLabel}（<strong>右軸</strong>）
+                      水色の破線（<strong>右軸</strong>）＝{priceLabel}
                     </span>
                   )}
+                  <span className="sd-card-key-item">
+                    <svg width="22" height="8" aria-hidden="true">
+                      <line x1="0" y1="4" x2="22" y2="4" {...ZERO_STROKE} />
+                    </svg>
+                    灰色の点線＝左軸の 0%（買い越しと売り越しの境目）
+                  </span>
                 </div>
                 <div className="sd-card-plot">
                   <ResponsiveContainer width="100%" height={narrow ? 170 : 200}>
@@ -567,7 +571,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                       <CartesianGrid stroke="#263043" vertical={false} />
                       {/* ★y=0 はグリッドではなく「買い越し / 売り越しの境目」という閾値。
                           破線なのはそのため (グリッドを破線にするのは別の話)。 */}
-                      <ReferenceLine yAxisId="sd" y={0} stroke="#4b5563" strokeDasharray="3 3" />
+                      <ReferenceLine yAxisId="sd" y={0} {...ZERO_STROKE} />
                       {onsets.map((e) => (
                         <ReferenceLine
                           key={`onset-${e.detected}`}
@@ -642,9 +646,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                           yAxisId="price"
                           type="monotone"
                           dataKey="price"
-                          stroke="#7dd3fc"
-                          strokeWidth={1.1}
-                          strokeDasharray="4 3"
+                          {...PRICE_STROKE}
                           dot={false}
                           connectNulls={false}
                           isAnimationActive={false}
@@ -654,8 +656,7 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                         yAxisId="sd"
                         type="monotone"
                         dataKey="value"
-                        stroke="#e5e7eb"
-                        strokeWidth={1.6}
+                        {...SD_STROKE}
                         connectNulls={false}
                         isAnimationActive={false}
                         // ★要件 §12「現在地点」。最新の 1 点だけに段階色の印を置く。
