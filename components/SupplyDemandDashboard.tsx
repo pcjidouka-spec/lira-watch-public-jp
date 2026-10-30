@@ -523,6 +523,33 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
                     {s.icon} {s.text}
                   </span>
                 </div>
+                {/* ★どの線がどちらの軸か (0006 §4「両方の軸に単位を書く」)。
+                    左軸は目盛りが % だけで、単位が画面のどこにも無かった。
+                    見本の線は下の <Line> と同じ色・太さ・破線にする。 */}
+                <div className="sd-card-key">
+                  <span className="sd-card-key-item">
+                    <svg width="22" height="8" aria-hidden="true">
+                      <line x1="0" y1="4" x2="22" y2="4" stroke="#e5e7eb" strokeWidth={1.6} />
+                    </svg>
+                    実線＝需給（<strong>左軸</strong>・非商業ネット÷総建玉）
+                  </span>
+                  {hasPrice && (
+                    <span className="sd-card-key-item">
+                      <svg width="22" height="8" aria-hidden="true">
+                        <line
+                          x1="0"
+                          y1="4"
+                          x2="22"
+                          y2="4"
+                          stroke="#7dd3fc"
+                          strokeWidth={1.1}
+                          strokeDasharray="4 3"
+                        />
+                      </svg>
+                      破線＝{priceLabel}（<strong>右軸</strong>）
+                    </span>
+                  )}
+                </div>
                 <div className="sd-card-plot">
                   <ResponsiveContainer width="100%" height={narrow ? 170 : 200}>
                     <LineChart data={rows} margin={{ top: 6, right: 6, left: 0, bottom: 2 }}>
@@ -970,6 +997,23 @@ export function SupplyDemandDashboard({ data }: { data: SupplyDemandData }) {
         }
         .sd-card-plot {
           width: 100%;
+        }
+        .sd-card-key {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2px 12px;
+          font-size: 10.5px;
+          color: #8b9bb0;
+          margin: 0 0 2px;
+        }
+        .sd-card-key-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .sd-card-key-item strong {
+          color: #cbd5e1;
+          font-weight: 600;
         }
         .sd-card-foot {
           font-size: 10.5px;
