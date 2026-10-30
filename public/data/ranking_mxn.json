@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-10-30",
   "period_label": "直近約2週間",
-  "generated_at": "2026-10-30T21:39:30.327Z",
+  "generated_at": "2026-10-30T22:49:31.174Z",
   "buy_ranking": [
     {
       "provider_id": "invast",
@@ -67,8 +67,8 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 11.714285714285712,
-      "sample_days": 7
+      "avg": 11.674999999999999,
+      "sample_days": 8
     },
     {
       "provider_id": "dmm",
@@ -77,16 +77,16 @@
       "sample_days": 14
     },
     {
+      "provider_id": "gaitame",
+      "name": "外為どっとコム",
+      "avg": 11,
+      "sample_days": 10
+    },
+    {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": 11,
       "sample_days": 12
-    },
-    {
-      "provider_id": "gaitame",
-      "name": "外為どっとコム",
-      "avg": 11,
-      "sample_days": 9
     },
     {
       "provider_id": "matsui",
@@ -99,8 +99,8 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -11.714285714285712,
-      "sample_days": 7
+      "avg": -11.674999999999999,
+      "sample_days": 8
     },
     {
       "provider_id": "traders_light",
@@ -154,7 +154,7 @@
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": -16,
-      "sample_days": 9
+      "sample_days": 10
     },
     {
       "provider_id": "central_tanshi",

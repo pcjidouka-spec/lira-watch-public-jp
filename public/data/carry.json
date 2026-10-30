@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31 06:37:04",
+  "generated_at": "2026-10-31 07:47:05",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
@@ -75,7 +75,7 @@
         "group": "traders",
         "swap": 15.1
       },
-      "provider_count": 9,
+      "provider_count": 11,
       "outlier": false,
       "payback": {
         "days": 1.3,
