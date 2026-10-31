@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25",
+  "generated_at": "2026-11-01",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -400,7 +400,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-18時",
@@ -414,7 +414,7 @@
         "source": "https://www.invast.jp/triauto/spread/"
       },
       "jfx": {
-        "spread": 1.4,
+        "spread": 1.2,
         "unit": "銭",
         "mode": "fixed",
         "condition": "9-18時",
