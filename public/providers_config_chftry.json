@@ -63,6 +63,12 @@
         "swap_point_adjustment": "【単位】1Lot=1万通貨。付与日数が2以上のときは合計値なので1日あたりに割り戻します。★他4社の約半分の絶対値（買 -1,000 前後）になりますが異常値ではなく業者ポリシー差です。",
         "product_selection": "【重要】『CHFTRY』列を使ってください。LIGHT 付きの列は対象外です。"
       }
+    },
+    {
+      "id": "ig",
+      "name": "IG証券",
+      "url": "https://www.ig.com/jp/forex/swap-point",
+      "currency_pair_selector": "スイスフラン/トルコリラ（CHF/TRY）"
     }
   ]
 }

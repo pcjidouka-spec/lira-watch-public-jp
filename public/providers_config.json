@@ -198,6 +198,12 @@
         "date_search_strategy": "【日付探索】まず一昨日（指定日）を探し、なければ最も近い過去の日付のデータを抽出してください。",
         "interaction_hint": "【表形式】日付・曜日・付与日数・売・買の縦型カレンダー（売が先、買が後）。1万通貨単位で、金額は付与日数分の合計。当月分は未来日のため空欄なので、対象日が先月なら「先月分表示」ボタンで切り替えること。"
       }
+    },
+    {
+      "id": "ig",
+      "name": "IG証券",
+      "url": "https://www.ig.com/jp/forex/swap-point",
+      "currency_pair_selector": "TRY/JPY"
     }
   ],
   "common_instructions": {
