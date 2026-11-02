@@ -26,7 +26,8 @@
       "id": "ig",
       "name": "IG証券",
       "url": "https://www.ig.com/jp/forex/swap-point",
-      "currency_pair_selector": "米ドル/トルコリラ（USD/TRY）"
+      "currency_pair_selector": "米ドル/トルコリラ（USD/TRY）",
+      "campaign_url": "https://www.ig.com/jp/campaign-index"
     }
   ]
 }

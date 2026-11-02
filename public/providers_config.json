@@ -203,7 +203,8 @@
       "id": "ig",
       "name": "IG証券",
       "url": "https://www.ig.com/jp/forex/swap-point",
-      "currency_pair_selector": "TRY/JPY"
+      "currency_pair_selector": "TRY/JPY",
+      "campaign_url": "https://www.ig.com/jp/campaign-index"
     }
   ],
   "common_instructions": {
