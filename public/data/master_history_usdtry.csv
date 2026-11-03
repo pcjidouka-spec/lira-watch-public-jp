@@ -330,7 +330,11 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-30,hirose,USD/TRY,ヒロセ通商,1,-1275.3,1086.4,,success,
 2026-10-30,jfx,USD/TRY,JFX,3,-1276.33,1087.33,,success,2026/10/30
 2026-10-30,ig,USD/TRY,IG証券,3.0,-1173.58,1118.29,,success,2026/10/30
-2026-11-02,gaitame,USD/TRY,外為どっとコム,1,,,,pending,2026/10/30
+2026-11-02,gaitame,USD/TRY,外為どっとコム,1,-1087.0,898.0,,success,2026/11/02
 2026-11-02,hirose,USD/TRY,ヒロセ通商,1,-1275.3,1086.4,,success,
 2026-11-02,jfx,USD/TRY,JFX,1,-1275.0,1086.0,,success,2026/11/02
-2026-11-02,ig,USD/TRY,IG証券,,,,,pending,
+2026-11-02,ig,USD/TRY,IG証券,1.0,-1292.42,1099.3,,success,2026/11/02
+2026-11-03,gaitame,USD/TRY,外為どっとコム,1,,,,pending,2026/11/02
+2026-11-03,hirose,USD/TRY,ヒロセ通商,1,-1278.2,1088.8,,success,
+2026-11-03,jfx,USD/TRY,JFX,1,-1278.0,1088.0,,success,2026/11/03
+2026-11-03,ig,USD/TRY,IG証券,,,,,pending,
