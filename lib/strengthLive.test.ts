@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import fixture from './__fixtures__/strength_live_cases.json';
 import {
-  tradingDate, parseTicker, requiredSymbols, computeProvisional, provisionalPoint,
+  tradingDate, parseTicker, parseLiveResponse, requiredSymbols, computeProvisional, provisionalPoint,
   type LivePeriod, type TickerMap, type TickerEntry,
 } from './strengthLive';
 
@@ -30,12 +30,12 @@ describe('computeProvisional は Python の _build_period の 1 歩と一致す�
   }
 });
 
-describe('tradingDate (NY 17:00 で日が変わる)', () => {
-  it('冬時間 (EST): 22:00Z が境目', () => {
-    expect(tradingDate('2026-11-04T21:59:59Z')).toBe('2026-11-04');
-    expect(tradingDate('2026-11-04T22:00:00Z')).toBe('2026-11-05');
+describe('tradingDate (JST 06:00 = 21:00Z で日が変わる。夏冬で動かない)', () => {
+  it('冬時間の時期: 21:00Z が境目', () => {
+    expect(tradingDate('2026-11-04T20:59:59Z')).toBe('2026-11-04');
+    expect(tradingDate('2026-11-04T21:00:00Z')).toBe('2026-11-05');
   });
-  it('夏時間 (EDT): 21:00Z が境目', () => {
+  it('夏時間の時期: 同じく 21:00Z が境目', () => {
     expect(tradingDate('2026-10-27T20:59:59Z')).toBe('2026-10-27');
     expect(tradingDate('2026-10-27T21:00:00Z')).toBe('2026-10-28');
   });
@@ -62,10 +62,32 @@ describe('parseTicker (REQ-LIVE-008)', () => {
   });
 });
 
+describe('parseLiveResponse (サーバー時刻つきの応答)', () => {
+  const ticker = { status: 0, data: [
+    { symbol: 'USD_JPY', ask: '157.918', bid: '157.913', timestamp: '2026-11-05T03:44:41.943Z', status: 'OPEN' },
+  ] };
+  it('正しい形なら ticker とサーバー時刻 (ms) を返す', () => {
+    const got = parseLiveResponse({ server_time: '2026-11-05T03:45:00.000Z', ticker })!;
+    expect(got.serverMs).toBe(Date.parse('2026-11-05T03:45:00.000Z'));
+    expect(got.ticker.USD_JPY.bid).toBe(157.913);
+  });
+  it('server_time が無い・読めない・文字列でなければ null', () => {
+    expect(parseLiveResponse({ ticker })).toBeNull();
+    expect(parseLiveResponse({ server_time: 'x', ticker })).toBeNull();
+    expect(parseLiveResponse({ server_time: 123, ticker })).toBeNull();
+  });
+  it('ticker の形が違えば null', () => {
+    expect(parseLiveResponse({ server_time: '2026-11-05T03:45:00.000Z', ticker: { status: 5, data: [] } })).toBeNull();
+    expect(parseLiveResponse({ server_time: '2026-11-05T03:45:00.000Z' })).toBeNull();
+    expect(parseLiveResponse(null)).toBeNull();
+    expect(parseLiveResponse('oops')).toBeNull();
+  });
+});
+
 describe('provisionalPoint の出す条件 (REQ-LIVE-002)', () => {
   const c = cases.find((x) => x.name === 'weekday')!;
   const next = c.period.live!.next;
-  // next の取引日の昼 (JST)。冬時間なら前日 22:00Z から始まる
+  // next の取引日の昼 (JST)。取引日は前日 21:00Z から始まる
   const ts = `${next}T03:00:00.000Z`;
   const now = Date.parse(ts) + 60_000;
   const ticker = (over: Partial<TickerEntry> = {}, drop?: string): TickerMap => {
@@ -94,7 +116,7 @@ describe('provisionalPoint の出す条件 (REQ-LIVE-002)', () => {
     expect(provisionalPoint(c.period, c.base, ticker(), Date.parse(ts) - 60_001)).toBeNull();
   });
   it('取引日が next でなければ出ない (日次が遅れた朝・日付の飛び)', () => {
-    const later = `${next}T23:00:00.000Z`; // NY では next の翌取引日
+    const later = `${next}T23:00:00.000Z`; // 21:00Z を過ぎているので next の翌取引日
     expect(provisionalPoint(c.period, c.base, ticker({ timestamp: later }), Date.parse(later))).toBeNull();
   });
   it('丁度 1 分先の時刻は出る (境界の通る側)', () => {

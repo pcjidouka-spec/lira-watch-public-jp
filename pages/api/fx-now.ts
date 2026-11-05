@@ -15,8 +15,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     const r = await fetch(TICKER, { signal: ctrl.signal, headers: { 'User-Agent': 'lira-watch/strength' } });
     if (!r.ok) throw new Error(`http ${r.status}`);
     const body = await r.json();
+    // 「今」はこのサーバーの時刻にする (閲覧者の端末の時計に頼らない)
+    const serverTime = new Date().toISOString();
     res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=60');
-    res.status(200).json(body);
+    res.status(200).json({ server_time: serverTime, ticker: body });
   } catch (e) {
     res.setHeader('Cache-Control', 'no-store');
     res.status(502).json({ error: e instanceof Error ? e.message : String(e) });

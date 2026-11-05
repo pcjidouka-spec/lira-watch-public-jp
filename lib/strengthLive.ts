@@ -47,18 +47,29 @@ export type LivePeriod = {
 const MAX_AGE_MS = 10 * 60_000;
 const MAX_FUTURE_MS = 60_000;
 
-const NY_DATE = new Intl.DateTimeFormat('en-CA', {
-  timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
-});
-
 /** GMO の小数秒 (5〜6 桁) を 3 桁に詰めて読む。読めなければ NaN。 */
 function parseTs(ts: string): number {
   return Date.parse(ts.replace(/(\.\d{3})\d+/, '$1'));
 }
 
-/** FX の取引日。NY 17:00 で日が変わる (= 時刻に 7 時間足した NY の日付)。GMO の日足の日付と同じ。 */
+/**
+ * FX の取引日。GMO の日足と同じく JST 06:00 (= 21:00Z) で日が変わり、夏冬で動かない
+ * (実測: 日足の開始が 21:00Z で夏時間の時期も冬時間の時期も同じ)。
+ * 時刻の 6 時間前の JST の日付 = 時刻に 3 時間足した UTC の日付。
+ */
 export function tradingDate(timestampIso: string): string {
-  return NY_DATE.format(new Date(parseTs(timestampIso) + 7 * 3_600_000));
+  return new Date(parseTs(timestampIso) + 3 * 3_600_000).toISOString().slice(0, 10);
+}
+
+/** /api/fx-now/ の応答 { server_time, ticker } を読む。形が違えば null。 */
+export function parseLiveResponse(json: unknown): { ticker: TickerMap; serverMs: number } | null {
+  if (!json || typeof json !== 'object') return null;
+  const j = json as { server_time?: unknown; ticker?: unknown };
+  if (typeof j.server_time !== 'string') return null;
+  const serverMs = Date.parse(j.server_time);
+  if (!Number.isFinite(serverMs)) return null;
+  const ticker = parseTicker(j.ticker);
+  return ticker ? { ticker, serverMs } : null;
 }
 
 /** GMO の ticker の応答を読む。形が違えば null。数でない bid の銘柄は落とす。 */

@@ -74,8 +74,17 @@ const DISPLAY_CODES: Record<string, string> = {
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
-const JST_HM = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit' });
-const fmtJstHm = (ts: string) => JST_HM.format(new Date(Date.parse(ts.replace(/(\.\d{3})\d+/, '$1'))));
+const JST_PARTS = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit',
+  hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+});
+/** 'YYYY-MM-DD HH:MM' (JST)。日付と時刻を同じ時刻から取る。 */
+const fmtJstDateTime = (ts: string) => {
+  const parts: Record<string, string> = {};
+  JST_PARTS.formatToParts(new Date(Date.parse(ts.replace(/(\.\d{3})\d+/, '$1'))))
+    .forEach((x) => { parts[x.type] = x.value; });
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
+};
 const PROVISIONAL_KEY = '__provisional';
 
 /**
@@ -189,6 +198,10 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
   }
 
   const providerName = (id: string) => data.provider_names[id] ?? id;
+  // 今のレートが取れない通貨 = GMO に銘柄が無い (ECB 経路) 系列だけ。スワップ欠けや参照系列は含めない
+  const noRateCodes = prov
+    ? codes.filter((c) => c !== data.base && p.live?.series[c]?.symbol === null)
+    : [];
 
   return (
     <div className="strength-chart">
@@ -210,7 +223,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         <div className="strength-panel-head">
           <span className="strength-asof">
             {prov
-              ? `${prov.date} ${fmtJstHm(prov.asOf)} 時点（暫定）`
+              ? `${fmtJstDateTime(prov.asOf)}（JST）時点の価格で暫定`
               : `${p.dates[p.dates.length - 1]} 時点`}
           </span>
           <span className="strength-range">
@@ -345,13 +358,12 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
 
       {prov && (
         <p className="strength-note strength-live-note">
-          最新の点（{fmtDate(prov.date)}）は {fmtJstHm(prov.asOf)} 時点の GMO コインのレート（BID）で計算した暫定値です。
+          最新の点（{fmtDate(prov.date)}）は {fmtJstDateTime(prov.asOf)}（JST）時点の GMO コインのレート（BID）で計算した暫定値です。
           スワップは前日までの 14 日平均を使い、翌朝の日次更新で確定値に置き換わります。
-          {codes.filter((c) => c !== data.base && prov.values[c] === null).length > 0 && (
+          {noRateCodes.length > 0 && (
             <>
               {' '}今のレートが取れない通貨（
-              {codes
-                .filter((c) => c !== data.base && prov.values[c] === null)
+              {noRateCodes
                 .map((c) => CURRENCY_LABELS[c] ?? c)
                 .join('、')}
               ）は最新の点がありません。
