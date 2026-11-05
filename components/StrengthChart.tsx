@@ -3,6 +3,8 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ResponsiveContainer,
 } from 'recharts';
 import { CurrencyFlag } from '@/components/CurrencyFlag';
+import { provisionalPoint, type StrengthLive } from '@/lib/strengthLive';
+import { useLiveTicker } from '@/hooks/useLiveTicker';
 import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes, priceProxyNotes } from '@/lib/strengthCurrencies';
 
 export type StrengthPeriod = {
@@ -16,6 +18,8 @@ export type StrengthPeriod = {
   requested_from: string;
   /** 要求した窓がデータ開始より前まで遡っている (タブ名より実期間が短い) */
   data_limited: boolean;
+  /** 暫定の点の材料 (lib/strengthLive.ts) */
+  live?: StrengthLive;
 };
 
 export type StrengthData = {
@@ -70,6 +74,9 @@ const DISPLAY_CODES: Record<string, string> = {
 };
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
+const JST_HM = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit' });
+const fmtJstHm = (ts: string) => JST_HM.format(new Date(Date.parse(ts.replace(/(\.\d{3})\d+/, '$1'))));
+const PROVISIONAL_KEY = '__provisional';
 
 /**
  * 週ごとに交互の縦帯を出すための区間を作る。
@@ -118,34 +125,54 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
   const [period, setPeriod] = useState<string>('1m');
   const narrow = useNarrowScreen();
   const p = data.periods[period];
+  const { ticker, now } = useLiveTicker();
+  const prov = useMemo(
+    () => (p ? provisionalPoint(p, data.base, ticker, now) : null),
+    [p, data.base, ticker, now],
+  );
 
   const codes = useMemo(() => Object.keys(p?.series ?? {}), [p]);
 
   const chartData = useMemo(() => {
     if (!p) return [];
-    return p.dates.map((d, i) => {
-      const row: Record<string, string | number | null> = { date: fmtDate(d) };
+    const rows = p.dates.map((d, i) => {
+      const row: Record<string, string | number | boolean | null> = { date: fmtDate(d) };
       codes.forEach((c) => {
         row[c] = p.series[c][i];
       });
       return row;
     });
-  }, [p, codes]);
+    if (prov) {
+      const row: Record<string, string | number | boolean | null> = {
+        date: `${fmtDate(prov.date)} 暫定`, [PROVISIONAL_KEY]: true,
+      };
+      codes.forEach((c) => {
+        row[c] = prov.values[c] ?? null;
+      });
+      rows.push(row);
+    }
+    return rows;
+  }, [p, codes, prov]);
 
   // 起点=1.0 からの乖離が小さいので、Y 軸は実データ幅に合わせて詰める
   const domain = useMemo<[number, number]>(() => {
-    const vals = codes.flatMap((c) => (p?.series?.[c] ?? []).filter((v): v is number => v !== null));
+    const vals = codes.flatMap((c) => [
+      ...(p?.series?.[c] ?? []),
+      prov ? prov.values[c] ?? null : null,
+    ].filter((v): v is number => v !== null));
     if (!vals.length) return [0.95, 1.05];
     const lo = Math.min(...vals);
     const hi = Math.max(...vals);
     const pad = Math.max((hi - lo) * 0.12, 0.002);
     return [lo - pad, hi + pad];
-  }, [p, codes]);
+  }, [p, codes, prov]);
 
   // 凡例は現在値の高い順。元アプリと同じく、強い通貨が上に来る
   const ranked = useMemo(() => {
     if (!p) return [];
     const latest = (c: string) => {
+      const pv = prov?.values[c];
+      if (pv !== undefined && pv !== null) return pv;
       const s = p.series[c];
       for (let i = s.length - 1; i >= 0; i--) if (s[i] !== null) return s[i] as number;
       return null;
@@ -153,7 +180,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
     return codes
       .map((c) => ({ code: c, value: latest(c) }))
       .sort((a, b) => (b.value ?? -Infinity) - (a.value ?? -Infinity));
-  }, [p, codes]);
+  }, [p, codes, prov]);
 
   const bands = useMemo(() => (p ? weekBands(p.dates) : []), [p]);
 
@@ -181,7 +208,11 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
 
       <div className="strength-panel">
         <div className="strength-panel-head">
-          <span className="strength-asof">{p.dates[p.dates.length - 1]} 時点</span>
+          <span className="strength-asof">
+            {prov
+              ? `${prov.date} ${fmtJstHm(prov.asOf)} 時点（暫定）`
+              : `${p.dates[p.dates.length - 1]} 時点`}
+          </span>
           <span className="strength-range">
             {p.dates[0]} 〜 {p.dates[p.dates.length - 1]}（{p.dates.length}日）
           </span>
@@ -247,7 +278,14 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                     // 参照系列は通貨ではないので破線にして区別する
                     strokeDasharray={(p.references ?? []).includes(c) ? '5 3' : undefined}
                     name={c}
-                    dot={false}
+                    dot={(props: any) =>
+                      props.payload?.[PROVISIONAL_KEY] && props.value != null ? (
+                        <circle key={`${c}-prov`} cx={props.cx} cy={props.cy} r={3}
+                          fill={COLORS[c] ?? '#9ca3af'} stroke="#000" strokeWidth={1} />
+                      ) : (
+                        <g key={`${c}-${props.index}`} />
+                      )
+                    }
                     connectNulls={false}
                     // 125点の密な線を左から描くアニメーションは、読めるようになるまで
                     // 1.5秒ほど待たされるうえ、線が途中で切れているように見える。
@@ -305,6 +343,22 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
         })}
       </div>
 
+      {prov && (
+        <p className="strength-note strength-live-note">
+          最新の点（{fmtDate(prov.date)}）は {fmtJstHm(prov.asOf)} 時点の GMO コインのレート（BID）で計算した暫定値です。
+          スワップは前日までの 14 日平均を使い、翌朝の日次更新で確定値に置き換わります。
+          {codes.filter((c) => c !== data.base && prov.values[c] === null).length > 0 && (
+            <>
+              {' '}今のレートが取れない通貨（
+              {codes
+                .filter((c) => c !== data.base && prov.values[c] === null)
+                .map((c) => CURRENCY_LABELS[c] ?? c)
+                .join('、')}
+              ）は最新の点がありません。
+            </>
+          )}
+        </p>
+      )}
       <p className="strength-note">{data.note}</p>
       <p className="strength-note">
         各通貨を1万通貨（ハンガリーフォリントは10万通貨）ぶん、レバレッジ1倍で買って
