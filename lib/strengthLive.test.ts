@@ -54,6 +54,16 @@ describe('parseTicker (REQ-LIVE-008)', () => {
     expect(t.USD_JPY.bid).toBe(157.913);
     expect(t.TRY_JPY).toBeUndefined();
   });
+  it('bid が数値の文字列か数値のときだけ受け取り、他の型は銘柄ごと落とす', () => {
+    const mk = (bid: unknown) => parseTicker({ status: 0, data: [
+      { symbol: 'USD_JPY', bid, timestamp: '2026-11-05T03:44:41.943Z', status: 'OPEN' },
+    ] })!;
+    for (const bad of [true, [1], '', '  ', null, {}]) {
+      expect(mk(bad).USD_JPY, JSON.stringify(bad)).toBeUndefined();
+    }
+    expect(mk('157.913').USD_JPY.bid).toBe(157.913);
+    expect(mk(157.913).USD_JPY.bid).toBe(157.913);
+  });
   it('形が違えば null', () => {
     expect(parseTicker(null)).toBeNull();
     expect(parseTicker({ status: 5, data: [] })).toBeNull();

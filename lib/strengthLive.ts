@@ -80,7 +80,10 @@ export function parseTicker(json: unknown): TickerMap | null {
   const out: TickerMap = {};
   for (const row of j.data as Record<string, unknown>[]) {
     if (!row || typeof row.symbol !== 'string') continue;
-    const bid = Number(row.bid);
+    const raw = row.bid;
+    // Number() は true / [1] / '' を数にしてしまうので、型と中身を先に絞る
+    if (!(typeof raw === 'number' || (typeof raw === 'string' && raw.trim() !== ''))) continue;
+    const bid = Number(raw);
     if (!Number.isFinite(bid) || bid <= 0) continue;
     if (typeof row.timestamp !== 'string' || typeof row.status !== 'string') continue;
     out[row.symbol] = { bid, timestamp: row.timestamp, status: row.status };
