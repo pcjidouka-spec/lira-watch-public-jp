@@ -145,7 +145,7 @@ export function computeProvisional(
   }
   for (const c of refs) {
     const r = live.references[c];
-    if (!r || r.swap === null || !r.quote_symbol || !r.base_symbol) {
+    if (!r || r.swap == null || !r.quote_symbol || !r.base_symbol) {
       out[c] = null;
       continue;
     }
