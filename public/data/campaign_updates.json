@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T04:00:21.987917",
+  "updated_at": "2026-11-07T04:00:22.713701",
   "providers": {
     "gmo_click": {
       "has_new": false,
@@ -7,7 +7,7 @@
     },
     "gmo": {
       "has_new": true,
-      "updated_at": "2026-11-02T12:00:22.322667"
+      "updated_at": "2026-11-07T04:00:04.479732"
     },
     "central_tanshi": {
       "has_new": false,
@@ -30,8 +30,8 @@
       "updated_at": "2026-10-01T15:01:26.315272"
     },
     "sbi": {
-      "has_new": false,
-      "updated_at": "2026-10-30T15:00:33.321404"
+      "has_new": true,
+      "updated_at": "2026-11-07T04:00:19.161049"
     },
     "matsui": {
       "has_new": true,
