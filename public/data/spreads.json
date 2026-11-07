@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01",
+  "generated_at": "2026-11-08",
   "pairs": {
     "EUR/USD": {
       "central_tanshi": {
@@ -10,11 +10,7 @@
         "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
       },
       "dmm": {
-        "spread": 0.3,
-        "unit": "pips",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 0.3,
@@ -38,10 +34,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 0.3,
-        "unit": "pips",
-        "mode": "fixed",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "invast": {
         "spread": 0.3,
@@ -51,10 +44,7 @@
         "source": "https://www.invast.jp/triauto/spread/"
       },
       "jfx": {
-        "spread": 0.3,
-        "unit": "pips",
-        "mode": "fixed",
-        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+        "mode": "unavailable"
       },
       "m2j": {
         "mode": "undisclosed"
@@ -83,11 +73,7 @@
         "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
       },
       "dmm": {
-        "spread": 0.6,
-        "unit": "pips",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 1.0,
@@ -104,18 +90,10 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 0.6,
-        "unit": "pips",
-        "mode": "fixed",
-        "condition": "9-3時",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "jfx": {
-        "spread": 0.6,
-        "unit": "pips",
-        "mode": "fixed",
-        "condition": "9-3時",
-        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+        "mode": "unavailable"
       }
     },
     "HUF/JPY": {
@@ -153,11 +131,7 @@
         "mode": "variable"
       },
       "dmm": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 0.2,
@@ -181,10 +155,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "invast": {
         "spread": 0.2,
@@ -194,10 +165,7 @@
         "source": "https://www.invast.jp/triauto/spread/"
       },
       "jfx": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+        "mode": "unavailable"
       },
       "matsui": {
         "spread": 0.1,
@@ -240,11 +208,7 @@
         "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
       },
       "dmm": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 0.2,
@@ -268,11 +232,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-3時",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "invast": {
         "spread": 0.2,
@@ -282,11 +242,7 @@
         "source": "https://www.invast.jp/triauto/spread/"
       },
       "jfx": {
-        "spread": 0.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-3時",
-        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+        "mode": "unavailable"
       },
       "saxo": {
         "mode": "variable"
@@ -372,11 +328,7 @@
         "mode": "variable"
       },
       "dmm": {
-        "spread": 1.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 1.2,
@@ -400,11 +352,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 1.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-18時",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "invast": {
         "spread": 1.5,
@@ -414,11 +362,7 @@
         "source": "https://www.invast.jp/triauto/spread/"
       },
       "jfx": {
-        "spread": 1.2,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-18時",
-        "source": "https://www.jfx.co.jp/trading_rule/spread_list/"
+        "mode": "unavailable"
       },
       "m2j": {
         "mode": "undisclosed"
@@ -487,11 +431,7 @@
         "source": "https://www.central-tanshifx.com/fxdirectplus/spread/"
       },
       "dmm": {
-        "spread": 0.5,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-5時",
-        "source": "https://fx.dmm.com/fx/aboutfx/spread/"
+        "mode": "unavailable"
       },
       "gaitame": {
         "spread": 0.5,
@@ -508,11 +448,7 @@
         "source": "https://www.click-sec.com/corp/guide/fxneo/commission_list/"
       },
       "hirose": {
-        "spread": 0.5,
-        "unit": "銭",
-        "mode": "fixed",
-        "condition": "9-3時",
-        "source": "https://hirose-fx.co.jp/spread/"
+        "mode": "unavailable"
       },
       "invast": {
         "spread": 0.5,

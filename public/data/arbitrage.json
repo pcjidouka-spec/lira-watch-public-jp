@@ -1,14 +1,19 @@
 {
-  "generated_at": "2026-11-07 06:01:38",
+  "generated_at": "2026-11-08 05:34:26",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-11-07",
+  "rate_as_of": "2026-11-08",
   "baseline": false,
   "excluded_providers": [
     "saxo"
   ],
-  "excluded_pairs": [],
+  "excluded_pairs": [
+    {
+      "pair": "GBP/USD",
+      "reason": "G4: GBP/USD dmm のbuyが前回比 73% 変動 (-15.0 -> -4.0)。キャンペーンや金利改定なら翌日から自動的に通ります"
+    }
+  ],
   "top": [
     {
       "rank": 1,
@@ -28,9 +33,9 @@
         "actual_date": "2026-11-04"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 63027,
-      "capital": 6302.7,
-      "annual_pct": 23.2,
+      "notional_2leg": 63139,
+      "capital": 6313.9,
+      "annual_pct": 23.1,
       "meets_threshold": true,
       "history": {
         "recent": {
@@ -43,9 +48,9 @@
         "all": {
           "days": 194,
           "min_pct": 1.9,
-          "max_pct": 185.3,
+          "max_pct": 185.0,
           "avg_pct": 22.5,
-          "median_pct": 17.4
+          "median_pct": 17.3
         },
         "first_date": "2025-12-01",
         "last_date": "2026-11-06",
@@ -124,24 +129,24 @@
         "actual_date": "2026-11-06"
       },
       "arb_per_day": 0.6,
-      "notional_2leg": 9748,
-      "capital": 974.8,
+      "notional_2leg": 9729,
+      "capital": 972.9,
       "annual_pct": 22.5,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 15.0,
-          "max_pct": 26.2,
+          "max_pct": 26.3,
           "avg_pct": 22.7,
           "median_pct": 22.5
         },
         "all": {
           "days": 126,
           "min_pct": 15.0,
-          "max_pct": 59.9,
-          "avg_pct": 28.5,
-          "median_pct": 26.2
+          "max_pct": 60.0,
+          "avg_pct": 28.6,
+          "median_pct": 26.3
         },
         "first_date": "2026-04-10",
         "last_date": "2026-11-06",
@@ -219,24 +224,24 @@
         "actual_date": "2026-11-05"
       },
       "arb_per_day": 176.85,
-      "notional_2leg": 3867724,
-      "capital": 386772.4,
+      "notional_2leg": 3863988,
+      "capital": 386398.8,
       "annual_pct": 16.7,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 0.9,
-          "max_pct": 35.0,
+          "max_pct": 35.1,
           "avg_pct": 20.1,
           "median_pct": 20.9
         },
         "all": {
           "days": 73,
           "min_pct": 0.9,
-          "max_pct": 80.2,
-          "avg_pct": 41.4,
-          "median_pct": 40.4
+          "max_pct": 80.3,
+          "avg_pct": 41.5,
+          "median_pct": 40.5
         },
         "first_date": "2026-07-22",
         "last_date": "2026-11-06",
@@ -315,22 +320,22 @@
         "actual_date": "2026-11-06"
       },
       "arb_per_day": 4.3,
-      "notional_2leg": 168774,
-      "capital": 16877.4,
-      "annual_pct": 9.3,
+      "notional_2leg": 169843,
+      "capital": 16984.3,
+      "annual_pct": 9.2,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 2.6,
-          "max_pct": 9.3,
+          "max_pct": 9.2,
           "avg_pct": 7.7,
           "median_pct": 8.0
         },
         "all": {
           "days": 163,
           "min_pct": 0.9,
-          "max_pct": 9.3,
+          "max_pct": 9.2,
           "avg_pct": 3.5,
           "median_pct": 2.8
         },
@@ -411,8 +416,8 @@
         "actual_date": "2026-11-06"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 191716,
-      "capital": 19171.6,
+      "notional_2leg": 191788,
+      "capital": 19178.8,
       "annual_pct": 7.6,
       "meets_threshold": false,
       "history": {
