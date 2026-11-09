@@ -2506,7 +2506,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-29,hirose,MXN/JPY,ヒロセ通商,None,None,None,None,success,2026/10/29
 2026-10-29,invast,MXN/JPY,トライオートFX,None,None,None,None,success,2026/10/29
 2026-10-29,jfx,MXN/JPY,JFX,None,None,None,None,success,2026/10/29
-2026-10-29,matsui,MXN/JPY,MATSUI FX,5.0,None,None,None,pending,2026/10/28
+2026-10-29,matsui,MXN/JPY,MATSUI FX,5.0,None,None,None,error,2026/10/28
 2026-10-29,sbi,MXN/JPY,SBI FXトレード,5.0,11.0,-14.0,11月04日,success,2026/10/29
 2026-10-29,traders_light,MXN/JPY,LIGHT FX,None,None,None,None,success,2026/10/29
 2026-10-29,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,None,None,None,None,success,2026/10/29
@@ -2527,15 +2527,15 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-30,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.1,-15.1,None,success,2026/10/30
 2026-10-30,click365_okasan,MXN/JPY,クリック365,1.0,11.4,-11.4,None,success,2026/10/30
 2026-10-30,gaitame,MXN/JPY,外為どっとコム,1.0,11.0,-16.0,None,success,2026/10/30
-2026-10-28,central_tanshi,MXN/JPY,セントラル短資FX,1.0,None,None,None,pending,None
+2026-10-28,central_tanshi,MXN/JPY,セントラル短資FX,1.0,None,None,None,error,None
 2026-10-28,click365_okasan,MXN/JPY,クリック365,5.0,12.059999999999999,-12.059999999999999,None,success,2026/10/28
 2026-10-28,dmm,MXN/JPY,DMM FX,1.0,11.0,-14.0,None,success,2026/10/28
 2026-10-28,gaitame,MXN/JPY,外為どっとコム,5.0,11.0,-16.0,None,success,2026/10/28
 2026-10-28,gmo,MXN/JPY,GMO外貨,5.0,14.2,-14.2,None,success,2026/10/28
 2026-10-28,gmo_click,MXN/JPY,GMOクリック証券,5.0,15.1,-15.1,None,success,2026/10/28
-2026-10-28,hirose,MXN/JPY,ヒロセ通商,1.0,None,None,None,pending,None
+2026-10-28,hirose,MXN/JPY,ヒロセ通商,1.0,None,None,None,error,None
 2026-10-28,invast,MXN/JPY,トライオートFX,5.0,15.2,-30.3,None,success,2026/10/28
-2026-10-28,jfx,MXN/JPY,JFX,1.0,None,None,None,pending,None
+2026-10-28,jfx,MXN/JPY,JFX,1.0,None,None,None,error,None
 2026-10-28,matsui,MXN/JPY,MATSUI FX,5.0,10.0,-20.0,None,success,2026/10/28
 2026-10-28,sbi,MXN/JPY,SBI FXトレード,1.0,11.0,-14.0,None,success,2026/10/28
 2026-10-28,traders_light,MXN/JPY,LIGHT FX,5.0,11.1,-11.1,None,success,2026/10/28
@@ -2603,17 +2603,32 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-05,traders_min,MXN/JPY,みんなのFX,1.0,11.1,-11.1,None,success,2026/11/05
 2026-11-05,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.3,-15.3,None,success,2026/11/05
 2026-11-06,central_tanshi,MXN/JPY,セントラル短資FX,2.0,14.2,-16.2,11/9,success,2026/11/06
-2026-11-06,click365_okasan,MXN/JPY,クリック365,1.0,None,None,None,pending,2026/11/05
+2026-11-06,click365_okasan,MXN/JPY,クリック365,2.0,12.2,-12.2,None,success,2026/11/06
 2026-11-06,dmm,MXN/JPY,DMM FX,1.0,11.0,-14.0,None,success,2026/11/06
-2026-11-06,gaitame,MXN/JPY,外為どっとコム,1.0,None,None,None,pending,2026/11/05
+2026-11-06,gaitame,MXN/JPY,外為どっとコム,2.0,11.0,-16.0,None,success,2026/11/06
 2026-11-06,gmo,MXN/JPY,GMO外貨,2.0,15.3,-15.3,None,success,2026/11/06
 2026-11-06,gmo_click,MXN/JPY,GMOクリック証券,2.0,14.0,-14.0,None,success,2026/11/06
 2026-11-06,hirose,MXN/JPY,ヒロセ通商,1.0,12.0,-17.0,None,success,2026/11/06
-2026-11-06,invast,MXN/JPY,トライオートFX,1.0,None,None,None,pending,2026/11/05
+2026-11-06,invast,MXN/JPY,トライオートFX,2.0,15.4,-30.5,None,success,2026/11/06
 2026-11-06,jfx,MXN/JPY,JFX,1.0,14.0,-19.0,None,success,2026/11/06
-2026-11-06,matsui,MXN/JPY,MATSUI FX,1.0,None,None,None,pending,2026/11/05
+2026-11-06,matsui,MXN/JPY,MATSUI FX,2.0,11.0,-21.0,None,success,2026/11/06
 2026-11-06,sbi,MXN/JPY,SBI FXトレード,1.0,11.0,-14.0,11月10日,success,2026/11/06
 2026-11-06,traders_light,MXN/JPY,LIGHT FX,2.0,11.1,-11.1,None,success,2026/11/06
 2026-11-06,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,2.0,11.2,-11.2,None,success,2026/11/06
 2026-11-06,traders_min,MXN/JPY,みんなのFX,2.0,11.1,-11.1,None,success,2026/11/06
 2026-11-06,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,2.0,15.3,-15.3,None,success,2026/11/06
+2026-11-09,central_tanshi,MXN/JPY,セントラル短資FX,1.0,14.2,-16.2,11/10,success,2026/11/09
+2026-11-09,click365_okasan,MXN/JPY,クリック365,2.0,None,None,None,pending,2026/11/06
+2026-11-09,dmm,MXN/JPY,DMM FX,2.0,11.0,-14.0,None,success,2026/11/09
+2026-11-09,gaitame,MXN/JPY,外為どっとコム,2.0,None,None,None,pending,2026/11/06
+2026-11-09,gmo,MXN/JPY,GMO外貨,1.0,15.5,-15.5,None,success,2026/11/09
+2026-11-09,gmo_click,MXN/JPY,GMOクリック証券,1.0,14.0,-14.0,None,success,2026/11/09
+2026-11-09,hirose,MXN/JPY,ヒロセ通商,2.0,12.0,-17.0,None,success,2026/11/09
+2026-11-09,invast,MXN/JPY,トライオートFX,2.0,None,None,None,pending,2026/11/06
+2026-11-09,jfx,MXN/JPY,JFX,2.0,14.0,-19.0,None,success,2026/11/09
+2026-11-09,matsui,MXN/JPY,MATSUI FX,2.0,None,None,None,pending,2026/11/06
+2026-11-09,sbi,MXN/JPY,SBI FXトレード,None,None,None,None,success,2026/11/09
+2026-11-09,traders_light,MXN/JPY,LIGHT FX,1.0,11.1,-11.1,None,success,2026/11/09
+2026-11-09,traders_light_light,MXN/JPY,LIGHT FX（LIGHT）,1.0,11.2,-11.2,None,success,2026/11/09
+2026-11-09,traders_min,MXN/JPY,みんなのFX,1.0,11.1,-11.1,None,success,2026/11/09
+2026-11-09,traders_min_light,MXN/JPY,みんなのFX（LIGHT）,1.0,15.5,-15.5,None,success,2026/11/09

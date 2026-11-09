@@ -204,8 +204,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-28,central_tanshi,CNH/JPY,セントラル短資FX,3.0,11.0,-11.0,None,success,2026/10/28
 2026-10-28,gaitame,CNH/JPY,外為どっとコム,3.0,1.0,-11.0,None,success,2026/10/28
 2026-10-28,gmo,CNH/JPY,GMO外貨,3.0,5.0,-5.0,None,success,2026/10/28
-2026-10-28,hirose,CNH/JPY,ヒロセ通商,1.0,None,None,None,pending,None
-2026-10-28,jfx,CNH/JPY,JFX,1.0,None,None,None,pending,None
+2026-10-28,hirose,CNH/JPY,ヒロセ通商,1.0,None,None,None,error,None
+2026-10-28,jfx,CNH/JPY,JFX,1.0,None,None,None,error,None
 2026-10-28,traders_light,CNH/JPY,LIGHT FX,3.0,1.0,-1.0,None,success,2026/10/28
 2026-10-28,traders_min,CNH/JPY,みんなのFX,3.0,1.0,-1.0,None,success,2026/10/28
 2026-11-02,central_tanshi,CNH/JPY,セントラル短資FX,None,None,None,None,success,2026/11/02
@@ -237,9 +237,16 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-05,traders_light,CNH/JPY,LIGHT FX,1.0,3.0,-3.0,None,success,2026/11/05
 2026-11-05,traders_min,CNH/JPY,みんなのFX,1.0,3.0,-3.0,None,success,2026/11/05
 2026-11-06,central_tanshi,CNH/JPY,セントラル短資FX,2.0,11.0,-11.0,11/9,success,2026/11/06
-2026-11-06,gaitame,CNH/JPY,外為どっとコム,1.0,None,None,None,pending,2026/11/05
+2026-11-06,gaitame,CNH/JPY,外為どっとコム,2.0,1.0,-11.0,None,success,2026/11/06
 2026-11-06,gmo,CNH/JPY,GMO外貨,2.0,5.0,-5.0,None,success,2026/11/06
 2026-11-06,hirose,CNH/JPY,ヒロセ通商,1.0,1.0,-9.0,None,success,2026/11/06
 2026-11-06,jfx,CNH/JPY,JFX,1.0,10.0,-10.0,None,success,2026/11/06
 2026-11-06,traders_light,CNH/JPY,LIGHT FX,2.0,3.0,-3.0,None,success,2026/11/06
 2026-11-06,traders_min,CNH/JPY,みんなのFX,2.0,3.0,-3.0,None,success,2026/11/06
+2026-11-09,central_tanshi,CNH/JPY,セントラル短資FX,None,None,None,None,success,2026/11/09
+2026-11-09,gaitame,CNH/JPY,外為どっとコム,2.0,None,None,None,pending,2026/11/06
+2026-11-09,gmo,CNH/JPY,GMO外貨,None,None,None,None,success,2026/11/09
+2026-11-09,hirose,CNH/JPY,ヒロセ通商,2.0,1.0,-9.0,None,success,2026/11/09
+2026-11-09,jfx,CNH/JPY,JFX,2.0,10.0,-10.0,None,success,2026/11/09
+2026-11-09,traders_light,CNH/JPY,LIGHT FX,None,None,None,None,success,2026/11/09
+2026-11-09,traders_min,CNH/JPY,みんなのFX,None,None,None,None,success,2026/11/09
