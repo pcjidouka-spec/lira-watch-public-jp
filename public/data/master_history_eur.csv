@@ -574,7 +574,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-10-30,gmo,EUR/JPY,GMO外貨,1.0,65.0,-65.0,None,success,2026/10/30
 2026-10-30,gmo_click,EUR/JPY,GMOクリック証券,1.0,65.0,-65.0,None,success,2026/10/30
 2026-10-30,hirose,EUR/JPY,ヒロセ通商,1.0,64.0,-84.0,None,success,2026/10/30
-2026-10-30,invast,EUR/JPY,トライオートFX,2.0,None,None,None,pending,2026/10/29
+2026-10-30,invast,EUR/JPY,トライオートFX,2.0,None,None,None,error,2026/10/29
 2026-10-30,jfx,EUR/JPY,JFX,2.0,64.0,-84.0,None,success,2026/10/30
 2026-10-30,traders_light,EUR/JPY,LIGHT FX,1.0,63.0,-63.0,None,success,2026/10/30
 2026-10-30,traders_min,EUR/JPY,みんなのFX,1.0,62.0,-62.0,None,success,2026/10/30
@@ -647,12 +647,23 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-06,traders_min,EUR/JPY,みんなのFX,2.0,62.0,-62.0,None,success,2026/11/06
 2026-11-09,central_tanshi,EUR/JPY,セントラル短資FX,None,None,None,None,success,2026/11/09
 2026-11-09,dmm,EUR/JPY,DMM FX,2.0,67.0,-70.0,None,success,2026/11/09
-2026-11-09,gaitame,EUR/JPY,外為どっとコム,2.0,None,None,None,pending,2026/11/06
+2026-11-09,gaitame,EUR/JPY,外為どっとコム,None,None,None,None,success,2026/11/09
 2026-11-09,gmo,EUR/JPY,GMO外貨,None,None,None,None,success,2026/11/09
 2026-11-09,gmo_click,EUR/JPY,GMOクリック証券,None,None,None,None,success,2026/11/09
 2026-11-09,hirose,EUR/JPY,ヒロセ通商,2.0,64.0,-84.0,None,success,2026/11/09
-2026-11-09,invast,EUR/JPY,トライオートFX,2.0,None,None,None,pending,2026/11/06
+2026-11-09,invast,EUR/JPY,トライオートFX,None,None,None,None,success,2026/11/09
 2026-11-09,jfx,EUR/JPY,JFX,2.0,64.0,-84.0,None,success,2026/11/09
 2026-11-09,sbi,EUR/JPY,SBI FXトレード,None,None,None,None,success,2026/11/09
 2026-11-09,traders_light,EUR/JPY,LIGHT FX,None,None,None,None,success,2026/11/09
 2026-11-09,traders_min,EUR/JPY,みんなのFX,None,None,None,None,success,2026/11/09
+2026-11-10,central_tanshi,EUR/JPY,セントラル短資FX,1.0,67.0,-72.0,11/11,success,2026/11/10
+2026-11-10,dmm,EUR/JPY,DMM FX,None,None,None,None,success,2026/11/10
+2026-11-10,gaitame,EUR/JPY,外為どっとコム,1.0,None,None,None,error,None
+2026-11-10,gmo,EUR/JPY,GMO外貨,1.0,66.0,-66.0,None,success,2026/11/10
+2026-11-10,gmo_click,EUR/JPY,GMOクリック証券,1.0,65.0,-65.0,None,success,2026/11/10
+2026-11-10,hirose,EUR/JPY,ヒロセ通商,None,None,None,None,success,2026/11/10
+2026-11-10,invast,EUR/JPY,トライオートFX,1.0,None,None,None,pending,2026/11/09
+2026-11-10,jfx,EUR/JPY,JFX,None,None,None,None,success,2026/11/10
+2026-11-10,sbi,EUR/JPY,SBI FXトレード,None,None,None,11月12日,success,2026/11/10
+2026-11-10,traders_light,EUR/JPY,LIGHT FX,1.0,63.0,-63.0,None,success,2026/11/10
+2026-11-10,traders_min,EUR/JPY,みんなのFX,1.0,62.0,-62.0,None,success,2026/11/10
