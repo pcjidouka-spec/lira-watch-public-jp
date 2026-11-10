@@ -1454,8 +1454,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-10,central_tanshi,EUR/USD,セントラル短資FX,1,-86.9,71.1,,success,
 2026-11-10,gmo_click,EUR/USD,GMOクリック証券,1,-61.0,61.0,,success,
 2026-11-10,invast,EUR/USD,トライオートFX,2,,,,pending,2026/11/06
-2026-11-10,m2j,EUR/USD,マネースクエア,1.0,,,,success,
 2026-11-10,hirose,EUR/USD,ヒロセ通商,1.0,,,,success,2026/11/10
 2026-11-10,jfx,EUR/USD,JFX,1.0,,,,success,2026/11/10
 2026-11-10,gaitame,EUR/USD,外為どっとコム,1.0,,,,error,
 2026-11-10,gmo,EUR/USD,GMO外貨,1,-65.0,65.0,,success,2026/11/10
+2026-11-10,m2j,EUR/USD,マネースクエア,1.0,,,,success,
