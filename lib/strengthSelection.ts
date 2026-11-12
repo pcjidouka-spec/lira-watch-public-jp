@@ -17,7 +17,8 @@ export function toggleHidden(hidden: readonly string[], code: string): string[] 
 }
 
 /**
- * 「すべて」「通貨だけ」「参照だけ」。いまの期間の系列 (codes) だけを決め直し、
+ * 「すべて」は非表示の一覧を空にする (どの期間の系列も全部表示に戻る。REQ-USDCHF-071)。
+ * 「通貨だけ」「参照だけ」は、いまの期間の系列 (codes) だけを決め直し、
  * いまの期間に無い系列の非表示 (別の期間で選んだもの) は保つ。
  */
 export function presetHidden(
@@ -26,12 +27,12 @@ export function presetHidden(
   references: readonly string[],
   prevHidden: readonly string[] = [],
 ): string[] {
+  if (preset === 'all') return [];
   const kept = prevHidden.filter((c) => !codes.includes(c));
   const hideNow = codes.filter((c) => {
     const isRef = references.includes(c);
     if (preset === 'currencies') return isRef;
-    if (preset === 'references') return !isRef;
-    return false;
+    return !isRef; // 'references'
   });
   return [...kept, ...hideNow];
 }
@@ -60,6 +61,40 @@ export function yDomain(
   const hi = Math.max(...vals);
   const pad = Math.max((hi - lo) * 0.12, 0.002);
   return [lo - pad, hi + pad];
+}
+
+export type LegendEntry = { code: string; value: number | null; pressed: boolean };
+
+/** 部品が描くものすべて (REQ-USDCHF-075)。部品はこれ以外から線・軸・凡例を選び直さない */
+export type StrengthView = {
+  /** 描く線。並びは codes のまま */
+  lines: string[];
+  /** Y 軸の範囲。表示中の線だけで決める */
+  domain: [number, number];
+  /** 凡例。現在値 (暫定の点があればそれ、無ければ最後の確定値) の高い順。非表示も残す */
+  legend: LegendEntry[];
+  /** 全部を非表示にしたときの文言を出すか */
+  showNone: boolean;
+};
+
+export function strengthView(
+  codes: readonly string[],
+  hidden: readonly string[],
+  series: Record<string, readonly (number | null)[]>,
+  provisional: Record<string, number | null> | null,
+): StrengthView {
+  const lines = visibleCodes(codes, hidden);
+  const latest = (c: string): number | null => {
+    const pv = provisional?.[c];
+    if (pv !== undefined && pv !== null) return pv;
+    const s = series[c] ?? [];
+    for (let i = s.length - 1; i >= 0; i--) if (s[i] !== null) return s[i] as number;
+    return null;
+  };
+  const legend = codes
+    .map((c) => ({ code: c, value: latest(c), pressed: !hidden.includes(c) }))
+    .sort((a, b) => (b.value ?? -Infinity) - (a.value ?? -Infinity));
+  return { lines, domain: yDomain(series, provisional, lines), legend, showNone: lines.length === 0 };
 }
 
 /**

@@ -5,6 +5,7 @@ import {
   presetHidden,
   saveHidden,
   toggleHidden,
+  strengthView,
   visibleCodes,
   yDomain,
 } from './strengthSelection';
@@ -55,7 +56,11 @@ describe('presetHidden (すべて・通貨だけ・参照だけ)', () => {
     expect(visibleCodes(CODES, presetHidden('references', CODES, REFS))).toEqual(['CHFTRY_S', 'USDCHF_B']);
   });
 
-  it('いまの期間に無い系列の非表示は保つ (期間を替えて戻っても続く)', () => {
+  it('すべて: 別の期間で隠した系列も含めて非表示を空にする (REQ-USDCHF-071)', () => {
+    expect(presetHidden('all', CODES, REFS, ['GBP', 'USD'])).toEqual([]);
+  });
+
+  it('通貨だけ・参照だけ: いまの期間に無い系列の非表示は保つ (期間を替えて戻っても続く)', () => {
     const h = presetHidden('currencies', CODES, REFS, ['GBP', 'USD']);
     expect(h).toContain('GBP');
     expect(h).not.toContain('USD'); // 通貨だけ = いまの期間の通貨は表示にする
@@ -135,5 +140,54 @@ describe('loadHidden / saveHidden (選んだ内容をブラウザに覚える)',
     };
     expect(loadHidden(() => throwing)).toEqual([]);
     expect(() => saveHidden(() => throwing, ['USD'])).not.toThrow();
+  });
+});
+
+describe('strengthView (部品が描くもの・REQ-USDCHF-075)', () => {
+  const series = {
+    JPY: [1.0, 0.99],
+    USD: [1.0, 1.02],
+    TRY: [1.0, null],
+    USDCHF_B: [1.0, 1.6],
+  };
+  const codes = ['JPY', 'USD', 'TRY', 'USDCHF_B'];
+
+  it('非表示の系列は線にならず、Y 軸にも入らない', () => {
+    const v = strengthView(codes, ['USDCHF_B'], series, null);
+    expect(v.lines).toEqual(['JPY', 'USD', 'TRY']);
+    expect(v.domain[1]).toBeLessThan(1.1);
+    expect(v.showNone).toBe(false);
+    const all = strengthView(codes, [], series, null);
+    expect(all.lines).toEqual(codes);
+    expect(all.domain[1]).toBeGreaterThan(1.6);
+  });
+
+  it('凡例は非表示も残し、押した状態を返す。並びは現在値の高い順', () => {
+    const v = strengthView(codes, ['USDCHF_B'], series, null);
+    expect(v.legend.map((e) => e.code)).toEqual(['USDCHF_B', 'USD', 'TRY', 'JPY']);
+    expect(v.legend.find((e) => e.code === 'USDCHF_B')).toEqual({ code: 'USDCHF_B', value: 1.6, pressed: false });
+    expect(v.legend.find((e) => e.code === 'USD')?.pressed).toBe(true);
+    // 最後が null の系列は、その前の確定値を出す
+    expect(v.legend.find((e) => e.code === 'TRY')?.value).toBe(1.0);
+  });
+
+  it('暫定の点があれば凡例の値と並びはそれで決まる', () => {
+    const v = strengthView(codes, [], series, { JPY: 1.9, USD: null });
+    expect(v.legend[0]).toEqual({ code: 'JPY', value: 1.9, pressed: true });
+    expect(v.legend.find((e) => e.code === 'USD')?.value).toBe(1.02);
+  });
+
+  it('全部を非表示にすると線は無く、文言を出し、Y 軸は既定の幅', () => {
+    const v = strengthView(codes, [...codes], series, null);
+    expect(v.lines).toEqual([]);
+    expect(v.showNone).toBe(true);
+    expect(v.domain).toEqual([0.95, 1.05]);
+    expect(v.legend.every((e) => !e.pressed)).toBe(true);
+  });
+
+  it('知らないコードはその要素だけ無視する (ほかの要素は効く)', () => {
+    const v = strengthView(codes, ['GONE_S', 'USD'], series, null);
+    expect(v.lines).toEqual(['JPY', 'TRY', 'USDCHF_B']);
+    expect(v.legend.map((e) => e.code)).not.toContain('GONE_S');
   });
 });

@@ -7,7 +7,7 @@ import { provisionalPoint, type StrengthLive } from '@/lib/strengthLive';
 import { useLiveTicker } from '@/hooks/useLiveTicker';
 import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes, priceProxyNotes } from '@/lib/strengthCurrencies';
 import {
-  loadHidden, presetHidden, saveHidden, toggleHidden, visibleCodes, yDomain, type SelectionPreset,
+  loadHidden, presetHidden, saveHidden, strengthView, toggleHidden, type SelectionPreset,
 } from '@/lib/strengthSelection';
 
 export type StrengthPeriod = {
@@ -171,7 +171,6 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
     // 読む前に書くと、覚えた内容を空で上書きしてしまう
     if (restored) saveHidden(browserStorage, hidden);
   }, [hidden, restored]);
-  const visible = useMemo(() => visibleCodes(codes, hidden), [codes, hidden]);
 
   const chartData = useMemo(() => {
     if (!p) return [];
@@ -194,26 +193,12 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
     return rows;
   }, [p, codes, prov]);
 
-  // 起点=1.0 からの乖離が小さいので、Y 軸は実データ幅に合わせて詰める。表示中の線だけで決める
-  const domain = useMemo<[number, number]>(
-    () => yDomain(p?.series ?? {}, prov ? prov.values : null, visible),
-    [p, prov, visible],
+  // 線・Y 軸 (表示中の線だけで詰める)・凡例 (現在値の高い順。元アプリと同じく強い通貨が上)・
+  // 全部非表示の文言は、すべてこの戻り値から描く (REQ-USDCHF-075。lib/strengthSelection.ts)
+  const view = useMemo(
+    () => strengthView(codes, hidden, p?.series ?? {}, prov ? prov.values : null),
+    [codes, hidden, p, prov],
   );
-
-  // 凡例は現在値の高い順。元アプリと同じく、強い通貨が上に来る
-  const ranked = useMemo(() => {
-    if (!p) return [];
-    const latest = (c: string) => {
-      const pv = prov?.values[c];
-      if (pv !== undefined && pv !== null) return pv;
-      const s = p.series[c];
-      for (let i = s.length - 1; i >= 0; i--) if (s[i] !== null) return s[i] as number;
-      return null;
-    };
-    return codes
-      .map((c) => ({ code: c, value: latest(c) }))
-      .sort((a, b) => (b.value ?? -Infinity) - (a.value ?? -Infinity));
-  }, [p, codes, prov]);
 
   const bands = useMemo(() => (p ? weekBands(p.dates) : []), [p]);
 
@@ -269,7 +254,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           ))}
           <span className="strength-filter-hint">凡例を押すと線を出し入れできます</span>
         </div>
-        {visible.length === 0 && (
+        {view.showNone && (
           <p className="strength-none">表示する線を凡例で選んでください</p>
         )}
 
@@ -303,7 +288,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                   tick={{ fontSize: narrow ? 9 : 11, fill: '#c9c9c9' }}
                   tickLine={{ stroke: '#3a3a3a' }}
                   axisLine={{ stroke: '#3a3a3a' }}
-                  domain={domain}
+                  domain={view.domain}
                   // 狭い画面は 1.0173 の6桁が入らないので3桁に落とす
                   tickFormatter={(v: number) => v.toFixed(narrow ? 3 : 4)}
                   tickCount={narrow ? 5 : 8}
@@ -323,7 +308,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                     CURRENCY_LABELS[String(name)] ?? String(name),
                   ]}
                 />
-                {visible.map((c) => (
+                {view.lines.map((c) => (
                   <Line
                     key={c}
                     type="monotone"
@@ -352,8 +337,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           </div>
 
           <ul className="strength-legend">
-            {ranked.map(({ code, value }) => {
-              const shown = !hidden.includes(code);
+            {view.legend.map(({ code, value, pressed: shown }) => {
               return (
               <li key={code}>
                 <button
