@@ -22,6 +22,7 @@ export const CURRENCY_LABELS: Record<string, string> = {
   CHFTRY_S: 'CHF/TRY 売り（フラン売り・リラ買い）',
   CHFTRY_B: 'CHF/TRY 買い（フラン買い・リラ売り）',
   USDTRY_S: 'USD/TRY 売り（ドル売り・リラ買い）',
+  USDCHF_B: 'USD/CHF 買い（ドル買い・フラン売り）',
 };
 
 // 参照系列 (破線) の説明。表示中の系列だけから組み立てる (2026-10-06)。
@@ -42,6 +43,12 @@ const USDTRY_REFERENCE_NOTE =
   '持ち続けた場合を表しています。ドルを売ってトルコリラを買う組み合わせで、' +
   '円で調達するかわりに米ドルで調達してリラを買うとどうなるかを見る線です。';
 
+// USD/CHF 買い (2026-11-13 に USD/TRY 売りと並べて追加)
+const USDCHF_REFERENCE_NOTE =
+  '破線の「USD/CHF買」は通貨ではなくポジションです。1万ドル相当を、レバレッジ1倍で' +
+  '持ち続けた場合を表しています。ドルを買ってスイスフランを売る組み合わせで、' +
+  '円で調達するかわりにスイスフランで調達してドルを買うとどうなるかを見る線です。';
+
 /** どの参照系列にも共通する説明。strong は太字で出す部分 */
 export const REFERENCE_NOTE_COMMON = {
   strong: '平均を1.0に揃える計算には入れておらず、平均で割ってもいません',
@@ -56,6 +63,7 @@ export function referenceNotes(refs: readonly string[]): string[] {
   const notes: string[] = [];
   if (refs.includes('CHFTRY_S') || refs.includes('CHFTRY_B')) notes.push(CHFTRY_REFERENCE_NOTE);
   if (refs.includes('USDTRY_S')) notes.push(USDTRY_REFERENCE_NOTE);
+  if (refs.includes('USDCHF_B')) notes.push(USDCHF_REFERENCE_NOTE);
   return notes;
 }
 

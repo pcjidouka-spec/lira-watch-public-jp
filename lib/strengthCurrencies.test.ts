@@ -79,6 +79,23 @@ describe('referenceNotes (参照系列の説明)', () => {
     expect(n.join('')).toContain('1万ドル');
   });
 
+  it('USDCHF_B だけなら USD/CHF 買の説明だけで、USD/TRY・CHF/TRY の説明は出ない', () => {
+    const n = referenceNotes(['USDCHF_B']).join('');
+    expect(n).toContain('USD/CHF買');
+    expect(n).toContain('1万ドル');
+    expect(n).not.toContain('USD/TRY');
+    expect(n).not.toContain('1万フラン');
+  });
+
+  it('参照系列が 4 本なら説明は 3 つ (CHF/TRY・USD/TRY・USD/CHF)', () => {
+    const n = referenceNotes(['CHFTRY_S', 'CHFTRY_B', 'USDTRY_S', 'USDCHF_B']);
+    expect(n).toHaveLength(3);
+    expect(n.join('')).toContain('USD/TRY売');
+    expect(n.join('')).toContain('USD/CHF買');
+    expect(CURRENCY_LABELS.USDCHF_B).toBe('USD/CHF 買い（ドル買い・フラン売り）');
+    expect(CURRENCY_LABELS.USDTRY_S).toBe('USD/TRY 売り（ドル売り・リラ買い）');
+  });
+
   it('参照系列が無ければ何も出ない', () => {
     expect(referenceNotes([])).toEqual([]);
   });

@@ -6,6 +6,9 @@ import { CurrencyFlag } from '@/components/CurrencyFlag';
 import { provisionalPoint, type StrengthLive } from '@/lib/strengthLive';
 import { useLiveTicker } from '@/hooks/useLiveTicker';
 import { CURRENCY_LABELS, REFERENCE_NOTE_COMMON, referenceNotes, priceProxyNotes } from '@/lib/strengthCurrencies';
+import {
+  loadHidden, presetHidden, saveHidden, toggleHidden, visibleCodes, yDomain, type SelectionPreset,
+} from '@/lib/strengthSelection';
 
 export type StrengthPeriod = {
   dates: string[];
@@ -63,6 +66,9 @@ const COLORS: Record<string, string> = {
   CHFTRY_B: '#38bdf8',
   // USD/TRY 売り (2026-10-06 追加)。色相 120。最近傍 (EUR 82 / 142) から 20 度以上離れる。
   USDTRY_S: '#5fd35f',
+  // USD/CHF 買い (2026-11-13 に USD/TRY 売りと並べて追加)。色相 158。最近傍 (ZAR 142 / AUD 173) から
+  // 15 度以上離れる (既存で最も近い USD-AUD の 14 度より狭くしない)。参照系列は破線なので実線の通貨とも分かれる。
+  USDCHF_B: '#34d399',
 };
 
 // 凡例に出す短いコード。通貨は3文字コードのままでよいが、参照系列は
@@ -71,7 +77,18 @@ const DISPLAY_CODES: Record<string, string> = {
   CHFTRY_S: 'CHF/TRY売',
   CHFTRY_B: 'CHF/TRY買',
   USDTRY_S: 'USD/TRY売',
+  USDCHF_B: 'USD/CHF買',
 };
+
+// 線の絞り込みのボタン (2026-11-13。lib/strengthSelection.ts)
+const PRESET_LABELS: [SelectionPreset, string][] = [
+  ['all', 'すべて'],
+  ['currencies', '通貨だけ'],
+  ['references', '参照だけ'],
+];
+
+/** localStorage に触れるだけで例外になる環境があるので、取り出しも try の中で行う (lib 側で包む) */
+const browserStorage = () => (typeof window === 'undefined' ? null : window.localStorage);
 
 const fmtDate = (d: string) => d.slice(5).replace('-', '/');
 const JST_PARTS = new Intl.DateTimeFormat('en-CA', {
@@ -142,6 +159,20 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
 
   const codes = useMemo(() => Object.keys(p?.series ?? {}), [p]);
 
+  // 非表示の系列。初めは全部表示 (サーバの HTML と同じ)。覚えた内容は描いたあとに読む。
+  // ★覚えるのは非表示の側なので、あとから足した系列は表示で始まる (REQ-USDCHF-073)
+  const [hidden, setHidden] = useState<string[]>([]);
+  const [restored, setRestored] = useState(false);
+  React.useEffect(() => {
+    setHidden(loadHidden(browserStorage));
+    setRestored(true);
+  }, []);
+  React.useEffect(() => {
+    // 読む前に書くと、覚えた内容を空で上書きしてしまう
+    if (restored) saveHidden(browserStorage, hidden);
+  }, [hidden, restored]);
+  const visible = useMemo(() => visibleCodes(codes, hidden), [codes, hidden]);
+
   const chartData = useMemo(() => {
     if (!p) return [];
     const rows = p.dates.map((d, i) => {
@@ -163,18 +194,11 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
     return rows;
   }, [p, codes, prov]);
 
-  // 起点=1.0 からの乖離が小さいので、Y 軸は実データ幅に合わせて詰める
-  const domain = useMemo<[number, number]>(() => {
-    const vals = codes.flatMap((c) => [
-      ...(p?.series?.[c] ?? []),
-      prov ? prov.values[c] ?? null : null,
-    ].filter((v): v is number => v !== null));
-    if (!vals.length) return [0.95, 1.05];
-    const lo = Math.min(...vals);
-    const hi = Math.max(...vals);
-    const pad = Math.max((hi - lo) * 0.12, 0.002);
-    return [lo - pad, hi + pad];
-  }, [p, codes, prov]);
+  // 起点=1.0 からの乖離が小さいので、Y 軸は実データ幅に合わせて詰める。表示中の線だけで決める
+  const domain = useMemo<[number, number]>(
+    () => yDomain(p?.series ?? {}, prov ? prov.values : null, visible),
+    [p, prov, visible],
+  );
 
   // 凡例は現在値の高い順。元アプリと同じく、強い通貨が上に来る
   const ranked = useMemo(() => {
@@ -231,6 +255,24 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           </span>
         </div>
 
+        <div className="strength-filter" role="group" aria-label="表示する線">
+          <span className="strength-filter-title">表示</span>
+          {PRESET_LABELS.map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              className="strength-filter-btn"
+              onClick={() => setHidden((h) => presetHidden(key, codes, p.references ?? [], h))}
+            >
+              {label}
+            </button>
+          ))}
+          <span className="strength-filter-hint">凡例を押すと線を出し入れできます</span>
+        </div>
+        {visible.length === 0 && (
+          <p className="strength-none">表示する線を凡例で選んでください</p>
+        )}
+
         <div className="strength-plot">
           <div className="strength-canvas">
             <ResponsiveContainer width="100%" height={narrow ? 300 : 420} minHeight={260}>
@@ -281,7 +323,7 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                     CURRENCY_LABELS[String(name)] ?? String(name),
                   ]}
                 />
-                {codes.map((c) => (
+                {visible.map((c) => (
                   <Line
                     key={c}
                     type="monotone"
@@ -310,8 +352,17 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           </div>
 
           <ul className="strength-legend">
-            {ranked.map(({ code, value }) => (
-              <li key={code} className="strength-legend-item">
+            {ranked.map(({ code, value }) => {
+              const shown = !hidden.includes(code);
+              return (
+              <li key={code}>
+                <button
+                  type="button"
+                  className={shown ? 'strength-legend-item' : 'strength-legend-item off'}
+                  aria-pressed={shown}
+                  title={`${CURRENCY_LABELS[code] ?? code}の線を${shown ? '隠す' : '表示する'}`}
+                  onClick={() => setHidden((h) => toggleHidden(h, code))}
+                >
                 <CurrencyFlag code={code} size={narrow ? 20 : 26} />
                 <span className="strength-legend-code" style={{ color: COLORS[code] }}>
                   {DISPLAY_CODES[code] ?? code}
@@ -321,8 +372,10 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
                 <span className="strength-legend-value">
                   {value === null ? '—' : value.toFixed(4)}
                 </span>
+                </button>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -466,6 +519,48 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           flex-direction: column;
           align-items: center;
           gap: 1px;
+          width: 100%;
+          padding: 0;
+          border: 0;
+          background: none;
+          font: inherit;
+          cursor: pointer;
+        }
+        .strength-legend-item.off {
+          opacity: 0.3;
+        }
+        .strength-legend-item:focus-visible {
+          outline: 1px solid #9ca3af;
+          border-radius: 4px;
+        }
+        .strength-filter {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-wrap: wrap;
+          margin-bottom: 6px;
+        }
+        .strength-filter-title {
+          color: #9ca3af;
+          font-size: 11px;
+        }
+        .strength-filter-btn {
+          padding: 2px 10px;
+          border: 1px solid #374151;
+          background: #111827;
+          color: #e5e7eb;
+          border-radius: 4px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+        .strength-filter-hint {
+          color: #6b7280;
+          font-size: 11px;
+        }
+        .strength-none {
+          margin: 0 0 6px;
+          color: #fbbf24;
+          font-size: 12px;
         }
         .strength-legend-code {
           font-size: 12px;
@@ -544,6 +639,9 @@ export const StrengthChart: React.FC<Props> = ({ data }) => {
           }
           .strength-legend-value {
             font-size: 9px;
+          }
+          .strength-filter-hint {
+            display: none;
           }
           .strength-tabs {
             gap: 5px;

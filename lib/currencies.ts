@@ -77,6 +77,10 @@ const CHFTRY_NOTE =
 const USDTRY_NOTE =
   '※ USD/TRY は各社が円換算した 1万通貨単位あたりの値です。トルコの金利が米国より高いため、買い（ドル買い・リラ売り）は各社ともマイナス、リラを持つ側の売り（ドル売り・リラ買い）はプラスになります。';
 
+// USD/CHF (2026-11-13 に USD/TRY と並べて公開)。値の単位と符号の向きを注記する。
+const USDCHF_NOTE =
+  '※ USD/CHF は各社が円換算した 1万通貨単位あたりの値です。米国の金利がスイスより高いため、買い（ドル買い・フラン売り）は各社ともプラス、売り（ドル売り・フラン買い）はマイナスになります。';
+
 // ★CHF/JPY は買がマイナス・売がプラス。他の対円通貨と符号が逆なので注記する。
 // 並び順は降順のまま (-5 が -94 より上)。表示も生値をそのまま出す。
 const CHFJPY_NOTE =
@@ -101,6 +105,7 @@ const CURRENCY_LIST = [
   { code: 'GBP/USD', label: 'GBP/USD', group: 'cross', published: true, note: CROSS_NOTE, color: '#ef4444', slug: 'gbpusd' },
   { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488', slug: 'chftry' },
   { code: 'USD/TRY', label: '米ドル/トルコリラ', group: 'cross', published: true, note: USDTRY_NOTE, color: '#c2410c', slug: 'usdtry' },
+  { code: 'USD/CHF', label: '米ドル/スイスフラン', group: 'cross', published: true, note: USDCHF_NOTE, color: '#4d7c0f', slug: 'usdchf' },
 ] as const satisfies readonly CurrencyDef[];
 
 export const CURRENCIES: readonly CurrencyDef[] = CURRENCY_LIST;

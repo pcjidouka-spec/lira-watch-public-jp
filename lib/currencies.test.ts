@@ -92,8 +92,8 @@ describe('群の割り当て', () => {
     expect(isCrossPairCode('CHF/JPY')).toBe(false);
   });
 
-  it('クロス群は 4 ペア', () => {
-    expect([...CROSS_PAIR_CODES].sort()).toEqual(['CHF/TRY', 'EUR/USD', 'GBP/USD', 'USD/TRY']);
+  it('クロス群は 5 ペア (USD/TRY を残し USD/CHF を並べる・2026-11-13)', () => {
+    expect([...CROSS_PAIR_CODES].sort()).toEqual(['CHF/TRY', 'EUR/USD', 'GBP/USD', 'USD/CHF', 'USD/TRY']);
   });
 });
 
@@ -155,6 +155,7 @@ describe('★public 配下のファイルパス', () => {
     ['AUD/JPY', '/providers_config_aud.json', '/data/master_history_aud.csv'],
     ['CHF/TRY', '/providers_config_chftry.json', '/data/master_history_chftry.csv'],
     ['USD/TRY', '/providers_config_usdtry.json', '/data/master_history_usdtry.csv'],
+    ['USD/CHF', '/providers_config_usdchf.json', '/data/master_history_usdchf.csv'],
   ];
 
   it.each(OLD_LADDER)('%s は従来と同じパスを指す', (code, cfg, hist) => {
