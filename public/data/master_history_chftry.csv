@@ -429,9 +429,15 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-10,traders_light,CHF/TRY,LIGHT FX,1,-1511.0,1505.2,,success,
 2026-11-10,ig,CHF/TRY,IG証券,,,,,success,
 2026-11-10,hirose,CHF/TRY,ヒロセ通商,2.0,,,,error,
-2026-11-11,gaitame,CHF/TRY,外為どっとコム,1,,,,pending,2026/11/10
+2026-11-11,gaitame,CHF/TRY,外為どっとコム,3,-1727.0,1505.0,,success,2026/11/11
 2026-11-11,hirose,CHF/TRY,ヒロセ通商,1,-1810.7,1589.5,,success,
-2026-11-11,invast,CHF/TRY,トライオートFX,1,,,,pending,2026/11/10
+2026-11-11,invast,CHF/TRY,トライオートFX,3,-1850.0,1450.0,,success,2026/11/11
 2026-11-11,traders_min,CHF/TRY,みんなのFX,3,-1491.53,1485.9,,success,
 2026-11-11,traders_light,CHF/TRY,LIGHT FX,3,-1491.33,1485.7,,success,
-2026-11-11,ig,CHF/TRY,IG証券,,,,,pending,
+2026-11-11,ig,CHF/TRY,IG証券,1.0,-1620.52,1509.98,,success,2026/11/11
+2026-11-12,gaitame,CHF/TRY,外為どっとコム,3,,,,pending,2026/11/11
+2026-11-12,hirose,CHF/TRY,ヒロセ通商,3,-1821.0,1598.53,,success,
+2026-11-12,invast,CHF/TRY,トライオートFX,3,,,,pending,2026/11/11
+2026-11-12,traders_min,CHF/TRY,みんなのFX,1,-1501.0,1495.2,,success,
+2026-11-12,traders_light,CHF/TRY,LIGHT FX,1,-1501.1,1495.3,,success,
+2026-11-12,ig,CHF/TRY,IG証券,,,,,pending,

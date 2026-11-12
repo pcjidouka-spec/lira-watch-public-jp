@@ -1464,9 +1464,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-11,traders_light,EUR/USD,LIGHT FX,3,-65.57,65.53,,success,
 2026-11-11,central_tanshi,EUR/USD,セントラル短資FX,3,-87.33,71.47,,success,
 2026-11-11,gmo_click,EUR/USD,GMOクリック証券,3,-59.0,59.0,,success,
-2026-11-11,invast,EUR/USD,トライオートFX,1,,,,pending,2026/11/10
+2026-11-11,invast,EUR/USD,トライオートFX,3,-100.0,40.0,,success,2026/11/11
 2026-11-11,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-11-11,hirose,EUR/USD,ヒロセ通商,1,-84.1,65.1,,success,2026/11/11
 2026-11-11,jfx,EUR/USD,JFX,1,-84.0,65.0,,success,2026/11/11
-2026-11-11,gaitame,EUR/USD,外為どっとコム,1,,,,pending,2026/11/10
+2026-11-11,gaitame,EUR/USD,外為どっとコム,3,-89.33,65.33,,success,2026/11/11
 2026-11-11,gmo,EUR/USD,GMO外貨,3,-65.0,65.0,,success,2026/11/11
+2026-11-12,dmm,EUR/USD,DMM FX,3,-75.0,72.0,,success,
+2026-11-12,sbi,EUR/USD,SBI FXトレード,3,-69.0,64.0,,success,
+2026-11-12,traders_light,EUR/USD,LIGHT FX,1,-65.6,65.5,,success,
+2026-11-12,central_tanshi,EUR/USD,セントラル短資FX,1,-87.8,71.8,,success,
+2026-11-12,gmo_click,EUR/USD,GMOクリック証券,1,-64.0,64.0,,success,
+2026-11-12,invast,EUR/USD,トライオートFX,3,,,,pending,2026/11/11
+2026-11-12,m2j,EUR/USD,マネースクエア,3.0,-85.0,51.0,,success,
+2026-11-12,hirose,EUR/USD,ヒロセ通商,3,-84.7,65.53,,success,2026/11/12
+2026-11-12,jfx,EUR/USD,JFX,3,-84.67,65.33,,success,2026/11/12
+2026-11-12,gaitame,EUR/USD,外為どっとコム,3,,,,pending,2026/11/11
+2026-11-12,gmo,EUR/USD,GMO外貨,1,-65.0,65.0,,success,2026/11/12
