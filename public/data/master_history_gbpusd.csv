@@ -1137,7 +1137,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-12,traders_light,GBP/USD,LIGHT FX,1.0,,,,error,
 2026-11-12,central_tanshi,GBP/USD,セントラル短資FX,1,0.0,-3.1,,success,
 2026-11-12,gmo_click,GBP/USD,GMOクリック証券,1,-2.0,2.0,,success,
-2026-11-12,invast,GBP/USD,トライオートFX,3,,,,pending,2026/11/11
+2026-11-12,invast,GBP/USD,トライオートFX,1,-26.5,0.5,,success,
 2026-11-12,hirose,GBP/USD,ヒロセ通商,3,-8.0,1.6,,success,2026/11/12
 2026-11-12,jfx,GBP/USD,JFX,3,-7.67,1.33,,success,2026/11/12
 2026-11-12,gaitame,GBP/USD,外為どっとコム,3,,,,pending,2026/11/11

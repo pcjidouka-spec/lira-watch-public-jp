@@ -1,0 +1,16 @@
+{
+  "_note": "USD/CHF (米ドル/スイスフラン) の取扱11社。取得は scrape_cross_pairs.py --currency usdchf (10社) と backfill_ig.py (IG証券) が担当し、本ファイルは業者名・キャンペーンリンク等の HP 表示メタデータとして使う。USD/CHF は買がプラス・売がマイナスで、値は全て1万通貨・1日あたり(円)に正規化済み。マネースクエアは USD/CHF を扱っていない (2026-11-12 確認)。spec: docs/superpowers/specs/2026-11-12-usdchf-replaces-usdtry-design.md",
+  "providers": [
+    {"id": "gaitame", "name": "外為どっとコム", "url": "https://www.gaitame.com/service/fx/swap-cal.html", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.gaitame.com/campaign/"},
+    {"id": "hirose", "name": "ヒロセ通商", "url": "https://hirose-fx.co.jp/contents/news/Swap", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://hirose-fx.co.jp/category/campaign_list/"},
+    {"id": "jfx", "name": "JFX", "url": "https://www.jfx.co.jp/trading_rule/swap/", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.jfx.co.jp/campaign/index.html"},
+    {"id": "dmm", "name": "DMM FX", "url": "https://fx.dmm.com/fx/service/swapcalendar/", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://fx.dmm.com/campaign/"},
+    {"id": "sbi", "name": "SBI FXトレード", "url": "https://www.sbifxt.co.jp/market/swap_calendar.html", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.sbifxt.co.jp/campaign/"},
+    {"id": "traders_light", "name": "LIGHT FX", "url": "https://lightfx.jp/market/swap/", "currency_pair_selector": "米ドル/スイスフラン（USDCHF）", "campaign_url": "https://lightfx.jp/campaign/"},
+    {"id": "traders_min", "name": "みんなのFX", "url": "https://min-fx.jp/market/swap/", "currency_pair_selector": "米ドル/スイスフラン（USDCHF）", "campaign_url": "https://min-fx.jp/campaign/"},
+    {"id": "central_tanshi", "name": "セントラル短資FX", "url": "https://www.central-tanshifx.com/market/swapcalendar/", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.central-tanshifx.com/campaign/"},
+    {"id": "gmo_click", "name": "GMOクリック証券", "url": "https://www.click-sec.com/corp/guide/fxneo/swplog/?year=2026&month=11&pare=USDCHF", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.click-sec.com/corp/campaign/"},
+    {"id": "invast", "name": "トライオートFX", "url": "https://www.invast.jp/triauto/swap-calendar/", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.invast.jp/triauto/campaign/"},
+    {"id": "ig", "name": "IG証券", "url": "https://www.ig.com/jp/forex/swap-point", "currency_pair_selector": "米ドル/スイスフラン（USD/CHF）", "campaign_url": "https://www.ig.com/jp/campaign-index"}
+  ]
+}
