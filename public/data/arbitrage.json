@@ -1,19 +1,14 @@
 {
-  "generated_at": "2026-11-13 10:20:27",
+  "generated_at": "2026-11-14 06:03:36",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-11-13",
+  "rate_as_of": "2026-11-14",
   "baseline": false,
   "excluded_providers": [
     "saxo"
   ],
-  "excluded_pairs": [
-    {
-      "pair": "GBP/USD",
-      "reason": "G4: GBP/USD dmm のbuyが前回比 125% 変動 (-4.0 -> 1.0)。キャンペーンや金利改定なら翌日から自動的に通ります"
-    }
-  ],
+  "excluded_pairs": [],
   "top": [
     {
       "rank": 1,
@@ -22,15 +17,15 @@
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "swap": 28.0,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "sell": {
         "provider_id": "traders_light",
         "name": "LIGHT FX",
         "swap": -24.0,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "arb_per_day": 4.0,
       "notional_2leg": 63520,
@@ -46,14 +41,14 @@
           "median_pct": 17.2
         },
         "all": {
-          "days": 197,
+          "days": 198,
           "min_pct": 1.9,
           "max_pct": 183.9,
           "avg_pct": 22.4,
           "median_pct": 17.2
         },
         "first_date": "2025-12-01",
-        "last_date": "2026-11-12",
+        "last_date": "2026-11-13",
         "step_count": 75,
         "steps": [
           {
@@ -118,15 +113,15 @@
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "swap": 1.2,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "sell": {
         "provider_id": "traders_light_light",
         "name": "LIGHT FX（LIGHT）",
         "swap": -0.6,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "arb_per_day": 0.6,
       "notional_2leg": 9688,
@@ -137,19 +132,19 @@
         "recent": {
           "days": 20,
           "min_pct": 15.1,
-          "max_pct": 26.4,
-          "avg_pct": 22.2,
+          "max_pct": 22.6,
+          "avg_pct": 22.0,
           "median_pct": 22.6
         },
         "all": {
-          "days": 129,
+          "days": 130,
           "min_pct": 15.1,
           "max_pct": 60.3,
-          "avg_pct": 28.6,
+          "avg_pct": 28.5,
           "median_pct": 26.4
         },
         "first_date": "2026-04-10",
-        "last_date": "2026-11-12",
+        "last_date": "2026-11-13",
         "step_count": 32,
         "steps": [
           {
@@ -208,6 +203,102 @@
     },
     {
       "rank": 3,
+      "pair": "CHF/TRY",
+      "buy": {
+        "provider_id": "traders_light",
+        "name": "LIGHT FX",
+        "swap": -1512.2,
+        "as_of": "2026-11-13",
+        "actual_date": null
+      },
+      "sell": {
+        "provider_id": "ig",
+        "name": "IG証券",
+        "swap": 1636.16,
+        "as_of": "2026-11-12",
+        "actual_date": "2026-11-12"
+      },
+      "arb_per_day": 123.96,
+      "notional_2leg": 3829217,
+      "capital": 382921.7,
+      "annual_pct": 11.8,
+      "meets_threshold": false,
+      "history": {
+        "recent": {
+          "days": 20,
+          "min_pct": 0.5,
+          "max_pct": 35.4,
+          "avg_pct": 19.7,
+          "median_pct": 21.1
+        },
+        "all": {
+          "days": 76,
+          "min_pct": 0.5,
+          "max_pct": 81.0,
+          "avg_pct": 40.5,
+          "median_pct": 39.1
+        },
+        "first_date": "2026-07-22",
+        "last_date": "2026-11-12",
+        "step_count": 18,
+        "steps": [
+          {
+            "date": "2026-10-15",
+            "side": "sell",
+            "provider_id": "ig",
+            "name": "IG証券",
+            "change_pct": 5.5
+          },
+          {
+            "date": "2026-10-21",
+            "side": "buy",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": 18.5
+          },
+          {
+            "date": "2026-10-22",
+            "side": "buy",
+            "provider_id": "traders_light",
+            "name": "LIGHT FX",
+            "change_pct": -16.6
+          },
+          {
+            "date": "2026-11-02",
+            "side": "sell",
+            "provider_id": "ig",
+            "name": "IG証券",
+            "change_pct": -6.6
+          },
+          {
+            "date": "2026-11-10",
+            "side": "sell",
+            "provider_id": "gaitame",
+            "name": "外為どっとコム",
+            "change_pct": -6.7
+          }
+        ],
+        "last_step": {
+          "date": "2026-11-10",
+          "side": "sell",
+          "provider_id": "gaitame",
+          "name": "外為どっとコム",
+          "change_pct": -6.7
+        },
+        "quiet_median_pct": 2.42
+      },
+      "spread": {
+        "available": false,
+        "missing": [
+          {
+            "side": "sell",
+            "provider_id": "ig"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 4,
       "pair": "MXN/JPY",
       "buy": {
         "provider_id": "gmo",
@@ -303,117 +394,21 @@
       }
     },
     {
-      "rank": 4,
-      "pair": "CHF/TRY",
-      "buy": {
-        "provider_id": "traders_min",
-        "name": "みんなのFX",
-        "swap": -1501.0,
-        "as_of": "2026-11-12",
-        "actual_date": null
-      },
-      "sell": {
-        "provider_id": "hirose",
-        "name": "ヒロセ通商",
-        "swap": 1598.53,
-        "as_of": "2026-11-12",
-        "actual_date": null
-      },
-      "arb_per_day": 97.53,
-      "notional_2leg": 3829217,
-      "capital": 382921.7,
-      "annual_pct": 9.3,
-      "meets_threshold": false,
-      "history": {
-        "recent": {
-          "days": 20,
-          "min_pct": 0.5,
-          "max_pct": 35.4,
-          "avg_pct": 19.5,
-          "median_pct": 21.1
-        },
-        "all": {
-          "days": 76,
-          "min_pct": 0.5,
-          "max_pct": 81.0,
-          "avg_pct": 40.5,
-          "median_pct": 39.1
-        },
-        "first_date": "2026-07-22",
-        "last_date": "2026-11-12",
-        "step_count": 18,
-        "steps": [
-          {
-            "date": "2026-10-15",
-            "side": "sell",
-            "provider_id": "ig",
-            "name": "IG証券",
-            "change_pct": 5.5
-          },
-          {
-            "date": "2026-10-21",
-            "side": "buy",
-            "provider_id": "gaitame",
-            "name": "外為どっとコム",
-            "change_pct": 18.5
-          },
-          {
-            "date": "2026-10-22",
-            "side": "buy",
-            "provider_id": "traders_light",
-            "name": "LIGHT FX",
-            "change_pct": -16.6
-          },
-          {
-            "date": "2026-11-02",
-            "side": "sell",
-            "provider_id": "ig",
-            "name": "IG証券",
-            "change_pct": -6.6
-          },
-          {
-            "date": "2026-11-10",
-            "side": "sell",
-            "provider_id": "gaitame",
-            "name": "外為どっとコム",
-            "change_pct": -6.7
-          }
-        ],
-        "last_step": {
-          "date": "2026-11-10",
-          "side": "sell",
-          "provider_id": "gaitame",
-          "name": "外為どっとコム",
-          "change_pct": -6.7
-        },
-        "quiet_median_pct": 2.17
-      },
-      "spread": {
-        "available": false,
-        "missing": [
-          {
-            "side": "sell",
-            "provider_id": "hirose"
-          }
-        ]
-      }
-    },
-    {
       "rank": 5,
       "pair": "ZAR/JPY",
       "buy": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
         "swap": 16.0,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "sell": {
         "provider_id": "sbi",
         "name": "SBI FXトレード",
         "swap": -12.0,
-        "as_of": "2026-11-12",
-        "actual_date": "2026-11-12"
+        "as_of": "2026-11-13",
+        "actual_date": "2026-11-13"
       },
       "arb_per_day": 4.0,
       "notional_2leg": 190951,
@@ -425,18 +420,18 @@
           "days": 20,
           "min_pct": 2.1,
           "max_pct": 7.6,
-          "avg_pct": 5.3,
+          "avg_pct": 5.4,
           "median_pct": 5.9
         },
         "all": {
-          "days": 76,
+          "days": 77,
           "min_pct": 1.0,
           "max_pct": 13.6,
           "avg_pct": 7.4,
           "median_pct": 6.1
         },
         "first_date": "2026-07-16",
-        "last_date": "2026-11-12",
+        "last_date": "2026-11-13",
         "step_count": 33,
         "steps": [
           {
