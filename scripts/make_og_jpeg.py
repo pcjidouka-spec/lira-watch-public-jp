@@ -6,8 +6,10 @@
   記事ページの og:image は lib/ogImage.ts がこの写しに向ける。ページの中に見せる画像は WebP のまま。
 
 使い方:
-  py scripts/make_og_jpeg.py           # data/articles.ts のサムネイルと既定の画像のうち、写しが無いものを作る
+  py scripts/make_og_jpeg.py           # data/articles.ts のサムネイルと既定の画像のうち、写しが無いもの・
+                                       # WebP より古いもの (サムネイルを作り直した) を作る
   py scripts/make_og_jpeg.py --force   # すべて作り直す
+★サムネイルを作ったり作り直したりしたら、どの道具で作ったかによらずこれを流す。
 サムネイルを作る 2 つのスクリプト (make_campaign_thumbnail.py・crop_and_place_thumbnail.py) は、
 WebP を保存したあとに save_og_jpeg を呼ぶ。作り忘れは lib/ogImage.test.ts が赤で知らせる。
 """
@@ -44,20 +46,26 @@ def save_og_jpeg(webp_path, force=True):
 def thumbnails():
     with open(ARTICLES_PATH, encoding="utf-8") as f:
         text = f.read()
-    names = [m.group(1) for m in re.finditer(r"thumbnail:\s*'/images/([^']+\.webp)'", text)]
+    # lib/ogImage.ts と同じ決まり: /images/ の下の .webp (大文字小文字を区別しない)。写しの名前はファイル名だけ
+    names = [m.group(1) for m in re.finditer(r"thumbnail:\s*['\"]/images/([^'\"]+\.webp)['\"]", text, re.I)]
     return sorted(set(names + [DEFAULT_WEBP]))
+
+
+def is_stale(src, out):
+    """写しが無いか、元の WebP より古い (サムネイルを作り直した) なら True。"""
+    return not os.path.exists(out) or os.path.getmtime(out) < os.path.getmtime(src)
 
 
 def main(argv):
     force = "--force" in argv
     made = 0
     for name in thumbnails():
-        src = os.path.join(IMAGES_DIR, name)
+        src = os.path.join(IMAGES_DIR, *name.split("/"))
         if not os.path.exists(src):
             print("MISSING", src)
             continue
-        stem = os.path.splitext(name)[0]
-        if force or not os.path.exists(os.path.join(OG_DIR, stem + ".jpg")):
+        stem = os.path.splitext(os.path.basename(name))[0]
+        if force or is_stale(src, os.path.join(OG_DIR, stem + ".jpg")):
             save_og_jpeg(src)
             made += 1
     print("made", made)

@@ -11,13 +11,16 @@ import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { articles, Article } from '../../data/articles';
 import { BlogLayout } from '../../components/BlogLayout';
-import { ogImagePath } from '../../lib/ogImage';
+import { existsSync } from 'fs';
+import { join } from 'path';
+import { ogImageUrl } from '../../lib/ogImage';
 
 interface ArticlePageProps {
   article: Article;
+  ogImage: string;
 }
 
-export default function ArticlePage({ article }: ArticlePageProps) {
+export default function ArticlePage({ article, ogImage }: ArticlePageProps) {
   if (!article) {
     return <div>記事が見つかりません。</div>;
   }
@@ -42,8 +45,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:title" content={article.share_title || article.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
-        {/* ★og:image は JPEG の写し (ブログ村は WebP を取れない。lib/ogImage.ts) */}
-        <meta property="og:image" content={`https://www.lira-watch.sbs${ogImagePath(article.thumbnail)}`} />
+        {/* og:image は lib/ogImage.ts (JPEG の写し) */}
+        <meta property="og:image" content={ogImage} />
         <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
         <meta property="og:locale" content="ja_JP" />
 
@@ -382,9 +385,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const article = articles.find((a) => a.id === params?.id);
+  // og:image は JPEG の写し。写しが無ければ既定の画像に落とす (lib/ogImage.ts)
+  const ogImage = ogImageUrl(article?.thumbnail, (p) =>
+    existsSync(join(process.cwd(), 'public', ...p.split('/').filter(Boolean))));
   return {
     props: {
       article,
+      ogImage,
     },
   };
 };
