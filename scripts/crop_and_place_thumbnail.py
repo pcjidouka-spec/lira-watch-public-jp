@@ -3,6 +3,8 @@ import sys
 import re
 from PIL import Image, ImageDraw, ImageFont
 
+from make_og_jpeg import save_og_jpeg
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARTICLES_PATH = os.path.join(BASE_DIR, "data", "articles.ts")
 IMAGES_DIR = os.path.join(BASE_DIR, "public", "images")
@@ -45,6 +47,8 @@ def process_thumbnail(input_path, output_path, text_lines=None):
         img = img.resize((1200, round(img.height * 1200 / img.width)), Image.LANCZOS)
     img.convert("RGB").save(output_path, "WEBP", quality=82, method=6)
     print(f"Successfully processed thumbnail to {output_path}")
+    # ★og:image 用の JPEG の写し (ブログ村は WebP を取れない。scripts/make_og_jpeg.py)
+    save_og_jpeg(output_path)
 
 
 def overlay_text(img, text_lines):

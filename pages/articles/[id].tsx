@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { articles, Article } from '../../data/articles';
 import { BlogLayout } from '../../components/BlogLayout';
+import { ogImagePath } from '../../lib/ogImage';
 
 interface ArticlePageProps {
   article: Article;
@@ -41,10 +42,8 @@ export default function ArticlePage({ article }: ArticlePageProps) {
         <meta property="og:title" content={article.share_title || article.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.lira-watch.sbs/articles/${article.id}`} />
-        <meta
-          property="og:image"
-          content={article.thumbnail ? `https://www.lira-watch.sbs${article.thumbnail}` : "https://www.lira-watch.sbs/images/An_anime-style_Japanese_otaku_person_looking_at_a_-1757952948058.webp"}
-        />
+        {/* ★og:image は JPEG の写し (ブログ村は WebP を取れない。lib/ogImage.ts) */}
+        <meta property="og:image" content={`https://www.lira-watch.sbs${ogImagePath(article.thumbnail)}`} />
         <meta property="og:description" content={article.content.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().substring(0, 120) + '...'} />
         <meta property="og:locale" content="ja_JP" />
 

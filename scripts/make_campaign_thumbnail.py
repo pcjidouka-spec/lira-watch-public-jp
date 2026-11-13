@@ -11,6 +11,8 @@ AI 生成画像を使う旧スタイルと違い、毎月同じ見た目を決�
 import os
 from PIL import Image, ImageDraw, ImageFont
 
+from make_og_jpeg import save_og_jpeg
+
 CONFIG = {
     "article_id": "triauto-campaign-20260810",
     "brand": "トライオートFX",       # 上部ピル
@@ -99,6 +101,8 @@ def main(cfg):
         img = img.resize((1200, round(img.height * 1200 / img.width)), Image.LANCZOS)
     img.convert("RGB").save(out, "WEBP", quality=82, method=6)
     print("saved", out, os.path.getsize(out), img.size)
+    # ★og:image 用の JPEG の写し (ブログ村は WebP を取れない。scripts/make_og_jpeg.py)
+    save_og_jpeg(out)
 
 
 if __name__ == "__main__":
