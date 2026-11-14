@@ -2,7 +2,7 @@
   "currency_pair": "MXN/JPY",
   "target_date": "2026-11-13",
   "period_label": "直近約2週間",
-  "generated_at": "2026-11-13T21:07:11.259Z",
+  "generated_at": "2026-11-14T20:34:28.094Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
@@ -43,8 +43,8 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 11.89,
-      "sample_days": 20
+      "avg": 11.892307692307694,
+      "sample_days": 13
     },
     {
       "provider_id": "hirose",
@@ -117,8 +117,8 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -11.89,
-      "sample_days": 20
+      "avg": -11.892307692307694,
+      "sample_days": 13
     },
     {
       "provider_id": "dmm",
