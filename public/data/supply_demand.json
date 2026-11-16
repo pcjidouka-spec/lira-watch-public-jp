@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-11 06:01:22",
- "as_of": "2026-11-03",
+ "generated_at": "2026-11-17 06:04:55",
+ "as_of": "2026-11-10",
  "stale_currencies": [],
  "stale_after_days": 12,
  "gaps": [],
@@ -2482,6 +2482,14 @@
      "s": "none",
      "dir": 0,
      "p": 121.8084
+    },
+    {
+     "d": "2026-11-10",
+     "v": 0.2685,
+     "z": 0.16,
+     "s": "none",
+     "dir": 0,
+     "p": 121.8803
     }
    ],
    "episodes": [
@@ -2701,14 +2709,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.31,
-    "date": "2026-11-03",
+    "z": 0.16,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 41574
+    "mean_open_interest": 41606
    }
   },
   {
@@ -5154,6 +5162,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.006309
+    },
+    {
+     "d": "2026-11-10",
+     "v": 0.3166,
+     "z": 0.97,
+     "s": "none",
+     "dir": 0,
+     "p": 0.00632
     }
    ],
    "episodes": [
@@ -5321,14 +5337,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.73,
-    "date": "2026-11-03",
+    "z": 0.97,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 270977
+    "mean_open_interest": 271363
    }
   },
   {
@@ -7774,6 +7790,14 @@
      "s": "none",
      "dir": 0,
      "p": 1.1192
+    },
+    {
+     "d": "2026-11-10",
+     "v": -0.1596,
+     "z": -0.57,
+     "s": "none",
+     "dir": 0,
+     "p": 1.1154
     }
    ],
    "episodes": [
@@ -8147,14 +8171,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -1.34,
-    "date": "2026-11-03",
+    "z": -0.57,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 734096
+    "mean_open_interest": 734490
    }
   },
   {
@@ -10600,6 +10624,14 @@
      "s": "none",
      "dir": 0,
      "p": 1.3419
+    },
+    {
+     "d": "2026-11-10",
+     "v": -0.1966,
+     "z": 1.61,
+     "s": "caution",
+     "dir": 1,
+     "p": 1.3371
     }
    ],
    "episodes": [
@@ -10960,19 +10992,27 @@
      "dir": -1,
      "z": -1.66,
      "weeks": 3
+    },
+    {
+     "start": "2026-10-27",
+     "end": "2026-10-27",
+     "stage": "caution",
+     "dir": 1,
+     "z": 1.61,
+     "weeks": 1
     }
    ],
    "current": {
-    "stage": "none",
-    "dir": 0,
-    "z": 1.13,
-    "date": "2026-11-03",
+    "stage": "caution",
+    "dir": 1,
+    "z": 1.61,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 222856
+    "mean_open_interest": 222846
    }
   },
   {
@@ -13418,6 +13458,14 @@
      "s": "none",
      "dir": 0,
      "p": 1.218324
+    },
+    {
+     "d": "2026-11-10",
+     "v": -0.0724,
+     "z": 1.1,
+     "s": "none",
+     "dir": 0,
+     "p": 1.220703
     }
    ],
    "episodes": [
@@ -13551,14 +13599,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": 0.69,
-    "date": "2026-11-03",
+    "z": 1.1,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 66641
+    "mean_open_interest": 66836
    }
   },
   {
@@ -16004,6 +16052,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.6969
+    },
+    {
+     "d": "2026-11-10",
+     "v": -0.4301,
+     "z": -0.48,
+     "s": "none",
+     "dir": 0,
+     "p": 0.6875
     }
    ],
    "episodes": [
@@ -16327,14 +16383,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -0.84,
-    "date": "2026-11-03",
+    "z": -0.48,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 191441
+    "mean_open_interest": 191969
    }
   },
   {
@@ -18780,6 +18836,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.060207
+    },
+    {
+     "d": "2026-11-10",
+     "v": 0.2953,
+     "z": -0.19,
+     "s": "none",
+     "dir": 0,
+     "p": 0.060492
     }
    ],
    "episodes": [
@@ -19095,14 +19159,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -0.51,
-    "date": "2026-11-03",
+    "z": -0.19,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 24808
+    "mean_open_interest": 24850
    }
   },
   {
@@ -21548,6 +21612,14 @@
      "s": "none",
      "dir": 0,
      "p": 0.053255
+    },
+    {
+     "d": "2026-11-10",
+     "v": 0.0776,
+     "z": 0.36,
+     "s": "none",
+     "dir": 0,
+     "p": 0.053698
     }
    ],
    "episodes": [
@@ -21881,14 +21953,14 @@
    "current": {
     "stage": "none",
     "dir": 0,
-    "z": -0.58,
-    "date": "2026-11-03",
+    "z": 0.36,
+    "date": "2026-11-10",
     "active": false
    },
    "stats": {
-    "weeks": 305,
+    "weeks": 306,
     "first": "2021-01-05",
-    "mean_open_interest": 201447
+    "mean_open_interest": 201707
    }
   }
  ],
