@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-19 06:05:00",
+  "generated_at": "2026-11-19 23:23:00",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.25,
-  "jpy_rate_as_of": "2026-11-10",
+  "jpy_rate_as_of": "2026-11-17",
   "rate_source": "bis",
   "fx_as_of": "2026-11-19",
   "spread_manual_as_of": "2026-08-29",
@@ -18,10 +18,10 @@
     {
       "currency": "HUF",
       "policy_rate": 5.5,
-      "policy_rate_as_of": "2026-11-04",
+      "policy_rate_as_of": "2026-11-11",
       "policy_rate_note": null,
-      "fx_rate": 0.4790065786763515,
-      "policy_implied_carry": 0.56,
+      "fx_rate": 0.47473529946540055,
+      "policy_implied_carry": 0.55,
       "best": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
@@ -29,7 +29,7 @@
         "swap": 1.2,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 215.2,
+      "payout_ratio_pct": 217.1,
       "median_swap": 0.6,
       "second": {
         "provider_id": "invast",
@@ -56,10 +56,10 @@
     {
       "currency": "MXN",
       "policy_rate": 6.25,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-17",
       "policy_rate_note": null,
-      "fx_rate": 8.64244477477789,
-      "policy_implied_carry": 11.84,
+      "fx_rate": 8.510783162266591,
+      "policy_implied_carry": 11.66,
       "best": {
         "provider_id": "gmo",
         "name": "GMO外貨",
@@ -67,7 +67,7 @@
         "swap": 15.5,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 130.9,
+      "payout_ratio_pct": 132.9,
       "median_swap": 11.2,
       "second": {
         "provider_id": "invast",
@@ -94,10 +94,10 @@
     {
       "currency": "USD",
       "policy_rate": 3.875,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-17",
       "policy_rate_note": null,
-      "fx_rate": 159.38795027095952,
-      "policy_implied_carry": 114.63,
+      "fx_rate": 159.3625498007968,
+      "policy_implied_carry": 114.61,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -132,10 +132,10 @@
     {
       "currency": "EUR",
       "policy_rate": 2.5,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-17",
       "policy_rate_note": null,
-      "fx_rate": 175.28483786152498,
-      "policy_implied_carry": 60.03,
+      "fx_rate": 174.88632388947184,
+      "policy_implied_carry": 59.89,
       "best": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -143,7 +143,7 @@
         "swap": 68.0,
         "as_of": "2026-11-17"
       },
-      "payout_ratio_pct": 113.3,
+      "payout_ratio_pct": 113.5,
       "median_swap": 64.0,
       "second": {
         "provider_id": "dmm",
@@ -170,10 +170,10 @@
     {
       "currency": "PLN",
       "policy_rate": 3.75,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-17",
       "policy_rate_note": null,
-      "fx_rate": 39.8120869495979,
-      "policy_implied_carry": 27.27,
+      "fx_rate": 39.632213062777424,
+      "policy_implied_carry": 27.15,
       "best": {
         "provider_id": "traders_light",
         "name": "LIGHT FX",
@@ -181,7 +181,7 @@
         "swap": 29.0,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 106.3,
+      "payout_ratio_pct": 106.8,
       "median_swap": 28.0,
       "second": {
         "provider_id": "invast",
@@ -208,10 +208,10 @@
     {
       "currency": "ZAR",
       "policy_rate": 7.25,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-16",
       "policy_rate_note": null,
-      "fx_rate": 9.413891137762883,
-      "policy_implied_carry": 15.47,
+      "fx_rate": 9.245476650548719,
+      "policy_implied_carry": 15.2,
       "best": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
@@ -219,7 +219,7 @@
         "swap": 16.0,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 103.4,
+      "payout_ratio_pct": 105.3,
       "median_swap": 14.1,
       "second": {
         "provider_id": "central_tanshi",
@@ -246,10 +246,10 @@
     {
       "currency": "AUD",
       "policy_rate": 4.85,
-      "policy_rate_as_of": "2026-11-05",
+      "policy_rate_as_of": "2026-11-12",
       "policy_rate_note": null,
-      "fx_rate": 107.36525660296329,
-      "policy_implied_carry": 105.89,
+      "fx_rate": 107.11225364181662,
+      "policy_implied_carry": 105.64,
       "best": {
         "provider_id": "central_tanshi",
         "name": "セントラル短資FX",
@@ -257,7 +257,7 @@
         "swap": 107.0,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 101.0,
+      "payout_ratio_pct": 101.3,
       "median_swap": 104.0,
       "second": {
         "provider_id": "invast",
@@ -284,10 +284,10 @@
     {
       "currency": "TRY",
       "policy_rate": 36.0,
-      "policy_rate_as_of": "2026-11-06",
+      "policy_rate_as_of": "2026-11-13",
       "policy_rate_note": null,
-      "fx_rate": 3.1592182830280477,
-      "policy_implied_carry": 30.08,
+      "fx_rate": 3.1569742296193635,
+      "policy_implied_carry": 30.06,
       "best": {
         "provider_id": "gmo_click",
         "name": "GMOクリック証券",
@@ -295,13 +295,13 @@
         "swap": 28.0,
         "as_of": "2026-11-18"
       },
-      "payout_ratio_pct": 93.1,
+      "payout_ratio_pct": 93.2,
       "median_swap": 24.0,
       "second": {
-        "provider_id": "traders_min_light",
-        "name": "みんなのFX（LIGHT）",
-        "group": "traders",
-        "swap": 25.6
+        "provider_id": "click365_okasan",
+        "name": "クリック365",
+        "group": "click365_okasan",
+        "swap": 26.0
       },
       "provider_count": 17,
       "outlier": false,
@@ -322,9 +322,9 @@
     {
       "currency": "CNH",
       "policy_rate": 3.0,
-      "policy_rate_as_of": "2026-11-10",
+      "policy_rate_as_of": "2026-11-17",
       "policy_rate_note": "中国の金利は貸出の基準金利（LPR 1年物）を使っています。CNH の短期金利とは違うため、政策金利ベースの目安は大きめに、還元率は低めに出ます。",
-      "fx_rate": 23.902858781910318,
+      "fx_rate": 23.898288882516013,
       "policy_implied_carry": 11.46,
       "best": {
         "provider_id": "jfx",

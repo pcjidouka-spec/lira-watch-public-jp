@@ -2,7 +2,7 @@
   "currency_pair": "TRY/JPY",
   "target_date": "2026-11-18",
   "period_label": "直近約2週間",
-  "generated_at": "2026-11-18T21:08:03.444Z",
+  "generated_at": "2026-11-19T14:26:37.633Z",
   "buy_ranking": [
     {
       "provider_id": "gmo_click",
@@ -41,6 +41,12 @@
       "sample_days": 12
     },
     {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": 24.294117647058822,
+      "sample_days": 17
+    },
+    {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": 24,
@@ -69,12 +75,6 @@
       "name": "MATSUI FX",
       "avg": 23.833333333333332,
       "sample_days": 12
-    },
-    {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": 23.785714285714285,
-      "sample_days": 14
     },
     {
       "provider_id": "hirose",
@@ -109,12 +109,6 @@
   ],
   "sell_ranking": [
     {
-      "provider_id": "click365_okasan",
-      "name": "クリック365",
-      "avg": -23.785714285714285,
-      "sample_days": 14
-    },
-    {
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -23.833333333333332,
@@ -137,6 +131,12 @@
       "name": "LIGHT FX（LIGHT）",
       "avg": -24,
       "sample_days": 15
+    },
+    {
+      "provider_id": "click365_okasan",
+      "name": "クリック365",
+      "avg": -24.294117647058822,
+      "sample_days": 17
     },
     {
       "provider_id": "central_tanshi",

@@ -1517,7 +1517,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-18,traders_light,EUR/USD,LIGHT FX,3,-74.9,74.87,,success,
 2026-11-18,central_tanshi,EUR/USD,セントラル短資FX,3,-87.63,71.7,,success,
 2026-11-18,gmo_click,EUR/USD,GMOクリック証券,3,-73.0,73.0,,success,
-2026-11-18,invast,EUR/USD,トライオートFX,1,,,,pending,2026/11/17
+2026-11-18,invast,EUR/USD,トライオートFX,3,-100.0,40.0,,success,
 2026-11-18,m2j,EUR/USD,マネースクエア,1.0,-85.0,51.0,,success,
 2026-11-18,hirose,EUR/USD,ヒロセ通商,1,-84.5,65.3,,success,2026/11/18
 2026-11-18,jfx,EUR/USD,JFX,1,-84.0,65.0,,success,2026/11/18

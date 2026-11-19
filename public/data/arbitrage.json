@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19 06:04:24",
+  "generated_at": "2026-11-19 23:22:35",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
@@ -28,8 +28,8 @@
         "actual_date": "2026-11-17"
       },
       "arb_per_day": 5.0,
-      "notional_2leg": 63184,
-      "capital": 6318.4,
+      "notional_2leg": 63139,
+      "capital": 6313.9,
       "annual_pct": 28.9,
       "meets_threshold": true,
       "history": {
@@ -43,7 +43,7 @@
         "all": {
           "days": 201,
           "min_pct": 1.9,
-          "max_pct": 184.9,
+          "max_pct": 185.0,
           "avg_pct": 22.6,
           "median_pct": 17.3
         },
@@ -123,24 +123,24 @@
         "actual_date": "2026-11-18"
       },
       "arb_per_day": 0.6,
-      "notional_2leg": 9580,
-      "capital": 958.0,
-      "annual_pct": 22.9,
+      "notional_2leg": 9495,
+      "capital": 949.5,
+      "annual_pct": 23.1,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 15.2,
-          "max_pct": 26.7,
-          "avg_pct": 22.7,
-          "median_pct": 22.9
+          "min_pct": 15.4,
+          "max_pct": 26.9,
+          "avg_pct": 22.9,
+          "median_pct": 23.1
         },
         "all": {
           "days": 133,
-          "min_pct": 15.2,
-          "max_pct": 61.0,
-          "avg_pct": 28.8,
-          "median_pct": 26.7
+          "min_pct": 15.4,
+          "max_pct": 61.5,
+          "avg_pct": 29.0,
+          "median_pct": 26.9
         },
         "first_date": "2026-04-10",
         "last_date": "2026-11-18",
@@ -213,29 +213,29 @@
       "sell": {
         "provider_id": "ig",
         "name": "IG証券",
-        "swap": 1643.24,
-        "as_of": "2026-11-17",
-        "actual_date": "2026-11-17"
+        "swap": 1641.6,
+        "as_of": "2026-11-18",
+        "actual_date": "2026-11-18"
       },
-      "arb_per_day": 192.01,
-      "notional_2leg": 3792188,
-      "capital": 379218.8,
-      "annual_pct": 18.5,
+      "arb_per_day": 190.37,
+      "notional_2leg": 3780718,
+      "capital": 378071.8,
+      "annual_pct": 18.4,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 0.5,
           "max_pct": 27.5,
-          "avg_pct": 16.3,
-          "median_pct": 15.6
+          "avg_pct": 16.7,
+          "median_pct": 16.6
         },
         "all": {
           "days": 80,
           "min_pct": 0.5,
-          "max_pct": 81.8,
-          "avg_pct": 39.4,
-          "median_pct": 35.5
+          "max_pct": 82.0,
+          "avg_pct": 39.6,
+          "median_pct": 35.6
         },
         "first_date": "2026-07-22",
         "last_date": "2026-11-18",
@@ -314,24 +314,24 @@
         "actual_date": "2026-11-18"
       },
       "arb_per_day": 4.4,
-      "notional_2leg": 172849,
-      "capital": 17284.9,
-      "annual_pct": 9.3,
+      "notional_2leg": 170216,
+      "capital": 17021.6,
+      "annual_pct": 9.4,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 2.5,
-          "max_pct": 9.3,
-          "avg_pct": 8.1,
-          "median_pct": 8.7
+          "min_pct": 2.6,
+          "max_pct": 9.4,
+          "avg_pct": 8.3,
+          "median_pct": 8.8
         },
         "all": {
           "days": 169,
-          "min_pct": 0.8,
-          "max_pct": 9.3,
-          "avg_pct": 3.6,
-          "median_pct": 2.7
+          "min_pct": 0.9,
+          "max_pct": 9.4,
+          "avg_pct": 3.7,
+          "median_pct": 2.8
         },
         "first_date": "2026-02-16",
         "last_date": "2026-11-18",
@@ -410,24 +410,24 @@
         "actual_date": "2026-11-18"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 188278,
-      "capital": 18827.8,
-      "annual_pct": 7.8,
+      "notional_2leg": 184910,
+      "capital": 18491.0,
+      "annual_pct": 7.9,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
-          "min_pct": 2.1,
-          "max_pct": 7.8,
-          "avg_pct": 5.7,
-          "median_pct": 6.2
+          "min_pct": 2.2,
+          "max_pct": 7.9,
+          "avg_pct": 5.8,
+          "median_pct": 6.3
         },
         "all": {
           "days": 80,
           "min_pct": 1.0,
-          "max_pct": 13.8,
-          "avg_pct": 7.5,
-          "median_pct": 6.2
+          "max_pct": 14.0,
+          "avg_pct": 7.6,
+          "median_pct": 6.3
         },
         "first_date": "2026-07-16",
         "last_date": "2026-11-18",
