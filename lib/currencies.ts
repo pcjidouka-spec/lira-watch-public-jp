@@ -81,6 +81,10 @@ const USDTRY_NOTE =
 const USDCHF_NOTE =
   '※ USD/CHF は各社が円換算した 1万通貨単位あたりの値です。米国の金利がスイスより高いため、買い（ドル買い・フラン売り）は各社ともプラス、売り（ドル売り・フラン買い）はマイナスになります。';
 
+// EUR/CHF (2026-11-19 に USD/CHF の後に公開)。値の単位と符号の向きを注記する。
+const EURCHF_NOTE =
+  '※ EUR/CHF は各社が円換算した 1万通貨単位あたりの値です。ユーロ圏の金利がスイスより高いため、買い（ユーロ買い・フラン売り）は各社ともプラス、売り（ユーロ売り・フラン買い）はマイナスになります。';
+
 // ★CHF/JPY は買がマイナス・売がプラス。他の対円通貨と符号が逆なので注記する。
 // 並び順は降順のまま (-5 が -94 より上)。表示も生値をそのまま出す。
 const CHFJPY_NOTE =
@@ -106,6 +110,7 @@ const CURRENCY_LIST = [
   { code: 'CHF/TRY', label: 'スイスフラン/トルコリラ', group: 'cross', published: true, note: CHFTRY_NOTE, color: '#0d9488', slug: 'chftry' },
   { code: 'USD/TRY', label: '米ドル/トルコリラ', group: 'cross', published: true, note: USDTRY_NOTE, color: '#c2410c', slug: 'usdtry' },
   { code: 'USD/CHF', label: '米ドル/スイスフラン', group: 'cross', published: true, note: USDCHF_NOTE, color: '#4d7c0f', slug: 'usdchf' },
+  { code: 'EUR/CHF', label: 'ユーロ/スイスフラン', group: 'cross', published: true, note: EURCHF_NOTE, color: '#4338ca', slug: 'eurchf' },
 ] as const satisfies readonly CurrencyDef[];
 
 export const CURRENCIES: readonly CurrencyDef[] = CURRENCY_LIST;
