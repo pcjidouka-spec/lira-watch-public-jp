@@ -803,12 +803,23 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-17,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,103.0,-103.0,None,success,2026/11/17
 2026-11-18,central_tanshi,AUD/JPY,セントラル短資FX,4.0,107.0,-132.0,11/19,success,2026/11/18
 2026-11-18,dmm,AUD/JPY,DMM FX,1.0,101.0,-104.0,None,success,2026/11/18
-2026-11-18,gaitame,AUD/JPY,外為どっとコム,1.0,None,None,None,pending,2026/11/17
+2026-11-18,gaitame,AUD/JPY,外為どっとコム,4.0,100.0,-115.0,None,success,2026/11/18
 2026-11-18,gmo_click,AUD/JPY,GMOクリック証券,4.0,104.0,-104.0,None,success,2026/11/18
 2026-11-18,hirose,AUD/JPY,ヒロセ通商,1.0,104.0,-116.0,None,success,2026/11/18
-2026-11-18,invast,AUD/JPY,トライオートFX,1.0,None,None,None,pending,2026/11/17
+2026-11-18,invast,AUD/JPY,トライオートFX,4.0,105.0,-159.0,None,success,2026/11/18
 2026-11-18,sbi,AUD/JPY,SBI FXトレード,1.0,100.0,-110.0,11月20日,success,2026/11/18
 2026-11-18,traders_light,AUD/JPY,LIGHT FX,4.0,104.0,-104.0,None,success,2026/11/18
 2026-11-18,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,4.0,104.0,-104.0,None,success,2026/11/18
 2026-11-18,traders_min,AUD/JPY,みんなのFX,4.0,103.0,-103.0,None,success,2026/11/18
 2026-11-18,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,4.0,103.0,-103.0,None,success,2026/11/18
+2026-11-19,central_tanshi,AUD/JPY,セントラル短資FX,1.0,107.0,-132.0,11/20,success,2026/11/19
+2026-11-19,dmm,AUD/JPY,DMM FX,4.0,100.0,-103.0,None,success,2026/11/19
+2026-11-19,gaitame,AUD/JPY,外為どっとコム,4.0,None,None,None,pending,2026/11/18
+2026-11-19,gmo_click,AUD/JPY,GMOクリック証券,1.0,102.0,-102.0,None,success,2026/11/19
+2026-11-19,hirose,AUD/JPY,ヒロセ通商,4.0,104.0,-116.0,None,success,2026/11/19
+2026-11-19,invast,AUD/JPY,トライオートFX,4.0,None,None,None,pending,2026/11/18
+2026-11-19,sbi,AUD/JPY,SBI FXトレード,4.0,100.0,-110.0,11月24日,success,2026/11/19
+2026-11-19,traders_light,AUD/JPY,LIGHT FX,1.0,103.0,-103.0,None,success,2026/11/19
+2026-11-19,traders_light_light,AUD/JPY,LIGHT FX（LIGHT）,1.0,103.0,-103.0,None,success,2026/11/19
+2026-11-19,traders_min,AUD/JPY,みんなのFX,1.0,102.0,-102.0,None,success,2026/11/19
+2026-11-19,traders_min_light,AUD/JPY,みんなのFX（LIGHT）,1.0,102.0,-102.0,None,success,2026/11/19

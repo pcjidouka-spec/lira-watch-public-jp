@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-19T04:00:23.310238",
+  "updated_at": "2026-11-20T04:00:21.975822",
   "providers": {
     "gmo_click": {
       "has_new": false,
       "updated_at": "2026-10-21T04:00:02.707515"
     },
     "gmo": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-11-15T04:00:03.639901"
     },
     "central_tanshi": {
@@ -38,7 +38,7 @@
       "updated_at": "2026-11-18T04:00:20.639556"
     },
     "gaitame": {
-      "has_new": true,
+      "has_new": false,
       "updated_at": "2026-11-15T04:00:17.824536"
     },
     "click365_okasan": {

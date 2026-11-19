@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-19 23:23:00",
+  "generated_at": "2026-11-20 06:06:41",
   "units": 10000,
   "units_note": "全通貨 1万通貨あたりに正規化",
   "day_count": 365,
   "jpy_policy_rate": 1.25,
   "jpy_rate_as_of": "2026-11-17",
   "rate_source": "bis",
-  "fx_as_of": "2026-11-19",
+  "fx_as_of": "2026-11-20",
   "spread_manual_as_of": "2026-08-29",
   "excluded": [
     {
@@ -27,7 +27,7 @@
         "name": "GMOクリック証券",
         "group": "gmo_click",
         "swap": 1.2,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 217.1,
       "median_swap": 0.6,
@@ -48,7 +48,7 @@
         "days": 20,
         "min_pct": 196.5,
         "max_pct": 231.7,
-        "avg_pct": 213.7,
+        "avg_pct": 213.9,
         "median_pct": 212.8
       },
       "rank": 1
@@ -65,7 +65,7 @@
         "name": "GMO外貨",
         "group": "gmo",
         "swap": 15.5,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 132.9,
       "median_swap": 11.2,
@@ -85,9 +85,9 @@
       "history": {
         "days": 20,
         "min_pct": 123.7,
-        "max_pct": 131.8,
-        "avg_pct": 127.6,
-        "median_pct": 126.4
+        "max_pct": 132.9,
+        "avg_pct": 128.0,
+        "median_pct": 126.6
       },
       "rank": 2
     },
@@ -99,33 +99,33 @@
       "fx_rate": 159.3625498007968,
       "policy_implied_carry": 114.61,
       "best": {
-        "provider_id": "invast",
-        "name": "トライオートFX",
-        "group": "invast",
-        "swap": 148.0,
-        "as_of": "2026-11-17"
-      },
-      "payout_ratio_pct": 129.1,
-      "median_swap": 126.0,
-      "second": {
         "provider_id": "gmo",
         "name": "GMO外貨",
         "group": "gmo",
-        "swap": 136.0
+        "swap": 136.0,
+        "as_of": "2026-11-19"
+      },
+      "payout_ratio_pct": 118.7,
+      "median_swap": 126.0,
+      "second": {
+        "provider_id": "traders_light",
+        "name": "LIGHT FX",
+        "group": "traders",
+        "swap": 131.0
       },
       "provider_count": 11,
       "outlier": false,
       "payback": {
         "days": 0.1,
         "reason": null,
-        "condition": "9-5時"
+        "condition": "〜1万通貨/8-3時"
       },
       "history": {
         "days": 20,
         "min_pct": 110.1,
-        "max_pct": 125.5,
-        "avg_pct": 114.1,
-        "median_pct": 111.1
+        "max_pct": 129.1,
+        "avg_pct": 115.0,
+        "median_pct": 111.2
       },
       "rank": 3
     },
@@ -137,19 +137,19 @@
       "fx_rate": 174.88632388947184,
       "policy_implied_carry": 59.89,
       "best": {
-        "provider_id": "invast",
-        "name": "トライオートFX",
-        "group": "invast",
-        "swap": 68.0,
-        "as_of": "2026-11-17"
-      },
-      "payout_ratio_pct": 113.5,
-      "median_swap": 64.0,
-      "second": {
         "provider_id": "dmm",
         "name": "DMM FX",
         "group": "dmm",
-        "swap": 67.0
+        "swap": 67.0,
+        "as_of": "2026-11-19"
+      },
+      "payout_ratio_pct": 111.9,
+      "median_swap": 63.0,
+      "second": {
+        "provider_id": "gmo_click",
+        "name": "GMOクリック証券",
+        "group": "gmo_click",
+        "swap": 65.0
       },
       "provider_count": 11,
       "outlier": false,
@@ -162,8 +162,8 @@
         "days": 20,
         "min_pct": 110.7,
         "max_pct": 116.3,
-        "avg_pct": 114.4,
-        "median_pct": 115.3
+        "avg_pct": 114.3,
+        "median_pct": 115.1
       },
       "rank": 4
     },
@@ -179,7 +179,7 @@
         "name": "LIGHT FX",
         "group": "traders",
         "swap": 29.0,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 106.8,
       "median_swap": 28.0,
@@ -187,7 +187,7 @@
         "provider_id": "invast",
         "name": "トライオートFX",
         "group": "invast",
-        "swap": 29.0
+        "swap": 28.1
       },
       "provider_count": 8,
       "outlier": false,
@@ -200,8 +200,8 @@
         "days": 20,
         "min_pct": 105.0,
         "max_pct": 113.6,
-        "avg_pct": 109.2,
-        "median_pct": 108.8
+        "avg_pct": 108.9,
+        "median_pct": 108.5
       },
       "rank": 5
     },
@@ -217,7 +217,7 @@
         "name": "GMOクリック証券",
         "group": "gmo_click",
         "swap": 16.0,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 105.3,
       "median_swap": 14.1,
@@ -237,8 +237,8 @@
       "history": {
         "days": 20,
         "min_pct": 97.3,
-        "max_pct": 103.5,
-        "avg_pct": 100.7,
+        "max_pct": 105.3,
+        "avg_pct": 101.1,
         "median_pct": 101.5
       },
       "rank": 6
@@ -255,10 +255,10 @@
         "name": "セントラル短資FX",
         "group": "central_tanshi",
         "swap": 107.0,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 101.3,
-      "median_swap": 104.0,
+      "median_swap": 102.0,
       "second": {
         "provider_id": "invast",
         "name": "トライオートFX",
@@ -276,7 +276,7 @@
         "days": 20,
         "min_pct": 99.7,
         "max_pct": 107.2,
-        "avg_pct": 104.2,
+        "avg_pct": 104.0,
         "median_pct": 105.3
       },
       "rank": 7
@@ -293,7 +293,7 @@
         "name": "GMOクリック証券",
         "group": "gmo_click",
         "swap": 28.0,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 93.2,
       "median_swap": 24.0,
@@ -314,8 +314,8 @@
         "days": 20,
         "min_pct": 86.3,
         "max_pct": 93.2,
-        "avg_pct": 89.8,
-        "median_pct": 89.8
+        "avg_pct": 90.2,
+        "median_pct": 90.0
       },
       "rank": 8
     },
@@ -331,7 +331,7 @@
         "name": "JFX",
         "group": "hirose",
         "swap": 10.0,
-        "as_of": "2026-11-18"
+        "as_of": "2026-11-19"
       },
       "payout_ratio_pct": 87.3,
       "median_swap": 3.0,
@@ -352,8 +352,8 @@
         "days": 20,
         "min_pct": 87.1,
         "max_pct": 96.9,
-        "avg_pct": 95.6,
-        "median_pct": 96.7
+        "avg_pct": 95.1,
+        "median_pct": 96.6
       },
       "rank": 9
     }

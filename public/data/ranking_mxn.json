@@ -1,26 +1,26 @@
 {
   "currency_pair": "MXN/JPY",
-  "target_date": "2026-11-18",
+  "target_date": "2026-11-19",
   "period_label": "直近約2週間",
-  "generated_at": "2026-11-19T14:30:59.947Z",
+  "generated_at": "2026-11-19T21:09:56.438Z",
   "buy_ranking": [
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": 15.46,
+      "avg": 15.473333333333333,
+      "sample_days": 15
+    },
+    {
+      "provider_id": "traders_min_light",
+      "name": "みんなのFX（LIGHT）",
+      "avg": 14.433333333333332,
       "sample_days": 15
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": 14.616666666666669,
-      "sample_days": 12
-    },
-    {
-      "provider_id": "traders_min_light",
-      "name": "みんなのFX（LIGHT）",
-      "avg": 14.513333333333334,
-      "sample_days": 15
+      "avg": 14.372222222222222,
+      "sample_days": 18
     },
     {
       "provider_id": "gmo_click",
@@ -32,25 +32,25 @@
       "provider_id": "jfx",
       "name": "JFX",
       "avg": 14,
-      "sample_days": 14
+      "sample_days": 15
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": 13.776470588235291,
+      "avg": 13.705882352941174,
       "sample_days": 17
     },
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": 11.825000000000001,
-      "sample_days": 12
+      "avg": 12.005555555555556,
+      "sample_days": 18
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": 11.214285714285714,
-      "sample_days": 14
+      "avg": 11.2,
+      "sample_days": 15
     },
     {
       "provider_id": "traders_light_light",
@@ -74,25 +74,25 @@
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": 11,
-      "sample_days": 14
+      "sample_days": 15
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": 11,
-      "sample_days": 7
+      "sample_days": 13
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": 11,
-      "sample_days": 14
+      "sample_days": 20
     },
     {
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": 11,
-      "sample_days": 12
+      "sample_days": 13
     }
   ],
   "sell_ranking": [
@@ -117,14 +117,14 @@
     {
       "provider_id": "click365_okasan",
       "name": "クリック365",
-      "avg": -11.825000000000001,
-      "sample_days": 12
+      "avg": -12.005555555555556,
+      "sample_days": 18
     },
     {
       "provider_id": "dmm",
       "name": "DMM FX",
       "avg": -14,
-      "sample_days": 14
+      "sample_days": 15
     },
     {
       "provider_id": "gmo_click",
@@ -136,55 +136,55 @@
       "provider_id": "sbi",
       "name": "SBI FXトレード",
       "avg": -14,
-      "sample_days": 12
+      "sample_days": 13
     },
     {
       "provider_id": "traders_min_light",
       "name": "みんなのFX（LIGHT）",
-      "avg": -14.513333333333334,
+      "avg": -14.433333333333332,
       "sample_days": 15
     },
     {
       "provider_id": "gmo",
       "name": "GMO外貨",
-      "avg": -15.46,
+      "avg": -15.473333333333333,
       "sample_days": 15
     },
     {
       "provider_id": "central_tanshi",
       "name": "セントラル短資FX",
-      "avg": -15.776470588235293,
+      "avg": -15.705882352941174,
       "sample_days": 17
     },
     {
       "provider_id": "gaitame",
       "name": "外為どっとコム",
       "avg": -16,
-      "sample_days": 7
+      "sample_days": 13
     },
     {
       "provider_id": "hirose",
       "name": "ヒロセ通商",
-      "avg": -16.214285714285715,
-      "sample_days": 14
+      "avg": -16.2,
+      "sample_days": 15
     },
     {
       "provider_id": "jfx",
       "name": "JFX",
       "avg": -19,
-      "sample_days": 14
+      "sample_days": 15
     },
     {
       "provider_id": "matsui",
       "name": "MATSUI FX",
       "avg": -21,
-      "sample_days": 14
+      "sample_days": 20
     },
     {
       "provider_id": "invast",
       "name": "トライオートFX",
-      "avg": -29.71666666666667,
-      "sample_days": 12
+      "avg": -29.47222222222222,
+      "sample_days": 18
     }
   ]
 }
