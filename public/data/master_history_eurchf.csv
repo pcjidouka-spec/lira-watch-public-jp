@@ -71,12 +71,6 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2025-12-23,ig,EUR/CHF,IG証券,5.0,95.18,-126.91,,success,2025/12/23
 2025-12-26,gmo_click,EUR/CHF,GMOクリック証券,1,85.0,-85.0,,success,
 2025-12-26,ig,EUR/CHF,IG証券,,,,,success,
-2025-12-29,gmo_click,EUR/CHF,GMOクリック証券,5,75.0,-75.0,,success,
-2025-12-29,ig,EUR/CHF,IG証券,1.0,-1.98,-200.32,,success,2025/12/29
-2025-12-30,gmo_click,EUR/CHF,GMOクリック証券,1,73.0,-73.0,,success,
-2025-12-30,ig,EUR/CHF,IG証券,5.0,91.05,-122.71,,success,2025/12/30
-2026-01-02,gmo_click,EUR/CHF,GMOクリック証券,1,73.0,-73.0,,success,
-2026-01-02,ig,EUR/CHF,IG証券,,,,,success,
 2026-01-05,gmo_click,EUR/CHF,GMOクリック証券,1,80.0,-80.0,,success,
 2026-01-05,ig,EUR/CHF,IG証券,1.0,13.86,-215.76,,success,2026/01/05
 2026-01-06,gmo_click,EUR/CHF,GMOクリック証券,1,87.0,-87.0,,success,
