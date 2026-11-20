@@ -584,14 +584,24 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-18,central_tanshi,USD/CHF,セントラル短資FX,3,172.57,-172.6,,success,
 2026-11-18,gmo_click,USD/CHF,GMOクリック証券,3,160.0,-160.0,,success,
 2026-11-18,ig,USD/CHF,IG証券,1.0,147.92,-210.5,,success,2026/11/18
-2026-11-19,gaitame,USD/CHF,外為どっとコム,3,,,,pending,2026/11/18
+2026-11-19,gaitame,USD/CHF,外為どっとコム,1,138.0,-166.0,,success,2026/11/19
 2026-11-19,hirose,USD/CHF,ヒロセ通商,3,113.37,-226.73,,success,
 2026-11-19,jfx,USD/CHF,JFX,3,113.33,-226.67,,success,2026/11/19
-2026-11-19,invast,USD/CHF,トライオートFX,3,,,,pending,2026/11/18
+2026-11-19,invast,USD/CHF,トライオートFX,1,105.0,-135.0,,success,2026/11/19
 2026-11-19,dmm,USD/CHF,DMM FX,3,145.0,-148.0,,success,
 2026-11-19,sbi,USD/CHF,SBI FXトレード,3,176.0,-181.0,,success,
 2026-11-19,traders_light,USD/CHF,LIGHT FX,1,138.1,-138.2,,success,
 2026-11-19,traders_min,USD/CHF,みんなのFX,1,138.1,-138.2,,success,
 2026-11-19,central_tanshi,USD/CHF,セントラル短資FX,1,172.0,-172.0,,success,
 2026-11-19,gmo_click,USD/CHF,GMOクリック証券,1,155.0,-155.0,,success,
-2026-11-19,ig,USD/CHF,IG証券,,,,,pending,
+2026-11-19,ig,USD/CHF,IG証券,3.0,161.24,-188.32,,success,2026/11/19
+2026-11-20,gaitame,USD/CHF,外為どっとコム,1,,,,pending,2026/11/19
+2026-11-20,hirose,USD/CHF,ヒロセ通商,1,113.5,-227.1,,success,
+2026-11-20,jfx,USD/CHF,JFX,1,113.0,-227.0,,success,2026/11/20
+2026-11-20,invast,USD/CHF,トライオートFX,1,,,,pending,2026/11/19
+2026-11-20,dmm,USD/CHF,DMM FX,1,145.0,-148.0,,success,
+2026-11-20,sbi,USD/CHF,SBI FXトレード,1,174.0,-179.0,,success,
+2026-11-20,traders_light,USD/CHF,LIGHT FX,1,149.1,-149.2,,success,
+2026-11-20,traders_min,USD/CHF,みんなのFX,1,149.1,-149.2,,success,
+2026-11-20,gmo_click,USD/CHF,GMOクリック証券,1,154.0,-154.0,,success,
+2026-11-20,ig,USD/CHF,IG証券,,,,,pending,
