@@ -555,7 +555,7 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-19,central_tanshi,EUR/CHF,セントラル短資FX,1,122.9,-151.2,,success,
 2026-11-19,gmo_click,EUR/CHF,GMOクリック証券,1,102.0,-102.0,,success,
 2026-11-19,ig,EUR/CHF,IG証券,3.0,111.48,-134.15,,success,2026/11/19
-2026-11-20,gaitame,EUR/CHF,外為どっとコム,1,,,,pending,2026/11/19
+2026-11-20,gaitame,EUR/CHF,外為どっとコム,1,88.0,-117.0,,success,
 2026-11-20,hirose,EUR/CHF,ヒロセ通商,1,75.7,-151.4,,success,
 2026-11-20,jfx,EUR/CHF,JFX,1,75.0,-151.0,,success,2026/11/20
 2026-11-20,dmm,EUR/CHF,DMM FX,1,106.0,-109.0,,success,
