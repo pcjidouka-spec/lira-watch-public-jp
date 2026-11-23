@@ -3316,13 +3316,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-19,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,1.0,25.6,-25.6,None,success,2026/11/19
 2026-11-19,ig,TRY/JPY,IG証券,4.0,19.875,-40.125,None,success,2026/11/19
 2026-11-20,central_tanshi,TRY/JPY,セントラル短資FX,None,None,None,None,success,2026/11/20
-2026-11-20,click365_okasan,TRY/JPY,クリック365,1.0,None,None,None,pending,2026/11/19
+2026-11-20,click365_okasan,TRY/JPY,クリック365,None,None,None,None,success,2026/11/20
 2026-11-20,dmm,TRY/JPY,DMM FX,1.0,23.0,-26.0,None,success,2026/11/20
-2026-11-20,gaitame,TRY/JPY,外為どっとコム,1.0,None,None,None,pending,2026/11/19
+2026-11-20,gaitame,TRY/JPY,外為どっとコム,None,None,None,None,success,2026/11/20
 2026-11-20,gmo,TRY/JPY,GMO外貨,None,None,None,None,success,2026/11/20
 2026-11-20,gmo_click,TRY/JPY,GMOクリック証券,None,None,None,None,success,2026/11/20
 2026-11-20,hirose,TRY/JPY,ヒロセ通商,1.0,24.0,-29.0,None,success,2026/11/20
-2026-11-20,invast,TRY/JPY,トライオートFX,1.0,None,None,None,pending,2026/11/19
+2026-11-20,invast,TRY/JPY,トライオートFX,None,None,None,None,success,2026/11/20
 2026-11-20,jfx,TRY/JPY,JFX,1.0,24.0,-31.0,None,success,2026/11/20
 2026-11-20,m2j,TRY/JPY,マネースクエア,1.0,25.0,-40.0,None,success,2026/11/20
 2026-11-20,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,pending,2026/11/19
@@ -3332,3 +3332,20 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-20,traders_min,TRY/JPY,みんなのFX,None,None,None,None,success,2026/11/20
 2026-11-20,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,None,None,None,None,success,2026/11/20
 2026-11-20,ig,TRY/JPY,IG証券,None,None,None,None,pending,None
+2026-11-23,central_tanshi,TRY/JPY,セントラル短資FX,2.0,25.1,-25.1,11/24,success,2026/11/23
+2026-11-23,click365_okasan,TRY/JPY,クリック365,2.0,None,None,None,pending,2026/11/20
+2026-11-23,dmm,TRY/JPY,DMM FX,None,None,None,None,success,2026/11/23
+2026-11-23,gaitame,TRY/JPY,外為どっとコム,2.0,None,None,None,error,None
+2026-11-23,gmo,TRY/JPY,GMO外貨,2.0,25.1,-25.1,None,success,2026/11/23
+2026-11-23,gmo_click,TRY/JPY,GMOクリック証券,2.0,28.0,-28.0,None,success,2026/11/23
+2026-11-23,hirose,TRY/JPY,ヒロセ通商,None,None,None,None,success,2026/11/23
+2026-11-23,invast,TRY/JPY,トライオートFX,2.0,None,None,None,pending,2026/11/20
+2026-11-23,jfx,TRY/JPY,JFX,None,None,None,None,success,2026/11/23
+2026-11-23,m2j,TRY/JPY,マネースクエア,None,None,None,None,success,2026/11/23
+2026-11-23,matsui,TRY/JPY,MATSUI FX,1.0,None,None,None,pending,2026/11/19
+2026-11-23,sbi,TRY/JPY,SBI FXトレード,None,None,None,None,success,2026/11/23
+2026-11-23,traders_light,TRY/JPY,LIGHT FX,2.0,24.0,-24.0,None,success,2026/11/23
+2026-11-23,traders_light_light,TRY/JPY,LIGHT FX（LIGHT）,2.0,25.2,-25.2,None,success,2026/11/23
+2026-11-23,traders_min,TRY/JPY,みんなのFX,2.0,24.0,-24.0,None,success,2026/11/23
+2026-11-23,traders_min_light,TRY/JPY,みんなのFX（LIGHT）,2.0,25.3,-25.3,None,success,2026/11/23
+2026-11-23,ig,TRY/JPY,IG証券,None,None,None,None,pending,None
