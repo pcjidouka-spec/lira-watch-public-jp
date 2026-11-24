@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-24 06:01:50",
+  "generated_at": "2026-11-25 06:01:16",
   "leverage": 10,
   "threshold_pct": 20.0,
   "rate_stale": false,
-  "rate_as_of": "2026-11-24",
+  "rate_as_of": "2026-11-25",
   "baseline": false,
   "excluded_providers": [
     "saxo"
@@ -23,29 +23,29 @@
       "sell": {
         "provider_id": "ig",
         "name": "IG証券",
-        "swap": 1824.99,
-        "as_of": "2026-11-19",
-        "actual_date": "2026-11-19"
+        "swap": 1961.31,
+        "as_of": "2026-11-23",
+        "actual_date": "2026-11-23"
       },
-      "arb_per_day": 330.94,
-      "notional_2leg": 3776435,
-      "capital": 377643.5,
-      "annual_pct": 32.0,
+      "arb_per_day": 467.26,
+      "notional_2leg": 3780004,
+      "capital": 378000.4,
+      "annual_pct": 45.1,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 0.5,
-          "max_pct": 31.4,
-          "avg_pct": 16.7,
-          "median_pct": 15.7
+          "max_pct": 45.1,
+          "avg_pct": 19.5,
+          "median_pct": 17.7
         },
         "all": {
           "days": 83,
           "min_pct": 0.5,
-          "max_pct": 82.1,
-          "avg_pct": 38.9,
-          "median_pct": 33.7
+          "max_pct": 82.0,
+          "avg_pct": 39.5,
+          "median_pct": 35.4
         },
         "first_date": "2026-07-22",
         "last_date": "2026-11-23",
@@ -80,21 +80,21 @@
             "change_pct": 11.2
           },
           {
-            "date": "2026-11-20",
+            "date": "2026-11-23",
             "side": "sell",
-            "provider_id": "hirose",
-            "name": "ヒロセ通商",
-            "change_pct": -12.0
+            "provider_id": "ig",
+            "name": "IG証券",
+            "change_pct": 6.3
           }
         ],
         "last_step": {
-          "date": "2026-11-20",
+          "date": "2026-11-23",
           "side": "sell",
-          "provider_id": "hirose",
-          "name": "ヒロセ通商",
-          "change_pct": -12.0
+          "provider_id": "ig",
+          "name": "IG証券",
+          "change_pct": 6.3
         },
-        "quiet_median_pct": 2.17
+        "quiet_median_pct": 2.42
       },
       "spread": {
         "available": false,
@@ -120,28 +120,28 @@
         "provider_id": "matsui",
         "name": "MATSUI FX",
         "swap": -23.0,
-        "as_of": "2026-11-19",
-        "actual_date": "2026-11-19"
+        "as_of": "2026-11-23",
+        "actual_date": "2026-11-23"
       },
       "arb_per_day": 5.0,
-      "notional_2leg": 62737,
-      "capital": 6273.7,
-      "annual_pct": 29.1,
+      "notional_2leg": 62834,
+      "capital": 6283.4,
+      "annual_pct": 29.0,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 11.6,
           "max_pct": 34.9,
-          "avg_pct": 20.5,
-          "median_pct": 20.4
+          "avg_pct": 20.8,
+          "median_pct": 20.3
         },
         "all": {
           "days": 203,
           "min_pct": 1.9,
-          "max_pct": 186.2,
+          "max_pct": 185.9,
           "avg_pct": 22.8,
-          "median_pct": 17.5
+          "median_pct": 17.4
         },
         "first_date": "2025-12-01",
         "last_date": "2026-11-23",
@@ -219,24 +219,24 @@
         "actual_date": "2026-11-23"
       },
       "arb_per_day": 0.6,
-      "notional_2leg": 9331,
-      "capital": 933.1,
-      "annual_pct": 23.5,
+      "notional_2leg": 9388,
+      "capital": 938.8,
+      "annual_pct": 23.3,
       "meets_threshold": true,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 15.6,
-          "max_pct": 27.4,
-          "avg_pct": 23.3,
-          "median_pct": 23.5
+          "max_pct": 27.2,
+          "avg_pct": 23.1,
+          "median_pct": 23.3
         },
         "all": {
           "days": 135,
           "min_pct": 15.6,
-          "max_pct": 62.6,
-          "avg_pct": 29.4,
-          "median_pct": 27.4
+          "max_pct": 62.2,
+          "avg_pct": 29.3,
+          "median_pct": 27.2
         },
         "first_date": "2026-04-10",
         "last_date": "2026-11-23",
@@ -303,38 +303,38 @@
         "provider_id": "gmo",
         "name": "GMO外貨",
         "swap": 15.5,
-        "as_of": "2026-11-23",
-        "actual_date": "2026-11-23"
+        "as_of": "2026-11-24",
+        "actual_date": "2026-11-24"
       },
       "sell": {
-        "provider_id": "click365_okasan",
-        "name": "クリック365",
-        "swap": -11.0,
-        "as_of": "2026-11-19",
-        "actual_date": "2026-11-19"
+        "provider_id": "traders_light",
+        "name": "LIGHT FX",
+        "swap": -11.1,
+        "as_of": "2026-11-24",
+        "actual_date": "2026-11-24"
       },
-      "arb_per_day": 4.5,
-      "notional_2leg": 166063,
-      "capital": 16606.3,
-      "annual_pct": 9.9,
+      "arb_per_day": 4.4,
+      "notional_2leg": 165766,
+      "capital": 16576.6,
+      "annual_pct": 9.7,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 2.6,
           "max_pct": 9.9,
-          "avg_pct": 8.7,
+          "avg_pct": 8.8,
           "median_pct": 9.5
         },
         "all": {
-          "days": 171,
+          "days": 172,
           "min_pct": 0.9,
           "max_pct": 9.9,
           "avg_pct": 3.9,
           "median_pct": 2.9
         },
         "first_date": "2026-02-16",
-        "last_date": "2026-11-23",
+        "last_date": "2026-11-24",
         "step_count": 30,
         "steps": [
           {
@@ -387,7 +387,7 @@
         "missing": [
           {
             "side": "sell",
-            "provider_id": "click365_okasan"
+            "provider_id": "traders_light"
           }
         ]
       }
@@ -406,28 +406,28 @@
         "provider_id": "sbi",
         "name": "SBI FXトレード",
         "swap": -12.0,
-        "as_of": "2026-11-20",
-        "actual_date": "2026-11-20"
+        "as_of": "2026-11-24",
+        "actual_date": "2026-11-24"
       },
       "arb_per_day": 4.0,
-      "notional_2leg": 181041,
-      "capital": 18104.1,
-      "annual_pct": 8.1,
+      "notional_2leg": 182410,
+      "capital": 18241.0,
+      "annual_pct": 8.0,
       "meets_threshold": false,
       "history": {
         "recent": {
           "days": 20,
           "min_pct": 2.2,
-          "max_pct": 8.1,
+          "max_pct": 8.0,
           "avg_pct": 6.2,
-          "median_pct": 6.5
+          "median_pct": 6.4
         },
         "all": {
           "days": 82,
           "min_pct": 1.0,
-          "max_pct": 14.3,
-          "avg_pct": 7.8,
-          "median_pct": 6.5
+          "max_pct": 14.2,
+          "avg_pct": 7.7,
+          "median_pct": 6.4
         },
         "first_date": "2026-07-16",
         "last_date": "2026-11-23",

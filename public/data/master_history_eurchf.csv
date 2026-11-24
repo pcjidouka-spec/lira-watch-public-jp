@@ -563,8 +563,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-20,traders_light,EUR/CHF,LIGHT FX,1,88.7,-88.8,,success,
 2026-11-20,traders_min,EUR/CHF,みんなのFX,1,88.7,-88.8,,success,
 2026-11-20,gmo_click,EUR/CHF,GMOクリック証券,1,104.0,-104.0,,success,
-2026-11-20,ig,EUR/CHF,IG証券,,,,,pending,
-2026-11-23,gaitame,EUR/CHF,外為どっとコム,1,,,,pending,2026/11/20
+2026-11-20,ig,EUR/CHF,IG証券,1.0,94.61,-155.17,,success,2026/11/20
+2026-11-23,gaitame,EUR/CHF,外為どっとコム,2,88.5,-117.0,,success,2026/11/23
 2026-11-23,hirose,EUR/CHF,ヒロセ通商,1,75.5,-151.0,,success,
 2026-11-23,jfx,EUR/CHF,JFX,1,75.0,-151.0,,success,2026/11/23
 2026-11-23,dmm,EUR/CHF,DMM FX,1,106.0,-109.0,,success,
@@ -572,4 +572,13 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-23,traders_min,EUR/CHF,みんなのFX,2,88.75,-88.8,,success,
 2026-11-23,central_tanshi,EUR/CHF,セントラル短資FX,2,123.0,-151.4,,success,
 2026-11-23,gmo_click,EUR/CHF,GMOクリック証券,2,102.0,-102.0,,success,
-2026-11-23,ig,EUR/CHF,IG証券,,,,,pending,
+2026-11-23,ig,EUR/CHF,IG証券,1.0,43.43,-217.17,,success,2026/11/23
+2026-11-24,gaitame,EUR/CHF,外為どっとコム,2,,,,pending,2026/11/23
+2026-11-24,hirose,EUR/CHF,ヒロセ通商,2,75.6,-151.15,,success,
+2026-11-24,jfx,EUR/CHF,JFX,2,75.5,-151.0,,success,2026/11/24
+2026-11-24,dmm,EUR/CHF,DMM FX,2,106.0,-109.0,,success,
+2026-11-24,sbi,EUR/CHF,SBI FXトレード,2,120.0,-125.0,,success,
+2026-11-24,traders_light,EUR/CHF,LIGHT FX,2,,,,pending,2026/11/23
+2026-11-24,traders_min,EUR/CHF,みんなのFX,2,,,,pending,2026/11/23
+2026-11-24,gmo_click,EUR/CHF,GMOクリック証券,1.0,,,,success,
+2026-11-24,ig,EUR/CHF,IG証券,,,,,pending,
