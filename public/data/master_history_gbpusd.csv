@@ -1196,8 +1196,8 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-23,jfx,GBP/USD,JFX,1,-7.0,1.0,,success,2026/11/23
 2026-11-23,gaitame,GBP/USD,外為どっとコム,2,-15.5,0.0,,success,2026/11/23
 2026-11-24,dmm,GBP/USD,DMM FX,2,1.0,-4.0,,success,
-2026-11-24,gmo_click,GBP/USD,GMOクリック証券,1.0,,,,success,
 2026-11-24,invast,GBP/USD,トライオートFX,2,,,,pending,2026/11/23
 2026-11-24,hirose,GBP/USD,ヒロセ通商,2,-7.95,1.6,,success,2026/11/24
 2026-11-24,jfx,GBP/USD,JFX,2,-7.5,1.5,,success,2026/11/24
 2026-11-24,gaitame,GBP/USD,外為どっとコム,2,,,,pending,2026/11/23
+2026-11-24,gmo_click,GBP/USD,GMOクリック証券,2.0,,,,success,
