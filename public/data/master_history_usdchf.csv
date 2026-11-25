@@ -625,3 +625,12 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-24,traders_min,USD/CHF,みんなのFX,2,,,,pending,2026/11/23
 2026-11-24,ig,USD/CHF,IG証券,,,,,pending,
 2026-11-24,gmo_click,USD/CHF,GMOクリック証券,2.0,,,,success,
+2026-11-25,gaitame,USD/CHF,外為どっとコム,2,,,,pending,2026/11/23
+2026-11-25,hirose,USD/CHF,ヒロセ通商,1.0,,,,error,
+2026-11-25,jfx,USD/CHF,JFX,1.0,,,,success,
+2026-11-25,invast,USD/CHF,トライオートFX,2,,,,pending,2026/11/23
+2026-11-25,traders_light,USD/CHF,LIGHT FX,3,151.37,-151.4,,success,
+2026-11-25,traders_min,USD/CHF,みんなのFX,3,151.37,-151.4,,success,
+2026-11-25,central_tanshi,USD/CHF,セントラル短資FX,3,177.23,-177.23,,success,
+2026-11-25,gmo_click,USD/CHF,GMOクリック証券,3,158.0,-158.0,,success,
+2026-11-25,ig,USD/CHF,IG証券,,,,,pending,

@@ -1563,3 +1563,12 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-24,gaitame,EUR/USD,外為どっとコム,2,,,,pending,2026/11/23
 2026-11-24,gmo,EUR/USD,GMO外貨,2.0,,,,success,2026/11/24
 2026-11-24,gmo_click,EUR/USD,GMOクリック証券,2.0,,,,success,
+2026-11-25,traders_light,EUR/USD,LIGHT FX,3,-74.87,74.83,,success,
+2026-11-25,central_tanshi,EUR/USD,セントラル短資FX,3,-87.67,71.7,,success,
+2026-11-25,gmo_click,EUR/USD,GMOクリック証券,3,-70.0,70.0,,success,
+2026-11-25,invast,EUR/USD,トライオートFX,2,,,,pending,2026/11/23
+2026-11-25,m2j,EUR/USD,マネースクエア,1.0,,,,success,
+2026-11-25,hirose,EUR/USD,ヒロセ通商,1.0,,,,success,2026/11/25
+2026-11-25,jfx,EUR/USD,JFX,1.0,,,,success,2026/11/25
+2026-11-25,gaitame,EUR/USD,外為どっとコム,1.0,,,,error,
+2026-11-25,gmo,EUR/USD,GMO外貨,3,-72.0,72.0,,success,2026/11/25
