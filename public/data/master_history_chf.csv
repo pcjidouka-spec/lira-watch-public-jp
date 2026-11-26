@@ -941,16 +941,30 @@ target_date,provider_id,currency_pair,name,days,swap_buy,swap_sell,settlement_da
 2026-11-24,traders_light,CHF/JPY,LIGHT FX,None,None,None,None,success,2026/11/24
 2026-11-24,traders_min,CHF/JPY,みんなのFX,None,None,None,None,success,2026/11/24
 2026-11-25,central_tanshi,CHF/JPY,セントラル短資FX,3.0,-70.0,60.0,11/26,success,2026/11/25
-2026-11-25,click365_okasan,CHF/JPY,クリック365,3.0,None,None,None,pending,2026/11/24
+2026-11-25,click365_okasan,CHF/JPY,クリック365,3.0,-67.33333333333333,67.33333333333333,None,success,2026/11/25
 2026-11-25,dmm,CHF/JPY,DMM FX,None,None,None,None,success,2026/11/25
 2026-11-25,gaitame,CHF/JPY,外為どっとコム,3.0,None,None,None,error,None
 2026-11-25,gmo,CHF/JPY,GMO外貨,3.0,-45.0,45.0,None,success,2026/11/25
 2026-11-25,gmo_click,CHF/JPY,GMOクリック証券,3.0,-43.0,43.0,None,success,2026/11/25
 2026-11-25,hirose,CHF/JPY,ヒロセ通商,None,None,None,None,success,2026/11/25
-2026-11-25,invast,CHF/JPY,トライオートFX,3.0,None,None,None,pending,2026/11/24
+2026-11-25,invast,CHF/JPY,トライオートFX,3.0,-30.0,0.0,None,success,2026/11/25
 2026-11-25,jfx,CHF/JPY,JFX,None,None,None,None,success,2026/11/25
-2026-11-25,matsui,CHF/JPY,MATSUI FX,3.0,None,None,None,pending,2026/11/24
+2026-11-25,matsui,CHF/JPY,MATSUI FX,3.0,-84.0,54.0,None,success,2026/11/25
 2026-11-25,sbi,CHF/JPY,SBI FXトレード,None,None,None,11月27日,success,2026/11/25
-2026-11-25,sony,CHF/JPY,ソニーバンクFX,2.0,None,None,None,pending,2026/11/23
+2026-11-25,sony,CHF/JPY,ソニーバンクFX,3.0,-98.0,55.0,None,success,2026/11/25
 2026-11-25,traders_light,CHF/JPY,LIGHT FX,3.0,-40.0,40.0,None,success,2026/11/25
 2026-11-25,traders_min,CHF/JPY,みんなのFX,3.0,-40.0,40.0,None,success,2026/11/25
+2026-11-26,central_tanshi,CHF/JPY,セントラル短資FX,1.0,-70.0,60.0,11/27,success,2026/11/26
+2026-11-26,click365_okasan,CHF/JPY,クリック365,3.0,None,None,None,pending,2026/11/25
+2026-11-26,dmm,CHF/JPY,DMM FX,3.0,-43.0,40.0,None,success,2026/11/26
+2026-11-26,gaitame,CHF/JPY,外為どっとコム,3.0,None,None,None,pending,2026/11/25
+2026-11-26,gmo,CHF/JPY,GMO外貨,1.0,-45.0,45.0,None,success,2026/11/26
+2026-11-26,gmo_click,CHF/JPY,GMOクリック証券,1.0,-48.0,48.0,None,success,2026/11/26
+2026-11-26,hirose,CHF/JPY,ヒロセ通商,3.0,-65.0,45.0,None,success,2026/11/26
+2026-11-26,invast,CHF/JPY,トライオートFX,3.0,None,None,None,pending,2026/11/25
+2026-11-26,jfx,CHF/JPY,JFX,3.0,-65.0,45.0,None,success,2026/11/26
+2026-11-26,matsui,CHF/JPY,MATSUI FX,3.0,None,None,None,pending,2026/11/25
+2026-11-26,sbi,CHF/JPY,SBI FXトレード,3.0,-69.0,59.0,11月30日,success,2026/11/26
+2026-11-26,sony,CHF/JPY,ソニーバンクFX,3.0,None,None,None,pending,2026/11/25
+2026-11-26,traders_light,CHF/JPY,LIGHT FX,1.0,-40.0,40.0,None,success,2026/11/26
+2026-11-26,traders_min,CHF/JPY,みんなのFX,1.0,-40.0,40.0,None,success,2026/11/26
