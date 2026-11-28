@@ -59,6 +59,7 @@ image/          画像素材 (元データ。配信されるのは public/images
 - **ページはほぼ全部 SSG**。`getStaticProps` がビルド時に `public/data/**` を読む。
   ★つまり**データが新しくなっても再ビルドされるまでサイトには出ない** (上流の push が Vercel のビルドを起こす)
 - チャートは `recharts`、CSV の解析は `papaparse`
+- ★`<style jsx>` の CSS は、それを含む return の JSX の木の要素にしか効かない (変数に切り出した JSX・別の関数・子の部品・早期 return の先には効かない)。複数の部品やタブで共有する CSS は `styles/*.css` に置き `pages/_app.tsx` から読む
 - `pages/articles/[id].tsx` は `data/articles.ts` の定義から静的生成する
 
 ## ビルド・テスト
