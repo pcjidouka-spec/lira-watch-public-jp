@@ -125,3 +125,17 @@ export function buildIntraday(
   }
   return points;
 }
+
+const JST_HM = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+});
+
+/** JST の HH:MM (24 時間制・2 桁) */
+export function fmtJstHm(ms: number): string {
+  return JST_HM.format(new Date(ms));
+}
+
+/** 本日タブの見出し (REQ-TODAY-008)。始まりは先頭の点、終わりは最後の点の時刻 (JST の HH:MM) */
+export function intradayHeading(tradingDate: string, points: readonly IntradayPoint[]): string {
+  return `${tradingDate} の取引日 ${fmtJstHm(points[0].ms)}〜${fmtJstHm(points[points.length - 1].ms)}（JST）`;
+}

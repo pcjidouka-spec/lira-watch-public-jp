@@ -7,16 +7,12 @@ import { COLORS, DISPLAY_CODES } from '@/components/strengthStyle';
 import type { StrengthData } from '@/components/StrengthChart';
 import { useIntraday } from '@/hooks/useIntraday';
 import { CURRENCY_LABELS } from '@/lib/strengthCurrencies';
-import { buildIntraday, intradayMembers } from '@/lib/strengthIntraday';
+import { buildIntraday, fmtJstHm, intradayHeading, intradayMembers } from '@/lib/strengthIntraday';
 import { strengthView, toggleHidden } from '@/lib/strengthSelection';
 
 const NO_DATA = '本日のデータはありません（土日・取引開始前・取得できなかったとき）';
 const NOTE = 'スワップを含まない値動きだけです。人民元・ポーランドズロチと、破線のポジションは表示していません。';
 
-const JST_HM = new Intl.DateTimeFormat('en-CA', {
-  timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-});
-const fmtHm = (ms: number) => JST_HM.format(new Date(ms));
 
 type Props = {
   data: StrengthData;
@@ -43,20 +39,19 @@ export const StrengthToday: React.FC<Props> = ({ data, hidden, setHidden, narrow
   }, [codes, points]);
   const view = useMemo(() => strengthView(codes, hidden, series, null), [codes, hidden, series]);
   const chartData = useMemo(
-    () => (points ?? []).map((p) => ({ time: fmtHm(p.ms), ...p.values })),
+    () => (points ?? []).map((p) => ({ time: fmtJstHm(p.ms), ...p.values })),
     [points],
   );
 
   if (loading) return <p className="strength-empty">読み込み中…</p>;
   if (!raw || !points) return <p className="strength-empty">{NO_DATA}</p>;
 
-  const last = points[points.length - 1];
   return (
     <>
       <div className="strength-panel">
         <div className="strength-panel-head">
           <span className="strength-asof">
-            {raw.tradingDate} の取引日 06:00〜{fmtHm(last.ms)}（JST）
+            {intradayHeading(raw.tradingDate, points)}
           </span>
         </div>
         <div className="strength-filter">
@@ -132,7 +127,7 @@ export const StrengthToday: React.FC<Props> = ({ data, hidden, setHidden, narrow
       </div>
       <p className="strength-note">{NOTE}</p>
       <p className="strength-note">
-        価格は GMO コインの 5 分足（BID）で、取引日の始まり（06:00 JST）を 1.0 にしています。
+        価格は GMO コインの 5 分足（BID）で、取引日の最初の 5 分足の始値を 1.0 にしています。
         グラフに載せている通貨（凡例で隠した通貨も含む）の平均が 1.0 になるよう揃えているため、日本円も上下します。
       </p>
     </>

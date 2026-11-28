@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
-  buildIntraday, gmoDateParam, intradayMembers, parseIntradayResponse, parseSymbolsParam,
+  buildIntraday, fmtJstHm, gmoDateParam, intradayHeading, intradayMembers, parseIntradayResponse, parseSymbolsParam,
   type IntradayData,
 } from '@/lib/strengthIntraday';
 import type { LivePeriod } from '@/lib/strengthLive';
@@ -178,5 +178,20 @@ describe('buildIntraday (REQ-TODAY-005)', () => {
 
   it('対象の通貨が 1 つも無ければ null', () => {
     expect(buildIntraday(data({}, T0), {}, 'JPY')).toBeNull();
+  });
+});
+
+describe('intradayHeading (REQ-TODAY-008)', () => {
+  const pt = (iso: string) => ({ ms: Date.parse(iso), values: {} });
+  it('06:00 始まり', () => {
+    expect(intradayHeading('2026-11-27', [pt('2026-11-26T21:00:00Z'), pt('2026-11-27T01:32:00Z')]))
+      .toBe('2026-11-27 の取引日 06:00〜10:32（JST）');
+  });
+  it('07:00 始まり (週明け) は先頭の点の時刻になる', () => {
+    expect(intradayHeading('2026-11-30', [pt('2026-11-29T22:00:00Z'), pt('2026-11-29T22:10:00Z')]))
+      .toBe('2026-11-30 の取引日 07:00〜07:10（JST）');
+  });
+  it('0 時台は 24:05 にならず 00:05', () => {
+    expect(fmtJstHm(Date.parse('2026-11-27T15:05:00Z'))).toBe('00:05');
   });
 });
