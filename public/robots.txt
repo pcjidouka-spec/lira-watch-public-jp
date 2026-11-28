@@ -15,5 +15,21 @@
 User-agent: *
 Allow: /
 
+# 【AI の学習用クローラー】サイトの内容を AI の学習に使わせない (2026-11-28)
+# - 止めるのは学習用だけ。検索用 (Googlebot / Bingbot / OAI-SearchBot / ChatGPT-User /
+#   Claude-SearchBot / Claude-User / PerplexityBot) は上の * のまま通す (AI 検索からの訪問を残すため)
+# - robots.txt は守るかどうかが相手次第で、強制力は無い
+# - Google-Extended / Applebot-Extended はクローラーではなく「学習に使うか」の指定。
+#   止めても Google / Apple の検索には出る
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+Disallow: /
+
 # 正規ドメインは www（_document / RSS / サイトマップと一致）
 Sitemap: https://www.lira-watch.sbs/sitemap.xml
